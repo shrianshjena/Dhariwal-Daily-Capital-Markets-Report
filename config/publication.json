@@ -37,7 +37,7 @@
     }
   ],
   "assets": {
-    "logo_email_url": "",
+    "logo_email_url": "https://dhariwal-daily-capital-markets-repo.vercel.app/logo/kubeerra-logo-144.png",
     "logo_email_local": "assets/logo/kubeerra-tile-144.png",
     "logo_pdf_local": "assets/logo/kubeerra-tile-512.png"
   },

@@ -2,19 +2,18 @@ Suggested subject: Kubeerra Market Brief · Thu 29 Oct: NIFTY 50 dips as IT weig
 
 # Checks for kubeerra-market-brief-2026-10-29
 
-- WARN: email has no images: the masthead logo is missing until a hosted URL is set
 - PASS: No em or en dashes in the issue, email, text or PDF
 - PASS: No banned phrases (guaranteed, risk-free, target price, GMP and similar)
 - PASS: AMFI tagline present in email, text and PDF
 - PASS: ARN present in email, text and PDF
 - PASS: standard warning (exact) present in email, text and PDF
 - PASS: not an Investment Adviser present in email, text and PDF
-- PASS: Email HTML size 84,298 bytes (budget under 90 KB)
+- PASS: Email HTML size 84,609 bytes (budget under 90 KB)
 - PASS: All 53 email links are https or mailto
 - PASS: Sources list covers all 41 URLs used
 - PASS: No sources from grey market premium sites
 - PASS: WhatsApp caption opens with the registered name and ARN
-- PASS: PDF text is selectable (15,734 characters)
+- PASS: PDF text is selectable (15,611 characters)
 - PASS: PDF length 6 pages
 - PASS: All PDF fonts embedded
 
