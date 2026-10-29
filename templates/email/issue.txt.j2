@@ -42,7 +42,7 @@ Change on the day, {{ issue.sectors.as_of }}. Source: {{ issue.sectors.source.na
 [{{ s.topic }} · {{ s.relevance }}] {{ s.headline }}
 {{ s.what }}
 Why it matters: {{ s.why }}
-Source: {{ s.source.name }} ({{ s.source.url }})
+Source: {{ s.source.name }} ({{ s.source.url }}){% if s.get('also') %}; {{ s.also.name }} ({{ s.also.url }}){% endif %}
 {% endfor %}
 
 05 · GLOBAL MARKETS

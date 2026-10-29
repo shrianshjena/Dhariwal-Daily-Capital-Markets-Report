@@ -205,7 +205,7 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 <h3>{{ s.headline|t }}</h3>
 <p class="what">{{ s.what|t }}</p>
 <p class="why"><span class="mono">Why it matters</span> {{ s.why|t }}</p>
-{{ src(s.source) }}
+{% if s.get('also') %}<p class="src">Sources: <a href="{{ s.source.url }}">{{ s.source.name }}</a>, <a href="{{ s.also.url }}">{{ s.also.name }}</a></p>{% else %}{{ src(s.source) }}{% endif %}
 </article>
 {% endfor %}
 </div>

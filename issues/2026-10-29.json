@@ -8,12 +8,12 @@
     "audience": "internal",
     "india_as_of": "Close, Wed 28 Oct 2026",
     "global_as_of": "US close, 28 Oct · GIFT Nifty, 8:11 AM IST",
-    "preheader": "NIFTY 50 slipped 0.22% as IT and oil and gas weighed; the Fed held rates, Brent stayed near $115 and the rupee closed at 95.28.",
+    "preheader": "NIFTY 50 slipped 0.22% as IT and oil and gas weighed; the Fed held rates, Brent stayed near $115 and the rupee closed at a provisional 95.28.",
     "subject": "Kubeerra Market Brief · Thu 29 Oct: NIFTY 50 dips as IT weighs; Brent near $115"
   },
   "brief": [
     "Benchmarks closed lower on Wednesday: the NIFTY 50 fell 0.22% to 22,698.85 and the Sensex 0.48%, as IT and oil and gas shares weighed, while midcap and smallcap indices edged up.",
-    "Foreign and domestic institutions were both net buyers (provisional), while the rupee weakened 21 paise to 95.28 per dollar with Brent crude near $115 a barrel.",
+    "Foreign and domestic institutions were both net buyers (provisional), while the rupee weakened 21 paise to a provisional 95.28 per dollar, with Brent crude near $115 a barrel.",
     "Overnight, the US Federal Reserve kept its policy range at 3.75% to 4.00%. Today brings results from Coal India, Asian Paints and IndiGo, and the European Central Bank's decision this evening."
   ],
   "snapshot": {
@@ -100,10 +100,14 @@
         "value": 871.83,
         "format": "crore_signed",
         "provisional": true,
-        "detail": "Net buyers on 28 Oct; October to date −₹47,817 cr (Tapetide)",
+        "detail": "Net buyers on 28 Oct. October to date, provisional: −₹47,817 cr",
         "source": {
           "name": "NSE",
           "url": "https://www.nseindia.com/reports/fii-dii"
+        },
+        "also": {
+          "name": "Tapetide (month to date)",
+          "url": "https://tapetide.com/insight/reports/fii-dii-flows/2026-10"
         }
       },
       {
@@ -111,17 +115,22 @@
         "value": 643.35,
         "format": "crore_signed",
         "provisional": true,
-        "detail": "Net buyers on 28 Oct; October to date +₹61,113 cr (Tapetide)",
+        "detail": "Net buyers on 28 Oct. October to date, provisional: +₹61,113 cr",
         "source": {
           "name": "NSE",
           "url": "https://www.nseindia.com/reports/fii-dii"
+        },
+        "also": {
+          "name": "Tapetide (month to date)",
+          "url": "https://tapetide.com/insight/reports/fii-dii-flows/2026-10"
         }
       },
       {
         "label": "USD/INR",
         "value": 95.28,
         "format": "fx",
-        "detail": "Rupee 21 paise weaker; provisional close, 28 Oct",
+        "detail": "Rupee 21 paise weaker at the 28 Oct close",
+        "provisional": true,
         "source": {
           "name": "PTI via Daily Excelsior",
           "url": "https://www.dailyexcelsior.com/rupee-falls-21-paise-to-close-at-95-28-against-us-dollar/"
@@ -132,16 +141,21 @@
         "value": 114.5,
         "format": "usd_bbl",
         "detail": "Per barrel at 7:02 AM IST, down 0.7%; settled $115.32 on 28 Oct",
+        "as_of": "7:02 AM IST",
         "source": {
           "name": "Reuters via Business Recorder",
           "url": "https://brecorder.com/news/40446456/oil-prices-fall-as-peace-hopes-offset-fears-of-growing-middle-east-conflict"
+        },
+        "also": {
+          "name": "Rigzone (28 Oct settle)",
+          "url": "https://rigzone.com/news/wire/oil_rises_with_iran_attack_report_israeli_election_in_focus-28-oct-2026-184958-article"
         }
       },
       {
         "label": "Gold, 24K per 10 g",
         "value": 142707,
         "format": "inr_level",
-        "detail": "IBJA rate, 28 Oct afternoon; excludes GST",
+        "detail": "IBJA PM rate, 28 Oct; excludes GST",
         "source": {
           "name": "IBJA",
           "url": "https://ibjarates.com/"
@@ -234,9 +248,13 @@
       "topic": "Global",
       "relevance": "Market-wide",
       "headline": "The US Federal Reserve held rates at 3.75% to 4.00%, with two members voting for a hike",
-      "what": "The Federal Open Market Committee voted 10 to 2 on 28 October to keep its policy range unchanged after September's quarter-point increase. Governor Lisa Cook and Cleveland Fed President Beth Hammack preferred an immediate 25 basis point hike, and futures-implied odds of a December hike rose to about 85% from 78% a day earlier.",
+      "what": "The Federal Open Market Committee voted 10 to 2 on 28 October to keep its policy range unchanged after September's quarter-point increase. Governor Lisa Cook and Cleveland Fed President Beth Hammack preferred an immediate 25 basis point hike. Reuters reported that CME FedWatch odds of a December hike rose to about 85% from 78% a day earlier.",
       "why": "US interest rates influence the dollar and the relative appeal of emerging-market assets. That feeds into the rupee and into foreign portfolio flows into Indian shares and bonds.",
       "source": {
+        "name": "Federal Reserve",
+        "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+      },
+      "also": {
         "name": "Reuters",
         "url": "https://lufkindailynews.com/news_reuters/business/global-stocks-hold-gains-after-fed-decision-oil-prices-rise/article_83a86c22-7fed-5223-a82f-bc1d7c12ea30.html"
       }
@@ -244,8 +262,8 @@
     {
       "topic": "Global",
       "relevance": "Market-wide",
-      "headline": "Brent crude settled above $115 a barrel as Middle East supply worries grew",
-      "what": "Brent settled 1.3% higher at $115.32 on 28 October. Reports cited attacks on Saudi energy sites by Yemen's Houthi group, a report that the US had told Gulf states to prepare for a possible brief campaign against Iran, and a fourth straight weekly fall in US crude stocks.",
+      "headline": "Brent crude settled above $115 a barrel; reports pointed to Middle East supply risks",
+      "what": "Brent settled 1.3% higher at $115.32 on 28 October, after a Wall Street Journal report that the US had told Gulf states to prepare for a possible short campaign against Iran. Recent Houthi attacks on Saudi energy sites and a fourth straight weekly fall in US crude stocks were also cited.",
       "why": "India imports most of the crude oil it uses, so higher prices raise the import bill and the demand for dollars. That is a channel to fuel costs, inflation and the rupee.",
       "source": {
         "name": "Rigzone",
@@ -257,7 +275,7 @@
       "relevance": "Market-wide",
       "headline": "The rupee weakened 21 paise to 95.28 per US dollar",
       "what": "The rupee closed at a provisional 95.28 per dollar on 28 October, from 95.07 on Tuesday, after opening at 95.01 and touching 95.29. Dealers pointed to a firmer dollar, higher crude prices and elevated US Treasury yields.",
-      "why": "A weaker rupee raises the rupee cost of imports such as crude oil. It also raises the rupee value of overseas holdings, including those of international funds.",
+      "why": "A weaker rupee raises the rupee cost of imports such as crude oil. Currency moves also change the rupee value of overseas assets, including those held by international funds, in either direction.",
       "source": {
         "name": "PTI via Daily Excelsior",
         "url": "https://www.dailyexcelsior.com/rupee-falls-21-paise-to-close-at-95-28-against-us-dollar/"
@@ -278,11 +296,15 @@
       "topic": "Corporate",
       "relevance": "Sector",
       "headline": "Hindustan Unilever's quarterly sales grew 14.8% while its margin narrowed",
-      "what": "For July to September 2026, Hindustan Unilever reported turnover of ₹18,071 crore, up 14.8%, with underlying volume growth of 7%. Profit attributable to owners rose 3.9% to ₹2,790 crore, the EBITDA margin fell 140 basis points to 22.6%, and the board declared an interim dividend of ₹19 per share.",
+      "what": "For July to September 2026, Hindustan Unilever reported turnover of ₹18,071 crore, up 14.8%, with underlying volume growth of 7%. Profit attributable to owners rose 3.9% to ₹2,790 crore, helped by a year-ago loss from discontinued operations; reported profit after tax of ₹2,796 crore was flat. The EBITDA margin fell 140 basis points to 22.6%, and the board declared an interim dividend of ₹19 per share.",
       "why": "HUL's volume growth is widely read as a gauge of household consumption, which matters for the consumer companies held across many diversified equity funds.",
       "source": {
         "name": "Business Standard",
         "url": "https://www.business-standard.com/companies/quarterly-results/hul-q2-results-net-profit-rises-sales-growth-ebitda-margin-dividend-126102800298_1.html"
+      },
+      "also": {
+        "name": "HUL results release",
+        "url": "https://www.hul.co.in/news/press-releases/2026/results-for-the-quarter-ended-30th-september-2026/"
       }
     },
     {
@@ -345,7 +367,17 @@
         }
       }
     ],
-    "note": "In Asian trade on Thursday, Nasdaq futures were about 1% lower after Alphabet shares fell around 10% after hours on its results, and the US 10-year Treasury yield was 4.98%. US yields and the dollar shape foreign portfolio flows into India. GIFT Nifty is an early indication of how the NIFTY 50 may open, not a forecast."
+    "note": "In Asian trade on Thursday, Nasdaq futures were about 1% lower after Alphabet shares fell around 10% after hours on its results, and the US 10-year Treasury yield was 4.98%. US yields and the dollar shape foreign portfolio flows into India. GIFT Nifty is an early indication of how the NIFTY 50 may open, not a forecast.",
+    "note_sources": [
+      {
+        "name": "Reuters (Asian shares)",
+        "url": "https://www.brecorder.com/news/40446458/asian-shares-fall-as-alphabet-earnings-miss-drags-wall-st-futures-lower"
+      },
+      {
+        "name": "Reuters (India bonds)",
+        "url": "https://www.brecorder.com/news/40446479/india-bonds-may-firm-with-treasuries-crude-supply-could-cap-gains"
+      }
+    ]
   },
   "ipos": {
     "headline": "Jio Platforms listed 21.4% above its issue price; three mainboard issues are open",
@@ -587,7 +619,7 @@
   "day_ahead": [
     {
       "time": "During the day",
-      "event": "Results due from Coal India, Asian Paints, InterGlobe Aviation (IndiGo), Trent, Ambuja Cements and Godrej Consumer Products, among about 140 companies.",
+      "event": "Results due from Coal India, Asian Paints, InterGlobe Aviation (IndiGo), Trent, Ambuja Cements and Godrej Consumer Products, among about 150 companies.",
       "source": {
         "name": "Upstox",
         "url": "https://upstox.com/news/market-news/earnings/q2-results-oct-29-coal-india-indigo-asian-paints-vedanta-power-trent-ambuja-cements-suzlon-energy-others-to-post-earnings/article-202591/"
@@ -656,12 +688,20 @@
       "url": "https://www.nseindia.com/reports/fii-dii"
     },
     {
+      "name": "Tapetide (month to date)",
+      "url": "https://tapetide.com/insight/reports/fii-dii-flows/2026-10"
+    },
+    {
       "name": "PTI via Daily Excelsior",
       "url": "https://www.dailyexcelsior.com/rupee-falls-21-paise-to-close-at-95-28-against-us-dollar/"
     },
     {
       "name": "Reuters via Business Recorder",
       "url": "https://brecorder.com/news/40446456/oil-prices-fall-as-peace-hopes-offset-fears-of-growing-middle-east-conflict"
+    },
+    {
+      "name": "Rigzone (28 Oct settle)",
+      "url": "https://rigzone.com/news/wire/oil_rises_with_iran_attack_report_israeli_election_in_focus-28-oct-2026-184958-article"
     },
     {
       "name": "IBJA",
@@ -672,12 +712,12 @@
       "url": "https://www.rbi.org.in/"
     },
     {
-      "name": "Reuters",
-      "url": "https://lufkindailynews.com/news_reuters/business/global-stocks-hold-gains-after-fed-decision-oil-prices-rise/article_83a86c22-7fed-5223-a82f-bc1d7c12ea30.html"
+      "name": "Federal Reserve",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
     },
     {
-      "name": "Rigzone",
-      "url": "https://rigzone.com/news/wire/oil_rises_with_iran_attack_report_israeli_election_in_focus-28-oct-2026-184958-article"
+      "name": "Reuters",
+      "url": "https://lufkindailynews.com/news_reuters/business/global-stocks-hold-gains-after-fed-decision-oil-prices-rise/article_83a86c22-7fed-5223-a82f-bc1d7c12ea30.html"
     },
     {
       "name": "Press Information Bureau",
@@ -686,6 +726,10 @@
     {
       "name": "Business Standard",
       "url": "https://www.business-standard.com/companies/quarterly-results/hul-q2-results-net-profit-rises-sales-growth-ebitda-margin-dividend-126102800298_1.html"
+    },
+    {
+      "name": "HUL results release",
+      "url": "https://www.hul.co.in/news/press-releases/2026/results-for-the-quarter-ended-30th-september-2026/"
     },
     {
       "name": "Free Press Journal",
@@ -698,6 +742,14 @@
     {
       "name": "HDFC Sky",
       "url": "https://hdfcsky.com/news/gift-nifty-flat-weak-open-crude-fed-cues-oct29"
+    },
+    {
+      "name": "Reuters (Asian shares)",
+      "url": "https://www.brecorder.com/news/40446458/asian-shares-fall-as-alphabet-earnings-miss-drags-wall-st-futures-lower"
+    },
+    {
+      "name": "Reuters (India bonds)",
+      "url": "https://www.brecorder.com/news/40446479/india-bonds-may-firm-with-treasuries-crude-supply-could-cap-gains"
     },
     {
       "name": "Kotak Neo",

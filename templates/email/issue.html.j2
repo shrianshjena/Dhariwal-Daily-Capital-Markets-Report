@@ -156,7 +156,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 <h3 style="margin:6px 0 0 0;{{ SANS }}font-size:18px;line-height:25px;font-weight:700;color:{{ C.text.primary }};{{ LH }}">{{ s.headline|t }}</h3>
 {{ para(s.what, 8) }}
 <p style="margin:10px 0 0 0;{{ SANS }}font-size:16px;line-height:25px;color:{{ C.text.primary }};{{ LH }}"><span style="{{ MONO }}font-size:11px;line-height:16px;letter-spacing:1.2px;color:{{ C.brand.tealDark }};">WHY IT MATTERS&nbsp;&nbsp;</span>{{ s.why|t }}</p>
-{{ source(s.source) }}
+{% if s.get('also') %}{{ srclist([s.source, s.also], 8) }}{% else %}{{ source(s.source) }}{% endif %}
 </td></tr>
 {% endfor %}
 
