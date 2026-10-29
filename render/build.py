@@ -105,6 +105,22 @@ def nobreak(text):
     return Markup(str(escape(str(text))).replace(" ", "&nbsp;"))
 
 
+def is_flow(f):
+    """A figure that is itself a movement (a net flow), coloured by its sign."""
+    return f.get("flow", f["format"] == "crore_signed")
+
+
+def movement(f):
+    """Direction of a figure: explicit, from its change, or from the sign of a net flow; None for a plain level."""
+    if f.get("direction"):
+        return f["direction"]
+    if f.get("change_pct") is not None:
+        return fmt.direction(f["change_pct"])
+    if is_flow(f):
+        return fmt.direction(f["value"])
+    return None
+
+
 def build_env(tokens):
     env = Environment(
         loader=FileSystemLoader(str(ROOT / "templates")),
@@ -121,12 +137,21 @@ def build_env(tokens):
         return {"up": colors["status"]["up"], "down": colors["status"]["down"],
                 "flat": colors["text"]["secondary"]}[fmt.direction(value)]
 
+    def mvcolor(mv):
+        # green up, red down, grey flat, ink for a level with no stated change
+        return {"up": colors["status"]["up"], "down": colors["status"]["down"],
+                "flat": colors["text"]["secondary"]}.get(mv, colors["text"]["primary"])
+
+    def figcolor(f):
+        # a net flow is coloured by its sign; a level stays in ink beside its coloured change
+        return mvcolor(movement(f)) if is_flow(f) else colors["text"]["primary"]
+
     env.filters.update(
         level=fmt.level, points=fmt.points, pct=fmt.pct, arrow=fmt.arrow,
         figure=lambda f: fmt.figure(f["value"], f["format"]), dircolor=dircolor,
         group=fmt.group_indian,
         host=lambda url: urlparse(url).netloc.removeprefix("www."),
-        t=glue, nb=nobreak,
+        t=glue, nb=nobreak, movement=movement, is_flow=is_flow, mvcolor=mvcolor, figcolor=figcolor,
     )
     return env
 

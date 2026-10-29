@@ -18,7 +18,7 @@ The first dry run (29 Oct 2026, record v0.3) is built, independently reviewed an
 | Stakeholders | Shuvendu Gupta (asked for this format), Saimohan Shridhar (Relationship Manager, Head), Gunjan Jhanwar (on the request thread) |
 | Stage | Build: dry run 001 (29 Oct 2026) delivered for approval; RM pilot next |
 | Settled | Name Kubeerra Market Brief; navy, cobalt and teal; morning edition; RM pilot first, approved by Shriansh; email HTML for Outlook and Gmail plus an A4 PDF; distributor-only content; no em dashes |
-| Pending | Vercel import for the email logo, General Sans font files, compliance owner for client sends, client sending platform, data licence, open questions 14 to 20 |
+| Pending | Compliance owner for client sends, client sending platform, data licence, open questions 14 to 20 |
 
 Rule for this record: every change to the implementation updates this document in the same change, so the record never drifts from what is built.
 
@@ -165,6 +165,8 @@ A bronze such as #8A6A12 reaches 5.06:1 on white, enough for gold text at body s
 
 **Unchanged in every option.** The document's structure, spacing, components and contrast targets; General Sans for headings and body; JetBrains Mono labels in spaced uppercase; flat colour only, with the official logo artwork as the single gradient; no em dashes.
 
+**Direction colours (D-031).** Green #13794A for rises and red #B42318 for falls on light surfaces (5.44:1 and 6.57:1 on white); #6FD89B and #FF9C94 on the navy WhatsApp card. A ▲ or ▼ and a sign always accompany the colour, so direction never depends on colour alone.
+
 **Assets.** The attached logo is a 1600 × 1600 PNG: a black tile with a gold border on white, so its white corners must be made transparent for dark mastheads. The website serves the logo as a webp generated in September 2026; a vector master, if one exists, would sharpen the PDF. JetBrains Mono installs from npm (@fontsource/jetbrains-mono 5.3.0); General Sans is not on npm, so its files come from Fontshare, which states its fonts are free for personal and commercial use under the ITF EULA ([Indian Type Foundry](https://www.indiantypefoundry.com/news/introducing-fontshare)). PDF embedding terms still need a check against that EULA.
 
 ## Formats and distribution
@@ -275,9 +277,9 @@ The build itself needs nothing exotic; what most improves quality and the accoun
 | Resource | Why it matters | Owner | Needed by |
 | --- | --- | --- | --- |
 | Private GitHub repository, ideally under a company organisation | Holds templates, renderers, schema, checks, CLAUDE.md, this record and the daily skill; attaching it to the Team account is the handover | Shriansh creates it; Claude attaches it with push access | Done 29 Oct 2026: Dhariwal-Daily-Capital-Markets-Report (private), code pushed |
-| Vercel project for the email logo | Email clients show only images on a public https address; the Vercel connector cannot create projects (permission denied) | Shriansh imports the repository in the Vercel dashboard with hosting/ as the root directory | Before the first RM pilot issue |
+| Vercel project for the email logo | Email clients show only images on a public https address; the Vercel connector cannot create or change projects (permission denied) | Shriansh imported the repository; a root .vercelignore limits every deployment to hosting/ | Done 29 Oct 2026: project dhariwal-daily-capital-markets-report. Its first deployment was blocked because the commit author email was not linked to Shriansh's GitHub account; commits now use his GitHub no-reply address |
 | Brand asset pack | Logo master (vector or transparent PNG), official colours and fonts if any, Dhariwal Securities logo rules, approved disclaimer text | Shriansh, from management | Design round |
-| General Sans font files | Not on npm; Fontshare download, PDF embedding terms to confirm | Shriansh | Design round |
+| General Sans font files | Not on npm; Fontshare download under the ITF Free Font License 2.0 (PDF embedding allowed, public redistribution not) | Shriansh | Done 29 Oct 2026: Regular, Medium, Semibold and Bold installed with the licence text |
 | Website and app data policy | Saimohan cited it; it may fix sources and wording | Saimohan | Content build |
 | Named sign-off owner | Every client issue needs an approver | Management | First client send |
 | Sending platform and DNS access | Lists, unsubscribe, SPF, DKIM and DMARC on kubeerra.com | Management, REDVision, IT | First client send (an internal pilot can use Outlook) |
@@ -316,15 +318,18 @@ Also possible later: a Saturday weekly wrap, and a monthly mutual fund special a
 
 ## Decision log
 
-Twenty-eight decisions are logged: twenty-seven settled, and one proposed (the stand-in PDF typeface, until the General Sans files arrive). A changed decision keeps its row and gains a new one that supersedes it.
+Thirty-one decisions are logged: thirty settled, and one superseded (D-024, by D-029). A changed decision keeps its row and gains a new one that supersedes it.
 
 | ID | Logged | Decision | Status | Basis |
 | --- | --- | --- | --- | --- |
+| D-031 | 29 Oct 2026 | Figures show direction by colour. Net flows (FII, DII, fund net inflows) are green when positive and red when negative; levels (closes, prices, yields, assets) stay in ink beside a green ▲ or red ▼ change; sector bars are green or red by sign; a level with no stated change stays neutral. USD/INR follows the quote convention, so a rise (a weaker rupee) shows green | Settled | Owner, in chat: green for increases, red for decreases |
+| D-030 | 29 Oct 2026 | The email logo is the shared Kubeerra PNG at 144 px, with its white corners made transparent for the navy masthead, served from Vercel. Only hosting/ is ever deployed: a root .vercelignore allows nothing else | Settled | Owner, in chat; privacy and font licence |
+| D-029 | 29 Oct 2026 | General Sans (Fontshare, ITF Free Font License 2.0) sets the PDF and the WhatsApp card. The font files stay private in the repository and are never served publicly; PDF embedding relies on licence section 03. The email keeps system fonts | Settled | Owner supplied the files |
 | D-028 | 29 Oct 2026 | PDF sections run across pages; only small units stay together (flow tiles, sector bars, global table, learn box), and headings stay with what follows | Settled | Build: dry run 001 fits six pages with no half-empty page |
 | D-027 | 29 Oct 2026 | The renderer joins numbers to their units, days to months and a sign to the rupee sign, so phone layouts never strand a minus sign or "cr" | Settled | Build: the phone preview split "−" from "₹47,817" |
 | D-026 | 29 Oct 2026 | Email charts are percentage-width HTML tables, not images, so they show with images off and add almost no weight | Settled | Build; Outlook and Gmail support |
 | D-025 | 29 Oct 2026 | Email text uses system fonts (Helvetica Neue, Helvetica, Arial; Consolas or Menlo for labels), because classic Outlook and Gmail ignore web fonts | Settled | Build; email client support |
-| D-024 | 29 Oct 2026 | PDF type: Hanken Grotesk stands in for General Sans until its files arrive, JetBrains Mono sets labels, and the rupee sign falls back to DejaVu Sans because neither font has it | Proposed | Build; awaiting General Sans files |
+| D-024 | 29 Oct 2026 | PDF type: Hanken Grotesk stands in for General Sans until its files arrive, JetBrains Mono sets labels, and the rupee sign falls back to DejaVu Sans because neither font has it | Superseded by D-029 | Build; General Sans arrived the same day |
 | D-023 | 29 Oct 2026 | Small text never uses muted grey #718394 (3.91:1 on white) or teal #0F8B8D (4.12:1); labels use #526779 (5.87:1) and #08696D (6.46:1) | Settled | Build; WCAG AA needs 4.5:1 for small text |
 | D-022 | 29 Oct 2026 | The WhatsApp caption opens with the registered name, "AMFI-registered Mutual Fund Distributor" and the ARN, and the check script fails an issue whose caption does not | Settled | SEBI social media circular, 26 Feb 2026 |
 | D-021 | 29 Oct 2026 | Build starts immediately with a dry-run issue; the first RM pilot issue follows once the design is approved | Settled | Owner, in chat |
@@ -379,13 +384,13 @@ Questions 1 to 13 were answered in chat on 29 Oct 2026 and are logged as decisio
 **Inputs needed (not decisions).**
 
 - [x] Private GitHub repository on Shriansh's account: Dhariwal-Daily-Capital-Markets-Report, code pushed 29 Oct 2026
-- [ ] General Sans font files from Fontshare
+- [x] General Sans font files from Fontshare (installed 29 Oct 2026)
 - [ ] Brand guide or vector logo, if either exists
 - [ ] The website and app data policy Saimohan mentioned
 - [ ] Expected date of the Claude Team seat
 - [ ] Name of the compliance owner for client sends
 - [x] Target date for the first pilot issue: start right away
-- [ ] Import the repository into Vercel with hosting/ as the root directory, then share the logo URL (the Vercel connector cannot create projects)
+- [x] Import the repository into Vercel (done by Shriansh, 29 Oct 2026)
 
 ## Project history
 
@@ -393,6 +398,7 @@ The project began on 28 Oct 2026 and entered the build on 29 Oct 2026; every mat
 
 | Date | Event |
 | --- | --- |
+| 29 Oct 2026 | Design round 2 from Shriansh's feedback: green and red for rises and falls (D-031), General Sans for the PDF and card (D-029), and the shared PNG logo hosted on Vercel (D-030). Shriansh imported the repository into Vercel; commits now use his GitHub no-reply email so deployments are not blocked |
 | 29 Oct 2026 | Dry run 001 built and delivered for approval: email 83 KB, six-page PDF, WhatsApp card, all automated checks passing. Independent review found one must-fix (NFO scheme names, now a category summary), wording and sourcing fixes, one wrong count and three attributions stronger than their sources; all corrected (issues/2026-10-29-review.md). Code pushed to the private GitHub repository; the repository copy of this record is now canonical (D-007) |
 | 29 Oct 2026 | All thirteen pilot decisions settled in chat: navy, cobalt and teal; Kubeerra Market Brief; morning edition; RM pilot first; Shriansh approves; files that work in Outlook and Gmail; regulatory standing reconfirmed. Build started with a dry-run issue |
 | 29 Oct 2026 | Kickoff: brief received with the Kubeerra logo, a dhariwalsecurities.com screenshot, the internal strategic record, the newsletter design document and the reference sample. Record v0.1 drafted with research on regulation, data, formats and tooling |

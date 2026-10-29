@@ -9,12 +9,12 @@ Suggested subject: Kubeerra Market Brief · Thu 29 Oct: NIFTY 50 dips as IT weig
 - PASS: ARN present in email, text and PDF
 - PASS: standard warning (exact) present in email, text and PDF
 - PASS: not an Investment Adviser present in email, text and PDF
-- PASS: Email HTML size 83,290 bytes (budget under 90 KB)
+- PASS: Email HTML size 84,298 bytes (budget under 90 KB)
 - PASS: All 53 email links are https or mailto
 - PASS: Sources list covers all 41 URLs used
 - PASS: No sources from grey market premium sites
 - PASS: WhatsApp caption opens with the registered name and ARN
-- PASS: PDF text is selectable (15,610 characters)
+- PASS: PDF text is selectable (15,734 characters)
 - PASS: PDF length 6 pages
 - PASS: All PDF fonts embedded
 
@@ -28,13 +28,13 @@ Suggested subject: Kubeerra Market Brief · Thu 29 Oct: NIFTY 50 dips as IT weig
 - [ ] India VIX: 16.25 (−0.96%), https://nsearchives.nseindia.com/archives/equities/mkt/MA281026.csv
 - [ ] FII net: +₹872 cr, https://www.nseindia.com/reports/fii-dii
 - [ ] DII net: +₹643 cr, https://www.nseindia.com/reports/fii-dii
-- [ ] USD/INR: ₹95.28, https://www.dailyexcelsior.com/rupee-falls-21-paise-to-close-at-95-28-against-us-dollar/
-- [ ] Brent crude: $114.50, https://brecorder.com/news/40446456/oil-prices-fall-as-peace-hopes-offset-fears-of-growing-middle-east-conflict
-- [ ] Gold, 24K per 10 g: ₹1,42,707, https://ibjarates.com/
+- [ ] USD/INR: ₹95.28 (+0.22%), https://www.dailyexcelsior.com/rupee-falls-21-paise-to-close-at-95-28-against-us-dollar/
+- [ ] Brent crude: $114.50 (−0.71%), https://brecorder.com/news/40446456/oil-prices-fall-as-peace-hopes-offset-fears-of-growing-middle-east-conflict
+- [ ] Gold, 24K per 10 g: ₹1,42,707 (+0.90%), https://ibjarates.com/
 - [ ] 10-year G-Sec yield: 7.44%, https://www.rbi.org.in/
-- [ ] SIP contributions: ₹32,490 cr, https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf
-- [ ] Equity fund net inflows: ₹38,307 cr, https://portal.amfiindia.com/spages/amsep2026repo.pdf
-- [ ] Industry assets: ₹82.64 lakh cr, https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf
+- [ ] SIP contributions: ₹32,490 cr (+0.60%), https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf
+- [ ] Equity fund net inflows: ₹38,307 cr (+30.61%), https://portal.amfiindia.com/spages/amsep2026repo.pdf
+- [ ] Industry assets: ₹82.64 lakh cr (−5.10%), https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf
 
 ## Words for human review (0)
 

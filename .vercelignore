@@ -1,0 +1,5 @@
+# Vercel serves only the hosting/ folder (the email logo). Everything else in this
+# repository is private, and the fonts must never be served publicly (licence terms).
+/*
+!hosting
+!vercel.json

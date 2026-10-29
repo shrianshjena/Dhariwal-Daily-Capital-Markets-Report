@@ -106,7 +106,7 @@
           "url": "https://www.nseindia.com/reports/fii-dii"
         },
         "also": {
-          "name": "Tapetide (month to date)",
+          "name": "Tapetide",
           "url": "https://tapetide.com/insight/reports/fii-dii-flows/2026-10"
         }
       },
@@ -121,7 +121,7 @@
           "url": "https://www.nseindia.com/reports/fii-dii"
         },
         "also": {
-          "name": "Tapetide (month to date)",
+          "name": "Tapetide",
           "url": "https://tapetide.com/insight/reports/fii-dii-flows/2026-10"
         }
       },
@@ -131,6 +131,7 @@
         "format": "fx",
         "detail": "Rupee 21 paise weaker at the 28 Oct close",
         "provisional": true,
+        "change_pct": 0.22,
         "source": {
           "name": "PTI via Daily Excelsior",
           "url": "https://www.dailyexcelsior.com/rupee-falls-21-paise-to-close-at-95-28-against-us-dollar/"
@@ -140,14 +141,15 @@
         "label": "Brent crude",
         "value": 114.5,
         "format": "usd_bbl",
-        "detail": "Per barrel at 7:02 AM IST, down 0.7%; settled $115.32 on 28 Oct",
+        "detail": "Per barrel at 7:02 AM IST, against a 28 Oct settlement of $115.32",
         "as_of": "7:02 AM IST",
+        "change_pct": -0.71,
         "source": {
-          "name": "Reuters via Business Recorder",
+          "name": "Reuters",
           "url": "https://brecorder.com/news/40446456/oil-prices-fall-as-peace-hopes-offset-fears-of-growing-middle-east-conflict"
         },
         "also": {
-          "name": "Rigzone (28 Oct settle)",
+          "name": "Rigzone",
           "url": "https://rigzone.com/news/wire/oil_rises_with_iran_attack_report_israeli_election_in_focus-28-oct-2026-184958-article"
         }
       },
@@ -155,7 +157,8 @@
         "label": "Gold, 24K per 10 g",
         "value": 142707,
         "format": "inr_level",
-        "detail": "IBJA PM rate, 28 Oct; excludes GST",
+        "detail": "IBJA PM rate, 28 Oct; ₹1,41,431 on 27 Oct; excludes GST",
+        "change_pct": 0.9,
         "source": {
           "name": "IBJA",
           "url": "https://ibjarates.com/"
@@ -473,7 +476,8 @@
         "label": "SIP contributions",
         "value": 32490,
         "format": "crore",
-        "detail": "From 10.06 crore contributing SIP accounts",
+        "detail": "From 10.06 crore contributing SIP accounts; ₹32,297 crore in August",
+        "change_pct": 0.6,
         "source": {
           "name": "AMFI monthly note",
           "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf"
@@ -483,7 +487,9 @@
         "label": "Equity fund net inflows",
         "value": 38306.55,
         "format": "crore",
-        "detail": "Open-ended equity schemes; a 67th straight month of inflows",
+        "detail": "Open-ended equity schemes; ₹29,329 crore in August; a 67th straight month of inflows",
+        "flow": true,
+        "change_pct": 30.61,
         "source": {
           "name": "AMFI monthly report",
           "url": "https://portal.amfiindia.com/spages/amsep2026repo.pdf"
@@ -493,7 +499,8 @@
         "label": "Industry assets",
         "value": 82.64,
         "format": "lakh_crore",
-        "detail": "Down 5.1% in the month; AMFI cites mark-to-market losses and debt fund outflows",
+        "detail": "Change in the month; AMFI cites mark-to-market losses and debt fund outflows",
+        "change_pct": -5.1,
         "source": {
           "name": "AMFI monthly note",
           "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf"
@@ -669,7 +676,7 @@
       "url": "https://www.nseindia.com/reports/fii-dii"
     },
     {
-      "name": "Tapetide (month to date)",
+      "name": "Tapetide",
       "url": "https://tapetide.com/insight/reports/fii-dii-flows/2026-10"
     },
     {
@@ -677,11 +684,11 @@
       "url": "https://www.dailyexcelsior.com/rupee-falls-21-paise-to-close-at-95-28-against-us-dollar/"
     },
     {
-      "name": "Reuters via Business Recorder",
+      "name": "Reuters",
       "url": "https://brecorder.com/news/40446456/oil-prices-fall-as-peace-hopes-offset-fears-of-growing-middle-east-conflict"
     },
     {
-      "name": "Rigzone (28 Oct settle)",
+      "name": "Rigzone",
       "url": "https://rigzone.com/news/wire/oil_rises_with_iran_attack_report_israeli_election_in_focus-28-oct-2026-184958-article"
     },
     {

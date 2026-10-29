@@ -40,7 +40,7 @@ a { color: {{ C.brand.cobalt }}; text-decoration: underline; }
 .accent { color: {{ C.brand.cobalt }}; }
 .quiet { color: {{ C.text.secondary }}; }
 .num { font-variant-numeric: tabular-nums; }
-.masthead { background: {{ C.brand.navy }}; color: {{ C.text.inverse }}; margin: 0 -15mm; padding: 9mm 15mm 5mm 15mm; }
+.masthead { background: {{ C.brand.navy }}; color: {{ C.text.inverse }}; margin: 0 -15mm; padding: 8mm 15mm 4.5mm 15mm; }
 .mast-row { display: table; width: 100%; }
 .mast-logo { display: table-cell; width: 17mm; vertical-align: middle; }
 .mast-logo img { width: 13mm; height: 13mm; display: block; }
@@ -53,7 +53,7 @@ a { color: {{ C.brand.cobalt }}; text-decoration: underline; }
 .regline { font-size: 12pt; line-height: 1.35; font-weight: 500; }
 .asof { color: {{ C.text.secondary }}; margin-top: 1.2mm; }
 .internal { color: {{ C.status.down }}; font-weight: 600; margin-top: 0.8mm; }
-.brief { margin-top: 5.5mm; }
+.brief { margin-top: 5mm; }
 .brief h2 { font-size: 12.5pt; font-weight: 700; }
 .brief ul { margin: 2mm 0 0 0; padding: 0; list-style: none; }
 .brief li { position: relative; padding-left: 5mm; margin-top: 1.2mm; font-size: 10pt; line-height: 1.48; }
@@ -78,7 +78,8 @@ table.data .name { font-weight: 600; }
 table.tiles { width: 100%; border-collapse: collapse; margin-top: 2.5mm; table-layout: fixed; break-inside: avoid; }
 table.tiles td { width: 33.33%; vertical-align: top; border-top: 0.75pt solid {{ C.border.default }}; padding: 2.5mm 4mm 2.6mm 0; }
 .tile-label { color: {{ C.text.secondary }}; }
-.tile-value { font-size: 16pt; line-height: 1.2; font-weight: 700; color: {{ C.brand.cobalt }}; margin-top: 1.2mm; white-space: nowrap; }
+.tile-value { font-size: 16pt; line-height: 1.2; font-weight: 700; color: {{ C.text.primary }}; margin-top: 1.2mm; white-space: nowrap; }
+.tile-chg { font-size: 9pt; line-height: 1.3; font-weight: 700; margin-top: 0.5mm; white-space: nowrap; }
 .tile-detail { font-size: 8.4pt; line-height: 1.4; color: {{ C.text.secondary }}; margin-top: 1mm; }
 table.bars { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: 3mm; }
 table.bars > tbody > tr > td.group { width: 50%; vertical-align: top; padding-right: 6mm; }
@@ -176,7 +177,7 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 {{ sechead("02", "Flows, currency and commodities", issue.flows.headline) }}
 <table class="tiles">
 {% for row in issue.flows.tiles|batch(3) %}
-<tr>{% for t in row %}<td><p class="mono tile-label">{{ t.label }}{% if t.provisional|default(false) %} · provisional{% endif %}</p><p class="tile-value num">{{ t|figure }}</p><p class="tile-detail">{{ t.detail|t }} · <a href="{{ t.source.url }}">{{ t.source.name }}</a>{% if t.get('also') %} · <a href="{{ t.also.url }}">{{ t.also.name }}</a>{% endif %}</p></td>{% endfor %}{% for _ in range(3 - row|length) %}<td></td>{% endfor %}</tr>
+<tr>{% for t in row %}<td><p class="mono tile-label">{{ t.label }}{% if t.provisional|default(false) %} · provisional{% endif %}</p><p class="tile-value num" style="color: {{ t|figcolor }};">{{ t|figure }}</p>{% if t.get('change_pct') is not none %}<p class="tile-chg num" style="color: {{ (t|movement)|mvcolor }};">{{ t.change_pct|arrow }} {{ t.change_pct|pct }}</p>{% endif %}<p class="tile-detail">{{ t.detail|t }} · <a href="{{ t.source.url }}">{{ t.source.name }}</a>{% if t.get('also') %} · <a href="{{ t.also.url }}">{{ t.also.name }}</a>{% endif %}</p></td>{% endfor %}{% for _ in range(3 - row|length) %}<td></td>{% endfor %}</tr>
 {% endfor %}
 </table>
 </section>
@@ -238,7 +239,7 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 <section class="sec">
 {{ sechead("07", "Mutual fund corner", issue.mf.headline, "industry data, " ~ issue.mf.period) }}
 <table class="mfstats"><tr>
-{% for st in issue.mf.stats %}<td><p class="mono tile-label">{{ st.label }}</p><p class="tile-value num">{{ st|figure }}</p><p class="tile-detail">{{ st.detail|t }}</p></td>{% endfor %}
+{% for st in issue.mf.stats %}<td><p class="mono tile-label">{{ st.label }}</p><p class="tile-value num" style="color: {{ st|figcolor }};">{{ st|figure }}</p>{% if st.get('change_pct') is not none %}<p class="tile-chg num" style="color: {{ (st|movement)|mvcolor }};">{{ st.change_pct|arrow }} {{ st.change_pct|pct }}</p>{% endif %}<p class="tile-detail">{{ st.detail|t }}</p></td>{% endfor %}
 </tr></table>
 {% if issue.mf.stats %}{{ src(issue.mf.stats[0].source) }}{% endif %}
 {% if issue.mf.highlights %}<div class="cols2">{% for h in issue.mf.highlights %}<p>{{ h.text|t }} <a href="{{ h.source.url }}">{{ h.source.name }}</a></p>{% endfor %}</div>{% endif %}

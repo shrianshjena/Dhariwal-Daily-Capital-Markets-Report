@@ -119,7 +119,8 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 {% for t in pair %}
 <td class="stack" width="50%" valign="top" style="width:50%;padding:14px {{ 12 if loop.first else 0 }}px 14px {{ 0 if loop.first else 12 }}px;border-top:1px solid {{ C.border.default }};">
 {{ label(t.label ~ (" · provisional" if t.provisional|default(false) else ""), C.text.secondary) }}
-<p style="margin:6px 0 0 0;{{ SANS }}font-size:24px;line-height:30px;font-weight:700;color:{{ C.brand.cobalt }};white-space:nowrap;{{ LH }}">{{ t|figure }}</p>
+<p style="margin:6px 0 0 0;{{ SANS }}font-size:24px;line-height:30px;font-weight:700;color:{{ t|figcolor }};white-space:nowrap;{{ LH }}">{{ t|figure }}</p>
+{% if t.get('change_pct') is not none %}<p style="margin:2px 0 0 0;{{ SANS }}font-size:14px;line-height:20px;font-weight:700;color:{{ (t|movement)|mvcolor }};white-space:nowrap;{{ LH }}">{{ t.change_pct|arrow }}&nbsp;{{ t.change_pct|pct }}</p>{% endif %}
 <p style="margin:4px 0 0 0;{{ SANS }}font-size:13px;line-height:19px;color:{{ C.text.secondary }};{{ LH }}">{{ t.detail|t }} · <a href="{{ t.source.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ t.source.name }}</a>{% if t.get('also') %} · <a href="{{ t.also.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ t.also.name }}</a>{% endif %}</p>
 </td>
 {% endfor %}
@@ -196,7 +197,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 {% for st in issue.mf.stats %}
 <tr>
 <td valign="top" style="padding:10px 8px 10px 0;border-bottom:1px solid {{ C.border.default }};{{ SANS }}font-size:15px;line-height:21px;color:{{ C.text.primary }};{{ LH }}">{{ st.label }}<br><span style="font-size:13px;line-height:19px;color:{{ C.text.secondary }};">{{ st.detail|t }}</span></td>
-<td align="right" valign="top" style="padding:10px 0 10px 8px;border-bottom:1px solid {{ C.border.default }};{{ SANS }}font-size:20px;line-height:26px;font-weight:700;color:{{ C.brand.cobalt }};white-space:nowrap;{{ LH }}">{{ st|figure }}</td>
+<td align="right" valign="top" style="padding:10px 0 10px 8px;border-bottom:1px solid {{ C.border.default }};{{ SANS }}font-size:20px;line-height:26px;font-weight:700;color:{{ st|figcolor }};white-space:nowrap;{{ LH }}">{{ st|figure }}{% if st.get('change_pct') is not none %}<br><span style="font-size:13px;line-height:19px;color:{{ (st|movement)|mvcolor }};">{{ st.change_pct|arrow }}&nbsp;{{ st.change_pct|pct }}</span>{% endif %}</td>
 </tr>
 {% endfor %}
 </table>

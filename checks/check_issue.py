@@ -228,7 +228,9 @@ def main():
     subject = issue["meta"].get("subject") or f"Kubeerra Market Brief · {issue['meta']['weekday']} {date}"
     confirm = [f"- [ ] {r['name']}: {fmt.level(r['close'])} ({fmt.pct(r['change_pct'])}), {r['source']['url']}"
                for r in issue["snapshot"]["indices"]]
-    confirm += [f"- [ ] {t['label']}: {fmt.figure(t['value'], t['format'])}, {t['source']['url']}"
+    confirm += [f"- [ ] {t['label']}: {fmt.figure(t['value'], t['format'])}"
+                + (f" ({fmt.pct(t['change_pct'])})" if t.get("change_pct") is not None else "")
+                + f", {t['source']['url']}"
                 for t in issue["flows"]["tiles"] + issue["mf"]["stats"]]
 
     lines = [f"Suggested subject: {subject}", "", f"# Checks for {stem}", ""]

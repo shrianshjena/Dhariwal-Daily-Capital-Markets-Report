@@ -90,6 +90,22 @@
         "as_of": {
           "$ref": "#/$defs/text",
           "description": "Short time stamp when the figure is not as of the India close, e.g. 7:02 AM IST"
+        },
+        "change_pct": {
+          "type": "number",
+          "description": "Change against the stated comparison, in per cent; drives the green or red change line"
+        },
+        "direction": {
+          "enum": [
+            "up",
+            "down",
+            "flat"
+          ],
+          "description": "Explicit direction when no change_pct is given"
+        },
+        "flow": {
+          "type": "boolean",
+          "description": "True when the figure is itself a movement (a net flow): the figure is coloured by its sign. Signed crore figures are flows by default"
         }
       }
     }

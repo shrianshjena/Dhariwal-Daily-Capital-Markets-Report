@@ -23,13 +23,22 @@
     "website": "https://www.kubeerra.com"
   },
   "links": [
-    {"label": "Commission disclosures", "url": "https://www.kubeerra.com/commission-disclosures"},
-    {"label": "Grievance redressal", "url": "https://www.kubeerra.com/grievance-redressal"},
-    {"label": "Risk factors", "url": "https://www.kubeerra.com/risk-factors"}
+    {
+      "label": "Commission disclosures",
+      "url": "https://www.kubeerra.com/commission-disclosures"
+    },
+    {
+      "label": "Grievance redressal",
+      "url": "https://www.kubeerra.com/grievance-redressal"
+    },
+    {
+      "label": "Risk factors",
+      "url": "https://www.kubeerra.com/risk-factors"
+    }
   ],
   "assets": {
     "logo_email_url": "",
-    "logo_email_local": "assets/logo/kubeerra-tile-96.png",
+    "logo_email_local": "assets/logo/kubeerra-tile-144.png",
     "logo_pdf_local": "assets/logo/kubeerra-tile-512.png"
   },
   "pilot_note": "Internal pilot for the RM and MF team. Please do not forward to clients."

@@ -36,8 +36,10 @@ Outputs land in `out/<date>/` (not committed).
 
 ## Fonts
 
-General Sans (Fontshare, ITF EULA) is the intended face. Until its files are added to
-`assets/fonts/` as `GeneralSans-Regular.otf` and similar, the PDF uses Hanken Grotesk.
-JetBrains Mono is used for labels. Both are under the SIL Open Font License 1.1; the licence
-texts sit beside the font files. Neither font has the rupee sign, so the PDF falls back to
-DejaVu Sans for it. Email uses system fonts by design (Outlook and Gmail ignore web fonts).
+General Sans (Fontshare, ITF Free Font License 2.0; licence in `assets/fonts/FFL-GeneralSans.txt`)
+sets the PDF and the WhatsApp card. JetBrains Mono sets labels (SIL Open Font License 1.1).
+Hanken Grotesk stays as a fallback. The ▲ and ▼ signs come from DejaVu Sans. Email uses
+system fonts by design (Outlook and Gmail ignore web fonts).
+
+The font files must never be served publicly. Vercel deploys only `hosting/`: the root
+`.vercelignore` allows nothing else.
