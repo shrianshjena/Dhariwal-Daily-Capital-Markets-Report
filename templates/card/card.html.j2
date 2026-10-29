@@ -29,7 +29,7 @@ body { width: 1080px; height: 1350px; background: {{ C.brand.navy }}; color: {{ 
 .up { color: #6FD89B; } .down { color: #FF9C94; } .flat { color: {{ C.text.inverseSoft }}; }
 .foot { position: absolute; left: 0; right: 0; bottom: 0; }
 .foot p { margin: 0; font-size: 24px; line-height: 1.4; color: {{ C.text.inverseSoft }}; }
-.foot .reg { color: {{ C.text.inverse }}; font-weight: 600; }
+.foot .reg { color: {{ C.text.inverse }}; font-weight: 600; font-size: 31px; line-height: 1.35; margin-bottom: 10px; }
 .foot .mono { margin-top: 14px; font-size: 19px; }
 </style></head>
 <body><div class="wrap">
@@ -42,7 +42,7 @@ body { width: 1080px; height: 1350px; background: {{ C.brand.navy }}; color: {{ 
 {% for r in idx[:2] %}<td><p class="mono" style="margin:0">{{ r.name }}</p><p class="v">{{ r.close|level }}</p><p class="c {{ 'up' if r.change > 0 else ('down' if r.change < 0 else 'flat') }}">{{ r.change_pct|arrow }} {{ r.change_pct|pct }}</p></td>{% endfor %}
 </tr>
 {% for pair in issue.flows.tiles[:4]|batch(2) %}
-<tr>{% for t in pair %}<td><p class="mono" style="margin:0">{{ t.label }}{% if t.get('provisional') %} · prov.{% endif %}</p><p class="v">{{ t|figure }}</p></td>{% endfor %}</tr>
+<tr>{% for t in pair %}<td><p class="mono" style="margin:0">{{ t.label }}{% if t.get('provisional') %} · prov.{% endif %}{% if t.get('as_of') %} · {{ t.as_of }}{% endif %}</p><p class="v">{{ t|figure }}</p></td>{% endfor %}</tr>
 {% endfor %}
 </table>
 <div class="foot">

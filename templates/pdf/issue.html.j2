@@ -109,6 +109,7 @@ table.mfstats td { vertical-align: top; border-top: 0.75pt solid {{ C.border.def
 .cols2 p { break-inside: avoid; margin-top: 2mm; }
 .sublabel { color: {{ C.text.secondary }}; margin-top: 5mm; break-after: avoid; }
 .nfo { break-inside: avoid; margin-top: 2mm; }
+.nfosum { margin-top: 2mm; }
 .nfo .n { font-weight: 600; }
 .nfo .d { font-size: 8.6pt; color: {{ C.text.secondary }}; }
 .learn { background: {{ C.brand.paleBlue }}; border-left: 1.2mm solid {{ C.brand.cobalt }}; padding: 4.5mm 6mm 5mm 6mm; margin-top: 3mm; break-inside: avoid; }
@@ -175,7 +176,7 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 {{ sechead("02", "Flows, currency and commodities", issue.flows.headline) }}
 <table class="tiles">
 {% for row in issue.flows.tiles|batch(3) %}
-<tr>{% for t in row %}<td><p class="mono tile-label">{{ t.label }}{% if t.provisional|default(false) %} · provisional{% endif %}</p><p class="tile-value num">{{ t|figure }}</p><p class="tile-detail">{{ t.detail|t }} · <a href="{{ t.source.url }}">{{ t.source.name }}</a></p></td>{% endfor %}{% for _ in range(3 - row|length) %}<td></td>{% endfor %}</tr>
+<tr>{% for t in row %}<td><p class="mono tile-label">{{ t.label }}{% if t.provisional|default(false) %} · provisional{% endif %}</p><p class="tile-value num">{{ t|figure }}</p><p class="tile-detail">{{ t.detail|t }} · <a href="{{ t.source.url }}">{{ t.source.name }}</a>{% if t.get('also') %} · <a href="{{ t.also.url }}">{{ t.also.name }}</a>{% endif %}</p></td>{% endfor %}{% for _ in range(3 - row|length) %}<td></td>{% endfor %}</tr>
 {% endfor %}
 </table>
 </section>
@@ -221,6 +222,7 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 </tbody>
 </table>
 <p class="note">{{ issue.global.note|t }}</p>
+<p class="src">Sources: {% for s in global_sources %}<a href="{{ s.url }}">{{ s.name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
 </section>
 
 <section class="sec">
@@ -240,9 +242,12 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 </tr></table>
 {% if issue.mf.stats %}{{ src(issue.mf.stats[0].source) }}{% endif %}
 {% if issue.mf.highlights %}<div class="cols2">{% for h in issue.mf.highlights %}<p>{{ h.text|t }} <a href="{{ h.source.url }}">{{ h.source.name }}</a></p>{% endfor %}</div>{% endif %}
-{% if issue.mf.nfos %}
-<p class="mono sublabel">New fund offers open now · facts, not recommendations</p>
+{% if issue.mf.get('nfo_summary') or show_nfo_names %}
+<p class="mono sublabel">New fund offers</p>
+{% if issue.mf.get('nfo_summary') %}<p class="nfosum">{{ issue.mf.nfo_summary.text|t }} <a href="{{ issue.mf.nfo_summary.source.url }}">{{ issue.mf.nfo_summary.source.name }}</a></p>{% endif %}
+{% if show_nfo_names %}
 <div class="cols2">{% for n in issue.mf.nfos %}<div class="nfo"><p class="n">{{ n.scheme }}</p><p class="d">{{ n.category }} · {{ n.dates|t }}{% if n.get('min_investment') %} · Minimum {{ n.min_investment }}{% endif %}{% if n.get('riskometer') %} · Riskometer: {{ n.riskometer }}{% endif %} · <a href="{{ n.source.url }}">{{ n.source.name }}</a></p></div>{% endfor %}</div>
+{% endif %}
 {% endif %}
 {% if issue.mf.regulatory %}
 <p class="mono sublabel">Rule changes for investors</p>
@@ -256,6 +261,7 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 {% for p in issue.learn.paragraphs %}<p>{{ p|t }}</p>{% endfor %}
 {% if issue.learn.get('illustration') %}<p class="illus">{{ issue.learn.illustration|t }}</p>{% endif %}
 {% if issue.learn.get('link') %}<p><strong>Read more:</strong> <a href="{{ issue.learn.link.url }}">{{ issue.learn.link.name }}</a></p>{% endif %}
+{% if issue.learn.get('sources') %}<p class="illus">Sources: {% for s in issue.learn.sources %}<a href="{{ s.url }}">{{ s.name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>{% endif %}
 </div>
 </section>
 

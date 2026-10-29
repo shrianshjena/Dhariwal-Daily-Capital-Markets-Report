@@ -1,5 +1,5 @@
 {%- set meta = issue.meta -%}
-{{ pub.publisher }} · {{ pub.registration.tagline }} · {{ pub.registration.arn }}
+*{{ pub.publisher }} · {{ pub.registration.tagline }} · {{ pub.registration.arn }}*
 *{{ pub.name }}* · {{ meta.weekday }} {{ date_short }}
 {% for item in issue.brief %}
 • {{ item }}

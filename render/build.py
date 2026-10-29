@@ -174,7 +174,13 @@ def main():
 
     day = datetime.date.fromisoformat(date)
     snapshot_sources = list({s['source']['url']: s['source'] for s in issue['snapshot']['indices']}.values())
+    global_sources = list({s['url']: s for s in [g['source'] for g in issue['global']['items']]
+                           + issue['global'].get('note_sources', [])}.values())
+    # Scheme names appear only in the internal edition, and only when every NFO carries its riskometer
+    nfos = issue["mf"].get("nfos") or []
+    show_nfo_names = issue["meta"].get("audience") == "internal" and bool(nfos) and all(n.get("riskometer") for n in nfos)
     ctx = dict(issue=issue, pub=pub, tokens=tokens, sectors=sector_view(issue), snapshot_sources=snapshot_sources,
+               global_sources=global_sources, show_nfo_names=show_nfo_names,
                date_long=f"{day.day} {day:%B %Y}", date_short=f"{day.day} {day:%b %Y}")
 
     # Email HTML (the send build) and plain text

@@ -28,6 +28,9 @@
 {%- macro source(src, top=8, prefix="Source") -%}
 <p style="margin:{{ top }}px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.secondary }};{{ LH }}">{{ prefix|t }}: <a href="{{ src.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ src.name }}</a></p>
 {%- endmacro -%}
+{%- macro srclist(items, top=6, prefix="Sources") -%}
+<p style="margin:{{ top }}px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.secondary }};{{ LH }}">{{ prefix }}: {% for s in items %}<a href="{{ s.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ s.name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
+{%- endmacro -%}
 {%- macro th(text, align="left") -%}
 <th align="{{ align }}" style="padding:0 0 8px 0;border-bottom:1px solid {{ C.border.default }};{{ MONO }}font-size:11px;line-height:16px;letter-spacing:1px;font-weight:400;color:{{ C.text.secondary }};text-align:{{ align }};{{ LH }}">{{ text|upper }}</th>
 {%- endmacro -%}
@@ -117,7 +120,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 <td class="stack" width="50%" valign="top" style="width:50%;padding:14px {{ 12 if loop.first else 0 }}px 14px {{ 0 if loop.first else 12 }}px;border-top:1px solid {{ C.border.default }};">
 {{ label(t.label ~ (" · provisional" if t.provisional|default(false) else ""), C.text.secondary) }}
 <p style="margin:6px 0 0 0;{{ SANS }}font-size:24px;line-height:30px;font-weight:700;color:{{ C.brand.cobalt }};white-space:nowrap;{{ LH }}">{{ t|figure }}</p>
-<p style="margin:4px 0 0 0;{{ SANS }}font-size:13px;line-height:19px;color:{{ C.text.secondary }};{{ LH }}">{{ t.detail|t }} · <a href="{{ t.source.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ t.source.name }}</a></p>
+<p style="margin:4px 0 0 0;{{ SANS }}font-size:13px;line-height:19px;color:{{ C.text.secondary }};{{ LH }}">{{ t.detail|t }} · <a href="{{ t.source.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ t.source.name }}</a>{% if t.get('also') %} · <a href="{{ t.also.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ t.also.name }}</a>{% endif %}</p>
 </td>
 {% endfor %}
 {% if pair|length == 1 %}<td class="stack" width="50%" style="width:50%;border-top:1px solid {{ C.border.default }};">&nbsp;</td>{% endif %}
@@ -171,6 +174,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 {% endfor %}
 </table>
 {{ para(issue.global.note, 12, 15, C.text.secondary) }}
+{{ srclist(global_sources) }}
 </td></tr>
 
 {#- 06 IPO desk -#}
@@ -198,12 +202,15 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 </table>
 {% if issue.mf.stats %}{{ source(issue.mf.stats[0].source, 6) }}{% endif %}
 {% for h in issue.mf.highlights %}{{ para(h.text, 12, 15) }}{% endfor %}
-{% if issue.mf.nfos %}
-{{ label("New fund offers open now · facts, not recommendations", C.text.secondary, 22) }}
+{% if issue.mf.get('nfo_summary') or show_nfo_names %}
+{{ label("New fund offers", C.text.secondary, 22) }}
+{% if issue.mf.get('nfo_summary') %}<p style="margin:8px 0 0 0;{{ SANS }}font-size:15px;line-height:23px;color:{{ C.text.primary }};{{ LH }}">{{ issue.mf.nfo_summary.text|t }} <a href="{{ issue.mf.nfo_summary.source.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ issue.mf.nfo_summary.source.name }}</a></p>{% endif %}
+{% if show_nfo_names %}
 {% for n in issue.mf.nfos %}
 <p style="margin:10px 0 0 0;{{ SANS }}font-size:15px;line-height:22px;font-weight:600;color:{{ C.text.primary }};{{ LH }}">{{ n.scheme }}</p>
 <p style="margin:2px 0 0 0;{{ SANS }}font-size:14px;line-height:21px;color:{{ C.text.secondary }};{{ LH }}">{{ n.category }} · {{ n.dates|t }}{% if n.get('min_investment') %} · Minimum {{ n.min_investment }}{% endif %}{% if n.get('riskometer') %} · Riskometer: {{ n.riskometer }}{% endif %} · <a href="{{ n.source.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ n.source.name }}</a></p>
 {% endfor %}
+{% endif %}
 {% endif %}
 {% if issue.mf.regulatory %}
 {{ label("Rule changes for investors", C.text.secondary, 22) }}
@@ -221,6 +228,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 {% for p in issue.learn.paragraphs %}{{ para(p, 0 if loop.first else 10, 15) }}{% endfor %}
 {% if issue.learn.get('illustration') %}{{ para(issue.learn.illustration, 10, 13, C.text.secondary) }}{% endif %}
 {% if issue.learn.get('link') %}<p style="margin:12px 0 0 0;{{ SANS }}font-size:14px;line-height:21px;font-weight:600;color:{{ C.text.primary }};{{ LH }}">Read more: <a href="{{ issue.learn.link.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ issue.learn.link.name }}</a></p>{% endif %}
+{% if issue.learn.get('sources') %}{{ srclist(issue.learn.sources, 8) }}{% endif %}
 </td></tr></table>
 </td></tr>
 
