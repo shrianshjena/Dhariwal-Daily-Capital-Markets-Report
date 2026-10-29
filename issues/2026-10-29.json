@@ -380,7 +380,7 @@
     ]
   },
   "ipos": {
-    "headline": "Jio Platforms listed 21.4% above its issue price; three mainboard issues are open",
+    "headline": "Jio Platforms listed 21.4% above its issue price; three mainboard issues are open and a fourth opens today",
     "items": [
       {
         "company": "Jio Platforms",
@@ -485,7 +485,7 @@
         "label": "Industry assets",
         "value": 82.64,
         "format": "lakh_crore",
-        "detail": "Down 5.1% in the month as debt funds saw redemptions",
+        "detail": "Down 5.1% in the month; AMFI cites mark-to-market losses and debt fund outflows",
         "source": {
           "name": "AMFI monthly note",
           "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf"
@@ -501,7 +501,7 @@
         }
       },
       {
-        "text": "Debt funds saw net redemptions of about ₹1.83 lakh crore, led by liquid and money market funds. AMFI's note links the pressure on debt to rising 10-year G-Sec yields and expectations of rate hikes.",
+        "text": "Debt funds saw net redemptions of about ₹1.83 lakh crore, led by liquid and money market funds. AMFI's note attributes them mainly to tax-related liquidity needs ahead of advance tax deadlines, as the 10-year G-Sec yield rose to 7.18% by 30 September.",
         "source": {
           "name": "AMFI monthly note",
           "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf"
@@ -515,77 +515,21 @@
         }
       }
     ],
-    "nfos": [
-      {
-        "scheme": "ICICI Prudential BSE Power ETF",
-        "category": "Sectoral equity ETF tracking the BSE Power Index",
-        "dates": "26 to 30 Oct",
-        "min_investment": "₹1,000",
-        "riskometer": null,
-        "source": {
-          "name": "Advisorkhoj",
-          "url": "https://www.advisorkhoj.com/news/NFO/ICICI%20Prudential%20Mutual%20Fund%20launches%20ICICI%20Prudential%20BSE%20Power%20ETF"
-        }
-      },
-      {
-        "scheme": "Kotak Nifty Realty Index Fund",
-        "category": "Sectoral index fund tracking the Nifty Realty Index",
-        "dates": "26 Oct to 9 Nov",
-        "min_investment": "₹1,000",
-        "riskometer": null,
-        "source": {
-          "name": "Advisorkhoj",
-          "url": "https://www.advisorkhoj.com/news/NFO/Kotak%20Mahindra%20Mutual%20Fund%20launches%20Kotak%20Nifty%20Realty%20Index%20Fund"
-        }
-      },
-      {
-        "scheme": "Invesco India Silver ETF",
-        "category": "Silver ETF holding physical silver",
-        "dates": "27 Oct to 9 Nov",
-        "min_investment": "₹5,000",
-        "riskometer": null,
-        "source": {
-          "name": "Advisorkhoj",
-          "url": "https://www.advisorkhoj.com/news/NFO/Invesco%20Mutual%20Fund%20launches%20Invesco%20India%20Silver%20ETF"
-        }
-      },
-      {
-        "scheme": "Invesco India Silver ETF Fund of Fund",
-        "category": "Fund of funds investing in the Invesco India Silver ETF",
-        "dates": "27 Oct to 9 Nov",
-        "min_investment": "₹1,000",
-        "riskometer": null,
-        "source": {
-          "name": "Business Today",
-          "url": "https://www.businesstoday.in/mutual-funds/story/diwali-investment-invesco-launches-silver-etf-fof-icici-prudential-opens-bse-power-etf-nfo-563964-2026-10-27"
-        }
-      },
-      {
-        "scheme": "UTI Financial Services Debt Fund",
-        "category": "Sectoral debt fund investing in financial-services issuers rated AA+ and above",
-        "dates": "27 Oct to 2 Nov",
-        "min_investment": "₹500",
-        "riskometer": null,
-        "source": {
-          "name": "Advisorkhoj",
-          "url": "https://www.advisorkhoj.com/news/NFO/UTI%20Mutual%20Fund%20launches%20UTI%20Financial%20Services%20Debt%20Fund"
-        }
-      }
-    ],
+    "nfos": [],
     "regulatory": [
       {
         "body": "RBI",
         "date": "7 Oct",
-        "text": "The Monetary Policy Committee raised the repo rate by 25 basis points to 5.50%, its first increase since February 2023, and moved its stance to calibrated tightening. Bond prices fall when yields rise, so longer-duration debt funds are the most sensitive.",
+        "text": "The Monetary Policy Committee raised the repo rate by 25 basis points to 5.50%, its first increase since February 2023, and moved its stance to calibrated tightening. Bond prices move opposite to yields, and funds holding longer-dated bonds see larger price changes in either direction.",
         "source": {
           "name": "Cafemutual",
           "url": "https://cafemutual.com/news/industry/38994-rbi-hikes-repo-rate-by-25-bps-to-55-debt-fund-managers-favor-accrual-over-aggressive-duration"
         }
       },
       {
-        "body": "SEBI and AMFI",
+        "body": "Fund houses",
         "date": "15 to 16 Oct",
-        "text": "Fund houses stopped accepting fresh lump sums, switch-ins and new SIP or STP registrations in gold ETF fund of funds, reportedly at SEBI's instruction conveyed through AMFI. Existing SIPs and STPs, redemptions and switch-outs continue, and no end date has been given.",
+        "text": "Stopped accepting fresh lump sums, switch-ins and new SIP or STP registrations in gold ETF fund of funds, reportedly at SEBI's instruction. Existing SIPs and STPs, redemptions and switch-outs continue, and no end date has been given.",
         "source": {
           "name": "Cafemutual",
           "url": "https://cafemutual.com/news/passives/39072-as-per-sebi-instructions-fund-houses-halt-fresh-inflows-into-gold-etf-fofs"
@@ -594,27 +538,48 @@
       {
         "body": "SEBI",
         "date": "8 Oct",
-        "text": "Amendments to the Mutual Funds Regulations replace the mutual-fund-specific advertisement code with the common code for intermediaries, from about six months after the 9 October gazette notification. Scheme rules and costs do not change.",
+        "text": "Amendments to the Mutual Funds Regulations replace the mutual-fund-specific advertisement code with the common code for intermediaries, from the 180th day after the 9 October gazette notification (about 7 April 2027).",
         "source": {
           "name": "SEBI",
           "url": "https://www.sebi.gov.in/sebi_data/attachdocs/oct-2026/1791796434954.pdf"
         }
       }
-    ]
+    ],
+    "nfo_summary": {
+      "text": "Cafemutual's list showed twelve new fund offers open on 29 October: four sectoral or thematic index funds and ETFs, two silver products (an ETF and its fund of funds), two multi-asset funds of funds, two active equity funds (large and mid cap; small cap), an equity savings fund and a sectoral debt fund. Each scheme's risk level and terms are set out in its scheme information document.",
+      "source": {
+        "name": "Cafemutual NFO list",
+        "url": "https://cafemutual.com/news/nfo/38428-nfos-open-on-october-27"
+      }
+    }
   },
   "learn": {
     "id": "L-001",
     "title": "How your SIP shows up in the daily DII number",
     "paragraphs": [
       "Every evening, the exchanges publish provisional figures for how much foreign institutional investors (FIIs) and domestic institutional investors (DIIs) bought and sold in the cash market. On 28 October, DIIs bought ₹643 crore more than they sold.",
-      "DIIs include mutual funds, insurance companies, banks and pension funds. When SIP instalments reach fund houses each month (₹32,490 crore in September, from about 10 crore SIP accounts), the equity funds among them invest that money in shares, and the buying appears in the DII figure.",
-      "That is why market reports compare the two. FII flows can swing with global conditions, while regular SIP money gives domestic funds a steady stream to invest. In October up to the 28th, FIIs were net sellers of about ₹47,817 crore and DIIs net buyers of about ₹61,113 crore."
+      "DIIs include mutual funds, insurance companies, banks and pension funds. When SIP instalments reach fund houses each month (₹32,490 crore in September, from about 10 crore contributing SIP accounts), the equity funds among them invest that money in shares, and the buying appears in the DII figure.",
+      "That is why market reports compare the two. FII flows can swing with global conditions, while regular SIP money gives domestic funds a steady stream to invest. Provisional figures for October up to the 28th show FIIs as net sellers of about ₹47,817 crore and DIIs as net buyers of about ₹61,113 crore."
     ],
     "illustration": null,
     "link": {
-      "name": "Kubeerra: SIP vs lump sum, which investment route suits a beginner?",
+      "name": "Kubeerra explainer on how SIP and lump sum investing differ",
       "url": "https://www.kubeerra.com/blogs/sip-vs-lump-sum-which-suits-a-beginner"
-    }
+    },
+    "sources": [
+      {
+        "name": "NSE (FII and DII, provisional)",
+        "url": "https://www.nseindia.com/reports/fii-dii"
+      },
+      {
+        "name": "AMFI monthly note",
+        "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf"
+      },
+      {
+        "name": "Tapetide (month to date)",
+        "url": "https://tapetide.com/insight/reports/fii-dii-flows/2026-10"
+      }
+    ]
   },
   "day_ahead": [
     {
@@ -788,26 +753,6 @@
       "url": "https://www.outlookmoney.com/invest/amfi-data-september-2026-equity-mf-inflows-38307-crore-rupees"
     },
     {
-      "name": "Advisorkhoj",
-      "url": "https://www.advisorkhoj.com/news/NFO/ICICI%20Prudential%20Mutual%20Fund%20launches%20ICICI%20Prudential%20BSE%20Power%20ETF"
-    },
-    {
-      "name": "Advisorkhoj",
-      "url": "https://www.advisorkhoj.com/news/NFO/Kotak%20Mahindra%20Mutual%20Fund%20launches%20Kotak%20Nifty%20Realty%20Index%20Fund"
-    },
-    {
-      "name": "Advisorkhoj",
-      "url": "https://www.advisorkhoj.com/news/NFO/Invesco%20Mutual%20Fund%20launches%20Invesco%20India%20Silver%20ETF"
-    },
-    {
-      "name": "Business Today",
-      "url": "https://www.businesstoday.in/mutual-funds/story/diwali-investment-invesco-launches-silver-etf-fof-icici-prudential-opens-bse-power-etf-nfo-563964-2026-10-27"
-    },
-    {
-      "name": "Advisorkhoj",
-      "url": "https://www.advisorkhoj.com/news/NFO/UTI%20Mutual%20Fund%20launches%20UTI%20Financial%20Services%20Debt%20Fund"
-    },
-    {
       "name": "Cafemutual",
       "url": "https://cafemutual.com/news/industry/38994-rbi-hikes-repo-rate-by-25-bps-to-55-debt-fund-managers-favor-accrual-over-aggressive-duration"
     },
@@ -820,7 +765,11 @@
       "url": "https://www.sebi.gov.in/sebi_data/attachdocs/oct-2026/1791796434954.pdf"
     },
     {
-      "name": "Kubeerra: SIP vs lump sum, which investment route suits a beginner?",
+      "name": "Cafemutual NFO list",
+      "url": "https://cafemutual.com/news/nfo/38428-nfos-open-on-october-27"
+    },
+    {
+      "name": "Kubeerra explainer on how SIP and lump sum investing differ",
       "url": "https://www.kubeerra.com/blogs/sip-vs-lump-sum-which-suits-a-beginner"
     },
     {

@@ -20,12 +20,12 @@ THE MORNING IN BRIEF
 {% if issue.snapshot.breadth %}
 Breadth on the NSE: {{ issue.snapshot.breadth.advances|group }} advanced, {{ issue.snapshot.breadth.declines|group }} declined.
 {% endif %}
-Data as of {{ issue.snapshot.as_of }}. Sources: {% for s in snapshot_sources %}{{ s.name }} ({{ s.url }}){{ '; ' if not loop.last else '' }}{% endfor %}
+Data as of {{ issue.snapshot.as_of }}. Sources: {% for s in snapshot_sources %}{{ s.name }} ({{ s.url }}){{ '; ' if not loop.last else '' }}{% endfor +%}
 
 02 · FLOWS, CURRENCY AND COMMODITIES
 {{ issue.flows.headline }}
 {% for t in issue.flows.tiles %}
-{{ t.label }}{{ " (provisional)" if t.provisional|default(false) else "" }}: {{ t|figure }}. {{ t.detail }}. Source: {{ t.source.name }} ({{ t.source.url }}){% if t.get('also') %}; {{ t.also.name }} ({{ t.also.url }}){% endif %}
+{{ t.label }}{{ " (provisional)" if t.provisional|default(false) else "" }}: {{ t|figure }}. {{ t.detail }}. Source: {{ t.source.name }} ({{ t.source.url }}){% if t.get('also') %}; {{ t.also.name }} ({{ t.also.url }}){% endif +%}
 {% endfor %}
 
 03 · SECTOR SCOREBOARD
@@ -42,7 +42,7 @@ Change on the day, {{ issue.sectors.as_of }}. Source: {{ issue.sectors.source.na
 [{{ s.topic }} · {{ s.relevance }}] {{ s.headline }}
 {{ s.what }}
 Why it matters: {{ s.why }}
-Source: {{ s.source.name }} ({{ s.source.url }}){% if s.get('also') %}; {{ s.also.name }} ({{ s.also.url }}){% endif %}
+Source: {{ s.source.name }} ({{ s.source.url }}){% if s.get('also') %}; {{ s.also.name }} ({{ s.also.url }}){% endif +%}
 {% endfor %}
 
 05 · GLOBAL MARKETS
@@ -51,8 +51,7 @@ Source: {{ s.source.name }} ({{ s.source.url }}){% if s.get('also') %}; {{ s.als
 {{ "%-28s"|format(g.region ~ " · " ~ g.name) }}{{ "%12s"|format(g.close|level) }}{{ "%9s"|format(g.change_pct|pct) }}  ({{ g.as_of }})
 {% endfor %}
 {{ issue.global.note }}
-Sources: {% for s in global_sources %}{{ s.name }} ({{ s.url }}){{ '; ' if not loop.last else '' }}{% endfor %}
-
+Sources: {% for s in global_sources %}{{ s.name }} ({{ s.url }}){{ '; ' if not loop.last else '' }}{% endfor +%}
 
 06 · IPO DESK
 {{ issue.ipos.headline }}
@@ -105,13 +104,12 @@ Rule changes for investors:
 Read more: {{ issue.learn.link.name }} ({{ issue.learn.link.url }})
 {% endif %}
 {% if issue.learn.get('sources') %}
-Sources: {% for s in issue.learn.sources %}{{ s.name }} ({{ s.url }}){{ '; ' if not loop.last else '' }}{% endfor %}
-
+Sources: {% for s in issue.learn.sources %}{{ s.name }} ({{ s.url }}){{ '; ' if not loop.last else '' }}{% endfor +%}
 {% endif %}
 
 09 · DAY AHEAD
 {% for d in issue.day_ahead %}
-{{ "%-16s"|format(d.time) }}{{ d.event }}{% if d.get('source') %} Source: {{ d.source.name }} ({{ d.source.url }}){% endif %}
+{{ "%-16s"|format(d.time) }}{{ d.event }}{% if d.get('source') %} Source: {{ d.source.name }} ({{ d.source.url }}){% endif +%}
 {% endfor %}
 
 ------------------------------------------------------------
