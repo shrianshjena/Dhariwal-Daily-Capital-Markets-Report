@@ -8,8 +8,9 @@ global CLAUDE.md, or anything outside this project.
 
 ## Read first
 
-1. `docs/PROJECT_RECORD.md` (or, until it is exported here, the Claude Docs record
-   "Kubeerra Daily Market Report: Project Record"): decisions, open questions, history.
+1. `docs/PROJECT_RECORD.md`, the canonical record: decisions, open questions, history. The
+   Claude Docs copy ("Kubeerra Daily Market Report: Project Record") mirrors it and also holds
+   summaries of confidential sources, which stay out of this repository.
 2. `docs/EDITORIAL.md` for voice and story pattern, `docs/SENDING_GUIDE.md` for delivery.
 3. `.claude/skills/daily-market-report/SKILL.md` for the daily procedure.
 
