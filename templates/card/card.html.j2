@@ -46,7 +46,7 @@ body { width: 1080px; height: 1350px; background: {{ C.brand.navy }}; color: {{ 
 {% endfor %}
 </table>
 <div class="foot">
-<p class="reg">{{ pub.publisher }} · {{ pub.registration.tagline }} · {{ pub.registration.arn }}</p>
+<p class="reg">{{ pub.publisher }}<br>{{ pub.registration.tagline }} · {{ pub.registration.arn }}</p>
 <p>For information and education only. Not investment advice. {{ pub.standard_warning }}</p>
 {% if meta.audience == "internal" %}<p class="mono">Internal pilot · not for clients</p>{% endif %}
 </div>

@@ -1,0 +1,803 @@
+{
+  "meta": {
+    "date": "2026-10-29",
+    "weekday": "Thursday",
+    "edition": "Morning edition",
+    "issue_number": null,
+    "label": "Dry run 001",
+    "audience": "internal",
+    "india_as_of": "Close, Wed 28 Oct 2026",
+    "global_as_of": "US close, 28 Oct · GIFT Nifty, 8:11 AM IST",
+    "preheader": "NIFTY 50 slipped 0.22% as IT and oil and gas weighed; the Fed held rates, Brent stayed near $115 and the rupee closed at 95.28.",
+    "subject": "Kubeerra Market Brief · Thu 29 Oct: NIFTY 50 dips as IT weighs; Brent near $115"
+  },
+  "brief": [
+    "Benchmarks closed lower on Wednesday: the NIFTY 50 fell 0.22% to 22,698.85 and the Sensex 0.48%, as IT and oil and gas shares weighed, while midcap and smallcap indices edged up.",
+    "Foreign and domestic institutions were both net buyers (provisional), while the rupee weakened 21 paise to 95.28 per dollar with Brent crude near $115 a barrel.",
+    "Overnight, the US Federal Reserve kept its policy range at 3.75% to 4.00%. Today brings results from Coal India, Asian Paints and IndiGo, and the European Central Bank's decision this evening."
+  ],
+  "snapshot": {
+    "headline": "Benchmarks slipped as IT and oil and gas weighed; midcaps edged up",
+    "as_of": "close, 28 Oct 2026",
+    "indices": [
+      {
+        "name": "NIFTY 50",
+        "close": 22698.85,
+        "change": -50.9,
+        "change_pct": -0.22,
+        "source": {
+          "name": "NSE",
+          "url": "https://nsearchives.nseindia.com/archives/equities/mkt/MA281026.csv"
+        }
+      },
+      {
+        "name": "BSE Sensex",
+        "close": 73246.03,
+        "change": -352.64,
+        "change_pct": -0.48,
+        "source": {
+          "name": "Free Press Journal",
+          "url": "https://www.freepressjournal.in/amp/business/stock-market-closing-bell-sensex-falls-353-points-to-73246-nifty-ends-below-22700-as-it-stocks-drag"
+        }
+      },
+      {
+        "name": "Nifty Bank",
+        "close": 54267.4,
+        "change": 292.5,
+        "change_pct": 0.54,
+        "source": {
+          "name": "NSE",
+          "url": "https://nsearchives.nseindia.com/archives/equities/mkt/MA281026.csv"
+        }
+      },
+      {
+        "name": "Nifty Midcap 150",
+        "close": 21064.8,
+        "change": 61.65,
+        "change_pct": 0.29,
+        "source": {
+          "name": "NSE",
+          "url": "https://nsearchives.nseindia.com/archives/equities/mkt/MA281026.csv"
+        }
+      },
+      {
+        "name": "Nifty Smallcap 250",
+        "close": 16989.4,
+        "change": 55.7,
+        "change_pct": 0.33,
+        "source": {
+          "name": "NSE",
+          "url": "https://nsearchives.nseindia.com/archives/equities/mkt/MA281026.csv"
+        }
+      },
+      {
+        "name": "India VIX",
+        "close": 16.25,
+        "change": -0.16,
+        "change_pct": -0.96,
+        "neutral": true,
+        "source": {
+          "name": "NSE",
+          "url": "https://nsearchives.nseindia.com/archives/equities/mkt/MA281026.csv"
+        }
+      }
+    ],
+    "breadth": {
+      "advances": 2151,
+      "declines": 1731,
+      "unchanged": 110,
+      "source": {
+        "name": "NSE",
+        "url": "https://nsearchives.nseindia.com/archives/equities/mkt/MA281026.csv"
+      }
+    }
+  },
+  "flows": {
+    "headline": "Both institution groups were net buyers; the rupee weakened with Brent near $115",
+    "tiles": [
+      {
+        "label": "FII net",
+        "value": 871.83,
+        "format": "crore_signed",
+        "provisional": true,
+        "detail": "Net buyers on 28 Oct; October to date −₹47,817 cr (Tapetide)",
+        "source": {
+          "name": "NSE",
+          "url": "https://www.nseindia.com/reports/fii-dii"
+        }
+      },
+      {
+        "label": "DII net",
+        "value": 643.35,
+        "format": "crore_signed",
+        "provisional": true,
+        "detail": "Net buyers on 28 Oct; October to date +₹61,113 cr (Tapetide)",
+        "source": {
+          "name": "NSE",
+          "url": "https://www.nseindia.com/reports/fii-dii"
+        }
+      },
+      {
+        "label": "USD/INR",
+        "value": 95.28,
+        "format": "fx",
+        "detail": "Rupee 21 paise weaker; provisional close, 28 Oct",
+        "source": {
+          "name": "PTI via Daily Excelsior",
+          "url": "https://www.dailyexcelsior.com/rupee-falls-21-paise-to-close-at-95-28-against-us-dollar/"
+        }
+      },
+      {
+        "label": "Brent crude",
+        "value": 114.5,
+        "format": "usd_bbl",
+        "detail": "Per barrel at 7:02 AM IST, down 0.7%; settled $115.32 on 28 Oct",
+        "source": {
+          "name": "Reuters via Business Recorder",
+          "url": "https://brecorder.com/news/40446456/oil-prices-fall-as-peace-hopes-offset-fears-of-growing-middle-east-conflict"
+        }
+      },
+      {
+        "label": "Gold, 24K per 10 g",
+        "value": 142707,
+        "format": "inr_level",
+        "detail": "IBJA rate, 28 Oct afternoon; excludes GST",
+        "source": {
+          "name": "IBJA",
+          "url": "https://ibjarates.com/"
+        }
+      },
+      {
+        "label": "10-year G-Sec yield",
+        "value": 7.4389,
+        "format": "pct_level",
+        "detail": "6.94% GS 2036 benchmark, 28 Oct",
+        "source": {
+          "name": "RBI",
+          "url": "https://www.rbi.org.in/"
+        }
+      }
+    ]
+  },
+  "sectors": {
+    "headline": "Auto, consumer durables and media led; oil and gas and IT lagged",
+    "as_of": "close, 28 Oct 2026",
+    "items": [
+      {
+        "name": "Nifty Auto",
+        "change_pct": 1.45
+      },
+      {
+        "name": "Nifty Consumer Durables",
+        "change_pct": 1.41
+      },
+      {
+        "name": "Nifty Media",
+        "change_pct": 1.38
+      },
+      {
+        "name": "Nifty Healthcare",
+        "change_pct": 1.15
+      },
+      {
+        "name": "Nifty Pharma",
+        "change_pct": 1.04
+      },
+      {
+        "name": "Nifty Bank",
+        "change_pct": 0.54
+      },
+      {
+        "name": "Nifty Financial Services",
+        "change_pct": 0.47
+      },
+      {
+        "name": "Nifty Private Bank",
+        "change_pct": 0.35
+      },
+      {
+        "name": "Nifty PSU Bank",
+        "change_pct": 0.08
+      },
+      {
+        "name": "Nifty Metal",
+        "change_pct": -0.32
+      },
+      {
+        "name": "Nifty FMCG",
+        "change_pct": -0.56
+      },
+      {
+        "name": "Nifty Energy",
+        "change_pct": -0.89
+      },
+      {
+        "name": "Nifty Realty",
+        "change_pct": -0.89
+      },
+      {
+        "name": "Nifty IT",
+        "change_pct": -1.98
+      },
+      {
+        "name": "Nifty Oil & Gas",
+        "change_pct": -2.27
+      }
+    ],
+    "source": {
+      "name": "NSE",
+      "url": "https://nsearchives.nseindia.com/archives/equities/mkt/MA281026.csv"
+    }
+  },
+  "stories": [
+    {
+      "topic": "Global",
+      "relevance": "Market-wide",
+      "headline": "The US Federal Reserve held rates at 3.75% to 4.00%, with two members voting for a hike",
+      "what": "The Federal Open Market Committee voted 10 to 2 on 28 October to keep its policy range unchanged after September's quarter-point increase. Governor Lisa Cook and Cleveland Fed President Beth Hammack preferred an immediate 25 basis point hike, and futures-implied odds of a December hike rose to about 85% from 78% a day earlier.",
+      "why": "US interest rates influence the dollar and the relative appeal of emerging-market assets. That feeds into the rupee and into foreign portfolio flows into Indian shares and bonds.",
+      "source": {
+        "name": "Reuters",
+        "url": "https://lufkindailynews.com/news_reuters/business/global-stocks-hold-gains-after-fed-decision-oil-prices-rise/article_83a86c22-7fed-5223-a82f-bc1d7c12ea30.html"
+      }
+    },
+    {
+      "topic": "Global",
+      "relevance": "Market-wide",
+      "headline": "Brent crude settled above $115 a barrel as Middle East supply worries grew",
+      "what": "Brent settled 1.3% higher at $115.32 on 28 October. Reports cited attacks on Saudi energy sites by Yemen's Houthi group, a report that the US had told Gulf states to prepare for a possible brief campaign against Iran, and a fourth straight weekly fall in US crude stocks.",
+      "why": "India imports most of the crude oil it uses, so higher prices raise the import bill and the demand for dollars. That is a channel to fuel costs, inflation and the rupee.",
+      "source": {
+        "name": "Rigzone",
+        "url": "https://rigzone.com/news/wire/oil_rises_with_iran_attack_report_israeli_election_in_focus-28-oct-2026-184958-article"
+      }
+    },
+    {
+      "topic": "Markets",
+      "relevance": "Market-wide",
+      "headline": "The rupee weakened 21 paise to 95.28 per US dollar",
+      "what": "The rupee closed at a provisional 95.28 per dollar on 28 October, from 95.07 on Tuesday, after opening at 95.01 and touching 95.29. Dealers pointed to a firmer dollar, higher crude prices and elevated US Treasury yields.",
+      "why": "A weaker rupee raises the rupee cost of imports such as crude oil. It also raises the rupee value of overseas holdings, including those of international funds.",
+      "source": {
+        "name": "PTI via Daily Excelsior",
+        "url": "https://www.dailyexcelsior.com/rupee-falls-21-paise-to-close-at-95-28-against-us-dollar/"
+      }
+    },
+    {
+      "topic": "Economy",
+      "relevance": "Market-wide",
+      "headline": "Industrial output grew 6.7% in September, slower than August's revised 7.8%",
+      "what": "Quick estimates released on 28 October put September growth in the Index of Industrial Production at 6.7% year on year. Manufacturing rose 7.6% and electricity 11.2%, while mining contracted 6.2%; capital goods grew 10.4% and consumer non-durables 1.4%.",
+      "why": "The IIP tracks factory, mining and power output each month. It feeds into GDP estimates and gives an early read on the industrial activity behind many listed companies' sales.",
+      "source": {
+        "name": "Press Information Bureau",
+        "url": "https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2329475&reg=48&lang=2"
+      }
+    },
+    {
+      "topic": "Corporate",
+      "relevance": "Sector",
+      "headline": "Hindustan Unilever's quarterly sales grew 14.8% while its margin narrowed",
+      "what": "For July to September 2026, Hindustan Unilever reported turnover of ₹18,071 crore, up 14.8%, with underlying volume growth of 7%. Profit attributable to owners rose 3.9% to ₹2,790 crore, the EBITDA margin fell 140 basis points to 22.6%, and the board declared an interim dividend of ₹19 per share.",
+      "why": "HUL's volume growth is widely read as a gauge of household consumption, which matters for the consumer companies held across many diversified equity funds.",
+      "source": {
+        "name": "Business Standard",
+        "url": "https://www.business-standard.com/companies/quarterly-results/hul-q2-results-net-profit-rises-sales-growth-ebitda-margin-dividend-126102800298_1.html"
+      }
+    },
+    {
+      "topic": "Corporate",
+      "relevance": "Sector",
+      "headline": "Hero MotoCorp's quarterly profit rose 41%, helped by a one-time gain",
+      "what": "Hero MotoCorp's consolidated net profit for July to September 2026 rose 41% to ₹1,860.55 crore, including a one-time gain of ₹397 crore, and revenue from operations rose 23% to ₹14,970.50 crore. Vehicle sales rose 10% to 18.68 lakh units, with scooters up 47%.",
+      "why": "Two-wheeler sales are a widely tracked indicator of mass-market consumer demand.",
+      "source": {
+        "name": "Free Press Journal",
+        "url": "https://www.freepressjournal.in/business/hero-motocorp-q2-results-net-profit-jumps-41-to-1861-crore-as-revenue-rises-23"
+      }
+    }
+  ],
+  "global": {
+    "headline": "Wall Street closed slightly higher after the Fed held rates; GIFT Nifty traded lower by morning",
+    "items": [
+      {
+        "region": "US",
+        "name": "S&P 500",
+        "close": 7743.97,
+        "change_pct": 0.28,
+        "as_of": "Close, 28 Oct",
+        "source": {
+          "name": "Reuters",
+          "url": "https://www.centraloregondaily.com/news/consumer/wall-st-treads-water-as-chips-rise-megacaps-fall-ahead-of-fed-big-tech-earnings/article_562c53d7-061b-533e-a3da-227a1421220f.html"
+        }
+      },
+      {
+        "region": "US",
+        "name": "Nasdaq Composite",
+        "close": 26549.85,
+        "change_pct": 0.27,
+        "as_of": "Close, 28 Oct",
+        "source": {
+          "name": "Reuters",
+          "url": "https://www.centraloregondaily.com/news/consumer/wall-st-treads-water-as-chips-rise-megacaps-fall-ahead-of-fed-big-tech-earnings/article_562c53d7-061b-533e-a3da-227a1421220f.html"
+        }
+      },
+      {
+        "region": "US",
+        "name": "Dow Jones",
+        "close": 52475.1,
+        "change_pct": 0.19,
+        "as_of": "Close, 28 Oct",
+        "source": {
+          "name": "Reuters",
+          "url": "https://www.centraloregondaily.com/news/consumer/wall-st-treads-water-as-chips-rise-megacaps-fall-ahead-of-fed-big-tech-earnings/article_562c53d7-061b-533e-a3da-227a1421220f.html"
+        }
+      },
+      {
+        "region": "India offshore",
+        "name": "GIFT Nifty (Nov)",
+        "close": 22662.5,
+        "change_pct": -0.39,
+        "as_of": "8:11 AM IST, 29 Oct",
+        "source": {
+          "name": "HDFC Sky",
+          "url": "https://hdfcsky.com/news/gift-nifty-flat-weak-open-crude-fed-cues-oct29"
+        }
+      }
+    ],
+    "note": "In Asian trade on Thursday, Nasdaq futures were about 1% lower after Alphabet shares fell around 10% after hours on its results, and the US 10-year Treasury yield was 4.98%. US yields and the dollar shape foreign portfolio flows into India. GIFT Nifty is an early indication of how the NIFTY 50 may open, not a forecast."
+  },
+  "ipos": {
+    "headline": "Jio Platforms listed 21.4% above its issue price; three mainboard issues are open",
+    "items": [
+      {
+        "company": "Jio Platforms",
+        "status": "Listed",
+        "facts": [
+          "Listed on 28 Oct at ₹1,358, 21.4% above the ₹1,119 issue price",
+          "₹30,213 crore issue, subscribed 22.19 times"
+        ],
+        "source": {
+          "name": "Kotak Neo",
+          "url": "https://www.kotakneo.com/news/ipos/jio-platforms-lists-on-28-october/"
+        }
+      },
+      {
+        "company": "Paras Healthcare",
+        "status": "Listed",
+        "facts": [
+          "Listed on 28 Oct, 3.9% above the ₹693 issue price",
+          "₹1,450 crore issue, subscribed 2.23 times"
+        ],
+        "source": {
+          "name": "Upstox",
+          "url": "https://upstox.com/news/market-news/ipo/paras-healthcare-shares-debut-at-4-premium-on-nse-bse-here-s-how-much-investors-made-per-lot/article-202515/"
+        }
+      },
+      {
+        "company": "BLS Polymers",
+        "status": "Open",
+        "facts": [
+          "Bidding 27 to 29 Oct · price band ₹142 to ₹150 · ₹255 crore",
+          "Subscribed 35.25 times by the end of day 2 (28 Oct)"
+        ],
+        "source": {
+          "name": "IPO Gyani",
+          "url": "https://ipogyani.com/ipo/bls-polymers-ipo/subscription"
+        }
+      },
+      {
+        "company": "SFC Environmental Technologies",
+        "status": "Open",
+        "facts": [
+          "Bidding 27 to 29 Oct · price band ₹313 to ₹330 · ₹667.53 crore",
+          "Subscribed 0.27 times by the end of day 2 (28 Oct)"
+        ],
+        "source": {
+          "name": "IPO Gyani",
+          "url": "https://ipogyani.com/ipo/sfc-environmental-technologies-ipo/subscription"
+        }
+      },
+      {
+        "company": "M.K.Sons Fine Jewels",
+        "status": "Open",
+        "facts": [
+          "Bidding 28 to 30 Oct · price band ₹153 to ₹162 · ₹275.4 crore",
+          "Subscribed 0.65 times by the end of day 1 (28 Oct)"
+        ],
+        "source": {
+          "name": "IPO Gyani",
+          "url": "https://ipogyani.com/ipo/mk-sons-fine-jewels-ipo/subscription"
+        }
+      },
+      {
+        "company": "EAAA India Alternatives",
+        "status": "Closed",
+        "facts": [
+          "Bidding closed 28 Oct · price band ₹1,585 to ₹1,665 · ₹1,200 crore",
+          "Final subscription reported at 5.51 times; allotment due 29 Oct, listing expected 2 Nov"
+        ],
+        "source": {
+          "name": "HDFC Sky",
+          "url": "https://hdfcsky.com/news/eaaa-india-alternatives-ipo-share-allotment-today"
+        }
+      }
+    ],
+    "note": "Facts only. Kubeerra does not give views on applying for IPOs or on listing prospects. Subscription figures are as of the end of 28 October."
+  },
+  "mf": {
+    "headline": "SIP contributions reached ₹32,490 crore in September as equity funds drew ₹38,307 crore",
+    "period": "September 2026, released 12 Oct",
+    "stats": [
+      {
+        "label": "SIP contributions",
+        "value": 32490,
+        "format": "crore",
+        "detail": "From 10.06 crore contributing SIP accounts",
+        "source": {
+          "name": "AMFI monthly note",
+          "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf"
+        }
+      },
+      {
+        "label": "Equity fund net inflows",
+        "value": 38306.55,
+        "format": "crore",
+        "detail": "Open-ended equity schemes; a 67th straight month of inflows",
+        "source": {
+          "name": "AMFI monthly report",
+          "url": "https://portal.amfiindia.com/spages/amsep2026repo.pdf"
+        }
+      },
+      {
+        "label": "Industry assets",
+        "value": 82.64,
+        "format": "lakh_crore",
+        "detail": "Down 5.1% in the month as debt funds saw redemptions",
+        "source": {
+          "name": "AMFI monthly note",
+          "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf"
+        }
+      }
+    ],
+    "highlights": [
+      {
+        "text": "Small-cap, mid-cap and flexi-cap funds drew the most equity money, at ₹9,039 crore, ₹7,835 crore and ₹6,702 crore, together about three-fifths of the month's equity inflow.",
+        "source": {
+          "name": "AMFI monthly report",
+          "url": "https://portal.amfiindia.com/spages/amsep2026repo.pdf"
+        }
+      },
+      {
+        "text": "Debt funds saw net redemptions of about ₹1.83 lakh crore, led by liquid and money market funds. AMFI's note links the pressure on debt to rising 10-year G-Sec yields and expectations of rate hikes.",
+        "source": {
+          "name": "AMFI monthly note",
+          "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf"
+        }
+      },
+      {
+        "text": "Gold ETFs took in ₹4,451 crore, about 71% more than in August. That was before mid-October, when fund houses paused fresh money into gold ETF fund of funds (see rule changes below).",
+        "source": {
+          "name": "Outlook Money",
+          "url": "https://www.outlookmoney.com/invest/amfi-data-september-2026-equity-mf-inflows-38307-crore-rupees"
+        }
+      }
+    ],
+    "nfos": [
+      {
+        "scheme": "ICICI Prudential BSE Power ETF",
+        "category": "Sectoral equity ETF tracking the BSE Power Index",
+        "dates": "26 to 30 Oct",
+        "min_investment": "₹1,000",
+        "riskometer": null,
+        "source": {
+          "name": "Advisorkhoj",
+          "url": "https://www.advisorkhoj.com/news/NFO/ICICI%20Prudential%20Mutual%20Fund%20launches%20ICICI%20Prudential%20BSE%20Power%20ETF"
+        }
+      },
+      {
+        "scheme": "Kotak Nifty Realty Index Fund",
+        "category": "Sectoral index fund tracking the Nifty Realty Index",
+        "dates": "26 Oct to 9 Nov",
+        "min_investment": "₹1,000",
+        "riskometer": null,
+        "source": {
+          "name": "Advisorkhoj",
+          "url": "https://www.advisorkhoj.com/news/NFO/Kotak%20Mahindra%20Mutual%20Fund%20launches%20Kotak%20Nifty%20Realty%20Index%20Fund"
+        }
+      },
+      {
+        "scheme": "Invesco India Silver ETF",
+        "category": "Silver ETF holding physical silver",
+        "dates": "27 Oct to 9 Nov",
+        "min_investment": "₹5,000",
+        "riskometer": null,
+        "source": {
+          "name": "Advisorkhoj",
+          "url": "https://www.advisorkhoj.com/news/NFO/Invesco%20Mutual%20Fund%20launches%20Invesco%20India%20Silver%20ETF"
+        }
+      },
+      {
+        "scheme": "Invesco India Silver ETF Fund of Fund",
+        "category": "Fund of funds investing in the Invesco India Silver ETF",
+        "dates": "27 Oct to 9 Nov",
+        "min_investment": "₹1,000",
+        "riskometer": null,
+        "source": {
+          "name": "Business Today",
+          "url": "https://www.businesstoday.in/mutual-funds/story/diwali-investment-invesco-launches-silver-etf-fof-icici-prudential-opens-bse-power-etf-nfo-563964-2026-10-27"
+        }
+      },
+      {
+        "scheme": "UTI Financial Services Debt Fund",
+        "category": "Sectoral debt fund investing in financial-services issuers rated AA+ and above",
+        "dates": "27 Oct to 2 Nov",
+        "min_investment": "₹500",
+        "riskometer": null,
+        "source": {
+          "name": "Advisorkhoj",
+          "url": "https://www.advisorkhoj.com/news/NFO/UTI%20Mutual%20Fund%20launches%20UTI%20Financial%20Services%20Debt%20Fund"
+        }
+      }
+    ],
+    "regulatory": [
+      {
+        "body": "RBI",
+        "date": "7 Oct",
+        "text": "The Monetary Policy Committee raised the repo rate by 25 basis points to 5.50%, its first increase since February 2023, and moved its stance to calibrated tightening. Bond prices fall when yields rise, so longer-duration debt funds are the most sensitive.",
+        "source": {
+          "name": "Cafemutual",
+          "url": "https://cafemutual.com/news/industry/38994-rbi-hikes-repo-rate-by-25-bps-to-55-debt-fund-managers-favor-accrual-over-aggressive-duration"
+        }
+      },
+      {
+        "body": "SEBI and AMFI",
+        "date": "15 to 16 Oct",
+        "text": "Fund houses stopped accepting fresh lump sums, switch-ins and new SIP or STP registrations in gold ETF fund of funds, reportedly at SEBI's instruction conveyed through AMFI. Existing SIPs and STPs, redemptions and switch-outs continue, and no end date has been given.",
+        "source": {
+          "name": "Cafemutual",
+          "url": "https://cafemutual.com/news/passives/39072-as-per-sebi-instructions-fund-houses-halt-fresh-inflows-into-gold-etf-fofs"
+        }
+      },
+      {
+        "body": "SEBI",
+        "date": "8 Oct",
+        "text": "Amendments to the Mutual Funds Regulations replace the mutual-fund-specific advertisement code with the common code for intermediaries, from about six months after the 9 October gazette notification. Scheme rules and costs do not change.",
+        "source": {
+          "name": "SEBI",
+          "url": "https://www.sebi.gov.in/sebi_data/attachdocs/oct-2026/1791796434954.pdf"
+        }
+      }
+    ]
+  },
+  "learn": {
+    "id": "L-001",
+    "title": "How your SIP shows up in the daily DII number",
+    "paragraphs": [
+      "Every evening, the exchanges publish provisional figures for how much foreign institutional investors (FIIs) and domestic institutional investors (DIIs) bought and sold in the cash market. On 28 October, DIIs bought ₹643 crore more than they sold.",
+      "DIIs include mutual funds, insurance companies, banks and pension funds. When SIP instalments reach fund houses each month (₹32,490 crore in September, from about 10 crore SIP accounts), the equity funds among them invest that money in shares, and the buying appears in the DII figure.",
+      "That is why market reports compare the two. FII flows can swing with global conditions, while regular SIP money gives domestic funds a steady stream to invest. In October up to the 28th, FIIs were net sellers of about ₹47,817 crore and DIIs net buyers of about ₹61,113 crore."
+    ],
+    "illustration": null,
+    "link": {
+      "name": "Kubeerra: SIP vs lump sum, which investment route suits a beginner?",
+      "url": "https://www.kubeerra.com/blogs/sip-vs-lump-sum-which-suits-a-beginner"
+    }
+  },
+  "day_ahead": [
+    {
+      "time": "During the day",
+      "event": "Results due from Coal India, Asian Paints, InterGlobe Aviation (IndiGo), Trent, Ambuja Cements and Godrej Consumer Products, among about 140 companies.",
+      "source": {
+        "name": "Upstox",
+        "url": "https://upstox.com/news/market-news/earnings/q2-results-oct-29-coal-india-indigo-asian-paints-vedanta-power-trent-ambuja-cements-suzlon-energy-others-to-post-earnings/article-202591/"
+      }
+    },
+    {
+      "time": "During the day",
+      "event": "BSE Sensex monthly derivatives contracts expire (the last Thursday of the month).",
+      "source": {
+        "name": "Angel One",
+        "url": "https://www.angelone.in/news/market-updates/sensex-monthly-expiry-kaynes-lic-housing-finance-and-others-under-f-o-ban-on-september-24-2026"
+      }
+    },
+    {
+      "time": "During the day",
+      "event": "BLS Polymers and SFC Environmental Technologies IPOs close; EAAA India Alternatives allotment is due.",
+      "source": {
+        "name": "Investorgain",
+        "url": "https://www.investorgain.com/report/watch-live-ipo-event-calendar/554/today/?month=10&year=2026"
+      }
+    },
+    {
+      "time": "During the day",
+      "event": "Bombay Coated & Special Steels IPO opens, with a price band of ₹78 to ₹82; it closes on 2 Nov.",
+      "source": {
+        "name": "Groww",
+        "url": "https://groww.in/blog/bombay-coated-and-special-steels-ipo-to-open-on-october-29-2026"
+      }
+    },
+    {
+      "time": "6:00 PM",
+      "event": "US third-quarter GDP (advance estimate) and September personal income and spending, including PCE inflation.",
+      "source": {
+        "name": "BEA",
+        "url": "https://www.bea.gov/index.php/news/schedule/full"
+      }
+    },
+    {
+      "time": "6:45 PM",
+      "event": "European Central Bank policy decision; press conference at 7:15 PM.",
+      "source": {
+        "name": "Admirals",
+        "url": "https://admiralmarkets.com/analytics/traders-blog/ecb-meeting-october-2026"
+      }
+    },
+    {
+      "time": "During the day",
+      "event": "The Bank of Japan begins its two-day policy meeting; the decision is due on Friday 30 October.",
+      "source": {
+        "name": "investingLive",
+        "url": "https://investinglive.com/central-banks/boj-to-hold-at-1-25-but-ueda-signals-further-hikes-toward-neutral/"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "NSE",
+      "url": "https://nsearchives.nseindia.com/archives/equities/mkt/MA281026.csv"
+    },
+    {
+      "name": "Free Press Journal",
+      "url": "https://www.freepressjournal.in/amp/business/stock-market-closing-bell-sensex-falls-353-points-to-73246-nifty-ends-below-22700-as-it-stocks-drag"
+    },
+    {
+      "name": "NSE",
+      "url": "https://www.nseindia.com/reports/fii-dii"
+    },
+    {
+      "name": "PTI via Daily Excelsior",
+      "url": "https://www.dailyexcelsior.com/rupee-falls-21-paise-to-close-at-95-28-against-us-dollar/"
+    },
+    {
+      "name": "Reuters via Business Recorder",
+      "url": "https://brecorder.com/news/40446456/oil-prices-fall-as-peace-hopes-offset-fears-of-growing-middle-east-conflict"
+    },
+    {
+      "name": "IBJA",
+      "url": "https://ibjarates.com/"
+    },
+    {
+      "name": "RBI",
+      "url": "https://www.rbi.org.in/"
+    },
+    {
+      "name": "Reuters",
+      "url": "https://lufkindailynews.com/news_reuters/business/global-stocks-hold-gains-after-fed-decision-oil-prices-rise/article_83a86c22-7fed-5223-a82f-bc1d7c12ea30.html"
+    },
+    {
+      "name": "Rigzone",
+      "url": "https://rigzone.com/news/wire/oil_rises_with_iran_attack_report_israeli_election_in_focus-28-oct-2026-184958-article"
+    },
+    {
+      "name": "Press Information Bureau",
+      "url": "https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2329475&reg=48&lang=2"
+    },
+    {
+      "name": "Business Standard",
+      "url": "https://www.business-standard.com/companies/quarterly-results/hul-q2-results-net-profit-rises-sales-growth-ebitda-margin-dividend-126102800298_1.html"
+    },
+    {
+      "name": "Free Press Journal",
+      "url": "https://www.freepressjournal.in/business/hero-motocorp-q2-results-net-profit-jumps-41-to-1861-crore-as-revenue-rises-23"
+    },
+    {
+      "name": "Reuters",
+      "url": "https://www.centraloregondaily.com/news/consumer/wall-st-treads-water-as-chips-rise-megacaps-fall-ahead-of-fed-big-tech-earnings/article_562c53d7-061b-533e-a3da-227a1421220f.html"
+    },
+    {
+      "name": "HDFC Sky",
+      "url": "https://hdfcsky.com/news/gift-nifty-flat-weak-open-crude-fed-cues-oct29"
+    },
+    {
+      "name": "Kotak Neo",
+      "url": "https://www.kotakneo.com/news/ipos/jio-platforms-lists-on-28-october/"
+    },
+    {
+      "name": "Upstox",
+      "url": "https://upstox.com/news/market-news/ipo/paras-healthcare-shares-debut-at-4-premium-on-nse-bse-here-s-how-much-investors-made-per-lot/article-202515/"
+    },
+    {
+      "name": "IPO Gyani",
+      "url": "https://ipogyani.com/ipo/bls-polymers-ipo/subscription"
+    },
+    {
+      "name": "IPO Gyani",
+      "url": "https://ipogyani.com/ipo/sfc-environmental-technologies-ipo/subscription"
+    },
+    {
+      "name": "IPO Gyani",
+      "url": "https://ipogyani.com/ipo/mk-sons-fine-jewels-ipo/subscription"
+    },
+    {
+      "name": "HDFC Sky",
+      "url": "https://hdfcsky.com/news/eaaa-india-alternatives-ipo-share-allotment-today"
+    },
+    {
+      "name": "AMFI monthly note",
+      "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf"
+    },
+    {
+      "name": "AMFI monthly report",
+      "url": "https://portal.amfiindia.com/spages/amsep2026repo.pdf"
+    },
+    {
+      "name": "Outlook Money",
+      "url": "https://www.outlookmoney.com/invest/amfi-data-september-2026-equity-mf-inflows-38307-crore-rupees"
+    },
+    {
+      "name": "Advisorkhoj",
+      "url": "https://www.advisorkhoj.com/news/NFO/ICICI%20Prudential%20Mutual%20Fund%20launches%20ICICI%20Prudential%20BSE%20Power%20ETF"
+    },
+    {
+      "name": "Advisorkhoj",
+      "url": "https://www.advisorkhoj.com/news/NFO/Kotak%20Mahindra%20Mutual%20Fund%20launches%20Kotak%20Nifty%20Realty%20Index%20Fund"
+    },
+    {
+      "name": "Advisorkhoj",
+      "url": "https://www.advisorkhoj.com/news/NFO/Invesco%20Mutual%20Fund%20launches%20Invesco%20India%20Silver%20ETF"
+    },
+    {
+      "name": "Business Today",
+      "url": "https://www.businesstoday.in/mutual-funds/story/diwali-investment-invesco-launches-silver-etf-fof-icici-prudential-opens-bse-power-etf-nfo-563964-2026-10-27"
+    },
+    {
+      "name": "Advisorkhoj",
+      "url": "https://www.advisorkhoj.com/news/NFO/UTI%20Mutual%20Fund%20launches%20UTI%20Financial%20Services%20Debt%20Fund"
+    },
+    {
+      "name": "Cafemutual",
+      "url": "https://cafemutual.com/news/industry/38994-rbi-hikes-repo-rate-by-25-bps-to-55-debt-fund-managers-favor-accrual-over-aggressive-duration"
+    },
+    {
+      "name": "Cafemutual",
+      "url": "https://cafemutual.com/news/passives/39072-as-per-sebi-instructions-fund-houses-halt-fresh-inflows-into-gold-etf-fofs"
+    },
+    {
+      "name": "SEBI",
+      "url": "https://www.sebi.gov.in/sebi_data/attachdocs/oct-2026/1791796434954.pdf"
+    },
+    {
+      "name": "Kubeerra: SIP vs lump sum, which investment route suits a beginner?",
+      "url": "https://www.kubeerra.com/blogs/sip-vs-lump-sum-which-suits-a-beginner"
+    },
+    {
+      "name": "Upstox",
+      "url": "https://upstox.com/news/market-news/earnings/q2-results-oct-29-coal-india-indigo-asian-paints-vedanta-power-trent-ambuja-cements-suzlon-energy-others-to-post-earnings/article-202591/"
+    },
+    {
+      "name": "Angel One",
+      "url": "https://www.angelone.in/news/market-updates/sensex-monthly-expiry-kaynes-lic-housing-finance-and-others-under-f-o-ban-on-september-24-2026"
+    },
+    {
+      "name": "Investorgain",
+      "url": "https://www.investorgain.com/report/watch-live-ipo-event-calendar/554/today/?month=10&year=2026"
+    },
+    {
+      "name": "Groww",
+      "url": "https://groww.in/blog/bombay-coated-and-special-steels-ipo-to-open-on-october-29-2026"
+    },
+    {
+      "name": "BEA",
+      "url": "https://www.bea.gov/index.php/news/schedule/full"
+    },
+    {
+      "name": "Admirals",
+      "url": "https://admiralmarkets.com/analytics/traders-blog/ecb-meeting-october-2026"
+    },
+    {
+      "name": "investingLive",
+      "url": "https://investinglive.com/central-banks/boj-to-hold-at-1-25-but-ueda-signals-further-hikes-toward-neutral/"
+    }
+  ]
+}

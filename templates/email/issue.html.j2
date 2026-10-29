@@ -19,14 +19,14 @@
 <tr><td class="gut" align="left" style="text-align:left;padding:40px {{ G }}px 0 {{ G }}px;">
 {{ rule(24, C.brand.cobalt) }}
 {{ label(num ~ " · " ~ name, C.brand.cobalt, 10) }}
-<h2 style="margin:6px 0 0 0;{{ SANS }}font-size:21px;line-height:28px;font-weight:700;color:{{ C.text.primary }};{{ LH }}">{{ headline }}</h2>
+<h2 style="margin:6px 0 0 0;{{ SANS }}font-size:21px;line-height:28px;font-weight:700;color:{{ C.text.primary }};{{ LH }}">{{ headline|t }}</h2>
 </td></tr>
 {%- endmacro -%}
 {%- macro para(text, top=12, size=16, color=None, weight=400) -%}
-<p style="margin:{{ top }}px 0 0 0;{{ SANS }}font-size:{{ size }}px;line-height:{{ (size * 1.56)|round|int }}px;font-weight:{{ weight }};color:{{ color or C.text.primary }};{{ LH }}">{{ text }}</p>
+<p style="margin:{{ top }}px 0 0 0;{{ SANS }}font-size:{{ size }}px;line-height:{{ (size * 1.56)|round|int }}px;font-weight:{{ weight }};color:{{ color or C.text.primary }};{{ LH }}">{{ text|t }}</p>
 {%- endmacro -%}
 {%- macro source(src, top=8, prefix="Source") -%}
-<p style="margin:{{ top }}px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.secondary }};{{ LH }}">{{ prefix }}: <a href="{{ src.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ src.name }}</a></p>
+<p style="margin:{{ top }}px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.secondary }};{{ LH }}">{{ prefix|t }}: <a href="{{ src.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ src.name }}</a></p>
 {%- endmacro -%}
 {%- macro th(text, align="left") -%}
 <th align="{{ align }}" style="padding:0 0 8px 0;border-bottom:1px solid {{ C.border.default }};{{ MONO }}font-size:11px;line-height:16px;letter-spacing:1px;font-weight:400;color:{{ C.text.secondary }};text-align:{{ align }};{{ LH }}">{{ text|upper }}</th>
@@ -83,7 +83,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
 {% for item in issue.brief %}
 <tr><td width="16" valign="top" style="width:16px;padding-top:{{ 19 if loop.first else 13 }}px;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td width="6" height="6" bgcolor="{{ C.brand.cobalt }}" style="width:6px;height:6px;background-color:{{ C.brand.cobalt }};font-size:0;line-height:0;">&nbsp;</td></tr></table></td>
-<td valign="top" style="padding-top:{{ 10 if loop.first else 4 }}px;{{ SANS }}font-size:16px;line-height:25px;color:{{ C.text.primary }};{{ LH }}">{{ item }}</td></tr>
+<td valign="top" style="padding-top:{{ 10 if loop.first else 4 }}px;{{ SANS }}font-size:16px;line-height:25px;color:{{ C.text.primary }};{{ LH }}">{{ item|t }}</td></tr>
 {% endfor %}
 </table>
 </td></tr>
@@ -103,8 +103,8 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 </tr>
 {% endfor %}
 </table>
-{% if issue.snapshot.breadth %}{% set b = issue.snapshot.breadth %}{{ para("Breadth on the NSE: " ~ (b.advances|group) ~ " stocks advanced and " ~ (b.declines|group) ~ " declined" ~ ((", " ~ (b.unchanged|group) ~ " unchanged") if b.get('unchanged') is not none else "") ~ ".", 12, 15, C.text.secondary) }}{% endif %}
-{{ source(issue.snapshot.indices[0].source, 6, "Data as of " ~ issue.snapshot.as_of ~ ". Source") }}
+{% if issue.snapshot.breadth %}{% set b = issue.snapshot.breadth %}{{ para("Breadth on the NSE: " ~ (b.advances|group) ~ " securities advanced and " ~ (b.declines|group) ~ " declined" ~ ((", " ~ (b.unchanged|group) ~ " unchanged") if b.get('unchanged') is not none else "") ~ ".", 12, 15, C.text.secondary) }}{% endif %}
+<p style="margin:6px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.secondary }};{{ LH }}">Data as of {{ issue.snapshot.as_of|t }}. Sources: {% for s in snapshot_sources %}<a href="{{ s.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ s.name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
 </td></tr>
 
 {#- 02 Flows, currency and commodities -#}
@@ -117,7 +117,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 <td class="stack" width="50%" valign="top" style="width:50%;padding:14px {{ 12 if loop.first else 0 }}px 14px {{ 0 if loop.first else 12 }}px;border-top:1px solid {{ C.border.default }};">
 {{ label(t.label ~ (" · provisional" if t.provisional|default(false) else ""), C.text.secondary) }}
 <p style="margin:6px 0 0 0;{{ SANS }}font-size:24px;line-height:30px;font-weight:700;color:{{ C.brand.cobalt }};white-space:nowrap;{{ LH }}">{{ t|figure }}</p>
-<p style="margin:4px 0 0 0;{{ SANS }}font-size:13px;line-height:19px;color:{{ C.text.secondary }};{{ LH }}">{{ t.detail }} · <a href="{{ t.source.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ t.source.name }}</a></p>
+<p style="margin:4px 0 0 0;{{ SANS }}font-size:13px;line-height:19px;color:{{ C.text.secondary }};{{ LH }}">{{ t.detail|t }} · <a href="{{ t.source.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ t.source.name }}</a></p>
 </td>
 {% endfor %}
 {% if pair|length == 1 %}<td class="stack" width="50%" style="width:50%;border-top:1px solid {{ C.border.default }};">&nbsp;</td>{% endif %}
@@ -150,9 +150,9 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 <tr><td class="gut" align="left" style="text-align:left;padding:{{ 20 if loop.first else 24 }}px {{ G }}px 0 {{ G }}px;">
 {% if not loop.first %}<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="1" bgcolor="{{ C.border.default }}" style="height:1px;background-color:{{ C.border.default }};font-size:0;line-height:0;">&nbsp;</td></tr></table>{% endif %}
 {{ label(s.topic ~ " · " ~ s.relevance, C.brand.tealDark, 0 if loop.first else 22) }}
-<h3 style="margin:6px 0 0 0;{{ SANS }}font-size:18px;line-height:25px;font-weight:700;color:{{ C.text.primary }};{{ LH }}">{{ s.headline }}</h3>
+<h3 style="margin:6px 0 0 0;{{ SANS }}font-size:18px;line-height:25px;font-weight:700;color:{{ C.text.primary }};{{ LH }}">{{ s.headline|t }}</h3>
 {{ para(s.what, 8) }}
-<p style="margin:10px 0 0 0;{{ SANS }}font-size:16px;line-height:25px;color:{{ C.text.primary }};{{ LH }}"><span style="{{ MONO }}font-size:11px;letter-spacing:1.2px;color:{{ C.brand.tealDark }};">WHY IT MATTERS&nbsp;&nbsp;</span>{{ s.why }}</p>
+<p style="margin:10px 0 0 0;{{ SANS }}font-size:16px;line-height:25px;color:{{ C.text.primary }};{{ LH }}"><span style="{{ MONO }}font-size:11px;line-height:16px;letter-spacing:1.2px;color:{{ C.brand.tealDark }};">WHY IT MATTERS&nbsp;&nbsp;</span>{{ s.why|t }}</p>
 {{ source(s.source) }}
 </td></tr>
 {% endfor %}
@@ -164,7 +164,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 <tr>{{ th("Market") }}{{ th("Level", "right") }}{{ th("Change", "right") }}</tr>
 {% for g in issue.global["items"] %}
 <tr>
-<td style="padding:9px 8px 9px 0;border-bottom:1px solid {{ C.border.default }};{{ SANS }}font-size:15px;line-height:20px;color:{{ C.text.primary }};{{ LH }}"><span style="{{ MONO }}font-size:11px;letter-spacing:1px;color:{{ C.text.secondary }};">{{ g.region|upper }}&nbsp;&nbsp;</span>{{ g.name }}</td>
+<td style="padding:9px 8px 9px 0;border-bottom:1px solid {{ C.border.default }};{{ SANS }}font-size:15px;line-height:20px;color:{{ C.text.primary }};{{ LH }}"><span style="{{ MONO }}font-size:11px;line-height:16px;letter-spacing:1px;color:{{ C.text.secondary }};">{{ g.region|upper }}&nbsp;&nbsp;</span>{{ g.name }}</td>
 <td align="right" style="padding:9px 0 9px 8px;border-bottom:1px solid {{ C.border.default }};{{ SANS }}font-size:15px;line-height:20px;color:{{ C.text.primary }};white-space:nowrap;{{ LH }}">{{ g.close|level }}</td>
 <td align="right" style="padding:9px 0 9px 8px;border-bottom:1px solid {{ C.border.default }};{{ SANS }}font-size:14px;line-height:20px;font-weight:700;color:{{ g.change_pct|dircolor }};white-space:nowrap;{{ LH }}">{% if g.change_pct is not none %}{{ g.change_pct|arrow }}&nbsp;{{ g.change_pct|pct }}{% else %}Not available{% endif %}</td>
 </tr>
@@ -177,8 +177,8 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 {{ section("06", "IPO desk", issue.ipos.headline) }}
 <tr><td class="gut" align="left" style="text-align:left;padding:8px {{ G }}px 0 {{ G }}px;">
 {% for ipo in issue.ipos["items"] %}
-<p style="margin:14px 0 0 0;{{ SANS }}font-size:16px;line-height:23px;font-weight:700;color:{{ C.text.primary }};{{ LH }}">{{ ipo.company }}&nbsp;&nbsp;<span style="{{ MONO }}font-size:11px;letter-spacing:1px;font-weight:400;color:{{ C.brand.tealDark }};">{{ ipo.status|upper }}</span></p>
-{% for f in ipo.facts %}<p style="margin:3px 0 0 0;{{ SANS }}font-size:14px;line-height:21px;color:{{ C.text.secondary }};{{ LH }}">{{ f }}</p>{% endfor %}
+<p style="margin:14px 0 0 0;{{ SANS }}font-size:16px;line-height:23px;font-weight:700;color:{{ C.text.primary }};{{ LH }}">{{ ipo.company }}&nbsp;&nbsp;<span style="{{ MONO }}font-size:11px;line-height:16px;letter-spacing:1px;font-weight:400;color:{{ C.brand.tealDark }};">{{ ipo.status|upper }}</span></p>
+{% for f in ipo.facts %}<p style="margin:3px 0 0 0;{{ SANS }}font-size:14px;line-height:21px;color:{{ C.text.secondary }};{{ LH }}">{{ f|t }}</p>{% endfor %}
 {{ source(ipo.source, 3) }}
 {% endfor %}
 {{ para(issue.ipos.note, 14, 13, C.text.secondary) }}
@@ -191,7 +191,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;margin-top:6px;">
 {% for st in issue.mf.stats %}
 <tr>
-<td valign="top" style="padding:10px 8px 10px 0;border-bottom:1px solid {{ C.border.default }};{{ SANS }}font-size:15px;line-height:21px;color:{{ C.text.primary }};{{ LH }}">{{ st.label }}<br><span style="font-size:13px;line-height:19px;color:{{ C.text.secondary }};">{{ st.detail }}</span></td>
+<td valign="top" style="padding:10px 8px 10px 0;border-bottom:1px solid {{ C.border.default }};{{ SANS }}font-size:15px;line-height:21px;color:{{ C.text.primary }};{{ LH }}">{{ st.label }}<br><span style="font-size:13px;line-height:19px;color:{{ C.text.secondary }};">{{ st.detail|t }}</span></td>
 <td align="right" valign="top" style="padding:10px 0 10px 8px;border-bottom:1px solid {{ C.border.default }};{{ SANS }}font-size:20px;line-height:26px;font-weight:700;color:{{ C.brand.cobalt }};white-space:nowrap;{{ LH }}">{{ st|figure }}</td>
 </tr>
 {% endfor %}
@@ -202,13 +202,13 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 {{ label("New fund offers open now · facts, not recommendations", C.text.secondary, 22) }}
 {% for n in issue.mf.nfos %}
 <p style="margin:10px 0 0 0;{{ SANS }}font-size:15px;line-height:22px;font-weight:600;color:{{ C.text.primary }};{{ LH }}">{{ n.scheme }}</p>
-<p style="margin:2px 0 0 0;{{ SANS }}font-size:14px;line-height:21px;color:{{ C.text.secondary }};{{ LH }}">{{ n.category }} · {{ n.dates }}{% if n.get('min_investment') %} · Minimum {{ n.min_investment }}{% endif %}{% if n.get('riskometer') %} · Riskometer: {{ n.riskometer }}{% endif %} · <a href="{{ n.source.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ n.source.name }}</a></p>
+<p style="margin:2px 0 0 0;{{ SANS }}font-size:14px;line-height:21px;color:{{ C.text.secondary }};{{ LH }}">{{ n.category }} · {{ n.dates|t }}{% if n.get('min_investment') %} · Minimum {{ n.min_investment }}{% endif %}{% if n.get('riskometer') %} · Riskometer: {{ n.riskometer }}{% endif %} · <a href="{{ n.source.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ n.source.name }}</a></p>
 {% endfor %}
 {% endif %}
 {% if issue.mf.regulatory %}
 {{ label("Rule changes for investors", C.text.secondary, 22) }}
 {% for r in issue.mf.regulatory %}
-<p style="margin:10px 0 0 0;{{ SANS }}font-size:15px;line-height:23px;color:{{ C.text.primary }};{{ LH }}"><span style="font-weight:700;">{{ r.body }}, {{ r.date }}.</span> {{ r.text }} <a href="{{ r.source.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ r.source.name }}</a></p>
+<p style="margin:10px 0 0 0;{{ SANS }}font-size:15px;line-height:23px;color:{{ C.text.primary }};{{ LH }}"><span style="font-weight:700;">{{ r.body }}, {{ r.date|t }}.</span> {{ r.text|t }} <a href="{{ r.source.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ r.source.name }}</a></p>
 {% endfor %}
 {% endif %}
 </td></tr>
@@ -231,7 +231,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 {% for d in issue.day_ahead %}
 <tr>
 <td width="96" valign="top" style="width:96px;padding:10px 12px 10px 0;border-bottom:1px solid {{ C.border.default }};{{ MONO }}font-size:12px;line-height:20px;color:{{ C.text.secondary }};white-space:nowrap;{{ LH }}">{{ d.time|upper }}</td>
-<td valign="top" style="padding:10px 0;border-bottom:1px solid {{ C.border.default }};{{ SANS }}font-size:15px;line-height:21px;color:{{ C.text.primary }};{{ LH }}">{{ d.event }}{% if d.get('source') %} <a href="{{ d.source.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;font-size:13px;">{{ d.source.name }}</a>{% endif %}</td>
+<td valign="top" style="padding:10px 0;border-bottom:1px solid {{ C.border.default }};{{ SANS }}font-size:15px;line-height:21px;color:{{ C.text.primary }};{{ LH }}">{{ d.event|t }}{% if d.get('source') %} <a href="{{ d.source.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;font-size:13px;">{{ d.source.name }}</a>{% endif %}</td>
 </tr>
 {% endfor %}
 </table>
@@ -245,8 +245,8 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 {% for d in pub.disclaimer %}<p style="margin:8px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.inverseSoft }};{{ LH }}">{{ d }}</p>{% endfor %}
 <p style="margin:12px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;font-weight:700;color:{{ C.text.inverse }};{{ LH }}">{{ pub.standard_warning }}</p>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-top:20px;">{{ rule(40, C.brand.cobalt) }}</td></tr></table>
-<p style="margin:16px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.inverseSoft }};{{ LH }}">Phone {{ pub.contacts.phone }} · WhatsApp {{ pub.contacts.whatsapp }} · <a href="mailto:{{ pub.contacts.email }}" style="color:{{ C.text.inverseLink }};text-decoration:underline;">{{ pub.contacts.email }}</a><br>{{ pub.contacts.hours }}<br>{{ pub.contacts.address }}</p>
-<p style="margin:12px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.inverseSoft }};{{ LH }}">{% for l in pub.links %}<a href="{{ l.url }}" style="color:{{ C.text.inverseLink }};text-decoration:underline;">{{ l.label }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+<p style="margin:16px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.inverseSoft }};{{ LH }}">Phone {{ pub.contacts.phone|t }} · WhatsApp {{ pub.contacts.whatsapp|t }} · <a href="mailto:{{ pub.contacts.email }}" style="color:{{ C.text.inverseLink }};text-decoration:underline;">{{ pub.contacts.email }}</a><br>{{ pub.contacts.hours }}<br>{{ pub.contacts.address }}</p>
+<p style="margin:12px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.inverseSoft }};{{ LH }}">{% for l in pub.links %}<a href="{{ l.url }}" style="color:{{ C.text.inverseLink }};text-decoration:underline;">{{ l.label|nb }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
 {% if meta.audience == "internal" %}<p style="margin:16px 0 0 0;{{ MONO }}font-size:11px;line-height:16px;letter-spacing:1px;color:{{ C.text.inverseSoft }};{{ LH }}">{{ pub.pilot_note|upper }}</p>{% endif %}
 </td></tr>
 </table>

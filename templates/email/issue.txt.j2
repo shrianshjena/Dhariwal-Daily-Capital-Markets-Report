@@ -20,7 +20,7 @@ THE MORNING IN BRIEF
 {% if issue.snapshot.breadth %}
 Breadth on the NSE: {{ issue.snapshot.breadth.advances|group }} advanced, {{ issue.snapshot.breadth.declines|group }} declined.
 {% endif %}
-Data as of {{ issue.snapshot.as_of }}. Source: {{ issue.snapshot.indices[0].source.name }} ({{ issue.snapshot.indices[0].source.url }})
+Data as of {{ issue.snapshot.as_of }}. Sources: {% for s in snapshot_sources %}{{ s.name }} ({{ s.url }}){{ '; ' if not loop.last else '' }}{% endfor %}
 
 02 · FLOWS, CURRENCY AND COMMODITIES
 {{ issue.flows.headline }}

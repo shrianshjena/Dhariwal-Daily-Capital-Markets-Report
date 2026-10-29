@@ -120,7 +120,7 @@ def main():
 
     # 3. Review words in the issue's own writing only (boilerplate disclosures excluded)
     for path, value in strings(issue):
-        if path.endswith("/url") or path.startswith("/sources"):
+        if path.endswith("/url") or path.startswith("/sources") or path.endswith("/source/name"):
             continue
         for p in REVIEW:
             for m in re.finditer(p, value, re.I):

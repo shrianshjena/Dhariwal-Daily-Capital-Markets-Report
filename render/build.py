@@ -19,9 +19,11 @@ import re
 import subprocess
 import sys
 from pathlib import Path
+from urllib.parse import urlparse
 
 import jsonschema
 from jinja2 import Environment, FileSystemLoader, StrictUndefined
+from markupsafe import Markup, escape
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import fmt  # noqa: E402
@@ -76,6 +78,33 @@ def font_faces():
     return faces
 
 
+MONTHS = r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*"
+GLUE = [
+    (re.compile(r"(?<=\d) (?=(?:lakh|crore|cr|bp|paise|times|AM|PM)\b)"), "\u00a0"),  # 1,450 crore; 8:11 AM
+    (re.compile(r"(?<=\blakh) (?=(?:crore|cr)\b)"), "\u00a0"),                         # lakh crore
+    (re.compile(r"(?<=\d) (?=" + MONTHS + r"\b)"), "\u00a0"),                            # 28 Oct
+    (re.compile(r"(?<=\d) (?=\d)"), "\u00a0"),                                             # +91 73042 11122
+    (re.compile(r"\b(NIFTY|Nifty|Sensex|S&P|FTSE|Midcap|Smallcap) (?=\d)"), "\\1\u00a0"),     # NIFTY 50
+]
+SIGNED_MONEY = re.compile(r"([+\u2212][\u20b9$][\d,]+(?:\.\d+)?)")
+
+
+def glue(text):
+    """Typographic glue for HTML output: keep numbers with their units, days with months,
+    index names with their numbers, and a sign with its currency symbol (browsers and
+    mail apps may otherwise break a line between the minus sign and the rupee sign)."""
+    s = str(text)
+    for pattern, repl in GLUE:
+        s = pattern.sub(repl, s)
+    s = str(escape(s)).replace("\u00a0", "&nbsp;")
+    return Markup(SIGNED_MONEY.sub(r'<span style="white-space:nowrap;">\1</span>', s))
+
+
+def nobreak(text):
+    """Join all words of a short label, such as a footer link, so it never wraps."""
+    return Markup(str(escape(str(text))).replace(" ", "&nbsp;"))
+
+
 def build_env(tokens):
     env = Environment(
         loader=FileSystemLoader(str(ROOT / "templates")),
@@ -96,6 +125,8 @@ def build_env(tokens):
         level=fmt.level, points=fmt.points, pct=fmt.pct, arrow=fmt.arrow,
         figure=lambda f: fmt.figure(f["value"], f["format"]), dircolor=dircolor,
         group=fmt.group_indian,
+        host=lambda url: urlparse(url).netloc.removeprefix("www."),
+        t=glue, nb=nobreak,
     )
     return env
 
@@ -142,7 +173,8 @@ def main():
         print("WARN no hosted logo URL: the email masthead will show alt text until one is set", file=sys.stderr)
 
     day = datetime.date.fromisoformat(date)
-    ctx = dict(issue=issue, pub=pub, tokens=tokens, sectors=sector_view(issue),
+    snapshot_sources = list({s['source']['url']: s['source'] for s in issue['snapshot']['indices']}.values())
+    ctx = dict(issue=issue, pub=pub, tokens=tokens, sectors=sector_view(issue), snapshot_sources=snapshot_sources,
                date_long=f"{day.day} {day:%B %Y}", date_short=f"{day.day} {day:%b %Y}")
 
     # Email HTML (the send build) and plain text
@@ -185,6 +217,8 @@ def main():
             run(["pdftoppm", "-png", "-r", "96", "-singlefile", str(pdf_path), str(out / "preview" / name)])
             pdf_path.unlink()
             trim_png(out / "preview" / f"{name}.png")
+        for stale in (out / "preview").glob("pdf-page-*.png"):  # page count can shrink between builds
+            stale.unlink()
         run(["pdftoppm", "-png", "-r", "60", str(out / f"{stem}.pdf"), str(out / "preview" / "pdf-page")])
 
     manifest = {}

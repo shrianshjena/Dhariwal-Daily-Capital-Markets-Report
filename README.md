@@ -5,7 +5,7 @@ Limited (AMFI-registered Mutual Fund Distributor, ARN-369716). One structured is
 rendered to email HTML (classic Outlook, new Outlook, Outlook on the web, Gmail), an A4 PDF, a
 plain-text alternative and a WhatsApp snapshot card.
 
-Status: RM pilot in preparation. Owner and approver: Shriansh Jena.
+Status: dry run 001 (29 Oct 2026) built and reviewed; RM pilot next. Owner and approver: Shriansh Jena.
 
 ## Layout
 
@@ -27,8 +27,10 @@ Status: RM pilot in preparation. Owner and approver: Shriansh Jena.
 ## Commands
 
     pip install jinja2 jsonschema weasyprint pypdf pillow     # plus poppler-utils for previews
+    python3 render/fill_sources.py issues/2026-10-29.json    # rebuild the sources list from the issue
     python3 render/build.py issues/2026-10-29.json --logo-url https://<host>/logo/kubeerra-tile-96.png
     python3 checks/check_issue.py issues/2026-10-29.json
+    python3 render/build.py tests/fixture-issue.json --no-previews   # template smoke test
 
 Outputs land in `out/<date>/` (not committed).
 
@@ -36,4 +38,6 @@ Outputs land in `out/<date>/` (not committed).
 
 General Sans (Fontshare, ITF EULA) is the intended face. Until its files are added to
 `assets/fonts/` as `GeneralSans-Regular.otf` and similar, the PDF uses Hanken Grotesk.
-JetBrains Mono (OFL) is used for labels. Email uses system fonts by design.
+JetBrains Mono is used for labels. Both are under the SIL Open Font License 1.1; the licence
+texts sit beside the font files. Neither font has the rupee sign, so the PDF falls back to
+DejaVu Sans for it. Email uses system fonts by design (Outlook and Gmail ignore web fonts).
