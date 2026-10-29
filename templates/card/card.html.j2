@@ -1,0 +1,53 @@
+{#- WhatsApp snapshot card: 1080 x 1350 px, rendered to PNG. Numbers only; the caption carries the
+    registration line first, as SEBI's social media disclosure rule requires. -#}
+{%- set C = tokens.color -%}
+{%- set SANS = tokens.font.pdf.sans|safe -%}
+{%- set MONO = tokens.font.pdf.mono|safe -%}
+{%- set meta = issue.meta -%}
+{%- set idx = issue.snapshot.indices -%}
+<!DOCTYPE html>
+<html lang="en-IN"><head><meta charset="utf-8"><title>{{ pub.name }} card · {{ date_short }}</title>
+<style>
+{% for f in font_faces %}@font-face { font-family: '{{ f.family }}'; src: url('{{ f.path }}'); font-weight: {{ f.weight }}; }
+{% endfor %}
+@page { size: 1080px 1350px; margin: 0; }
+html, body { margin: 0; padding: 0; }
+body { width: 1080px; height: 1350px; background: {{ C.brand.navy }}; color: {{ C.text.inverse }}; font-family: {{ SANS }}; position: relative; }
+.wrap { position: absolute; left: 84px; right: 84px; top: 84px; bottom: 84px; }
+.mono { font-family: {{ MONO }}; text-transform: uppercase; letter-spacing: 0.12em; font-size: 22px; color: {{ C.text.inverseSoft }}; }
+.top { display: table; width: 100%; }
+.top img { width: 104px; height: 104px; display: table-cell; vertical-align: middle; }
+.top .t { display: table-cell; vertical-align: middle; padding-left: 32px; }
+.top h1 { margin: 6px 0 0 0; font-size: 50px; font-weight: 700; line-height: 1.1; }
+.rule { width: 72px; height: 4px; background: {{ C.brand.cobalt }}; margin: 56px 0 26px 0; }
+.headline { font-size: 46px; line-height: 1.22; font-weight: 600; margin: 18px 0 0 0; }
+.grid { width: 100%; border-collapse: collapse; margin-top: 56px; table-layout: fixed; }
+.grid td { width: 50%; vertical-align: top; border-top: 2px solid {{ C.border.inverse }}; padding: 26px 24px 26px 0; }
+.grid p { margin: 0; }
+.grid .v { font-size: 52px; font-weight: 700; line-height: 1.15; margin-top: 10px; white-space: nowrap; }
+.grid .c { font-size: 28px; font-weight: 600; margin-top: 6px; }
+.up { color: #6FD89B; } .down { color: #FF9C94; } .flat { color: {{ C.text.inverseSoft }}; }
+.foot { position: absolute; left: 0; right: 0; bottom: 0; }
+.foot p { margin: 0; font-size: 24px; line-height: 1.4; color: {{ C.text.inverseSoft }}; }
+.foot .reg { color: {{ C.text.inverse }}; font-weight: 600; }
+.foot .mono { margin-top: 14px; font-size: 19px; }
+</style></head>
+<body><div class="wrap">
+<div class="top"><img src="{{ pub.assets.logo_pdf_local }}" alt="Kubeerra logo"><div class="t"><p class="mono" style="margin:0">Morning snapshot · {{ meta.weekday }} {{ date_short }}</p><h1>{{ pub.name }}</h1></div></div>
+<div class="rule"></div>
+<p class="mono" style="margin:0">India: {{ meta.india_as_of }}</p>
+<p class="headline">{{ issue.snapshot.headline }}</p>
+<table class="grid">
+<tr>
+{% for r in idx[:2] %}<td><p class="mono" style="margin:0">{{ r.name }}</p><p class="v">{{ r.close|level }}</p><p class="c {{ 'up' if r.change > 0 else ('down' if r.change < 0 else 'flat') }}">{{ r.change_pct|arrow }} {{ r.change_pct|pct }}</p></td>{% endfor %}
+</tr>
+{% for pair in issue.flows.tiles[:4]|batch(2) %}
+<tr>{% for t in pair %}<td><p class="mono" style="margin:0">{{ t.label }}{% if t.get('provisional') %} · prov.{% endif %}</p><p class="v">{{ t|figure }}</p></td>{% endfor %}</tr>
+{% endfor %}
+</table>
+<div class="foot">
+<p class="reg">{{ pub.publisher }} · {{ pub.registration.tagline }} · {{ pub.registration.arn }}</p>
+<p>For information and education only. Not investment advice. {{ pub.standard_warning }}</p>
+{% if meta.audience == "internal" %}<p class="mono">Internal pilot · not for clients</p>{% endif %}
+</div>
+</div></body></html>

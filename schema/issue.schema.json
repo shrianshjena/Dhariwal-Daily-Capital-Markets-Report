@@ -1,0 +1,269 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kubeerra.com/schema/market-brief-issue.json",
+  "title": "Kubeerra Market Brief issue",
+  "description": "One issue of the Kubeerra Market Brief. Every figure carries a source; the renderer turns this file into email HTML, plain text and an A4 PDF.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["meta", "brief", "snapshot", "flows", "sectors", "stories", "global", "ipos", "mf", "learn", "day_ahead", "sources"],
+  "$defs": {
+    "text": {"type": "string", "minLength": 1},
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "url"],
+      "properties": {
+        "name": {"$ref": "#/$defs/text"},
+        "url": {"type": "string", "pattern": "^https://"}
+      }
+    },
+    "format": {
+      "enum": ["crore_signed", "crore", "inr_level", "fx", "usd_bbl", "usd_oz", "pct_level", "lakh_crore", "count"]
+    },
+    "figure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "value", "format", "detail", "source"],
+      "properties": {
+        "label": {"$ref": "#/$defs/text"},
+        "value": {"type": "number"},
+        "format": {"$ref": "#/$defs/format"},
+        "detail": {"$ref": "#/$defs/text"},
+        "provisional": {"type": "boolean"},
+        "source": {"$ref": "#/$defs/source"}
+      }
+    }
+  },
+  "properties": {
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["date", "weekday", "edition", "label", "audience", "india_as_of", "global_as_of", "preheader"],
+      "properties": {
+        "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+        "weekday": {"$ref": "#/$defs/text"},
+        "edition": {"$ref": "#/$defs/text"},
+        "issue_number": {"type": ["integer", "null"]},
+        "label": {"$ref": "#/$defs/text"},
+        "audience": {"enum": ["internal", "client"]},
+        "india_as_of": {"$ref": "#/$defs/text"},
+        "global_as_of": {"$ref": "#/$defs/text"},
+        "preheader": {"$ref": "#/$defs/text"},
+        "subject": {"$ref": "#/$defs/text", "description": "Suggested email subject line"}
+      }
+    },
+    "brief": {"type": "array", "minItems": 2, "maxItems": 4, "items": {"$ref": "#/$defs/text"}},
+    "snapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["headline", "as_of", "indices", "breadth"],
+      "properties": {
+        "headline": {"$ref": "#/$defs/text"},
+        "as_of": {"$ref": "#/$defs/text"},
+        "indices": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "close", "change", "change_pct", "source"],
+            "properties": {
+              "name": {"$ref": "#/$defs/text"},
+              "close": {"type": "number"},
+              "change": {"type": "number"},
+              "change_pct": {"type": "number"},
+              "neutral": {"type": "boolean", "description": "Colour neutrally, for measures such as India VIX where up is not good or bad"},
+              "source": {"$ref": "#/$defs/source"}
+            }
+          }
+        },
+        "breadth": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "required": ["advances", "declines", "source"],
+          "properties": {
+            "advances": {"type": "integer"},
+            "declines": {"type": "integer"},
+            "unchanged": {"type": ["integer", "null"]},
+            "source": {"$ref": "#/$defs/source"}
+          }
+        }
+      }
+    },
+    "flows": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["headline", "tiles"],
+      "properties": {
+        "headline": {"$ref": "#/$defs/text"},
+        "tiles": {"type": "array", "minItems": 2, "maxItems": 8, "items": {"$ref": "#/$defs/figure"}}
+      }
+    },
+    "sectors": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["headline", "as_of", "items", "source"],
+      "properties": {
+        "headline": {"$ref": "#/$defs/text"},
+        "as_of": {"$ref": "#/$defs/text"},
+        "items": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "change_pct"],
+            "properties": {
+              "name": {"$ref": "#/$defs/text"},
+              "change_pct": {"type": "number"}
+            }
+          }
+        },
+        "source": {"$ref": "#/$defs/source"}
+      }
+    },
+    "stories": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["topic", "relevance", "headline", "what", "why", "source"],
+        "properties": {
+          "topic": {"enum": ["Markets", "Flows", "Economy", "Global", "IPO", "Mutual funds", "Corporate", "Policy"]},
+          "relevance": {"enum": ["Market-wide", "Sector", "On the radar"]},
+          "headline": {"$ref": "#/$defs/text"},
+          "what": {"$ref": "#/$defs/text"},
+          "why": {"$ref": "#/$defs/text"},
+          "source": {"$ref": "#/$defs/source"}
+        }
+      }
+    },
+    "global": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["headline", "items", "note"],
+      "properties": {
+        "headline": {"$ref": "#/$defs/text"},
+        "items": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["region", "name", "close", "change_pct", "as_of", "source"],
+            "properties": {
+              "region": {"enum": ["US", "Europe", "Asia", "India offshore"]},
+              "name": {"$ref": "#/$defs/text"},
+              "close": {"type": "number"},
+              "change_pct": {"type": ["number", "null"]},
+              "as_of": {"$ref": "#/$defs/text"},
+              "source": {"$ref": "#/$defs/source"}
+            }
+          }
+        },
+        "note": {"$ref": "#/$defs/text"}
+      }
+    },
+    "ipos": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["headline", "items", "note"],
+      "properties": {
+        "headline": {"$ref": "#/$defs/text"},
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["company", "status", "facts", "source"],
+            "properties": {
+              "company": {"$ref": "#/$defs/text"},
+              "status": {"enum": ["Open", "Upcoming", "Closed", "Listed"]},
+              "facts": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/text"}},
+              "source": {"$ref": "#/$defs/source"}
+            }
+          }
+        },
+        "note": {"$ref": "#/$defs/text"}
+      }
+    },
+    "mf": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["headline", "period", "stats", "highlights", "nfos", "regulatory"],
+      "properties": {
+        "headline": {"$ref": "#/$defs/text"},
+        "period": {"$ref": "#/$defs/text"},
+        "stats": {"type": "array", "minItems": 1, "maxItems": 4, "items": {"$ref": "#/$defs/figure"}},
+        "highlights": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["text", "source"],
+            "properties": {"text": {"$ref": "#/$defs/text"}, "source": {"$ref": "#/$defs/source"}}
+          }
+        },
+        "nfos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["scheme", "category", "dates", "source"],
+            "properties": {
+              "scheme": {"$ref": "#/$defs/text"},
+              "category": {"$ref": "#/$defs/text"},
+              "dates": {"$ref": "#/$defs/text"},
+              "min_investment": {"type": ["string", "null"]},
+              "riskometer": {"type": ["string", "null"]},
+              "source": {"$ref": "#/$defs/source"}
+            }
+          }
+        },
+        "regulatory": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["body", "date", "text", "source"],
+            "properties": {
+              "body": {"$ref": "#/$defs/text"},
+              "date": {"$ref": "#/$defs/text"},
+              "text": {"$ref": "#/$defs/text"},
+              "source": {"$ref": "#/$defs/source"}
+            }
+          }
+        }
+      }
+    },
+    "learn": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "paragraphs"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^L-\\d{3}$"},
+        "title": {"$ref": "#/$defs/text"},
+        "paragraphs": {"type": "array", "minItems": 1, "maxItems": 4, "items": {"$ref": "#/$defs/text"}},
+        "illustration": {"type": ["string", "null"]},
+        "link": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/source"}]}
+      }
+    },
+    "day_ahead": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["time", "event"],
+        "properties": {
+          "time": {"$ref": "#/$defs/text"},
+          "event": {"$ref": "#/$defs/text"},
+          "source": {"$ref": "#/$defs/source"}
+        }
+      }
+    },
+    "sources": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/source"}}
+  }
+}

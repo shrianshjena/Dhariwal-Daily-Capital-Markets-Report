@@ -1,0 +1,120 @@
+{%- set meta = issue.meta -%}
+{{ pub.name|upper }} · {{ pub.edition_name|upper }}
+{{ meta.weekday }} {{ date_long }} · {{ meta.label }}
+{{ pub.publisher }} · {{ pub.registration.tagline }} · {{ pub.registration.arn }}
+India: {{ meta.india_as_of }} · Global: {{ meta.global_as_of }}
+{% if meta.audience == "internal" %}
+INTERNAL PILOT · RM AND MF TEAM ONLY · NOT FOR CLIENTS
+{% endif %}
+
+THE MORNING IN BRIEF
+{% for item in issue.brief %}
+- {{ item }}
+{% endfor %}
+
+01 · MARKET SNAPSHOT
+{{ issue.snapshot.headline }}
+{% for r in issue.snapshot.indices %}
+{{ "%-20s"|format(r.name) }}{{ "%12s"|format(r.close|level) }}{{ "%11s"|format(r.change|points) }}{{ "%9s"|format(r.change_pct|pct) }}
+{% endfor %}
+{% if issue.snapshot.breadth %}
+Breadth on the NSE: {{ issue.snapshot.breadth.advances|group }} advanced, {{ issue.snapshot.breadth.declines|group }} declined.
+{% endif %}
+Data as of {{ issue.snapshot.as_of }}. Source: {{ issue.snapshot.indices[0].source.name }} ({{ issue.snapshot.indices[0].source.url }})
+
+02 · FLOWS, CURRENCY AND COMMODITIES
+{{ issue.flows.headline }}
+{% for t in issue.flows.tiles %}
+{{ t.label }}{{ " (provisional)" if t.provisional|default(false) else "" }}: {{ t|figure }}. {{ t.detail }}. Source: {{ t.source.name }} ({{ t.source.url }})
+{% endfor %}
+
+03 · SECTOR SCOREBOARD
+{{ issue.sectors.headline }}
+Strongest: {% for s in sectors.top %}{{ s.name }} {{ s.change_pct|pct }}{{ "; " if not loop.last else "" }}{% endfor %}
+
+Weakest: {% for s in sectors.bottom %}{{ s.name }} {{ s.change_pct|pct }}{{ "; " if not loop.last else "" }}{% endfor %}
+
+Change on the day, {{ issue.sectors.as_of }}. Source: {{ issue.sectors.source.name }} ({{ issue.sectors.source.url }})
+
+04 · TOP STORIES
+{% for s in issue.stories %}
+
+[{{ s.topic }} · {{ s.relevance }}] {{ s.headline }}
+{{ s.what }}
+Why it matters: {{ s.why }}
+Source: {{ s.source.name }} ({{ s.source.url }})
+{% endfor %}
+
+05 · GLOBAL MARKETS
+{{ issue.global.headline }}
+{% for g in issue.global["items"] %}
+{{ "%-28s"|format(g.region ~ " · " ~ g.name) }}{{ "%12s"|format(g.close|level) }}{{ "%9s"|format(g.change_pct|pct) }}  ({{ g.as_of }})
+{% endfor %}
+{{ issue.global.note }}
+
+06 · IPO DESK
+{{ issue.ipos.headline }}
+{% for ipo in issue.ipos["items"] %}
+
+{{ ipo.company }} ({{ ipo.status }})
+{% for f in ipo.facts %}
+{{ f }}
+{% endfor %}
+Source: {{ ipo.source.name }} ({{ ipo.source.url }})
+{% endfor %}
+{{ issue.ipos.note }}
+
+07 · MUTUAL FUND CORNER
+{{ issue.mf.headline }}
+Industry data, {{ issue.mf.period }}:
+{% for st in issue.mf.stats %}
+- {{ st.label }}: {{ st|figure }} ({{ st.detail }})
+{% endfor %}
+{% for h in issue.mf.highlights %}
+{{ h.text }}
+{% endfor %}
+{% if issue.mf.nfos %}
+New fund offers open now (facts, not recommendations):
+{% for n in issue.mf.nfos %}
+- {{ n.scheme }}: {{ n.category }}, {{ n.dates }}. {{ n.source.url }}
+{% endfor %}
+{% endif %}
+{% if issue.mf.regulatory %}
+Rule changes for investors:
+{% for r in issue.mf.regulatory %}
+- {{ r.body }}, {{ r.date }}: {{ r.text }} {{ r.source.url }}
+{% endfor %}
+{% endif %}
+
+08 · LEARN · {{ issue.learn.id }}
+{{ issue.learn.title }}
+{% for p in issue.learn.paragraphs %}
+{{ p }}
+{% endfor %}
+{% if issue.learn.get('illustration') %}
+{{ issue.learn.illustration }}
+{% endif %}
+{% if issue.learn.get('link') %}
+Read more: {{ issue.learn.link.name }} ({{ issue.learn.link.url }})
+{% endif %}
+
+09 · DAY AHEAD
+{% for d in issue.day_ahead %}
+{{ "%-14s"|format(d.time) }}{{ d.event }}
+{% endfor %}
+
+------------------------------------------------------------
+{{ pub.name }}. Published by {{ pub.publisher }}, {{ pub.registration.tagline }}, {{ pub.registration.arn }} (EUIN {{ pub.registration.euin }}).
+{% for d in pub.disclaimer %}
+{{ d }}
+{% endfor %}
+{{ pub.standard_warning }}
+Phone {{ pub.contacts.phone }} · WhatsApp {{ pub.contacts.whatsapp }} · {{ pub.contacts.email }}
+{{ pub.contacts.hours }}
+{{ pub.contacts.address }}
+{% for l in pub.links %}
+{{ l.label }}: {{ l.url }}
+{% endfor %}
+{% if meta.audience == "internal" %}
+{{ pub.pilot_note }}
+{% endif %}

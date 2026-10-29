@@ -1,0 +1,11 @@
+{%- set meta = issue.meta -%}
+{{ pub.publisher }} · {{ pub.registration.tagline }} · {{ pub.registration.arn }}
+*{{ pub.name }}* · {{ meta.weekday }} {{ date_short }}
+{% for item in issue.brief %}
+• {{ item }}
+{% endfor %}
+For information and investor education only; not investment advice.
+{{ pub.standard_warning }}
+{% if meta.audience == "internal" %}
+Internal pilot · not for clients
+{% endif %}

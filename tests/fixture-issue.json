@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "date": "2000-01-03",
+    "weekday": "Monday",
+    "edition": "Morning edition",
+    "issue_number": null,
+    "label": "Test fixture, not real data",
+    "audience": "internal",
+    "india_as_of": "Close, Fri 31 Dec 1999",
+    "global_as_of": "7:30 AM IST, Mon 3 Jan 2000",
+    "preheader": "Synthetic test fixture for template checks. None of these numbers are real."
+  },
+  "brief": [
+    "Synthetic line one for layout testing, long enough to wrap onto a second line on a phone screen.",
+    "Synthetic line two with a figure, +₹1,234 cr, to check the rupee sign and the minus sign −1.23%.",
+    "Synthetic line three."
+  ],
+  "snapshot": {
+    "headline": "Synthetic headline for the snapshot section",
+    "as_of": "close, 31 Dec 1999",
+    "indices": [
+      {"name": "NIFTY 50", "close": 12345.67, "change": 123.45, "change_pct": 1.01, "source": {"name": "Fixture", "url": "https://example.com/fixture"}},
+      {"name": "BSE Sensex", "close": 41234.56, "change": -234.56, "change_pct": -0.57, "source": {"name": "Fixture", "url": "https://example.com/fixture"}},
+      {"name": "Nifty Bank", "close": 31234.5, "change": 0, "change_pct": 0, "source": {"name": "Fixture", "url": "https://example.com/fixture"}},
+      {"name": "Nifty Midcap 150", "close": 9876.54, "change": 45.6, "change_pct": 0.46, "source": {"name": "Fixture", "url": "https://example.com/fixture"}},
+      {"name": "Nifty Smallcap 250", "close": 8765.43, "change": -12.3, "change_pct": -0.14, "source": {"name": "Fixture", "url": "https://example.com/fixture"}},
+      {"name": "India VIX", "close": 12.34, "change": 0.56, "change_pct": 4.75, "neutral": true, "source": {"name": "Fixture", "url": "https://example.com/fixture"}}
+    ],
+    "breadth": {"advances": 1234, "declines": 2345, "unchanged": 98, "source": {"name": "Fixture", "url": "https://example.com/fixture"}}
+  },
+  "flows": {
+    "headline": "Synthetic flows headline",
+    "tiles": [
+      {"label": "FII net", "value": -1234.5, "format": "crore_signed", "detail": "Net sellers; synthetic", "provisional": true, "source": {"name": "Fixture", "url": "https://example.com/fixture"}},
+      {"label": "DII net", "value": 2345.6, "format": "crore_signed", "detail": "Net buyers; synthetic", "provisional": true, "source": {"name": "Fixture", "url": "https://example.com/fixture"}},
+      {"label": "USD/INR", "value": 88.12, "format": "fx", "detail": "Rupee per dollar; synthetic", "source": {"name": "Fixture", "url": "https://example.com/fixture"}},
+      {"label": "Brent crude", "value": 65.43, "format": "usd_bbl", "detail": "Per barrel; synthetic", "source": {"name": "Fixture", "url": "https://example.com/fixture"}},
+      {"label": "Gold (24K, 10 g)", "value": 123456, "format": "inr_level", "detail": "Synthetic", "source": {"name": "Fixture", "url": "https://example.com/fixture"}},
+      {"label": "10-year G-Sec", "value": 6.45, "format": "pct_level", "detail": "Yield; synthetic", "source": {"name": "Fixture", "url": "https://example.com/fixture"}}
+    ]
+  },
+  "sectors": {
+    "headline": "Synthetic sectors headline",
+    "as_of": "close, 31 Dec 1999",
+    "items": [
+      {"name": "Nifty IT", "change_pct": 1.8},
+      {"name": "Nifty Auto", "change_pct": 1.1},
+      {"name": "Nifty FMCG", "change_pct": 0.6},
+      {"name": "Nifty Pharma", "change_pct": 0.2},
+      {"name": "Nifty Metal", "change_pct": -0.4},
+      {"name": "Nifty Realty", "change_pct": -1.2},
+      {"name": "Nifty PSU Bank", "change_pct": -1.9},
+      {"name": "Nifty Media", "change_pct": -2.4}
+    ],
+    "source": {"name": "Fixture", "url": "https://example.com/fixture"}
+  },
+  "stories": [
+    {"topic": "Economy", "relevance": "Market-wide", "headline": "Synthetic story one with a headline long enough to wrap", "what": "Synthetic what-happened text for layout testing.", "why": "Synthetic why-it-matters text for layout testing.", "source": {"name": "Fixture", "url": "https://example.com/fixture"}},
+    {"topic": "Global", "relevance": "Sector", "headline": "Synthetic story two", "what": "Synthetic text.", "why": "Synthetic text.", "source": {"name": "Fixture", "url": "https://example.com/fixture"}},
+    {"topic": "Corporate", "relevance": "On the radar", "headline": "Synthetic story three", "what": "Synthetic text.", "why": "Synthetic text.", "source": {"name": "Fixture", "url": "https://example.com/fixture"}}
+  ],
+  "global": {
+    "headline": "Synthetic global headline",
+    "items": [
+      {"region": "US", "name": "S&P 500", "close": 1469.25, "change_pct": 0.32, "as_of": "Close, 31 Dec", "source": {"name": "Fixture", "url": "https://example.com/fixture"}},
+      {"region": "Europe", "name": "FTSE 100", "close": 6930.2, "change_pct": -0.1, "as_of": "Close, 31 Dec", "source": {"name": "Fixture", "url": "https://example.com/fixture"}},
+      {"region": "Asia", "name": "Nikkei 225", "close": 18934.34, "change_pct": null, "as_of": "Closed for holiday", "source": {"name": "Fixture", "url": "https://example.com/fixture"}}
+    ],
+    "note": "Synthetic note on what global moves mean for Indian investors."
+  },
+  "ipos": {
+    "headline": "Synthetic IPO headline",
+    "items": [
+      {"company": "Example Ltd", "status": "Open", "facts": ["Mainboard · ₹1,000 crore · Price band ₹100 to ₹105", "Bidding 3 to 5 Jan · Subscribed 1.5 times overall by day 1"], "source": {"name": "Fixture", "url": "https://example.com/fixture"}}
+    ],
+    "note": "Facts only. Kubeerra does not give views on IPO applications."
+  },
+  "mf": {
+    "headline": "Synthetic mutual fund headline",
+    "period": "December 1999",
+    "stats": [
+      {"label": "SIP contributions", "value": 12345, "format": "crore", "detail": "Synthetic", "source": {"name": "Fixture", "url": "https://example.com/fixture"}},
+      {"label": "Equity net inflows", "value": 6789, "format": "crore", "detail": "Synthetic", "source": {"name": "Fixture", "url": "https://example.com/fixture"}},
+      {"label": "Industry AUM", "value": 12.34, "format": "lakh_crore", "detail": "Synthetic", "source": {"name": "Fixture", "url": "https://example.com/fixture"}}
+    ],
+    "highlights": [{"text": "Synthetic category highlight.", "source": {"name": "Fixture", "url": "https://example.com/fixture"}}],
+    "nfos": [{"scheme": "Example Flexi Cap Fund", "category": "Flexi cap", "dates": "3 to 17 Jan", "min_investment": "₹500", "riskometer": "Very high", "source": {"name": "Fixture", "url": "https://example.com/fixture"}}],
+    "regulatory": [{"body": "SEBI", "date": "31 Dec", "text": "Synthetic rule change summary.", "source": {"name": "Fixture", "url": "https://example.com/fixture"}}]
+  },
+  "learn": {
+    "id": "L-000",
+    "title": "Synthetic lesson title",
+    "paragraphs": ["Synthetic lesson paragraph one.", "Synthetic lesson paragraph two."],
+    "illustration": null,
+    "link": {"name": "Fixture", "url": "https://example.com/fixture"}
+  },
+  "day_ahead": [
+    {"time": "9:15 AM", "event": "Synthetic event one"},
+    {"time": "During the day", "event": "Synthetic event two", "source": {"name": "Fixture", "url": "https://example.com/fixture"}}
+  ],
+  "sources": [{"name": "Fixture", "url": "https://example.com/fixture"}]
+}

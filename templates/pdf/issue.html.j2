@@ -1,0 +1,284 @@
+{#- Kubeerra Market Brief: A4 PDF edition, rendered with WeasyPrint.
+    Same content and tokens as the email; print layout with running footer and page folio. -#}
+{%- set C = tokens.color -%}
+{%- set SANS = tokens.font.pdf.sans|safe -%}
+{%- set MONO = tokens.font.pdf.mono|safe -%}
+{%- set meta = issue.meta -%}
+{%- macro sechead(num, name, headline, note=None) -%}
+<div class="sechead">
+<div class="rule"></div>
+<p class="mono accent">{{ num }} · {{ name }}{% if note %}<span class="secnote"> · {{ note }}</span>{% endif %}</p>
+<h2>{{ headline }}</h2>
+</div>
+{%- endmacro -%}
+{%- macro src(s, prefix="Source") -%}<p class="src">{{ prefix }}: <a href="{{ s.url }}">{{ s.name }}</a></p>{%- endmacro -%}
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<title>{{ pub.name }} · {{ meta.weekday }} {{ date_long }}</title>
+<meta name="author" content="{{ pub.publisher }}">
+<meta name="description" content="{{ meta.preheader }}">
+<meta name="keywords" content="Indian markets, NIFTY 50, BSE Sensex, mutual funds, Kubeerra">
+<meta name="generator" content="Kubeerra Market Brief renderer">
+<style>
+{% for f in font_faces %}
+@font-face { font-family: '{{ f.family }}'; src: url('{{ f.path }}'); font-weight: {{ f.weight }}; font-style: normal; }
+{% endfor %}
+@page {
+  size: A4;
+  margin: 17mm 15mm 17mm 15mm;
+  @bottom-left { content: "{{ pub.name|upper }} · {{ date_short|upper }}"; font-family: {{ MONO }}; font-size: 6.8pt; letter-spacing: 0.1em; color: {{ C.text.secondary }}; }
+  @bottom-right { content: "PAGE " counter(page) " OF " counter(pages); font-family: {{ MONO }}; font-size: 6.8pt; letter-spacing: 0.1em; color: {{ C.text.secondary }}; }
+}
+@page :first { margin-top: 0; }
+html { font-family: {{ SANS }}; font-size: 9.4pt; line-height: 1.5; color: {{ C.text.primary }}; }
+body { margin: 0; }
+h1, h2, h3, p { margin: 0; }
+a { color: {{ C.brand.cobalt }}; text-decoration: underline; }
+.mono { font-family: {{ MONO }}; text-transform: uppercase; letter-spacing: 0.1em; font-size: 6.8pt; line-height: 1.5; }
+.accent { color: {{ C.brand.cobalt }}; }
+.quiet { color: {{ C.text.secondary }}; }
+.num { font-variant-numeric: tabular-nums; }
+.masthead { background: {{ C.brand.navy }}; color: {{ C.text.inverse }}; margin: 0 -15mm; padding: 12mm 15mm 7mm 15mm; }
+.mast-row { display: table; width: 100%; }
+.mast-logo { display: table-cell; width: 19mm; vertical-align: middle; }
+.mast-logo img { width: 15mm; height: 15mm; display: block; }
+.mast-title { display: table-cell; vertical-align: middle; }
+.mast-title .mono { color: {{ C.text.inverseSoft }}; }
+.mast-title h1 { font-size: 24pt; line-height: 1.15; font-weight: 700; letter-spacing: -0.01em; color: {{ C.text.inverse }}; }
+.mast-rule { width: 14mm; height: 2px; background: {{ C.brand.cobalt }}; margin: 6mm 0 2.5mm 0; }
+.mast-meta { color: {{ C.text.inverseSoft }}; }
+.regstrip { background: {{ C.surface.soft }}; margin: 0 -15mm; padding: 3.2mm 15mm 3.4mm 15mm; }
+.regline { font-size: 12pt; line-height: 1.35; font-weight: 500; }
+.asof { color: {{ C.text.secondary }}; margin-top: 1.2mm; }
+.internal { color: {{ C.status.down }}; font-weight: 600; margin-top: 0.8mm; }
+.brief { margin-top: 7mm; }
+.brief h2 { font-size: 12.5pt; font-weight: 700; }
+.brief ul { margin: 2mm 0 0 0; padding: 0; list-style: none; }
+.brief li { position: relative; padding-left: 5mm; margin-top: 1.6mm; font-size: 10.2pt; line-height: 1.5; }
+.brief li::before { content: ""; position: absolute; left: 0; top: 1.9mm; width: 1.6mm; height: 1.6mm; background: {{ C.brand.cobalt }}; }
+.sec { margin-top: 9mm; }
+.sechead { break-after: avoid; }
+.sechead .rule { width: 8mm; height: 2px; background: {{ C.brand.cobalt }}; margin-bottom: 2mm; }
+.sechead h2 { font-size: 13.5pt; line-height: 1.3; font-weight: 700; margin-top: 0.8mm; break-after: avoid; }
+.secnote { color: {{ C.text.secondary }}; }
+table.data { width: 100%; border-collapse: collapse; margin-top: 3mm; }
+table.data th { font-family: {{ MONO }}; font-size: 6.8pt; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 400; color: {{ C.text.secondary }}; text-align: left; padding: 0 0 1.6mm 0; border-bottom: 0.75pt solid {{ C.border.default }}; }
+table.data td { padding: 1.9mm 0; border-bottom: 0.75pt solid {{ C.border.default }}; vertical-align: top; }
+table.data .r { text-align: right; padding-left: 3mm; white-space: nowrap; }
+table.data .name { font-weight: 600; }
+.region { font-family: {{ MONO }}; font-size: 6.8pt; letter-spacing: 0.1em; text-transform: uppercase; color: {{ C.text.secondary }}; margin-right: 1.5mm; }
+.up { color: {{ C.status.up }}; } .down { color: {{ C.status.down }}; } .flat, .neutral { color: {{ C.text.secondary }}; }
+.strong { font-weight: 700; }
+.note { font-size: 8.8pt; color: {{ C.text.secondary }}; margin-top: 2.2mm; }
+.src { font-size: 7.8pt; color: {{ C.text.secondary }}; margin-top: 1.4mm; }
+table.tiles { width: 100%; border-collapse: collapse; margin-top: 3mm; table-layout: fixed; }
+table.tiles td { width: 33.33%; vertical-align: top; border-top: 0.75pt solid {{ C.border.default }}; padding: 3mm 4mm 3.2mm 0; }
+.tile-label { color: {{ C.text.secondary }}; }
+.tile-value { font-size: 17pt; line-height: 1.2; font-weight: 700; color: {{ C.brand.cobalt }}; margin-top: 1.2mm; white-space: nowrap; }
+.tile-detail { font-size: 8.4pt; line-height: 1.4; color: {{ C.text.secondary }}; margin-top: 1mm; }
+table.bars { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: 3mm; }
+table.bars > tbody > tr > td.group { width: 50%; vertical-align: top; padding-right: 6mm; }
+table.bars > tbody > tr > td.group + td.group { padding-right: 0; padding-left: 6mm; }
+table.barrows { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: 1.2mm; }
+table.barrows td { padding: 1.3mm 0; vertical-align: middle; font-size: 9pt; }
+table.barrows td.bn { width: 44%; padding-right: 2mm; }
+table.barrows td.bb { width: 38%; }
+table.barrows td.bv { width: 18%; text-align: right; font-weight: 700; white-space: nowrap; }
+.track { height: 2.6mm; background: {{ C.chart.track }}; }
+.fill { height: 2.6mm; }
+.stories { column-count: 2; column-gap: 8mm; margin-top: 2mm; }
+.story { break-inside: avoid; padding-top: 3.2mm; margin-top: 3.2mm; border-top: 0.75pt solid {{ C.border.default }}; }
+.story:first-child { border-top: none; margin-top: 0; padding-top: 1mm; }
+.story .tags { color: {{ C.brand.tealDark }}; }
+.story h3 { font-size: 10.8pt; line-height: 1.32; font-weight: 700; margin-top: 1mm; }
+.story p.what { margin-top: 1.4mm; }
+.story p.why { margin-top: 1.6mm; }
+.story p.why .mono { color: {{ C.brand.tealDark }}; margin-right: 1mm; }
+.ipos { column-count: 2; column-gap: 8mm; margin-top: 1mm; }
+.ipo { break-inside: avoid; margin-top: 3mm; }
+.ipo h3 { font-size: 10.2pt; font-weight: 700; }
+.ipo h3 .mono { color: {{ C.brand.tealDark }}; margin-left: 1.5mm; }
+.ipo p.fact { font-size: 8.8pt; color: {{ C.text.secondary }}; margin-top: 0.6mm; }
+table.mfstats { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: 3mm; }
+table.mfstats td { vertical-align: top; border-top: 0.75pt solid {{ C.border.default }}; padding: 3mm 4mm 2.6mm 0; }
+.cols2 { column-count: 2; column-gap: 8mm; }
+.cols2 p { break-inside: avoid; margin-top: 2mm; }
+.sublabel { color: {{ C.text.secondary }}; margin-top: 5mm; break-after: avoid; }
+.nfo { break-inside: avoid; margin-top: 2mm; }
+.nfo .n { font-weight: 600; }
+.nfo .d { font-size: 8.6pt; color: {{ C.text.secondary }}; }
+.learn { background: {{ C.brand.paleBlue }}; border-left: 1.2mm solid {{ C.brand.cobalt }}; padding: 4.5mm 6mm 5mm 6mm; margin-top: 3mm; break-inside: avoid; }
+.learn p { max-width: 150mm; font-size: 10pt; margin-top: 2mm; }
+.learn p:first-child { margin-top: 0; }
+.learn .illus { font-size: 8.6pt; color: {{ C.text.secondary }}; }
+table.agenda { width: 100%; border-collapse: collapse; margin-top: 3mm; }
+table.agenda td { padding: 1.8mm 0; border-bottom: 0.75pt solid {{ C.border.default }}; vertical-align: top; }
+table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; letter-spacing: 0.06em; color: {{ C.text.secondary }}; padding-top: 2.2mm; }
+.disclosure { background: {{ C.brand.navy }}; color: {{ C.text.inverseSoft }}; padding: 7mm 8mm 7mm 8mm; margin-top: 10mm; break-inside: avoid; }
+.disclosure h2 { color: {{ C.text.inverse }}; font-size: 12pt; font-weight: 700; }
+.disclosure .regline { color: {{ C.text.inverse }}; margin-top: 2mm; }
+.disclosure p { font-size: 8.6pt; line-height: 1.5; margin-top: 2mm; }
+.disclosure .warning { color: {{ C.text.inverse }}; font-weight: 700; font-size: 9.4pt; }
+.disclosure a { color: {{ C.text.inverseLink }}; }
+.disclosure .rule { width: 14mm; height: 2px; background: {{ C.brand.cobalt }}; margin: 4mm 0 1mm 0; }
+.sources { margin-top: 7mm; }
+.sources ol { margin: 2mm 0 0 0; padding-left: 5mm; column-count: 2; column-gap: 8mm; font-size: 7.6pt; line-height: 1.45; color: {{ C.text.secondary }}; }
+.sources li { break-inside: avoid; margin-top: 0.8mm; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+<div class="mast-row">
+<div class="mast-logo"><img src="{{ pub.assets.logo_pdf_local }}" alt="Kubeerra logo"></div>
+<div class="mast-title">
+<p class="mono">{{ pub.edition_name }}</p>
+<h1>{{ pub.name }}</h1>
+</div>
+</div>
+<div class="mast-rule"></div>
+<p class="mono mast-meta">{{ meta.weekday }} {{ date_long }} · {{ meta.label }}</p>
+</header>
+
+<div class="regstrip">
+<p class="regline">{{ pub.publisher }} · {{ pub.registration.tagline }} · {{ pub.registration.arn }}</p>
+<p class="mono asof">India: {{ meta.india_as_of }} · Global: {{ meta.global_as_of }}</p>
+{% if meta.audience == "internal" %}<p class="mono internal">Internal pilot · RM and MF team only · Not for clients</p>{% endif %}
+</div>
+
+<section class="brief">
+<h2>The morning in brief</h2>
+<ul>{% for item in issue.brief %}<li>{{ item }}</li>{% endfor %}</ul>
+</section>
+
+<section class="sec">
+{{ sechead("01", "Market snapshot", issue.snapshot.headline, "as of " ~ issue.snapshot.as_of) }}
+<table class="data">
+<thead><tr><th>Index</th><th class="r">Close</th><th class="r">Change</th><th class="r">%</th></tr></thead>
+<tbody>
+{% for r in issue.snapshot.indices %}
+{% set cls = "neutral" if r.neutral|default(false) else (("up" if r.change > 0 else ("down" if r.change < 0 else "flat"))) %}
+<tr><td class="name">{{ r.name }}</td><td class="r num">{{ r.close|level }}</td><td class="r num {{ cls }}">{{ r.change|points }}</td><td class="r num strong {{ cls }}">{{ r.change_pct|arrow }} {{ r.change_pct|pct }}</td></tr>
+{% endfor %}
+</tbody>
+</table>
+{% if issue.snapshot.breadth %}{% set b = issue.snapshot.breadth %}<p class="note">Breadth on the NSE: {{ b.advances|group }} stocks advanced and {{ b.declines|group }} declined{% if b.get('unchanged') is not none %}, {{ b.unchanged|group }} unchanged{% endif %}.</p>{% endif %}
+{{ src(issue.snapshot.indices[0].source) }}
+</section>
+
+<section class="sec">
+{{ sechead("02", "Flows, currency and commodities", issue.flows.headline) }}
+<table class="tiles">
+{% for row in issue.flows.tiles|batch(3) %}
+<tr>{% for t in row %}<td><p class="mono tile-label">{{ t.label }}{% if t.provisional|default(false) %} · provisional{% endif %}</p><p class="tile-value num">{{ t|figure }}</p><p class="tile-detail">{{ t.detail }} · <a href="{{ t.source.url }}">{{ t.source.name }}</a></p></td>{% endfor %}{% for _ in range(3 - row|length) %}<td></td>{% endfor %}</tr>
+{% endfor %}
+</table>
+</section>
+
+<section class="sec">
+{{ sechead("03", "Sector scoreboard", issue.sectors.headline, issue.sectors.as_of) }}
+<table class="bars"><tr>
+{% for group_name, rows in (("Strongest", sectors.top), ("Weakest", sectors.bottom)) %}
+<td class="group"><p class="mono quiet">{{ group_name }}</p>
+<table class="barrows">
+{% for s in rows %}
+<tr><td class="bn">{{ s.name }}</td><td class="bb"><div class="track"><div class="fill" style="width: {{ s.bar }}%; background: {{ C.chart.gain if s.change_pct >= 0 else C.chart.loss }};"></div></div></td><td class="bv num {{ 'up' if s.change_pct > 0 else ('down' if s.change_pct < 0 else 'flat') }}">{{ s.change_pct|pct }}</td></tr>
+{% endfor %}
+</table></td>
+{% endfor %}
+</tr></table>
+{{ src(issue.sectors.source) }}
+</section>
+
+<section class="sec">
+{{ sechead("04", "Top stories", "What moved, and why it matters for Indian investors") }}
+<div class="stories">
+{% for s in issue.stories %}
+<article class="story">
+<p class="mono tags">{{ s.topic }} · {{ s.relevance }}</p>
+<h3>{{ s.headline }}</h3>
+<p class="what">{{ s.what }}</p>
+<p class="why"><span class="mono">Why it matters</span> {{ s.why }}</p>
+{{ src(s.source) }}
+</article>
+{% endfor %}
+</div>
+</section>
+
+<section class="sec">
+{{ sechead("05", "Global markets", issue.global.headline) }}
+<table class="data">
+<thead><tr><th>Market</th><th>As of</th><th class="r">Level</th><th class="r">Change</th></tr></thead>
+<tbody>
+{% for g in issue.global["items"] %}
+<tr><td><span class="region">{{ g.region }}</span>{{ g.name }}</td><td class="quiet">{{ g.as_of }}</td><td class="r num">{{ g.close|level }}</td><td class="r num strong {{ 'up' if (g.change_pct or 0) > 0 else ('down' if (g.change_pct or 0) < 0 else 'flat') }}">{% if g.change_pct is not none %}{{ g.change_pct|arrow }} {{ g.change_pct|pct }}{% else %}Not available{% endif %}</td></tr>
+{% endfor %}
+</tbody>
+</table>
+<p class="note">{{ issue.global.note }}</p>
+</section>
+
+<section class="sec">
+{{ sechead("06", "IPO desk", issue.ipos.headline) }}
+<div class="ipos">
+{% for ipo in issue.ipos["items"] %}
+<div class="ipo"><h3>{{ ipo.company }}<span class="mono">{{ ipo.status }}</span></h3>{% for f in ipo.facts %}<p class="fact">{{ f }}</p>{% endfor %}{{ src(ipo.source) }}</div>
+{% endfor %}
+</div>
+<p class="note">{{ issue.ipos.note }}</p>
+</section>
+
+<section class="sec">
+{{ sechead("07", "Mutual fund corner", issue.mf.headline, "industry data, " ~ issue.mf.period) }}
+<table class="mfstats"><tr>
+{% for st in issue.mf.stats %}<td><p class="mono tile-label">{{ st.label }}</p><p class="tile-value num">{{ st|figure }}</p><p class="tile-detail">{{ st.detail }}</p></td>{% endfor %}
+</tr></table>
+{% if issue.mf.stats %}{{ src(issue.mf.stats[0].source) }}{% endif %}
+{% if issue.mf.highlights %}<div class="cols2">{% for h in issue.mf.highlights %}<p>{{ h.text }} <a href="{{ h.source.url }}">{{ h.source.name }}</a></p>{% endfor %}</div>{% endif %}
+{% if issue.mf.nfos %}
+<p class="mono sublabel">New fund offers open now · facts, not recommendations</p>
+<div class="cols2">{% for n in issue.mf.nfos %}<div class="nfo"><p class="n">{{ n.scheme }}</p><p class="d">{{ n.category }} · {{ n.dates }}{% if n.get('min_investment') %} · Minimum {{ n.min_investment }}{% endif %}{% if n.get('riskometer') %} · Riskometer: {{ n.riskometer }}{% endif %} · <a href="{{ n.source.url }}">{{ n.source.name }}</a></p></div>{% endfor %}</div>
+{% endif %}
+{% if issue.mf.regulatory %}
+<p class="mono sublabel">Rule changes for investors</p>
+{% for r in issue.mf.regulatory %}<p class="note" style="color: {{ C.text.primary }}; font-size: 9.4pt;"><strong>{{ r.body }}, {{ r.date }}.</strong> {{ r.text }} <a href="{{ r.source.url }}">{{ r.source.name }}</a></p>{% endfor %}
+{% endif %}
+</section>
+
+<section class="sec">
+{{ sechead("08", "Learn · " ~ issue.learn.id, issue.learn.title) }}
+<div class="learn">
+{% for p in issue.learn.paragraphs %}<p>{{ p }}</p>{% endfor %}
+{% if issue.learn.get('illustration') %}<p class="illus">{{ issue.learn.illustration }}</p>{% endif %}
+{% if issue.learn.get('link') %}<p><strong>Read more:</strong> <a href="{{ issue.learn.link.url }}">{{ issue.learn.link.name }}</a></p>{% endif %}
+</div>
+</section>
+
+<section class="sec">
+{{ sechead("09", "Day ahead", "On the calendar for " ~ meta.weekday ~ " " ~ date_short) }}
+<table class="agenda">
+{% for d in issue.day_ahead %}<tr><td class="t">{{ d.time|upper }}</td><td>{{ d.event }}{% if d.get('source') %} <a href="{{ d.source.url }}">{{ d.source.name }}</a>{% endif %}</td></tr>{% endfor %}
+</table>
+</section>
+
+<section class="disclosure">
+<h2>{{ pub.name }}</h2>
+<p class="regline">{{ pub.publisher }} · {{ pub.registration.tagline }} · {{ pub.registration.arn }} · EUIN {{ pub.registration.euin }}</p>
+{% for d in pub.disclaimer %}<p>{{ d }}</p>{% endfor %}
+<p class="warning">{{ pub.standard_warning }}</p>
+<div class="rule"></div>
+<p>Phone {{ pub.contacts.phone }} · WhatsApp {{ pub.contacts.whatsapp }} · <a href="mailto:{{ pub.contacts.email }}">{{ pub.contacts.email }}</a> · {{ pub.contacts.hours }}</p>
+<p>{{ pub.contacts.address }}</p>
+<p>{% for l in pub.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+{% if meta.audience == "internal" %}<p class="mono">{{ pub.pilot_note }}</p>{% endif %}
+</section>
+
+<section class="sources">
+<p class="mono quiet">Sources</p>
+<ol>{% for s in issue.sources %}<li><a href="{{ s.url }}">{{ s.name }}</a></li>{% endfor %}</ol>
+</section>
+
+</body>
+</html>
