@@ -14,6 +14,7 @@ You are given an edition date and a session date. Return:
   second_source_url.
 - ipos: mainboard issues opening, open, closing or listing within three trading days: dates,
   price band, size, subscription (overall, with time) and listing change if listed. Never a
-  grey market premium and never a view on applying.
+  grey market premium and never a view on applying, and never a source page that carries
+  either (see the GMP rule in `docs/AGENT_RULES.md`).
 - day_ahead: scheduled events on the edition date (results, data, policy, expiries, IPO
   dates) with times in IST where known.

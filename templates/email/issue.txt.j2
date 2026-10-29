@@ -61,7 +61,7 @@ Sources: {% for s in global_sources %}{{ s.name }} ({{ s.url }}){{ '; ' if not l
 {% for f in ipo.facts %}
 {{ f }}
 {% endfor %}
-Source: {{ ipo.source.name }} ({{ ipo.source.url }})
+Source: {{ ipo.source.name }} ({{ ipo.source.url }}){% if ipo.get('also') %}; {{ ipo.also.name }} ({{ ipo.also.url }}){% endif +%}
 {% endfor %}
 {{ issue.ipos.note }}
 

@@ -229,7 +229,7 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 {{ sechead("06", "IPO desk", issue.ipos.headline) }}
 <div class="ipos">
 {% for ipo in issue.ipos["items"] %}
-<div class="ipo"><h3>{{ ipo.company }}<span class="mono">{{ ipo.status }}</span></h3>{% for f in ipo.facts %}<p class="fact">{{ f|t }}</p>{% endfor %}{{ src(ipo.source) }}</div>
+<div class="ipo"><h3>{{ ipo.company }}<span class="mono">{{ ipo.status }}</span></h3>{% for f in ipo.facts %}<p class="fact">{{ f|t }}</p>{% endfor %}{% if ipo.get('also') %}<p class="src">Sources: <a href="{{ ipo.source.url }}">{{ ipo.source.name }}</a>, <a href="{{ ipo.also.url }}">{{ ipo.also.name }}</a></p>{% else %}{{ src(ipo.source) }}{% endif %}</div>
 {% endfor %}
 </div>
 <p class="note">{{ issue.ipos.note|t }}</p>

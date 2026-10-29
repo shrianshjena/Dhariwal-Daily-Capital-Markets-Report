@@ -35,6 +35,10 @@ REQUIRED = {
     "standard warning (exact)": "Mutual Fund investments are subject to market risks, read all scheme related documents carefully.",
     "not an Investment Adviser": "not a SEBI-registered Investment Adviser",
 }
+# Sources that publish grey market premium tables or ratings on IPOs (lane: no GMP, no IPO views)
+GMP_DOMAINS = ("ipogyani.com", "investorgain.com", "chittorgarh.com", "ipowatch.in", "ipocentral.in",
+               "ipoplatform.com", "gmpipowatch", "ipopremium.in", "dhan.co/blog/ipo")
+GMP_WARN = ("groww.in/blog",)
 EMAIL_FAIL_BYTES = 102_000
 EMAIL_WARN_BYTES = 90_000
 
@@ -172,6 +176,15 @@ def main():
     else:
         passes.append(f"Sources list covers all {len(used)} URLs used")
 
+    # 8b. No source that carries grey market premium content
+    all_urls = set(urls(issue))
+    gmp = sorted(u for u in all_urls if any(d in u for d in GMP_DOMAINS))
+    fails += [f"source publishes grey market premium content: {u}" for u in gmp]
+    warns += [f"source site links to grey market premium content; prefer another page: {u}"
+              for u in sorted(all_urls) if any(d in u for d in GMP_WARN)]
+    if not gmp:
+        passes.append("No sources from grey market premium sites")
+
     # 9. WhatsApp caption opens with the registered name and ARN (SEBI social media rule)
     caption_path = out / f"{stem}-whatsapp-caption.txt"
     if caption_path.exists():
@@ -225,6 +238,8 @@ def main():
     lines += ["", f"## Words for human review ({len(reviews)})", ""] + [f"- {r}" for r in reviews]
     report = "\n".join(lines) + "\n"
     (out / "check-report.md").write_text(report, encoding="utf-8")
+    # keep a committed copy beside the issue file (out/ is not committed)
+    (ROOT / "issues" / f"{date}-check-report.md").write_text(report, encoding="utf-8")
     print(report)
     sys.exit(1 if fails else 0)
 

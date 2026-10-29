@@ -183,7 +183,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 {% for ipo in issue.ipos["items"] %}
 <p style="margin:14px 0 0 0;{{ SANS }}font-size:16px;line-height:23px;font-weight:700;color:{{ C.text.primary }};{{ LH }}">{{ ipo.company }}&nbsp;&nbsp;<span style="{{ MONO }}font-size:11px;line-height:16px;letter-spacing:1px;font-weight:400;color:{{ C.brand.tealDark }};">{{ ipo.status|upper }}</span></p>
 {% for f in ipo.facts %}<p style="margin:3px 0 0 0;{{ SANS }}font-size:14px;line-height:21px;color:{{ C.text.secondary }};{{ LH }}">{{ f|t }}</p>{% endfor %}
-{{ source(ipo.source, 3) }}
+{% if ipo.get('also') %}{{ srclist([ipo.source, ipo.also], 3) }}{% else %}{{ source(ipo.source, 3) }}{% endif %}
 {% endfor %}
 {{ para(issue.ipos.note, 14, 13, C.text.secondary) }}
 </td></tr>

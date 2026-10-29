@@ -390,8 +390,8 @@
           "₹30,213 crore issue, subscribed 22.19 times"
         ],
         "source": {
-          "name": "Kotak Neo",
-          "url": "https://www.kotakneo.com/news/ipos/jio-platforms-lists-on-28-october/"
+          "name": "Business Standard",
+          "url": "https://www.business-standard.com/markets/news/jio-platforms-share-price-listing-21-premium-becomes-india-s-2nd-most-valuable-firm-126102800274_1.html"
         }
       },
       {
@@ -402,8 +402,8 @@
           "₹1,450 crore issue, subscribed 2.23 times"
         ],
         "source": {
-          "name": "Upstox",
-          "url": "https://upstox.com/news/market-news/ipo/paras-healthcare-shares-debut-at-4-premium-on-nse-bse-here-s-how-much-investors-made-per-lot/article-202515/"
+          "name": "Outlook Money",
+          "url": "https://www.outlookmoney.com/invest/paras-healthcare-shares-make-tepid-debut-stock-lists-with-nearly-4-premium"
         }
       },
       {
@@ -414,8 +414,12 @@
           "Subscribed 35.25 times by the end of day 2 (28 Oct)"
         ],
         "source": {
-          "name": "IPO Gyani",
-          "url": "https://ipogyani.com/ipo/bls-polymers-ipo/subscription"
+          "name": "HDFC Sky",
+          "url": "https://hdfcsky.com/ipo/bls-polymers-ipo"
+        },
+        "also": {
+          "name": "PTI-Bhasha via IBC24 (Hindi)",
+          "url": "https://www.ibc24.in/business/bls-polymers-ipo-subscribed-3525-times-till-day-2-3811958.html"
         }
       },
       {
@@ -426,8 +430,12 @@
           "Subscribed 0.27 times by the end of day 2 (28 Oct)"
         ],
         "source": {
-          "name": "IPO Gyani",
-          "url": "https://ipogyani.com/ipo/sfc-environmental-technologies-ipo/subscription"
+          "name": "JM Financial",
+          "url": "https://www.jmfinancialservices.in/market-news-and-insights/1740171"
+        },
+        "also": {
+          "name": "Fintechbiznews",
+          "url": "https://www.fintechbiznews.com/exchanges-ipos-nfos/sfc-environmental-technologies-ipo-subscribed-27-on-day-2-"
         }
       },
       {
@@ -438,8 +446,8 @@
           "Subscribed 0.65 times by the end of day 1 (28 Oct)"
         ],
         "source": {
-          "name": "IPO Gyani",
-          "url": "https://ipogyani.com/ipo/mk-sons-fine-jewels-ipo/subscription"
+          "name": "Upstox",
+          "url": "https://upstox.com/news/market-news/ipo/mk-sons-fine-jewels-ipo-day-1-check-subscription-status-price-band-lot-size-and-key-dates/article-202506/"
         }
       },
       {
@@ -522,8 +530,8 @@
         "date": "7 Oct",
         "text": "The Monetary Policy Committee raised the repo rate by 25 basis points to 5.50%, its first increase since February 2023, and moved its stance to calibrated tightening. Bond prices move opposite to yields, and funds holding longer-dated bonds see larger price changes in either direction.",
         "source": {
-          "name": "Cafemutual",
-          "url": "https://cafemutual.com/news/industry/38994-rbi-hikes-repo-rate-by-25-bps-to-55-debt-fund-managers-favor-accrual-over-aggressive-duration"
+          "name": "Business Today",
+          "url": "https://www.businesstoday.in/latest/economy/story/rbi-mpc-for-the-first-time-since-2023-repo-rate-hiked-by-25-bps-to-5-5-560010-2026-10-07"
         }
       },
       {
@@ -600,18 +608,26 @@
     },
     {
       "time": "During the day",
-      "event": "BLS Polymers and SFC Environmental Technologies IPOs close; EAAA India Alternatives allotment is due.",
+      "event": "BLS Polymers and SFC Environmental Technologies IPOs close.",
       "source": {
-        "name": "Investorgain",
-        "url": "https://www.investorgain.com/report/watch-live-ipo-event-calendar/554/today/?month=10&year=2026"
+        "name": "Business Standard",
+        "url": "https://www.business-standard.com/amp/markets/news/five-ipos-to-raise-nearly-2-600-crore-as-primary-market-stays-active-126102500208_1.html"
+      }
+    },
+    {
+      "time": "During the day",
+      "event": "EAAA India Alternatives IPO allotment is due; listing is expected on 2 Nov.",
+      "source": {
+        "name": "HDFC Sky",
+        "url": "https://hdfcsky.com/news/eaaa-india-alternatives-ipo-share-allotment-today"
       }
     },
     {
       "time": "During the day",
       "event": "Bombay Coated & Special Steels IPO opens, with a price band of ₹78 to ₹82; it closes on 2 Nov.",
       "source": {
-        "name": "Groww",
-        "url": "https://groww.in/blog/bombay-coated-and-special-steels-ipo-to-open-on-october-29-2026"
+        "name": "Business Standard",
+        "url": "https://www.business-standard.com/amp/markets/news/five-ipos-to-raise-nearly-2-600-crore-as-primary-market-stays-active-126102500208_1.html"
       }
     },
     {
@@ -717,24 +733,32 @@
       "url": "https://www.brecorder.com/news/40446479/india-bonds-may-firm-with-treasuries-crude-supply-could-cap-gains"
     },
     {
-      "name": "Kotak Neo",
-      "url": "https://www.kotakneo.com/news/ipos/jio-platforms-lists-on-28-october/"
+      "name": "Business Standard",
+      "url": "https://www.business-standard.com/markets/news/jio-platforms-share-price-listing-21-premium-becomes-india-s-2nd-most-valuable-firm-126102800274_1.html"
+    },
+    {
+      "name": "Outlook Money",
+      "url": "https://www.outlookmoney.com/invest/paras-healthcare-shares-make-tepid-debut-stock-lists-with-nearly-4-premium"
+    },
+    {
+      "name": "HDFC Sky",
+      "url": "https://hdfcsky.com/ipo/bls-polymers-ipo"
+    },
+    {
+      "name": "PTI-Bhasha via IBC24 (Hindi)",
+      "url": "https://www.ibc24.in/business/bls-polymers-ipo-subscribed-3525-times-till-day-2-3811958.html"
+    },
+    {
+      "name": "JM Financial",
+      "url": "https://www.jmfinancialservices.in/market-news-and-insights/1740171"
+    },
+    {
+      "name": "Fintechbiznews",
+      "url": "https://www.fintechbiznews.com/exchanges-ipos-nfos/sfc-environmental-technologies-ipo-subscribed-27-on-day-2-"
     },
     {
       "name": "Upstox",
-      "url": "https://upstox.com/news/market-news/ipo/paras-healthcare-shares-debut-at-4-premium-on-nse-bse-here-s-how-much-investors-made-per-lot/article-202515/"
-    },
-    {
-      "name": "IPO Gyani",
-      "url": "https://ipogyani.com/ipo/bls-polymers-ipo/subscription"
-    },
-    {
-      "name": "IPO Gyani",
-      "url": "https://ipogyani.com/ipo/sfc-environmental-technologies-ipo/subscription"
-    },
-    {
-      "name": "IPO Gyani",
-      "url": "https://ipogyani.com/ipo/mk-sons-fine-jewels-ipo/subscription"
+      "url": "https://upstox.com/news/market-news/ipo/mk-sons-fine-jewels-ipo-day-1-check-subscription-status-price-band-lot-size-and-key-dates/article-202506/"
     },
     {
       "name": "HDFC Sky",
@@ -753,8 +777,8 @@
       "url": "https://www.outlookmoney.com/invest/amfi-data-september-2026-equity-mf-inflows-38307-crore-rupees"
     },
     {
-      "name": "Cafemutual",
-      "url": "https://cafemutual.com/news/industry/38994-rbi-hikes-repo-rate-by-25-bps-to-55-debt-fund-managers-favor-accrual-over-aggressive-duration"
+      "name": "Business Today",
+      "url": "https://www.businesstoday.in/latest/economy/story/rbi-mpc-for-the-first-time-since-2023-repo-rate-hiked-by-25-bps-to-5-5-560010-2026-10-07"
     },
     {
       "name": "Cafemutual",
@@ -781,12 +805,8 @@
       "url": "https://www.angelone.in/news/market-updates/sensex-monthly-expiry-kaynes-lic-housing-finance-and-others-under-f-o-ban-on-september-24-2026"
     },
     {
-      "name": "Investorgain",
-      "url": "https://www.investorgain.com/report/watch-live-ipo-event-calendar/554/today/?month=10&year=2026"
-    },
-    {
-      "name": "Groww",
-      "url": "https://groww.in/blog/bombay-coated-and-special-steels-ipo-to-open-on-october-29-2026"
+      "name": "Business Standard",
+      "url": "https://www.business-standard.com/amp/markets/news/five-ipos-to-raise-nearly-2-600-crore-as-primary-market-stays-active-126102500208_1.html"
     },
     {
       "name": "BEA",

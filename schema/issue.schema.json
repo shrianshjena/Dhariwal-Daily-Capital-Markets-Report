@@ -468,6 +468,10 @@
               },
               "source": {
                 "$ref": "#/$defs/source"
+              },
+              "also": {
+                "$ref": "#/$defs/source",
+                "description": "A second page for facts the first does not carry"
               }
             }
           }
