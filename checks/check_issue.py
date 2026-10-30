@@ -197,6 +197,30 @@ def main():
             if ch in caption_path.read_text(encoding="utf-8"):
                 fails.append(f"{name} found in the WhatsApp caption")
 
+    # 9b. Client editions: no internal labels, no clock-time stamps, registration at the bottom
+    if issue["meta"].get("audience") == "client":
+        markers = ["internal pilot", "not for clients", "rm and mf team", "dry run", "pilot note"]
+        caption_text = caption_path.read_text(encoding="utf-8") if caption_path.exists() else ""
+        found = [(m, lbl) for m in markers for lbl, text in
+                 (("email", html_text), ("text", txt), ("pdf", pdf_text), ("caption", caption_text))
+                 if m in text.lower()]
+        fails += [f"client edition contains internal label '{m}' in {lbl}" for m, lbl in found]
+        clock = re.compile(r"\b\d{1,2}:\d{2}\s?(AM|PM)\b", re.I)
+        for path, value in strings(issue):
+            if path.endswith("/url") or path.startswith("/sources") or path.startswith("/day_ahead"):
+                continue
+            if clock.search(value):
+                where = "fails" if path.startswith(("/meta", "/flows", "/global/items", "/snapshot")) else "warns"
+                (fails if where == "fails" else warns).append(
+                    f"clock time in a client edition at {path}: '{clock.search(value).group(0)}'")
+        tag = REQUIRED["AMFI tagline"]
+        if tag in html_text and html_text.index(tag) < 0.6 * len(html_text):
+            fails.append("registration line appears near the top of the email; it belongs in the footer")
+        if len(reader.pages) > 1 and "ARN-369716" in (reader.pages[0].extract_text() or ""):
+            fails.append("registration line appears on page 1 of the PDF; it belongs at the end")
+        if not found:
+            passes.append("Client edition: no internal labels; registration at the bottom")
+
     # 10. PDF quality
     pages = len(reader.pages)
     if len(pdf_text) < 1000:

@@ -705,6 +705,10 @@
       "items": {
         "$ref": "#/$defs/source"
       }
+    },
+    "day_ahead_title": {
+      "$ref": "#/$defs/text",
+      "description": "Headline for the calendar section when it covers more than the edition day"
     }
   }
 }

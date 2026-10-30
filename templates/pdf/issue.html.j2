@@ -51,7 +51,7 @@ a { color: {{ C.brand.cobalt }}; text-decoration: underline; }
 .mast-meta { color: {{ C.text.inverseSoft }}; }
 .regstrip { background: {{ C.surface.soft }}; margin: 0 -15mm; padding: 2.6mm 15mm 2.8mm 15mm; }
 .regline { font-size: 12pt; line-height: 1.35; font-weight: 500; }
-.asof { color: {{ C.text.secondary }}; margin-top: 1.2mm; }
+.asof { color: {{ C.text.secondary }}; margin-top: 0; }
 .internal { color: {{ C.status.down }}; font-weight: 600; margin-top: 0.8mm; }
 .brief { margin-top: 5mm; }
 .brief h2 { font-size: 12.5pt; font-weight: 700; }
@@ -86,9 +86,11 @@ table.bars > tbody > tr > td.group { width: 50%; vertical-align: top; padding-ri
 table.bars > tbody > tr > td.group + td.group { padding-right: 0; padding-left: 6mm; }
 table.barrows { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: 1.2mm; }
 table.barrows td { padding: 1.3mm 0; vertical-align: middle; font-size: 9pt; }
-table.barrows td.bn { width: 44%; padding-right: 2mm; }
-table.barrows td.bb { width: 38%; }
-table.barrows td.bv { width: 18%; text-align: right; font-weight: 700; white-space: nowrap; }
+table.barrows td.bn { width: 30%; padding-right: 3mm; }
+table.barrows td.bb { width: 56%; }
+table.barrows td.bv { width: 14%; text-align: right; font-weight: 700; white-space: nowrap; }
+.barhead { margin-top: 3.5mm; }
+.barhead:first-of-type { margin-top: 2.5mm; }
 .track { height: 2.6mm; background: {{ C.chart.track }}; }
 .fill { height: 2.6mm; }
 .stories { column-count: 2; column-gap: 8mm; margin-top: 2mm; }
@@ -145,11 +147,10 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 </div>
 </div>
 <div class="mast-rule"></div>
-<p class="mono mast-meta">{{ meta.weekday }} {{ date_long }} · {{ meta.label }}</p>
+<p class="mono mast-meta">{{ meta.weekday }} {{ date_long }}{% if meta.audience == "internal" %} · {{ meta.label }}{% endif %}</p>
 </header>
 
 <div class="regstrip">
-<p class="regline">{{ pub.publisher }} · {{ pub.registration.tagline }} · {{ pub.registration.arn }}</p>
 <p class="mono asof">India: {{ meta.india_as_of }} · Global: {{ meta.global_as_of }}</p>
 {% if meta.audience == "internal" %}<p class="mono internal">Internal pilot · RM and MF team only · Not for clients</p>{% endif %}
 </div>
@@ -184,16 +185,14 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 
 <section class="sec keep">
 {{ sechead("03", "Sector scoreboard", issue.sectors.headline, issue.sectors.as_of) }}
-<table class="bars"><tr>
 {% for group_name, rows in (("Strongest", sectors.top), ("Weakest", sectors.bottom)) %}
-<td class="group"><p class="mono quiet">{{ group_name }}</p>
+<p class="mono quiet barhead">{{ group_name }}</p>
 <table class="barrows">
 {% for s in rows %}
 <tr><td class="bn">{{ s.name }}</td><td class="bb"><div class="track"><div class="fill" style="width: {{ s.bar }}%; background: {{ C.chart.gain if s.change_pct >= 0 else C.chart.loss }};"></div></div></td><td class="bv num {{ 'up' if s.change_pct > 0 else ('down' if s.change_pct < 0 else 'flat') }}">{{ s.change_pct|pct }}</td></tr>
 {% endfor %}
-</table></td>
+</table>
 {% endfor %}
-</tr></table>
 {{ src(issue.sectors.source) }}
 </section>
 
@@ -267,7 +266,7 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 </section>
 
 <section class="sec">
-{{ sechead("09", "Day ahead", "On the calendar for " ~ meta.weekday ~ " " ~ date_short) }}
+{{ sechead("09", "Day ahead", issue.get("day_ahead_title") or ("On the calendar for " ~ meta.weekday ~ " " ~ date_short)) }}
 <table class="agenda">
 {% for d in issue.day_ahead %}<tr><td class="t">{{ d.time|upper }}</td><td>{{ d.event|t }}{% if d.get('source') %} <a href="{{ d.source.url }}">{{ d.source.name }}</a>{% endif %}</td></tr>{% endfor %}
 </table>
@@ -283,11 +282,6 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 <p>{{ pub.contacts.address }}</p>
 <p>{% for l in pub.links %}<a href="{{ l.url }}">{{ l.label|nb }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
 {% if meta.audience == "internal" %}<p class="mono">{{ pub.pilot_note }}</p>{% endif %}
-</section>
-
-<section class="sources">
-<p class="mono quiet">Sources</p>
-<ol>{% for s in issue.sources %}<li><a href="{{ s.url }}">{{ s.name }}</a> <span class="host">· {{ s.url|host }}</span></li>{% endfor %}</ol>
 </section>
 
 </body>

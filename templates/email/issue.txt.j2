@@ -1,7 +1,6 @@
 {%- set meta = issue.meta -%}
 {{ pub.name|upper }} · {{ pub.edition_name|upper }}
-{{ meta.weekday }} {{ date_long }} · {{ meta.label }}
-{{ pub.publisher }} · {{ pub.registration.tagline }} · {{ pub.registration.arn }}
+{{ meta.weekday }} {{ date_long }}{% if meta.audience == "internal" %} · {{ meta.label }}{% endif +%}
 India: {{ meta.india_as_of }} · Global: {{ meta.global_as_of }}
 {% if meta.audience == "internal" %}
 INTERNAL PILOT · RM AND MF TEAM ONLY · NOT FOR CLIENTS
@@ -108,6 +107,7 @@ Sources: {% for s in issue.learn.sources %}{{ s.name }} ({{ s.url }}){{ '; ' if 
 {% endif %}
 
 09 · DAY AHEAD
+{{ issue.get("day_ahead_title") or ("On the calendar for " ~ meta.weekday ~ " " ~ date_short) }}
 {% for d in issue.day_ahead %}
 {{ "%-16s"|format(d.time) }}{{ d.event }}{% if d.get('source') %} Source: {{ d.source.name }} ({{ d.source.url }}){% endif +%}
 {% endfor %}

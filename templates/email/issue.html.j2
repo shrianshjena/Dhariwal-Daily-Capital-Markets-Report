@@ -70,13 +70,12 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 <h1 class="h1" style="margin:2px 0 0 0;{{ SANS }}font-size:27px;line-height:32px;font-weight:700;color:{{ C.text.inverse }};{{ LH }}">{{ pub.name }}</h1>
 </td></tr></table>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-top:20px;">{{ rule(40, C.brand.cobalt) }}</td></tr></table>
-{{ label(meta.weekday ~ " " ~ date_long ~ " · " ~ meta.label, C.text.inverseSoft, 12) }}
+{{ label(meta.weekday ~ " " ~ date_long ~ ((" · " ~ meta.label) if meta.audience == "internal" else ""), C.text.inverseSoft, 12) }}
 </td></tr>
 
 {#- Registration line and as-of strip -#}
 <tr><td class="gut" align="left" bgcolor="{{ C.surface.soft }}" style="text-align:left;padding:12px {{ G }}px;background-color:{{ C.surface.soft }};">
-<p style="margin:0;{{ SANS }}font-size:13px;line-height:19px;color:{{ C.text.primary }};{{ LH }}">{{ pub.publisher }} · {{ pub.registration.tagline }} · {{ pub.registration.arn }}</p>
-<p style="margin:4px 0 0 0;{{ MONO }}font-size:11px;line-height:16px;letter-spacing:0.8px;color:{{ C.text.secondary }};{{ LH }}">INDIA: {{ meta.india_as_of|upper }} · GLOBAL: {{ meta.global_as_of|upper }}</p>
+<p style="margin:0;{{ MONO }}font-size:11px;line-height:16px;letter-spacing:0.8px;color:{{ C.text.secondary }};{{ LH }}">INDIA: {{ meta.india_as_of|upper }} · GLOBAL: {{ meta.global_as_of|upper }}</p>
 {% if meta.audience == "internal" %}<p style="margin:4px 0 0 0;{{ MONO }}font-size:11px;line-height:16px;letter-spacing:0.8px;font-weight:700;color:{{ C.status.down }};{{ LH }}">INTERNAL PILOT · RM AND MF TEAM ONLY · NOT FOR CLIENTS</p>{% endif %}
 </td></tr>
 
@@ -234,7 +233,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 </td></tr>
 
 {#- 09 Day ahead -#}
-{{ section("09", "Day ahead", "On the calendar for " ~ meta.weekday ~ " " ~ date_short) }}
+{{ section("09", "Day ahead", issue.get("day_ahead_title") or ("On the calendar for " ~ meta.weekday ~ " " ~ date_short)) }}
 <tr><td class="gut" align="left" style="text-align:left;padding:12px {{ G }}px 0 {{ G }}px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
 {% for d in issue.day_ahead %}

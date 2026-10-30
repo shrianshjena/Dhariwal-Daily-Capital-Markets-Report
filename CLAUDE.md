@@ -27,10 +27,11 @@ It is NOT a SEBI-registered Investment Adviser, Research Analyst or PMS provider
   portfolio management about Kubeerra.
 - Return illustrations: at most the firm's 12% assumed CAGR, marked illustrative, with the
   standard warning and AMFI's past-performance disclaimer.
-- Every issue carries: "AMFI-registered Mutual Fund Distributor" with the name and ARN
-  (12 pt or larger in the PDF) and the standard warning, verbatim:
-  "Mutual Fund investments are subject to market risks, read all scheme related documents carefully."
-- Nothing is sent without Shriansh's approval. Pilot issues are internal (RM and MF team).
+- Every issue carries, at the bottom of the email and PDF: "AMFI-registered Mutual Fund
+  Distributor" with the name and ARN (12 pt or larger in the PDF) and the standard warning,
+  verbatim: "Mutual Fund investments are subject to market risks, read all scheme related documents carefully."
+- Nothing is sent without Shriansh's approval. From 30 Oct 2026 issues are client editions
+  for trusted clients: no internal labels or clock-time stamps (see the daily skill).
 
 ## Data rules
 

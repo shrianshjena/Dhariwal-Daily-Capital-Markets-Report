@@ -8,7 +8,7 @@ Oct 29, 2026 · @Shriansh Jena
 
 ## Project snapshot
 
-The first dry run (29 Oct 2026, record v0.3) is built, independently reviewed and corrected; the RM pilot starts once Shriansh approves the design and the email logo is hosted.
+The brief is live (record v0.4): client editions from 30 Oct 2026, prepared by a scheduled run on weekdays from 2 Nov and approved by Shriansh before every send.
 
 | Item | Detail |
 | --- | --- |
@@ -16,8 +16,8 @@ The first dry run (29 Oct 2026, record v0.3) is built, independently reviewed an
 | Publisher | Kubeerra, the digital brand of Dhariwal Securities Private Limited |
 | Owner | Shriansh Jena (shriansh@kubeerra.com) |
 | Stakeholders | Shuvendu Gupta (asked for this format), Saimohan Shridhar (Relationship Manager, Head), Gunjan Jhanwar (on the request thread) |
-| Stage | Build: dry run 001 (29 Oct 2026) delivered for approval; RM pilot next |
-| Settled | Name Kubeerra Market Brief; navy, cobalt and teal; morning edition; RM pilot first, approved by Shriansh; email HTML for Outlook and Gmail plus an A4 PDF; distributor-only content; no em dashes |
+| Stage | Live: client editions from 30 Oct 2026; scheduled weekday run from Mon 2 Nov, pack to Shriansh by 9:00 AM IST |
+| Settled | Name Kubeerra Market Brief; navy, cobalt and teal; morning edition; client editions, approved by Shriansh; email HTML for Outlook and Gmail plus an A4 PDF; distributor-only content; no em dashes |
 | Pending | Compliance owner for client sends, client sending platform, data licence, open questions 14 to 20 |
 
 Rule for this record: every change to the implementation updates this document in the same change, so the record never drifts from what is built.
@@ -318,10 +318,16 @@ Also possible later: a Saturday weekly wrap, and a monthly mutual fund special a
 
 ## Decision log
 
-Thirty-one decisions are logged: thirty settled, and one superseded (D-024, by D-029). A changed decision keeps its row and gains a new one that supersedes it.
+Thirty-seven decisions are logged: thirty-five settled, and two superseded (D-011 by D-032, D-024 by D-029). A changed decision keeps its row and gains a new one that supersedes it.
 
 | ID | Logged | Decision | Status | Basis |
 | --- | --- | --- | --- | --- |
+| D-037 | 30 Oct 2026 | A scheduled task prepares each issue on weekdays at 7:10 AM IST from Mon 2 Nov 2026 (asked for 7:30; started 20 minutes earlier to avoid the busy half-hour slot) and delivers the pack to Shriansh by 9:00 AM. It skips NSE holidays, never sends anything, and runs with automatic approval | Settled | Owner, in chat |
+| D-036 | 30 Oct 2026 | The WhatsApp card carries no disclaimer lines; it keeps the registration line (SEBI's social media rule asks for the registered name and number on posts), and the caption keeps its registration line and the standard warning | Settled | Owner, in chat |
+| D-035 | 30 Oct 2026 | No separate sources list in the PDF; each section keeps its inline source links, and the issue file keeps the full list for the record | Settled | Owner, in chat |
+| D-034 | 30 Oct 2026 | The PDF sector scoreboard is a single column: weakest sectors directly below the strongest. Stories stay in two columns | Settled | Owner, in chat |
+| D-033 | 30 Oct 2026 | The registration line (name, AMFI tagline, ARN, EUIN) and the standard warning sit at the bottom of the email and PDF, not at the top | Settled | Owner, in chat |
+| D-032 | 30 Oct 2026 | Issues are client editions for trusted clients from 30 Oct 2026: no internal labels, no dry-run label and no clock-time data stamps; the report date stays. Supersedes D-011 (RM pilot first) | Settled | Owner, in chat |
 | D-031 | 29 Oct 2026 | Figures show direction by colour. Net flows (FII, DII, fund net inflows) are green when positive and red when negative; levels (closes, prices, yields, assets) stay in ink beside a green ▲ or red ▼ change; sector bars are green or red by sign; a level with no stated change stays neutral. USD/INR follows the quote convention, so a rise (a weaker rupee) shows green | Settled | Owner, in chat: green for increases, red for decreases |
 | D-030 | 29 Oct 2026 | The email logo is the shared Kubeerra PNG at 144 px, with its white corners made transparent for the navy masthead, served from Vercel. Only hosting/ is ever deployed: a root .vercelignore allows nothing else | Settled | Owner, in chat; privacy and font licence |
 | D-029 | 29 Oct 2026 | General Sans (Fontshare, ITF Free Font License 2.0) sets the PDF and the WhatsApp card. The font files stay private in the repository and are never served publicly; PDF embedding relies on licence section 03. The email keeps system fonts | Settled | Owner supplied the files |
@@ -342,7 +348,7 @@ Thirty-one decisions are logged: thirty settled, and one superseded (D-024, by D
 | D-014 | 29 Oct 2026 | The snapshot adds Nifty Bank, midcap and smallcap indices, India VIX and breadth, gold and the 10-year G-Sec yield, and a day-ahead calendar | Settled | Owner, in chat |
 | D-013 | 29 Oct 2026 | The mutual fund corner stays at industry and category level: no scheme rankings or picks | Settled | Owner, in chat |
 | D-012 | 29 Oct 2026 | Deliverables are files: email HTML that works in classic Outlook, the new Outlook, Outlook on the web and Gmail, plus an A4 PDF; no Microsoft 365 connector | Settled | Owner, in chat |
-| D-011 | 29 Oct 2026 | The RM and MF team receive a pilot first, then clients | Settled | Owner, in chat |
+| D-011 | 29 Oct 2026 | The RM and MF team receive a pilot first, then clients | Superseded by D-032 | Owner, in chat |
 | D-010 | 29 Oct 2026 | Morning pre-market edition, about 8:00 AM IST | Settled | Owner, in chat |
 | D-009 | 29 Oct 2026 | Name: Kubeerra Market Brief | Settled | Owner, in chat |
 | D-008 | 29 Oct 2026 | A named person approves every issue before any send; nothing sends automatically. Pilot approver: Shriansh | Settled | Guardrails; owner, in chat |
@@ -398,6 +404,7 @@ The project began on 28 Oct 2026 and entered the build on 29 Oct 2026; every mat
 
 | Date | Event |
 | --- | --- |
+| 30 Oct 2026 | Client edition rules set (D-032 to D-036) and the weekday schedule created (D-037). The first client edition, for Friday 30 Oct from the 29 Oct close, prepared on the afternoon of 30 Oct |
 | 29 Oct 2026 | Design round 2 from Shriansh's feedback: green and red for rises and falls (D-031), General Sans for the PDF and card (D-029), and the shared PNG logo hosted on Vercel (D-030). Shriansh imported the repository into Vercel; commits now use his GitHub no-reply email so deployments are not blocked |
 | 29 Oct 2026 | Dry run 001 built and delivered for approval: email 83 KB, six-page PDF, WhatsApp card, all automated checks passing. Independent review found one must-fix (NFO scheme names, now a category summary), wording and sourcing fixes, one wrong count and three attributions stronger than their sources; all corrected (issues/2026-10-29-review.md). Code pushed to the private GitHub repository; the repository copy of this record is now canonical (D-007) |
 | 29 Oct 2026 | All thirteen pilot decisions settled in chat: navy, cobalt and teal; Kubeerra Market Brief; morning edition; RM pilot first; Shriansh approves; files that work in Outlook and Gmail; regulatory standing reconfirmed. Build started with a dry-run issue |
