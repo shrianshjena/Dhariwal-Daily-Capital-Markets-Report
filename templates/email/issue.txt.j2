@@ -24,7 +24,7 @@ Data as of {{ issue.snapshot.as_of }}. Sources: {% for s in snapshot_sources %}{
 02 · FLOWS, CURRENCY AND COMMODITIES
 {{ issue.flows.headline }}
 {% for t in issue.flows.tiles %}
-{{ t.label }}{{ " (provisional)" if t.provisional|default(false) else "" }}: {{ t|figure }}{% if t.get('change_pct') is not none %} ({{ t.change_pct|pct }}){% endif %}. {{ t.detail }}. Source: {{ t.source.name }} ({{ t.source.url }}){% if t.get('also') %}; {{ t.also.name }} ({{ t.also.url }}){% endif +%}
+{{ t.label }}{{ " (provisional)" if t.provisional|default(false) else "" }}: {{ t|figure }}{% if t|chip %} ({{ t|chip }}){% endif %}. {{ t.detail }}. Source: {{ t.source.name }} ({{ t.source.url }}){% if t.get('also') %}; {{ t.also.name }} ({{ t.also.url }}){% endif +%}
 {% endfor %}
 
 03 · SECTOR SCOREBOARD
@@ -68,7 +68,7 @@ Source: {{ ipo.source.name }} ({{ ipo.source.url }}){% if ipo.get('also') %}; {{
 {{ issue.mf.headline }}
 Industry data, {{ issue.mf.period }}:
 {% for st in issue.mf.stats %}
-- {{ st.label }}: {{ st|figure }}{% if st.get('change_pct') is not none %} ({{ st.change_pct|pct }}){% endif %}. {{ st.detail }}
+- {{ st.label }}: {{ st|figure }}{% if st|chip %} ({{ st|chip }}){% endif %}. {{ st.detail }}
 {% endfor %}
 {% for h in issue.mf.highlights %}
 {{ h.text }}

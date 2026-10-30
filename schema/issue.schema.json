@@ -106,6 +106,10 @@
         "flow": {
           "type": "boolean",
           "description": "True when the figure is itself a movement (a net flow): the figure is coloured by its sign. Signed crore figures are flows by default"
+        },
+        "change_bp": {
+          "type": "number",
+          "description": "Change in basis points, for yields; used when change_pct is absent"
         }
       }
     }

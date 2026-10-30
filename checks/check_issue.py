@@ -253,7 +253,8 @@ def main():
     confirm = [f"- [ ] {r['name']}: {fmt.level(r['close'])} ({fmt.pct(r['change_pct'])}), {r['source']['url']}"
                for r in issue["snapshot"]["indices"]]
     confirm += [f"- [ ] {t['label']}: {fmt.figure(t['value'], t['format'])}"
-                + (f" ({fmt.pct(t['change_pct'])})" if t.get("change_pct") is not None else "")
+                + (f" ({fmt.pct(t['change_pct'])})" if t.get("change_pct") is not None
+                   else (f" ({fmt.bp(t['change_bp'])})" if t.get("change_bp") is not None else ""))
                 + f", {t['source']['url']}"
                 for t in issue["flows"]["tiles"] + issue["mf"]["stats"]]
 

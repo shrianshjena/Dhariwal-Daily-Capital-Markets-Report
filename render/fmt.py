@@ -49,6 +49,14 @@ def points(value, decimals=2):
     return sign(value) + group_indian(value, decimals)
 
 
+def bp(value):
+    """Basis points: −5 bp"""
+    if value is None:
+        return "Not available"
+    text = f"{abs(value):.0f}" if float(value).is_integer() else f"{abs(value):.1f}"
+    return sign(value) + text + " bp"
+
+
 def pct(value, decimals=2):
     if value is None:
         return "Not available"

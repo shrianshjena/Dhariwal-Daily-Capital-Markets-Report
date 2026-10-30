@@ -116,9 +116,20 @@ def movement(f):
         return f["direction"]
     if f.get("change_pct") is not None:
         return fmt.direction(f["change_pct"])
+    if f.get("change_bp") is not None:
+        return fmt.direction(f["change_bp"])
     if is_flow(f):
         return fmt.direction(f["value"])
     return None
+
+
+def chip(f):
+    """The coloured change beside a level: '▲ +0.22%' or '▼ −5 bp'; empty when no change is stated."""
+    if f.get("change_pct") is not None:
+        return f"{fmt.arrow(f['change_pct'])} {fmt.pct(f['change_pct'])}".strip()
+    if f.get("change_bp") is not None:
+        return f"{fmt.arrow(f['change_bp'])} {fmt.bp(f['change_bp'])}".strip()
+    return ""
 
 
 def build_env(tokens):
@@ -152,6 +163,7 @@ def build_env(tokens):
         group=fmt.group_indian,
         host=lambda url: urlparse(url).netloc.removeprefix("www."),
         t=glue, nb=nobreak, movement=movement, is_flow=is_flow, mvcolor=mvcolor, figcolor=figcolor,
+        chip=chip, bp=fmt.bp,
     )
     return env
 

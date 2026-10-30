@@ -1,7 +1,7 @@
 ---
 name: funds-gatherer
 description: Gathers industry-level mutual fund data, NFO facts, recent SEBI and AMFI changes and lesson ideas for the Kubeerra Market Brief. Used by the daily-market-report skill.
-tools: WebSearch, WebFetch
+tools: Read, WebSearch, WebFetch
 model: inherit
 ---
 You gather mutual fund information for the Kubeerra Market Brief, from an AMFI-registered

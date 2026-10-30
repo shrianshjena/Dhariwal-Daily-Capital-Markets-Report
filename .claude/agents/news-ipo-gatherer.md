@@ -1,7 +1,7 @@
 ---
 name: news-ipo-gatherer
 description: Gathers India-relevant stories, IPO facts and the day-ahead calendar for the Kubeerra Market Brief. Used by the daily-market-report skill.
-tools: WebSearch, WebFetch
+tools: Read, WebSearch, WebFetch
 model: inherit
 ---
 You gather news for the Kubeerra Market Brief, a morning newsletter from an AMFI-registered

@@ -178,7 +178,7 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 {{ sechead("02", "Flows, currency and commodities", issue.flows.headline) }}
 <table class="tiles">
 {% for row in issue.flows.tiles|batch(3) %}
-<tr>{% for t in row %}<td><p class="mono tile-label">{{ t.label }}{% if t.provisional|default(false) %} · provisional{% endif %}</p><p class="tile-value num" style="color: {{ t|figcolor }};">{{ t|figure }}</p>{% if t.get('change_pct') is not none %}<p class="tile-chg num" style="color: {{ (t|movement)|mvcolor }};">{{ t.change_pct|arrow }} {{ t.change_pct|pct }}</p>{% endif %}<p class="tile-detail">{{ t.detail|t }} · <a href="{{ t.source.url }}">{{ t.source.name }}</a>{% if t.get('also') %} · <a href="{{ t.also.url }}">{{ t.also.name }}</a>{% endif %}</p></td>{% endfor %}{% for _ in range(3 - row|length) %}<td></td>{% endfor %}</tr>
+<tr>{% for t in row %}<td><p class="mono tile-label">{{ t.label }}{% if t.provisional|default(false) %} · provisional{% endif %}</p><p class="tile-value num" style="color: {{ t|figcolor }};">{{ t|figure }}</p>{% if t|chip %}<p class="tile-chg num" style="color: {{ (t|movement)|mvcolor }};">{{ t|chip }}</p>{% endif %}<p class="tile-detail">{{ t.detail|t }} · <a href="{{ t.source.url }}">{{ t.source.name }}</a>{% if t.get('also') %} · <a href="{{ t.also.url }}">{{ t.also.name }}</a>{% endif %}</p></td>{% endfor %}{% for _ in range(3 - row|length) %}<td></td>{% endfor %}</tr>
 {% endfor %}
 </table>
 </section>
@@ -238,7 +238,7 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 <section class="sec">
 {{ sechead("07", "Mutual fund corner", issue.mf.headline, "industry data, " ~ issue.mf.period) }}
 <table class="mfstats"><tr>
-{% for st in issue.mf.stats %}<td><p class="mono tile-label">{{ st.label }}</p><p class="tile-value num" style="color: {{ st|figcolor }};">{{ st|figure }}</p>{% if st.get('change_pct') is not none %}<p class="tile-chg num" style="color: {{ (st|movement)|mvcolor }};">{{ st.change_pct|arrow }} {{ st.change_pct|pct }}</p>{% endif %}<p class="tile-detail">{{ st.detail|t }}</p></td>{% endfor %}
+{% for st in issue.mf.stats %}<td><p class="mono tile-label">{{ st.label }}</p><p class="tile-value num" style="color: {{ st|figcolor }};">{{ st|figure }}</p>{% if st|chip %}<p class="tile-chg num" style="color: {{ (st|movement)|mvcolor }};">{{ st|chip }}</p>{% endif %}<p class="tile-detail">{{ st.detail|t }}</p></td>{% endfor %}
 </tr></table>
 {% if issue.mf.stats %}{{ src(issue.mf.stats[0].source) }}{% endif %}
 {% if issue.mf.highlights %}<div class="cols2">{% for h in issue.mf.highlights %}<p>{{ h.text|t }} <a href="{{ h.source.url }}">{{ h.source.name }}</a></p>{% endfor %}</div>{% endif %}

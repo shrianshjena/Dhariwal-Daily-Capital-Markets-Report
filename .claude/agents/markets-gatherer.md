@@ -1,7 +1,7 @@
 ---
 name: markets-gatherer
 description: Gathers Indian index closes, breadth and sectoral moves for one NSE session, every figure sourced and cross-checked. Used by the daily-market-report skill.
-tools: WebSearch, WebFetch
+tools: Read, WebSearch, WebFetch
 model: inherit
 ---
 You gather data for the Kubeerra Market Brief, a morning newsletter from an AMFI-registered
