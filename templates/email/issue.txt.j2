@@ -24,7 +24,7 @@ Data as of {{ issue.snapshot.as_of }}. Sources: {% for s in snapshot_sources %}{
 02 · FLOWS, CURRENCY AND COMMODITIES
 {{ issue.flows.headline }}
 {% for t in issue.flows.tiles %}
-{{ t.label }}{{ " (provisional)" if t.provisional|default(false) else "" }}: {{ t|figure }}{% if t|chip %} ({{ t|chip }}){% endif %}. {{ t.detail }}. Source: {{ t.source.name }} ({{ t.source.url }}){% if t.get('also') %}; {{ t.also.name }} ({{ t.also.url }}){% endif +%}
+{{ t.label }}{{ " (provisional)" if t.provisional|default(false) else "" }}: {{ t|figure }}{% if t|chip %} ({{ t|chip }}){% endif %}. {{ t.detail }}. Source: {% for x in t|srcs %}{{ x.name }} ({{ x.url }}){{ "; " if not loop.last }}{% endfor +%}
 {% endfor %}
 
 03 · SECTOR SCOREBOARD
@@ -41,7 +41,7 @@ Change on the day, {{ issue.sectors.as_of }}. Source: {{ issue.sectors.source.na
 [{{ s.topic }} · {{ s.relevance }}] {{ s.headline }}
 {{ s.what }}
 Why it matters: {{ s.why }}
-Source: {{ s.source.name }} ({{ s.source.url }}){% if s.get('also') %}; {{ s.also.name }} ({{ s.also.url }}){% endif +%}
+Source: {% for x in s|srcs %}{{ x.name }} ({{ x.url }}){{ "; " if not loop.last }}{% endfor +%}
 {% endfor %}
 
 05 · GLOBAL MARKETS
@@ -60,7 +60,7 @@ Sources: {% for s in global_sources %}{{ s.name }} ({{ s.url }}){{ '; ' if not l
 {% for f in ipo.facts %}
 {{ f }}
 {% endfor %}
-Source: {{ ipo.source.name }} ({{ ipo.source.url }}){% if ipo.get('also') %}; {{ ipo.also.name }} ({{ ipo.also.url }}){% endif +%}
+Source: {% for x in ipo|srcs %}{{ x.name }} ({{ x.url }}){{ "; " if not loop.last }}{% endfor +%}
 {% endfor %}
 {{ issue.ipos.note }}
 
@@ -109,7 +109,7 @@ Sources: {% for s in issue.learn.sources %}{{ s.name }} ({{ s.url }}){{ '; ' if 
 09 · DAY AHEAD
 {{ issue.get("day_ahead_title") or ("On the calendar for " ~ meta.weekday ~ " " ~ date_short) }}
 {% for d in issue.day_ahead %}
-{{ "%-16s"|format(d.time) }}{{ d.event }}{% if d.get('source') %} Source: {{ d.source.name }} ({{ d.source.url }}){% endif +%}
+{{ "%-16s"|format(d.time) }}{{ d.event }}{% for x in d|srcs %}{{ " Source: " if loop.first else "; " }}{{ x.name }} ({{ x.url }}){% endfor +%}
 {% endfor %}
 
 ------------------------------------------------------------
@@ -124,6 +124,9 @@ Phone {{ pub.contacts.phone }} · WhatsApp {{ pub.contacts.whatsapp }} · {{ pub
 {% for l in pub.links %}
 {{ l.label }}: {{ l.url }}
 {% endfor %}
+{% if meta.audience == "client" and pub.get('unsubscribe') %}
+{{ pub.unsubscribe }} {{ pub.contacts.email }}.
+{% endif %}
 {% if meta.audience == "internal" %}
 {{ pub.pilot_note }}
 {% endif %}

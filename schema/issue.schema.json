@@ -84,8 +84,7 @@
           "$ref": "#/$defs/source"
         },
         "also": {
-          "$ref": "#/$defs/source",
-          "description": "A second source shown beside the first, e.g. for a month-to-date total"
+          "$ref": "#/$defs/also"
         },
         "as_of": {
           "$ref": "#/$defs/text",
@@ -112,6 +111,22 @@
           "description": "Change in basis points, for yields; used when change_pct is absent"
         }
       }
+    },
+    "also": {
+      "description": "Further pages an item draws on: one source, or a list of up to three",
+      "oneOf": [
+        {
+          "$ref": "#/$defs/source"
+        },
+        {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 3,
+          "items": {
+            "$ref": "#/$defs/source"
+          }
+        }
+      ]
     }
   },
   "properties": {
@@ -370,8 +385,7 @@
             "$ref": "#/$defs/source"
           },
           "also": {
-            "$ref": "#/$defs/source",
-            "description": "A second page the story draws on"
+            "$ref": "#/$defs/also"
           }
         }
       }
@@ -490,8 +504,7 @@
                 "$ref": "#/$defs/source"
               },
               "also": {
-                "$ref": "#/$defs/source",
-                "description": "A second page for facts the first does not carry"
+                "$ref": "#/$defs/also"
               }
             }
           }
@@ -699,6 +712,9 @@
           },
           "source": {
             "$ref": "#/$defs/source"
+          },
+          "also": {
+            "$ref": "#/$defs/also"
           }
         }
       }

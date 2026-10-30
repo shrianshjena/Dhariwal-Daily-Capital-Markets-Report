@@ -120,7 +120,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 {{ label(t.label ~ (" · provisional" if t.provisional|default(false) else ""), C.text.secondary) }}
 <p style="margin:6px 0 0 0;{{ SANS }}font-size:24px;line-height:30px;font-weight:700;color:{{ t|figcolor }};white-space:nowrap;{{ LH }}">{{ t|figure }}</p>
 {% if t|chip %}<p style="margin:2px 0 0 0;{{ SANS }}font-size:14px;line-height:20px;font-weight:700;color:{{ (t|movement)|mvcolor }};white-space:nowrap;{{ LH }}">{{ (t|chip)|nb }}</p>{% endif %}
-<p style="margin:4px 0 0 0;{{ SANS }}font-size:13px;line-height:19px;color:{{ C.text.secondary }};{{ LH }}">{{ t.detail|t }} · <a href="{{ t.source.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ t.source.name }}</a>{% if t.get('also') %} · <a href="{{ t.also.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ t.also.name }}</a>{% endif %}</p>
+<p style="margin:4px 0 0 0;{{ SANS }}font-size:13px;line-height:19px;color:{{ C.text.secondary }};{{ LH }}">{{ t.detail|t }}{% for s in t|srcs %} · <a href="{{ s.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ s.name }}</a>{% endfor %}</p>
 </td>
 {% endfor %}
 {% if pair|length == 1 %}<td class="stack" width="50%" style="width:50%;border-top:1px solid {{ C.border.default }};">&nbsp;</td>{% endif %}
@@ -156,7 +156,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 <h3 style="margin:6px 0 0 0;{{ SANS }}font-size:18px;line-height:25px;font-weight:700;color:{{ C.text.primary }};{{ LH }}">{{ s.headline|t }}</h3>
 {{ para(s.what, 8) }}
 <p style="margin:10px 0 0 0;{{ SANS }}font-size:16px;line-height:25px;color:{{ C.text.primary }};{{ LH }}"><span style="{{ MONO }}font-size:11px;line-height:16px;letter-spacing:1.2px;color:{{ C.brand.tealDark }};">WHY IT MATTERS&nbsp;&nbsp;</span>{{ s.why|t }}</p>
-{% if s.get('also') %}{{ srclist([s.source, s.also], 8) }}{% else %}{{ source(s.source) }}{% endif %}
+{% if s.get('also') %}{{ srclist(s|srcs, 8) }}{% else %}{{ source(s.source) }}{% endif %}
 </td></tr>
 {% endfor %}
 
@@ -183,7 +183,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 {% for ipo in issue.ipos["items"] %}
 <p style="margin:14px 0 0 0;{{ SANS }}font-size:16px;line-height:23px;font-weight:700;color:{{ C.text.primary }};{{ LH }}">{{ ipo.company }}&nbsp;&nbsp;<span style="{{ MONO }}font-size:11px;line-height:16px;letter-spacing:1px;font-weight:400;color:{{ C.brand.tealDark }};">{{ ipo.status|upper }}</span></p>
 {% for f in ipo.facts %}<p style="margin:3px 0 0 0;{{ SANS }}font-size:14px;line-height:21px;color:{{ C.text.secondary }};{{ LH }}">{{ f|t }}</p>{% endfor %}
-{% if ipo.get('also') %}{{ srclist([ipo.source, ipo.also], 3) }}{% else %}{{ source(ipo.source, 3) }}{% endif %}
+{% if ipo.get('also') %}{{ srclist(ipo|srcs, 3) }}{% else %}{{ source(ipo.source, 3) }}{% endif %}
 {% endfor %}
 {{ para(issue.ipos.note, 14, 13, C.text.secondary) }}
 </td></tr>
@@ -200,7 +200,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 </tr>
 {% endfor %}
 </table>
-{% if issue.mf.stats %}{{ source(issue.mf.stats[0].source, 6) }}{% endif %}
+{% set mfsrc = issue.mf.stats|unique_sources %}{% if mfsrc|length > 1 %}{{ srclist(mfsrc, 6) }}{% elif mfsrc %}{{ source(mfsrc[0], 6) }}{% endif %}
 {% for h in issue.mf.highlights %}{{ para(h.text, 12, 15) }}{% endfor %}
 {% if issue.mf.get('nfo_summary') or show_nfo_names %}
 {{ label("New fund offers", C.text.secondary, 22) }}
@@ -239,7 +239,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 {% for d in issue.day_ahead %}
 <tr>
 <td width="96" valign="top" style="width:96px;padding:10px 12px 10px 0;border-bottom:1px solid {{ C.border.default }};{{ MONO }}font-size:12px;line-height:20px;color:{{ C.text.secondary }};white-space:nowrap;{{ LH }}">{{ d.time|upper }}</td>
-<td valign="top" style="padding:10px 0;border-bottom:1px solid {{ C.border.default }};{{ SANS }}font-size:15px;line-height:21px;color:{{ C.text.primary }};{{ LH }}">{{ d.event|t }}{% if d.get('source') %} <a href="{{ d.source.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;font-size:13px;">{{ d.source.name }}</a>{% endif %}</td>
+<td valign="top" style="padding:10px 0;border-bottom:1px solid {{ C.border.default }};{{ SANS }}font-size:15px;line-height:21px;color:{{ C.text.primary }};{{ LH }}">{{ d.event|t }}{% for s in d|srcs %}{{ " " if loop.first else ", " }}<a href="{{ s.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;font-size:13px;">{{ s.name }}</a>{% endfor %}</td>
 </tr>
 {% endfor %}
 </table>
@@ -255,6 +255,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-top:20px;">{{ rule(40, C.brand.cobalt) }}</td></tr></table>
 <p style="margin:16px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.inverseSoft }};{{ LH }}">Phone {{ pub.contacts.phone|t }} · WhatsApp {{ pub.contacts.whatsapp|t }} · <a href="mailto:{{ pub.contacts.email }}" style="color:{{ C.text.inverseLink }};text-decoration:underline;">{{ pub.contacts.email }}</a><br>{{ pub.contacts.hours }}<br>{{ pub.contacts.address }}</p>
 <p style="margin:12px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.inverseSoft }};{{ LH }}">{% for l in pub.links %}<a href="{{ l.url }}" style="color:{{ C.text.inverseLink }};text-decoration:underline;">{{ l.label|nb }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+{% if meta.audience == "client" and pub.get('unsubscribe') %}<p style="margin:12px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.inverseSoft }};{{ LH }}">{{ pub.unsubscribe }} <a href="mailto:{{ pub.contacts.email }}?subject=Unsubscribe" style="color:{{ C.text.inverseLink }};text-decoration:underline;">{{ pub.contacts.email }}</a>.</p>{% endif %}
 {% if meta.audience == "internal" %}<p style="margin:16px 0 0 0;{{ MONO }}font-size:11px;line-height:16px;letter-spacing:1px;color:{{ C.text.inverseSoft }};{{ LH }}">{{ pub.pilot_note|upper }}</p>{% endif %}
 </td></tr>
 </table>

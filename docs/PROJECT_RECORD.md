@@ -18,7 +18,7 @@ The brief is live (record v0.4): client editions from 30 Oct 2026, prepared by a
 | Stakeholders | Shuvendu Gupta (asked for this format), Saimohan Shridhar (Relationship Manager, Head), Gunjan Jhanwar (on the request thread) |
 | Stage | Live: client editions from 30 Oct 2026; scheduled weekday run from Mon 2 Nov, pack to Shriansh by 9:00 AM IST |
 | Settled | Name Kubeerra Market Brief; navy, cobalt and teal; morning edition; client editions, approved by Shriansh; email HTML for Outlook and Gmail plus an A4 PDF; distributor-only content; no em dashes |
-| Pending | Compliance owner for client sends, client sending platform, data licence, open questions 14 to 20 |
+| Pending | Compliance owner for client sends, client sending platform, data licence, open questions 14 to 21 |
 
 Rule for this record: every change to the implementation updates this document in the same change, so the record never drifts from what is built.
 
@@ -318,10 +318,11 @@ Also possible later: a Saturday weekly wrap, and a monthly mutual fund special a
 
 ## Decision log
 
-Thirty-seven decisions are logged: thirty-five settled, and two superseded (D-011 by D-032, D-024 by D-029). A changed decision keeps its row and gains a new one that supersedes it.
+Thirty-eight decisions are logged: thirty-five settled, one proposed (D-038) and two superseded (D-011 by D-032, D-024 by D-029). A changed decision keeps its row and gains a new one that supersedes it.
 
 | ID | Logged | Decision | Status | Basis |
 | --- | --- | --- | --- | --- |
+| D-038 | 30 Oct 2026 | Client editions end with an unsubscribe line (reply “Unsubscribe” or write to dhariwal.securities@kubeerra.com) in the email, text and PDF, and the disclaimer says the company “provides distribution services only”, the website's own wording | Proposed | Compliance review of client edition 001; confirm with the compliance owner |
 | D-037 | 30 Oct 2026 | A scheduled task prepares each issue on weekdays at 7:10 AM IST from Mon 2 Nov 2026 (asked for 7:30; started 20 minutes earlier to avoid the busy half-hour slot) and delivers the pack to Shriansh by 9:00 AM. It skips NSE holidays, never sends anything, and runs with automatic approval | Settled | Owner, in chat |
 | D-036 | 30 Oct 2026 | The WhatsApp card carries no disclaimer lines; it keeps the registration line (SEBI's social media rule asks for the registered name and number on posts), and the caption keeps its registration line and the standard warning | Settled | Owner, in chat |
 | D-035 | 30 Oct 2026 | No separate sources list in the PDF; each section keeps its inline source links, and the issue file keeps the full list for the record | Settled | Owner, in chat |
@@ -362,7 +363,7 @@ Thirty-seven decisions are logged: thirty-five settled, and two superseded (D-01
 
 ## Open questions
 
-Questions 1 to 13 were answered in chat on 29 Oct 2026 and are logged as decisions D-006 to D-021. Questions 14 to 20 came out of dry run 001 and its independent review, and are open.
+Questions 1 to 13 were answered in chat on 29 Oct 2026 and are logged as decisions D-006 to D-021. Questions 14 to 20 came out of dry run 001 and its independent review, and question 21 out of the review of client edition 001; all are open.
 
 | # | Question | Recommended | Answer, 29 Oct 2026 |
 | --- | --- | --- | --- |
@@ -386,6 +387,7 @@ Questions 1 to 13 were answered in chat on 29 Oct 2026 and are logged as decisio
 | 18 | IPO facts were sourced from aggregator sites, some of which carry grey market premium tables | Cite exchange, registrar or company pages only | Open |
 | 19 | SEBI's 8 Oct 2026 amendment moves mutual fund advertising to the common code for intermediaries, about six months after the 9 Oct gazette | Review the disclosures against the common code before it applies | Open (watch item) |
 | 20 | When RMs forward the WhatsApp card, SEBI's social media rule asks agents to show the principal's details first | Write a one-paragraph forwarding rule for RMs before client sends | Open |
+| 21 | The call-to-action box on every kubeerra.com blog page, including those the brief links to, offers “guidance on what fits your goals” | Ask the compliance owner whether that wording suits a distributor; reword it on the site if not | Open |
 
 **Inputs needed (not decisions).**
 
@@ -404,7 +406,7 @@ The project began on 28 Oct 2026 and entered the build on 29 Oct 2026; every mat
 
 | Date | Event |
 | --- | --- |
-| 30 Oct 2026 | Client edition rules set (D-032 to D-036) and the weekday schedule created (D-037). The first client edition, for Friday 30 Oct from the 29 Oct close, prepared on the afternoon of 30 Oct |
+| 30 Oct 2026 | Client edition rules set (D-032 to D-036) and the weekday schedule created (D-037). Client edition 001, for Friday 30 Oct from the 29 Oct close, prepared on the afternoon of 30 Oct. Independent review found two compliance must-fixes (a broker's scheme-level NFO link, and IPO pages not yet cleared for grey market premium), two IPO subscription figures taken from incomplete 5 PM readings and a source mislabelled as Reuters; all corrected (issues/2026-10-30-review.md). 5paisa and Tapetide dropped as sources for GMP links; footer gains an unsubscribe line and the website's disclaimer wording (D-038, proposed) |
 | 29 Oct 2026 | Design round 2 from Shriansh's feedback: green and red for rises and falls (D-031), General Sans for the PDF and card (D-029), and the shared PNG logo hosted on Vercel (D-030). Shriansh imported the repository into Vercel; commits now use his GitHub no-reply email so deployments are not blocked |
 | 29 Oct 2026 | Dry run 001 built and delivered for approval: email 83 KB, six-page PDF, WhatsApp card, all automated checks passing. Independent review found one must-fix (NFO scheme names, now a category summary), wording and sourcing fixes, one wrong count and three attributions stronger than their sources; all corrected (issues/2026-10-29-review.md). Code pushed to the private GitHub repository; the repository copy of this record is now canonical (D-007) |
 | 29 Oct 2026 | All thirteen pilot decisions settled in chat: navy, cobalt and teal; Kubeerra Market Brief; morning edition; RM pilot first; Shriansh approves; files that work in Outlook and Gmail; regulatory standing reconfirmed. Build started with a dry-run issue |

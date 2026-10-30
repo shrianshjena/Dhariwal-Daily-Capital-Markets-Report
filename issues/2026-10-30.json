@@ -9,15 +9,15 @@
     "india_as_of": "Close, Thu 29 Oct 2026",
     "global_as_of": "Closes, Thu 29 Oct",
     "preheader": "NIFTY 50 rose 1.05% and the Sensex 1.24%; India's 10-year bond yield fell 5 basis points; Brent settled at $114.88.",
-    "subject": "Kubeerra Market Brief · Fri 30 Oct: NIFTY 50 up 1.05% as realty, FMCG and banks lead"
+    "subject": "Kubeerra Market Brief · Fri 30 Oct: NIFTY 50 up 1.05% as realty, FMCG and PSU banks lead"
   },
   "brief": [
     "Benchmarks rose on Thursday: the NIFTY 50 gained 1.05% to 22,936.75 and the Sensex 1.24% to 74,151.04, with realty, FMCG and PSU banks leading, while India VIX fell nearly 7%.",
     "Foreign institutions sold a net ₹944 crore and domestic institutions bought ₹1,924 crore (provisional). The rupee ended at a provisional 95.25 per dollar, and India's 10-year bond yield fell 5 basis points to 7.39%.",
-    "Overseas, the Nasdaq fell 1.38% as Alphabet slid after its results, US GDP grew at a 3.4% annual rate, and the ECB and the Bank of Japan held rates. Brent settled at $114.88 a barrel."
+    "Overseas, the Nasdaq fell 1.38% as Alphabet slid after its results, US GDP grew at a 3.4% annual rate in July to September (advance estimate), and the ECB and the Bank of Japan held rates. Brent settled at $114.88 a barrel."
   ],
   "snapshot": {
-    "headline": "Benchmarks rose more than 1% as banks, FMCG and realty led; India VIX fell nearly 7%",
+    "headline": "Benchmarks rose more than 1% as realty, FMCG and PSU banks led; India VIX fell nearly 7%",
     "as_of": "close, 29 Oct 2026",
     "indices": [
       {
@@ -100,14 +100,10 @@
         "value": -943.6,
         "format": "crore_signed",
         "provisional": true,
-        "detail": "Net sellers on 29 Oct. October to date, provisional: −₹48,760 cr",
+        "detail": "Net sellers in the cash market on 29 Oct",
         "source": {
-          "name": "5paisa (exchange data)",
-          "url": "https://www.5paisa.com/share-market-today/fii-dii-data"
-        },
-        "also": {
-          "name": "Tapetide",
-          "url": "https://tapetide.com/insight/reports/fii-dii-flows/2026-10"
+          "name": "Upstox (exchange data)",
+          "url": "https://upstox.com/fii-dii-data/"
         }
       },
       {
@@ -115,14 +111,10 @@
         "value": 1924.41,
         "format": "crore_signed",
         "provisional": true,
-        "detail": "Net buyers on 29 Oct. October to date, provisional: +₹63,038 cr",
+        "detail": "Net buyers in the cash market on 29 Oct",
         "source": {
-          "name": "5paisa (exchange data)",
-          "url": "https://www.5paisa.com/share-market-today/fii-dii-data"
-        },
-        "also": {
-          "name": "Tapetide",
-          "url": "https://tapetide.com/insight/reports/fii-dii-flows/2026-10"
+          "name": "Upstox (exchange data)",
+          "url": "https://upstox.com/fii-dii-data/"
         }
       },
       {
@@ -130,8 +122,7 @@
         "value": 95.25,
         "format": "fx",
         "provisional": true,
-        "change_pct": -0.03,
-        "detail": "Rupee 3 paise stronger at the 29 Oct close",
+        "detail": "Rupee little changed at the 29 Oct close",
         "source": {
           "name": "PTI via Telangana Today",
           "url": "https://telanganatoday.com/rupee-gains-3-paise-to-close-at-95-25-against-us-dollar"
@@ -142,9 +133,9 @@
         "value": 114.88,
         "format": "usd_bbl",
         "change_pct": -0.38,
-        "detail": "December contract settlement, 29 Oct; $115.32 on 28 Oct",
+        "detail": "Futures settlement on 29 Oct, down 44 cents",
         "source": {
-          "name": "Reuters",
+          "name": "Reuters via Business Recorder",
           "url": "https://www.brecorder.com/news/40446606/oil-prices-settle-lower"
         }
       },
@@ -161,23 +152,19 @@
       },
       {
         "label": "10-year G-Sec yield",
-        "value": 7.3902,
+        "value": 7.39,
         "format": "pct_level",
         "change_bp": -5,
-        "detail": "6.94% GS 2036 benchmark, 29 Oct close; 7.44% on 28 Oct",
+        "detail": "Benchmark 10-year bond, 29 Oct close; 7.44% on 28 Oct",
         "source": {
           "name": "Kotak Neo (CCIL data)",
           "url": "https://www.kotakneo.com/news/market-news/india-10-year-g-sec-yield-falls-to-7-39-on-fed-signals/"
-        },
-        "also": {
-          "name": "Reuters",
-          "url": "https://indianopinion.org/india-10-year-bond-yield-falls-as-treasuries-oil-ease/"
         }
       }
     ]
   },
   "sectors": {
-    "headline": "Realty, FMCG and PSU banks led; auto was the only main sector to fall",
+    "headline": "Realty, FMCG and PSU banks led; auto slipped 0.24%",
     "as_of": "close, 29 Oct 2026",
     "source": {
       "name": "NSE",
@@ -250,16 +237,16 @@
     {
       "topic": "Markets",
       "relevance": "Market-wide",
-      "headline": "India's 10-year bond yield fell 5 basis points, its largest one-day drop in three months",
-      "what": "The benchmark 6.94% 2036 government bond closed at a yield of 7.39% on 29 October, down from 7.44%. Reuters cited lower US Treasury yields after the Fed meeting, softer oil prices and buying after the yield failed to rise above 7.50%, ahead of a ₹33,000 crore government bond sale on Friday.",
-      "why": "Bond prices move opposite to yields, so a fall in yields raises the value of bonds already held, including those in debt funds, and longer-dated bonds move more. Yields also feed into borrowing costs across the economy.",
+      "headline": "India's 10-year bond yield fell 5 basis points, its sharpest one-day fall since July",
+      "what": "The benchmark 10-year government bond closed at a yield of 7.39% on 29 October, down from 7.44%, according to CCIL data. The fall came as US Treasury yields eased after the Federal Reserve's meeting and oil prices fell, ahead of a ₹33,000 crore government bond sale on Friday.",
+      "why": "Bond prices move opposite to yields, so the value of bonds already held, including those in debt funds, rises when yields fall and falls when yields rise, and longer-dated bonds move more in either direction. Yields also feed into borrowing costs across the economy.",
       "source": {
-        "name": "Reuters",
-        "url": "https://indianopinion.org/india-10-year-bond-yield-falls-as-treasuries-oil-ease/"
-      },
-      "also": {
         "name": "Kotak Neo (CCIL data)",
         "url": "https://www.kotakneo.com/news/market-news/india-10-year-g-sec-yield-falls-to-7-39-on-fed-signals/"
+      },
+      "also": {
+        "name": "Outlook Money",
+        "url": "https://www.outlookmoney.com/banking/centre-to-auction-rs-33000-crore-worth-of-bonds-on-october-30"
       }
     },
     {
@@ -272,10 +259,16 @@
         "name": "BEA (GDP)",
         "url": "https://www.bea.gov/news/2026/gdp-advance-estimate-3rd-quarter-2026"
       },
-      "also": {
-        "name": "BEA (PCE)",
-        "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-september-2026"
-      }
+      "also": [
+        {
+          "name": "BEA (PCE)",
+          "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-september-2026"
+        },
+        {
+          "name": "Federal Reserve",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+        }
+      ]
     },
     {
       "topic": "Corporate",
@@ -296,10 +289,10 @@
       "topic": "Corporate",
       "relevance": "Sector",
       "headline": "IndiGo's quarterly loss narrowed to ₹1,879 crore as revenue rose 25.9%",
-      "what": "InterGlobe Aviation (IndiGo) reported a net loss of ₹1,879.1 crore for July to September 2026, against ₹2,582.1 crore a year earlier. Revenue from operations rose 25.9% to ₹23,363.8 crore, while fuel expenses rose 67.2% to ₹9,966.8 crore. Excluding foreign exchange effects, the loss was ₹723.7 crore.",
+      "what": "InterGlobe Aviation (IndiGo) reported a net loss of ₹1,879.1 crore for July to September 2026, against ₹2,582.1 crore a year earlier. Revenue from operations rose 25.9% to ₹23,363.8 crore, while fuel expenses rose 67.2% to ₹9,966.8 crore. Excluding foreign exchange effects, the loss was ₹723.7 crore, against a profit of ₹103.9 crore a year earlier.",
       "why": "Jet fuel prices and the rupee pass directly into airline costs. The gap between the reported loss and the loss excluding currency effects shows how much exchange-rate moves weighed on the quarter.",
       "source": {
-        "name": "The Tribune",
+        "name": "ANI via The Tribune",
         "url": "https://www.tribuneindia.com/news/business/indigo-reports-rs-1879-crore-loss-in-q2-as-higher-fuel-costs-weak-rupee-hit-earnings"
       },
       "also": {
@@ -310,9 +303,9 @@
     {
       "topic": "Corporate",
       "relevance": "Sector",
-      "headline": "Godrej Consumer's quarterly profit rose 13.8% as India volumes grew 7%",
+      "headline": "Godrej Consumer's quarterly profit rose 13.8% and India volumes grew 7%",
       "what": "Godrej Consumer Products reported net profit of ₹522.92 crore for July to September 2026, up 13.8%, on revenue of ₹4,413.09 crore, up 19%. India sales rose 13% to ₹2,631 crore with underlying volume growth of 7%, and the board declared an interim dividend of ₹5 a share.",
-      "why": "Volume growth in everyday staples is a direct gauge of household demand. The Nifty FMCG index was among Thursday's strongest sectors, up 2.34%.",
+      "why": "Volume growth, which strips out price increases, is one gauge of household demand for everyday staples.",
       "source": {
         "name": "Mediabrief",
         "url": "https://mediabrief.com/godrej-consumer-products-q2-fy27-net-profit-rises-14-to-%E2%82%B9523-crore/"
@@ -339,7 +332,7 @@
     }
   ],
   "global": {
-    "headline": "Wall Street fell as Alphabet weighed on the Nasdaq; European shares rose after the ECB held rates",
+    "headline": "Wall Street fell as Alphabet weighed on the Nasdaq; European shares rose and the ECB held rates",
     "items": [
       {
         "region": "US",
@@ -419,15 +412,15 @@
         }
       }
     ],
-    "note": "Alphabet fell 12.64% after a revenue miss, which weighed on the Nasdaq. On Friday morning the Bank of Japan held its policy rate at 1.25%. US yields and the dollar shape foreign portfolio flows into India.",
+    "note": "Alphabet fell more than 12% after a revenue miss, which weighed on the Nasdaq. On Friday morning the Bank of Japan kept its policy rate at around 1.25%. US yields and the dollar shape foreign portfolio flows into India.",
     "note_sources": [
       {
-        "name": "Reuters (US close)",
+        "name": "Reuters via MarketScreener (US close)",
         "url": "https://www.marketscreener.com/news/us-stocks-slump-as-alphabet-revenue-miss-reignites-ai-capex-jitters-ce785fdadf80fe26"
       },
       {
-        "name": "investingLive (BoJ)",
-        "url": "https://investinglive.com/central-banks/boj-keeps-policy-rate-unchanged-at-1-25-as-expected/"
+        "name": "Bank of Japan",
+        "url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k261030a.pdf"
       }
     ]
   },
@@ -471,11 +464,11 @@
         "status": "Open",
         "facts": [
           "Bidding 28 to 30 Oct · price band ₹153 to ₹162 · ₹275.40 crore",
-          "Subscribed 0.70 times by the end of day 2 (29 Oct)"
+          "Subscribed 1.16 times by the end of day 2 (29 Oct)"
         ],
         "source": {
-          "name": "HDFC Sky",
-          "url": "https://hdfcsky.com/news/m-k-sons-fine-jewels-ipo-subscription-status-day-2"
+          "name": "Kotak Neo",
+          "url": "https://www.kotakneo.com/ipo/mk-sons-fine-jewels-ipo/"
         },
         "also": {
           "name": "Angel One",
@@ -487,11 +480,11 @@
         "status": "Open",
         "facts": [
           "Bidding 29 Oct to 2 Nov · price band ₹78 to ₹82 · ₹183.06 crore",
-          "Subscribed 0.45 times on day 1 (29 Oct)"
+          "Subscribed 2.65 times on day 1 (29 Oct)"
         ],
         "source": {
-          "name": "HDFC Sky",
-          "url": "https://hdfcsky.com/news/bombay-coated-special-steels-ipo-subscription-status-day-1"
+          "name": "Kotak Neo",
+          "url": "https://www.kotakneo.com/ipo/bombay-coated-and-special-steels-ltd-ipo/"
         },
         "also": {
           "name": "Angel One",
@@ -574,10 +567,10 @@
     ],
     "nfos": [],
     "nfo_summary": {
-      "text": "Thirteen new fund offers are open on 30 October: three index funds, three ETFs (two equity sector, one silver), three fund of funds (two multi-asset, one silver), two actively managed equity funds (large and mid cap; small cap), an equity savings fund and a debt fund focused on financial services. Each scheme's risk level and terms are set out in its scheme information document.",
+      "text": "Twelve new fund offers that were open on 28 October remain open on 30 October: three index funds, two ETFs (one equity sector, one silver), three fund of funds (two multi-asset, one silver), two actively managed equity funds (large and mid cap; small cap), an equity savings fund and a debt fund focused on financial services. Each scheme's risk level and terms are set out in its scheme information document.",
       "source": {
-        "name": "5paisa NFO list",
-        "url": "https://www.5paisa.com/mutual-funds/nfo"
+        "name": "Cafemutual NFO list",
+        "url": "https://cafemutual.com/news/nfo/38428-nfos-open-on-october-28"
       }
     },
     "regulatory": [
@@ -592,8 +585,8 @@
       },
       {
         "body": "Fund houses",
-        "date": "from 16 Oct",
-        "text": "Fresh lump sums, switch-ins and new SIP or STP registrations into gold ETF fund of funds remain paused, reportedly at SEBI's instruction. Existing SIPs and STPs, redemptions and switch-outs continue, gold ETFs keep trading on exchanges, and no end date has been announced.",
+        "date": "15 to 16 Oct",
+        "text": "Fresh lump sums, switch-ins and new SIP or STP registrations into gold ETF fund of funds were paused, reportedly at SEBI's instruction. Existing SIPs and STPs, redemptions and switch-outs continue, the restriction does not cover gold ETFs themselves, and no end date has been announced.",
         "source": {
           "name": "Cafemutual",
           "url": "https://cafemutual.com/news/passives/39072-as-per-sebi-instructions-fund-houses-halt-fresh-inflows-into-gold-etf-fofs"
@@ -605,7 +598,7 @@
     "id": "L-002",
     "title": "Why fund assets can fall in a month when investors add money",
     "paragraphs": [
-      "A fund's assets under management (AUM) change for two reasons: money coming in or going out (net flows), and changes in the market value of the investments the fund already holds.",
+      "A fund's assets under management (AUM) change for two main reasons: money coming in or going out (net flows), and changes in the market value of the investments the fund already holds.",
       "September showed both at work. Equity schemes took in a net ₹38,306.55 crore, yet AMFI's note says equity fund assets fell 4.3% to ₹37.54 lakh crore because of mark-to-market losses: the fall in the value of their holdings was larger than the new money.",
       "So a fall in assets does not by itself mean investors withdrew money, and a rise does not mean they added it. The monthly flow figures and the market's moves separate the two. An investor's own holding moves with the fund's NAV, which reflects the market value of its investments."
     ],
@@ -629,42 +622,66 @@
   "day_ahead": [
     {
       "time": "Fri 30 Oct",
-      "event": "M.K.Sons Fine Jewels IPO closes; basis of allotment for BLS Polymers and SFC Environmental Technologies.",
+      "event": "M.K.Sons Fine Jewels IPO closes.",
       "source": {
-        "name": "HDFC Sky",
-        "url": "https://hdfcsky.com/news/m-k-sons-fine-jewels-ipo-subscription-status-day-2"
+        "name": "Kotak Neo",
+        "url": "https://www.kotakneo.com/ipo/mk-sons-fine-jewels-ipo/"
       }
     },
     {
       "time": "Fri 30 Oct",
-      "event": "The RBI auctions ₹33,000 crore of government securities.",
+      "event": "Basis of allotment expected for BLS Polymers and SFC Environmental Technologies.",
       "source": {
-        "name": "Reuters",
-        "url": "https://indianopinion.org/india-10-year-bond-yield-falls-as-treasuries-oil-ease/"
+        "name": "Angel One (BLS Polymers)",
+        "url": "https://www.angelone.in/news/ipos/bls-polymers-limited-ipo-allotment-status"
+      },
+      "also": {
+        "name": "Angel One (SFC)",
+        "url": "https://www.angelone.in/news/ipos/sfc-environmental-technologies-limited-ipo-allotment-status"
+      }
+    },
+    {
+      "time": "Fri 30 Oct",
+      "event": "The government auctions ₹33,000 crore of bonds through the RBI.",
+      "source": {
+        "name": "Outlook Money",
+        "url": "https://www.outlookmoney.com/banking/centre-to-auction-rs-33000-crore-worth-of-bonds-on-october-30"
       }
     },
     {
       "time": "Mon 2 Nov",
-      "event": "EAAA India Alternatives expected to list on BSE and NSE; Bombay Coated & Special Steels IPO closes.",
+      "event": "EAAA India Alternatives expected to list on BSE and NSE.",
       "source": {
         "name": "Angel One",
         "url": "https://www.angelone.in/news/ipos/eaaa-india-alternatives-limited-ipo-allotment-status"
       }
     },
     {
+      "time": "Mon 2 Nov",
+      "event": "Bombay Coated & Special Steels IPO closes.",
+      "source": {
+        "name": "Kotak Neo",
+        "url": "https://www.kotakneo.com/ipo/bombay-coated-and-special-steels-ltd-ipo/"
+      }
+    },
+    {
       "time": "Tue 3 Nov",
       "event": "BLS Polymers and SFC Environmental Technologies expected to list on BSE and NSE.",
       "source": {
-        "name": "Angel One",
+        "name": "Angel One (BLS Polymers)",
         "url": "https://www.angelone.in/news/ipos/bls-polymers-limited-ipo-allotment-status"
+      },
+      "also": {
+        "name": "Angel One (SFC)",
+        "url": "https://www.angelone.in/news/ipos/sfc-environmental-technologies-limited-ipo-allotment-status"
       }
     },
     {
       "time": "Tue 3 Nov",
       "event": "US midterm elections.",
       "source": {
-        "name": "Admirals",
-        "url": "https://admiralmarkets.com/analytics/traders-blog/fomc-october-2026-fed-holds-rates"
+        "name": "Ballotpedia",
+        "url": "https://ballotpedia.org/United_States_House_of_Representatives_elections,_2026"
       }
     }
   ],
@@ -678,19 +695,15 @@
       "url": "https://www.dailyexcelsior.com/sensex-surges-905-pts-nifty-tops-22900-on-heavy-buying-in-banking-fmcg-stocks/"
     },
     {
-      "name": "5paisa (exchange data)",
-      "url": "https://www.5paisa.com/share-market-today/fii-dii-data"
-    },
-    {
-      "name": "Tapetide",
-      "url": "https://tapetide.com/insight/reports/fii-dii-flows/2026-10"
+      "name": "Upstox (exchange data)",
+      "url": "https://upstox.com/fii-dii-data/"
     },
     {
       "name": "PTI via Telangana Today",
       "url": "https://telanganatoday.com/rupee-gains-3-paise-to-close-at-95-25-against-us-dollar"
     },
     {
-      "name": "Reuters",
+      "name": "Reuters via Business Recorder",
       "url": "https://www.brecorder.com/news/40446606/oil-prices-settle-lower"
     },
     {
@@ -702,8 +715,8 @@
       "url": "https://www.kotakneo.com/news/market-news/india-10-year-g-sec-yield-falls-to-7-39-on-fed-signals/"
     },
     {
-      "name": "Reuters",
-      "url": "https://indianopinion.org/india-10-year-bond-yield-falls-as-treasuries-oil-ease/"
+      "name": "Outlook Money",
+      "url": "https://www.outlookmoney.com/banking/centre-to-auction-rs-33000-crore-worth-of-bonds-on-october-30"
     },
     {
       "name": "BEA (GDP)",
@@ -714,6 +727,10 @@
       "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-september-2026"
     },
     {
+      "name": "Federal Reserve",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+    },
+    {
       "name": "ANI via The Tribune",
       "url": "https://www.tribuneindia.com/news/business/coal-indias-q2-net-profit-rises-57-to-rs-6547-crore-announces-rs-10-25-dividend"
     },
@@ -722,7 +739,7 @@
       "url": "https://www.business-standard.com/amp/industry/news/coal-india-q2-net-profit-jumps-57-to-6-547-crore-on-higher-realisations-126102901869_1.html"
     },
     {
-      "name": "The Tribune",
+      "name": "ANI via The Tribune",
       "url": "https://www.tribuneindia.com/news/business/indigo-reports-rs-1879-crore-loss-in-q2-as-higher-fuel-costs-weak-rupee-hit-earnings"
     },
     {
@@ -766,12 +783,12 @@
       "url": "https://english.news.cn/20261029/7a71d11f4ac545598375f5a524b31e27/c.html"
     },
     {
-      "name": "Reuters (US close)",
+      "name": "Reuters via MarketScreener (US close)",
       "url": "https://www.marketscreener.com/news/us-stocks-slump-as-alphabet-revenue-miss-reignites-ai-capex-jitters-ce785fdadf80fe26"
     },
     {
-      "name": "investingLive (BoJ)",
-      "url": "https://investinglive.com/central-banks/boj-keeps-policy-rate-unchanged-at-1-25-as-expected/"
+      "name": "Bank of Japan",
+      "url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k261030a.pdf"
     },
     {
       "name": "Angel One",
@@ -790,16 +807,16 @@
       "url": "https://www.fintechbiznews.com/exchanges-ipos-nfos/sfc-environmental-technologies-ipo-subscribed-947-times"
     },
     {
-      "name": "HDFC Sky",
-      "url": "https://hdfcsky.com/news/m-k-sons-fine-jewels-ipo-subscription-status-day-2"
+      "name": "Kotak Neo",
+      "url": "https://www.kotakneo.com/ipo/mk-sons-fine-jewels-ipo/"
     },
     {
       "name": "Angel One",
       "url": "https://www.angelone.in/news/ipos/upcoming-ipos-this-week-october-26-october-30-2026-in-india-eaaa-india-alternatives-bls-polymers-and-others"
     },
     {
-      "name": "HDFC Sky",
-      "url": "https://hdfcsky.com/news/bombay-coated-special-steels-ipo-subscription-status-day-1"
+      "name": "Kotak Neo",
+      "url": "https://www.kotakneo.com/ipo/bombay-coated-and-special-steels-ltd-ipo/"
     },
     {
       "name": "HDFC Sky",
@@ -818,8 +835,8 @@
       "url": "https://portal.amfiindia.com/spages/amsep2026repo.pdf"
     },
     {
-      "name": "5paisa NFO list",
-      "url": "https://www.5paisa.com/mutual-funds/nfo"
+      "name": "Cafemutual NFO list",
+      "url": "https://cafemutual.com/news/nfo/38428-nfos-open-on-october-28"
     },
     {
       "name": "Corplaw Updates",
@@ -834,8 +851,8 @@
       "url": "https://www.kubeerra.com/blogs/what-is-a-mutual-fund-simple-guide"
     },
     {
-      "name": "Admirals",
-      "url": "https://admiralmarkets.com/analytics/traders-blog/fomc-october-2026-fed-holds-rates"
+      "name": "Ballotpedia",
+      "url": "https://ballotpedia.org/United_States_House_of_Representatives_elections,_2026"
     }
   ]
 }

@@ -178,7 +178,7 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 {{ sechead("02", "Flows, currency and commodities", issue.flows.headline) }}
 <table class="tiles">
 {% for row in issue.flows.tiles|batch(3) %}
-<tr>{% for t in row %}<td><p class="mono tile-label">{{ t.label }}{% if t.provisional|default(false) %} · provisional{% endif %}</p><p class="tile-value num" style="color: {{ t|figcolor }};">{{ t|figure }}</p>{% if t|chip %}<p class="tile-chg num" style="color: {{ (t|movement)|mvcolor }};">{{ t|chip }}</p>{% endif %}<p class="tile-detail">{{ t.detail|t }} · <a href="{{ t.source.url }}">{{ t.source.name }}</a>{% if t.get('also') %} · <a href="{{ t.also.url }}">{{ t.also.name }}</a>{% endif %}</p></td>{% endfor %}{% for _ in range(3 - row|length) %}<td></td>{% endfor %}</tr>
+<tr>{% for t in row %}<td><p class="mono tile-label">{{ t.label }}{% if t.provisional|default(false) %} · provisional{% endif %}</p><p class="tile-value num" style="color: {{ t|figcolor }};">{{ t|figure }}</p>{% if t|chip %}<p class="tile-chg num" style="color: {{ (t|movement)|mvcolor }};">{{ t|chip }}</p>{% endif %}<p class="tile-detail">{{ t.detail|t }}{% for s in t|srcs %} · <a href="{{ s.url }}">{{ s.name }}</a>{% endfor %}</p></td>{% endfor %}{% for _ in range(3 - row|length) %}<td></td>{% endfor %}</tr>
 {% endfor %}
 </table>
 </section>
@@ -205,7 +205,7 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 <h3>{{ s.headline|t }}</h3>
 <p class="what">{{ s.what|t }}</p>
 <p class="why"><span class="mono">Why it matters</span> {{ s.why|t }}</p>
-{% if s.get('also') %}<p class="src">Sources: <a href="{{ s.source.url }}">{{ s.source.name }}</a>, <a href="{{ s.also.url }}">{{ s.also.name }}</a></p>{% else %}{{ src(s.source) }}{% endif %}
+{% if s.get('also') %}<p class="src">Sources: {% for x in s|srcs %}<a href="{{ x.url }}">{{ x.name }}</a>{{ ", " if not loop.last }}{% endfor %}</p>{% else %}{{ src(s.source) }}{% endif %}
 </article>
 {% endfor %}
 </div>
@@ -229,7 +229,7 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 {{ sechead("06", "IPO desk", issue.ipos.headline) }}
 <div class="ipos">
 {% for ipo in issue.ipos["items"] %}
-<div class="ipo"><h3>{{ ipo.company }}<span class="mono">{{ ipo.status }}</span></h3>{% for f in ipo.facts %}<p class="fact">{{ f|t }}</p>{% endfor %}{% if ipo.get('also') %}<p class="src">Sources: <a href="{{ ipo.source.url }}">{{ ipo.source.name }}</a>, <a href="{{ ipo.also.url }}">{{ ipo.also.name }}</a></p>{% else %}{{ src(ipo.source) }}{% endif %}</div>
+<div class="ipo"><h3>{{ ipo.company }}<span class="mono">{{ ipo.status }}</span></h3>{% for f in ipo.facts %}<p class="fact">{{ f|t }}</p>{% endfor %}{% if ipo.get('also') %}<p class="src">Sources: {% for x in ipo|srcs %}<a href="{{ x.url }}">{{ x.name }}</a>{{ ", " if not loop.last }}{% endfor %}</p>{% else %}{{ src(ipo.source) }}{% endif %}</div>
 {% endfor %}
 </div>
 <p class="note">{{ issue.ipos.note|t }}</p>
@@ -240,7 +240,7 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 <table class="mfstats"><tr>
 {% for st in issue.mf.stats %}<td><p class="mono tile-label">{{ st.label }}</p><p class="tile-value num" style="color: {{ st|figcolor }};">{{ st|figure }}</p>{% if st|chip %}<p class="tile-chg num" style="color: {{ (st|movement)|mvcolor }};">{{ st|chip }}</p>{% endif %}<p class="tile-detail">{{ st.detail|t }}</p></td>{% endfor %}
 </tr></table>
-{% if issue.mf.stats %}{{ src(issue.mf.stats[0].source) }}{% endif %}
+{% set mfsrc = issue.mf.stats|unique_sources %}{% if mfsrc|length > 1 %}<p class="src">Sources: {% for x in mfsrc %}<a href="{{ x.url }}">{{ x.name }}</a>{{ ", " if not loop.last }}{% endfor %}</p>{% elif mfsrc %}{{ src(mfsrc[0]) }}{% endif %}
 {% if issue.mf.highlights %}<div class="cols2">{% for h in issue.mf.highlights %}<p>{{ h.text|t }} <a href="{{ h.source.url }}">{{ h.source.name }}</a></p>{% endfor %}</div>{% endif %}
 {% if issue.mf.get('nfo_summary') or show_nfo_names %}
 <p class="mono sublabel">New fund offers</p>
@@ -268,7 +268,7 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 <section class="sec">
 {{ sechead("09", "Day ahead", issue.get("day_ahead_title") or ("On the calendar for " ~ meta.weekday ~ " " ~ date_short)) }}
 <table class="agenda">
-{% for d in issue.day_ahead %}<tr><td class="t">{{ d.time|upper }}</td><td>{{ d.event|t }}{% if d.get('source') %} <a href="{{ d.source.url }}">{{ d.source.name }}</a>{% endif %}</td></tr>{% endfor %}
+{% for d in issue.day_ahead %}<tr><td class="t">{{ d.time|upper }}</td><td>{{ d.event|t }}{% for x in d|srcs %}{{ " " if loop.first else ", " }}<a href="{{ x.url }}">{{ x.name }}</a>{% endfor %}</td></tr>{% endfor %}
 </table>
 </section>
 
@@ -281,6 +281,7 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 <p>Phone {{ pub.contacts.phone|t }} · WhatsApp {{ pub.contacts.whatsapp|t }} · <a href="mailto:{{ pub.contacts.email }}">{{ pub.contacts.email }}</a> · {{ pub.contacts.hours }}</p>
 <p>{{ pub.contacts.address }}</p>
 <p>{% for l in pub.links %}<a href="{{ l.url }}">{{ l.label|nb }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+{% if meta.audience == "client" and pub.get('unsubscribe') %}<p>{{ pub.unsubscribe }} <a href="mailto:{{ pub.contacts.email }}?subject=Unsubscribe">{{ pub.contacts.email }}</a>.</p>{% endif %}
 {% if meta.audience == "internal" %}<p class="mono">{{ pub.pilot_note }}</p>{% endif %}
 </section>
 

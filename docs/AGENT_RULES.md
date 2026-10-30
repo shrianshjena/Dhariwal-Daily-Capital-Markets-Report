@@ -18,7 +18,17 @@
   navigation) are out. Open each IPO page and search it for "GMP" and "grey market" before
   citing it. Pages that passed on 29 Oct 2026: Business Standard, Outlook Money, HDFC Sky news
   and IPO pages, Kotak Neo news, Upstox news, JM Financial market news, PTI-Bhasha wire copy.
+  Added on 30 Oct 2026: Angel One news IPO pages, Kotak Neo IPO pages, Fintechbiznews,
+  Cafemutual, Corplaw Updates and Upstox's FII/DII data page. Out on 30 Oct 2026: 5paisa (its
+  footer links to a GMP explainer) and Tapetide (its IPO section shows GMP).
+- Not reporting, so never cited: indianopinion.org (AI-written summaries of other outlets; never
+  label them Reuters) and broker marketing pages such as Admirals' traders' blog. Label wire copy
+  carried elsewhere as "Reuters via <site>" or "PTI via <site>".
+- FII/DII: cite a page that shows the day's provisional figures and passes the GMP check
+  (Upstox's FII/DII data page did on 30 Oct); give month-to-date totals only from such a page.
 - Subscription multiples change through the day: give the time of the reading, prefer the
   end-of-day figure, and expect aggregators to differ (EAAA was reported at 5.51x and 5.25x on
-  different bases).
+  different bases). HDFC Sky's 5:00 PM subscription articles can be incomplete (on 29 Oct they
+  gave 0.70x and 0.45x against end-of-day 1.16x and 2.65x); Kotak Neo IPO pages show a day-wise
+  table with a "last updated" time.
 - Return only a JSON object in a ```json block, then at most three lines on gaps.

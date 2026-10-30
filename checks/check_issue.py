@@ -38,7 +38,10 @@ REQUIRED = {
 # Sources that publish grey market premium tables or ratings on IPOs (lane: no GMP, no IPO views)
 GMP_DOMAINS = ("ipogyani.com", "investorgain.com", "chittorgarh.com", "ipowatch.in", "ipocentral.in",
                "ipoplatform.com", "gmpipowatch", "ipopremium.in", "dhan.co/blog/ipo")
-GMP_WARN = ("groww.in/blog",)
+GMP_WARN = ("groww.in/blog", "5paisa.com", "tapetide.com")  # GMP links in navigation or footer (checked 29 to 30 Oct)
+# Pages that are not reporting: AI-written summaries of other outlets, and broker marketing (checked 30 Oct)
+SOURCE_WARN = {"indianopinion.org": "AI-written summary of other outlets, not wire copy",
+               "admiralmarkets.com": "CFD broker marketing page"}
 EMAIL_FAIL_BYTES = 102_000
 EMAIL_WARN_BYTES = 90_000
 
@@ -182,6 +185,8 @@ def main():
     fails += [f"source publishes grey market premium content: {u}" for u in gmp]
     warns += [f"source site links to grey market premium content; prefer another page: {u}"
               for u in sorted(all_urls) if any(d in u for d in GMP_WARN)]
+    warns += [f"source is not a reporting page ({why}); cite the original: {u}"
+              for u in sorted(all_urls) for d, why in SOURCE_WARN.items() if d in u]
     if not gmp:
         passes.append("No sources from grey market premium sites")
 
@@ -265,8 +270,9 @@ def main():
     lines += ["", f"## Words for human review ({len(reviews)})", ""] + [f"- {r}" for r in reviews]
     report = "\n".join(lines) + "\n"
     (out / "check-report.md").write_text(report, encoding="utf-8")
-    # keep a committed copy beside the issue file (out/ is not committed)
-    (ROOT / "issues" / f"{date}-check-report.md").write_text(report, encoding="utf-8")
+    # keep a committed copy beside the issue file (out/ is not committed); fixtures get none
+    if issue_path.resolve().parent == (ROOT / "issues").resolve():
+        (ROOT / "issues" / f"{date}-check-report.md").write_text(report, encoding="utf-8")
     print(report)
     sys.exit(1 if fails else 0)
 

@@ -132,6 +132,28 @@ def chip(f):
     return ""
 
 
+def srcs(item):
+    """Every page an item cites, in order: its source, then its `also` (one source or a list)."""
+    out = [item["source"]] if item.get("source") else []
+    extra = item.get("also")
+    if isinstance(extra, dict):
+        out.append(extra)
+    elif isinstance(extra, list):
+        out.extend(extra)
+    return out
+
+
+def unique_sources(items):
+    """The distinct sources of a list of figures, in order (for a shared source line)."""
+    seen, out = set(), []
+    for item in items:
+        for s in srcs(item):
+            if s["url"] not in seen:
+                seen.add(s["url"])
+                out.append(s)
+    return out
+
+
 def build_env(tokens):
     env = Environment(
         loader=FileSystemLoader(str(ROOT / "templates")),
@@ -163,7 +185,7 @@ def build_env(tokens):
         group=fmt.group_indian,
         host=lambda url: urlparse(url).netloc.removeprefix("www."),
         t=glue, nb=nobreak, movement=movement, is_flow=is_flow, mvcolor=mvcolor, figcolor=figcolor,
-        chip=chip, bp=fmt.bp,
+        chip=chip, bp=fmt.bp, srcs=srcs, unique_sources=unique_sources,
     )
     return env
 
