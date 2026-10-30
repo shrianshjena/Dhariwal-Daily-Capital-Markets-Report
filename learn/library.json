@@ -1,3 +1,4 @@
 [
-  {"id": "L-001", "date": "2026-10-29", "title": "How your SIP shows up in the daily DII number", "issue": "issues/2026-10-29.json", "topics": ["FII", "DII", "SIP", "institutional flows"]}
+  {"id": "L-001", "date": "2026-10-29", "title": "How your SIP shows up in the daily DII number", "issue": "issues/2026-10-29.json", "topics": ["FII", "DII", "SIP", "institutional flows"]},
+  {"id": "L-002", "date": "2026-10-30", "title": "Why fund assets can fall in a month when investors add money", "issue": "issues/2026-10-30.json", "topics": ["AUM", "net flows", "mark-to-market", "NAV"]}
 ]
