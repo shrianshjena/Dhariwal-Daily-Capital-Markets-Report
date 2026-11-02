@@ -19,7 +19,8 @@
   citing it. Pages that passed on 29 Oct 2026: Business Standard, Outlook Money, HDFC Sky news
   and IPO pages, Kotak Neo news, Upstox news, JM Financial market news, PTI-Bhasha wire copy.
   Added on 30 Oct 2026: Angel One news IPO pages, Kotak Neo IPO pages, Fintechbiznews,
-  Cafemutual, Corplaw Updates and Upstox's FII/DII data page. Out on 30 Oct 2026: 5paisa (its
+  Cafemutual, Corplaw Updates and Upstox's FII/DII data page. Added on 2 Nov 2026: Kotak Neo's FII/DII data
+  page (shows month totals), Liquide's market blog and Investing.com news. Out on 30 Oct 2026: 5paisa (its
   footer links to a GMP explainer) and Tapetide (its IPO section shows GMP).
 - Not reporting, so never cited: indianopinion.org (AI-written summaries of other outlets; never
   label them Reuters) and broker marketing pages such as Admirals' traders' blog. Label wire copy

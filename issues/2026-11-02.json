@@ -1,0 +1,769 @@
+{
+  "meta": {
+    "date": "2026-11-02",
+    "weekday": "Monday",
+    "edition": "Morning edition",
+    "issue_number": 2,
+    "label": "Client edition 002",
+    "audience": "client",
+    "india_as_of": "Close, Fri 30 Oct 2026",
+    "global_as_of": "Closes, Fri 30 Oct",
+    "preheader": "NIFTY 50 rose 0.51% as IT led; foreign investors bought ₹3,599 crore (provisional); October GST collections were ₹2.31 lakh crore.",
+    "subject": "Kubeerra Market Brief · Mon 2 Nov: NIFTY 50 up 0.51% as IT leads; October GST at ₹2.31 lakh crore"
+  },
+  "brief": [
+    "The NIFTY 50 rose 0.51% to 23,053.10 and the Sensex 0.42% to 74,459.53 on Friday, led by IT (up 2.32%) and pharma; the Nifty Midcap 100 fell 0.93% and decliners outnumbered advancers on NSE.",
+    "Foreign institutions bought a net ₹3,599 crore and domestic institutions sold ₹818 crore; over October, foreign institutions sold ₹45,162 crore (all provisional). The rupee gained 33 paise to a provisional 94.93 per dollar.",
+    "October GST collections rose 22.9% to ₹2.31 lakh crore. Overseas, the Nasdaq fell 2.86% on Friday, and Brent's January contract settled at $113.43 a barrel, up $2.63, after a tanker attack in the Strait of Hormuz."
+  ],
+  "snapshot": {
+    "headline": "Benchmarks rose for a second session as IT and pharma led, while mid and small caps fell",
+    "as_of": "close, 30 Oct 2026",
+    "indices": [
+      {
+        "name": "NIFTY 50",
+        "close": 23053.1,
+        "change": 116.35,
+        "change_pct": 0.51,
+        "source": {
+          "name": "Business Standard",
+          "url": "https://www.business-standard.com/amp/markets/news/stock-market-live-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-ipo-today-q2-results-october-30-126103000074_1.html"
+        }
+      },
+      {
+        "name": "BSE Sensex",
+        "close": 74459.53,
+        "change": 308.49,
+        "change_pct": 0.42,
+        "source": {
+          "name": "Bombay Samachar",
+          "url": "https://english.bombaysamachar.com/business/sensex-jumps-308-points-nifty-reclaims-23000-october-30/"
+        }
+      },
+      {
+        "name": "Nifty Bank",
+        "close": 54686.95,
+        "change": -222.7,
+        "change_pct": -0.41,
+        "source": {
+          "name": "Liquide",
+          "url": "https://blog.liquide.life/share-market-today-nifty-reclaims-23-000-sensex-gains-308-points-as-it-and-pharma-stocks-rally/"
+        }
+      },
+      {
+        "name": "India VIX",
+        "close": 15.28,
+        "change": 0.16,
+        "change_pct": 1.06,
+        "neutral": true,
+        "source": {
+          "name": "Investing.com",
+          "url": "https://www.investing.com/news/stock-market-news/india-stocks-higher-at-close-of-trade-nifty-50-up-051-4986616"
+        }
+      }
+    ],
+    "breadth": {
+      "advances": 784,
+      "declines": 2172,
+      "unchanged": 69,
+      "source": {
+        "name": "Investing.com (NSE count)",
+        "url": "https://www.investing.com/news/stock-market-news/india-stocks-higher-at-close-of-trade-nifty-50-up-051-4986616"
+      }
+    }
+  },
+  "flows": {
+    "headline": "Foreign investors bought on Friday, but sold ₹45,162 crore over October as domestic institutions bought",
+    "tiles": [
+      {
+        "label": "FII net",
+        "value": 3598.54,
+        "format": "crore_signed",
+        "provisional": true,
+        "detail": "Net buyers in the cash market on 30 Oct",
+        "source": {
+          "name": "Upstox (exchange data)",
+          "url": "https://upstox.com/fii-dii-data/"
+        }
+      },
+      {
+        "label": "DII net",
+        "value": -817.51,
+        "format": "crore_signed",
+        "provisional": true,
+        "detail": "Net sellers in the cash market on 30 Oct",
+        "source": {
+          "name": "Upstox (exchange data)",
+          "url": "https://upstox.com/fii-dii-data/"
+        }
+      },
+      {
+        "label": "FII net, October",
+        "value": -45161.71,
+        "format": "crore_signed",
+        "provisional": true,
+        "detail": "Total for 1 to 30 Oct",
+        "source": {
+          "name": "Kotak Neo (exchange data)",
+          "url": "https://www.kotakneo.com/share-market-today/fii-dii-data/"
+        }
+      },
+      {
+        "label": "DII net, October",
+        "value": 62220.11,
+        "format": "crore_signed",
+        "provisional": true,
+        "detail": "Total for 1 to 30 Oct",
+        "source": {
+          "name": "Kotak Neo (exchange data)",
+          "url": "https://www.kotakneo.com/share-market-today/fii-dii-data/"
+        }
+      },
+      {
+        "label": "USD/INR",
+        "value": 94.93,
+        "format": "fx",
+        "provisional": true,
+        "direction": "down",
+        "detail": "Rupee gained 33 paise on 30 Oct",
+        "source": {
+          "name": "PTI via HDFC Sky",
+          "url": "https://hdfcsky.com/news/rupee-rises-33-paise-to-close-at-94-93-against-us-dollar"
+        },
+        "also": {
+          "name": "Reuters via Business Recorder",
+          "url": "https://www.brecorder.com/news/40446683/indian-rupee-posts-best-month-in-eight-on-rbi-measures-to-curb-dollar-demand"
+        }
+      },
+      {
+        "label": "Brent crude",
+        "value": 113.43,
+        "format": "usd_bbl",
+        "change_pct": 2.37,
+        "detail": "January futures, 30 Oct settlement, up $2.63",
+        "source": {
+          "name": "Reuters via The Korea Times",
+          "url": "https://www.koreatimes.co.kr/world/20261031/oil-jumps-2-settles-at-6-month-highs-on-fears-of-escalation-in-iran"
+        }
+      }
+    ]
+  },
+  "sectors": {
+    "headline": "IT rose 2.32% and pharma 1.55%; consumer durables and energy fell the most",
+    "as_of": "close, 30 Oct 2026",
+    "source": {
+      "name": "Liquide",
+      "url": "https://blog.liquide.life/share-market-today-nifty-reclaims-23-000-sensex-gains-308-points-as-it-and-pharma-stocks-rally/"
+    },
+    "items": [
+      {
+        "name": "Nifty IT",
+        "change_pct": 2.32
+      },
+      {
+        "name": "Nifty Pharma",
+        "change_pct": 1.55
+      },
+      {
+        "name": "Nifty Bank",
+        "change_pct": -0.41
+      },
+      {
+        "name": "Nifty FMCG",
+        "change_pct": -0.62
+      },
+      {
+        "name": "Nifty Realty",
+        "change_pct": -0.72
+      },
+      {
+        "name": "Nifty Auto",
+        "change_pct": -0.87
+      },
+      {
+        "name": "Nifty Energy",
+        "change_pct": -0.97
+      },
+      {
+        "name": "Nifty Consumer Durables",
+        "change_pct": -1.78
+      }
+    ]
+  },
+  "stories": [
+    {
+      "topic": "Economy",
+      "relevance": "Market-wide",
+      "headline": "October GST collections rose 22.9% to ₹2.31 lakh crore, helped by tax on imports",
+      "what": "Provisional government data released on Sunday 1 November put gross GST collections for October at ₹2.31 lakh crore, against ₹1.88 lakh crore a year earlier. GST on imports rose 42.2% to ₹72,246 crore and domestic GST 15.8% to ₹1.59 lakh crore; net collections after refunds were ₹2.03 lakh crore.",
+      "why": "GST receipts feed the government's finances and give a monthly reading of spending in the economy. Tax on imports rises when import values rise, including the cost of crude oil, which India largely buys from abroad.",
+      "source": {
+        "name": "IANS",
+        "url": "https://ianslive.in/gst-collections-jump-nearly-23-pc-to-rs-231-lakh-crore-in-october--20261101132850"
+      },
+      "also": {
+        "name": "Bombay Samachar",
+        "url": "https://english.bombaysamachar.com/business/gst-collections-october-2026-rise-23-percent/"
+      }
+    },
+    {
+      "topic": "Economy",
+      "relevance": "Market-wide",
+      "headline": "The Centre's fiscal deficit for April to September reached 42.1% of the full-year target",
+      "what": "Government accounts released on 30 October showed a fiscal deficit (the gap between spending and receipts) of ₹7.14 lakh crore for April to September, 42.1% of the ₹16.96 lakh crore target for the year. A year earlier, the first-half deficit was 36.5% of that year's target.",
+      "why": "The size of the deficit shapes how much the government borrows through bonds. Government borrowing feeds into bond yields, which affect the value of bonds held by debt funds and interest rates across the economy.",
+      "source": {
+        "name": "UNI",
+        "url": "https://www.uniindia.com/business-economy/economy-fiscal-deficit-april-september/230762"
+      },
+      "also": {
+        "name": "Trading Economics",
+        "url": "https://tradingeconomics.com/india/government-budget-value/news/596809"
+      }
+    },
+    {
+      "topic": "Global",
+      "relevance": "Market-wide",
+      "headline": "Brent reached a six-month high after a tanker attack in the Strait of Hormuz, then eased on Monday",
+      "what": "A tanker was hit by explosive devices in the Strait of Hormuz, reported on 30 October. The expiring December Brent contract ended at $117.64 a barrel, up 2.4%, and Brent gained 13.6% over October. On Sunday, seven core OPEC+ members kept December output targets unchanged; Brent eased to $111.84 in early Asian trade on Monday as Iran and Qatar held talks.",
+      "why": "India imports most of its crude oil, so oil prices pass through to the import bill, the rupee, fuel costs and inflation.",
+      "source": {
+        "name": "Reuters via Yahoo Finance",
+        "url": "https://finance.yahoo.com/energy/articles/oil-slips-more-1-talks-231257365.html"
+      },
+      "also": [
+        {
+          "name": "The National",
+          "url": "https://www.thenationalnews.com/business/energy/2026/11/01/opec-holds-december-oil-output-targets-steady-as-iran-war-disrupts-supply/"
+        },
+        {
+          "name": "Reuters via The Korea Times",
+          "url": "https://www.koreatimes.co.kr/world/20261031/oil-jumps-2-settles-at-6-month-highs-on-fears-of-escalation-in-iran"
+        }
+      ]
+    },
+    {
+      "topic": "Global",
+      "relevance": "Market-wide",
+      "headline": "The Nasdaq fell 2.86% on Friday as Amazon and Intel results renewed concern over AI spending",
+      "what": "US shares fell on 30 October after the Indian market had closed: the S&P 500 lost 1.82%, the Nasdaq Composite 2.86% and the Dow 1.09%. Quarterly results from Amazon and Intel revived questions about the cost of spending on artificial intelligence infrastructure.",
+      "why": "Large moves in US technology shares affect global investors' appetite for risk, which feeds into foreign portfolio flows into Indian shares. Indian IT companies earn a large share of their revenue from US clients.",
+      "source": {
+        "name": "AP via Yahoo Finance",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/major-us-stock-indexes-fared-202111310.html"
+      },
+      "also": {
+        "name": "Reuters via Business Recorder",
+        "url": "https://www.brecorder.com/news/40446727/european-shares-stumble-at-end-of-best-month-since-june"
+      }
+    }
+  ],
+  "global": {
+    "headline": "Wall Street fell on Friday as technology shares weighed; Tokyo fell and Hong Kong rose",
+    "items": [
+      {
+        "region": "US",
+        "name": "S&P 500",
+        "close": 7580.07,
+        "change_pct": -1.82,
+        "as_of": "Close, 30 Oct",
+        "source": {
+          "name": "AP via Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/major-us-stock-indexes-fared-202111310.html"
+        }
+      },
+      {
+        "region": "US",
+        "name": "Nasdaq Composite",
+        "close": 25437.0,
+        "change_pct": -2.86,
+        "as_of": "Close, 30 Oct",
+        "source": {
+          "name": "AP via Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/major-us-stock-indexes-fared-202111310.html"
+        }
+      },
+      {
+        "region": "US",
+        "name": "Dow Jones",
+        "close": 51770.31,
+        "change_pct": -1.09,
+        "as_of": "Close, 30 Oct",
+        "source": {
+          "name": "AP via Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/major-us-stock-indexes-fared-202111310.html"
+        }
+      },
+      {
+        "region": "Europe",
+        "name": "FTSE 100",
+        "close": 10729.78,
+        "change_pct": 0.07,
+        "as_of": "Close, 30 Oct",
+        "source": {
+          "name": "Armenpress",
+          "url": "https://armenpress.am/en/article/1264383"
+        }
+      },
+      {
+        "region": "Europe",
+        "name": "DAX",
+        "close": 25818.21,
+        "change_pct": -0.85,
+        "as_of": "Close, 30 Oct",
+        "source": {
+          "name": "Armenpress",
+          "url": "https://armenpress.am/en/article/1264383"
+        }
+      },
+      {
+        "region": "Asia",
+        "name": "Nikkei 225",
+        "close": 63290.11,
+        "change_pct": -2.12,
+        "as_of": "Close, 30 Oct",
+        "source": {
+          "name": "HDFC Sky",
+          "url": "https://hdfcsky.com/news/gift-nifty-points-to-higher-open-for-sensex-nifty-on-monday"
+        }
+      },
+      {
+        "region": "Asia",
+        "name": "Hang Seng",
+        "close": 23294.42,
+        "change_pct": 1.46,
+        "as_of": "Close, 30 Oct",
+        "source": {
+          "name": "HDFC Sky",
+          "url": "https://hdfcsky.com/news/gift-nifty-points-to-higher-open-for-sensex-nifty-on-monday"
+        }
+      }
+    ],
+    "note": "The Nikkei 225 opened 0.5% lower on Monday at 62,972.02. China's official manufacturing PMI (above 50 signals growth) fell 0.8 points to 49.3 in October. US rates and the dollar shape foreign flows into India.",
+    "note_sources": [
+      {
+        "name": "EconoTimes",
+        "url": "https://econotimes.com/Nikkei-225-Starts-November-Below-63-000-After-0-5-Opening-Drop-1768306"
+      },
+      {
+        "name": "CGTN",
+        "url": "https://news.cgtn.com/news/2026-10-31/China-s-manufacturing-PMI-at-49-3-non-manufacturing-PMI-at-49-7-1RGwN3PBXpu/share_amp.html"
+      }
+    ]
+  },
+  "ipos": {
+    "headline": "EAAA India Alternatives is due to list today and Bombay Coated & Special Steels closes; four more issues list this week",
+    "items": [
+      {
+        "company": "EAAA India Alternatives",
+        "status": "Closed",
+        "facts": [
+          "Bidding closed 28 Oct · price band ₹1,585 to ₹1,665 · ₹1,200 crore, all an offer for sale",
+          "Subscribed between 5.19 and 5.51 times overall at the close of bidding, depending on the report; due to list on NSE and BSE today, 2 Nov"
+        ],
+        "source": {
+          "name": "HDFC Sky",
+          "url": "https://hdfcsky.com/news/eaaa-india-alternatives-ipo-share-allotment-today"
+        },
+        "also": {
+          "name": "Kotak Neo",
+          "url": "https://www.kotakneo.com/ipo/eaaa-india-alternatives-ltd-ipo/"
+        }
+      },
+      {
+        "company": "Bombay Coated & Special Steels",
+        "status": "Open",
+        "facts": [
+          "Bidding 29 Oct to 2 Nov · price band ₹78 to ₹82 · ₹183.06 crore, all a fresh issue",
+          "Subscribed 3.74 times overall by the end of day 2 (30 Oct); allotment due 3 Nov, listing expected 5 Nov"
+        ],
+        "source": {
+          "name": "Kotak Neo",
+          "url": "https://www.kotakneo.com/ipo/bombay-coated-and-special-steels-ltd-ipo/"
+        },
+        "also": {
+          "name": "Outlook Money",
+          "url": "https://www.outlookmoney.com/invest/upcoming-ipos-eaaa-india-alternatives-bls-polymers-three-other-companies-set-to-make-d-street-debut"
+        }
+      },
+      {
+        "company": "M.K. Sons Fine Jewels",
+        "status": "Closed",
+        "facts": [
+          "Bidding closed 30 Oct · price band ₹153 to ₹162 · ₹275.40 crore",
+          "Subscribed 5.09 times overall on the final day; allotment due 2 Nov, listing expected 4 Nov"
+        ],
+        "source": {
+          "name": "Upstox News",
+          "url": "https://upstox.com/news/market-news/ipo/mk-sons-fine-jewels-ipo-subscribed-2-58-times-so-far-on-day-3-check-allotment-date-and-steps/article-202709/"
+        },
+        "also": {
+          "name": "Outlook Money",
+          "url": "https://www.outlookmoney.com/invest/upcoming-ipos-eaaa-india-alternatives-bls-polymers-three-other-companies-set-to-make-d-street-debut"
+        }
+      },
+      {
+        "company": "BLS Polymers",
+        "status": "Closed",
+        "facts": [
+          "Bidding closed 29 Oct · price band ₹142 to ₹150 · ₹255 crore, all a fresh issue",
+          "Subscribed 241.22 times overall; allotted 30 Oct, listing expected 3 Nov"
+        ],
+        "source": {
+          "name": "Angel One",
+          "url": "https://www.angelone.in/news/ipos/bls-polymers-limited-ipo-allotment-status"
+        },
+        "also": {
+          "name": "Outlook Money",
+          "url": "https://www.outlookmoney.com/invest/upcoming-ipos-eaaa-india-alternatives-bls-polymers-three-other-companies-set-to-make-d-street-debut"
+        }
+      },
+      {
+        "company": "SFC Environmental Technologies",
+        "status": "Closed",
+        "facts": [
+          "Bidding closed 29 Oct · price band ₹313 to ₹330 · ₹667.53 crore",
+          "Subscribed 9.47 times overall on the final day; allotted 30 Oct, listing expected 3 Nov"
+        ],
+        "source": {
+          "name": "Outlook Money",
+          "url": "https://www.outlookmoney.com/invest/upcoming-ipos-eaaa-india-alternatives-bls-polymers-three-other-companies-set-to-make-d-street-debut"
+        },
+        "also": {
+          "name": "Kotak Neo",
+          "url": "https://www.kotakneo.com/news/ipos/sfc-environmental-technologies-ipo-allotment-status-check-online/"
+        }
+      }
+    ],
+    "note": "Facts only. Kubeerra does not give views on applying for IPOs or on listing prospects. Subscription figures are as reported at the end of bidding and may change slightly after exchange reconciliation."
+  },
+  "mf": {
+    "headline": "September data: debt funds saw large outflows around advance tax, while SIPs reached a record ₹32,490 crore",
+    "period": "September 2026, released 12 Oct",
+    "stats": [
+      {
+        "label": "SIP contributions",
+        "value": 32490,
+        "format": "crore",
+        "change_pct": 0.6,
+        "detail": "A record; from 10.06 crore contributing SIP accounts",
+        "source": {
+          "name": "AMFI monthly note",
+          "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf"
+        },
+        "also": {
+          "name": "Outlook Money",
+          "url": "https://www.outlookmoney.com/invest/amfi-data-september-2026-equity-mf-inflows-38307-crore-rupees"
+        }
+      },
+      {
+        "label": "Equity fund net inflows",
+        "value": 38307,
+        "format": "crore",
+        "flow": true,
+        "change_pct": 30.61,
+        "detail": "Open-ended equity schemes; a 67th straight month of net inflows",
+        "source": {
+          "name": "AMFI monthly note",
+          "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf"
+        },
+        "also": {
+          "name": "Outlook Money",
+          "url": "https://www.outlookmoney.com/invest/amfi-data-september-2026-equity-mf-inflows-38307-crore-rupees"
+        }
+      },
+      {
+        "label": "Debt fund net flows",
+        "value": -183156,
+        "format": "crore_signed",
+        "detail": "Net outflow in September; AMFI cites tax-related liquidity needs",
+        "source": {
+          "name": "AMFI monthly note",
+          "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf"
+        }
+      },
+      {
+        "label": "Industry assets",
+        "value": 82.64,
+        "format": "lakh_crore",
+        "change_pct": -5.1,
+        "detail": "Change in the month; AMFI cites mark-to-market losses and debt fund outflows",
+        "source": {
+          "name": "AMFI monthly note",
+          "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf"
+        }
+      }
+    ],
+    "highlights": [
+      {
+        "text": "AMFI's note attributes September's debt fund withdrawals, mainly from liquid and money market funds, to tax-related liquidity requirements.",
+        "source": {
+          "name": "AMFI monthly note",
+          "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf"
+        }
+      },
+      {
+        "text": "Among equity categories, small cap funds drew the largest net inflow, ₹9,038.57 crore. Gold ETFs took in ₹4,451 crore.",
+        "source": {
+          "name": "Outlook Money",
+          "url": "https://www.outlookmoney.com/invest/amfi-data-september-2026-equity-mf-inflows-38307-crore-rupees"
+        }
+      }
+    ],
+    "nfos": [],
+    "nfo_summary": {
+      "text": "Nine new fund offers on Cafemutual's latest list are open on 2 November, two of them closing today: four passive funds (two silver, one realty index, one consumption index), two multi-asset funds of funds, a large and mid cap equity fund, an equity savings fund and a financial services debt fund. Each scheme's risk level and terms are in its scheme information document.",
+      "source": {
+        "name": "Cafemutual NFO list",
+        "url": "https://cafemutual.com/news/nfo/38428-nfos-open-on-october-27"
+      }
+    },
+    "regulatory": [
+      {
+        "body": "SEBI",
+        "date": "1 Nov",
+        "text": "From 1 November, AMC websites and digital platforms are to show a scheme's direct plan as the preselected option, SEBI's chairman said; investors who choose a regular plan are shown its higher costs. Regular plans and investing through distributors continue.",
+        "source": {
+          "name": "Cafemutual",
+          "url": "https://cafemutual.com/news/industry/39177-sebi-makes-direct-mutual-fund-plans-default-on-amc-digital-platforms-from-november-1"
+        }
+      },
+      {
+        "body": "RBI",
+        "date": "7 Oct",
+        "text": "The Monetary Policy Committee raised the repo rate by 25 basis points to 5.50% and moved its stance to calibrated tightening; its next meeting is on 2 to 4 December. Bond prices move opposite to yields, and funds holding longer-dated bonds see larger price changes in either direction.",
+        "source": {
+          "name": "Corplaw Updates",
+          "url": "https://www.corplawupdates.in/updates/rbi-repo-rate-hike-5-50-percent-october-2026"
+        }
+      }
+    ]
+  },
+  "learn": {
+    "id": "L-003",
+    "title": "Direct and regular plans: the same fund, different costs",
+    "paragraphs": [
+      "A scheme usually has two plans. A direct plan is bought without a distributor, for example from the fund house; a regular plan is bought through a distributor, and part of its expense ratio (the annual cost, taken from fund assets) pays the distributor's commission.",
+      "Both plans own the same investments under the same fund manager, but the regular plan's higher expense ratio means its NAV grows more slowly than the direct plan's.",
+      "From 1 November, AMC websites and apps show the direct plan as the default. Switching plans counts as a sale and a fresh purchase, so tax and exit loads can apply."
+    ],
+    "illustration": null,
+    "link": {
+      "name": "Kubeerra commission disclosures",
+      "url": "https://www.kubeerra.com/commission-disclosures"
+    },
+    "sources": [
+      {
+        "name": "Cafemutual",
+        "url": "https://cafemutual.com/news/industry/39177-sebi-makes-direct-mutual-fund-plans-default-on-amc-digital-platforms-from-november-1"
+      },
+      {
+        "name": "Business Standard",
+        "url": "https://www.business-standard.com/finance/personal-finance/sebi-makes-direct-plans-default-know-how-much-investors-can-save-on-sips-126103000975_1.html"
+      }
+    ]
+  },
+  "day_ahead_title": "Coming up: Monday 2 Nov to Wednesday 4 Nov",
+  "day_ahead": [
+    {
+      "time": "Mon 2 Nov",
+      "event": "HSBC India manufacturing PMI, final October reading (flash 54.9). EAAA India Alternatives expected to list; Bombay Coated & Special Steels IPO closes. ITC and Marico results. US ISM manufacturing survey, 8:30 PM IST.",
+      "source": {
+        "name": "Business Standard",
+        "url": "https://www.business-standard.com/amp/economy/news/india-flash-pmi-october-private-sector-growth-hsbc-services-manufacturing-126102300397_1.html"
+      },
+      "also": [
+        {
+          "name": "Kotak Neo",
+          "url": "https://www.kotakneo.com/news/market-news/q2-results-this-week/"
+        },
+        {
+          "name": "Outlook Money",
+          "url": "https://www.outlookmoney.com/invest/upcoming-ipos-eaaa-india-alternatives-bls-polymers-three-other-companies-set-to-make-d-street-debut"
+        },
+        {
+          "name": "FatTail",
+          "url": "https://fattail.ai/fattail-week-ahead-nov-2-6-2026/"
+        }
+      ]
+    },
+    {
+      "time": "Tue 3 Nov",
+      "event": "US midterm elections. BLS Polymers and SFC Environmental Technologies expected to list.",
+      "source": {
+        "name": "FatTail",
+        "url": "https://fattail.ai/fattail-week-ahead-nov-2-6-2026/"
+      },
+      "also": {
+        "name": "Outlook Money",
+        "url": "https://www.outlookmoney.com/invest/upcoming-ipos-eaaa-india-alternatives-bls-polymers-three-other-companies-set-to-make-d-street-debut"
+      }
+    },
+    {
+      "time": "Wed 4 Nov",
+      "event": "HSBC India services PMI, final October reading (flash 56.2). M.K. Sons Fine Jewels expected to list.",
+      "source": {
+        "name": "Business Standard",
+        "url": "https://www.business-standard.com/amp/economy/news/india-flash-pmi-october-private-sector-growth-hsbc-services-manufacturing-126102300397_1.html"
+      },
+      "also": {
+        "name": "Outlook Money",
+        "url": "https://www.outlookmoney.com/invest/upcoming-ipos-eaaa-india-alternatives-bls-polymers-three-other-companies-set-to-make-d-street-debut"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "Business Standard",
+      "url": "https://www.business-standard.com/amp/markets/news/stock-market-live-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-ipo-today-q2-results-october-30-126103000074_1.html"
+    },
+    {
+      "name": "Bombay Samachar",
+      "url": "https://english.bombaysamachar.com/business/sensex-jumps-308-points-nifty-reclaims-23000-october-30/"
+    },
+    {
+      "name": "Liquide",
+      "url": "https://blog.liquide.life/share-market-today-nifty-reclaims-23-000-sensex-gains-308-points-as-it-and-pharma-stocks-rally/"
+    },
+    {
+      "name": "Investing.com",
+      "url": "https://www.investing.com/news/stock-market-news/india-stocks-higher-at-close-of-trade-nifty-50-up-051-4986616"
+    },
+    {
+      "name": "Upstox (exchange data)",
+      "url": "https://upstox.com/fii-dii-data/"
+    },
+    {
+      "name": "Kotak Neo (exchange data)",
+      "url": "https://www.kotakneo.com/share-market-today/fii-dii-data/"
+    },
+    {
+      "name": "PTI via HDFC Sky",
+      "url": "https://hdfcsky.com/news/rupee-rises-33-paise-to-close-at-94-93-against-us-dollar"
+    },
+    {
+      "name": "Reuters via Business Recorder",
+      "url": "https://www.brecorder.com/news/40446683/indian-rupee-posts-best-month-in-eight-on-rbi-measures-to-curb-dollar-demand"
+    },
+    {
+      "name": "Reuters via The Korea Times",
+      "url": "https://www.koreatimes.co.kr/world/20261031/oil-jumps-2-settles-at-6-month-highs-on-fears-of-escalation-in-iran"
+    },
+    {
+      "name": "IANS",
+      "url": "https://ianslive.in/gst-collections-jump-nearly-23-pc-to-rs-231-lakh-crore-in-october--20261101132850"
+    },
+    {
+      "name": "Bombay Samachar",
+      "url": "https://english.bombaysamachar.com/business/gst-collections-october-2026-rise-23-percent/"
+    },
+    {
+      "name": "UNI",
+      "url": "https://www.uniindia.com/business-economy/economy-fiscal-deficit-april-september/230762"
+    },
+    {
+      "name": "Trading Economics",
+      "url": "https://tradingeconomics.com/india/government-budget-value/news/596809"
+    },
+    {
+      "name": "Reuters via Yahoo Finance",
+      "url": "https://finance.yahoo.com/energy/articles/oil-slips-more-1-talks-231257365.html"
+    },
+    {
+      "name": "The National",
+      "url": "https://www.thenationalnews.com/business/energy/2026/11/01/opec-holds-december-oil-output-targets-steady-as-iran-war-disrupts-supply/"
+    },
+    {
+      "name": "AP via Yahoo Finance",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/major-us-stock-indexes-fared-202111310.html"
+    },
+    {
+      "name": "Reuters via Business Recorder",
+      "url": "https://www.brecorder.com/news/40446727/european-shares-stumble-at-end-of-best-month-since-june"
+    },
+    {
+      "name": "Armenpress",
+      "url": "https://armenpress.am/en/article/1264383"
+    },
+    {
+      "name": "HDFC Sky",
+      "url": "https://hdfcsky.com/news/gift-nifty-points-to-higher-open-for-sensex-nifty-on-monday"
+    },
+    {
+      "name": "EconoTimes",
+      "url": "https://econotimes.com/Nikkei-225-Starts-November-Below-63-000-After-0-5-Opening-Drop-1768306"
+    },
+    {
+      "name": "CGTN",
+      "url": "https://news.cgtn.com/news/2026-10-31/China-s-manufacturing-PMI-at-49-3-non-manufacturing-PMI-at-49-7-1RGwN3PBXpu/share_amp.html"
+    },
+    {
+      "name": "HDFC Sky",
+      "url": "https://hdfcsky.com/news/eaaa-india-alternatives-ipo-share-allotment-today"
+    },
+    {
+      "name": "Kotak Neo",
+      "url": "https://www.kotakneo.com/ipo/eaaa-india-alternatives-ltd-ipo/"
+    },
+    {
+      "name": "Kotak Neo",
+      "url": "https://www.kotakneo.com/ipo/bombay-coated-and-special-steels-ltd-ipo/"
+    },
+    {
+      "name": "Outlook Money",
+      "url": "https://www.outlookmoney.com/invest/upcoming-ipos-eaaa-india-alternatives-bls-polymers-three-other-companies-set-to-make-d-street-debut"
+    },
+    {
+      "name": "Upstox News",
+      "url": "https://upstox.com/news/market-news/ipo/mk-sons-fine-jewels-ipo-subscribed-2-58-times-so-far-on-day-3-check-allotment-date-and-steps/article-202709/"
+    },
+    {
+      "name": "Angel One",
+      "url": "https://www.angelone.in/news/ipos/bls-polymers-limited-ipo-allotment-status"
+    },
+    {
+      "name": "Kotak Neo",
+      "url": "https://www.kotakneo.com/news/ipos/sfc-environmental-technologies-ipo-allotment-status-check-online/"
+    },
+    {
+      "name": "AMFI monthly note",
+      "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf"
+    },
+    {
+      "name": "Outlook Money",
+      "url": "https://www.outlookmoney.com/invest/amfi-data-september-2026-equity-mf-inflows-38307-crore-rupees"
+    },
+    {
+      "name": "Cafemutual NFO list",
+      "url": "https://cafemutual.com/news/nfo/38428-nfos-open-on-october-27"
+    },
+    {
+      "name": "Cafemutual",
+      "url": "https://cafemutual.com/news/industry/39177-sebi-makes-direct-mutual-fund-plans-default-on-amc-digital-platforms-from-november-1"
+    },
+    {
+      "name": "Corplaw Updates",
+      "url": "https://www.corplawupdates.in/updates/rbi-repo-rate-hike-5-50-percent-october-2026"
+    },
+    {
+      "name": "Kubeerra commission disclosures",
+      "url": "https://www.kubeerra.com/commission-disclosures"
+    },
+    {
+      "name": "Business Standard",
+      "url": "https://www.business-standard.com/finance/personal-finance/sebi-makes-direct-plans-default-know-how-much-investors-can-save-on-sips-126103000975_1.html"
+    },
+    {
+      "name": "Business Standard",
+      "url": "https://www.business-standard.com/amp/economy/news/india-flash-pmi-october-private-sector-growth-hsbc-services-manufacturing-126102300397_1.html"
+    },
+    {
+      "name": "Kotak Neo",
+      "url": "https://www.kotakneo.com/news/market-news/q2-results-this-week/"
+    },
+    {
+      "name": "FatTail",
+      "url": "https://fattail.ai/fattail-week-ahead-nov-2-6-2026/"
+    }
+  ]
+}
