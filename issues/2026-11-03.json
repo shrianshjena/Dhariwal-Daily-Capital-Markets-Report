@@ -1,0 +1,769 @@
+{
+  "meta": {
+    "date": "2026-11-03",
+    "weekday": "Tuesday",
+    "edition": "Morning edition",
+    "issue_number": 3,
+    "label": "Client edition 003",
+    "audience": "client",
+    "india_as_of": "Close, Mon 2 Nov 2026",
+    "global_as_of": "Closes, Mon 2 Nov",
+    "preheader": "NIFTY 50 rose 1.68% as Reliance led; foreign investors bought ₹3,115 crore (provisional); Brent fell 7.63% to $104.77.",
+    "subject": "Kubeerra Market Brief · Tue 3 Nov: NIFTY 50 up 1.68% as Reliance leads; Brent down 7.6%"
+  },
+  "brief": [
+    "The NIFTY 50 rose 1.68% to 23,440.80 and the Sensex 1.66% to 75,692.78 on Monday, a third straight gain, as Reliance Industries rose 11.6% after its quarterly results; energy (up 3.92%) and metals (up 3.21%) led, and advancers outnumbered decliners about two to one on NSE.",
+    "Foreign institutions bought a net ₹3,115 crore and domestic institutions sold ₹392 crore (provisional). The 10-year government bond yield fell to about 7.32%, and the rupee closed at a provisional 94.86 per dollar.",
+    "Brent crude settled 7.63% lower at $104.77 a barrel on hopes for US-Iran talks. On Wall Street the Nasdaq fell 1.07% while the Dow rose 0.41%. India's October manufacturing PMI was 54.7."
+  ],
+  "snapshot": {
+    "headline": "Benchmarks rose about 1.7% for a third straight session as Reliance, energy and metal shares led",
+    "as_of": "close, 2 Nov 2026",
+    "indices": [
+      {
+        "name": "NIFTY 50",
+        "close": 23440.8,
+        "change": 387.7,
+        "change_pct": 1.68,
+        "source": {
+          "name": "Upstox News",
+          "url": "https://upstox.com/news/market-news/stocks/market-wrap-nov-2-sensex-zooms-1-233-pts-nifty-50-ends-at-23-441-as-crude-oil-prices-ease-reliance-industries-soars-12/article-202833/"
+        }
+      },
+      {
+        "name": "BSE Sensex",
+        "close": 75692.78,
+        "change": 1233.25,
+        "change_pct": 1.66,
+        "source": {
+          "name": "Business Today",
+          "url": "https://www.businesstoday.in/markets/stocks/story/sensex-soars-1233-points-nifty-nears-23450-as-markets-extend-rally-for-third-straight-session-565219-2026-11-02"
+        }
+      },
+      {
+        "name": "Nifty Bank",
+        "close": 55002.2,
+        "change": 315.25,
+        "change_pct": 0.58,
+        "source": {
+          "name": "Liquide",
+          "url": "https://blog.liquide.life/share-market-today-nifty-reclaims-23-400-sensex-surges-1-233-points-as-reliance-energy-and-metal-stocks-rally/"
+        }
+      }
+    ],
+    "breadth": {
+      "advances": 2445,
+      "declines": 1164,
+      "unchanged": 104,
+      "source": {
+        "name": "Upstox News (NSE count)",
+        "url": "https://upstox.com/news/market-news/stocks/market-wrap-nov-2-sensex-zooms-1-233-pts-nifty-50-ends-at-23-441-as-crude-oil-prices-ease-reliance-industries-soars-12/article-202833/"
+      }
+    }
+  },
+  "flows": {
+    "headline": "Foreign investors bought a net ₹3,115 crore (provisional); bond yields fell and oil eased",
+    "tiles": [
+      {
+        "label": "FII net",
+        "value": 3114.68,
+        "format": "crore_signed",
+        "provisional": true,
+        "detail": "Net buyers in the cash market on 2 Nov",
+        "source": {
+          "name": "Trendlyne (exchange data)",
+          "url": "https://trendlyne.com/macro-data/fii-dii/latest/cash-pastmonth/"
+        },
+        "also": {
+          "name": "Whalesbook",
+          "url": "https://www.whalesbook.com/news/English/sebiexchange/FIIs-Return-With-Rs-3115-Crore-Inflow-Nifty-Jumps-168percent/6ae8b9b54fc30694db5872ba"
+        }
+      },
+      {
+        "label": "DII net",
+        "value": -392.2,
+        "format": "crore_signed",
+        "provisional": true,
+        "detail": "Net sellers in the cash market on 2 Nov",
+        "source": {
+          "name": "Trendlyne (exchange data)",
+          "url": "https://trendlyne.com/macro-data/fii-dii/latest/cash-pastmonth/"
+        },
+        "also": {
+          "name": "Whalesbook",
+          "url": "https://www.whalesbook.com/news/English/sebiexchange/FIIs-Return-With-Rs-3115-Crore-Inflow-Nifty-Jumps-168percent/6ae8b9b54fc30694db5872ba"
+        }
+      },
+      {
+        "label": "USD/INR",
+        "value": 94.86,
+        "format": "fx",
+        "provisional": true,
+        "detail": "Provisional close on 2 Nov (PTI); Business Standard reported 94.90",
+        "source": {
+          "name": "PTI via HDFC Sky",
+          "url": "https://hdfcsky.com/news/rupee-falls-10-paise-to-close-at-94-86-against-us-dollar"
+        },
+        "also": {
+          "name": "Business Standard",
+          "url": "https://www.business-standard.com/economy/news/bond-yields-fall-nearly-10-bps-as-crude-slides-rupee-gains-against-dollar-126110201369_1.html"
+        }
+      },
+      {
+        "label": "10-year G-Sec yield",
+        "value": 7.32,
+        "format": "pct_level",
+        "direction": "down",
+        "detail": "2 Nov; down nearly 10 bps per Business Standard, about 6 bps per Trading Economics",
+        "source": {
+          "name": "Business Standard",
+          "url": "https://www.business-standard.com/economy/news/bond-yields-fall-nearly-10-bps-as-crude-slides-rupee-gains-against-dollar-126110201369_1.html"
+        },
+        "also": {
+          "name": "Trading Economics",
+          "url": "https://tradingeconomics.com/india/government-bond-yield"
+        }
+      },
+      {
+        "label": "Brent crude",
+        "value": 104.77,
+        "format": "usd_bbl",
+        "change_pct": -7.63,
+        "detail": "Brent futures settlement, 2 Nov",
+        "source": {
+          "name": "StockTitan",
+          "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-2-2026"
+        },
+        "also": {
+          "name": "Seoul Economic Daily",
+          "url": "https://en.sedaily.com/international/2026/11/03/oil-plunges-7-percent-on-us-iran-talks-hopes-stocks-mixed"
+        }
+      }
+    ]
+  },
+  "sectors": {
+    "headline": "Energy rose 3.92% and metals 3.21%, while IT and pharma slipped",
+    "as_of": "close, 2 Nov 2026",
+    "source": {
+      "name": "Liquide",
+      "url": "https://blog.liquide.life/share-market-today-nifty-reclaims-23-400-sensex-surges-1-233-points-as-reliance-energy-and-metal-stocks-rally/"
+    },
+    "items": [
+      {
+        "name": "Nifty Energy",
+        "change_pct": 3.92
+      },
+      {
+        "name": "Nifty Metal",
+        "change_pct": 3.21
+      },
+      {
+        "name": "Nifty Consumer Durables",
+        "change_pct": 2.7
+      },
+      {
+        "name": "Nifty Auto",
+        "change_pct": 1.33
+      },
+      {
+        "name": "Nifty Realty",
+        "change_pct": 1.03
+      },
+      {
+        "name": "Nifty FMCG",
+        "change_pct": 0.84
+      },
+      {
+        "name": "Nifty Financial Services",
+        "change_pct": 0.76
+      },
+      {
+        "name": "Nifty Bank",
+        "change_pct": 0.58
+      },
+      {
+        "name": "Nifty Pharma",
+        "change_pct": -0.07
+      },
+      {
+        "name": "Nifty IT",
+        "change_pct": -0.5
+      }
+    ]
+  },
+  "stories": [
+    {
+      "topic": "Corporate",
+      "relevance": "Market-wide",
+      "headline": "Reliance Industries' September-quarter net profit rose 41% to ₹25,548 crore, and its shares rose 11.6%",
+      "what": "Reliance reported after market hours on Friday 30 October that net profit attributable to owners for July to September was ₹25,548 crore, against ₹18,165 crore a year earlier. Revenue from operations rose 28.5% to ₹3,32,861 crore, and oil-to-chemicals revenue rose 44.2% on higher crude and product prices. The shares rose 11.6% to ₹1,300 on Monday 2 November.",
+      "why": "Reliance was the largest contributor to Monday's index gains, and moves in index heavyweights pass through to the index funds and ETFs that track the benchmarks. Its refining results also reflect global crude and fuel margins.",
+      "source": {
+        "name": "Upstox News",
+        "url": "https://upstox.com/news/market-news/earnings/reliance-q2-results-net-profit-jumps-41-yo-y-to-25-548-crore-o2-c-revenues-surge-44-on-higher-energy-prices/article-202747/"
+      },
+      "also": {
+        "name": "HDFC Sky",
+        "url": "https://hdfcsky.com/news/market-close-report-today-november-2-2026-diwali-arrives-early-on-d-street-as-reliance-powers-mega-rally"
+      }
+    },
+    {
+      "topic": "Global",
+      "relevance": "Market-wide",
+      "headline": "Brent fell 7.63% on Monday on hopes for talks to end the war involving Iran",
+      "what": "Brent futures settled at $104.77 a barrel on Monday 2 November, down 7.63%, after Iranian and Qatari officials held talks on ending the war involving Iran and a draft proposal circulated. In early Asian trade on Tuesday, Brent edged up to about $105.4 after a reported US strike on Iran's Qeshm Island.",
+      "why": "India imports most of its crude oil, so oil prices pass through to the import bill, the rupee, fuel costs and inflation.",
+      "source": {
+        "name": "StockTitan",
+        "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-2-2026"
+      },
+      "also": [
+        {
+          "name": "Reuters via Kitco",
+          "url": "https://www.kitco.com/news/off-the-wire/2026-11-02/oil-drops-over-4-hopes-progress-talks-ending-us-iran-war"
+        },
+        {
+          "name": "Investing.com",
+          "url": "https://za.investing.com/news/commodities-news/oil-rises-after-reported-us-strike-on-irans-qeshm-island-4544520"
+        }
+      ]
+    },
+    {
+      "topic": "Economy",
+      "relevance": "Market-wide",
+      "headline": "Government bond yields fell to about 7.32% as crude prices eased",
+      "what": "The yield on the 10-year benchmark government bond fell to about 7.32% on Monday 2 November. Business Standard put the fall at nearly 10 basis points (a basis point is one hundredth of a percentage point), its sharpest one-day fall in seven months; Trading Economics showed a smaller fall of about 6 basis points.",
+      "why": "Lower yields raise the prices of bonds already held, including those in debt mutual funds. Crude prices feed into inflation, which the RBI weighs when it sets interest rates.",
+      "source": {
+        "name": "Business Standard",
+        "url": "https://www.business-standard.com/economy/news/bond-yields-fall-nearly-10-bps-as-crude-slides-rupee-gains-against-dollar-126110201369_1.html"
+      },
+      "also": {
+        "name": "Trading Economics",
+        "url": "https://tradingeconomics.com/india/government-bond-yield"
+      }
+    },
+    {
+      "topic": "Economy",
+      "relevance": "Market-wide",
+      "headline": "India's manufacturing PMI was 54.7 in October as export orders grew at the fastest pace in six months",
+      "what": "The final HSBC India Manufacturing PMI, compiled by S&P Global, was 54.7 in October, against 55.1 in September and a flash estimate of 54.9. A reading above 50 means activity grew. Input cost inflation was the lowest since February.",
+      "why": "The PMI is an early monthly reading of factory activity. Price pressure in the survey feeds into the inflation readings the RBI watches.",
+      "source": {
+        "name": "ANI",
+        "url": "https://aninews.in/news/business/indias-manufacturing-pmi-eases-to-547-in-october-export-orders-hit-six-month-high20261102111017/"
+      },
+      "also": {
+        "name": "Trading Economics via TradingView",
+        "url": "https://www.tradingview.com/news/te_news:597132:0-india-manufacturing-growth-revised-down-in-october/"
+      }
+    },
+    {
+      "topic": "Global",
+      "relevance": "Market-wide",
+      "headline": "The Nasdaq fell 1.07% on Monday as technology shares slipped, while the Dow rose 0.41%",
+      "what": "On 2 November the S&P 500 fell 0.51% to 7,541.40 and the Nasdaq Composite 1.07% to 25,164.32, while the Dow rose 0.41% to 51,983.98, as an early rally in technology shares faded. The US ISM manufacturing index rose to 55.5 in October.",
+      "why": "Moves in US technology shares and US data affect global investors' appetite for risk and US interest-rate expectations, which feed into foreign portfolio flows into India. Indian IT companies earn much of their revenue from US clients.",
+      "source": {
+        "name": "AP via Yahoo Finance",
+        "url": "https://finance.yahoo.com/markets/world-indices/articles/major-us-stock-indexes-fared-212103580.html"
+      },
+      "also": {
+        "name": "StockTitan",
+        "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-2-2026"
+      }
+    }
+  ],
+  "global": {
+    "headline": "Wall Street was mixed as technology shares fell; the DAX rose as oil eased",
+    "items": [
+      {
+        "region": "US",
+        "name": "S&P 500",
+        "close": 7541.4,
+        "change_pct": -0.51,
+        "as_of": "Close, 2 Nov",
+        "source": {
+          "name": "AP via Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/world-indices/articles/major-us-stock-indexes-fared-212103580.html"
+        }
+      },
+      {
+        "region": "US",
+        "name": "Nasdaq Composite",
+        "close": 25164.32,
+        "change_pct": -1.07,
+        "as_of": "Close, 2 Nov",
+        "source": {
+          "name": "AP via Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/world-indices/articles/major-us-stock-indexes-fared-212103580.html"
+        }
+      },
+      {
+        "region": "US",
+        "name": "Dow Jones",
+        "close": 51983.98,
+        "change_pct": 0.41,
+        "as_of": "Close, 2 Nov",
+        "source": {
+          "name": "AP via Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/world-indices/articles/major-us-stock-indexes-fared-212103580.html"
+        }
+      },
+      {
+        "region": "Europe",
+        "name": "DAX",
+        "close": 25981.09,
+        "change_pct": 0.63,
+        "as_of": "Close, 2 Nov",
+        "source": {
+          "name": "Trading Economics",
+          "url": "https://tradingeconomics.com/germany/stock-market"
+        }
+      }
+    ],
+    "note": "Tokyo is closed today for a public holiday; on Monday the Nikkei 225 fell 0.33% and the Hang Seng rose 0.42%. Gold rebounded about 2% on Monday from a one-year low and traded near $3,950 an ounce. US rates and the dollar shape foreign flows into India.",
+    "note_sources": [
+      {
+        "name": "HDFC Sky",
+        "url": "https://hdfcsky.com/news/gift-nifty-points-to-flat-open-for-sensex-nifty-on-tuesday"
+      },
+      {
+        "name": "Finance Calendar",
+        "url": "https://www.financecalendar.com/event/tse-jpx-culture-day-2026/"
+      },
+      {
+        "name": "Eurasia Business News",
+        "url": "https://eurasiabusinessnews.com/2026/11/02/european-stock-markets-today-shares-rise-as-oil-falls-and-gold-rebounds/"
+      },
+      {
+        "name": "Trading Economics",
+        "url": "https://tradingeconomics.com/commodity/gold"
+      }
+    ]
+  },
+  "ipos": {
+    "headline": "BLS Polymers and SFC Environmental Technologies are due to list today; EAAA India Alternatives listed on Monday",
+    "items": [
+      {
+        "company": "BLS Polymers",
+        "status": "Closed",
+        "facts": [
+          "Bidding closed 29 Oct · price band ₹142 to ₹150 · ₹255 crore, all a fresh issue",
+          "Subscribed 239.02 times overall at the close of bidding; listing expected today, 3 Nov"
+        ],
+        "source": {
+          "name": "Upstox",
+          "url": "https://upstox.com/ipo/mainboard"
+        },
+        "also": {
+          "name": "HDFC Sky",
+          "url": "https://hdfcsky.com/ipo/bls-polymers-ipo"
+        }
+      },
+      {
+        "company": "SFC Environmental Technologies",
+        "status": "Closed",
+        "facts": [
+          "Bidding closed 29 Oct · price band ₹313 to ₹330 · ₹667.53 crore, a ₹150 crore fresh issue and an offer for sale",
+          "Subscribed 9.17 times overall at the close of bidding; listing expected today, 3 Nov"
+        ],
+        "source": {
+          "name": "Upstox",
+          "url": "https://upstox.com/ipo/mainboard"
+        },
+        "also": {
+          "name": "Siasat",
+          "url": "https://www.siasat.com/five-ipos-to-open-next-week-companies-eye-close-to-rs-2600-cr-3564131/"
+        }
+      },
+      {
+        "company": "EAAA India Alternatives",
+        "status": "Listed",
+        "facts": [
+          "Listed 2 Nov at ₹1,675.50 on NSE, 0.63% above the issue price of ₹1,665 (₹1,673 on BSE)",
+          "₹1,200 crore, all an offer for sale; subscribed 5.25 times overall at the close of bidding"
+        ],
+        "source": {
+          "name": "Upstox News",
+          "url": "https://upstox.com/news/market-news/ipo/eaaa-india-alternatives-shares-list-at-0-6-premium-on-nse-here-s-how-much-investors-made-per-lot/article-202788/"
+        },
+        "also": {
+          "name": "Upstox",
+          "url": "https://upstox.com/ipo/mainboard"
+        }
+      },
+      {
+        "company": "M.K. Sons Fine Jewels",
+        "status": "Closed",
+        "facts": [
+          "Bidding closed 30 Oct · price band ₹153 to ₹162 · ₹275.40 crore",
+          "Subscribed 5.03 times overall at the close of bidding; listing expected 4 Nov"
+        ],
+        "source": {
+          "name": "Upstox",
+          "url": "https://upstox.com/ipo/mainboard"
+        },
+        "also": {
+          "name": "Siasat",
+          "url": "https://www.siasat.com/five-ipos-to-open-next-week-companies-eye-close-to-rs-2600-cr-3564131/"
+        }
+      },
+      {
+        "company": "Bombay Coated & Special Steels",
+        "status": "Closed",
+        "facts": [
+          "Bidding closed 2 Nov · price band ₹78 to ₹82 · ₹183.06 crore, all a fresh issue",
+          "Subscribed 32.01 times overall at the close of bidding, per Upstox; allotment due today, 3 Nov, listing expected 5 Nov"
+        ],
+        "source": {
+          "name": "Upstox",
+          "url": "https://upstox.com/ipo/mainboard"
+        },
+        "also": {
+          "name": "HDFC Sky",
+          "url": "https://hdfcsky.com/ipo/bombay-coated-special-steels-ipo"
+        }
+      }
+    ],
+    "note": "Facts only. Kubeerra does not give views on applying for IPOs or on listing prospects. Subscription figures are as reported at the end of bidding; reports can differ slightly before exchange reconciliation."
+  },
+  "mf": {
+    "headline": "October data is not out yet; in September, SIPs reached a record ₹32,490 crore while debt funds saw large outflows",
+    "period": "September 2026, released 12 Oct",
+    "stats": [
+      {
+        "label": "SIP contributions",
+        "value": 32490,
+        "format": "crore",
+        "change_pct": 0.6,
+        "detail": "A record; from 10.06 crore contributing SIP accounts",
+        "source": {
+          "name": "Kotak Neo",
+          "url": "https://www.kotakneo.com/news/personal-finance/sip-contributions-hit-record-32490-crore-september-2026-mutual-fund-assets-fall/"
+        },
+        "also": {
+          "name": "Fintechbiznews",
+          "url": "https://fintechbiznews.com/finserv-mf-amcs/mf-industrys-aum-down-5"
+        }
+      },
+      {
+        "label": "Equity fund net inflows",
+        "value": 38307,
+        "format": "crore",
+        "flow": true,
+        "change_pct": 30.61,
+        "detail": "Open-ended equity schemes; a 67th straight month of net inflows",
+        "source": {
+          "name": "Kotak Neo",
+          "url": "https://www.kotakneo.com/news/personal-finance/sip-contributions-hit-record-32490-crore-september-2026-mutual-fund-assets-fall/"
+        },
+        "also": {
+          "name": "Fintechbiznews",
+          "url": "https://fintechbiznews.com/finserv-mf-amcs/mf-industrys-aum-down-5"
+        }
+      },
+      {
+        "label": "Debt fund net flows",
+        "value": -183156,
+        "format": "crore_signed",
+        "detail": "Net outflow in September, mainly from liquid and money market funds",
+        "source": {
+          "name": "INDmoney",
+          "url": "https://www.indmoney.com/blog/mutual-funds/why-did-mutual-fund-aum-fall-4-44-lakh-crore-despite-record-si-ps"
+        },
+        "also": {
+          "name": "Kotak Neo",
+          "url": "https://www.kotakneo.com/news/personal-finance/sip-contributions-hit-record-32490-crore-september-2026-mutual-fund-assets-fall/"
+        }
+      },
+      {
+        "label": "Industry assets",
+        "value": 82.64,
+        "format": "lakh_crore",
+        "change_pct": -5.1,
+        "detail": "Change in the month; AMFI's chief executive cited mark-to-market losses and debt fund outflows",
+        "source": {
+          "name": "Fintechbiznews",
+          "url": "https://fintechbiznews.com/finserv-mf-amcs/mf-industrys-aum-down-5"
+        },
+        "also": {
+          "name": "Kotak Neo",
+          "url": "https://www.kotakneo.com/news/personal-finance/sip-contributions-hit-record-32490-crore-september-2026-mutual-fund-assets-fall/"
+        }
+      }
+    ],
+    "highlights": [
+      {
+        "text": "Liquid funds saw a net outflow of ₹95,743 crore and money market funds ₹50,846 crore in September, while gold ETFs took in ₹4,451 crore and silver ETFs ₹1,974 crore.",
+        "source": {
+          "name": "Angel One",
+          "url": "https://www.angelone.in/news/mutual-funds/amfi-data-mutual-fund-mobilisation-climbs-to-15-25-lakh-crore-in-september-2026-debt-funds-see-1-83-lakh-crore-net-outflow"
+        }
+      },
+      {
+        "text": "Among equity categories, small cap funds drew the largest net inflow, ₹9,038.57 crore, followed by mid cap (₹7,834.84 crore) and flexi cap (₹6,701.80 crore) funds.",
+        "source": {
+          "name": "Kotak Neo",
+          "url": "https://www.kotakneo.com/news/personal-finance/sip-contributions-hit-record-32490-crore-september-2026-mutual-fund-assets-fall/"
+        }
+      }
+    ],
+    "nfos": [],
+    "nfo_summary": {
+      "text": "Eight new fund offers on Cafemutual's latest list are open on 3 November: five passive funds (an energy ETF, a silver ETF, a silver fund of funds, a realty index fund and a consumption index fund), two multi-asset funds of funds and a large and mid cap equity fund whose offer period ends today. Each scheme's risk level and terms are in its scheme information document.",
+      "source": {
+        "name": "Cafemutual NFO list",
+        "url": "https://cafemutual.com/news/nfo/38428-nfos-open-on-october-28"
+      }
+    },
+    "regulatory": [
+      {
+        "body": "SEBI",
+        "date": "1 Nov",
+        "text": "From 1 November, AMC websites and apps show the direct plan as the default option. Regular plans stay available, and existing regular plan holdings and SIPs are not switched automatically.",
+        "source": {
+          "name": "Business Standard",
+          "url": "https://www.business-standard.com/finance/personal-finance/november-money-changes-what-pensioners-taxpayers-and-investors-must-know-126110200875_1.html"
+        }
+      }
+    ]
+  },
+  "learn": {
+    "id": "L-004",
+    "title": "Why debt fund values move when bond yields change",
+    "paragraphs": [
+      "A bond pays a fixed rate of interest. When yields on new bonds fall, older bonds that pay more become more valuable, so their prices rise; when yields rise, their prices fall.",
+      "Debt mutual funds value their bonds at market prices every day, so these price changes show up in the NAV. The longer a bond has left to maturity, the more its price changes for the same move in yields.",
+      "On Monday the 10-year government bond yield fell by nearly 10 basis points, Business Standard reported. In September, AMFI's chief executive linked part of the fall in industry assets to mark-to-market losses: the same effect in reverse."
+    ],
+    "illustration": null,
+    "link": {
+      "name": "Kubeerra risk factors",
+      "url": "https://www.kubeerra.com/risk-factors"
+    },
+    "sources": [
+      {
+        "name": "Business Standard",
+        "url": "https://www.business-standard.com/economy/news/bond-yields-fall-nearly-10-bps-as-crude-slides-rupee-gains-against-dollar-126110201369_1.html"
+      },
+      {
+        "name": "Fintechbiznews",
+        "url": "https://fintechbiznews.com/finserv-mf-amcs/mf-industrys-aum-down-5"
+      }
+    ]
+  },
+  "day_ahead_title": "Coming up: Tuesday 3 Nov to Friday 6 Nov",
+  "day_ahead": [
+    {
+      "time": "Tue 3 Nov",
+      "event": "BLS Polymers and SFC Environmental Technologies expected to list; Bombay Coated & Special Steels allotment. Results due from Bajaj Finserv, Emcure Pharmaceuticals, GlaxoSmithKline Pharmaceuticals, Zydus Wellness and others (board dates may change). US midterm elections; Tokyo markets closed.",
+      "source": {
+        "name": "Upstox",
+        "url": "https://upstox.com/ipo/mainboard"
+      },
+      "also": [
+        {
+          "name": "Kotak Neo",
+          "url": "https://www.kotakneo.com/news/market-news/q2-results-this-week/"
+        },
+        {
+          "name": "Reuters via Kitco",
+          "url": "https://www.kitco.com/news/off-the-wire/2026-11-02/oil-drops-over-4-hopes-progress-talks-ending-us-iran-war"
+        },
+        {
+          "name": "Finance Calendar",
+          "url": "https://www.financecalendar.com/event/tse-jpx-culture-day-2026/"
+        }
+      ]
+    },
+    {
+      "time": "Wed 4 Nov",
+      "event": "HSBC India services PMI, final October reading. M.K. Sons Fine Jewels expected to list. Results due from Apollo Hospitals, Dabur India, BSE, Cummins India, NHPC and others.",
+      "source": {
+        "name": "Business Standard",
+        "url": "https://www.business-standard.com/economy/news/weekly-policy-watch-manufacturing-services-pmi-forex-reserves-november-2026-126110200167_1.html"
+      },
+      "also": [
+        {
+          "name": "Kotak Neo",
+          "url": "https://www.kotakneo.com/news/market-news/q2-results-this-week/"
+        },
+        {
+          "name": "Upstox",
+          "url": "https://upstox.com/ipo/mainboard"
+        }
+      ]
+    },
+    {
+      "time": "Thu 5 Nov",
+      "event": "Bombay Coated & Special Steels expected to list. Results due from Berger Paints, Thermax and others.",
+      "source": {
+        "name": "HDFC Sky",
+        "url": "https://hdfcsky.com/ipo/bombay-coated-special-steels-ipo"
+      },
+      "also": {
+        "name": "Kotak Neo",
+        "url": "https://www.kotakneo.com/news/market-news/q2-results-this-week/"
+      }
+    },
+    {
+      "time": "Fri 6 Nov",
+      "event": "RBI weekly data on foreign exchange reserves. Results due from Hindalco, Bosch and others.",
+      "source": {
+        "name": "Business Standard",
+        "url": "https://www.business-standard.com/economy/news/weekly-policy-watch-manufacturing-services-pmi-forex-reserves-november-2026-126110200167_1.html"
+      },
+      "also": {
+        "name": "Kotak Neo",
+        "url": "https://www.kotakneo.com/news/market-news/q2-results-this-week/"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "Upstox News",
+      "url": "https://upstox.com/news/market-news/stocks/market-wrap-nov-2-sensex-zooms-1-233-pts-nifty-50-ends-at-23-441-as-crude-oil-prices-ease-reliance-industries-soars-12/article-202833/"
+    },
+    {
+      "name": "Business Today",
+      "url": "https://www.businesstoday.in/markets/stocks/story/sensex-soars-1233-points-nifty-nears-23450-as-markets-extend-rally-for-third-straight-session-565219-2026-11-02"
+    },
+    {
+      "name": "Liquide",
+      "url": "https://blog.liquide.life/share-market-today-nifty-reclaims-23-400-sensex-surges-1-233-points-as-reliance-energy-and-metal-stocks-rally/"
+    },
+    {
+      "name": "Trendlyne (exchange data)",
+      "url": "https://trendlyne.com/macro-data/fii-dii/latest/cash-pastmonth/"
+    },
+    {
+      "name": "Whalesbook",
+      "url": "https://www.whalesbook.com/news/English/sebiexchange/FIIs-Return-With-Rs-3115-Crore-Inflow-Nifty-Jumps-168percent/6ae8b9b54fc30694db5872ba"
+    },
+    {
+      "name": "PTI via HDFC Sky",
+      "url": "https://hdfcsky.com/news/rupee-falls-10-paise-to-close-at-94-86-against-us-dollar"
+    },
+    {
+      "name": "Business Standard",
+      "url": "https://www.business-standard.com/economy/news/bond-yields-fall-nearly-10-bps-as-crude-slides-rupee-gains-against-dollar-126110201369_1.html"
+    },
+    {
+      "name": "Trading Economics",
+      "url": "https://tradingeconomics.com/india/government-bond-yield"
+    },
+    {
+      "name": "StockTitan",
+      "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-2-2026"
+    },
+    {
+      "name": "Seoul Economic Daily",
+      "url": "https://en.sedaily.com/international/2026/11/03/oil-plunges-7-percent-on-us-iran-talks-hopes-stocks-mixed"
+    },
+    {
+      "name": "Upstox News",
+      "url": "https://upstox.com/news/market-news/earnings/reliance-q2-results-net-profit-jumps-41-yo-y-to-25-548-crore-o2-c-revenues-surge-44-on-higher-energy-prices/article-202747/"
+    },
+    {
+      "name": "HDFC Sky",
+      "url": "https://hdfcsky.com/news/market-close-report-today-november-2-2026-diwali-arrives-early-on-d-street-as-reliance-powers-mega-rally"
+    },
+    {
+      "name": "Reuters via Kitco",
+      "url": "https://www.kitco.com/news/off-the-wire/2026-11-02/oil-drops-over-4-hopes-progress-talks-ending-us-iran-war"
+    },
+    {
+      "name": "Investing.com",
+      "url": "https://za.investing.com/news/commodities-news/oil-rises-after-reported-us-strike-on-irans-qeshm-island-4544520"
+    },
+    {
+      "name": "ANI",
+      "url": "https://aninews.in/news/business/indias-manufacturing-pmi-eases-to-547-in-october-export-orders-hit-six-month-high20261102111017/"
+    },
+    {
+      "name": "Trading Economics via TradingView",
+      "url": "https://www.tradingview.com/news/te_news:597132:0-india-manufacturing-growth-revised-down-in-october/"
+    },
+    {
+      "name": "AP via Yahoo Finance",
+      "url": "https://finance.yahoo.com/markets/world-indices/articles/major-us-stock-indexes-fared-212103580.html"
+    },
+    {
+      "name": "Trading Economics",
+      "url": "https://tradingeconomics.com/germany/stock-market"
+    },
+    {
+      "name": "HDFC Sky",
+      "url": "https://hdfcsky.com/news/gift-nifty-points-to-flat-open-for-sensex-nifty-on-tuesday"
+    },
+    {
+      "name": "Finance Calendar",
+      "url": "https://www.financecalendar.com/event/tse-jpx-culture-day-2026/"
+    },
+    {
+      "name": "Eurasia Business News",
+      "url": "https://eurasiabusinessnews.com/2026/11/02/european-stock-markets-today-shares-rise-as-oil-falls-and-gold-rebounds/"
+    },
+    {
+      "name": "Trading Economics",
+      "url": "https://tradingeconomics.com/commodity/gold"
+    },
+    {
+      "name": "Upstox",
+      "url": "https://upstox.com/ipo/mainboard"
+    },
+    {
+      "name": "HDFC Sky",
+      "url": "https://hdfcsky.com/ipo/bls-polymers-ipo"
+    },
+    {
+      "name": "Siasat",
+      "url": "https://www.siasat.com/five-ipos-to-open-next-week-companies-eye-close-to-rs-2600-cr-3564131/"
+    },
+    {
+      "name": "Upstox News",
+      "url": "https://upstox.com/news/market-news/ipo/eaaa-india-alternatives-shares-list-at-0-6-premium-on-nse-here-s-how-much-investors-made-per-lot/article-202788/"
+    },
+    {
+      "name": "HDFC Sky",
+      "url": "https://hdfcsky.com/ipo/bombay-coated-special-steels-ipo"
+    },
+    {
+      "name": "Kotak Neo",
+      "url": "https://www.kotakneo.com/news/personal-finance/sip-contributions-hit-record-32490-crore-september-2026-mutual-fund-assets-fall/"
+    },
+    {
+      "name": "Fintechbiznews",
+      "url": "https://fintechbiznews.com/finserv-mf-amcs/mf-industrys-aum-down-5"
+    },
+    {
+      "name": "INDmoney",
+      "url": "https://www.indmoney.com/blog/mutual-funds/why-did-mutual-fund-aum-fall-4-44-lakh-crore-despite-record-si-ps"
+    },
+    {
+      "name": "Angel One",
+      "url": "https://www.angelone.in/news/mutual-funds/amfi-data-mutual-fund-mobilisation-climbs-to-15-25-lakh-crore-in-september-2026-debt-funds-see-1-83-lakh-crore-net-outflow"
+    },
+    {
+      "name": "Cafemutual NFO list",
+      "url": "https://cafemutual.com/news/nfo/38428-nfos-open-on-october-28"
+    },
+    {
+      "name": "Business Standard",
+      "url": "https://www.business-standard.com/finance/personal-finance/november-money-changes-what-pensioners-taxpayers-and-investors-must-know-126110200875_1.html"
+    },
+    {
+      "name": "Kubeerra risk factors",
+      "url": "https://www.kubeerra.com/risk-factors"
+    },
+    {
+      "name": "Kotak Neo",
+      "url": "https://www.kotakneo.com/news/market-news/q2-results-this-week/"
+    },
+    {
+      "name": "Business Standard",
+      "url": "https://www.business-standard.com/economy/news/weekly-policy-watch-manufacturing-services-pmi-forex-reserves-november-2026-126110200167_1.html"
+    }
+  ]
+}
