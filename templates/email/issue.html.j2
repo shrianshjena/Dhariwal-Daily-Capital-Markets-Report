@@ -1,16 +1,34 @@
-{#- Kubeerra Market Brief: email edition.
-    Outlook (Word engine) and Gmail safe: table layout, inline styles, system fonts,
-    no background images, no layout that depends on <style>. The <style> block only adds
-    progressive enhancements (narrower gutters, stacked tiles) where clients support it. -#}
+{#- Kubeerra Market Brief: email edition, rendered twice.
+    variant "gmail": navy masthead and footer, for Gmail (paste or the morning draft).
+    variant "outlook": light masthead and footer, so the text stays readable even when Outlook
+    drops text colours on paste; also carries the Outlook (Word engine) conditionals.
+    Both: left-aligned 640px column, table layout, inline styles, system fonts. Links go only to
+    kubeerra.com pages and the firm's email address; outside sources are named, never linked. -#}
 {%- set C = tokens.color -%}
 {%- set G = tokens.layout.emailGutter -%}
 {%- set W = tokens.layout.emailWidth -%}
-{%- set SANS = ("font-family:" ~ tokens.font.email.sans ~ ";")|safe -%}
+{%- set OL = variant == "outlook" -%}
+{#- Gmail inherits the font from the column, which keeps its file small; Outlook's Word engine
+    needs the font on every element. -#}
+{%- set FONT = ("font-family:" ~ tokens.font.email.sans ~ ";")|safe -%}
+{%- set SANS = (FONT if OL else "")|safe -%}
 {%- set MONO = ("font-family:" ~ tokens.font.email.mono ~ ";")|safe -%}
-{%- set LH = "mso-line-height-rule:exactly;"|safe -%}
+{%- set LH = ("mso-line-height-rule:exactly;" if OL else "")|safe -%}
+{%- if OL -%}
+{%- set T = {"mast_bg": C.surface.paper, "mast_title": C.brand.navy, "mast_soft": C.text.secondary,
+             "foot_bg": C.surface.soft, "foot_title": C.brand.navy, "foot_text": C.text.primary,
+             "foot_soft": C.text.secondary, "foot_link": C.brand.cobalt} -%}
+{%- else -%}
+{%- set T = {"mast_bg": C.brand.navy, "mast_title": C.text.inverse, "mast_soft": C.text.inverseSoft,
+             "foot_bg": C.brand.navy, "foot_title": C.text.inverse, "foot_text": C.text.inverse,
+             "foot_soft": C.text.inverseSoft, "foot_link": C.text.inverseLink} -%}
+{%- endif -%}
 {%- set meta = issue.meta -%}
-{%- macro rule(width, color) -%}
-<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td width="{{ width }}" height="2" bgcolor="{{ color }}" style="width:{{ width }}px;height:2px;background-color:{{ color }};font-size:0;line-height:0;">&nbsp;</td></tr></table>
+{%- macro rule(width, color, height=2) -%}
+<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td width="{{ width }}" height="{{ height }}" bgcolor="{{ color }}" style="width:{{ width }}px;height:{{ height }}px;background-color:{{ color }};font-size:0;line-height:0;">&nbsp;</td></tr></table>
+{%- endmacro -%}
+{%- macro bandrow(color) -%}
+<tr><td height="6" bgcolor="{{ color }}" style="height:6px;background-color:{{ color }};font-size:0;line-height:0;">&nbsp;</td></tr>
 {%- endmacro -%}
 {%- macro label(text, color, top=0) -%}
 <p style="margin:{{ top }}px 0 0 0;{{ MONO }}font-size:11px;line-height:16px;letter-spacing:1.2px;color:{{ color }};{{ LH }}">{{ text|upper }}</p>
@@ -25,20 +43,25 @@
 {%- macro para(text, top=12, size=16, color=None, weight=400) -%}
 <p style="margin:{{ top }}px 0 0 0;{{ SANS }}font-size:{{ size }}px;line-height:{{ (size * 1.56)|round|int }}px;font-weight:{{ weight }};color:{{ color or C.text.primary }};{{ LH }}">{{ text|t }}</p>
 {%- endmacro -%}
-{%- macro source(src, top=8, prefix="Source") -%}
-<p style="margin:{{ top }}px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.secondary }};{{ LH }}">{{ prefix|t }}: <a href="{{ src.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ src.name }}</a></p>
+{%- macro names(items) -%}{% for s in items %}{{ s.name }}{{ ", " if not loop.last }}{% endfor %}{%- endmacro -%}
+{%- macro srcline(items, top=8, prefix=None) -%}
+<p style="margin:{{ top }}px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.secondary }};{{ LH }}">{{ (prefix or ("Sources" if items|length > 1 else "Source"))|t }}: {{ names(items) }}</p>
 {%- endmacro -%}
-{%- macro srclist(items, top=6, prefix="Sources") -%}
-<p style="margin:{{ top }}px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.secondary }};{{ LH }}">{{ prefix }}: {% for s in items %}<a href="{{ s.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ s.name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
-{%- endmacro -%}
+{%- macro klink(link, color=None) -%}<a href="{{ link.url }}" style="color:{{ color or C.brand.cobalt }};text-decoration:underline;">{{ link.name }}</a>{%- endmacro -%}
 {%- macro th(text, align="left") -%}
 <th align="{{ align }}" style="padding:0 0 8px 0;border-bottom:1px solid {{ C.border.default }};{{ MONO }}font-size:11px;line-height:16px;letter-spacing:1px;font-weight:400;color:{{ C.text.secondary }};text-align:{{ align }};{{ LH }}">{{ text|upper }}</th>
 {%- endmacro -%}
 {%- macro bar(pct, color) -%}
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td width="{{ pct }}%" height="10" bgcolor="{{ color }}" style="width:{{ pct }}%;height:10px;background-color:{{ color }};font-size:0;line-height:0;">&nbsp;</td>{% if pct < 100 %}<td width="{{ 100 - pct }}%" height="10" style="width:{{ 100 - pct }}%;height:10px;font-size:0;line-height:0;">&nbsp;</td>{% endif %}</tr></table>
 {%- endmacro -%}
+{%- macro schemerow(name, detail, value, value_color=None) -%}
+<tr>
+<td valign="top" style="padding:10px 8px 10px 0;border-bottom:1px solid {{ C.border.default }};{{ SANS }}font-size:15px;line-height:21px;font-weight:600;color:{{ C.text.primary }};{{ LH }}">{{ name|t }}<br><span style="font-size:13px;line-height:19px;font-weight:400;color:{{ C.text.secondary }};">{{ detail|t }}</span></td>
+<td align="right" valign="top" style="padding:10px 0 10px 8px;border-bottom:1px solid {{ C.border.default }};{{ SANS }}font-size:15px;line-height:21px;font-weight:700;color:{{ value_color or C.text.primary }};white-space:nowrap;{{ LH }}">{{ value|safe }}</td>
+</tr>
+{%- endmacro -%}
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"{% if OL %} xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"{% endif %}>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -48,32 +71,33 @@
 <meta name="color-scheme" content="light">
 <meta name="supported-color-schemes" content="light">
 <title>{{ pub.name }} · {{ date_short }}</title>
-<!--[if mso]><noscript><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript><![endif]-->
+{% if OL %}<!--[if mso]><noscript><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript><![endif]-->{% endif %}
 <style>
 a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;}
 @media screen and (max-width:600px){.gut{padding-left:20px!important;padding-right:20px!important;}.h1{font-size:23px!important;line-height:28px!important;}.stack{display:block!important;width:100%!important;padding-left:0!important;padding-right:0!important;}}
 </style>
 </head>
-<body style="margin:0;padding:0;background-color:{{ C.surface.canvas }};word-spacing:normal;">
+<body style="margin:0;padding:0;background-color:{{ C.surface.paper }};word-spacing:normal;{{ FONT }}">
 <div style="display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;">{{ meta.preheader }}</div>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="{{ C.surface.canvas }}" style="width:100%;background-color:{{ C.surface.canvas }};">
-<tr><td align="center" style="padding:24px 8px;">
-<!--[if mso]><table role="presentation" width="{{ W }}" cellpadding="0" cellspacing="0" border="0" align="center"><tr><td><![endif]-->
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="{{ C.surface.paper }}" style="width:100%;max-width:{{ W }}px;text-align:left;background-color:{{ C.surface.paper }};border:1px solid {{ C.border.default }};">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+<tr><td align="left" style="padding:0;text-align:left;">
+{% if OL %}<!--[if mso]><table role="presentation" width="{{ W }}" cellpadding="0" cellspacing="0" border="0" align="left"><tr><td><![endif]-->{% endif %}
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="{{ C.surface.paper }}" style="width:100%;max-width:{{ W }}px;text-align:left;background-color:{{ C.surface.paper }};{{ FONT }}color:{{ C.text.primary }};">
 
 {#- Masthead -#}
-<tr><td class="gut" align="left" bgcolor="{{ C.brand.navy }}" style="text-align:left;padding:28px {{ G }}px 24px {{ G }}px;background-color:{{ C.brand.navy }};">
+{% if OL %}{{ bandrow(C.brand.navy) }}{% endif %}
+<tr><td class="gut" align="left" bgcolor="{{ T.mast_bg }}" style="text-align:left;padding:28px {{ G }}px 24px {{ G }}px;background-color:{{ T.mast_bg }};">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
-{% if logo_src %}<td width="48" valign="middle" style="width:48px;"><img src="{{ logo_src }}" width="48" height="48" alt="Kubeerra" style="display:block;width:48px;height:48px;border:0;outline:none;text-decoration:none;{{ SANS }}font-size:13px;font-weight:700;color:{{ C.text.inverse }};"></td>{% endif %}
+{% if logo_src %}<td width="48" valign="middle" style="width:48px;"><img src="{{ logo_src }}" width="48" height="48" alt="Kubeerra" style="display:block;width:48px;height:48px;border:0;outline:none;text-decoration:none;{{ SANS }}font-size:13px;font-weight:700;color:{{ T.mast_title }};"></td>{% endif %}
 <td valign="middle" style="padding-left:{{ 16 if logo_src else 0 }}px;">
-{{ label(pub.edition_name, C.text.inverseSoft) }}
-<h1 class="h1" style="margin:2px 0 0 0;{{ SANS }}font-size:27px;line-height:32px;font-weight:700;color:{{ C.text.inverse }};{{ LH }}">{{ pub.name }}</h1>
+{{ label(pub.edition_name, T.mast_soft) }}
+<h1 class="h1" style="margin:2px 0 0 0;{{ SANS }}font-size:27px;line-height:32px;font-weight:700;color:{{ T.mast_title }};{{ LH }}">{{ pub.name }}</h1>
 </td></tr></table>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-top:20px;">{{ rule(40, C.brand.cobalt) }}</td></tr></table>
-{{ label(meta.weekday ~ " " ~ date_long ~ ((" · " ~ meta.label) if meta.audience == "internal" else ""), C.text.inverseSoft, 12) }}
+{{ label(meta.weekday ~ " " ~ date_long ~ ((" · " ~ meta.label) if meta.audience == "internal" else ""), T.mast_soft, 12) }}
 </td></tr>
 
-{#- Registration line and as-of strip -#}
+{#- As-of strip -#}
 <tr><td class="gut" align="left" bgcolor="{{ C.surface.soft }}" style="text-align:left;padding:12px {{ G }}px;background-color:{{ C.surface.soft }};">
 <p style="margin:0;{{ MONO }}font-size:11px;line-height:16px;letter-spacing:0.8px;color:{{ C.text.secondary }};{{ LH }}">INDIA: {{ meta.india_as_of|upper }} · GLOBAL: {{ meta.global_as_of|upper }}</p>
 {% if meta.audience == "internal" %}<p style="margin:4px 0 0 0;{{ MONO }}font-size:11px;line-height:16px;letter-spacing:0.8px;font-weight:700;color:{{ C.status.down }};{{ LH }}">INTERNAL PILOT · RM AND MF TEAM ONLY · NOT FOR CLIENTS</p>{% endif %}
@@ -106,7 +130,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 {% endfor %}
 </table>
 {% if issue.snapshot.breadth %}{% set b = issue.snapshot.breadth %}{{ para("Breadth on the NSE: " ~ (b.advances|group) ~ " securities advanced and " ~ (b.declines|group) ~ " declined" ~ ((", " ~ (b.unchanged|group) ~ " unchanged") if b.get('unchanged') is not none else "") ~ ".", 12, 15, C.text.secondary) }}{% endif %}
-<p style="margin:6px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.secondary }};{{ LH }}">Data as of {{ issue.snapshot.as_of|t }}. Sources: {% for s in snapshot_sources %}<a href="{{ s.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ s.name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
+{{ srcline(snapshot_sources, 6, "Data as of " ~ issue.snapshot.as_of ~ ". " ~ ("Sources" if snapshot_sources|length > 1 else "Source")) }}
 </td></tr>
 
 {#- 02 Flows, currency and commodities -#}
@@ -120,7 +144,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 {{ label(t.label ~ (" · provisional" if t.provisional|default(false) else ""), C.text.secondary) }}
 <p style="margin:6px 0 0 0;{{ SANS }}font-size:24px;line-height:30px;font-weight:700;color:{{ t|figcolor }};white-space:nowrap;{{ LH }}">{{ t|figure }}</p>
 {% if t|chip %}<p style="margin:2px 0 0 0;{{ SANS }}font-size:14px;line-height:20px;font-weight:700;color:{{ (t|movement)|mvcolor }};white-space:nowrap;{{ LH }}">{{ (t|chip)|nb }}</p>{% endif %}
-<p style="margin:4px 0 0 0;{{ SANS }}font-size:13px;line-height:19px;color:{{ C.text.secondary }};{{ LH }}">{{ t.detail|t }}{% for s in t|srcs %} · <a href="{{ s.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ s.name }}</a>{% endfor %}</p>
+<p style="margin:4px 0 0 0;{{ SANS }}font-size:13px;line-height:19px;color:{{ C.text.secondary }};{{ LH }}">{{ t.detail|t }} · {{ names(t|srcs) }}</p>
 </td>
 {% endfor %}
 {% if pair|length == 1 %}<td class="stack" width="50%" style="width:50%;border-top:1px solid {{ C.border.default }};">&nbsp;</td>{% endif %}
@@ -144,7 +168,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 {% endfor %}
 </table>
 {% endfor %}
-{{ source(issue.sectors.source, 10, "Change on the day, " ~ issue.sectors.as_of ~ ". Source") }}
+{{ srcline([issue.sectors.source], 10, "Change on the day, " ~ issue.sectors.as_of ~ ". Source") }}
 </td></tr>
 
 {#- 04 Top stories -#}
@@ -156,7 +180,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 <h3 style="margin:6px 0 0 0;{{ SANS }}font-size:18px;line-height:25px;font-weight:700;color:{{ C.text.primary }};{{ LH }}">{{ s.headline|t }}</h3>
 {{ para(s.what, 8) }}
 <p style="margin:10px 0 0 0;{{ SANS }}font-size:16px;line-height:25px;color:{{ C.text.primary }};{{ LH }}"><span style="{{ MONO }}font-size:11px;line-height:16px;letter-spacing:1.2px;color:{{ C.brand.tealDark }};">WHY IT MATTERS&nbsp;&nbsp;</span>{{ s.why|t }}</p>
-{% if s.get('also') %}{{ srclist(s|srcs, 8) }}{% else %}{{ source(s.source) }}{% endif %}
+{{ srcline(s|srcs) }}
 </td></tr>
 {% endfor %}
 
@@ -174,7 +198,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 {% endfor %}
 </table>
 {{ para(issue.global.note, 12, 15, C.text.secondary) }}
-{{ srclist(global_sources) }}
+{{ srcline(global_sources, 6) }}
 </td></tr>
 
 {#- 06 IPO desk -#}
@@ -183,53 +207,76 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 {% for ipo in issue.ipos["items"] %}
 <p style="margin:14px 0 0 0;{{ SANS }}font-size:16px;line-height:23px;font-weight:700;color:{{ C.text.primary }};{{ LH }}">{{ ipo.company }}&nbsp;&nbsp;<span style="{{ MONO }}font-size:11px;line-height:16px;letter-spacing:1px;font-weight:400;color:{{ C.brand.tealDark }};">{{ ipo.status|upper }}</span></p>
 {% for f in ipo.facts %}<p style="margin:3px 0 0 0;{{ SANS }}font-size:14px;line-height:21px;color:{{ C.text.secondary }};{{ LH }}">{{ f|t }}</p>{% endfor %}
-{% if ipo.get('also') %}{{ srclist(ipo|srcs, 3) }}{% else %}{{ source(ipo.source, 3) }}{% endif %}
+{{ srcline(ipo|srcs, 3) }}
 {% endfor %}
 {{ para(issue.ipos.note, 14, 13, C.text.secondary) }}
 </td></tr>
 
 {#- 07 Mutual fund corner -#}
-{{ section("07", "Mutual fund corner", issue.mf.headline) }}
+{% set mf = issue.mf %}
+{{ section("07", "Mutual fund corner", mf.headline) }}
 <tr><td class="gut" align="left" style="text-align:left;padding:16px {{ G }}px 0 {{ G }}px;">
-{{ label("Industry data · " ~ issue.mf.period, C.text.secondary) }}
+{{ label("Industry data · " ~ mf.period, C.text.secondary) }}
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;margin-top:6px;">
-{% for st in issue.mf.stats %}
+{% for st in mf.stats %}
 <tr>
 <td valign="top" style="padding:10px 8px 10px 0;border-bottom:1px solid {{ C.border.default }};{{ SANS }}font-size:15px;line-height:21px;color:{{ C.text.primary }};{{ LH }}">{{ st.label }}<br><span style="font-size:13px;line-height:19px;color:{{ C.text.secondary }};">{{ st.detail|t }}</span></td>
 <td align="right" valign="top" style="padding:10px 0 10px 8px;border-bottom:1px solid {{ C.border.default }};{{ SANS }}font-size:20px;line-height:26px;font-weight:700;color:{{ st|figcolor }};white-space:nowrap;{{ LH }}">{{ st|figure }}{% if st|chip %}<br><span style="font-size:13px;line-height:19px;color:{{ (st|movement)|mvcolor }};">{{ (st|chip)|nb }}</span>{% endif %}</td>
 </tr>
 {% endfor %}
 </table>
-{% set mfsrc = issue.mf.stats|unique_sources %}{% if mfsrc|length > 1 %}{{ srclist(mfsrc, 6) }}{% elif mfsrc %}{{ source(mfsrc[0], 6) }}{% endif %}
-{% for h in issue.mf.highlights %}{{ para(h.text, 12, 15) }}{% endfor %}
-{% if issue.mf.get('nfo_summary') or show_nfo_names %}
+{% set mfsrc = mf.stats|unique_sources %}{% if mfsrc %}{{ srcline(mfsrc, 6) }}{% endif %}
+{% if mf.highlights %}
+{{ label("Category trends", C.text.secondary, 22) }}
+{% for h in mf.highlights %}<p style="margin:{{ 8 if loop.first else 10 }}px 0 0 0;{{ SANS }}font-size:15px;line-height:23px;color:{{ C.text.primary }};{{ LH }}">{{ h.text|t }} <span style="font-size:13px;line-height:20px;color:{{ C.text.secondary }};">{{ h.source.name }}</span></p>{% endfor %}
+{% endif %}
+{% if mf.get('inflow_leaders') %}
+{% set il = mf.inflow_leaders %}
+{{ label("Largest net inflows · " ~ il.period, C.text.secondary, 22) }}
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;margin-top:6px;">
+<tr>{{ th("Scheme") }}{{ th("Net inflow", "right") }}</tr>
+{% for x in il["items"] %}{{ schemerow(x.scheme, x.category ~ " · Riskometer: " ~ x.riskometer, x.net_inflow_cr|crore) }}{% endfor %}
+</table>
+<p style="margin:8px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.secondary }};{{ LH }}">{% if il.get('basis') %}{{ il.basis|t }}. {% endif %}Listed by reported net inflows, not a recommendation; each scheme's risks and terms are in its {{ klink(kb.sid) }}. Riskometers from each fund house's latest disclosure. {{ "Sources" if (il|srcs)|length > 1 else "Source" }}: {{ names(il|srcs) }}</p>
+{% endif %}
+{% if mf.get('etfs') %}
+{% set ef = mf.etfs %}
+{{ label("Most traded ETFs on NSE · " ~ ef.as_of, C.text.secondary, 22) }}
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;margin-top:6px;">
+<tr>{{ th("ETF") }}{{ th("Turnover", "right") }}</tr>
+{% for x in ef["items"] %}{{ schemerow(x.name, x.category ~ " · Riskometer: " ~ x.riskometer ~ ((" · " ~ (x.change_pct|arrow) ~ " " ~ (x.change_pct|pct) ~ " on the day") if x.get('change_pct') is not none else ""), x.turnover_cr|crore) }}{% endfor %}
+</table>
+<p style="margin:8px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.secondary }};{{ LH }}">{% if ef.get('note') %}{{ ef.note|t }} {% endif %}Ranked by turnover on the exchange, not a recommendation. {{ "Sources" if (ef|srcs)|length > 1 else "Source" }}: {{ names(ef|srcs) }}</p>
+{% endif %}
+{% if mf.get('fund_news') %}
+{{ label("Fund house news", C.text.secondary, 22) }}
+{% for n in mf.fund_news %}<p style="margin:{{ 8 if loop.first else 10 }}px 0 0 0;{{ SANS }}font-size:15px;line-height:23px;color:{{ C.text.primary }};{{ LH }}"><span style="font-weight:700;">{{ n.who }}, {{ n.date|t }}.</span> {{ n.text|t }}{% if n.get('riskometer') %} Riskometer: {{ n.riskometer }}.{% endif %} <span style="font-size:13px;line-height:20px;color:{{ C.text.secondary }};">{{ n.source.name }}</span></p>{% endfor %}
+{% endif %}
+{% if mf.get('nfo_summary') or show_nfo_names %}
 {{ label("New fund offers", C.text.secondary, 22) }}
-{% if issue.mf.get('nfo_summary') %}<p style="margin:8px 0 0 0;{{ SANS }}font-size:15px;line-height:23px;color:{{ C.text.primary }};{{ LH }}">{{ issue.mf.nfo_summary.text|t }} <a href="{{ issue.mf.nfo_summary.source.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ issue.mf.nfo_summary.source.name }}</a></p>{% endif %}
 {% if show_nfo_names %}
-{% for n in issue.mf.nfos %}
-<p style="margin:10px 0 0 0;{{ SANS }}font-size:15px;line-height:22px;font-weight:600;color:{{ C.text.primary }};{{ LH }}">{{ n.scheme }}</p>
-<p style="margin:2px 0 0 0;{{ SANS }}font-size:14px;line-height:21px;color:{{ C.text.secondary }};{{ LH }}">{{ n.category }} · {{ n.dates|t }}{% if n.get('min_investment') %} · Minimum {{ n.min_investment }}{% endif %}{% if n.get('riskometer') %} · Riskometer: {{ n.riskometer }}{% endif %} · <a href="{{ n.source.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ n.source.name }}</a></p>
-{% endfor %}
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;margin-top:6px;">
+{% for n in mf.nfos %}{{ schemerow(n.scheme, n.category ~ " · Riskometer: " ~ n.riskometer ~ ((" · Minimum " ~ n.min_investment) if n.get('min_investment') else "") ~ " · " ~ n.source.name, n.dates) }}{% endfor %}
+</table>
+<p style="margin:8px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.secondary }};{{ LH }}">Facts only, not a recommendation; each scheme's risks and terms are in its {{ klink(kb.sid) }}.</p>
+{% elif mf.get('nfo_summary') %}<p style="margin:8px 0 0 0;{{ SANS }}font-size:15px;line-height:23px;color:{{ C.text.primary }};{{ LH }}">{{ mf.nfo_summary.text|t }} <span style="font-size:13px;line-height:20px;color:{{ C.text.secondary }};">{{ mf.nfo_summary.source.name }}</span></p>{% endif %}
 {% endif %}
-{% endif %}
-{% if issue.mf.regulatory %}
+{% if mf.regulatory %}
 {{ label("Rule changes for investors", C.text.secondary, 22) }}
-{% for r in issue.mf.regulatory %}
-<p style="margin:10px 0 0 0;{{ SANS }}font-size:15px;line-height:23px;color:{{ C.text.primary }};{{ LH }}"><span style="font-weight:700;">{{ r.body }}, {{ r.date|t }}.</span> {{ r.text|t }} <a href="{{ r.source.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ r.source.name }}</a></p>
+{% for r in mf.regulatory %}
+<p style="margin:10px 0 0 0;{{ SANS }}font-size:15px;line-height:23px;color:{{ C.text.primary }};{{ LH }}"><span style="font-weight:700;">{{ r.body }}, {{ r.date|t }}.</span> {{ r.text|t }} <span style="font-size:13px;line-height:20px;color:{{ C.text.secondary }};">{{ r.source.name }}</span></p>
 {% endfor %}
 {% endif %}
+{% if mf.get('link') %}<p style="margin:14px 0 0 0;{{ SANS }}font-size:14px;line-height:21px;font-weight:600;color:{{ C.text.primary }};{{ LH }}">Read more: {{ klink(mf.link) }}</p>{% endif %}
 </td></tr>
 
 {#- 08 Learn -#}
 {{ section("08", "Learn · " ~ issue.learn.id, issue.learn.title) }}
-<tr><td class="gut" align="left" style="text-align:left;padding:16px {{ G }}px 0 {{ G }}px;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
-<td bgcolor="{{ C.brand.paleBlue }}" style="padding:18px 20px 20px 20px;background-color:{{ C.brand.paleBlue }};border-left:4px solid {{ C.brand.cobalt }};">
-{% for p in issue.learn.paragraphs %}{{ para(p, 0 if loop.first else 10, 15) }}{% endfor %}
+<tr><td class="gut" align="left" style="text-align:left;padding:8px {{ G }}px 0 {{ G }}px;">
+{% for p in issue.learn.paragraphs %}{{ para(p, 8 if loop.first else 10, 16) }}{% endfor %}
 {% if issue.learn.get('illustration') %}{{ para(issue.learn.illustration, 10, 13, C.text.secondary) }}{% endif %}
-{% if issue.learn.get('link') %}<p style="margin:12px 0 0 0;{{ SANS }}font-size:14px;line-height:21px;font-weight:600;color:{{ C.text.primary }};{{ LH }}">Read more: <a href="{{ issue.learn.link.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;">{{ issue.learn.link.name }}</a></p>{% endif %}
-{% if issue.learn.get('sources') %}{{ srclist(issue.learn.sources, 8) }}{% endif %}
-</td></tr></table>
+{% if issue.learn.get('link') %}<p style="margin:12px 0 0 0;{{ SANS }}font-size:15px;line-height:22px;font-weight:600;color:{{ C.text.primary }};{{ LH }}">Read more: {{ klink(issue.learn.link) }}</p>{% endif %}
+{% if issue.learn.get('sources') %}{{ srcline(issue.learn.sources, 8) }}{% endif %}
 </td></tr>
 
 {#- 09 Day ahead -#}
@@ -239,7 +286,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 {% for d in issue.day_ahead %}
 <tr>
 <td width="96" valign="top" style="width:96px;padding:10px 12px 10px 0;border-bottom:1px solid {{ C.border.default }};{{ MONO }}font-size:12px;line-height:20px;color:{{ C.text.secondary }};white-space:nowrap;{{ LH }}">{{ d.time|upper }}</td>
-<td valign="top" style="padding:10px 0;border-bottom:1px solid {{ C.border.default }};{{ SANS }}font-size:15px;line-height:21px;color:{{ C.text.primary }};{{ LH }}">{{ d.event|t }}{% for s in d|srcs %}{{ " " if loop.first else ", " }}<a href="{{ s.url }}" style="color:{{ C.brand.cobalt }};text-decoration:underline;font-size:13px;">{{ s.name }}</a>{% endfor %}</td>
+<td valign="top" style="padding:10px 0;border-bottom:1px solid {{ C.border.default }};{{ SANS }}font-size:15px;line-height:21px;color:{{ C.text.primary }};{{ LH }}">{{ d.event|t }}{% if d|srcs %} <span style="font-size:13px;line-height:20px;color:{{ C.text.secondary }};">{{ names(d|srcs) }}</span>{% endif %}</td>
 </tr>
 {% endfor %}
 </table>
@@ -247,19 +294,20 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 
 {#- Footer -#}
 <tr><td style="padding:40px 0 0 0;font-size:0;line-height:0;">&nbsp;</td></tr>
-<tr><td class="gut" align="left" bgcolor="{{ C.brand.navy }}" style="text-align:left;padding:32px {{ G }}px 32px {{ G }}px;background-color:{{ C.brand.navy }};">
-<p style="margin:0;{{ SANS }}font-size:16px;line-height:22px;font-weight:700;color:{{ C.text.inverse }};{{ LH }}">{{ pub.name }}</p>
-<p style="margin:8px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.inverseSoft }};{{ LH }}">Published by {{ pub.publisher }}, {{ pub.registration.tagline }}, {{ pub.registration.arn }} (EUIN {{ pub.registration.euin }}).</p>
-{% for d in pub.disclaimer %}<p style="margin:8px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.inverseSoft }};{{ LH }}">{{ d }}</p>{% endfor %}
-<p style="margin:12px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;font-weight:700;color:{{ C.text.inverse }};{{ LH }}">{{ pub.standard_warning }}</p>
+{% if OL %}{{ bandrow(C.brand.navy) }}{% endif %}
+<tr><td class="gut" align="left" bgcolor="{{ T.foot_bg }}" style="text-align:left;padding:32px {{ G }}px 32px {{ G }}px;background-color:{{ T.foot_bg }};">
+<p style="margin:0;{{ SANS }}font-size:16px;line-height:22px;font-weight:700;color:{{ T.foot_title }};{{ LH }}">{{ pub.name }}</p>
+<p style="margin:8px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ T.foot_soft }};{{ LH }}">Published by {{ pub.publisher }}, {{ pub.registration.tagline }}, {{ pub.registration.arn }} (EUIN {{ pub.registration.euin }}).</p>
+{% for d in pub.disclaimer %}<p style="margin:8px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ T.foot_soft }};{{ LH }}">{{ d }}</p>{% endfor %}
+<p style="margin:12px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;font-weight:700;color:{{ T.foot_text }};{{ LH }}">{{ pub.standard_warning }}</p>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-top:20px;">{{ rule(40, C.brand.cobalt) }}</td></tr></table>
-<p style="margin:16px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.inverseSoft }};{{ LH }}">Phone {{ pub.contacts.phone|t }} · WhatsApp {{ pub.contacts.whatsapp|t }} · <a href="mailto:{{ pub.contacts.email }}" style="color:{{ C.text.inverseLink }};text-decoration:underline;">{{ pub.contacts.email }}</a><br>{{ pub.contacts.hours }}<br>{{ pub.contacts.address }}</p>
-<p style="margin:12px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.inverseSoft }};{{ LH }}">{% for l in pub.links %}<a href="{{ l.url }}" style="color:{{ C.text.inverseLink }};text-decoration:underline;">{{ l.label|nb }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
-{% if meta.audience == "client" and pub.get('unsubscribe') %}<p style="margin:12px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.inverseSoft }};{{ LH }}">{{ pub.unsubscribe }} <a href="mailto:{{ pub.contacts.email }}?subject=Unsubscribe" style="color:{{ C.text.inverseLink }};text-decoration:underline;">{{ pub.contacts.email }}</a>.</p>{% endif %}
-{% if meta.audience == "internal" %}<p style="margin:16px 0 0 0;{{ MONO }}font-size:11px;line-height:16px;letter-spacing:1px;color:{{ C.text.inverseSoft }};{{ LH }}">{{ pub.pilot_note|upper }}</p>{% endif %}
+<p style="margin:16px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ T.foot_soft }};{{ LH }}">Phone {{ pub.contacts.phone|t }} · WhatsApp {{ pub.contacts.whatsapp|t }} · <a href="mailto:{{ pub.contacts.email }}" style="color:{{ T.foot_link }};text-decoration:underline;">{{ pub.contacts.email }}</a><br>{{ pub.contacts.hours }}<br>{{ pub.contacts.address }}</p>
+<p style="margin:12px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ T.foot_soft }};{{ LH }}">{% for l in pub.links %}<a href="{{ l.url }}" style="color:{{ T.foot_link }};text-decoration:underline;">{{ l.label|nb }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+{% if meta.audience == "client" and pub.get('unsubscribe') %}<p style="margin:12px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ T.foot_soft }};{{ LH }}">{{ pub.unsubscribe }} <a href="mailto:{{ pub.contacts.email }}?subject=Unsubscribe" style="color:{{ T.foot_link }};text-decoration:underline;">{{ pub.contacts.email }}</a>.</p>{% endif %}
+{% if meta.audience == "internal" %}<p style="margin:16px 0 0 0;{{ MONO }}font-size:11px;line-height:16px;letter-spacing:1px;color:{{ T.foot_soft }};{{ LH }}">{{ pub.pilot_note|upper }}</p>{% endif %}
 </td></tr>
 </table>
-<!--[if mso]></td></tr></table><![endif]-->
+{% if OL %}<!--[if mso]></td></tr></table><![endif]-->{% endif %}
 </td></tr>
 </table>
 </body>

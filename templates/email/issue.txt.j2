@@ -1,4 +1,5 @@
 {%- set meta = issue.meta -%}
+{%- macro names(items) -%}{% for s in items %}{{ s.name }}{{ ", " if not loop.last }}{% endfor %}{%- endmacro -%}
 {{ pub.name|upper }} · {{ pub.edition_name|upper }}
 {{ meta.weekday }} {{ date_long }}{% if meta.audience == "internal" %} · {{ meta.label }}{% endif +%}
 India: {{ meta.india_as_of }} · Global: {{ meta.global_as_of }}
@@ -19,12 +20,12 @@ THE MORNING IN BRIEF
 {% if issue.snapshot.breadth %}
 Breadth on the NSE: {{ issue.snapshot.breadth.advances|group }} advanced, {{ issue.snapshot.breadth.declines|group }} declined.
 {% endif %}
-Data as of {{ issue.snapshot.as_of }}. Sources: {% for s in snapshot_sources %}{{ s.name }} ({{ s.url }}){{ '; ' if not loop.last else '' }}{% endfor +%}
+Data as of {{ issue.snapshot.as_of }}. Sources: {{ names(snapshot_sources) }}
 
 02 · FLOWS, CURRENCY AND COMMODITIES
 {{ issue.flows.headline }}
 {% for t in issue.flows.tiles %}
-{{ t.label }}{{ " (provisional)" if t.provisional|default(false) else "" }}: {{ t|figure }}{% if t|chip %} ({{ t|chip }}){% endif %}. {{ t.detail }}. Source: {% for x in t|srcs %}{{ x.name }} ({{ x.url }}){{ "; " if not loop.last }}{% endfor +%}
+{{ t.label }}{{ " (provisional)" if t.provisional|default(false) else "" }}: {{ t|figure }}{% if t|chip %} ({{ t|chip }}){% endif %}. {{ t.detail }}. Source: {{ names(t|srcs) }}
 {% endfor %}
 
 03 · SECTOR SCOREBOARD
@@ -33,7 +34,7 @@ Strongest: {% for s in sectors.top %}{{ s.name }} {{ s.change_pct|pct }}{{ "; " 
 
 Weakest: {% for s in sectors.bottom %}{{ s.name }} {{ s.change_pct|pct }}{{ "; " if not loop.last else "" }}{% endfor %}
 
-Change on the day, {{ issue.sectors.as_of }}. Source: {{ issue.sectors.source.name }} ({{ issue.sectors.source.url }})
+Change on the day, {{ issue.sectors.as_of }}. Source: {{ issue.sectors.source.name }}
 
 04 · TOP STORIES
 {% for s in issue.stories %}
@@ -41,7 +42,7 @@ Change on the day, {{ issue.sectors.as_of }}. Source: {{ issue.sectors.source.na
 [{{ s.topic }} · {{ s.relevance }}] {{ s.headline }}
 {{ s.what }}
 Why it matters: {{ s.why }}
-Source: {% for x in s|srcs %}{{ x.name }} ({{ x.url }}){{ "; " if not loop.last }}{% endfor +%}
+Source: {{ names(s|srcs) }}
 {% endfor %}
 
 05 · GLOBAL MARKETS
@@ -50,7 +51,7 @@ Source: {% for x in s|srcs %}{{ x.name }} ({{ x.url }}){{ "; " if not loop.last 
 {{ "%-28s"|format(g.region ~ " · " ~ g.name) }}{{ "%12s"|format(g.close|level) }}{{ "%9s"|format(g.change_pct|pct) }}  ({{ g.as_of }})
 {% endfor %}
 {{ issue.global.note }}
-Sources: {% for s in global_sources %}{{ s.name }} ({{ s.url }}){{ '; ' if not loop.last else '' }}{% endfor +%}
+Sources: {{ names(global_sources) }}
 
 06 · IPO DESK
 {{ issue.ipos.headline }}
@@ -60,35 +61,71 @@ Sources: {% for s in global_sources %}{{ s.name }} ({{ s.url }}){{ '; ' if not l
 {% for f in ipo.facts %}
 {{ f }}
 {% endfor %}
-Source: {% for x in ipo|srcs %}{{ x.name }} ({{ x.url }}){{ "; " if not loop.last }}{% endfor +%}
+Source: {{ names(ipo|srcs) }}
 {% endfor %}
 {{ issue.ipos.note }}
 
 07 · MUTUAL FUND CORNER
-{{ issue.mf.headline }}
-Industry data, {{ issue.mf.period }}:
-{% for st in issue.mf.stats %}
+{% set mf = issue.mf %}
+{{ mf.headline }}
+Industry data, {{ mf.period }}:
+{% for st in mf.stats %}
 - {{ st.label }}: {{ st|figure }}{% if st|chip %} ({{ st|chip }}){% endif %}. {{ st.detail }}
 {% endfor %}
-{% for h in issue.mf.highlights %}
-{{ h.text }}
+Source: {{ names(mf.stats|unique_sources) }}
+{% if mf.highlights %}
+
+Category trends:
+{% for h in mf.highlights %}
+- {{ h.text }} ({{ h.source.name }})
 {% endfor %}
-{% if issue.mf.get('nfo_summary') or show_nfo_names %}
+{% endif %}
+{% if mf.get('inflow_leaders') %}
+{% set il = mf.inflow_leaders %}
+
+Largest net inflows, {{ il.period }}:
+{% for x in il["items"] %}
+- {{ x.scheme }} ({{ x.category }}; riskometer: {{ x.riskometer }}): {{ x.net_inflow_cr|crore }}
+{% endfor %}
+{% if il.get('basis') %}{{ il.basis }}. {% endif %}Listed by reported net inflows, not a recommendation; each scheme's risks and terms are in its scheme information document ({{ kb.sid.url }}). Source: {{ names(il|srcs) }}
+{% endif %}
+{% if mf.get('etfs') %}
+{% set ef = mf.etfs %}
+
+Most traded ETFs on NSE, {{ ef.as_of }}:
+{% for x in ef["items"] %}
+- {{ x.name }} ({{ x.category }}; riskometer: {{ x.riskometer }}): turnover {{ x.turnover_cr|crore }}{% if x.get('change_pct') is not none %}, {{ x.change_pct|pct }} on the day{% endif +%}
+{% endfor %}
+{% if ef.get('note') %}{{ ef.note }} {% endif %}Ranked by turnover on the exchange, not a recommendation. Source: {{ names(ef|srcs) }}
+{% endif %}
+{% if mf.get('fund_news') %}
+
+Fund house news:
+{% for n in mf.fund_news %}
+- {{ n.who }}, {{ n.date }}: {{ n.text }}{% if n.get('riskometer') %} Riskometer: {{ n.riskometer }}.{% endif %} ({{ n.source.name }})
+{% endfor %}
+{% endif %}
+{% if mf.get('nfo_summary') or show_nfo_names %}
+
 New fund offers:
-{% if issue.mf.get('nfo_summary') %}
-{{ issue.mf.nfo_summary.text }} Source: {{ issue.mf.nfo_summary.source.name }} ({{ issue.mf.nfo_summary.source.url }})
-{% endif %}
 {% if show_nfo_names %}
-{% for n in issue.mf.nfos %}
-- {{ n.scheme }}: {{ n.category }}, {{ n.dates }}. Riskometer: {{ n.riskometer }}. {{ n.source.url }}
+{% for n in mf.nfos %}
+- {{ n.scheme }}: {{ n.category }}, {{ n.dates }}. Riskometer: {{ n.riskometer }}. ({{ n.source.name }})
 {% endfor %}
+Facts only, not a recommendation; each scheme's risks and terms are in its scheme information document ({{ kb.sid.url }}).
+{% elif mf.get('nfo_summary') %}
+{{ mf.nfo_summary.text }} ({{ mf.nfo_summary.source.name }})
 {% endif %}
 {% endif %}
-{% if issue.mf.regulatory %}
+{% if mf.regulatory %}
+
 Rule changes for investors:
-{% for r in issue.mf.regulatory %}
-- {{ r.body }}, {{ r.date }}: {{ r.text }} {{ r.source.url }}
+{% for r in mf.regulatory %}
+- {{ r.body }}, {{ r.date }}: {{ r.text }} ({{ r.source.name }})
 {% endfor %}
+{% endif %}
+{% if mf.get('link') %}
+Read more: {{ mf.link.name }} ({{ mf.link.url }})
 {% endif %}
 
 08 · LEARN · {{ issue.learn.id }}
@@ -103,13 +140,13 @@ Rule changes for investors:
 Read more: {{ issue.learn.link.name }} ({{ issue.learn.link.url }})
 {% endif %}
 {% if issue.learn.get('sources') %}
-Sources: {% for s in issue.learn.sources %}{{ s.name }} ({{ s.url }}){{ '; ' if not loop.last else '' }}{% endfor +%}
+Sources: {{ names(issue.learn.sources) }}
 {% endif %}
 
 09 · DAY AHEAD
 {{ issue.get("day_ahead_title") or ("On the calendar for " ~ meta.weekday ~ " " ~ date_short) }}
 {% for d in issue.day_ahead %}
-{{ "%-16s"|format(d.time) }}{{ d.event }}{% for x in d|srcs %}{{ " Source: " if loop.first else "; " }}{{ x.name }} ({{ x.url }}){% endfor +%}
+{{ "%-16s"|format(d.time) }}{{ d.event }}{% if d|srcs %} ({{ names(d|srcs) }}){% endif +%}
 {% endfor %}
 
 ------------------------------------------------------------

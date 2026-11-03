@@ -1,5 +1,12 @@
 # Rules shared by every gatherer (referenced by each agent file)
 
+- Web access: the owner authorises opening any public website the work needs (3 Nov 2026).
+  The morning run is unattended and cannot answer permission prompts, so reach pages through
+  WebSearch results or links on pages you have already opened, rather than typing addresses.
+- Named schemes (largest net inflows, ETF activity, NFOs, fund house news) always carry the
+  scheme's category and riskometer level from the fund house's own document, never returns or
+  performance figures, and never the words best, top, popular or trending about a scheme.
+
 - Every figure comes from a page you opened with WebFetch, or from WebSearch results that
   clearly refer to the right date. Never write a figure from memory or estimate it; return
   null with a reason instead.

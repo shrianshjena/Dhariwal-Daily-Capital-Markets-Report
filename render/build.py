@@ -186,6 +186,7 @@ def build_env(tokens):
         host=lambda url: urlparse(url).netloc.removeprefix("www."),
         t=glue, nb=nobreak, movement=movement, is_flow=is_flow, mvcolor=mvcolor, figcolor=figcolor,
         chip=chip, bp=fmt.bp, srcs=srcs, unique_sources=unique_sources,
+        crore=lambda v: fmt.figure(v, "crore"),
     )
     return env
 
@@ -235,16 +236,20 @@ def main():
     snapshot_sources = list({s['source']['url']: s['source'] for s in issue['snapshot']['indices']}.values())
     global_sources = list({s['url']: s for s in [g['source'] for g in issue['global']['items']]
                            + issue['global'].get('note_sources', [])}.values())
-    # Scheme names appear only in the internal edition, and only when every NFO carries its riskometer
+    # NFO scheme names render (in every edition, D-042) only when every listed NFO carries its riskometer
     nfos = issue["mf"].get("nfos") or []
-    show_nfo_names = issue["meta"].get("audience") == "internal" and bool(nfos) and all(n.get("riskometer") for n in nfos)
+    show_nfo_names = bool(nfos) and all(n.get("riskometer") for n in nfos)
     ctx = dict(issue=issue, pub=pub, tokens=tokens, sectors=sector_view(issue), snapshot_sources=snapshot_sources,
-               global_sources=global_sources, show_nfo_names=show_nfo_names,
+               global_sources=global_sources, show_nfo_names=show_nfo_names, kb=pub["kubeerra_links"],
                date_long=f"{day.day} {day:%B %Y}", date_short=f"{day.day} {day:%b %Y}")
 
-    # Email HTML (the send build) and plain text
-    email_html = compact(env.get_template("email/issue.html.j2").render(**ctx, logo_src=logo_url or ""))
-    (out / f"{stem}.html").write_text(email_html, encoding="utf-8")
+    # Email HTML in two versions (D-040): Gmail keeps the navy masthead; Outlook uses a light one so
+    # its text stays readable when Outlook drops colours on paste. The old single file is removed.
+    email = env.get_template("email/issue.html.j2")
+    for variant in ("gmail", "outlook"):
+        html = compact(email.render(**ctx, variant=variant, logo_src=logo_url or ""))
+        (out / f"{stem}-{variant}.html").write_text(html, encoding="utf-8")
+    (out / f"{stem}.html").unlink(missing_ok=True)
     text = env.get_template("email/issue.txt.j2").render(**ctx)
     (out / f"{stem}.txt").write_text(text.strip() + "\n", encoding="utf-8")
 
@@ -272,16 +277,24 @@ def main():
     if not args.no_previews:
         local_logo = (ROOT / pub["assets"]["logo_email_local"]).resolve()
         data_uri = "data:image/png;base64," + base64.b64encode(local_logo.read_bytes()).decode()
-        preview_html = compact(env.get_template("email/issue.html.j2").render(**ctx, logo_src=data_uri))
-        for width, name in ((704, "email-desktop"), (390, "email-phone")):
+        for stale in ("email-desktop.png", "email-phone.png"):  # single-version previews before D-040
+            (out / "preview" / stale).unlink(missing_ok=True)
+        previews = {}
+        for variant in ("gmail", "outlook"):
+            previews[variant] = compact(email.render(**ctx, variant=variant, logo_src=data_uri))
+        # What a reader sees if Outlook drops every text colour on paste: all text falls back to black
+        previews["outlook-nocolour"] = re.sub(r"(?<![-\w])color:[^;\"]*;?", "", previews["outlook"])
+        jobs = (("gmail", 704, "gmail-desktop"), ("gmail", 390, "gmail-phone"),
+                ("outlook", 704, "outlook-desktop"), ("outlook-nocolour", 704, "outlook-nocolour"))
+        for key, width, name in jobs:
             pdf_path = out / "preview" / f"{name}.pdf"
             # presentational_hints: honour width, bgcolor and align attributes as email clients do
-            HTML(string=preview_html, base_url=str(ROOT)).write_pdf(
+            HTML(string=previews[key], base_url=str(ROOT)).write_pdf(
                 pdf_path, presentational_hints=True,
                 stylesheets=[CSS(string=f"@page {{ size: {width}px 20000px; margin: 0 }}")])
             run(["pdftoppm", "-png", "-r", "96", "-singlefile", str(pdf_path), str(out / "preview" / name)])
             pdf_path.unlink()
-            trim_png(out / "preview" / f"{name}.png")
+            trim_png(out / "preview" / f"{name}.png", background=(255, 255, 255))
         for stale in (out / "preview").glob("pdf-page-*.png"):  # page count can shrink between builds
             stale.unlink()
         run(["pdftoppm", "-png", "-r", "60", str(out / f"{stem}.pdf"), str(out / "preview" / "pdf-page")])

@@ -1,42 +1,55 @@
 # Sending the Kubeerra Market Brief
 
-Each issue produces two files in `out/<date>/`:
+Each issue produces these files (in `out/<date>/` during the run, and in `deliverables/` on
+GitHub, where the 14 most recent issues are kept):
 
-- `kubeerra-market-brief-<date>.html`: the email, built for classic Outlook, the new Outlook,
-  Outlook on the web and Gmail.
+- `kubeerra-market-brief-<date>-gmail.html`: the email for Gmail (navy masthead and footer).
+- `kubeerra-market-brief-<date>-outlook.html`: the email for Outlook, classic, new or on the web
+  (light masthead and footer, so it stays readable if Outlook drops text colours on paste).
 - `kubeerra-market-brief-<date>.pdf`: the A4 edition, attached to the email and archived.
+- The WhatsApp card (PNG) and its caption, and the plain-text edition.
+
+The morning run also leaves an unsent Gmail draft with the email already in it (D-043).
 
 ## Before sending
 
-1. Open `check-report.md`: it must contain no FAIL lines.
+1. Open the check report: it must contain no FAIL lines.
 2. Confirm the headline figures listed under "Figures to confirm" against their sources.
-3. Open the HTML in Chrome or Edge and read it through once.
-
-## Classic Outlook for Windows
-
-1. Open the HTML file in Microsoft Edge or Google Chrome.
-2. Press Ctrl+A, then Ctrl+C.
-3. In Outlook, start a new message, click in the body and press Ctrl+V.
-4. Paste the suggested subject line (first line of the check report) and attach the PDF.
-5. Send it to yourself first and open it on your phone, then send it to the RM team.
-
-Some Outlook builds also offer Insert > Attach File > Insert as Text for an HTML file,
-which carries the HTML across unchanged. Use it if your version shows that option.
-
-## New Outlook and Outlook on the web
-
-Use the same browser copy and paste. Outlook on the web keeps the inline styles.
+3. Read the email once in the browser or in the Gmail draft.
 
 ## Gmail
 
-Open the HTML in Chrome, press Ctrl+A and Ctrl+C, then paste into a new Gmail message and
-attach the PDF. Gmail only shows images that live at a public web address, so the logo
-must be hosted (Vercel for now).
+Easiest: open Gmail, go to Drafts, open the draft titled with the day's subject line, add the
+recipients (Bcc for a client list), attach the PDF and send. The run checked every number in
+the draft against the Gmail file; if it could not, it deleted the draft and said so.
+
+By hand: open the Gmail file in Chrome, press Ctrl+A and Ctrl+C, paste into a new Gmail
+message, paste the suggested subject line (first line of the check report) and attach the PDF.
+Gmail only shows images at a public web address, so the logo is hosted on Vercel.
+
+## Outlook (classic, new Outlook and Outlook on the web)
+
+1. Open the Outlook file in Microsoft Edge or Google Chrome.
+2. Press Ctrl+A, then Ctrl+C.
+3. In Outlook, start a new message, click in the body and press Ctrl+V.
+4. Paste the suggested subject line and attach the PDF.
+5. Send it to yourself first and open it on your phone.
+
+Outlook may drop text colours when it pastes. The Outlook file is built for that: every line of
+text sits on a white or pale background, so it stays readable in black, and rises and falls
+keep their ▲ and ▼ markers. Do not paste the Gmail file into Outlook.
+
+Some classic Outlook builds also offer Insert > Attach File > Insert as Text for an HTML file,
+which carries the HTML across unchanged. Use it if your version shows that option.
+
+## Links
+
+Readers' links go only to kubeerra.com pages and the firm's email address (D-039). Outside
+sources are named in the text without links; their addresses stay in the issue file and the
+check report for verification.
 
 ## Known differences between clients
 
 - Classic Outlook ignores rounded corners and some letter spacing; the layout holds.
-- Gmail clips messages above about 102 KB; the check script keeps issues under 90 KB.
-- Some phone apps tint backgrounds in dark mode; the email asks for the light scheme.
-- The first pilot issue should be test-sent once to each client in use, and any
-  difference noted in the project record.
+- Gmail clips messages above about 102 KB; the check script keeps each email under 90 KB.
+- Some phone apps tint backgrounds in dark mode; the emails ask for the light scheme.

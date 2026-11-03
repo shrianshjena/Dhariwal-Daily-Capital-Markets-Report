@@ -22,9 +22,12 @@ It is NOT a SEBI-registered Investment Adviser, Research Analyst or PMS provider
 - Publish market information and investor education only: index-level and macro commentary,
   flows, currency, commodities, factual company and IPO news.
 - Never: buy, sell or hold language; price targets; "bullish/bearish on X"; re-rating calls;
-  opinions on IPO applications; grey market premium; scheme rankings or "best funds";
-  return projections; testimonials; the words adviser, advisory, wealth manager or
-  portfolio management about Kubeerra.
+  opinions on IPO applications; grey market premium; scheme rankings by returns or
+  performance, "best funds" or picks; return projections; testimonials; the words adviser,
+  advisory, wealth manager or portfolio management about Kubeerra.
+- Named schemes appear only as reported facts (largest net inflows, ETF turnover, open NFOs,
+  fund house news), each with its category and riskometer level from the fund house's own
+  document and a not-a-recommendation line; never returns or performance (D-042).
 - Return illustrations: at most the firm's 12% assumed CAGR, marked illustrative, with the
   standard warning and AMFI's past-performance disclaimer.
 - Every issue carries, at the bottom of the email and PDF: "AMFI-registered Mutual Fund
@@ -38,7 +41,10 @@ It is NOT a SEBI-registered Investment Adviser, Research Analyst or PMS provider
 - Every figure comes from a page fetched that day, with its date and time recorded in the
   issue file. Never write a number from memory. Cross-check headline numbers with a
   second source. Label provisional data (FII/DII) as provisional.
-- Summarise news in our own words, link the source, never copy article text or images.
+- Summarise news in our own words and name the source; never copy article text or images.
+- Links in what readers receive go only to kubeerra.com blog posts and service or disclosure
+  pages, plus the firm's email address (D-039). Outside sources are named, never linked; their
+  URLs stay in the issue file and the check report.
 
 ## Style rules
 
@@ -50,13 +56,18 @@ It is NOT a SEBI-registered Investment Adviser, Research Analyst or PMS provider
 
 ## Commands
 
-    python3 render/build.py issues/<date>.json --logo-url <hosted png>   # render all formats
-    python3 checks/check_issue.py issues/<date>.json                      # automated checks
-    python3 render/build.py tests/fixture-issue.json                     # template smoke test
+    python3 render/build.py issues/<date>.json            # Gmail and Outlook HTML, text, PDF, card
+    python3 checks/check_issue.py issues/<date>.json       # automated checks
+    python3 render/publish.py issues/<date>.json           # copy deliverables into deliverables/
+    python3 render/gmail_draft.py prepare issues/<date>.json   # files for the unsent Gmail draft
+    python3 render/build.py tests/fixture-issue.json      # template smoke test
 
 ## Repository hygiene
 
 - Confidential source documents (the internal strategic record, forwarded emails) never
   enter this repository.
-- `out/` is build output and is not committed; issue files and check reports are.
+- `out/` is build output and is not committed. Each issue's deliverables are committed in
+  `deliverables/<format>/`, keeping the 14 most recent issues; check reports, review logs and
+  issue files are kept permanently (D-041).
+- Web access: the owner authorises opening any public website the work needs (D-044).
 - Update `docs/PROJECT_RECORD.md` in the same commit as any change it describes.

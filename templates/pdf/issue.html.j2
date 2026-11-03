@@ -1,5 +1,6 @@
 {#- Kubeerra Market Brief: A4 PDF edition, rendered with WeasyPrint.
-    Same content and tokens as the email; print layout with running footer and page folio. -#}
+    Same content and tokens as the email; print layout with running footer and page folio.
+    Links go only to kubeerra.com pages and the firm's email address; sources are named. -#}
 {%- set C = tokens.color -%}
 {%- set SANS = tokens.font.pdf.sans|safe -%}
 {%- set MONO = tokens.font.pdf.mono|safe -%}
@@ -11,7 +12,9 @@
 <h2>{{ headline|t }}</h2>
 </div>
 {%- endmacro -%}
-{%- macro src(s, prefix="Source") -%}<p class="src">{{ prefix }}: <a href="{{ s.url }}">{{ s.name }}</a></p>{%- endmacro -%}
+{%- macro names(items) -%}{% for s in items %}{{ s.name }}{{ ", " if not loop.last }}{% endfor %}{%- endmacro -%}
+{%- macro src(items, prefix=None) -%}<p class="src">{{ prefix or ("Sources" if items|length > 1 else "Source") }}: {{ names(items) }}</p>{%- endmacro -%}
+{%- macro klink(link) -%}<a href="{{ link.url }}">{{ link.name }}</a>{%- endmacro -%}
 <!DOCTYPE html>
 <html lang="en-IN">
 <head>
@@ -69,11 +72,16 @@ table.data th { font-family: {{ MONO }}; font-size: 6.8pt; letter-spacing: 0.1em
 table.data td { padding: 1.35mm 0; border-bottom: 0.75pt solid {{ C.border.default }}; vertical-align: top; }
 table.data .r { text-align: right; padding-left: 3mm; white-space: nowrap; }
 table.data .name { font-weight: 600; }
+table.data tr { break-inside: avoid; }
+table.schemes { margin-top: 1.6mm; break-inside: avoid; }
+table.schemes td { font-size: 9pt; padding-right: 3mm; }
+table.schemes td.c { color: {{ C.text.secondary }}; }
 .region { font-family: {{ MONO }}; font-size: 6.8pt; letter-spacing: 0.1em; text-transform: uppercase; color: {{ C.text.secondary }}; margin-right: 1.5mm; }
 .up { color: {{ C.status.up }}; } .down { color: {{ C.status.down }}; } .flat, .neutral { color: {{ C.text.secondary }}; }
 .strong { font-weight: 700; }
 .note { font-size: 8.8pt; color: {{ C.text.secondary }}; margin-top: 2.2mm; }
 .src { font-size: 7.8pt; color: {{ C.text.secondary }}; margin-top: 1.4mm; }
+.srcin { font-size: 7.8pt; color: {{ C.text.secondary }}; }
 .note .src { margin-left: 1mm; }
 table.tiles { width: 100%; border-collapse: collapse; margin-top: 2.5mm; table-layout: fixed; break-inside: avoid; }
 table.tiles td { width: 33.33%; vertical-align: top; border-top: 0.75pt solid {{ C.border.default }}; padding: 2.5mm 4mm 2.6mm 0; }
@@ -81,9 +89,6 @@ table.tiles td { width: 33.33%; vertical-align: top; border-top: 0.75pt solid {{
 .tile-value { font-size: 16pt; line-height: 1.2; font-weight: 700; color: {{ C.text.primary }}; margin-top: 1.2mm; white-space: nowrap; }
 .tile-chg { font-size: 9pt; line-height: 1.3; font-weight: 700; margin-top: 0.5mm; white-space: nowrap; }
 .tile-detail { font-size: 8.4pt; line-height: 1.4; color: {{ C.text.secondary }}; margin-top: 1mm; }
-table.bars { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: 3mm; }
-table.bars > tbody > tr > td.group { width: 50%; vertical-align: top; padding-right: 6mm; }
-table.bars > tbody > tr > td.group + td.group { padding-right: 0; padding-left: 6mm; }
 table.barrows { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: 1.2mm; }
 table.barrows td { padding: 1.3mm 0; vertical-align: middle; font-size: 9pt; }
 table.barrows td.bn { width: 30%; padding-right: 3mm; }
@@ -111,13 +116,11 @@ table.mfstats td { vertical-align: top; border-top: 0.75pt solid {{ C.border.def
 .cols2 { column-count: 2; column-gap: 8mm; }
 .cols2 p { break-inside: avoid; margin-top: 2mm; }
 .sublabel { color: {{ C.text.secondary }}; margin-top: 5mm; break-after: avoid; }
-.nfo { break-inside: avoid; margin-top: 2mm; }
-.nfosum { margin-top: 2mm; }
-.nfo .n { font-weight: 600; }
-.nfo .d { font-size: 8.6pt; color: {{ C.text.secondary }}; }
-.learn { background: {{ C.brand.paleBlue }}; border-left: 1.2mm solid {{ C.brand.cobalt }}; padding: 4.5mm 6mm 5mm 6mm; margin-top: 3mm; break-inside: avoid; }
-.learn p { max-width: 150mm; font-size: 10pt; margin-top: 2mm; }
-.learn p:first-child { margin-top: 0; }
+.mfitem { margin-top: 2mm; break-inside: avoid; }
+.block { break-inside: avoid; }
+.readmore { margin-top: 3mm; font-weight: 600; }
+.learn { margin-top: 2mm; }
+.learn p { max-width: 160mm; font-size: 10pt; margin-top: 2mm; }
 .learn .illus { font-size: 8.6pt; color: {{ C.text.secondary }}; }
 table.agenda { width: 100%; border-collapse: collapse; margin-top: 3mm; }
 table.agenda tr { break-inside: avoid; }
@@ -130,10 +133,6 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 .disclosure .warning { color: {{ C.text.inverse }}; font-weight: 700; font-size: 9.4pt; }
 .disclosure a { color: {{ C.text.inverseLink }}; }
 .disclosure .rule { width: 14mm; height: 2px; background: {{ C.brand.cobalt }}; margin: 4mm 0 1mm 0; }
-.sources { margin-top: 7mm; }
-.sources ol { margin: 2mm 0 0 0; padding-left: 5mm; column-count: 3; column-gap: 6mm; font-size: 7pt; line-height: 1.4; color: {{ C.text.secondary }}; }
-.sources li { break-inside: avoid; margin-top: 0.8mm; }
-.sources .host { color: {{ C.text.secondary }}; }
 </style>
 </head>
 <body>
@@ -171,14 +170,14 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 {% endfor %}
 </tbody>
 </table>
-<p class="note">{% if issue.snapshot.breadth %}{% set b = issue.snapshot.breadth %}Breadth on the NSE: {{ b.advances|group }} securities advanced and {{ b.declines|group }} declined{% if b.get('unchanged') is not none %}, {{ b.unchanged|group }} unchanged{% endif %}. {% endif %}<span class="src">Sources: {% for s in snapshot_sources %}<a href="{{ s.url }}">{{ s.name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</span></p>
+<p class="note">{% if issue.snapshot.breadth %}{% set b = issue.snapshot.breadth %}Breadth on the NSE: {{ b.advances|group }} securities advanced and {{ b.declines|group }} declined{% if b.get('unchanged') is not none %}, {{ b.unchanged|group }} unchanged{% endif %}. {% endif %}<span class="src">{{ "Sources" if snapshot_sources|length > 1 else "Source" }}: {{ names(snapshot_sources) }}</span></p>
 </section>
 
 <section class="sec keep">
 {{ sechead("02", "Flows, currency and commodities", issue.flows.headline) }}
 <table class="tiles">
 {% for row in issue.flows.tiles|batch(3) %}
-<tr>{% for t in row %}<td><p class="mono tile-label">{{ t.label }}{% if t.provisional|default(false) %} · provisional{% endif %}</p><p class="tile-value num" style="color: {{ t|figcolor }};">{{ t|figure }}</p>{% if t|chip %}<p class="tile-chg num" style="color: {{ (t|movement)|mvcolor }};">{{ t|chip }}</p>{% endif %}<p class="tile-detail">{{ t.detail|t }}{% for s in t|srcs %} · <a href="{{ s.url }}">{{ s.name }}</a>{% endfor %}</p></td>{% endfor %}{% for _ in range(3 - row|length) %}<td></td>{% endfor %}</tr>
+<tr>{% for t in row %}<td><p class="mono tile-label">{{ t.label }}{% if t.provisional|default(false) %} · provisional{% endif %}</p><p class="tile-value num" style="color: {{ t|figcolor }};">{{ t|figure }}</p>{% if t|chip %}<p class="tile-chg num" style="color: {{ (t|movement)|mvcolor }};">{{ t|chip }}</p>{% endif %}<p class="tile-detail">{{ t.detail|t }} · {{ names(t|srcs) }}</p></td>{% endfor %}{% for _ in range(3 - row|length) %}<td></td>{% endfor %}</tr>
 {% endfor %}
 </table>
 </section>
@@ -193,7 +192,7 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 {% endfor %}
 </table>
 {% endfor %}
-{{ src(issue.sectors.source) }}
+{{ src([issue.sectors.source]) }}
 </section>
 
 <section class="sec">
@@ -205,7 +204,7 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 <h3>{{ s.headline|t }}</h3>
 <p class="what">{{ s.what|t }}</p>
 <p class="why"><span class="mono">Why it matters</span> {{ s.why|t }}</p>
-{% if s.get('also') %}<p class="src">Sources: {% for x in s|srcs %}<a href="{{ x.url }}">{{ x.name }}</a>{{ ", " if not loop.last }}{% endfor %}</p>{% else %}{{ src(s.source) }}{% endif %}
+{{ src(s|srcs) }}
 </article>
 {% endfor %}
 </div>
@@ -222,37 +221,69 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 </tbody>
 </table>
 <p class="note">{{ issue.global.note|t }}</p>
-<p class="src">Sources: {% for s in global_sources %}<a href="{{ s.url }}">{{ s.name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
+{{ src(global_sources) }}
 </section>
 
 <section class="sec">
 {{ sechead("06", "IPO desk", issue.ipos.headline) }}
 <div class="ipos">
 {% for ipo in issue.ipos["items"] %}
-<div class="ipo"><h3>{{ ipo.company }}<span class="mono">{{ ipo.status }}</span></h3>{% for f in ipo.facts %}<p class="fact">{{ f|t }}</p>{% endfor %}{% if ipo.get('also') %}<p class="src">Sources: {% for x in ipo|srcs %}<a href="{{ x.url }}">{{ x.name }}</a>{{ ", " if not loop.last }}{% endfor %}</p>{% else %}{{ src(ipo.source) }}{% endif %}</div>
+<div class="ipo"><h3>{{ ipo.company }}<span class="mono">{{ ipo.status }}</span></h3>{% for f in ipo.facts %}<p class="fact">{{ f|t }}</p>{% endfor %}{{ src(ipo|srcs) }}</div>
 {% endfor %}
 </div>
 <p class="note">{{ issue.ipos.note|t }}</p>
 </section>
 
+{% set mf = issue.mf %}
 <section class="sec">
-{{ sechead("07", "Mutual fund corner", issue.mf.headline, "industry data, " ~ issue.mf.period) }}
+{{ sechead("07", "Mutual fund corner", mf.headline, "industry data, " ~ mf.period) }}
 <table class="mfstats"><tr>
-{% for st in issue.mf.stats %}<td><p class="mono tile-label">{{ st.label }}</p><p class="tile-value num" style="color: {{ st|figcolor }};">{{ st|figure }}</p>{% if st|chip %}<p class="tile-chg num" style="color: {{ (st|movement)|mvcolor }};">{{ st|chip }}</p>{% endif %}<p class="tile-detail">{{ st.detail|t }}</p></td>{% endfor %}
+{% for st in mf.stats %}<td><p class="mono tile-label">{{ st.label }}</p><p class="tile-value num" style="color: {{ st|figcolor }};">{{ st|figure }}</p>{% if st|chip %}<p class="tile-chg num" style="color: {{ (st|movement)|mvcolor }};">{{ st|chip }}</p>{% endif %}<p class="tile-detail">{{ st.detail|t }}</p></td>{% endfor %}
 </tr></table>
-{% set mfsrc = issue.mf.stats|unique_sources %}{% if mfsrc|length > 1 %}<p class="src">Sources: {% for x in mfsrc %}<a href="{{ x.url }}">{{ x.name }}</a>{{ ", " if not loop.last }}{% endfor %}</p>{% elif mfsrc %}{{ src(mfsrc[0]) }}{% endif %}
-{% if issue.mf.highlights %}<div class="cols2">{% for h in issue.mf.highlights %}<p>{{ h.text|t }} <a href="{{ h.source.url }}">{{ h.source.name }}</a></p>{% endfor %}</div>{% endif %}
-{% if issue.mf.get('nfo_summary') or show_nfo_names %}
+{% set mfsrc = mf.stats|unique_sources %}{% if mfsrc %}{{ src(mfsrc) }}{% endif %}
+{% if mf.highlights %}
+<p class="mono sublabel">Category trends</p>
+<div class="cols2">{% for h in mf.highlights %}<p>{{ h.text|t }} <span class="srcin">{{ h.source.name }}</span></p>{% endfor %}</div>
+{% endif %}
+{% if mf.get('inflow_leaders') %}{% set il = mf.inflow_leaders %}
+<div class="block">
+<p class="mono sublabel">Largest net inflows · {{ il.period }}</p>
+<table class="data schemes">
+<thead><tr><th>Scheme</th><th>Category</th><th>Riskometer</th><th class="r">Net inflow</th></tr></thead>
+<tbody>{% for x in il["items"] %}<tr><td class="name">{{ x.scheme|t }}</td><td class="c">{{ x.category|t }}</td><td class="c">{{ x.riskometer }}</td><td class="r num strong">{{ x.net_inflow_cr|crore }}</td></tr>{% endfor %}</tbody>
+</table>
+<p class="note">{% if il.get('basis') %}{{ il.basis|t }}. {% endif %}Listed by reported net inflows, not a recommendation; each scheme's risks and terms are in its {{ klink(kb.sid) }}. Riskometers from each fund house's latest disclosure. <span class="srcin">{{ "Sources" if (il|srcs)|length > 1 else "Source" }}: {{ names(il|srcs) }}</span></p>
+</div>
+{% endif %}
+{% if mf.get('etfs') %}{% set ef = mf.etfs %}
+<div class="block">
+<p class="mono sublabel">Most traded ETFs on NSE · {{ ef.as_of }}</p>
+<table class="data schemes">
+<thead><tr><th>ETF</th><th>Category</th><th>Riskometer</th><th class="r">Turnover</th><th class="r">Change</th></tr></thead>
+<tbody>{% for x in ef["items"] %}<tr><td class="name">{{ x.name|t }}</td><td class="c">{{ x.category|t }}</td><td class="c">{{ x.riskometer }}</td><td class="r num">{{ x.turnover_cr|crore }}</td><td class="r num strong {{ 'up' if (x.change_pct or 0) > 0 else ('down' if (x.change_pct or 0) < 0 else 'flat') }}">{% if x.get('change_pct') is not none %}{{ x.change_pct|arrow }} {{ x.change_pct|pct }}{% endif %}</td></tr>{% endfor %}</tbody>
+</table>
+<p class="note">{% if ef.get('note') %}{{ ef.note|t }} {% endif %}Ranked by turnover on the exchange, not a recommendation. <span class="srcin">{{ "Sources" if (ef|srcs)|length > 1 else "Source" }}: {{ names(ef|srcs) }}</span></p>
+</div>
+{% endif %}
+{% if mf.get('fund_news') %}
+<p class="mono sublabel">Fund house news</p>
+{% for n in mf.fund_news %}<p class="mfitem"><strong>{{ n.who }}, {{ n.date|t }}.</strong> {{ n.text|t }}{% if n.get('riskometer') %} Riskometer: {{ n.riskometer }}.{% endif %} <span class="srcin">{{ n.source.name }}</span></p>{% endfor %}
+{% endif %}
+{% if mf.get('nfo_summary') or show_nfo_names %}
 <p class="mono sublabel">New fund offers</p>
-{% if issue.mf.get('nfo_summary') %}<p class="nfosum">{{ issue.mf.nfo_summary.text|t }} <a href="{{ issue.mf.nfo_summary.source.url }}">{{ issue.mf.nfo_summary.source.name }}</a></p>{% endif %}
 {% if show_nfo_names %}
-<div class="cols2">{% for n in issue.mf.nfos %}<div class="nfo"><p class="n">{{ n.scheme }}</p><p class="d">{{ n.category }} · {{ n.dates|t }}{% if n.get('min_investment') %} · Minimum {{ n.min_investment }}{% endif %}{% if n.get('riskometer') %} · Riskometer: {{ n.riskometer }}{% endif %} · <a href="{{ n.source.url }}">{{ n.source.name }}</a></p></div>{% endfor %}</div>
+<table class="data schemes">
+<thead><tr><th>Scheme</th><th>Category</th><th>Riskometer</th><th class="r">Open</th></tr></thead>
+<tbody>{% for n in mf.nfos %}<tr><td class="name">{{ n.scheme|t }}</td><td class="c">{{ n.category|t }}{% if n.get('min_investment') %} · minimum {{ n.min_investment }}{% endif %}</td><td class="c">{{ n.riskometer }}</td><td class="r">{{ n.dates|t }}</td></tr>{% endfor %}</tbody>
+</table>
+<p class="note">Facts only, not a recommendation; each scheme's risks and terms are in its {{ klink(kb.sid) }}. <span class="srcin">Sources: {{ names(mf.nfos|unique_sources) }}</span></p>
+{% elif mf.get('nfo_summary') %}<p class="mfitem">{{ mf.nfo_summary.text|t }} <span class="srcin">{{ mf.nfo_summary.source.name }}</span></p>{% endif %}
 {% endif %}
-{% endif %}
-{% if issue.mf.regulatory %}
+{% if mf.regulatory %}
 <p class="mono sublabel">Rule changes for investors</p>
-{% for r in issue.mf.regulatory %}<p class="note" style="color: {{ C.text.primary }}; font-size: 9.4pt;"><strong>{{ r.body }}, {{ r.date|t }}.</strong> {{ r.text|t }} <a href="{{ r.source.url }}">{{ r.source.name }}</a></p>{% endfor %}
+{% for r in mf.regulatory %}<p class="mfitem"><strong>{{ r.body }}, {{ r.date|t }}.</strong> {{ r.text|t }} <span class="srcin">{{ r.source.name }}</span></p>{% endfor %}
 {% endif %}
+{% if mf.get('link') %}<p class="readmore">Read more: {{ klink(mf.link) }}</p>{% endif %}
 </section>
 
 <section class="sec keep">
@@ -260,15 +291,15 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 <div class="learn">
 {% for p in issue.learn.paragraphs %}<p>{{ p|t }}</p>{% endfor %}
 {% if issue.learn.get('illustration') %}<p class="illus">{{ issue.learn.illustration|t }}</p>{% endif %}
-{% if issue.learn.get('link') %}<p><strong>Read more:</strong> <a href="{{ issue.learn.link.url }}">{{ issue.learn.link.name }}</a></p>{% endif %}
-{% if issue.learn.get('sources') %}<p class="illus">Sources: {% for s in issue.learn.sources %}<a href="{{ s.url }}">{{ s.name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>{% endif %}
+{% if issue.learn.get('link') %}<p class="readmore">Read more: {{ klink(issue.learn.link) }}</p>{% endif %}
+{% if issue.learn.get('sources') %}{{ src(issue.learn.sources) }}{% endif %}
 </div>
 </section>
 
 <section class="sec">
 {{ sechead("09", "Day ahead", issue.get("day_ahead_title") or ("On the calendar for " ~ meta.weekday ~ " " ~ date_short)) }}
 <table class="agenda">
-{% for d in issue.day_ahead %}<tr><td class="t">{{ d.time|upper }}</td><td>{{ d.event|t }}{% for x in d|srcs %}{{ " " if loop.first else ", " }}<a href="{{ x.url }}">{{ x.name }}</a>{% endfor %}</td></tr>{% endfor %}
+{% for d in issue.day_ahead %}<tr><td class="t">{{ d.time|upper }}</td><td>{{ d.event|t }}{% if d|srcs %} <span class="srcin">{{ names(d|srcs) }}</span>{% endif %}</td></tr>{% endfor %}
 </table>
 </section>
 

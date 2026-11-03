@@ -17,6 +17,8 @@ Status: dry run 001 (29 Oct 2026) built and reviewed; RM pilot next. Owner and a
     config/publication.json         legal lines, disclosures, contacts, asset locations
     schema/issue.schema.json        the contract every issue file meets
     issues/                         one JSON file per issue
+    deliverables/                   committed deliverables: pdf, gmail, outlook, whatsapp, text,
+                                    check-reports, reviews
     templates/                      email, PDF and card templates
     render/                         the build script and number formatting
     checks/                         automated checks and the review report
@@ -28,11 +30,14 @@ Status: dry run 001 (29 Oct 2026) built and reviewed; RM pilot next. Owner and a
 
     pip install jinja2 jsonschema weasyprint pypdf pillow     # plus poppler-utils for previews
     python3 render/fill_sources.py issues/2026-10-29.json    # rebuild the sources list from the issue
-    python3 render/build.py issues/2026-10-29.json --logo-url https://<host>/logo/kubeerra-tile-96.png
+    python3 render/build.py issues/2026-10-29.json             # Gmail and Outlook HTML, text, PDF, card
     python3 checks/check_issue.py issues/2026-10-29.json
+    python3 render/publish.py issues/2026-10-29.json           # copy deliverables into deliverables/
+    python3 render/gmail_draft.py prepare issues/2026-10-29.json  # files for the unsent Gmail draft
     python3 render/build.py tests/fixture-issue.json --no-previews   # template smoke test
 
-Outputs land in `out/<date>/` (not committed).
+Outputs land in `out/<date>/` (not committed); `render/publish.py` copies each issue's deliverables
+into `deliverables/<format>/` for collaborators, keeping the 14 most recent issues (D-041).
 
 ## Fonts
 

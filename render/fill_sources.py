@@ -4,13 +4,17 @@
     python3 render/fill_sources.py issues/2026-10-29.json
 """
 import json
+import re
 import sys
 from pathlib import Path
 
 
+KUBEERRA = re.compile(r"^https://(www\.)?kubeerra\.com(/|$)")
+
+
 def walk(node, found):
     if isinstance(node, dict):
-        if set(node) == {"name", "url"}:
+        if set(node) == {"name", "url"} and not KUBEERRA.match(node["url"]):  # our own pages are links, not sources
             found.setdefault(node["url"], node["name"])
         for value in node.values():
             walk(value, found)

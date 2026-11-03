@@ -127,6 +127,35 @@
           }
         }
       ]
+    },
+    "kubeerra_link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "url"
+      ],
+      "description": "A link readers can follow: only a kubeerra.com blog post or service page",
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/text"
+        },
+        "url": {
+          "type": "string",
+          "pattern": "^https://(www\\.)?kubeerra\\.com/"
+        }
+      }
+    },
+    "riskometer": {
+      "enum": [
+        "Low",
+        "Low to Moderate",
+        "Moderate",
+        "Moderately High",
+        "High",
+        "Very High"
+      ],
+      "description": "SEBI riskometer level from the fund house's own factsheet, KIM, SID or disclosure"
     }
   },
   "properties": {
@@ -587,13 +616,20 @@
                 ]
               },
               "riskometer": {
-                "type": [
-                  "string",
-                  "null"
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "$ref": "#/$defs/riskometer"
+                  }
                 ]
               },
               "source": {
                 "$ref": "#/$defs/source"
+              },
+              "fund_house": {
+                "$ref": "#/$defs/text"
               }
             }
           }
@@ -632,7 +668,7 @@
             "text",
             "source"
           ],
-          "description": "Category-level summary of open NFOs. Scheme names render only in the internal edition and only when every NFO has its riskometer.",
+          "description": "Category-level summary of open NFOs, used when any open NFO lacks its riskometer. Scheme names render (in every edition) only when every listed NFO has its riskometer.",
           "properties": {
             "text": {
               "$ref": "#/$defs/text"
@@ -641,6 +677,165 @@
               "$ref": "#/$defs/source"
             }
           }
+        },
+        "inflow_leaders": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "period",
+            "items",
+            "source"
+          ],
+          "description": "Schemes with the largest net inflows in a month, as published by a reputable outlet. Facts only: category and riskometer for each, never returns.",
+          "properties": {
+            "period": {
+              "$ref": "#/$defs/text",
+              "description": "e.g. September 2026"
+            },
+            "basis": {
+              "$ref": "#/$defs/text",
+              "description": "What the outlet's figures cover, e.g. 'actively managed equity schemes, ACE MF data'"
+            },
+            "items": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 5,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "scheme",
+                  "category",
+                  "net_inflow_cr",
+                  "riskometer",
+                  "riskometer_source"
+                ],
+                "properties": {
+                  "scheme": {
+                    "$ref": "#/$defs/text"
+                  },
+                  "category": {
+                    "$ref": "#/$defs/text"
+                  },
+                  "net_inflow_cr": {
+                    "type": "number"
+                  },
+                  "riskometer": {
+                    "$ref": "#/$defs/riskometer"
+                  },
+                  "riskometer_source": {
+                    "$ref": "#/$defs/source"
+                  }
+                }
+              }
+            },
+            "source": {
+              "$ref": "#/$defs/source"
+            },
+            "also": {
+              "$ref": "#/$defs/also"
+            }
+          }
+        },
+        "etfs": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "as_of",
+            "items",
+            "source"
+          ],
+          "description": "The most traded ETFs on NSE in the session, by turnover (exchange data)",
+          "properties": {
+            "as_of": {
+              "$ref": "#/$defs/text",
+              "description": "e.g. close, 2 Nov 2026"
+            },
+            "items": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 5,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "category",
+                  "turnover_cr",
+                  "riskometer",
+                  "riskometer_source"
+                ],
+                "properties": {
+                  "name": {
+                    "$ref": "#/$defs/text"
+                  },
+                  "category": {
+                    "$ref": "#/$defs/text"
+                  },
+                  "turnover_cr": {
+                    "type": "number"
+                  },
+                  "change_pct": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "riskometer": {
+                    "$ref": "#/$defs/riskometer"
+                  },
+                  "riskometer_source": {
+                    "$ref": "#/$defs/source"
+                  }
+                }
+              }
+            },
+            "note": {
+              "$ref": "#/$defs/text"
+            },
+            "source": {
+              "$ref": "#/$defs/source"
+            },
+            "also": {
+              "$ref": "#/$defs/also"
+            }
+          }
+        },
+        "fund_news": {
+          "type": "array",
+          "maxItems": 4,
+          "description": "Facts about fund houses and schemes from the last seven days",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "who",
+              "date",
+              "text",
+              "source"
+            ],
+            "properties": {
+              "who": {
+                "$ref": "#/$defs/text"
+              },
+              "date": {
+                "$ref": "#/$defs/text"
+              },
+              "text": {
+                "$ref": "#/$defs/text"
+              },
+              "source": {
+                "$ref": "#/$defs/source"
+              },
+              "riskometer": {
+                "$ref": "#/$defs/riskometer"
+              }
+            }
+          }
+        },
+        "link": {
+          "$ref": "#/$defs/kubeerra_link",
+          "description": "Optional 'Read more' link for the section"
         }
       }
     },
@@ -680,7 +875,7 @@
               "type": "null"
             },
             {
-              "$ref": "#/$defs/source"
+              "$ref": "#/$defs/kubeerra_link"
             }
           ]
         },

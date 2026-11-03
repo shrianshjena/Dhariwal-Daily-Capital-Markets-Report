@@ -40,13 +40,14 @@ rather than alarm; never cheerlead either. Every item must pass an India-relevan
 ## Never (the distributor lane)
 
 Buy, sell or hold language; price targets; bullish or bearish views on a company; re-rating
-talk; opinions on IPO applications; grey market premium; scheme rankings or "best funds";
+talk; opinions on IPO applications; grey market premium; scheme rankings by returns or "best funds";
 return projections beyond the 12% illustration policy; testimonials; describing Kubeerra as
 an adviser, advisory, wealth manager, research provider or portfolio manager.
 
 ## Sources and copyright
 
-Write every summary in our own words and link the source. No copied paragraphs, headlines or
+Write every summary in our own words and name the source (D-039: readers' links go only to
+kubeerra.com blog posts and service pages, which may be reused). No copied paragraphs, headlines or
 images. A quote, if one is essential, stays under 15 words. No content from unregistered
 finfluencers.
 

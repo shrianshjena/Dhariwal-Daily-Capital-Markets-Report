@@ -11,7 +11,7 @@
   "standard_warning": "Mutual Fund investments are subject to market risks, read all scheme related documents carefully.",
   "disclaimer": [
     "Dhariwal Securities Private Limited provides distribution services only. It is not a SEBI-registered Investment Adviser, Research Analyst or Portfolio Management Services provider.",
-    "This brief is for information and investor education. It is not investment advice, research, or a recommendation to buy, sell or hold any security or scheme. Figures come from the sources linked in each section; provisional data is marked as provisional. Times are IST unless stated.",
+    "This brief is for information and investor education. It is not investment advice, research, or a recommendation to buy, sell or hold any security or scheme. Figures come from the sources named in each section; provisional data is marked as provisional. Times are IST unless stated.",
     "Dhariwal Securities receives commission from asset management companies for distributing mutual funds. See the commission disclosures for details."
   ],
   "unsubscribe": "To stop receiving this brief, reply with “Unsubscribe” or write to",
@@ -37,6 +37,55 @@
       "url": "https://www.kubeerra.com/risk-factors"
     }
   ],
+  "kubeerra_links": {
+    "_note": "The only pages the brief may link to (D-039): kubeerra.com blog posts and service or disclosure pages. Reuse freely.",
+    "sid": {
+      "name": "scheme information document",
+      "url": "https://www.kubeerra.com/kim-sid-sai"
+    },
+    "mutual_funds": {
+      "name": "Kubeerra mutual fund services",
+      "url": "https://www.kubeerra.com/services/mutual-funds"
+    },
+    "calculators": {
+      "name": "Kubeerra calculators",
+      "url": "https://www.kubeerra.com/tools/calculators"
+    },
+    "risk_profile": {
+      "name": "Kubeerra risk profile",
+      "url": "https://www.kubeerra.com/tools/risk-profile"
+    },
+    "risk_factors": {
+      "name": "Kubeerra risk factors",
+      "url": "https://www.kubeerra.com/risk-factors"
+    },
+    "faq": {
+      "name": "Kubeerra FAQ",
+      "url": "https://www.kubeerra.com/faq"
+    },
+    "blogs": [
+      {
+        "name": "Kubeerra guide: What is a mutual fund?",
+        "url": "https://www.kubeerra.com/blogs/what-is-a-mutual-fund-simple-guide"
+      },
+      {
+        "name": "Kubeerra guide: How to read a mutual fund factsheet",
+        "url": "https://www.kubeerra.com/blogs/how-to-read-a-mutual-fund-factsheet"
+      },
+      {
+        "name": "Kubeerra guide: 5 common mistakes first-time investors make",
+        "url": "https://www.kubeerra.com/blogs/5-common-mistakes-first-time-investors-make"
+      },
+      {
+        "name": "Kubeerra guide: Understanding risk",
+        "url": "https://www.kubeerra.com/blogs/understanding-risk-know-your-risk-profile"
+      },
+      {
+        "name": "Kubeerra guide: SIP or lump sum",
+        "url": "https://www.kubeerra.com/blogs/sip-vs-lump-sum-which-suits-a-beginner"
+      }
+    ]
+  },
   "assets": {
     "logo_email_url": "https://dhariwal-daily-capital-markets-repo.vercel.app/logo/kubeerra-logo-144.png",
     "logo_email_local": "assets/logo/kubeerra-tile-144.png",

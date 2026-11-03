@@ -8,7 +8,7 @@ Oct 29, 2026 · @Shriansh Jena
 
 ## Project snapshot
 
-The brief is live (record v0.4): client editions from 30 Oct 2026, prepared by a scheduled run on weekdays from 2 Nov and approved by Shriansh before every send.
+The brief is live (record v0.5): client editions from 30 Oct 2026, prepared by a scheduled run on weekdays from 2 Nov and approved by Shriansh before every send. From 4 Nov each issue comes in Gmail and Outlook versions, links only to kubeerra.com, carries an expanded mutual fund corner, and lands in GitHub and as an unsent Gmail draft.
 
 | Item | Detail |
 | --- | --- |
@@ -17,7 +17,7 @@ The brief is live (record v0.4): client editions from 30 Oct 2026, prepared by a
 | Owner | Shriansh Jena (shriansh@kubeerra.com) |
 | Stakeholders | Shuvendu Gupta (asked for this format), Saimohan Shridhar (Relationship Manager, Head), Gunjan Jhanwar (on the request thread) |
 | Stage | Live: client editions from 30 Oct 2026; scheduled weekday run from Mon 2 Nov, pack to Shriansh by 9:00 AM IST |
-| Settled | Name Kubeerra Market Brief; navy, cobalt and teal; morning edition; client editions, approved by Shriansh; email HTML for Outlook and Gmail plus an A4 PDF; distributor-only content; no em dashes |
+| Settled | Name Kubeerra Market Brief; navy, cobalt and teal; morning edition; client editions, approved by Shriansh; separate Gmail and Outlook email files plus an A4 PDF; links only to kubeerra.com; distributor-only content; no em dashes |
 | Pending | Compliance owner for client sends, client sending platform, data licence, open questions 14 to 21 |
 
 Rule for this record: every change to the implementation updates this document in the same change, so the record never drifts from what is built.
@@ -96,7 +96,7 @@ The report stays in one lane: SEBI excludes general market trends, broad-based i
 | Distributors may not call themselves Independent Financial Adviser, IFA, Wealth Adviser or anything similar unless registered as an Investment Adviser | Never describe Kubeerra or its people as advisers, advisory, wealth managers, research or portfolio management | [AMFI Master Circular for MFDs, 14 Jan 2026](https://www.amfiindia.com/uploads/AMFI_Master_Cicular_for_MF_Ds_3c7f5ee44f.pdf), paras 1.3.1 to 1.3.4 |
 | The tagline "AMFI-registered Mutual Fund Distributor" must appear with the name and ARN, clear and legible, at least font size 12 in printed communication | Every email and PDF carries "Dhariwal Securities Private Limited, AMFI-registered Mutual Fund Distributor, ARN-369716"; at least 12 pt in the PDF | Same circular, paras 1.3.5 to 1.3.6 |
 | The standard warning is fixed: "Mutual Fund investments are subject to market risks, read all scheme related documents carefully." No words may be added or removed | Used verbatim in every issue. The website footer uses a reworded version; the report should not copy it | [SEBI MF Regulations, Sixth Schedule, as quoted by ICICI Prudential AMC](https://arch.icicipruamc.com:443/download/Important_Information_for_Distributors.pdf) |
-| Scheme performance has a prescribed format; advertisements carry no rankings or testimonials; distributors use AMC-approved material and seek AMC compliance approval for scheme promotion | The MF corner stays at industry and category level: no "top funds" lists, rankings or testimonials. Scheme-specific features only with compliance approval | Same ICICI Prudential document (AMC terms; other AMCs have similar terms) |
+| Scheme performance has a prescribed format; advertisements carry no rankings or testimonials; distributors use AMC-approved material and seek AMC compliance approval for scheme promotion | Named schemes appear only as reported facts (largest net inflows, ETF turnover, open NFOs, fund house news), each with its category, riskometer level and a not-a-recommendation line; no rankings by returns, no "top funds" wording, no testimonials. The owner chose on 3 Nov 2026 to show these to clients before the compliance owner's review (D-042) | Same ICICI Prudential document (AMC terms; other AMCs have similar terms) |
 | AMFI best practice (Nov 2023): no future returns, even as illustrations, in non-scheme material; compounding examples may use 2% to 13% CAGR, with a past-performance disclaimer in the same font size | The Learn section may illustrate compounding at no more than the firm's 12% policy, marked illustrative, with the standard warning and the past-performance disclaimer. The summary addresses AMCs; applying it to the report is a conservative choice | [Cafemutual on AMFI's circular, 3 Nov 2023](https://cafemutual.com/news/industry/30567-even-educational-material-or-iap-content-cannot-illustrate-future-return-of-mutual-funds); the 12% policy on [kubeerra.com](https://www.kubeerra.com) |
 | From 1 May 2026, regulated entities and their agents, including MFDs, must prominently show registered name and number on social media posts, including WhatsApp groups; agents show the principal's details first | Applies only if the report is shared on WhatsApp, LinkedIn, Telegram or similar. Email and PDF fall under the AMFI tagline rule instead | [SEBI circular HO/(79)2026-MIRSD-PODMMC, 26 Feb 2026](https://nsdl.com/nsdl/2026-05/09_SEBI_Circular_dated_26_February_2026.pdf) |
 | Regulated persons and their agents may not associate with unregistered persons who give advice or claim returns: no payments, referrals, system links or joint marketing | No guest content, endorsements or co-promotion with unregistered finfluencers | [SEBI circular, 29 Jan 2025](https://www.sebi.gov.in/legal/circulars/jan-2025/details-clarifications-on-provisions-related-to-association-of-persons-regulated-by-the-board-miis-and-their-agents-with-persons-engaged-in-prohibited-activities_91356.html); [Business Today summary](https://businesstoday.in/markets/stocks/story/sebis-clampdown-on-finfluencers-cannot-use-live-stock-market-data-in-educational-content-462704-2025-01-31) |
@@ -175,8 +175,8 @@ Phase 1 delivers two renders of one issue, an email-ready HTML version and an A4
 
 | Format | Specification | Notes |
 | --- | --- | --- |
-| Email (HTML) | Table-based layout with inline styles, 600 to 640 px wide, single column on phones; system font fallbacks; hosted images with alt text, readable with images off; plain-text alternative; dark-mode check | Size budget under 100 KB so Gmail does not clip it. Design document section 9 |
-| PDF | A4 portrait, embedded fonts, selectable vector text, page folio, live links, document metadata; four to six pages | A4 assumed for India. Design document section 10 |
+| Email (HTML), two files | Table-based layout with inline styles, 640 px wide and left-aligned, single column on phones; system font fallbacks; hosted images with alt text, readable with images off; plain-text alternative. A Gmail file (navy masthead and footer) and an Outlook file (light masthead and footer, readable even if Outlook drops text colours on paste), D-040 | Size budget under 90 KB so Gmail does not clip it. Links only to kubeerra.com (D-039) |
+| PDF | A4 portrait, embedded fonts, selectable vector text, page folio, links only to kubeerra.com, document metadata; four to seven pages | A4 assumed for India. Design document section 10 |
 | Website and app snippets (optional) | Short structured items per story, for the data policy Saimohan mentioned | See Ideas |
 | Social or WhatsApp card (optional) | One summary image plus a link to the PDF | The SEBI social media disclosure rule applies |
 
@@ -205,7 +205,7 @@ Every figure comes from a named source fetched on the day and stamped with its t
 | Gold in ₹, 10-year G-Sec yield | IBJA or MCX for gold; RBI, CCIL or market reports for the yield | Suggested additions |
 | Global indices, GIFT Nifty | Exchanges or reputable outlets | GIFT Nifty only in a morning edition |
 | IPOs | NSE and BSE issue pages, SEBI filings, red herring prospectuses | Facts only |
-| Mutual funds | AMFI monthly industry data and daily NAVs, SEBI circulars, AMC SIDs and KIMs | Industry and category level |
+| Mutual funds | AMFI monthly industry data and daily NAVs, SEBI circulars, AMC SIDs, KIMs and factsheets (riskometers), NSE ETF data, published scheme-level flow reports | Industry and category level, plus named schemes as facts with riskometers (D-042) |
 | Economic calendar | RBI, MoSPI, PIB | Release dates checked weekly |
 | News | Economic Times, Mint, Business Standard, Moneycontrol, Reuters, Times of India | Facts rewritten in Kubeerra's words with attribution and links; no copied text or images |
 
@@ -239,12 +239,17 @@ kubeerra-market-brief/
   config/publication.json          name, registration, disclaimers, contacts, links
   design-tokens/tokens.json        colours, fonts and layout (single source)
   schema/issue.schema.json         the shape every issue file must match
-  issues/2026-10-29.json           dry run 001
+  issues/<date>.json               one data file per issue (dry run 001 onward)
+  deliverables/                    each issue's files for collaborators: pdf, gmail, outlook,
+                                   whatsapp, text (14 most recent issues), check-reports, reviews
   templates/email/                 email HTML and plain-text templates
   templates/pdf/issue.html.j2      A4 PDF template
   templates/card/                  WhatsApp card (1080 x 1350) and caption
   render/build.py, render/fmt.py   renderer and Indian number formatting
   render/fill_sources.py           rebuilds an issue's sources list
+  render/publish.py                copies deliverables into deliverables/ and prunes old ones
+  render/gmail_draft.py            prepares and verifies the morning Gmail draft
+  .claude/settings.json            allows web fetching and search for the unattended run
   checks/check_issue.py            style, disclosure, size, link and PDF checks
   learn/library.json               learning library, L-001 onward
   hosting/                         static folder for Vercel (email logo)
@@ -318,14 +323,21 @@ Also possible later: a Saturday weekly wrap, and a monthly mutual fund special a
 
 ## Decision log
 
-Thirty-eight decisions are logged: thirty-five settled, one proposed (D-038) and two superseded (D-011 by D-032, D-024 by D-029). A changed decision keeps its row and gains a new one that supersedes it.
+Forty-five decisions are logged: forty-one settled, one proposed (D-038) and three superseded (D-011 by D-032, D-013 by D-042, D-024 by D-029). A changed decision keeps its row and gains a new one that supersedes it.
 
 | ID | Logged | Decision | Status | Basis |
 | --- | --- | --- | --- | --- |
+| D-045 | 3 Nov 2026 | The Learn section has no tinted box or side bar and is styled like the rest of the page; its "Read more" link to the Kubeerra website stays blue | Settled | Owner, in chat |
+| D-044 | 3 Nov 2026 | The owner authorises opening any public website the work needs. The repository's Claude settings allow web fetching and search, and gatherers reach pages through searches, so the unattended run does not stall on permission prompts | Settled | Owner, in chat; the 3 Nov run lost NSE, IBJA, AMFI and kubeerra.com pages to timed-out prompts |
+| D-043 | 3 Nov 2026 | After handing off the pack, each morning run saves the brief as an unsent Gmail draft in the connected Gmail account: no recipients, logo embedded, subject filled; the PDF is not attached because the run would have to retype it. Every number in the draft is checked against the Gmail file, and a draft that differs is deleted. Nothing is sent | Settled | Owner, in chat |
+| D-042 | 3 Nov 2026 | The mutual fund corner adds category trends, the schemes with the largest net inflows in the latest month (as published by a reputable outlet), the most traded ETFs on NSE by turnover, fund house news and named open NFOs. Every named scheme shows its category and riskometer level from the fund house's own document and a not-a-recommendation line; never returns or performance. Client editions carry them from 4 Nov; the PDF may run to seven pages. Supersedes D-013 | Settled | Owner, in chat, choosing to show named schemes before the compliance owner's review |
+| D-041 | 3 Nov 2026 | Every issue's deliverables are committed to GitHub in deliverables/ (pdf, gmail, outlook, whatsapp, text, check-reports, reviews), starting with the 4 Nov issue. Each run keeps the 14 most recent issues in the deliverable folders; check reports, review logs and issue data are kept permanently, and git history keeps everything | Settled | Owner, in chat |
+| D-040 | 3 Nov 2026 | Two email files per issue: Gmail (navy masthead and footer) and Outlook (light masthead and footer, so text stays readable when Outlook drops text colours on paste). Both are left-aligned | Settled | Owner, in chat: pasted into Outlook, the navy blocks lost their white text |
+| D-039 | 3 Nov 2026 | Links in what readers receive go only to kubeerra.com blog posts and service or disclosure pages, plus the firm's email address, and may be reused. Outside sources are named in plain text, never linked; their URLs stay in the issue file and check report | Settled | Owner, in chat |
 | D-038 | 30 Oct 2026 | Client editions end with an unsubscribe line (reply “Unsubscribe” or write to dhariwal.securities@kubeerra.com) in the email, text and PDF, and the disclaimer says the company “provides distribution services only”, the website's own wording | Proposed | Compliance review of client edition 001; confirm with the compliance owner |
 | D-037 | 30 Oct 2026 | A scheduled task prepares each issue on weekdays at 7:10 AM IST from Mon 2 Nov 2026 (asked for 7:30; started 20 minutes earlier to avoid the busy half-hour slot) and delivers the pack to Shriansh by 9:00 AM. It skips NSE holidays, never sends anything, and runs with automatic approval | Settled | Owner, in chat |
 | D-036 | 30 Oct 2026 | The WhatsApp card carries no disclaimer lines; it keeps the registration line (SEBI's social media rule asks for the registered name and number on posts), and the caption keeps its registration line and the standard warning | Settled | Owner, in chat |
-| D-035 | 30 Oct 2026 | No separate sources list in the PDF; each section keeps its inline source links, and the issue file keeps the full list for the record | Settled | Owner, in chat |
+| D-035 | 30 Oct 2026 | No separate sources list in the PDF; each section keeps its inline source links, and the issue file keeps the full list for the record | Settled | Owner, in chat; from 3 Nov the inline sources are named, not linked (D-039) |
 | D-034 | 30 Oct 2026 | The PDF sector scoreboard is a single column: weakest sectors directly below the strongest. Stories stay in two columns | Settled | Owner, in chat |
 | D-033 | 30 Oct 2026 | The registration line (name, AMFI tagline, ARN, EUIN) and the standard warning sit at the bottom of the email and PDF, not at the top | Settled | Owner, in chat |
 | D-032 | 30 Oct 2026 | Issues are client editions for trusted clients from 30 Oct 2026: no internal labels, no dry-run label and no clock-time data stamps; the report date stays. Supersedes D-011 (RM pilot first) | Settled | Owner, in chat |
@@ -345,9 +357,9 @@ Thirty-eight decisions are logged: thirty-five settled, one proposed (D-038) and
 | D-018 | 29 Oct 2026 | Code and the canonical record live in a private GitHub repository on Shriansh's account, transferred to a company organisation later | Settled | Owner, in chat |
 | D-017 | 29 Oct 2026 | Pilot figures come from public sources, fetched and cited each morning, with Shriansh confirming about 12 headline numbers | Settled | Owner, in chat |
 | D-016 | 29 Oct 2026 | The logo and any email images are hosted on Vercel for now | Settled | Owner, in chat |
-| D-015 | 29 Oct 2026 | Standard length: about a five-minute email read and a four to six page A4 PDF | Settled | Owner, in chat |
+| D-015 | 29 Oct 2026 | Standard length: about a five-minute email read and a four to six page A4 PDF | Settled | Owner, in chat; up to seven pages with the expanded mutual fund corner (D-042) |
 | D-014 | 29 Oct 2026 | The snapshot adds Nifty Bank, midcap and smallcap indices, India VIX and breadth, gold and the 10-year G-Sec yield, and a day-ahead calendar | Settled | Owner, in chat |
-| D-013 | 29 Oct 2026 | The mutual fund corner stays at industry and category level: no scheme rankings or picks | Settled | Owner, in chat |
+| D-013 | 29 Oct 2026 | The mutual fund corner stays at industry and category level: no scheme rankings or picks | Superseded by D-042 | Owner, in chat |
 | D-012 | 29 Oct 2026 | Deliverables are files: email HTML that works in classic Outlook, the new Outlook, Outlook on the web and Gmail, plus an A4 PDF; no Microsoft 365 connector | Settled | Owner, in chat |
 | D-011 | 29 Oct 2026 | The RM and MF team receive a pilot first, then clients | Superseded by D-032 | Owner, in chat |
 | D-010 | 29 Oct 2026 | Morning pre-market edition, about 8:00 AM IST | Settled | Owner, in chat |
@@ -382,7 +394,7 @@ Questions 1 to 13 were answered in chat on 29 Oct 2026 and are logged as decisio
 | 13 | Record location | Docs, then repository | Private GitHub repository on Shriansh's account |
 | 14 | The kubeerra.com ticker showed NIFTY 23,865.75, Sensex 79,223 and USD/INR 84.08 on 29 Oct, against 28 Oct closes of 22,698.85, 73,246.03 and 95.28 | Raise with the website vendor; the brief never quotes the site ticker | Open |
 | 15 | The website footer rewords the AMFI standard warning | Use the exact wording on the site, as the brief does | Open |
-| 16 | May the RM edition name open NFOs? | Category summary in every edition; scheme names only internally, each with its riskometer, once the compliance owner agrees | Open; dry run 001 shows the summary only |
+| 16 | May the RM edition name open NFOs? | Category summary in every edition; scheme names only internally, each with its riskometer, once the compliance owner agrees | Answered 3 Nov 2026 by the owner: named NFOs, each with its riskometer, in client editions (D-042) |
 | 17 | The Kubeerra blog post linked from Learn is titled "SIP vs lump sum, which investment route suits a beginner?" | Check the page before client use; a suitability framing implies advice | Open; link text neutralised |
 | 18 | IPO facts were sourced from aggregator sites, some of which carry grey market premium tables | Cite exchange, registrar or company pages only | Open |
 | 19 | SEBI's 8 Oct 2026 amendment moves mutual fund advertising to the common code for intermediaries, about six months after the 9 Oct gazette | Review the disclosures against the common code before it applies | Open (watch item) |
@@ -406,6 +418,7 @@ The project began on 28 Oct 2026 and entered the build on 29 Oct 2026; every mat
 
 | Date | Event |
 | --- | --- |
+| 3 Nov 2026 | Round 3 from Shriansh's review of the first scheduled issues: links only to kubeerra.com with sources named (D-039), separate Gmail and Outlook email files, left-aligned (D-040), deliverables in GitHub with 14-issue retention (D-041), an expanded mutual fund corner with named schemes and riskometers (D-042), an unsent Gmail draft each morning (D-043), web access pre-approved for the unattended run (D-044) and a plain Learn section (D-045). Title "The morning in brief" kept on recommendation. Scheduled issues for 2 and 3 Nov delivered |
 | 2 Nov 2026 | First scheduled run: client edition 002, for Monday 2 Nov from the 30 Oct close. NSE's archive file, kubeerra.com and later IBJA reports could not be fetched in the unattended run, so index and sector figures came from checked secondary pages and the 10-year yield and gold rate were left out. Independent review: one unsupported sector figure removed, wording and attribution fixes (issues/2026-11-02-review.md). Kotak Neo's FII/DII page, Liquide and Investing.com added to the cleared sources |
 | 30 Oct 2026 | Client edition rules set (D-032 to D-036) and the weekday schedule created (D-037). Client edition 001, for Friday 30 Oct from the 29 Oct close, prepared on the afternoon of 30 Oct. Independent review found two compliance must-fixes (a broker's scheme-level NFO link, and IPO pages not yet cleared for grey market premium), two IPO subscription figures taken from incomplete 5 PM readings and a source mislabelled as Reuters; all corrected (issues/2026-10-30-review.md). 5paisa and Tapetide dropped as sources for GMP links; footer gains an unsubscribe line and the website's disclaimer wording (D-038, proposed) |
 | 29 Oct 2026 | Design round 2 from Shriansh's feedback: green and red for rises and falls (D-031), General Sans for the PDF and card (D-029), and the shared PNG logo hosted on Vercel (D-030). Shriansh imported the repository into Vercel; commits now use his GitHub no-reply email so deployments are not blocked |
