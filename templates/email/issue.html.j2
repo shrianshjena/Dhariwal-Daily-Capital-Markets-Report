@@ -43,7 +43,7 @@
 {%- macro para(text, top=12, size=16, color=None, weight=400) -%}
 <p style="margin:{{ top }}px 0 0 0;{{ SANS }}font-size:{{ size }}px;line-height:{{ (size * 1.56)|round|int }}px;font-weight:{{ weight }};color:{{ color or C.text.primary }};{{ LH }}">{{ text|t }}</p>
 {%- endmacro -%}
-{%- macro names(items) -%}{% for s in items %}{{ s.name }}{{ ", " if not loop.last }}{% endfor %}{%- endmacro -%}
+{%- macro names(items) -%}{{ items|map(attribute="name")|unique|join(", ") }}{%- endmacro -%}
 {%- macro srcline(items, top=8, prefix=None) -%}
 <p style="margin:{{ top }}px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.secondary }};{{ LH }}">{{ (prefix or ("Sources" if items|length > 1 else "Source"))|t }}: {{ names(items) }}</p>
 {%- endmacro -%}
@@ -258,7 +258,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;margin-top:6px;">
 {% for n in named_nfos %}{{ schemerow(n.scheme, n.category ~ " · Riskometer: " ~ n.riskometer ~ ((" · Minimum " ~ n.min_investment) if n.get('min_investment') else "") ~ " · " ~ n.source.name, n.dates) }}{% endfor %}
 </table>
-<p style="margin:8px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.secondary }};{{ LH }}">Facts only, not a recommendation; each scheme's risks and terms are in its {{ klink(kb.sid) }}.{% if unnamed_nfos %} {{ unnamed_nfos }} other open {{ "offer is" if unnamed_nfos == 1 else "offers are" }} not named because {{ "its" if unnamed_nfos == 1 else "their" }} risk level could not be confirmed from the fund house's documents.{% endif %}</p>
+<p style="margin:8px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.secondary }};{{ LH }}">Facts only, not a recommendation; each scheme's risks and terms are in its {{ klink(kb.sid) }}.{% if nfo_unnamed_note %} {{ nfo_unnamed_note }}{% endif %}</p>
 {% elif mf.get('nfo_summary') %}<p style="margin:8px 0 0 0;{{ SANS }}font-size:15px;line-height:23px;color:{{ C.text.primary }};{{ LH }}">{{ mf.nfo_summary.text|t }} <span style="font-size:13px;line-height:20px;color:{{ C.text.secondary }};">{{ mf.nfo_summary.source.name }}</span></p>{% endif %}
 {% endif %}
 {% if mf.regulatory %}

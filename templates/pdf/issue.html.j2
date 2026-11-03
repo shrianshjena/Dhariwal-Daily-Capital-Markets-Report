@@ -12,7 +12,7 @@
 <h2>{{ headline|t }}</h2>
 </div>
 {%- endmacro -%}
-{%- macro names(items) -%}{% for s in items %}{{ s.name }}{{ ", " if not loop.last }}{% endfor %}{%- endmacro -%}
+{%- macro names(items) -%}{{ items|map(attribute="name")|unique|join(", ") }}{%- endmacro -%}
 {%- macro src(items, prefix=None) -%}<p class="src">{{ prefix or ("Sources" if items|length > 1 else "Source") }}: {{ names(items) }}</p>{%- endmacro -%}
 {%- macro klink(link) -%}<a href="{{ link.url }}">{{ link.name }}</a>{%- endmacro -%}
 <!DOCTYPE html>
@@ -276,7 +276,7 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 <thead><tr><th>Scheme</th><th>Category</th><th>Riskometer</th><th class="r">Open</th></tr></thead>
 <tbody>{% for n in named_nfos %}<tr><td class="name">{{ n.scheme|t }}</td><td class="c">{{ n.category|t }}{% if n.get('min_investment') %} · minimum {{ n.min_investment }}{% endif %}</td><td class="c">{{ n.riskometer }}</td><td class="r">{{ n.dates|t }}</td></tr>{% endfor %}</tbody>
 </table>
-<p class="note">Facts only, not a recommendation; each scheme's risks and terms are in its {{ klink(kb.sid) }}.{% if unnamed_nfos %} {{ unnamed_nfos }} other open {{ "offer is" if unnamed_nfos == 1 else "offers are" }} not named because {{ "its" if unnamed_nfos == 1 else "their" }} risk level could not be confirmed from the fund house's documents.{% endif %} <span class="srcin">Sources: {{ names(named_nfos|unique_sources) }}</span></p>
+<p class="note">Facts only, not a recommendation; each scheme's risks and terms are in its {{ klink(kb.sid) }}.{% if nfo_unnamed_note %} {{ nfo_unnamed_note }}{% endif %} <span class="srcin">Sources: {{ names(named_nfos|unique_sources) }}</span></p>
 {% elif mf.get('nfo_summary') %}<p class="mfitem">{{ mf.nfo_summary.text|t }} <span class="srcin">{{ mf.nfo_summary.source.name }}</span></p>{% endif %}
 {% endif %}
 {% if mf.regulatory %}

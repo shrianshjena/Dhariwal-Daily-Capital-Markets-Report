@@ -240,9 +240,16 @@ def main():
     nfos = issue["mf"].get("nfos") or []
     named_nfos = [n for n in nfos if n.get("riskometer")]
     show_nfo_names = bool(named_nfos)
+    unnamed = len(nfos) - len(named_nfos)
+    nfo_unnamed_note = ""
+    if unnamed:
+        count = "one two three four five six seven eight nine".split()[unnamed - 1].capitalize() if unnamed < 10 else str(unnamed)
+        nfo_unnamed_note = (f"{count} other open {'offer is' if unnamed == 1 else 'offers are'} not named because "
+                            f"{'its risk level' if unnamed == 1 else 'their risk levels'} could not be confirmed "
+                            "from fund house documents.")
     ctx = dict(issue=issue, pub=pub, tokens=tokens, sectors=sector_view(issue), snapshot_sources=snapshot_sources,
                global_sources=global_sources, show_nfo_names=show_nfo_names, named_nfos=named_nfos,
-               unnamed_nfos=len(nfos) - len(named_nfos), kb=pub["kubeerra_links"],
+               nfo_unnamed_note=nfo_unnamed_note, kb=pub["kubeerra_links"],
                date_long=f"{day.day} {day:%B %Y}", date_short=f"{day.day} {day:%b %Y}")
 
     # Email HTML in two versions (D-040): Gmail keeps the navy masthead; Outlook uses a light one so

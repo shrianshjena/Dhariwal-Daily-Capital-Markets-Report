@@ -1,5 +1,5 @@
 {%- set meta = issue.meta -%}
-{%- macro names(items) -%}{% for s in items %}{{ s.name }}{{ ", " if not loop.last }}{% endfor %}{%- endmacro -%}
+{%- macro names(items) -%}{{ items|map(attribute="name")|unique|join(", ") }}{%- endmacro -%}
 {{ pub.name|upper }} · {{ pub.edition_name|upper }}
 {{ meta.weekday }} {{ date_long }}{% if meta.audience == "internal" %} · {{ meta.label }}{% endif +%}
 India: {{ meta.india_as_of }} · Global: {{ meta.global_as_of }}
@@ -112,7 +112,7 @@ New fund offers:
 {% for n in named_nfos %}
 - {{ n.scheme }}: {{ n.category }}, {{ n.dates }}. Riskometer: {{ n.riskometer }}. ({{ n.source.name }})
 {% endfor %}
-Facts only, not a recommendation; each scheme's risks and terms are in its scheme information document ({{ kb.sid.url }}).{% if unnamed_nfos %} {{ unnamed_nfos }} other open {{ "offer is" if unnamed_nfos == 1 else "offers are" }} not named because {{ "its" if unnamed_nfos == 1 else "their" }} risk level could not be confirmed from the fund house's documents.{% endif %}
+Facts only, not a recommendation; each scheme's risks and terms are in its scheme information document ({{ kb.sid.url }}).{% if nfo_unnamed_note %} {{ nfo_unnamed_note }}{% endif %}
 {% elif mf.get('nfo_summary') %}
 {{ mf.nfo_summary.text }} ({{ mf.nfo_summary.source.name }})
 {% endif %}
