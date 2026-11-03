@@ -236,11 +236,13 @@ def main():
     snapshot_sources = list({s['source']['url']: s['source'] for s in issue['snapshot']['indices']}.values())
     global_sources = list({s['url']: s for s in [g['source'] for g in issue['global']['items']]
                            + issue['global'].get('note_sources', [])}.values())
-    # NFO scheme names render (in every edition, D-042) only when every listed NFO carries its riskometer
+    # Open NFOs are named (in every edition, D-042) only with their riskometer; others are counted, not named
     nfos = issue["mf"].get("nfos") or []
-    show_nfo_names = bool(nfos) and all(n.get("riskometer") for n in nfos)
+    named_nfos = [n for n in nfos if n.get("riskometer")]
+    show_nfo_names = bool(named_nfos)
     ctx = dict(issue=issue, pub=pub, tokens=tokens, sectors=sector_view(issue), snapshot_sources=snapshot_sources,
-               global_sources=global_sources, show_nfo_names=show_nfo_names, kb=pub["kubeerra_links"],
+               global_sources=global_sources, show_nfo_names=show_nfo_names, named_nfos=named_nfos,
+               unnamed_nfos=len(nfos) - len(named_nfos), kb=pub["kubeerra_links"],
                date_long=f"{day.day} {day:%B %Y}", date_short=f"{day.day} {day:%b %Y}")
 
     # Email HTML in two versions (D-040): Gmail keeps the navy masthead; Outlook uses a light one so

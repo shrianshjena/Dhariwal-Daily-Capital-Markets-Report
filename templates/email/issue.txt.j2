@@ -109,10 +109,10 @@ Fund house news:
 
 New fund offers:
 {% if show_nfo_names %}
-{% for n in mf.nfos %}
+{% for n in named_nfos %}
 - {{ n.scheme }}: {{ n.category }}, {{ n.dates }}. Riskometer: {{ n.riskometer }}. ({{ n.source.name }})
 {% endfor %}
-Facts only, not a recommendation; each scheme's risks and terms are in its scheme information document ({{ kb.sid.url }}).
+Facts only, not a recommendation; each scheme's risks and terms are in its scheme information document ({{ kb.sid.url }}).{% if unnamed_nfos %} {{ unnamed_nfos }} other open {{ "offer is" if unnamed_nfos == 1 else "offers are" }} not named because {{ "its" if unnamed_nfos == 1 else "their" }} risk level could not be confirmed from the fund house's documents.{% endif %}
 {% elif mf.get('nfo_summary') %}
 {{ mf.nfo_summary.text }} ({{ mf.nfo_summary.source.name }})
 {% endif %}

@@ -45,8 +45,9 @@ Issues go to trusted clients, so every issue is written for a general reader:
 - Mutual fund corner (D-042): AMFI industry data; category trends (`highlights`); the schemes
   with the largest net inflows in the latest month (`inflow_leaders`, as published by a
   reputable outlet); the most traded ETFs on NSE by turnover (`etfs`); fund house news
-  (`fund_news`); open NFOs by name when every one has its riskometer (`nfos`), otherwise the
-  category summary (`nfo_summary`); rule changes. Every named scheme carries its category and
+  (`fund_news`); open NFOs (`nfos`), named only when the fund house's document gives the
+  riskometer, with the others counted but not named (keep `nfo_summary` as the fallback when
+  none has one); rule changes. Every named scheme carries its category and
   riskometer level from the fund house's own document; never returns or performance, and never
   the words best, top, popular or trending about a scheme. Leave out any part the gatherer
   could not source.

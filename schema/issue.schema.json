@@ -668,7 +668,7 @@
             "text",
             "source"
           ],
-          "description": "Category-level summary of open NFOs, used when any open NFO lacks its riskometer. Scheme names render (in every edition) only when every listed NFO has its riskometer.",
+          "description": "Category-level summary of open NFOs, used only when no open NFO has a riskometer confirmed in the fund house's documents. Otherwise NFOs with a riskometer are named and the rest are counted, not named (D-042).",
           "properties": {
             "text": {
               "$ref": "#/$defs/text"

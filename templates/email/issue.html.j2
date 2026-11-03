@@ -256,9 +256,9 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 {{ label("New fund offers", C.text.secondary, 22) }}
 {% if show_nfo_names %}
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;margin-top:6px;">
-{% for n in mf.nfos %}{{ schemerow(n.scheme, n.category ~ " · Riskometer: " ~ n.riskometer ~ ((" · Minimum " ~ n.min_investment) if n.get('min_investment') else "") ~ " · " ~ n.source.name, n.dates) }}{% endfor %}
+{% for n in named_nfos %}{{ schemerow(n.scheme, n.category ~ " · Riskometer: " ~ n.riskometer ~ ((" · Minimum " ~ n.min_investment) if n.get('min_investment') else "") ~ " · " ~ n.source.name, n.dates) }}{% endfor %}
 </table>
-<p style="margin:8px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.secondary }};{{ LH }}">Facts only, not a recommendation; each scheme's risks and terms are in its {{ klink(kb.sid) }}.</p>
+<p style="margin:8px 0 0 0;{{ SANS }}font-size:13px;line-height:20px;color:{{ C.text.secondary }};{{ LH }}">Facts only, not a recommendation; each scheme's risks and terms are in its {{ klink(kb.sid) }}.{% if unnamed_nfos %} {{ unnamed_nfos }} other open {{ "offer is" if unnamed_nfos == 1 else "offers are" }} not named because {{ "its" if unnamed_nfos == 1 else "their" }} risk level could not be confirmed from the fund house's documents.{% endif %}</p>
 {% elif mf.get('nfo_summary') %}<p style="margin:8px 0 0 0;{{ SANS }}font-size:15px;line-height:23px;color:{{ C.text.primary }};{{ LH }}">{{ mf.nfo_summary.text|t }} <span style="font-size:13px;line-height:20px;color:{{ C.text.secondary }};">{{ mf.nfo_summary.source.name }}</span></p>{% endif %}
 {% endif %}
 {% if mf.regulatory %}
