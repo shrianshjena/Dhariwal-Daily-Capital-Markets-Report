@@ -3,11 +3,22 @@
 Every story answers two questions in Kubeerra's voice: what happened, and why it matters to an
 Indian investor. Plain words, a dated and sourced number, no prediction.
 
-## Issue shape (morning edition)
+## Issue shape (morning edition, from 5 Nov 2026, D-046)
 
-The morning in brief (3 bullets) · 01 Market snapshot · 02 Flows, currency and commodities ·
-03 Sector scoreboard · 04 Top stories (4 to 6) · 05 Global markets · 06 IPO desk ·
-07 Mutual fund corner · 08 Learn · 09 Day ahead · disclosures.
+At a glance (six key numbers, three to five bullets) · In this issue (contents) ·
+1 Markets: snapshot (with NIFTY Midcap 100 and Smallcap 100), top gainers and losers, technical
+snapshot, sectors, flows · 2 Fundamental outlook: what is driving markets, global cues for
+India, events and data ahead · 3 Global markets: the US session, world markets, global events ·
+4 Gold and silver · 5 Companies: results, big movers, corporate actions, IPO desk, more news ·
+6 Mutual funds: corner, talk to us, learn · 7 Calendar · Important disclosures (a full page in
+the PDF). Sections without data drop out and the numbering closes up.
+
+Say each fact once, in the section it belongs to. The mutual fund corner's headline starts with
+the latest month's facts ("In September, ..."), never with what is not yet published.
+
+The fundamental outlook explains what is moving markets and what is scheduled; any expectation
+belongs to a named source ("economists polled by Reuters expect ..."). The technical snapshot
+gives numbers, never a direction (no bullish, bearish, support, resistance or breakout).
 
 Section headlines state the finding in sentence case ("Indices ended lower as banks weighed"),
 never a label ("Market update").

@@ -47,12 +47,154 @@ def validate(issue):
 
 def sector_view(issue):
     items = sorted(issue["sectors"]["items"], key=lambda s: s["change_pct"], reverse=True)
-    top = items[:4]
-    bottom = list(reversed(items[-4:]))
+    # up to four each side, never the same index in both lists (with seven sectors: four and three)
+    n_top = min(4, (len(items) + 1) // 2)
+    n_bottom = min(4, len(items) - n_top)
+    top = items[:n_top]
+    bottom = list(reversed(items[len(items) - n_bottom:]))
     biggest = max(abs(s["change_pct"]) for s in top + bottom) or 1
     def bar(s):
         return dict(s, bar=max(2, round(abs(s["change_pct"]) / biggest * 100)))
     return {"top": [bar(s) for s in top], "bottom": [bar(s) for s in bottom], "max": biggest}
+
+
+# The issue's clusters and sections (D-046). Sections without data drop out, and the numbering
+# closes up, so "1.2" always means the second section that is actually in the issue.
+CLUSTERS = [
+    ("markets", "Markets", "Indian indices, the day's biggest movers, levels, sectors, flows and the rupee", [
+        ("snapshot", "Market snapshot", lambda i: True),
+        ("movers", "Top gainers and losers", lambda i: bool(i.get("movers"))),
+        ("technicals", "Technical snapshot", lambda i: bool(i.get("technicals"))),
+        ("sectors", "Sector scoreboard", lambda i: True),
+        ("flows", "Flows, rupee and bonds", lambda i: True)]),
+    ("outlook", "Fundamental outlook", "Crude and other local factors, global cues, and the events and data ahead", [
+        ("drivers", "What is driving markets", lambda i: bool((i.get("outlook") or {}).get("drivers"))),
+        ("cues", "Global cues for India", lambda i: bool((i.get("outlook") or {}).get("global_cues"))),
+        ("events", "Events and data ahead", lambda i: bool((i.get("outlook") or {}).get("events")))]),
+    ("global", "Global markets", "The US session, world indices, rates and global events", [
+        ("us", "The US session", lambda i: bool(i["global"].get("us"))),
+        ("world", "World markets", lambda i: True),
+        ("gevents", "Global events", lambda i: bool(i["global"].get("events")))]),
+    ("metals", "Gold and silver", "IBJA rates in rupees, international prices and what moved them", [
+        ("metals", "Gold and silver prices", lambda i: bool(i.get("metals")))]),
+    ("companies", "Companies", "Results, big single-day moves, corporate actions, IPOs and other news", [
+        ("results", "Results", lambda i: bool(i.get("results"))),
+        ("bigmovers", "Big movers", lambda i: bool(i.get("big_movers"))),
+        ("actions", "Corporate actions", lambda i: bool((i.get("corporate_actions") or {}).get("items"))),
+        ("ipos", "IPO desk", lambda i: True),
+        ("stories", "More news", lambda i: bool(i.get("stories")))]),
+    ("funds", "Mutual funds", "Industry data, new fund offers, rule changes, a lesson and how to reach us", [
+        ("mf", "Mutual fund corner", lambda i: True),
+        ("talk", "Talk to us", lambda i: True),
+        ("learn", "Learn", lambda i: True)]),
+    ("calendar", "Calendar", "Results, data releases, listings and holidays in the days ahead", [
+        ("dayahead", "Day ahead", lambda i: True)]),
+]
+
+
+def structure(issue):
+    clusters, sections = [], {}
+    for cid, title, desc, secs in CLUSTERS:
+        present = [(sid, stitle) for sid, stitle, test in secs if test(issue)]
+        if not present:
+            continue
+        n = len(clusters) + 1
+        cl = {"id": cid, "num": n, "title": title, "desc": desc, "sections": []}
+        for k, (sid, stitle) in enumerate(present, start=1):
+            sec = {"id": sid, "num": f"{n}.{k}", "title": stitle, "cluster": cid}
+            cl["sections"].append(sec)
+            sections[sid] = sec
+        clusters.append(cl)
+    return clusters, sections
+
+
+def find_index(issue, *names):
+    for r in issue["snapshot"]["indices"]:
+        if r["name"].lower() in [n.lower() for n in names]:
+            return r
+    return None
+
+
+def glance(issue):
+    """The six key numbers for the top of the email and PDF and for the WhatsApp card (D-047)."""
+    tiles = []
+    for label, names in (("NIFTY 50", ("NIFTY 50",)), ("Sensex", ("BSE Sensex", "Sensex")),
+                         ("NIFTY Midcap 100", ("NIFTY Midcap 100", "Nifty Midcap 100")),
+                         ("NIFTY Smallcap 100", ("NIFTY Smallcap 100", "Nifty Smallcap 100"))):
+        r = find_index(issue, *names)
+        if r:
+            tiles.append({"label": label, "value": fmt.level(r["close"]), "change_pct": r["change_pct"]})
+    m = metals_view(issue)
+    if m:
+        tiles.append({"label": "Gold 24K · ₹/10 g", "value": "₹" + fmt.group_indian(m["gold"], 0), "change_pct": m["gold_pct"]})
+        tiles.append({"label": "Silver · ₹/kg", "value": "₹" + fmt.group_indian(m["silver"], 0), "change_pct": m["silver_pct"]})
+    return tiles
+
+
+def metals_view(issue):
+    m = issue.get("metals")
+    if not m:
+        return None
+    ib = m["ibja"]
+    def pct(now, prev):
+        return round((now - prev) / prev * 100, 2) if prev else None
+    return {"gold": ib["gold_999_10g"], "gold_prev": ib.get("gold_prev"), "gold_pct": pct(ib["gold_999_10g"], ib.get("gold_prev")),
+            "silver": ib["silver_999_kg"], "silver_prev": ib.get("silver_prev"),
+            "silver_pct": pct(ib["silver_999_kg"], ib.get("silver_prev")),
+            "date": ib["date"], "session": ib["session"], "prev_date": ib.get("prev_date"), "source": ib["source"]}
+
+
+def world_groups(issue):
+    """World markets in region groups, in the issue's order, then rates and currency. A group whose
+    rows share one as-of date shows it once, in its heading."""
+    groups = []
+    for g in issue["global"]["items"]:
+        if not groups or groups[-1]["region"] != g["region"]:
+            groups.append({"region": g["region"], "rows": []})
+        groups[-1]["rows"].append({"kind": "index", "x": g, "as_of": g.get("as_of")})
+    extras = issue["global"].get("extras") or []
+    if extras:
+        groups.append({"region": "Rates and currency", "rows": [{"kind": "extra", "x": x, "as_of": x.get("as_of") or x.get("detail")}
+                                                               for x in extras]})
+    for gr in groups:
+        dates = {r["as_of"] for r in gr["rows"]}
+        gr["as_of"] = dates.pop() if len(dates) == 1 else None
+    return groups
+
+
+def range_bar(it):
+    """The day's range as three segments (percent widths): low to the open/close, the open-to-close
+    move, and the rest up to the high. Email tables and the SVG charts share it."""
+    lo, hi, o, c = it.get("low"), it.get("high"), it.get("open"), it.get("close")
+    if None in (lo, hi, o, c) or hi <= lo:
+        return None
+    span = hi - lo
+    a = round((min(o, c) - lo) / span * 100)
+    b = max(2, round(abs(c - o) / span * 100))
+    a = min(a, 100 - b)
+    return {"a": a, "b": b, "c": 100 - a - b, "up": c >= o, "open_pct": round((o - lo) / span * 100, 1),
+            "close_pct": round((c - lo) / span * 100, 1)}
+
+
+def trend(points, height=56, width=560):
+    """Bars for the email (pixel heights) and a polyline for the PDF and card (SVG coordinates)."""
+    if not points:
+        return None
+    vals = [p["close"] for p in points]
+    lo, hi = min(vals), max(vals)
+    span = (hi - lo) or 1
+    bars = [{"h": 6 + round((v - lo) / span * (height - 6)), "close": v, "date": p["date"]} for p, v in zip(points, vals)]
+    n = len(vals)
+    xs = [round(i * width / (n - 1), 1) for i in range(n)] if n > 1 else [0]
+    ys = [round((hi - v) / span * 100, 1) for v in vals]   # 0 (top) to 100 (bottom) of the plot area
+    first, last = points[0]["date"], points[-1]["date"]
+    def short(d):
+        dd = datetime.date.fromisoformat(d)
+        return f"{dd.day} {dd:%b}"
+    return {"bars": bars, "lo": lo, "hi": hi, "first": short(first), "last": short(last),
+            "start": vals[0], "end": vals[-1], "change_pct": round((vals[-1] - vals[0]) / vals[0] * 100, 2),
+            "xs": xs, "ys": ys, "n": n,
+            "points": " ".join(f"{x},{y}" for x, y in zip(xs, ys))}
 
 
 WEIGHTS = {"thin": 100, "extralight": 200, "light": 300, "regular": 400, "medium": 500,
@@ -154,6 +296,17 @@ def unique_sources(items):
     return out
 
 
+def groupby_ordered(items, key):
+    """Consecutive groups by a key, in the items' own order (Jinja's groupby sorts)."""
+    groups = []
+    for x in items:
+        k = x[key]
+        if not groups or groups[-1][0] != k:
+            groups.append((k, []))
+        groups[-1][1].append(x)
+    return groups
+
+
 def build_env(tokens):
     env = Environment(
         loader=FileSystemLoader(str(ROOT / "templates")),
@@ -187,6 +340,8 @@ def build_env(tokens):
         t=glue, nb=nobreak, movement=movement, is_flow=is_flow, mvcolor=mvcolor, figcolor=figcolor,
         chip=chip, bp=fmt.bp, srcs=srcs, unique_sources=unique_sources,
         crore=lambda v: fmt.figure(v, "crore"),
+        groupby_ordered=groupby_ordered,
+        andjoin=lambda xs: (", ".join(list(xs)[:-1]) + " and " + list(xs)[-1]) if len(list(xs)) > 1 else "".join(xs),
     )
     return env
 
@@ -247,7 +402,14 @@ def main():
         nfo_unnamed_note = (f"{count} other open {'offer is' if unnamed == 1 else 'offers are'} not named because "
                             f"{'its risk level' if unnamed == 1 else 'their risk levels'} could not be confirmed "
                             "from fund house documents.")
+    clusters, S = structure(issue)
+    tech = issue.get("technicals") or {}
+    nifty_tech = next((t for t in tech.get("items", []) if t["index"] == "NIFTY 50"), None)
+    charts = {"range": range_bar(nifty_tech) if nifty_tech else None,
+              "trend": trend((tech.get("trend") or {}).get("points") or [])}
     ctx = dict(issue=issue, pub=pub, tokens=tokens, sectors=sector_view(issue), snapshot_sources=snapshot_sources,
+               clusters=clusters, S=S, glance=glance(issue), metals=metals_view(issue), charts=charts,
+               nifty_tech=nifty_tech, world_groups=world_groups(issue),
                global_sources=global_sources, show_nfo_names=show_nfo_names, named_nfos=named_nfos,
                nfo_unnamed_note=nfo_unnamed_note, kb=pub["kubeerra_links"],
                date_long=f"{day.day} {day:%B %Y}", date_short=f"{day.day} {day:%b %Y}")
@@ -256,7 +418,7 @@ def main():
     # its text stays readable when Outlook drops colours on paste. The old single file is removed.
     email = env.get_template("email/issue.html.j2")
     for variant in ("gmail", "outlook"):
-        html = compact(email.render(**ctx, variant=variant, logo_src=logo_url or ""))
+        html = compact(email.render(**ctx, variant=variant, logo_src=logo_url or "", logo_tile=False))
         (out / f"{stem}-{variant}.html").write_text(html, encoding="utf-8")
     (out / f"{stem}.html").unlink(missing_ok=True)
     text = env.get_template("email/issue.txt.j2").render(**ctx)
@@ -290,7 +452,7 @@ def main():
             (out / "preview" / stale).unlink(missing_ok=True)
         previews = {}
         for variant in ("gmail", "outlook"):
-            previews[variant] = compact(email.render(**ctx, variant=variant, logo_src=data_uri))
+            previews[variant] = compact(email.render(**ctx, variant=variant, logo_src=data_uri, logo_tile=False))
         # What a reader sees if Outlook drops every text colour on paste: all text falls back to black
         previews["outlook-nocolour"] = re.sub(r"(?<![-\w])color:[^;\"]*;?", "", previews["outlook"])
         jobs = (("gmail", 704, "gmail-desktop"), ("gmail", 390, "gmail-phone"),

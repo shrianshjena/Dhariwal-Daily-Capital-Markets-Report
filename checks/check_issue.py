@@ -3,10 +3,13 @@
 
     python3 checks/check_issue.py issues/2026-10-29.json
 
-FAIL (exit 1): em or en dashes; banned phrases; missing disclosures; email HTML over
-102 KB (Gmail clips larger messages); images without alt text or size; any link that does not
-go to kubeerra.com or the firm's email address (D-039); text on a dark background in the
-Outlook version (D-040); PDF without extractable text or with unembedded fonts.
+FAIL (exit 1): em or en dashes; banned phrases; missing disclosures; Gmail email HTML over
+102 KB (Gmail clips larger messages and the disclosures would be hidden); images without alt
+text or size; any link that does not go to kubeerra.com, the firm's email address or a place in
+the same document (D-039, D-046); text on a dark background in the Outlook version (D-040); a
+contents link with no target; a PDF without extractable text, with unembedded fonts or over 16
+pages; a WhatsApp caption without the registration line, the standard warning or the disclaimer
+link.
 REVIEW (reported, not failing): advice-like or sensational words in the issue's own
 writing, which a person must read in context; source URLs missing from the sources list.
 """
@@ -29,6 +32,10 @@ REVIEW = [
     r"\bbest (fund|scheme)s?\b", r"\btop picks?\b", r"\bshould (invest|buy|sell)\b", r"\bcrash",
     r"\bbloodbath\b", r"\bpanic\b", r"\bfrenzy\b", r"\bsoar", r"\bplung", r"\bskyrocket", r"\bpredict",
     r"\bwill (rise|fall|rally|climb|drop)\b", r"\boutperform", r"\bupside\b", r"\bdownside\b",
+    # technical-analysis calls (D-048: the technical snapshot states levels only)
+    r"\bbreak-?outs?\b", r"\bbreak-?downs?\b", r"\bresistance\b", r"\bsupport (level|zone|at|near)\b",
+    r"\boverbought\b", r"\boversold\b", r"\b(buy|sell) signal", r"\buptrend\b", r"\bdowntrend\b",
+    r"\bmomentum\b", r"\bexpected to (rise|fall|gain|climb|drop)\b",
 ]
 REQUIRED = {
     "AMFI tagline": "AMFI-registered Mutual Fund Distributor",
@@ -44,9 +51,11 @@ GMP_WARN = ("groww.in/blog", "5paisa.com", "tapetide.com")  # GMP links in navig
 SOURCE_WARN = {"indianopinion.org": "AI-written summary of other outlets, not wire copy",
                "admiralmarkets.com": "CFD broker marketing page"}
 # The only link targets allowed in what readers receive (D-039)
-LINK_OK = re.compile(r"^(https://(www\.)?kubeerra\.com(/|$)|mailto:dhariwal\.securities@kubeerra\.com)")
-EMAIL_FAIL_BYTES = 102_000
-EMAIL_WARN_BYTES = 90_000
+LINK_OK = re.compile(r"^(https://(www\.)?kubeerra\.com(/|$)|mailto:dhariwal\.securities@kubeerra\.com|#[A-Za-z0-9_-]+$)")
+EMAIL_FAIL_BYTES = 102_000      # Gmail clips the Gmail version above about 102 KB
+EMAIL_WARN_BYTES = 96_000
+OUTLOOK_WARN_BYTES = 150_000    # Outlook does not clip; a Gmail reader of an Outlook-sent copy might
+PDF_PAGES_OK = (7, 14)          # D-055: the issue runs beyond six pages; 16 is the hard limit
 
 
 VOID = {"br", "img", "meta", "link", "hr", "input", "col", "source", "wbr", "area", "base"}
@@ -77,8 +86,8 @@ class Collector(HTMLParser):
             self._skip += 1
         elif tag == "img":
             self.imgs.append(a)
-        elif tag == "a":
-            self.links.append(a.get("href", ""))
+        elif tag == "a" and "href" in a:   # named anchors (contents targets) carry no href
+            self.links.append(a.get("href") or "")
         if tag in VOID:
             return
         colour = a.get("bgcolor") or ""
@@ -158,8 +167,19 @@ def main():
     if not any(f.startswith(("em dash", "en dash")) for f in fails):
         passes.append("No em or en dashes in the issue, email, text or PDF")
 
-    # 2. Banned phrases anywhere
-    corpus = "\n".join([s for _, s in strings(issue)] + [html_text, emails["outlook"][2], txt, pdf_text])
+    # 2. Banned phrases anywhere, except inside the fixed disclosures (whose "no guarantee of
+    # returns" wording is protective, D-053)
+    pub = json.loads((ROOT / "config" / "publication.json").read_text(encoding="utf-8"))
+    boiler = [" ".join(x.split()) for d in pub.get("disclosures", []) for x in d["paras"]]
+    boiler += [" ".join(pub.get("disclosures_short", "").split())]
+    def strip_boiler(text):
+        flat = " ".join(text.split())
+        for b in boiler:
+            if b:
+                flat = flat.replace(b, " ")
+        return flat
+    corpus = "\n".join([s for _, s in strings(issue)] + [strip_boiler(html_text), strip_boiler(emails["outlook"][2]),
+                                                       strip_boiler(txt), strip_boiler(pdf_text)])
     hits = [(p, context(corpus, m)) for p in BANNED for m in re.finditer(p, corpus, re.I)]
     fails += [f"banned phrase /{p}/: ...{c}..." for p, c in hits]
     if not hits:
@@ -182,15 +202,29 @@ def main():
         else:
             passes.append(f"{name} present in both emails, text and PDF")
 
-    # 5. Email size (both versions)
-    for variant, (raw, _, _) in emails.items():
-        size = len(raw.encode("utf-8"))
-        if size > EMAIL_FAIL_BYTES:
-            fails.append(f"{variant} email HTML is {size:,} bytes; Gmail clips above about 102 KB")
-        elif size > EMAIL_WARN_BYTES:
-            warns.append(f"{variant} email HTML is {size:,} bytes; budget is under 90 KB")
-        else:
-            passes.append(f"{variant.capitalize()} email HTML size {size:,} bytes (budget under 90 KB)")
+    # 5. Email size: the Gmail version must stay under Gmail's clipping limit
+    size = len(emails["gmail"][0].encode("utf-8"))
+    if size > EMAIL_FAIL_BYTES:
+        fails.append(f"Gmail email HTML is {size:,} bytes; Gmail clips above about 102 KB and would hide the disclosures")
+    elif size > EMAIL_WARN_BYTES:
+        warns.append(f"Gmail email HTML is {size:,} bytes; budget is under {EMAIL_WARN_BYTES // 1000} KB")
+    else:
+        passes.append(f"Gmail email HTML size {size:,} bytes (budget under {EMAIL_WARN_BYTES // 1000} KB)")
+    size = len(emails["outlook"][0].encode("utf-8"))
+    if size > OUTLOOK_WARN_BYTES:
+        warns.append(f"Outlook email HTML is {size:,} bytes; above {OUTLOOK_WARN_BYTES // 1000} KB a Gmail reader of the sent copy may see it clipped")
+    else:
+        passes.append(f"Outlook email HTML size {size:,} bytes")
+
+    # 5c. Every in-document link (contents, back to contents) has a target
+    for variant, (raw, coll, _) in emails.items():
+        targets = set(re.findall(r'\b(?:name|id)="([A-Za-z0-9_-]+)"', raw))
+        broken = sorted({h[1:] for h in coll.links if (h or "").startswith("#") and h[1:] not in targets})
+        fails += [f"{variant} email: contents link #{b} has no target" for b in broken]
+    pdf_raw = (out / f"{stem}.pdf.html").read_text(encoding="utf-8")
+    pdf_targets = set(re.findall(r'\bid="([A-Za-z0-9_-]+)"', pdf_raw))
+    fails += [f"PDF: contents link {h} has no target" for h in sorted(set(pdf_html.links))
+              if h.startswith("#") and h[1:] not in pdf_targets]
 
     # 5b. Outlook version: no text on a dark background (Outlook can drop text colours on paste)
     dark = emails["outlook"][1].dark_text
@@ -252,9 +286,18 @@ def main():
             passes.append("WhatsApp caption opens with the registered name and ARN")
         else:
             fails.append("WhatsApp caption must open with the registered name and ARN")
+        caption_all = caption_path.read_text(encoding="utf-8")
         for ch, name in DASHES.items():
-            if ch in caption_path.read_text(encoding="utf-8"):
+            if ch in caption_all:
                 fails.append(f"{name} found in the WhatsApp caption")
+        if REQUIRED["standard warning (exact)"] not in caption_all:
+            fails.append("WhatsApp caption lacks the standard warning")
+        if "https://www.kubeerra.com/disclaimer" not in caption_all:
+            fails.append("WhatsApp caption lacks the link to the full disclaimer")
+        bad_caption = [u for u in re.findall(r"https?://\S+", caption_all) if not LINK_OK.match(u)]
+        fails += [f"WhatsApp caption links outside kubeerra.com: {u}" for u in bad_caption]
+        if REQUIRED["standard warning (exact)"] in caption_all and not bad_caption:
+            passes.append("WhatsApp caption carries the standard warning and only kubeerra.com links")
 
     # 9b. Client editions: no internal labels, no clock-time stamps, registration at the bottom
     if issue["meta"].get("audience") == "client":
@@ -287,8 +330,10 @@ def main():
         fails.append("PDF text is not extractable")
     else:
         passes.append(f"PDF text is selectable ({len(pdf_text):,} characters)")
-    if not 4 <= pages <= 7:
-        warns.append(f"PDF has {pages} pages; the standard length is four to seven")
+    if pages > 16:
+        fails.append(f"PDF has {pages} pages; the limit is 16")
+    elif not PDF_PAGES_OK[0] <= pages <= PDF_PAGES_OK[1]:
+        warns.append(f"PDF has {pages} pages; the usual length is {PDF_PAGES_OK[0]} to {PDF_PAGES_OK[1]}")
     else:
         passes.append(f"PDF length {pages} pages")
     unembedded = set()
@@ -327,6 +372,20 @@ def main():
         confirm += [f"- [ ] ETF turnover, {etfs['as_of']}: {x['name']} {fmt.figure(x['turnover_cr'], 'crore')} "
                     f"(riskometer {x['riskometer']}, {x['riskometer_source']['url']}), {etfs['source']['url']}"
                     for x in etfs["items"]]
+
+    mv = issue.get("movers")
+    if mv:
+        confirm += [f"- [ ] {mv['universe']} {kind}: {x['name']} {fmt.pct(x['change_pct'])}, {mv['source']['url']}"
+                    for kind, rows in (("gainer", mv["gainers"]), ("loser", mv["losers"])) for x in rows]
+    mt = issue.get("metals")
+    if mt:
+        ib = mt["ibja"]
+        confirm += [f"- [ ] IBJA {ib['session']} {ib['date']}: gold 999 ₹{fmt.group_indian(ib['gold_999_10g'])} per 10 g, "
+                    f"silver 999 ₹{fmt.group_indian(ib['silver_999_kg'])} per kg, {ib['source']['url']}"]
+    tc = issue.get("technicals")
+    if tc:
+        confirm += [f"- [ ] Technical snapshot from NSE's daily files (checked against each previous close by "
+                    f"render/technicals.py): {', '.join(t['index'] + ' ' + fmt.level(t['close']) for t in tc['items'])}"]
 
     lines = [f"Suggested subject: {subject}", "", f"# Checks for {stem}", ""]
     lines += [f"- FAIL: {f}" for f in fails] + [f"- WARN: {w}" for w in warns]

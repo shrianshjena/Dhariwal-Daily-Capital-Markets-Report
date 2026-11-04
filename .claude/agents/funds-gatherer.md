@@ -43,6 +43,14 @@ Return:
   offers that opened earlier.
 - regulatory_updates: SEBI, AMFI or RBI changes from the last four weeks that affect mutual
   fund investors, in plain words with effective dates.
+- category_explainer: one fund category, taken in turn from the rotation in
+  `learn/categories.json` (the first not yet used, by date): what SEBI's categorisation rules
+  require of it (open SEBI's current master circular or categorisation circular, or AMFI's
+  investor education pages, today), and what that means for risk in general terms. Two or three
+  sentences with the page URL. Never "suits", "ideal for", "best for" or any other suitability
+  wording, and never a scheme name.
+- headline_fact: the MF corner's headline starts with the latest month's facts ("In
+  September, ..."), never with data that is not yet out.
 - lesson_candidates: three one-sentence ideas for a 60-second lesson tied to the week's news.
 - kubeerra_links: matching pages on https://www.kubeerra.com: blog posts under /blogs and
   service pages (/services/mutual-funds, /tools/calculators, /tools/risk-profile, /kim-sid-sai,

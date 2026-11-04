@@ -1,8 +1,25 @@
 # Rules shared by every gatherer (referenced by each agent file)
 
 - Web access: the owner authorises opening any public website the work needs (3 Nov 2026).
-  The morning run is unattended and cannot answer permission prompts, so reach pages through
-  WebSearch results or links on pages you have already opened, rather than typing addresses.
+  The morning run is unattended and cannot answer permission prompts: on 4 Nov every address
+  typed by hand (NSE, IBJA, AMFI, Upstox's FII/DII page, kubeerra.com/blogs) waited for an
+  approval that never came. So reach every page through a WebSearch result or a link on a page
+  you have already opened, never by typing its address. If a fetch still asks for permission,
+  move on to the next source rather than waiting. Search routes that work:
+  - NSE daily index file: search "NSE Indices daily reports", open
+    niftyindices.com/reports/daily-reports, then its "Daily Snapshot (csv)" link for the date.
+  - IBJA gold and silver: search "ibjarates.com IBJA gold silver rates" ("IBJA rates today"
+    returned no ibjarates.com link on 4 Nov) and open ibjarates.com from the results. The page's
+    two history tables are AM then PM; IBJA's linked 30-day PDF labels them. Units: gold per
+    10 g, silver per kg, without GST and making charges.
+  - FII/DII: search "Upstox FII DII data", open upstox.com/fii-dii-data from the results.
+  - AMFI monthly data: search "AMFI monthly data", open the amfiindia.com page from the results.
+  - kubeerra.com pages: use the list in `config/publication.json`; no fetch is needed.
+- Technical data is descriptive only (D-048): levels, ranges and moving averages as numbers.
+  Never bullish, bearish, support, resistance, breakout, overbought, oversold, signal, target or
+  any other word that implies where prices go next.
+- Outlook and commentary (D-049, D-050): any expectation (a rate decision, an inflation
+  reading, a price) is attributed to a named poll, institution or analyst; never our own.
 - Named schemes (largest net inflows, ETF activity, NFOs, fund house news) always carry the
   scheme's category and riskometer level from the fund house's own document, never returns or
   performance figures, and never the words best, top, popular or trending about a scheme.
@@ -16,6 +33,9 @@
   Times, Mint, Business Standard, Moneycontrol, Business Today, NDTV Profit, CNBC-TV18).
 - Cross-check headline figures against a second source and report whether they agree.
 - Record the date, and the time and timezone where relevant, for every figure.
+- A source's `name` is the publication only ("Upstox News", "Reuters via Business Recorder",
+  "ANI via The Tribune (citing Reuters)"); readers see it. Notes on what a page supports go in a
+  separate field, never in the name.
 - Summarise in your own words; no quote longer than 10 words; never copy headlines.
 - Facts only: no buy, sell or hold views, targets, forecasts, IPO opinions or grey market
   premium figures.

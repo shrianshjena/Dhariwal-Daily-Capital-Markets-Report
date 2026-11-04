@@ -1,18 +1,36 @@
 {%- set meta = issue.meta -%}
 {%- macro names(items) -%}{{ items|map(attribute="name")|unique|join(", ") }}{%- endmacro -%}
+{%- macro head(sid) -%}{{ S[sid].num }} · {{ S[sid].title|upper }}{%- endmacro -%}
+{%- macro band(cid) -%}{%- set cl = (clusters|selectattr("id", "equalto", cid)|list)[0] -%}
+============================================================
+PART {{ cl.num }} OF {{ clusters|length }} · {{ cl.title|upper }}
+{{ cl.desc }}
+============================================================
+{%- endmacro -%}
 {{ pub.name|upper }} · {{ pub.edition_name|upper }}
 {{ meta.weekday }} {{ date_long }}{% if meta.audience == "internal" %} · {{ meta.label }}{% endif +%}
 India: {{ meta.india_as_of }} · Global: {{ meta.global_as_of }}
 {% if meta.audience == "internal" %}
-INTERNAL PILOT · RM AND MF TEAM ONLY · NOT FOR CLIENTS
+INTERNAL · NOT FOR CLIENTS
 {% endif %}
 
-THE MORNING IN BRIEF
+AT A GLANCE
+{% for t in glance %}
+{{ "%-22s"|format(t.label) }}{{ "%14s"|format(t.value) }}  {{ t.change_pct|arrow }} {{ t.change_pct|pct }}
+{% endfor %}
 {% for item in issue.brief %}
 - {{ item }}
 {% endfor %}
 
-01 · MARKET SNAPSHOT
+IN THIS ISSUE
+{% for cl in clusters %}
+{{ cl.num }}. {{ cl.title }}: {{ cl.sections|map(attribute="title")|join(", ") }}
+{% endfor %}
+Important disclosures (at the end)
+
+{{ band("markets") }}
+
+{{ head("snapshot") }}
 {{ issue.snapshot.headline }}
 {% for r in issue.snapshot.indices %}
 {{ "%-20s"|format(r.name) }}{{ "%12s"|format(r.close|level) }}{{ "%11s"|format(r.change|points) }}{{ "%9s"|format(r.change_pct|pct) }}
@@ -21,14 +39,39 @@ THE MORNING IN BRIEF
 Breadth on the NSE: {{ issue.snapshot.breadth.advances|group }} advanced, {{ issue.snapshot.breadth.declines|group }} declined.
 {% endif %}
 Data as of {{ issue.snapshot.as_of }}. Sources: {{ names(snapshot_sources) }}
+{% if "movers" in S %}{% set mv = issue.movers %}
 
-02 · FLOWS, CURRENCY AND COMMODITIES
-{{ issue.flows.headline }}
-{% for t in issue.flows.tiles %}
-{{ t.label }}{{ " (provisional)" if t.provisional|default(false) else "" }}: {{ t|figure }}{% if t|chip %} ({{ t|chip }}){% endif %}. {{ t.detail }}. Source: {{ names(t|srcs) }}
+{{ head("movers") }}
+{{ mv.universe }}, {{ mv.as_of }}. Ranked by change on the day; not a recommendation.
+Gainers:
+{% for x in mv.gainers %}
+- {{ x.name }}: {{ x.change_pct|pct }}{% if x.get('close') %} (₹{{ x.close|level }}){% endif %}{% if x.get('note') %}, {{ x.note }}{% endif +%}
 {% endfor %}
+Losers:
+{% for x in mv.losers %}
+- {{ x.name }}: {{ x.change_pct|pct }}{% if x.get('close') %} (₹{{ x.close|level }}){% endif %}{% if x.get('note') %}, {{ x.note }}{% endif +%}
+{% endfor %}
+Sources: {{ names(mv|srcs) }}
+{% endif %}
+{% if "technicals" in S %}{% set tc = issue.technicals %}
 
-03 · SECTOR SCOREBOARD
+{{ head("technicals") }}
+{% if tc.get('headline') %}{{ tc.headline }}
+{% endif %}
+{% if nifty_tech %}NIFTY 50 on {{ tc.as_of|replace("close, ", "") }}: opened {{ nifty_tech.open|level }}, low {{ nifty_tech.low|level }}, high {{ nifty_tech.high|level }}, closed {{ nifty_tech.close|level }}.
+{% endif %}
+{% for t in tc["items"] %}
+{{ t.index }}: close {{ t.close|level }}{% for k, n in (("sma20", "20"), ("sma50", "50"), ("sma200", "200")) %}{% if t[k] %}; {{ n }}-day average {{ t[k]|level }} (close {{ (((t.close - t[k]) / t[k]) * 100)|pct }}){% endif %}{% endfor %}.
+{% endfor %}
+{% if tc.vix %}India VIX closed at {{ tc.vix.close|level }}{% if tc.vix.change_pct is not none %} ({{ tc.vix.change_pct|pct }}){% endif %}.
+{% endif %}
+{% if charts.trend %}NIFTY 50 over the last {{ charts.trend.n }} closes ({{ charts.trend.first }} to {{ charts.trend.last }}): lowest {{ charts.trend.lo|level }}, highest {{ charts.trend.hi|level }}, latest {{ charts.trend.end|level }}.
+{% endif %}
+{{ tc.note }}
+Source: NSE daily index files
+{% endif %}
+
+{{ head("sectors") }}
 {{ issue.sectors.headline }}
 Strongest: {% for s in sectors.top %}{{ s.name }} {{ s.change_pct|pct }}{{ "; " if not loop.last else "" }}{% endfor %}
 
@@ -36,24 +79,119 @@ Weakest: {% for s in sectors.bottom %}{{ s.name }} {{ s.change_pct|pct }}{{ "; "
 
 Change on the day, {{ issue.sectors.as_of }}. Source: {{ issue.sectors.source.name }}
 
-04 · TOP STORIES
-{% for s in issue.stories %}
-
-[{{ s.topic }} · {{ s.relevance }}] {{ s.headline }}
-{{ s.what }}
-Why it matters: {{ s.why }}
-Source: {{ names(s|srcs) }}
+{{ head("flows") }}
+{{ issue.flows.headline }}
+{% for t in issue.flows.tiles %}
+{{ t.label }}{{ " (provisional)" if t.provisional|default(false) else "" }}: {{ t|figure }}{% if t|chip %} ({{ t|chip }}){% endif %}. {{ t.detail }}. Source: {{ names(t|srcs) }}
 {% endfor %}
+{% if (clusters|selectattr("id", "equalto", "outlook")|list) %}{% set ol = issue.outlook %}
 
-05 · GLOBAL MARKETS
+{{ band("outlook") }}
+{% if "drivers" in S %}
+
+{{ head("drivers") }}
+{{ ol.headline }}
+{% for d in ol.drivers %}
+- {% if d.get('title') %}{{ d.title }}: {% endif %}{{ d.text }} ({{ names(d|srcs) }})
+{% endfor %}
+{% endif %}
+{% if "cues" in S %}
+
+{{ head("cues") }}
+{% for d in ol.global_cues %}
+- {% if d.get('title') %}{{ d.title }}: {% endif %}{{ d.text }} ({{ names(d|srcs) }})
+{% endfor %}
+{% endif %}
+{% if "events" in S %}
+
+{{ head("events") }}
+{% for e in ol.events %}
+- {{ e.when }}: {{ e.title }}. {{ e.text }} ({{ names(e|srcs) }})
+{% endfor %}
+Expectations are those of the named sources, not of Kubeerra. They are not a forecast.
+{% endif %}
+{% endif %}
+
+{{ band("global") }}
+{% if "us" in S %}
+
+{{ head("us") }}
 {{ issue.global.headline }}
+{% for u in issue.global.us %}
+- {% if u.get('title') %}{{ u.title }}: {% endif %}{{ u.text }} ({{ names(u|srcs) }})
+{% endfor %}
+{% endif %}
+
+{{ head("world") }}
+{% if "us" not in S %}{{ issue.global.headline }}
+{% endif %}
 {% for g in issue.global["items"] %}
 {{ "%-28s"|format(g.region ~ " · " ~ g.name) }}{{ "%12s"|format(g.close|level) }}{{ "%9s"|format(g.change_pct|pct) }}  ({{ g.as_of }})
 {% endfor %}
+{% for x in issue.global.get("extras", []) %}
+{{ "%-28s"|format("Rates · " ~ x.label) }}{{ "%12s"|format(x|figure) }}  {{ x|chip }}
+{% endfor %}
 {{ issue.global.note }}
-Sources: {{ names(global_sources) }}
+Sources: {{ names(global_sources + (issue.global.get("extras", [])|unique_sources)) }}
+{% if "gevents" in S %}
 
-06 · IPO DESK
+{{ head("gevents") }}
+{% for e in issue.global.events %}
+- {% if e.get('title') %}{{ e.title }}: {% endif %}{{ e.text }} ({{ names(e|srcs) }})
+{% endfor %}
+{% endif %}
+{% if "metals" in S %}{% set mt = issue.metals %}
+
+{{ band("metals") }}
+
+{{ head("metals") }}
+{{ mt.headline }}
+Gold 999 (₹ per 10 g): ₹{{ metals.gold|group }}{% if metals.gold_pct is not none %} ({{ metals.gold_pct|pct }} from ₹{{ metals.gold_prev|group }} on {{ metals.prev_date }}){% endif %}. IBJA {{ metals.session }} rate, {{ metals.date }}.
+Silver 999 (₹ per kg): ₹{{ metals.silver|group }}{% if metals.silver_pct is not none %} ({{ metals.silver_pct|pct }} from ₹{{ metals.silver_prev|group }} on {{ metals.prev_date }}){% endif %}. IBJA {{ metals.session }} rate, {{ metals.date }}.
+{% for f in mt.get("international", []) %}
+{{ f.label }}: {{ f|figure }}{% if f|chip %} ({{ f|chip }}){% endif %}. {{ f.detail }}. Source: {{ names(f|srcs) }}
+{% endfor %}
+{% for c in mt.commentary %}
+- {% if c.get('title') %}{{ c.title }}: {% endif %}{{ c.text }} ({{ names(c|srcs) }})
+{% endfor %}
+IBJA rates are reference rates without GST and making charges. Expectations, where given, are those of the named sources. Source: {{ names(mt.ibja|srcs) }}
+{% endif %}
+
+{{ band("companies") }}
+{% if "results" in S %}
+
+{{ head("results") }}
+{% for r in issue.results %}
+{{ r.company }} ({{ r.period }})
+{% for f in r.facts %}
+- {{ f }}
+{% endfor %}
+{% if r.get('reaction') %}{{ r.reaction }}
+{% endif %}
+Sources: {{ names(r|srcs) }}
+{% endfor %}
+Reported figures only; no view on the companies' prospects.
+{% endif %}
+{% if "bigmovers" in S %}
+
+{{ head("bigmovers") }}
+{% for x in issue.big_movers %}
+- {{ x.company }}: {{ x.change_pct|pct }}. {{ x.reason }} ({{ names(x|srcs) }})
+{% endfor %}
+Reported moves and reasons; not a recommendation.
+{% endif %}
+{% if "actions" in S %}
+
+{{ head("actions") }}
+{{ issue.corporate_actions.get("headline") or ("Dividends, bonus issues and splits with record dates, " ~ issue.corporate_actions.window) }}
+{% for a in issue.corporate_actions["items"] %}
+- {{ a.date }}: {{ a.company }}, {{ a.action }}{% if a.get('details') %}; {{ a.details }}{% endif %}. Source: {{ names(a|srcs) }}
+{% endfor %}
+{% if issue.corporate_actions.get('note') %}{{ issue.corporate_actions.note }}
+{% endif %}
+{% endif %}
+
+{{ head("ipos") }}
 {{ issue.ipos.headline }}
 {% for ipo in issue.ipos["items"] %}
 
@@ -64,9 +202,22 @@ Sources: {{ names(global_sources) }}
 Source: {{ names(ipo|srcs) }}
 {% endfor %}
 {{ issue.ipos.note }}
+{% if "stories" in S %}
 
-07 · MUTUAL FUND CORNER
+{{ head("stories") }}
+{% for s in issue.stories %}
+
+[{{ s.topic }} · {{ s.relevance }}] {{ s.headline }}
+{{ s.what }}
+Why it matters: {{ s.why }}
+Source: {{ names(s|srcs) }}
+{% endfor %}
+{% endif %}
+
+{{ band("funds") }}
+
 {% set mf = issue.mf %}
+{{ head("mf") }}
 {{ mf.headline }}
 Industry data, {{ mf.period }}:
 {% for st in mf.stats %}
@@ -79,6 +230,10 @@ Category trends:
 {% for h in mf.highlights %}
 - {{ h.text }} ({{ h.source.name }})
 {% endfor %}
+{% endif %}
+{% if mf.get('category_explainer') %}
+
+Know your categories, {{ mf.category_explainer.category }}: {{ mf.category_explainer.text }} ({{ names(mf.category_explainer|srcs) }})
 {% endif %}
 {% if mf.get('inflow_leaders') %}
 {% set il = mf.inflow_leaders %}
@@ -113,6 +268,7 @@ New fund offers:
 - {{ n.scheme }}: {{ n.category }}, {{ n.dates }}. Riskometer: {{ n.riskometer }}. ({{ n.source.name }})
 {% endfor %}
 Facts only, not a recommendation; each scheme's risks and terms are in its scheme information document ({{ kb.sid.url }}).{% if nfo_unnamed_note %} {{ nfo_unnamed_note }}{% endif %}
+
 {% elif mf.get('nfo_summary') %}
 {{ mf.nfo_summary.text }} ({{ mf.nfo_summary.source.name }})
 {% endif %}
@@ -128,8 +284,15 @@ Rule changes for investors:
 Read more: {{ mf.link.name }} ({{ mf.link.url }})
 {% endif %}
 
-08 · LEARN · {{ issue.learn.id }}
-{{ issue.learn.title }}
+{{ head("talk") }}
+{{ pub.talk.title }}
+{{ pub.talk.text }}
+{% for k in pub.talk.links %}{{ kb[k].name }}: {{ kb[k].url }}
+{% endfor %}
+Phone {{ pub.contacts.phone }} · {{ pub.contacts.email }}
+
+{{ head("learn") }}
+{{ issue.learn.id }}: {{ issue.learn.title }}
 {% for p in issue.learn.paragraphs %}
 {{ p }}
 {% endfor %}
@@ -143,18 +306,28 @@ Read more: {{ issue.learn.link.name }} ({{ issue.learn.link.url }})
 Sources: {{ names(issue.learn.sources) }}
 {% endif %}
 
-09 · DAY AHEAD
+{{ band("calendar") }}
+
+{{ head("dayahead") }}
 {{ issue.get("day_ahead_title") or ("On the calendar for " ~ meta.weekday ~ " " ~ date_short) }}
 {% for d in issue.day_ahead %}
 {{ "%-16s"|format(d.time) }}{{ d.event }}{% if d|srcs %} ({{ names(d|srcs) }}){% endif +%}
 {% endfor %}
 
-------------------------------------------------------------
-{{ pub.name }}. Published by {{ pub.publisher }}, {{ pub.registration.tagline }}, {{ pub.registration.arn }} (EUIN {{ pub.registration.euin }}).
-{% for d in pub.disclaimer %}
-{{ d }}
+============================================================
+IMPORTANT DISCLOSURES
+{{ pub.publisher }} · {{ pub.registration.tagline }} · {{ pub.registration.arn }} · EUIN {{ pub.registration.euin }}
+============================================================
+{% for d in pub.disclosures %}
+
+{{ d.title|upper }}
+{% for ptxt in d.paras %}
+{{ ptxt }}
 {% endfor %}
+{% endfor %}
+
 {{ pub.standard_warning }}
+
 Phone {{ pub.contacts.phone }} · WhatsApp {{ pub.contacts.whatsapp }} · {{ pub.contacts.email }}
 {{ pub.contacts.hours }}
 {{ pub.contacts.address }}

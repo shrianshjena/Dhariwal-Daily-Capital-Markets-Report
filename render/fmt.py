@@ -79,6 +79,10 @@ def figure(value, fmt):
         return f"${value:,.2f}"
     if fmt == "usd_oz":
         return f"${value:,.0f}"
+    if fmt == "usd_oz2":
+        return f"${value:,.2f}"
+    if fmt == "level":
+        return group_indian(value, 2)
     if fmt == "pct_level":
         return f"{value:.2f}%"
     if fmt == "lakh_crore":

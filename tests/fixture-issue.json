@@ -50,33 +50,22 @@
         }
       },
       {
-        "name": "Nifty Midcap 150",
-        "close": 9876.54,
-        "change": 45.6,
-        "change_pct": 0.46,
+        "name": "NIFTY Midcap 100",
+        "close": 51234.5,
+        "change": 120.25,
+        "change_pct": 0.24,
         "source": {
-          "name": "Fixture",
+          "name": "Fixture source",
           "url": "https://example.com/fixture"
         }
       },
       {
-        "name": "Nifty Smallcap 250",
-        "close": 8765.43,
-        "change": -12.3,
-        "change_pct": -0.14,
+        "name": "NIFTY Smallcap 100",
+        "close": 16123.4,
+        "change": -40.1,
+        "change_pct": -0.25,
         "source": {
-          "name": "Fixture",
-          "url": "https://example.com/fixture"
-        }
-      },
-      {
-        "name": "India VIX",
-        "close": 12.34,
-        "change": 0.56,
-        "change_pct": 4.75,
-        "neutral": true,
-        "source": {
-          "name": "Fixture",
+          "name": "Fixture source",
           "url": "https://example.com/fixture"
         }
       }
@@ -272,7 +261,41 @@
         }
       }
     ],
-    "note": "Synthetic note on what global moves mean for Indian investors."
+    "note": "Synthetic note on what global moves mean for Indian investors.",
+    "us": [
+      {
+        "title": "Fixture",
+        "text": "Fixture US session text.",
+        "source": {
+          "name": "Fixture source",
+          "url": "https://example.com/fixture"
+        }
+      }
+    ],
+    "extras": [
+      {
+        "label": "US 10-year yield",
+        "value": 4.12,
+        "format": "pct_level",
+        "change_bp": -3,
+        "detail": "Fixture",
+        "as_of": "31 Dec 1999",
+        "source": {
+          "name": "Fixture source",
+          "url": "https://example.com/fixture"
+        }
+      }
+    ],
+    "events": [
+      {
+        "title": "Fixture event",
+        "text": "Fixture global event text.",
+        "source": {
+          "name": "Fixture source",
+          "url": "https://example.com/fixture"
+        }
+      }
+    ]
   },
   "ipos": {
     "headline": "Synthetic IPO headline",
@@ -293,7 +316,7 @@
     "note": "Facts only. Kubeerra does not give views on IPO applications."
   },
   "mf": {
-    "headline": "Synthetic mutual fund headline",
+    "headline": "In the fixture month, fixture flows were fixture",
     "period": "December 1999",
     "stats": [
       {
@@ -457,6 +480,14 @@
     "link": {
       "name": "Kubeerra guide: How to read a mutual fund factsheet",
       "url": "https://www.kubeerra.com/blogs/how-to-read-a-mutual-fund-factsheet"
+    },
+    "category_explainer": {
+      "category": "Fixture category",
+      "text": "Fixture explainer text.",
+      "source": {
+        "name": "Fixture source",
+        "url": "https://example.com/fixture"
+      }
     }
   },
   "learn": {
@@ -491,5 +522,331 @@
       "name": "Fixture",
       "url": "https://example.com/fixture"
     }
-  ]
+  ],
+  "movers": {
+    "universe": "NIFTY 50",
+    "as_of": "close, 31 Dec 1999",
+    "gainers": [
+      {
+        "name": "Fixture Gainer A",
+        "change_pct": 3.21,
+        "close": 1234.5,
+        "note": "fixture reason"
+      },
+      {
+        "name": "Fixture Gainer B",
+        "change_pct": 2.5,
+        "close": 456.0
+      },
+      {
+        "name": "Fixture Gainer C",
+        "change_pct": 1.75,
+        "close": null
+      }
+    ],
+    "losers": [
+      {
+        "name": "Fixture Loser A",
+        "change_pct": -2.9,
+        "close": 789.1
+      },
+      {
+        "name": "Fixture Loser B",
+        "change_pct": -1.6,
+        "close": 321.0
+      },
+      {
+        "name": "Fixture Loser C",
+        "change_pct": -1.1,
+        "close": 99.5
+      }
+    ],
+    "source": {
+      "name": "Fixture source",
+      "url": "https://example.com/fixture"
+    }
+  },
+  "technicals": {
+    "headline": "Fixture technical snapshot headline",
+    "as_of": "close, 31 Dec 1999",
+    "items": [
+      {
+        "index": "NIFTY 50",
+        "open": 25100.0,
+        "high": 25250.5,
+        "low": 24990.0,
+        "close": 25200.25,
+        "prev_close": 25050.0,
+        "change_pct": 0.6,
+        "sma20": 25010.5,
+        "sma50": 24800.0,
+        "sma200": null,
+        "sessions": 60,
+        "pe": 21.5,
+        "source": {
+          "name": "Fixture source",
+          "url": "https://example.com/fixture"
+        }
+      },
+      {
+        "index": "Nifty Bank",
+        "open": 51000.0,
+        "high": 51300.0,
+        "low": 50800.0,
+        "close": 51100.0,
+        "prev_close": 51200.0,
+        "change_pct": -0.2,
+        "sma20": 51500.0,
+        "sma50": 50900.0,
+        "sma200": null,
+        "sessions": 60,
+        "pe": 14.0,
+        "source": {
+          "name": "Fixture source",
+          "url": "https://example.com/fixture"
+        }
+      }
+    ],
+    "vix": {
+      "close": 13.25,
+      "change_pct": -2.1,
+      "source": {
+        "name": "Fixture source",
+        "url": "https://example.com/fixture"
+      }
+    },
+    "trend": {
+      "index": "NIFTY 50",
+      "points": [
+        {
+          "date": "1999-12-01",
+          "close": 25050
+        },
+        {
+          "date": "1999-12-02",
+          "close": 25100
+        },
+        {
+          "date": "1999-12-03",
+          "close": 25150
+        },
+        {
+          "date": "1999-12-04",
+          "close": 25200
+        },
+        {
+          "date": "1999-12-05",
+          "close": 25250
+        },
+        {
+          "date": "1999-12-06",
+          "close": 25300
+        },
+        {
+          "date": "1999-12-07",
+          "close": 24930
+        },
+        {
+          "date": "1999-12-08",
+          "close": 24980
+        },
+        {
+          "date": "1999-12-09",
+          "close": 25030
+        },
+        {
+          "date": "1999-12-10",
+          "close": 25080
+        },
+        {
+          "date": "1999-12-11",
+          "close": 25130
+        },
+        {
+          "date": "1999-12-12",
+          "close": 25180
+        },
+        {
+          "date": "1999-12-13",
+          "close": 25230
+        },
+        {
+          "date": "1999-12-14",
+          "close": 24860
+        },
+        {
+          "date": "1999-12-15",
+          "close": 24910
+        },
+        {
+          "date": "1999-12-16",
+          "close": 24960
+        },
+        {
+          "date": "1999-12-17",
+          "close": 25010
+        },
+        {
+          "date": "1999-12-18",
+          "close": 25060
+        },
+        {
+          "date": "1999-12-19",
+          "close": 25110
+        },
+        {
+          "date": "1999-12-20",
+          "close": 25160
+        },
+        {
+          "date": "1999-12-21",
+          "close": 24790
+        },
+        {
+          "date": "1999-12-22",
+          "close": 24840
+        }
+      ],
+      "source": {
+        "name": "Fixture source",
+        "url": "https://example.com/fixture"
+      }
+    },
+    "note": "Fixture note: levels only, not a forecast."
+  },
+  "outlook": {
+    "headline": "Fixture outlook headline",
+    "drivers": [
+      {
+        "title": "Crude oil",
+        "text": "Fixture driver text.",
+        "source": {
+          "name": "Fixture source",
+          "url": "https://example.com/fixture"
+        }
+      },
+      {
+        "title": "The rupee",
+        "text": "Fixture driver text two.",
+        "source": {
+          "name": "Fixture source",
+          "url": "https://example.com/fixture"
+        }
+      }
+    ],
+    "global_cues": [
+      {
+        "title": "US yields",
+        "text": "Fixture cue text.",
+        "source": {
+          "name": "Fixture source",
+          "url": "https://example.com/fixture"
+        }
+      }
+    ],
+    "events": [
+      {
+        "when": "Mon 3 Jan",
+        "title": "Fixture event",
+        "text": "Fixture event text.",
+        "source": {
+          "name": "Fixture source",
+          "url": "https://example.com/fixture"
+        }
+      }
+    ]
+  },
+  "metals": {
+    "headline": "Fixture metals headline",
+    "ibja": {
+      "date": "31 Dec 1999",
+      "session": "PM",
+      "gold_999_10g": 76543.0,
+      "gold_prev": 76000.0,
+      "silver_999_kg": 91234.0,
+      "silver_prev": 92000.0,
+      "prev_date": "30 Dec 1999",
+      "source": {
+        "name": "Fixture source",
+        "url": "https://example.com/fixture"
+      }
+    },
+    "international": [
+      {
+        "label": "Spot gold",
+        "value": 2650.4,
+        "format": "usd_oz",
+        "change_pct": 0.4,
+        "detail": "Fixture",
+        "as_of": "31 Dec 1999",
+        "source": {
+          "name": "Fixture source",
+          "url": "https://example.com/fixture"
+        }
+      },
+      {
+        "label": "Spot silver",
+        "value": 30.12,
+        "format": "usd_oz2",
+        "change_pct": -0.8,
+        "detail": "Fixture",
+        "as_of": "31 Dec 1999",
+        "source": {
+          "name": "Fixture source",
+          "url": "https://example.com/fixture"
+        }
+      }
+    ],
+    "commentary": [
+      {
+        "text": "Fixture commentary.",
+        "source": {
+          "name": "Fixture source",
+          "url": "https://example.com/fixture"
+        }
+      }
+    ]
+  },
+  "results": [
+    {
+      "company": "Fixture Company",
+      "period": "Fixture quarter",
+      "facts": [
+        "Fixture fact one.",
+        "Fixture fact two."
+      ],
+      "reaction": "Fixture reaction.",
+      "source": {
+        "name": "Fixture source",
+        "url": "https://example.com/fixture"
+      }
+    }
+  ],
+  "big_movers": [
+    {
+      "company": "Fixture Mover",
+      "change_pct": 11.2,
+      "close": 345.6,
+      "reason": "Fixture reason",
+      "source": {
+        "name": "Fixture source",
+        "url": "https://example.com/fixture"
+      }
+    }
+  ],
+  "corporate_actions": {
+    "window": "3 to 7 Jan",
+    "items": [
+      {
+        "company": "Fixture Ltd",
+        "action": "Bonus 1:1",
+        "date": "Wed 5 Jan",
+        "details": "Record date",
+        "source": {
+          "name": "Fixture source",
+          "url": "https://example.com/fixture"
+        }
+      }
+    ]
+  }
 }

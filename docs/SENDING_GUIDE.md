@@ -7,9 +7,19 @@ GitHub, where the 14 most recent issues are kept):
 - `kubeerra-market-brief-<date>-outlook.html`: the email for Outlook, classic, new or on the web
   (light masthead and footer, so it stays readable if Outlook drops text colours on paste).
 - `kubeerra-market-brief-<date>.pdf`: the A4 edition, attached to the email and archived.
-- The WhatsApp card (PNG) and its caption, and the plain-text edition.
+- The WhatsApp card (PNG, 1080 by 1920) and the WhatsApp message to send with it, and the
+  plain-text edition.
 
-The morning run also leaves an unsent Gmail draft with the email already in it (D-043).
+The morning run also leaves an unsent Gmail draft with the email already in it (D-043). Its logo
+is checked byte for byte after saving (D-056); if the check failed three times the draft shows a
+lettered gold K tile instead of the image, never a broken picture.
+
+## Looking at the email before sending
+
+The preview inside the Claude app cannot load images hosted on the web, so the logo looks
+missing there even when it is fine. To see the email as readers will, open the Gmail preview
+image the run sends (gmail-desktop.png), the Gmail draft, or the HTML file downloaded and opened
+in Chrome or Edge.
 
 ## Before sending
 
@@ -51,5 +61,18 @@ check report for verification.
 ## Known differences between clients
 
 - Classic Outlook ignores rounded corners and some letter spacing; the layout holds.
-- Gmail clips messages above about 102 KB; the check script keeps each email under 90 KB.
+- Gmail clips messages above about 102 KB, which would hide the disclosures at the bottom; the
+  check script keeps the Gmail file under 96 KB. Outlook does not clip, but Word adds its own
+  markup when you paste, so a Gmail reader of an Outlook-sent copy may see "View entire
+  message"; the PDF carries the complete issue either way.
+- The contents list links to each part within the email. Gmail on the web and Outlook follow
+  them; some phone apps do not, and simply ignore the links.
 - Some phone apps tint backgrounds in dark mode; the emails ask for the light scheme.
+
+## WhatsApp
+
+Send the card first, then paste the WhatsApp message file as the next message. The message opens
+with the registered name and ARN (SEBI's social media disclosure rule) and ends with the short
+disclaimer, the standard warning and the link to the full disclaimer on kubeerra.com. FII and DII
+flows are in the message, not on the card (D-054). Forward the card and message together, never
+the card with the message removed.

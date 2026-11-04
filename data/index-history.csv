@@ -1,0 +1,1036 @@
+date,index,open,high,low,close,points_change,change_pct,pe,pb,div_yield,source_url
+2026-01-01,INDIA VIX,9.475,9.475,8.72,9.19,-0.29,-3.06,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_01012026.csv
+2026-01-01,NIFTY 50,26173.3,26197.55,26113.4,26146.55,16.95,0.06,22.76,3.56,1.28,https://nsearchives.nseindia.com/content/indices/ind_close_all_01012026.csv
+2026-01-01,NIFTY BANK,59674.8,59743.2,59569.65,59711.55,129.7,0.22,16.44,2.19,0.98,https://nsearchives.nseindia.com/content/indices/ind_close_all_01012026.csv
+2026-01-01,NIFTY MIDCAP 100,60625.15,60782.25,60292.75,60750.45,265.95,0.44,33.99,4.41,0.79,https://nsearchives.nseindia.com/content/indices/ind_close_all_01012026.csv
+2026-01-01,NIFTY SMALLCAP 100,17745.8,17749.9,17606.6,17704.9,-9.05,-0.05,32.17,3.83,0.75,https://nsearchives.nseindia.com/content/indices/ind_close_all_01012026.csv
+2026-01-02,INDIA VIX,9.185,9.555,8.9675,9.45,0.27,2.89,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_02012026.csv
+2026-01-02,NIFTY 50,26155.1,26340,26118.4,26328.55,182,0.7,22.92,3.58,1.28,https://nsearchives.nseindia.com/content/indices/ind_close_all_02012026.csv
+2026-01-02,NIFTY BANK,59757.4,60203.75,59738.25,60150.95,439.4,0.74,16.56,2.21,0.97,https://nsearchives.nseindia.com/content/indices/ind_close_all_02012026.csv
+2026-01-02,NIFTY MIDCAP 100,60913.1,61398.4,60809.2,61365.9,615.45,1.01,34.34,4.46,0.78,https://nsearchives.nseindia.com/content/indices/ind_close_all_02012026.csv
+2026-01-02,NIFTY SMALLCAP 100,17744.5,17845.25,17699.1,17832.05,127.15,0.72,32.4,3.86,0.74,https://nsearchives.nseindia.com/content/indices/ind_close_all_02012026.csv
+2026-01-05,INDIA VIX,9.45,10.215,9.2925,10.02,0.57,6.06,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_05012026.csv
+2026-01-05,NIFTY 50,26333.7,26373.2,26210.05,26250.3,-78.25,-0.3,22.85,3.57,1.28,https://nsearchives.nseindia.com/content/indices/ind_close_all_05012026.csv
+2026-01-05,NIFTY BANK,60360.4,60437.35,59859.8,60044.2,-106.75,-0.18,16.53,2.2,0.97,https://nsearchives.nseindia.com/content/indices/ind_close_all_05012026.csv
+2026-01-05,NIFTY MIDCAP 100,61516.4,61520.6,60970.55,61265.7,-100.2,-0.16,34.28,4.45,0.78,https://nsearchives.nseindia.com/content/indices/ind_close_all_05012026.csv
+2026-01-05,NIFTY SMALLCAP 100,17882.65,17984.9,17836.3,17926.4,94.35,0.53,32.57,3.88,0.74,https://nsearchives.nseindia.com/content/indices/ind_close_all_05012026.csv
+2026-01-06,INDIA VIX,10.0225,10.285,9.6475,10.02,-0.01,-0.05,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_06012026.csv
+2026-01-06,NIFTY 50,26189.7,26273.95,26124.75,26178.7,-71.6,-0.27,22.79,3.56,1.28,https://nsearchives.nseindia.com/content/indices/ind_close_all_06012026.csv
+2026-01-06,NIFTY BANK,59957.8,60305,59844.8,60118.4,74.2,0.12,16.55,2.21,0.97,https://nsearchives.nseindia.com/content/indices/ind_close_all_06012026.csv
+2026-01-06,NIFTY MIDCAP 100,61347.5,61393.3,60866.3,61148.55,-117.15,-0.19,34.22,4.44,0.78,https://nsearchives.nseindia.com/content/indices/ind_close_all_06012026.csv
+2026-01-06,NIFTY SMALLCAP 100,18000.65,18000.65,17812.05,17887.85,-38.55,-0.22,32.5,3.87,0.74,https://nsearchives.nseindia.com/content/indices/ind_close_all_06012026.csv
+2026-01-07,INDIA VIX,10.0175,10.24,9.745,9.95,-0.07,-0.67,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_07012026.csv
+2026-01-07,NIFTY 50,26143.1,26187.15,26067.9,26140.75,-37.95,-0.14,22.76,3.55,1.28,https://nsearchives.nseindia.com/content/indices/ind_close_all_07012026.csv
+2026-01-07,NIFTY BANK,60039.7,60065.4,59760.65,59990.85,-127.55,-0.21,16.52,2.2,0.98,https://nsearchives.nseindia.com/content/indices/ind_close_all_07012026.csv
+2026-01-07,NIFTY MIDCAP 100,61178.55,61548.85,61082.7,61424.7,276.15,0.45,34.37,4.46,0.78,https://nsearchives.nseindia.com/content/indices/ind_close_all_07012026.csv
+2026-01-07,NIFTY SMALLCAP 100,17891.95,17993.7,17840.3,17958.5,70.65,0.39,32.63,3.88,0.74,https://nsearchives.nseindia.com/content/indices/ind_close_all_07012026.csv
+2026-01-08,INDIA VIX,9.95,10.99,9.475,10.6,0.65,6.53,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_08012026.csv
+2026-01-08,NIFTY 50,26106.5,26133.2,25858.45,25876.85,-263.9,-1.01,22.53,3.52,1.3,https://nsearchives.nseindia.com/content/indices/ind_close_all_08012026.csv
+2026-01-08,NIFTY BANK,59893.15,60112.85,59564.8,59686.5,-304.35,-0.51,16.43,2.19,0.98,https://nsearchives.nseindia.com/content/indices/ind_close_all_08012026.csv
+2026-01-08,NIFTY MIDCAP 100,61415.55,61437.25,60144.95,60222.55,-1202.15,-1.96,33.7,4.37,0.79,https://nsearchives.nseindia.com/content/indices/ind_close_all_08012026.csv
+2026-01-08,NIFTY SMALLCAP 100,17972.7,17997.25,17560.75,17601.05,-357.45,-1.99,31.98,3.81,0.75,https://nsearchives.nseindia.com/content/indices/ind_close_all_08012026.csv
+2026-01-09,INDIA VIX,10.6,11.035,10.2175,10.93,0.33,3.07,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_09012026.csv
+2026-01-09,NIFTY 50,25840.4,25940.6,25623,25683.3,-193.55,-0.75,22.36,3.49,1.31,https://nsearchives.nseindia.com/content/indices/ind_close_all_09012026.csv
+2026-01-09,NIFTY BANK,59558.15,59739.65,59154.2,59251.55,-434.95,-0.73,16.31,2.17,0.99,https://nsearchives.nseindia.com/content/indices/ind_close_all_09012026.csv
+2026-01-09,NIFTY MIDCAP 100,60194.05,60562.35,59500.55,59748.15,-474.4,-0.79,33.43,4.34,0.8,https://nsearchives.nseindia.com/content/indices/ind_close_all_09012026.csv
+2026-01-09,NIFTY SMALLCAP 100,17572.5,17637.9,17252.95,17282.65,-318.4,-1.81,31.4,3.74,0.76,https://nsearchives.nseindia.com/content/indices/ind_close_all_09012026.csv
+2026-01-12,INDIA VIX,10.925,11.945,10.5175,11.37,0.44,4.05,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_12012026.csv
+2026-01-12,NIFTY 50,25669.05,25813.15,25473.4,25790.25,106.95,0.42,22.45,3.51,1.3,https://nsearchives.nseindia.com/content/indices/ind_close_all_12012026.csv
+2026-01-12,NIFTY BANK,59217.25,59541.1,58864.2,59450.5,198.95,0.34,16.37,2.18,0.98,https://nsearchives.nseindia.com/content/indices/ind_close_all_12012026.csv
+2026-01-12,NIFTY MIDCAP 100,59768.35,59845.15,58827.9,59717.1,-31.05,-0.05,33.41,4.34,0.8,https://nsearchives.nseindia.com/content/indices/ind_close_all_12012026.csv
+2026-01-12,NIFTY SMALLCAP 100,17287.1,17294.65,16946.95,17193.3,-89.35,-0.52,31.24,3.72,0.77,https://nsearchives.nseindia.com/content/indices/ind_close_all_12012026.csv
+2026-01-13,INDIA VIX,11.3675,11.68,10.6375,11.2,-0.17,-1.5,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_13012026.csv
+2026-01-13,NIFTY 50,25897.35,25899.8,25603.3,25732.3,-57.95,-0.22,22.4,3.5,1.3,https://nsearchives.nseindia.com/content/indices/ind_close_all_13012026.csv
+2026-01-13,NIFTY BANK,59767.55,59767.55,59312.05,59578.8,128.3,0.22,16.4,2.19,0.98,https://nsearchives.nseindia.com/content/indices/ind_close_all_13012026.csv
+2026-01-13,NIFTY MIDCAP 100,59942.5,60109.75,59071.5,59597.8,-119.3,-0.2,33.18,4.33,0.8,https://nsearchives.nseindia.com/content/indices/ind_close_all_13012026.csv
+2026-01-13,NIFTY SMALLCAP 100,17264.25,17359.25,17163.95,17295.8,102.5,0.6,31.5,3.74,0.76,https://nsearchives.nseindia.com/content/indices/ind_close_all_13012026.csv
+2026-01-14,INDIA VIX,11.1975,11.4725,11.0125,11.32,0.12,1.09,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_14012026.csv
+2026-01-14,NIFTY 50,25648.55,25791.75,25603.95,25665.6,-66.7,-0.26,22.38,3.49,1.31,https://nsearchives.nseindia.com/content/indices/ind_close_all_14012026.csv
+2026-01-14,NIFTY BANK,59330.35,59796.65,59324.2,59580.15,1.35,0,16.4,2.19,0.98,https://nsearchives.nseindia.com/content/indices/ind_close_all_14012026.csv
+2026-01-14,NIFTY MIDCAP 100,59498.7,59889.25,59350.15,59770.5,172.7,0.29,33.27,4.34,0.8,https://nsearchives.nseindia.com/content/indices/ind_close_all_14012026.csv
+2026-01-14,NIFTY SMALLCAP 100,17281.85,17453.9,17259.5,17410.85,115.05,0.67,31.7,3.76,0.76,https://nsearchives.nseindia.com/content/indices/ind_close_all_14012026.csv
+2026-01-16,INDIA VIX,11.32,11.575,10.875,11.37,0.05,0.46,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_16012026.csv
+2026-01-16,NIFTY 50,25696.05,25873.5,25662.4,25694.35,28.75,0.11,22.4,3.49,1.37,https://nsearchives.nseindia.com/content/indices/ind_close_all_16012026.csv
+2026-01-16,NIFTY BANK,59590.35,60235.15,59510.5,60095.15,515,0.86,16.55,2.2,0.97,https://nsearchives.nseindia.com/content/indices/ind_close_all_16012026.csv
+2026-01-16,NIFTY MIDCAP 100,59850.95,60327.9,59715.05,59867.8,97.3,0.16,33.34,4.35,0.8,https://nsearchives.nseindia.com/content/indices/ind_close_all_16012026.csv
+2026-01-16,NIFTY SMALLCAP 100,17427.7,17495,17340,17362.3,-48.55,-0.28,31.61,3.75,0.73,https://nsearchives.nseindia.com/content/indices/ind_close_all_16012026.csv
+2026-01-19,INDIA VIX,11.3725,12.125,10.3925,11.83,0.46,4,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_19012026.csv
+2026-01-19,NIFTY 50,25653.1,25653.3,25494.35,25585.5,-108.85,-0.42,22.31,3.48,1.29,https://nsearchives.nseindia.com/content/indices/ind_close_all_19012026.csv
+2026-01-19,NIFTY BANK,60093.3,60107.5,59594.6,59891.35,-203.8,-0.34,16.48,2.2,0.98,https://nsearchives.nseindia.com/content/indices/ind_close_all_19012026.csv
+2026-01-19,NIFTY MIDCAP 100,59739.55,59938.7,59480.3,59647.65,-220.15,-0.37,33.15,4.33,0.8,https://nsearchives.nseindia.com/content/indices/ind_close_all_19012026.csv
+2026-01-19,NIFTY SMALLCAP 100,17339.35,17366.9,17165.75,17190.7,-171.6,-0.99,31.2,3.72,0.73,https://nsearchives.nseindia.com/content/indices/ind_close_all_19012026.csv
+2026-01-20,INDIA VIX,11.8275,12.9025,10.995,12.73,0.9,7.63,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_20012026.csv
+2026-01-20,NIFTY 50,25580.3,25585,25171.35,25232.5,-353,-1.38,21.91,3.43,1.31,https://nsearchives.nseindia.com/content/indices/ind_close_all_20012026.csv
+2026-01-20,NIFTY BANK,59851.4,59993.5,59283.95,59404.2,-487.15,-0.81,16.23,2.18,0.99,https://nsearchives.nseindia.com/content/indices/ind_close_all_20012026.csv
+2026-01-20,NIFTY MIDCAP 100,59626.4,59634.6,57898.65,58085.35,-1562.3,-2.62,32.21,4.22,0.82,https://nsearchives.nseindia.com/content/indices/ind_close_all_20012026.csv
+2026-01-20,NIFTY SMALLCAP 100,17185.8,17186.2,16660.55,16701.05,-489.65,-2.85,30.31,3.61,0.75,https://nsearchives.nseindia.com/content/indices/ind_close_all_20012026.csv
+2026-01-21,INDIA VIX,12.73,14.43,12.4325,13.78,1.05,8.25,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_21012026.csv
+2026-01-21,NIFTY 50,25141,25300.95,24919.8,25157.5,-75,-0.3,21.85,3.42,1.31,https://nsearchives.nseindia.com/content/indices/ind_close_all_21012026.csv
+2026-01-21,NIFTY BANK,59142,59447.35,58278.6,58800.3,-603.9,-1.02,16.02,2.16,1,https://nsearchives.nseindia.com/content/indices/ind_close_all_21012026.csv
+2026-01-21,NIFTY MIDCAP 100,57900.75,58239.3,56681.1,57423.65,-661.7,-1.14,31.75,4.17,0.83,https://nsearchives.nseindia.com/content/indices/ind_close_all_21012026.csv
+2026-01-21,NIFTY SMALLCAP 100,16648.85,16736.9,16362.9,16551.2,-149.85,-0.9,30.04,3.58,0.77,https://nsearchives.nseindia.com/content/indices/ind_close_all_21012026.csv
+2026-01-22,INDIA VIX,13.78,14.3275,12.9075,13.35,-0.43,-3.12,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_22012026.csv
+2026-01-22,NIFTY 50,25344.15,25435.75,25168.5,25289.9,132.4,0.53,21.97,3.44,1.31,https://nsearchives.nseindia.com/content/indices/ind_close_all_22012026.csv
+2026-01-22,NIFTY BANK,59194.25,59573.1,58823.05,59200.1,399.8,0.68,16.11,2.17,0.99,https://nsearchives.nseindia.com/content/indices/ind_close_all_22012026.csv
+2026-01-22,NIFTY MIDCAP 100,57962.6,58568.95,57755.75,58191.3,767.65,1.34,31.68,4.23,0.82,https://nsearchives.nseindia.com/content/indices/ind_close_all_22012026.csv
+2026-01-22,NIFTY SMALLCAP 100,16717.9,16807.7,16534.9,16677.25,126.05,0.76,30.14,3.61,0.76,https://nsearchives.nseindia.com/content/indices/ind_close_all_22012026.csv
+2026-01-23,INDIA VIX,13.35,14.4325,12.2825,14.19,0.84,6.31,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_23012026.csv
+2026-01-23,NIFTY 50,25344.6,25347.95,25025.3,25048.65,-241.25,-0.95,21.76,3.41,1.32,https://nsearchives.nseindia.com/content/indices/ind_close_all_23012026.csv
+2026-01-23,NIFTY BANK,59305.15,59400.15,58346.25,58473.1,-727,-1.23,15.91,2.15,1,https://nsearchives.nseindia.com/content/indices/ind_close_all_23012026.csv
+2026-01-23,NIFTY MIDCAP 100,58410.35,58416.2,57048.9,57145.65,-1045.65,-1.8,31.11,4.15,0.84,https://nsearchives.nseindia.com/content/indices/ind_close_all_23012026.csv
+2026-01-23,NIFTY SMALLCAP 100,16765.4,16770.85,16326.35,16352.75,-324.5,-1.95,29.55,3.54,0.78,https://nsearchives.nseindia.com/content/indices/ind_close_all_23012026.csv
+2026-01-27,INDIA VIX,14.1925,16.0575,13.9225,14.45,0.26,1.83,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_27012026.csv
+2026-01-27,NIFTY 50,25063.35,25246.65,24932.55,25175.4,126.75,0.51,21.91,3.42,1.33,https://nsearchives.nseindia.com/content/indices/ind_close_all_27012026.csv
+2026-01-27,NIFTY BANK,58366.05,59436.8,58121.6,59205.45,732.35,1.25,16.11,2.17,0.99,https://nsearchives.nseindia.com/content/indices/ind_close_all_27012026.csv
+2026-01-27,NIFTY MIDCAP 100,57358.85,57663.5,56671.4,57483.65,338,0.59,31.24,4.17,0.84,https://nsearchives.nseindia.com/content/indices/ind_close_all_27012026.csv
+2026-01-27,NIFTY SMALLCAP 100,16445.3,16493.45,16186.75,16419.35,66.6,0.41,29.57,3.55,0.77,https://nsearchives.nseindia.com/content/indices/ind_close_all_27012026.csv
+2026-01-28,INDIA VIX,14.4525,14.51,13.44,13.53,-0.93,-6.42,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_28012026.csv
+2026-01-28,NIFTY 50,25258.85,25372.1,25187.65,25342.75,167.35,0.66,22.07,3.45,1.3,https://nsearchives.nseindia.com/content/indices/ind_close_all_28012026.csv
+2026-01-28,NIFTY BANK,59575.65,59699.9,59240.1,59598.8,393.35,0.66,16.39,2.19,0.98,https://nsearchives.nseindia.com/content/indices/ind_close_all_28012026.csv
+2026-01-28,NIFTY MIDCAP 100,57714.9,58508.95,57678.55,58438.6,954.95,1.66,32.09,4.24,0.83,https://nsearchives.nseindia.com/content/indices/ind_close_all_28012026.csv
+2026-01-28,NIFTY SMALLCAP 100,16511.3,16817.15,16489.25,16790.95,371.6,2.26,29.93,3.63,0.76,https://nsearchives.nseindia.com/content/indices/ind_close_all_28012026.csv
+2026-01-29,INDIA VIX,13.525,14.1925,13.0725,13.37,-0.16,-1.15,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_29012026.csv
+2026-01-29,NIFTY 50,25345,25458.15,25159.8,25418.9,76.15,0.3,22.12,3.46,1.3,https://nsearchives.nseindia.com/content/indices/ind_close_all_29012026.csv
+2026-01-29,NIFTY BANK,59416.25,60060.7,59339,59957.85,359.05,0.6,16.47,2.2,0.98,https://nsearchives.nseindia.com/content/indices/ind_close_all_29012026.csv
+2026-01-29,NIFTY MIDCAP 100,58574.3,58614.9,58006.4,58541,102.4,0.18,32.02,4.25,0.83,https://nsearchives.nseindia.com/content/indices/ind_close_all_29012026.csv
+2026-01-29,NIFTY SMALLCAP 100,16880.05,16888.75,16692.9,16825,34.05,0.2,29.99,3.64,0.77,https://nsearchives.nseindia.com/content/indices/ind_close_all_29012026.csv
+2026-01-30,INDIA VIX,13.37,14.23,12.8825,13.63,0.26,1.96,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_30012026.csv
+2026-01-30,NIFTY 50,25247.55,25370.7,25213.65,25320.65,-98.25,-0.39,22.04,3.44,1.3,https://nsearchives.nseindia.com/content/indices/ind_close_all_30012026.csv
+2026-01-30,NIFTY BANK,59542.25,59906.9,59501.8,59610.45,-347.4,-0.58,16.22,2.13,0.98,https://nsearchives.nseindia.com/content/indices/ind_close_all_30012026.csv
+2026-01-30,NIFTY MIDCAP 100,58151.6,58628.85,57769.45,58432,-109,-0.19,32.07,4.25,0.83,https://nsearchives.nseindia.com/content/indices/ind_close_all_30012026.csv
+2026-01-30,NIFTY SMALLCAP 100,16739.6,16946.85,16565.65,16879.1,54.1,0.32,30.03,3.65,0.77,https://nsearchives.nseindia.com/content/indices/ind_close_all_30012026.csv
+2026-02-01,INDIA VIX,13.6325,16.1125,13.3475,15.1,1.46,10.73,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_01022026.csv
+2026-02-01,NIFTY 50,25333.75,25440.9,24571.75,24825.45,-495.2,-1.96,21.57,3.38,1.3,https://nsearchives.nseindia.com/content/indices/ind_close_all_01022026.csv
+2026-02-01,NIFTY BANK,59607.65,59865.7,57783.2,58417.2,-1193.25,-2,15.8,2.09,1,https://nsearchives.nseindia.com/content/indices/ind_close_all_01022026.csv
+2026-02-01,NIFTY MIDCAP 100,58435.7,58650.15,56126.55,57120.8,-1311.2,-2.24,31.23,4.16,0.84,https://nsearchives.nseindia.com/content/indices/ind_close_all_01022026.csv
+2026-02-01,NIFTY SMALLCAP 100,16767.7,16780.5,16155.35,16418.15,-460.95,-2.73,29.28,3.55,0.78,https://nsearchives.nseindia.com/content/indices/ind_close_all_01022026.csv
+2026-02-02,INDIA VIX,15.095,15.5525,13.58,13.87,-1.23,-8.15,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_02022026.csv
+2026-02-02,NIFTY 50,24796.5,25108.1,24679.4,25088.4,262.95,1.06,21.8,3.41,1.29,https://nsearchives.nseindia.com/content/indices/ind_close_all_02022026.csv
+2026-02-02,NIFTY BANK,58239.3,58687.05,57829.85,58619,201.8,0.35,15.85,2.09,1,https://nsearchives.nseindia.com/content/indices/ind_close_all_02022026.csv
+2026-02-02,NIFTY MIDCAP 100,57128.6,57826.85,56381.35,57667.6,546.8,0.96,31.53,4.2,0.83,https://nsearchives.nseindia.com/content/indices/ind_close_all_02022026.csv
+2026-02-02,NIFTY SMALLCAP 100,16381.95,16583.7,16136.9,16523.35,105.2,0.64,29.47,3.57,0.78,https://nsearchives.nseindia.com/content/indices/ind_close_all_02022026.csv
+2026-02-03,INDIA VIX,13.865,15.465,11.85,12.9,-0.97,-7,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_03022026.csv
+2026-02-03,NIFTY 50,26308.05,26341.2,25641.3,25727.55,639.15,2.55,22.35,3.5,1.26,https://nsearchives.nseindia.com/content/indices/ind_close_all_03022026.csv
+2026-02-03,NIFTY BANK,61411.2,61764.85,59793.2,60041.3,1422.3,2.43,16.24,2.14,0.98,https://nsearchives.nseindia.com/content/indices/ind_close_all_03022026.csv
+2026-02-03,NIFTY MIDCAP 100,60026.8,60456.8,59034.7,59307.1,1639.5,2.84,32.42,4.31,0.81,https://nsearchives.nseindia.com/content/indices/ind_close_all_03022026.csv
+2026-02-03,NIFTY SMALLCAP 100,17295.6,17366.1,16938.75,16988.95,465.6,2.82,30.29,3.67,0.74,https://nsearchives.nseindia.com/content/indices/ind_close_all_03022026.csv
+2026-02-04,INDIA VIX,12.895,13.145,12.06,12.25,-0.64,-4.98,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_04022026.csv
+2026-02-04,NIFTY 50,25675.05,25818.55,25563.95,25776,48.45,0.19,22.38,3.5,1.26,https://nsearchives.nseindia.com/content/indices/ind_close_all_04022026.csv
+2026-02-04,NIFTY BANK,60163.35,60389.4,59891.75,60238.15,196.85,0.33,16.29,2.15,0.97,https://nsearchives.nseindia.com/content/indices/ind_close_all_04022026.csv
+2026-02-04,NIFTY MIDCAP 100,59242.05,59769.5,58794.35,59683.6,376.5,0.63,33.06,4.34,0.8,https://nsearchives.nseindia.com/content/indices/ind_close_all_04022026.csv
+2026-02-04,NIFTY SMALLCAP 100,16993.25,17234.7,16918.25,17205.1,216.15,1.27,30.64,3.72,0.75,https://nsearchives.nseindia.com/content/indices/ind_close_all_04022026.csv
+2026-02-05,INDIA VIX,12.2525,12.545,10.935,12.17,-0.09,-0.69,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_05022026.csv
+2026-02-05,NIFTY 50,25755.9,25757.65,25579.5,25642.8,-133.2,-0.52,22.21,3.49,1.27,https://nsearchives.nseindia.com/content/indices/ind_close_all_05022026.csv
+2026-02-05,NIFTY BANK,60315.35,60328.3,59881.05,60063.65,-174.5,-0.29,16.24,2.14,0.98,https://nsearchives.nseindia.com/content/indices/ind_close_all_05022026.csv
+2026-02-05,NIFTY MIDCAP 100,59662.5,59672.3,59069.65,59517.1,-166.5,-0.28,32.96,4.33,0.8,https://nsearchives.nseindia.com/content/indices/ind_close_all_05022026.csv
+2026-02-05,NIFTY SMALLCAP 100,17151.35,17151.4,16896.8,16983.9,-221.2,-1.29,30.29,3.67,0.76,https://nsearchives.nseindia.com/content/indices/ind_close_all_05022026.csv
+2026-02-06,INDIA VIX,12.1675,12.345,11.16,11.94,-0.23,-1.87,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_06022026.csv
+2026-02-06,NIFTY 50,25605.8,25703.95,25491.9,25693.7,50.9,0.2,22.26,3.49,1.28,https://nsearchives.nseindia.com/content/indices/ind_close_all_06022026.csv
+2026-02-06,NIFTY BANK,59967.1,60149.9,59644.55,60120.55,56.9,0.09,16.26,2.15,0.97,https://nsearchives.nseindia.com/content/indices/ind_close_all_06022026.csv
+2026-02-06,NIFTY MIDCAP 100,59400.75,59573.6,58757.8,59502.7,-14.4,-0.02,32.96,4.33,0.81,https://nsearchives.nseindia.com/content/indices/ind_close_all_06022026.csv
+2026-02-06,NIFTY SMALLCAP 100,16914.4,16956.95,16705.35,16938.65,-45.25,-0.27,30.15,3.66,0.77,https://nsearchives.nseindia.com/content/indices/ind_close_all_06022026.csv
+2026-02-09,INDIA VIX,11.94,12.28,10.67,12.19,0.25,2.09,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_09022026.csv
+2026-02-09,NIFTY 50,25888.7,25922.25,25780.9,25867.3,173.6,0.68,22.79,3.52,1.25,https://nsearchives.nseindia.com/content/indices/ind_close_all_09022026.csv
+2026-02-09,NIFTY BANK,60805.2,60876.2,60495.7,60669.35,548.8,0.91,16.41,2.17,0.97,https://nsearchives.nseindia.com/content/indices/ind_close_all_09022026.csv
+2026-02-09,NIFTY MIDCAP 100,59896.2,60498.05,59767.55,60441.15,938.45,1.58,33.43,4.4,0.8,https://nsearchives.nseindia.com/content/indices/ind_close_all_09022026.csv
+2026-02-09,NIFTY SMALLCAP 100,17082.55,17404.15,17045.6,17385.9,447.25,2.64,30.95,3.76,0.73,https://nsearchives.nseindia.com/content/indices/ind_close_all_09022026.csv
+2026-02-10,INDIA VIX,12.19,12.19,10.355,11.67,-0.53,-4.31,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_10022026.csv
+2026-02-10,NIFTY 50,25922.65,25989.45,25870.45,25935.15,67.85,0.26,22.73,3.53,1.24,https://nsearchives.nseindia.com/content/indices/ind_close_all_10022026.csv
+2026-02-10,NIFTY BANK,60740.8,60797.55,60531.55,60626.4,-42.95,-0.07,16.32,2.16,0.97,https://nsearchives.nseindia.com/content/indices/ind_close_all_10022026.csv
+2026-02-10,NIFTY MIDCAP 100,60723,60819.7,60442.4,60735.9,294.75,0.49,33.47,4.42,0.81,https://nsearchives.nseindia.com/content/indices/ind_close_all_10022026.csv
+2026-02-10,NIFTY SMALLCAP 100,17447.3,17508.85,17397.2,17451.2,65.3,0.38,31.26,3.77,0.72,https://nsearchives.nseindia.com/content/indices/ind_close_all_10022026.csv
+2026-02-11,INDIA VIX,11.665,11.7125,10.5575,11.55,-0.12,-1.01,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_11022026.csv
+2026-02-11,NIFTY 50,25997.45,26009.4,25899.8,25953.85,18.7,0.07,22.74,3.53,1.24,https://nsearchives.nseindia.com/content/indices/ind_close_all_11022026.csv
+2026-02-11,NIFTY BANK,60670.25,60779.95,60444.65,60745.35,118.95,0.2,16.35,2.17,0.96,https://nsearchives.nseindia.com/content/indices/ind_close_all_11022026.csv
+2026-02-11,NIFTY MIDCAP 100,60812.1,60815.2,60431.65,60754.55,18.65,0.03,33.33,4.42,0.87,https://nsearchives.nseindia.com/content/indices/ind_close_all_11022026.csv
+2026-02-11,NIFTY SMALLCAP 100,17482.3,17483.25,17362.1,17455,3.8,0.02,31.01,3.77,0.73,https://nsearchives.nseindia.com/content/indices/ind_close_all_11022026.csv
+2026-02-12,INDIA VIX,11.5475,12.1075,10.8475,11.73,0.18,1.54,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_12022026.csv
+2026-02-12,NIFTY 50,25906.7,25906.7,25752.4,25807.2,-146.65,-0.57,22.58,3.51,1.2,https://nsearchives.nseindia.com/content/indices/ind_close_all_12022026.csv
+2026-02-12,NIFTY BANK,60786.15,60864.4,60597.65,60739.75,-5.6,-0.01,16.35,2.17,0.96,https://nsearchives.nseindia.com/content/indices/ind_close_all_12022026.csv
+2026-02-12,NIFTY MIDCAP 100,60695.8,60699.55,60194.1,60470.85,-283.7,-0.47,33.16,4.4,0.82,https://nsearchives.nseindia.com/content/indices/ind_close_all_12022026.csv
+2026-02-12,NIFTY SMALLCAP 100,17433.15,17435,17275.2,17344.1,-110.9,-0.64,30.84,3.75,0.73,https://nsearchives.nseindia.com/content/indices/ind_close_all_12022026.csv
+2026-02-13,INDIA VIX,11.725,13.5825,10.9625,13.29,1.57,13.37,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_13022026.csv
+2026-02-13,NIFTY 50,25571.15,25630.35,25444.3,25471.1,-336.1,-1.3,22.24,3.46,1.21,https://nsearchives.nseindia.com/content/indices/ind_close_all_13022026.csv
+2026-02-13,NIFTY BANK,60504.4,60621.9,60073.55,60186.65,-553.1,-0.91,16.2,2.15,0.97,https://nsearchives.nseindia.com/content/indices/ind_close_all_13022026.csv
+2026-02-13,NIFTY MIDCAP 100,59978.45,59981,59194.25,59438,-1032.85,-1.71,32.55,4.32,0.82,https://nsearchives.nseindia.com/content/indices/ind_close_all_13022026.csv
+2026-02-13,NIFTY SMALLCAP 100,17193.65,17196.35,16951.9,17032.9,-311.2,-1.79,30.27,3.68,0.76,https://nsearchives.nseindia.com/content/indices/ind_close_all_13022026.csv
+2026-02-16,INDIA VIX,13.2925,13.8325,13.235,13.33,0.04,0.28,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_16022026.csv
+2026-02-16,NIFTY 50,25423.6,25697,25372.7,25682.75,211.65,0.83,22.51,3.49,1.2,https://nsearchives.nseindia.com/content/indices/ind_close_all_16022026.csv
+2026-02-16,NIFTY BANK,59947.8,61011.3,59861.1,60949.1,762.45,1.27,16.41,2.18,0.96,https://nsearchives.nseindia.com/content/indices/ind_close_all_16022026.csv
+2026-02-16,NIFTY MIDCAP 100,59166.75,59770.45,58917.3,59723,285,0.48,32.56,4.34,0.79,https://nsearchives.nseindia.com/content/indices/ind_close_all_16022026.csv
+2026-02-16,NIFTY SMALLCAP 100,16927,17062.75,16822.25,17050.9,18,0.11,30.39,3.69,0.76,https://nsearchives.nseindia.com/content/indices/ind_close_all_16022026.csv
+2026-02-17,INDIA VIX,13.33,13.4775,11.625,12.67,-0.66,-4.93,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_17022026.csv
+2026-02-17,NIFTY 50,25637.95,25764.4,25570.3,25725.4,42.65,0.17,22.52,3.5,1.2,https://nsearchives.nseindia.com/content/indices/ind_close_all_17022026.csv
+2026-02-17,NIFTY BANK,60821.15,61241.6,60560,61174,224.9,0.37,16.47,2.18,0.96,https://nsearchives.nseindia.com/content/indices/ind_close_all_17022026.csv
+2026-02-17,NIFTY MIDCAP 100,59713.55,59951.4,59543.7,59881.7,158.7,0.27,33.28,4.36,0.78,https://nsearchives.nseindia.com/content/indices/ind_close_all_17022026.csv
+2026-02-17,NIFTY SMALLCAP 100,17050.95,17166.2,17011.45,17146.7,95.8,0.56,30.53,3.71,0.76,https://nsearchives.nseindia.com/content/indices/ind_close_all_17022026.csv
+2026-02-18,INDIA VIX,12.6725,12.7675,11.3525,12.22,-0.45,-3.55,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_18022026.csv
+2026-02-18,NIFTY 50,25752.65,25828.05,25645.15,25819.35,93.95,0.37,22.6,3.51,1.21,https://nsearchives.nseindia.com/content/indices/ind_close_all_18022026.csv
+2026-02-18,NIFTY BANK,61255.35,61596.85,61100.9,61550.8,376.8,0.62,16.57,2.2,0.95,https://nsearchives.nseindia.com/content/indices/ind_close_all_18022026.csv
+2026-02-18,NIFTY MIDCAP 100,59984.3,60227.3,59807.3,60183.2,301.5,0.5,33.45,4.38,0.79,https://nsearchives.nseindia.com/content/indices/ind_close_all_18022026.csv
+2026-02-18,NIFTY SMALLCAP 100,17184.1,17257.6,17133.5,17239.25,92.55,0.54,30.7,3.73,0.74,https://nsearchives.nseindia.com/content/indices/ind_close_all_18022026.csv
+2026-02-19,INDIA VIX,12.2225,13.68,9.73,13.46,1.24,10.12,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_19022026.csv
+2026-02-19,NIFTY 50,25873.35,25885.3,25388.75,25454.35,-365,-1.41,22.28,3.46,1.22,https://nsearchives.nseindia.com/content/indices/ind_close_all_19022026.csv
+2026-02-19,NIFTY BANK,61660.85,61678.8,60592.9,60739.55,-811.25,-1.32,16.35,2.17,0.96,https://nsearchives.nseindia.com/content/indices/ind_close_all_19022026.csv
+2026-02-19,NIFTY MIDCAP 100,60278.45,60341.7,59038.8,59227.65,-955.55,-1.59,32.92,4.31,0.81,https://nsearchives.nseindia.com/content/indices/ind_close_all_19022026.csv
+2026-02-19,NIFTY SMALLCAP 100,17294.6,17308.35,16970.95,17020.35,-218.9,-1.27,30.31,3.68,0.75,https://nsearchives.nseindia.com/content/indices/ind_close_all_19022026.csv
+2026-02-20,INDIA VIX,13.46,14.7825,13.095,14.36,0.9,6.71,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_20022026.csv
+2026-02-20,NIFTY 50,25406.55,25663.55,25379.75,25571.25,116.9,0.46,22.38,3.48,1.22,https://nsearchives.nseindia.com/content/indices/ind_close_all_20022026.csv
+2026-02-20,NIFTY BANK,60627.85,61360.5,60562.35,61172,432.45,0.71,16.47,2.18,0.96,https://nsearchives.nseindia.com/content/indices/ind_close_all_20022026.csv
+2026-02-20,NIFTY MIDCAP 100,59087.75,59690.5,58989.75,59513.95,286.3,0.48,33.08,4.33,0.81,https://nsearchives.nseindia.com/content/indices/ind_close_all_20022026.csv
+2026-02-20,NIFTY SMALLCAP 100,16995.55,17087.6,16937.5,17002.15,-18.2,-0.11,30.28,3.68,0.77,https://nsearchives.nseindia.com/content/indices/ind_close_all_20022026.csv
+2026-02-23,INDIA VIX,14.3625,14.4775,12.7725,14.17,-0.2,-1.36,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_23022026.csv
+2026-02-23,NIFTY 50,25678.4,25771.45,25609.35,25713,141.75,0.55,22.5,3.5,1.21,https://nsearchives.nseindia.com/content/indices/ind_close_all_23022026.csv
+2026-02-23,NIFTY BANK,61145.55,61517.8,61029.15,61264.25,92.25,0.15,16.49,2.19,0.96,https://nsearchives.nseindia.com/content/indices/ind_close_all_23022026.csv
+2026-02-23,NIFTY MIDCAP 100,59612.8,59698.5,59014.3,59255.65,-258.3,-0.43,32.94,4.31,0.82,https://nsearchives.nseindia.com/content/indices/ind_close_all_23022026.csv
+2026-02-23,NIFTY SMALLCAP 100,17119.55,17202.3,16984.9,17051.95,49.8,0.29,30.36,3.69,0.75,https://nsearchives.nseindia.com/content/indices/ind_close_all_23022026.csv
+2026-02-24,INDIA VIX,14.1675,14.9475,12.3475,14.15,-0.02,-0.12,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_24022026.csv
+2026-02-24,NIFTY 50,25641.8,25641.8,25327.6,25424.65,-288.35,-1.12,22.25,3.46,1.23,https://nsearchives.nseindia.com/content/indices/ind_close_all_24022026.csv
+2026-02-24,NIFTY BANK,61392.1,61435.65,60801.85,61047.3,-216.95,-0.35,16.44,2.18,0.96,https://nsearchives.nseindia.com/content/indices/ind_close_all_24022026.csv
+2026-02-24,NIFTY MIDCAP 100,59091.45,59199.35,58489.15,59066.35,-189.3,-0.32,32.83,4.3,0.82,https://nsearchives.nseindia.com/content/indices/ind_close_all_24022026.csv
+2026-02-24,NIFTY SMALLCAP 100,17005.75,17024.6,16842,16958.65,-93.3,-0.55,30.2,3.67,0.75,https://nsearchives.nseindia.com/content/indices/ind_close_all_24022026.csv
+2026-02-25,INDIA VIX,14.15,14.15,12.8375,13.49,-0.66,-4.68,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_25022026.csv
+2026-02-25,NIFTY 50,25512.6,25652.6,25428.2,25482.5,57.85,0.23,22.3,3.46,1.22,https://nsearchives.nseindia.com/content/indices/ind_close_all_25022026.csv
+2026-02-25,NIFTY BANK,61175.05,61317.55,60816.75,61043.35,-3.95,-0.01,16.43,2.18,0.96,https://nsearchives.nseindia.com/content/indices/ind_close_all_25022026.csv
+2026-02-25,NIFTY MIDCAP 100,59280,59528.15,59051.6,59406.1,339.75,0.58,33.02,4.32,0.81,https://nsearchives.nseindia.com/content/indices/ind_close_all_25022026.csv
+2026-02-25,NIFTY SMALLCAP 100,17032.75,17146.9,17015.9,17118.7,160.05,0.94,30.48,3.7,0.75,https://nsearchives.nseindia.com/content/indices/ind_close_all_25022026.csv
+2026-02-26,INDIA VIX,13.4875,13.605,11.8125,13.06,-0.43,-3.15,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_26022026.csv
+2026-02-26,NIFTY 50,25556.3,25572.95,25400.95,25496.55,14.05,0.06,22.31,3.47,1.22,https://nsearchives.nseindia.com/content/indices/ind_close_all_26022026.csv
+2026-02-26,NIFTY BANK,61193.9,61284.75,60813.3,61187.7,144.35,0.24,16.47,2.19,0.96,https://nsearchives.nseindia.com/content/indices/ind_close_all_26022026.csv
+2026-02-26,NIFTY MIDCAP 100,59542.55,59879.55,59404.75,59798.15,392.05,0.66,33.24,4.35,0.81,https://nsearchives.nseindia.com/content/indices/ind_close_all_26022026.csv
+2026-02-26,NIFTY SMALLCAP 100,17143.6,17206,17036.3,17117.65,-1.05,-0.01,30.48,3.7,0.75,https://nsearchives.nseindia.com/content/indices/ind_close_all_26022026.csv
+2026-02-27,INDIA VIX,13.0625,14.035,11.2,13.7,0.64,4.9,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_27022026.csv
+2026-02-27,NIFTY 50,25459.85,25476.4,25141.3,25178.65,-317.9,-1.25,22.03,3.42,1.24,https://nsearchives.nseindia.com/content/indices/ind_close_all_27022026.csv
+2026-02-27,NIFTY BANK,61057.45,61086.45,60438.95,60529,-658.7,-1.08,16.21,2.11,0.97,https://nsearchives.nseindia.com/content/indices/ind_close_all_27022026.csv
+2026-02-27,NIFTY MIDCAP 100,59746.4,59774.9,59014.1,59115.6,-682.55,-1.14,32.89,4.3,0.82,https://nsearchives.nseindia.com/content/indices/ind_close_all_27022026.csv
+2026-02-27,NIFTY SMALLCAP 100,17109.75,17112,16904.5,16928.9,-188.75,-1.1,30.14,3.66,0.76,https://nsearchives.nseindia.com/content/indices/ind_close_all_27022026.csv
+2026-03-02,INDIA VIX,13.7025,17.8125,12.825,17.13,3.43,25.01,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_02032026.csv
+2026-03-02,NIFTY 50,24659.25,24989.35,24603.5,24865.7,-312.95,-1.24,21.76,3.38,1.25,https://nsearchives.nseindia.com/content/indices/ind_close_all_02032026.csv
+2026-03-02,NIFTY BANK,59204.3,60177.5,59148,59839.65,-689.35,-1.14,16.03,2.09,0.98,https://nsearchives.nseindia.com/content/indices/ind_close_all_02032026.csv
+2026-03-02,NIFTY MIDCAP 100,57090.8,58814.35,57074.75,58180.5,-935.1,-1.58,32.37,4.23,0.83,https://nsearchives.nseindia.com/content/indices/ind_close_all_02032026.csv
+2026-03-02,NIFTY SMALLCAP 100,16289.6,16839.2,16284.7,16632.4,-296.5,-1.75,29.62,3.6,0.77,https://nsearchives.nseindia.com/content/indices/ind_close_all_02032026.csv
+2026-03-04,INDIA VIX,17.13,21.3675,16.9675,21.14,4.01,23.41,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_04032026.csv
+2026-03-04,NIFTY 50,24388.8,24602.45,24305.4,24480.5,-385.2,-1.55,21.42,3.33,1.27,https://nsearchives.nseindia.com/content/indices/ind_close_all_04032026.csv
+2026-03-04,NIFTY BANK,58447.15,59058.4,58393.55,58755.25,-1084.4,-1.81,15.74,2.05,1,https://nsearchives.nseindia.com/content/indices/ind_close_all_04032026.csv
+2026-03-04,NIFTY MIDCAP 100,57339.25,57399,56505.3,56925.15,-1255.35,-2.16,31.67,4.14,0.85,https://nsearchives.nseindia.com/content/indices/ind_close_all_04032026.csv
+2026-03-04,NIFTY SMALLCAP 100,16412.35,16413.4,16156.35,16281.5,-350.9,-2.11,28.99,3.52,0.78,https://nsearchives.nseindia.com/content/indices/ind_close_all_04032026.csv
+2026-03-05,INDIA VIX,21.14,21.14,17.3025,17.86,-3.28,-15.53,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_05032026.csv
+2026-03-05,NIFTY 50,24615.95,24854.2,24529.4,24765.9,285.4,1.17,21.67,3.37,1.26,https://nsearchives.nseindia.com/content/indices/ind_close_all_05032026.csv
+2026-03-05,NIFTY BANK,59008.25,59274.35,58506.4,59055.85,300.6,0.51,15.82,2.06,0.99,https://nsearchives.nseindia.com/content/indices/ind_close_all_05032026.csv
+2026-03-05,NIFTY MIDCAP 100,57330.6,57946.45,57014.7,57792.55,867.4,1.52,32.16,4.2,0.83,https://nsearchives.nseindia.com/content/indices/ind_close_all_05032026.csv
+2026-03-05,NIFTY SMALLCAP 100,16397.1,16567.7,16311.55,16538.8,257.3,1.58,29.45,3.58,0.77,https://nsearchives.nseindia.com/content/indices/ind_close_all_05032026.csv
+2026-03-06,INDIA VIX,17.8575,20.1425,17.1975,19.88,2.02,11.33,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_06032026.csv
+2026-03-06,NIFTY 50,24656.4,24700.8,24415.75,24450.45,-315.45,-1.27,21.39,3.32,1.28,https://nsearchives.nseindia.com/content/indices/ind_close_all_06032026.csv
+2026-03-06,NIFTY BANK,58629.6,58807.15,57696.4,57783.25,-1272.6,-2.15,15.48,2.02,1.01,https://nsearchives.nseindia.com/content/indices/ind_close_all_06032026.csv
+2026-03-06,NIFTY MIDCAP 100,57692.15,58104.5,57336.55,57393.35,-399.2,-0.69,31.93,4.17,0.84,https://nsearchives.nseindia.com/content/indices/ind_close_all_06032026.csv
+2026-03-06,NIFTY SMALLCAP 100,16524.35,16658.45,16481.65,16498.9,-39.9,-0.24,29.38,3.57,0.77,https://nsearchives.nseindia.com/content/indices/ind_close_all_06032026.csv
+2026-03-09,INDIA VIX,19.88,24.4925,19.2175,23.36,3.48,17.52,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_09032026.csv
+2026-03-09,NIFTY 50,23868.05,24078.15,23697.8,24028.05,-422.4,-1.73,21.02,3.27,1.3,https://nsearchives.nseindia.com/content/indices/ind_close_all_09032026.csv
+2026-03-09,NIFTY BANK,56121.4,56274.15,55270.6,56019.8,-1763.45,-3.05,15.01,1.96,1.05,https://nsearchives.nseindia.com/content/indices/ind_close_all_09032026.csv
+2026-03-09,NIFTY MIDCAP 100,56328.8,56362.8,55341.7,56265.5,-1127.85,-1.97,31.31,4.09,0.86,https://nsearchives.nseindia.com/content/indices/ind_close_all_09032026.csv
+2026-03-09,NIFTY SMALLCAP 100,16199.35,16199.35,15896.95,16132.2,-366.7,-2.22,28.72,3.49,0.79,https://nsearchives.nseindia.com/content/indices/ind_close_all_09032026.csv
+2026-03-10,INDIA VIX,23.3625,23.3625,18.7775,18.91,-4.46,-19.08,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_10032026.csv
+2026-03-10,NIFTY 50,24280.8,24303.8,24079.95,24261.6,233.55,0.97,21.23,3.3,1.29,https://nsearchives.nseindia.com/content/indices/ind_close_all_10032026.csv
+2026-03-10,NIFTY BANK,56583.85,57097.05,56387.2,56950.8,931,1.66,15.26,1.99,1.03,https://nsearchives.nseindia.com/content/indices/ind_close_all_10032026.csv
+2026-03-10,NIFTY MIDCAP 100,56993.7,57341.75,56573.3,57177.65,912.15,1.62,31.81,4.16,0.84,https://nsearchives.nseindia.com/content/indices/ind_close_all_10032026.csv
+2026-03-10,NIFTY SMALLCAP 100,16339.4,16512.75,16268.95,16473.8,341.6,2.12,29.33,3.56,0.78,https://nsearchives.nseindia.com/content/indices/ind_close_all_10032026.csv
+2026-03-11,INDIA VIX,18.905,21.385,17.24,21.06,2.16,11.41,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_11032026.csv
+2026-03-11,NIFTY 50,24231.85,24299,23834.3,23866.85,-394.75,-1.63,20.88,3.24,1.31,https://nsearchives.nseindia.com/content/indices/ind_close_all_11032026.csv
+2026-03-11,NIFTY BANK,56790.4,56938.4,55631.95,55735.75,-1215.05,-2.13,14.93,1.95,1.05,https://nsearchives.nseindia.com/content/indices/ind_close_all_11032026.csv
+2026-03-11,NIFTY MIDCAP 100,57335.2,57656.9,56363.4,56461.1,-716.55,-1.25,31.42,4.11,0.86,https://nsearchives.nseindia.com/content/indices/ind_close_all_11032026.csv
+2026-03-11,NIFTY SMALLCAP 100,16521.85,16652.85,16384.25,16414.85,-58.95,-0.36,29.25,3.55,0.78,https://nsearchives.nseindia.com/content/indices/ind_close_all_11032026.csv
+2026-03-12,INDIA VIX,21.0625,22.355,20.8225,21.52,0.46,2.16,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_12032026.csv
+2026-03-12,NIFTY 50,23674.85,23833.15,23556.3,23639.15,-227.7,-0.95,20.68,3.21,1.32,https://nsearchives.nseindia.com/content/indices/ind_close_all_12032026.csv
+2026-03-12,NIFTY BANK,55008.2,55636.95,54760.55,55100.95,-634.8,-1.14,14.76,1.92,1.06,https://nsearchives.nseindia.com/content/indices/ind_close_all_12032026.csv
+2026-03-12,NIFTY MIDCAP 100,56142.5,56684.3,55378.65,56253.75,-207.35,-0.37,31.3,4.09,0.86,https://nsearchives.nseindia.com/content/indices/ind_close_all_12032026.csv
+2026-03-12,NIFTY SMALLCAP 100,16337.15,16423.05,16097.45,16305.25,-109.6,-0.67,29.06,3.52,0.78,https://nsearchives.nseindia.com/content/indices/ind_close_all_12032026.csv
+2026-03-13,INDIA VIX,21.5175,22.8825,21.2475,22.65,1.13,5.24,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_13032026.csv
+2026-03-13,NIFTY 50,23462.5,23492.4,23112,23151.1,-488.05,-2.06,20.26,3.15,1.35,https://nsearchives.nseindia.com/content/indices/ind_close_all_13032026.csv
+2026-03-13,NIFTY BANK,54592.05,54713.75,53675.7,53757.85,-1343.1,-2.44,14.4,1.88,1.09,https://nsearchives.nseindia.com/content/indices/ind_close_all_13032026.csv
+2026-03-13,NIFTY MIDCAP 100,55997.15,56140.55,54633.6,54761.1,-1492.65,-2.65,30.47,3.98,0.88,https://nsearchives.nseindia.com/content/indices/ind_close_all_13032026.csv
+2026-03-13,NIFTY SMALLCAP 100,16246.9,16253.55,15832.9,15895.25,-410,-2.51,28.33,3.44,0.8,https://nsearchives.nseindia.com/content/indices/ind_close_all_13032026.csv
+2026-03-16,INDIA VIX,22.645,22.875,19.82,21.6,-1.04,-4.6,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_16032026.csv
+2026-03-16,NIFTY 50,23116.1,23502,22955.25,23408.8,257.7,1.11,20.48,3.18,1.33,https://nsearchives.nseindia.com/content/indices/ind_close_all_16032026.csv
+2026-03-16,NIFTY BANK,53721.5,54664.15,53258.15,54413.4,655.55,1.22,14.58,1.9,1.08,https://nsearchives.nseindia.com/content/indices/ind_close_all_16032026.csv
+2026-03-16,NIFTY MIDCAP 100,54652.55,55013.3,53712.55,54614.95,-146.15,-0.27,30.39,3.97,0.88,https://nsearchives.nseindia.com/content/indices/ind_close_all_16032026.csv
+2026-03-16,NIFTY SMALLCAP 100,15858.25,15892.2,15526.75,15810.35,-84.9,-0.53,28.17,3.42,0.81,https://nsearchives.nseindia.com/content/indices/ind_close_all_16032026.csv
+2026-03-17,INDIA VIX,21.6025,21.6025,19.6275,19.79,-1.81,-8.39,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_17032026.csv
+2026-03-17,NIFTY 50,23493.2,23656.8,23346.6,23581.15,172.35,0.74,20.63,3.2,1.32,https://nsearchives.nseindia.com/content/indices/ind_close_all_17032026.csv
+2026-03-17,NIFTY BANK,54649.1,54996,54113.15,54876,462.6,0.85,14.7,1.92,1.07,https://nsearchives.nseindia.com/content/indices/ind_close_all_17032026.csv
+2026-03-17,NIFTY MIDCAP 100,54880.8,55304.7,54446.05,55174.4,559.45,1.02,30.7,4.01,0.87,https://nsearchives.nseindia.com/content/indices/ind_close_all_17032026.csv
+2026-03-17,NIFTY SMALLCAP 100,15888.25,15957.6,15765.7,15912.9,102.55,0.65,28.36,3.44,0.8,https://nsearchives.nseindia.com/content/indices/ind_close_all_17032026.csv
+2026-03-18,INDIA VIX,19.79,19.79,18.5925,18.72,-1.07,-5.39,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_18032026.csv
+2026-03-18,NIFTY 50,23632.9,23862.25,23618.45,23777.8,196.65,0.83,20.81,3.23,1.31,https://nsearchives.nseindia.com/content/indices/ind_close_all_18032026.csv
+2026-03-18,NIFTY BANK,54927.05,55554.15,54689.1,55326.05,450.05,0.82,14.82,1.93,1.06,https://nsearchives.nseindia.com/content/indices/ind_close_all_18032026.csv
+2026-03-18,NIFTY MIDCAP 100,55289.1,56497.8,55253.3,56289.85,1115.45,2.02,31.32,4.09,0.86,https://nsearchives.nseindia.com/content/indices/ind_close_all_18032026.csv
+2026-03-18,NIFTY SMALLCAP 100,15976.1,16230.7,15946.3,16179.15,266.25,1.67,28.83,3.5,0.74,https://nsearchives.nseindia.com/content/indices/ind_close_all_18032026.csv
+2026-03-19,INDIA VIX,18.7225,23.195,18.7225,22.8,4.08,21.79,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_19032026.csv
+2026-03-19,NIFTY 50,23197.75,23378.7,22930.35,23002.15,-775.65,-3.26,20.13,3.13,1.36,https://nsearchives.nseindia.com/content/indices/ind_close_all_19032026.csv
+2026-03-19,NIFTY BANK,53474.55,54150.3,53240.6,53451,-1875.05,-3.39,14.32,1.87,1.1,https://nsearchives.nseindia.com/content/indices/ind_close_all_19032026.csv
+2026-03-19,NIFTY MIDCAP 100,55391.2,55419.85,54253.7,54492.3,-1797.55,-3.19,30.32,3.96,0.89,https://nsearchives.nseindia.com/content/indices/ind_close_all_19032026.csv
+2026-03-19,NIFTY SMALLCAP 100,15933.15,15959.4,15656.9,15704.25,-474.9,-2.94,27.99,3.39,0.77,https://nsearchives.nseindia.com/content/indices/ind_close_all_19032026.csv
+2026-03-20,INDIA VIX,22.8025,23.1375,21.685,22.81,0.01,0.04,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_20032026.csv
+2026-03-20,NIFTY 50,23110.15,23345.15,23067.6,23114.5,112.35,0.49,20.23,3.14,1.35,https://nsearchives.nseindia.com/content/indices/ind_close_all_20032026.csv
+2026-03-20,NIFTY BANK,53548.2,54382.45,53297.55,53427.05,-23.95,-0.04,14.31,1.87,1.1,https://nsearchives.nseindia.com/content/indices/ind_close_all_20032026.csv
+2026-03-20,NIFTY MIDCAP 100,54903.35,55560.35,54768.55,54855.5,363.2,0.67,30.52,3.99,0.88,https://nsearchives.nseindia.com/content/indices/ind_close_all_20032026.csv
+2026-03-20,NIFTY SMALLCAP 100,15829.7,15929.1,15694.9,15718.6,14.35,0.09,28.01,3.4,0.76,https://nsearchives.nseindia.com/content/indices/ind_close_all_20032026.csv
+2026-03-23,INDIA VIX,22.8125,27.1725,22.8125,26.73,3.92,17.17,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_23032026.csv
+2026-03-23,NIFTY 50,22824.35,22851.7,22471.25,22512.65,-601.85,-2.6,19.7,3.06,1.39,https://nsearchives.nseindia.com/content/indices/ind_close_all_23032026.csv
+2026-03-23,NIFTY BANK,52576.1,52665.3,51323.6,51437.75,-1989.3,-3.72,13.78,1.8,1.14,https://nsearchives.nseindia.com/content/indices/ind_close_all_23032026.csv
+2026-03-23,NIFTY MIDCAP 100,54242.4,54242.4,52573.55,52717.55,-2137.95,-3.9,29.33,3.83,0.89,https://nsearchives.nseindia.com/content/indices/ind_close_all_23032026.csv
+2026-03-23,NIFTY SMALLCAP 100,15565.3,15565.3,14986,15098.7,-619.9,-3.94,26.9,3.26,0.79,https://nsearchives.nseindia.com/content/indices/ind_close_all_23032026.csv
+2026-03-24,INDIA VIX,26.73,26.73,24.63,24.74,-1.99,-7.44,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_24032026.csv
+2026-03-24,NIFTY 50,22878.45,23057.3,22624.2,22912.4,399.75,1.78,20.05,3.11,1.36,https://nsearchives.nseindia.com/content/indices/ind_close_all_24032026.csv
+2026-03-24,NIFTY BANK,52384.8,52949.15,51827.5,52605.65,1167.9,2.27,14.09,1.84,1.11,https://nsearchives.nseindia.com/content/indices/ind_close_all_24032026.csv
+2026-03-24,NIFTY MIDCAP 100,53878.3,54315.95,52958.8,54087,1369.45,2.6,30.09,3.93,0.86,https://nsearchives.nseindia.com/content/indices/ind_close_all_24032026.csv
+2026-03-24,NIFTY SMALLCAP 100,15459.7,15534.7,15115.7,15495.2,396.5,2.63,27.61,3.35,0.77,https://nsearchives.nseindia.com/content/indices/ind_close_all_24032026.csv
+2026-03-25,INDIA VIX,24.74,25.23,24.135,24.64,-0.1,-0.4,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_25032026.csv
+2026-03-25,NIFTY 50,23064.4,23465.35,23063.2,23306.45,394.05,1.72,20.39,3.17,1.34,https://nsearchives.nseindia.com/content/indices/ind_close_all_25032026.csv
+2026-03-25,NIFTY BANK,53024.75,54146.15,53024.75,53708.1,1102.45,2.1,14.39,1.88,1.09,https://nsearchives.nseindia.com/content/indices/ind_close_all_25032026.csv
+2026-03-25,NIFTY MIDCAP 100,54633.5,55688.5,54591.15,55331.05,1244.05,2.3,30.79,4.02,0.85,https://nsearchives.nseindia.com/content/indices/ind_close_all_25032026.csv
+2026-03-25,NIFTY SMALLCAP 100,15665.6,15985.75,15621.9,15896.55,401.35,2.59,28.32,3.44,0.75,https://nsearchives.nseindia.com/content/indices/ind_close_all_25032026.csv
+2026-03-27,INDIA VIX,24.64,27.0875,23.385,26.8,2.16,8.78,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_27032026.csv
+2026-03-27,NIFTY 50,23173.55,23186.1,22804.55,22819.6,-486.85,-2.09,19.97,3.1,1.37,https://nsearchives.nseindia.com/content/indices/ind_close_all_27032026.csv
+2026-03-27,NIFTY BANK,53244.25,53292.5,52211.2,52274.6,-1433.5,-2.67,14,1.83,1.12,https://nsearchives.nseindia.com/content/indices/ind_close_all_27032026.csv
+2026-03-27,NIFTY MIDCAP 100,54997.35,55014.4,53991.55,54097.8,-1233.25,-2.23,30.1,3.93,0.87,https://nsearchives.nseindia.com/content/indices/ind_close_all_27032026.csv
+2026-03-27,NIFTY SMALLCAP 100,15796.4,15801.5,15574.9,15620,-276.55,-1.74,27.83,3.38,0.77,https://nsearchives.nseindia.com/content/indices/ind_close_all_27032026.csv
+2026-03-30,INDIA VIX,26.8025,28.9075,26.8025,27.89,1.09,4.05,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_30032026.csv
+2026-03-30,NIFTY 50,22549.65,22714.1,22283.85,22331.4,-488.2,-2.14,19.62,3.05,1.39,https://nsearchives.nseindia.com/content/indices/ind_close_all_30032026.csv
+2026-03-30,NIFTY BANK,51527.9,51624.5,50105.25,50275.35,-1999.25,-3.82,13.38,1.71,1.17,https://nsearchives.nseindia.com/content/indices/ind_close_all_30032026.csv
+2026-03-30,NIFTY MIDCAP 100,53383.45,53555.6,52554.45,52650,-1447.8,-2.68,32.55,4.16,0.78,https://nsearchives.nseindia.com/content/indices/ind_close_all_30032026.csv
+2026-03-30,NIFTY SMALLCAP 100,15435.4,15493.95,15168.5,15203.8,-416.2,-2.66,25.91,2.97,0.78,https://nsearchives.nseindia.com/content/indices/ind_close_all_30032026.csv
+2026-04-01,INDIA VIX,27.8875,27.8875,23.6475,25.01,-2.88,-10.32,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_01042026.csv
+2026-04-01,NIFTY 50,22899,22941.3,22618.6,22679.4,348,1.56,19.93,3.1,1.37,https://nsearchives.nseindia.com/content/indices/ind_close_all_01042026.csv
+2026-04-01,NIFTY BANK,51433.9,52025.85,51133.55,51448.65,1173.3,2.33,13.69,1.75,1.14,https://nsearchives.nseindia.com/content/indices/ind_close_all_01042026.csv
+2026-04-01,NIFTY MIDCAP 100,54075.45,54519.6,53582.95,53819.15,1169.15,2.22,33.27,4.25,0.76,https://nsearchives.nseindia.com/content/indices/ind_close_all_01042026.csv
+2026-04-01,NIFTY SMALLCAP 100,15618.8,15848.55,15532.75,15709.8,506,3.33,26.78,3.07,0.76,https://nsearchives.nseindia.com/content/indices/ind_close_all_01042026.csv
+2026-04-02,INDIA VIX,25.01,26.595,25.01,25.52,0.51,2.04,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_02042026.csv
+2026-04-02,NIFTY 50,22383.4,22782.3,22182.55,22713.1,33.7,0.15,19.96,3.1,1.37,https://nsearchives.nseindia.com/content/indices/ind_close_all_02042026.csv
+2026-04-02,NIFTY BANK,50625.65,51731.95,49954.85,51548.75,100.1,0.19,13.72,1.76,1.14,https://nsearchives.nseindia.com/content/indices/ind_close_all_02042026.csv
+2026-04-02,NIFTY MIDCAP 100,53167.25,53804.25,52032.85,53677.05,-142.1,-0.26,33.18,4.24,0.76,https://nsearchives.nseindia.com/content/indices/ind_close_all_02042026.csv
+2026-04-02,NIFTY SMALLCAP 100,15475.7,15696.05,15183.55,15650.5,-59.3,-0.38,26.67,3.06,0.77,https://nsearchives.nseindia.com/content/indices/ind_close_all_02042026.csv
+2026-04-06,INDIA VIX,25.52,26.56,25.0825,25.47,-0.05,-0.21,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_06042026.csv
+2026-04-06,NIFTY 50,22780.3,22998.35,22542.95,22968.25,255.15,1.12,20.18,3.14,1.35,https://nsearchives.nseindia.com/content/indices/ind_close_all_06042026.csv
+2026-04-06,NIFTY BANK,51747.6,52704.55,51111.1,52609.1,1060.35,2.06,14,1.79,1.12,https://nsearchives.nseindia.com/content/indices/ind_close_all_06042026.csv
+2026-04-06,NIFTY MIDCAP 100,53757.95,54554.45,53068.55,54492.65,815.6,1.52,33.69,4.3,0.75,https://nsearchives.nseindia.com/content/indices/ind_close_all_06042026.csv
+2026-04-06,NIFTY SMALLCAP 100,15675.8,15868.65,15467.25,15853.05,202.55,1.29,27.02,3.1,0.76,https://nsearchives.nseindia.com/content/indices/ind_close_all_06042026.csv
+2026-04-07,INDIA VIX,25.4675,26.255,24.545,24.7,-0.77,-3.03,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_07042026.csv
+2026-04-07,NIFTY 50,22838.7,23153.85,22719.3,23123.65,155.4,0.68,20.32,3.16,1.34,https://nsearchives.nseindia.com/content/indices/ind_close_all_07042026.csv
+2026-04-07,NIFTY BANK,52258.7,52778.2,51868.45,52716.25,107.15,0.2,14.03,1.8,1.12,https://nsearchives.nseindia.com/content/indices/ind_close_all_07042026.csv
+2026-04-07,NIFTY MIDCAP 100,54218.9,54667.85,53656.45,54600.55,107.9,0.2,33.75,4.31,0.75,https://nsearchives.nseindia.com/content/indices/ind_close_all_07042026.csv
+2026-04-07,NIFTY SMALLCAP 100,15790.55,15919.1,15697.45,15843.3,-9.75,-0.06,27,3.09,0.76,https://nsearchives.nseindia.com/content/indices/ind_close_all_07042026.csv
+2026-04-08,INDIA VIX,24.695,24.695,19.305,19.7,-5,-20.24,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_08042026.csv
+2026-04-08,NIFTY 50,23855.15,24025.15,23828.5,23997.35,873.7,3.78,21.09,3.28,1.3,https://nsearchives.nseindia.com/content/indices/ind_close_all_08042026.csv
+2026-04-08,NIFTY BANK,54904.45,55778.25,54797.5,55703.9,2987.65,5.67,14.82,1.9,1.06,https://nsearchives.nseindia.com/content/indices/ind_close_all_08042026.csv
+2026-04-08,NIFTY MIDCAP 100,56441.65,56891.75,56209.8,56799.5,2198.95,4.03,35.11,4.48,0.72,https://nsearchives.nseindia.com/content/indices/ind_close_all_08042026.csv
+2026-04-08,NIFTY SMALLCAP 100,16429.75,16558.35,16281.55,16538.05,694.75,4.39,28.19,3.23,0.73,https://nsearchives.nseindia.com/content/indices/ind_close_all_08042026.csv
+2026-04-09,INDIA VIX,19.6975,20.9425,19.1725,20.43,0.73,3.71,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_09042026.csv
+2026-04-09,NIFTY 50,23909.05,23990.75,23682.8,23775.1,-222.25,-0.93,20.89,3.25,1.31,https://nsearchives.nseindia.com/content/indices/ind_close_all_09042026.csv
+2026-04-09,NIFTY BANK,55505.95,55583.1,54626.85,54821.7,-882.2,-1.58,14.59,1.87,1.07,https://nsearchives.nseindia.com/content/indices/ind_close_all_09042026.csv
+2026-04-09,NIFTY MIDCAP 100,56832.15,57294,56341.15,56978.75,179.25,0.32,35.23,4.5,0.72,https://nsearchives.nseindia.com/content/indices/ind_close_all_09042026.csv
+2026-04-09,NIFTY SMALLCAP 100,16549.05,16685.5,16447.4,16566,27.95,0.17,28.23,3.23,0.72,https://nsearchives.nseindia.com/content/indices/ind_close_all_09042026.csv
+2026-04-10,INDIA VIX,20.4275,20.4275,18.37,18.85,-1.58,-7.72,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_10042026.csv
+2026-04-10,NIFTY 50,23880.55,24074.05,23856.35,24050.6,275.5,1.16,21.13,3.28,1.29,https://nsearchives.nseindia.com/content/indices/ind_close_all_10042026.csv
+2026-04-10,NIFTY BANK,55182.25,55978.5,55145.25,55912.75,1091.05,1.99,14.88,1.91,1.05,https://nsearchives.nseindia.com/content/indices/ind_close_all_10042026.csv
+2026-04-10,NIFTY MIDCAP 100,57315.6,57885.75,57168.2,57843.95,865.2,1.52,35.76,4.57,0.71,https://nsearchives.nseindia.com/content/indices/ind_close_all_10042026.csv
+2026-04-10,NIFTY SMALLCAP 100,16675.4,16876.15,16659,16840.1,274.1,1.65,28.7,3.28,0.71,https://nsearchives.nseindia.com/content/indices/ind_close_all_10042026.csv
+2026-04-13,INDIA VIX,18.85,21.5075,18.1825,20.5,1.65,8.75,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_13042026.csv
+2026-04-13,NIFTY 50,23589.6,23907.4,23555.6,23842.65,-207.95,-0.86,20.93,3.26,1.3,https://nsearchives.nseindia.com/content/indices/ind_close_all_13042026.csv
+2026-04-13,NIFTY BANK,54646,55752.65,54356.2,55605.05,-307.7,-0.55,14.8,1.9,1.06,https://nsearchives.nseindia.com/content/indices/ind_close_all_13042026.csv
+2026-04-13,NIFTY MIDCAP 100,56676.4,57743,56289.5,57513.3,-330.65,-0.57,35.56,4.54,0.71,https://nsearchives.nseindia.com/content/indices/ind_close_all_13042026.csv
+2026-04-13,NIFTY SMALLCAP 100,16523.6,16805.3,16338.9,16762,-78.1,-0.46,28.56,3.27,0.72,https://nsearchives.nseindia.com/content/indices/ind_close_all_13042026.csv
+2026-04-15,INDIA VIX,20.5,20.5,17.3375,18.67,-1.83,-8.94,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_15042026.csv
+2026-04-15,NIFTY 50,24163.8,24280.9,24145.8,24231.3,388.65,1.63,21.27,3.31,1.28,https://nsearchives.nseindia.com/content/indices/ind_close_all_15042026.csv
+2026-04-15,NIFTY BANK,56343.45,56786.25,56109.2,56301.95,696.9,1.25,14.98,1.92,1.05,https://nsearchives.nseindia.com/content/indices/ind_close_all_15042026.csv
+2026-04-15,NIFTY MIDCAP 100,58463.9,58850.25,58378.35,58777.75,1264.45,2.2,36.34,4.64,0.7,https://nsearchives.nseindia.com/content/indices/ind_close_all_15042026.csv
+2026-04-15,NIFTY SMALLCAP 100,17063.6,17188.85,17031.7,17156.4,394.4,2.35,29.23,3.35,0.7,https://nsearchives.nseindia.com/content/indices/ind_close_all_15042026.csv
+2026-04-16,INDIA VIX,18.6675,18.6675,16.8325,18.09,-0.58,-3.12,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_16042026.csv
+2026-04-16,NIFTY 50,24385.2,24400.95,24102.8,24196.75,-34.55,-0.14,21.24,3.3,1.28,https://nsearchives.nseindia.com/content/indices/ind_close_all_16042026.csv
+2026-04-16,NIFTY BANK,56657.25,56834.25,55898.25,56086.4,-215.55,-0.38,14.93,1.91,1.05,https://nsearchives.nseindia.com/content/indices/ind_close_all_16042026.csv
+2026-04-16,NIFTY MIDCAP 100,59252.95,59443.5,58621.95,59146.75,369,0.63,36.57,4.67,0.69,https://nsearchives.nseindia.com/content/indices/ind_close_all_16042026.csv
+2026-04-16,NIFTY SMALLCAP 100,17321.25,17384,17178.4,17308.85,152.45,0.89,29.49,3.38,0.69,https://nsearchives.nseindia.com/content/indices/ind_close_all_16042026.csv
+2026-04-17,INDIA VIX,18.085,18.47,16.5925,17.21,-0.88,-4.87,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_17042026.csv
+2026-04-17,NIFTY 50,24165.9,24371.9,24096.05,24353.55,156.8,0.65,21.38,3.33,1.28,https://nsearchives.nseindia.com/content/indices/ind_close_all_17042026.csv
+2026-04-17,NIFTY BANK,56072.4,56628.7,55841.65,56565.7,479.3,0.85,15.05,1.93,1.04,https://nsearchives.nseindia.com/content/indices/ind_close_all_17042026.csv
+2026-04-17,NIFTY MIDCAP 100,59275.25,59961.65,59057.5,59898.2,751.45,1.27,37.03,4.73,0.69,https://nsearchives.nseindia.com/content/indices/ind_close_all_17042026.csv
+2026-04-17,NIFTY SMALLCAP 100,17364.45,17590.65,17341.35,17565.7,256.85,1.48,29.93,3.43,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_17042026.csv
+2026-04-20,INDIA VIX,17.205,19.01,16.48,18.79,1.59,9.21,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_20042026.csv
+2026-04-20,NIFTY 50,24391.5,24480.65,24241.25,24364.85,11.3,0.05,21.39,3.33,1.28,https://nsearchives.nseindia.com/content/indices/ind_close_all_20042026.csv
+2026-04-20,NIFTY BANK,56704.05,57085.1,56356.55,56582.35,16.65,0.03,15.06,1.93,1.04,https://nsearchives.nseindia.com/content/indices/ind_close_all_20042026.csv
+2026-04-20,NIFTY MIDCAP 100,60034,60261.1,59420.7,59790.75,-107.45,-0.18,36.87,4.72,0.69,https://nsearchives.nseindia.com/content/indices/ind_close_all_20042026.csv
+2026-04-20,NIFTY SMALLCAP 100,17593,17611.9,17358.75,17486.9,-78.8,-0.45,29.79,3.41,0.69,https://nsearchives.nseindia.com/content/indices/ind_close_all_20042026.csv
+2026-04-21,INDIA VIX,18.79,18.79,17.4525,17.53,-1.26,-6.69,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_21042026.csv
+2026-04-21,NIFTY 50,24374.55,24601.7,24354.9,24576.6,211.75,0.87,21.45,3.36,1.26,https://nsearchives.nseindia.com/content/indices/ind_close_all_21042026.csv
+2026-04-21,NIFTY BANK,56823.6,57456.3,56696.3,57371.45,789.1,1.39,15.13,1.96,1.03,https://nsearchives.nseindia.com/content/indices/ind_close_all_21042026.csv
+2026-04-21,NIFTY MIDCAP 100,59933.1,60338,59895.8,60086.7,295.95,0.49,36.97,4.74,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_21042026.csv
+2026-04-21,NIFTY SMALLCAP 100,17547.1,17711.55,17534.05,17641.5,154.6,0.88,29.97,3.44,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_21042026.csv
+2026-04-22,INDIA VIX,17.5325,18.73,17.245,18.3,0.77,4.38,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_22042026.csv
+2026-04-22,NIFTY 50,24470.85,24515.95,24352.9,24378.1,-198.5,-0.81,21.28,3.33,1.27,https://nsearchives.nseindia.com/content/indices/ind_close_all_22042026.csv
+2026-04-22,NIFTY BANK,57163.35,57438.2,57002.15,57124.45,-247,-0.43,15.06,1.95,1.03,https://nsearchives.nseindia.com/content/indices/ind_close_all_22042026.csv
+2026-04-22,NIFTY MIDCAP 100,59989.6,60380.75,59885,60201.6,114.9,0.19,37.03,4.75,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_22042026.csv
+2026-04-22,NIFTY SMALLCAP 100,17644.05,17862.1,17626.75,17840.35,198.85,1.13,30.24,3.48,0.67,https://nsearchives.nseindia.com/content/indices/ind_close_all_22042026.csv
+2026-04-23,INDIA VIX,18.3,19.12,17.49,18.59,0.29,1.58,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_23042026.csv
+2026-04-23,NIFTY 50,24202.35,24310.2,24134.8,24173.05,-205.05,-0.84,21.09,3.3,1.29,https://nsearchives.nseindia.com/content/indices/ind_close_all_23042026.csv
+2026-04-23,NIFTY BANK,56608.95,56868.7,56217.15,56305,-819.45,-1.43,14.85,1.92,1.05,https://nsearchives.nseindia.com/content/indices/ind_close_all_23042026.csv
+2026-04-23,NIFTY MIDCAP 100,60050.1,60300.95,59817.8,59952.8,-248.8,-0.41,36.82,4.73,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_23042026.csv
+2026-04-23,NIFTY SMALLCAP 100,17792.2,17901,17687.9,17720.75,-119.6,-0.67,30.04,3.46,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_23042026.csv
+2026-04-24,INDIA VIX,18.59,19.895,18.0625,19.71,1.12,6.04,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_24042026.csv
+2026-04-24,NIFTY 50,24100.55,24206,23813.65,23897.95,-275.1,-1.14,20.85,3.26,1.32,https://nsearchives.nseindia.com/content/indices/ind_close_all_24042026.csv
+2026-04-24,NIFTY BANK,56170.2,56460.5,55750.4,56089.75,-215.25,-0.38,14.79,1.91,1.05,https://nsearchives.nseindia.com/content/indices/ind_close_all_24042026.csv
+2026-04-24,NIFTY MIDCAP 100,60049.5,60213.65,59070.1,59374.8,-578,-0.96,36.49,4.69,0.69,https://nsearchives.nseindia.com/content/indices/ind_close_all_24042026.csv
+2026-04-24,NIFTY SMALLCAP 100,17766.9,17852.55,17471.05,17567.2,-153.55,-0.87,29.78,3.43,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_24042026.csv
+2026-04-27,INDIA VIX,19.7125,19.7125,18.27,18.38,-1.34,-6.77,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_27042026.csv
+2026-04-27,NIFTY 50,23945.45,24130.7,23936.2,24092.7,194.75,0.81,20.96,3.29,1.31,https://nsearchives.nseindia.com/content/indices/ind_close_all_27042026.csv
+2026-04-27,NIFTY BANK,56162.6,56474.95,55911.1,56264.3,174.55,0.31,14.81,1.92,1.05,https://nsearchives.nseindia.com/content/indices/ind_close_all_27042026.csv
+2026-04-27,NIFTY MIDCAP 100,59686.6,60372.75,59643.7,60248.35,873.55,1.47,37.02,4.75,0.69,https://nsearchives.nseindia.com/content/indices/ind_close_all_27042026.csv
+2026-04-27,NIFTY SMALLCAP 100,17670.1,17918.75,17665.3,17900.65,333.45,1.9,30.32,3.49,0.67,https://nsearchives.nseindia.com/content/indices/ind_close_all_27042026.csv
+2026-04-28,INDIA VIX,18.3775,18.4075,17.2675,18.05,-0.33,-1.8,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_28042026.csv
+2026-04-28,NIFTY 50,24049.9,24181.8,23957.05,23995.7,-97,-0.4,20.87,3.28,1.3,https://nsearchives.nseindia.com/content/indices/ind_close_all_28042026.csv
+2026-04-28,NIFTY BANK,55862.5,56138.05,55263.75,55400.35,-863.95,-1.54,14.09,1.89,1.06,https://nsearchives.nseindia.com/content/indices/ind_close_all_28042026.csv
+2026-04-28,NIFTY MIDCAP 100,60317.9,60611.15,60233.4,60419.4,171.05,0.28,35.82,4.77,0.69,https://nsearchives.nseindia.com/content/indices/ind_close_all_28042026.csv
+2026-04-28,NIFTY SMALLCAP 100,17960.1,18072.65,17935.8,17976.1,75.45,0.42,30.18,3.51,0.67,https://nsearchives.nseindia.com/content/indices/ind_close_all_28042026.csv
+2026-04-29,INDIA VIX,18.0475,18.0475,16.75,17.44,-0.61,-3.38,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_29042026.csv
+2026-04-29,NIFTY 50,24096.9,24334.7,24059.95,24177.65,181.95,0.76,21.02,3.3,1.29,https://nsearchives.nseindia.com/content/indices/ind_close_all_29042026.csv
+2026-04-29,NIFTY BANK,55634.5,56178.75,55290.5,55403.6,3.25,0.01,14.08,1.89,1.06,https://nsearchives.nseindia.com/content/indices/ind_close_all_29042026.csv
+2026-04-29,NIFTY MIDCAP 100,60766.45,60965.7,60274.6,60376.9,-42.5,-0.07,35.8,4.77,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_29042026.csv
+2026-04-29,NIFTY SMALLCAP 100,18098.9,18196.75,18064.65,18093.15,117.05,0.65,30.38,3.53,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_29042026.csv
+2026-04-30,INDIA VIX,17.4375,19.48,17.185,18.46,1.02,5.86,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_30042026.csv
+2026-04-30,NIFTY 50,23996.95,24087.45,23796.85,23997.55,-180.1,-0.74,20.94,3.29,1.3,https://nsearchives.nseindia.com/content/indices/ind_close_all_30042026.csv
+2026-04-30,NIFTY BANK,54880.65,55111.6,54440.25,54863.35,-540.25,-0.98,13.95,1.87,1.07,https://nsearchives.nseindia.com/content/indices/ind_close_all_30042026.csv
+2026-04-30,NIFTY MIDCAP 100,60148.9,60156.45,59323,59784.85,-592.05,-0.98,35.44,4.72,0.69,https://nsearchives.nseindia.com/content/indices/ind_close_all_30042026.csv
+2026-04-30,NIFTY SMALLCAP 100,18073.5,18097.75,17816.5,18007.15,-86,-0.48,30.36,3.52,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_30042026.csv
+2026-05-04,INDIA VIX,18.46,18.875,16.7475,18.3,-0.16,-0.87,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_04052026.csv
+2026-05-04,NIFTY 50,24063.55,24290.2,24004.75,24119.3,121.75,0.51,21.03,3.3,1.29,https://nsearchives.nseindia.com/content/indices/ind_close_all_04052026.csv
+2026-05-04,NIFTY BANK,54937.9,55602.3,54723.5,54878.5,15.15,0.03,13.88,1.87,1.07,https://nsearchives.nseindia.com/content/indices/ind_close_all_04052026.csv
+2026-05-04,NIFTY MIDCAP 100,60235.5,60563.95,59787.6,60159.75,374.9,0.63,35.51,4.75,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_04052026.csv
+2026-05-04,NIFTY SMALLCAP 100,18147.6,18232.6,17996.65,18132.5,125.35,0.7,30.3,3.54,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_04052026.csv
+2026-05-05,INDIA VIX,18.3,18.8425,17.7125,17.91,-0.39,-2.14,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_05052026.csv
+2026-05-05,NIFTY 50,24052.6,24081.7,23882.05,24032.8,-86.5,-0.36,20.95,3.29,1.3,https://nsearchives.nseindia.com/content/indices/ind_close_all_05052026.csv
+2026-05-05,NIFTY BANK,54691.3,54888.55,54221.65,54547.05,-331.45,-0.6,13.79,1.86,1.08,https://nsearchives.nseindia.com/content/indices/ind_close_all_05052026.csv
+2026-05-05,NIFTY MIDCAP 100,60165.75,60347.9,59878.35,60264.5,104.75,0.17,35.57,4.76,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_05052026.csv
+2026-05-05,NIFTY SMALLCAP 100,18162.45,18207.1,18080.7,18182.4,49.9,0.28,30.38,3.55,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_05052026.csv
+2026-05-06,INDIA VIX,17.9075,18.0775,16.5775,16.68,-1.23,-6.87,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_06052026.csv
+2026-05-06,NIFTY 50,24171,24356.5,23997.9,24330.95,298.15,1.24,21.21,3.33,1.28,https://nsearchives.nseindia.com/content/indices/ind_close_all_06052026.csv
+2026-05-06,NIFTY BANK,55113.4,56078.8,54587.2,55981.05,1434,2.63,14.16,1.91,1.05,https://nsearchives.nseindia.com/content/indices/ind_close_all_06052026.csv
+2026-05-06,NIFTY MIDCAP 100,60925.95,61389.15,60759.7,61326.7,1062.2,1.76,35.97,4.84,0.67,https://nsearchives.nseindia.com/content/indices/ind_close_all_06052026.csv
+2026-05-06,NIFTY SMALLCAP 100,18365.9,18565.15,18305.15,18534.1,351.7,1.93,31.6,3.62,0.64,https://nsearchives.nseindia.com/content/indices/ind_close_all_06052026.csv
+2026-05-07,INDIA VIX,16.6775,17.195,15.1675,16.62,-0.06,-0.34,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_07052026.csv
+2026-05-07,NIFTY 50,24398.5,24482.1,24284,24326.65,-4.3,-0.02,21.16,3.33,1.28,https://nsearchives.nseindia.com/content/indices/ind_close_all_07052026.csv
+2026-05-07,NIFTY BANK,56114,56334.15,55783.2,56047.4,66.35,0.12,14.14,1.91,1.05,https://nsearchives.nseindia.com/content/indices/ind_close_all_07052026.csv
+2026-05-07,NIFTY MIDCAP 100,61658.9,62094.4,61441.15,62003.15,676.45,1.1,36.11,4.89,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_07052026.csv
+2026-05-07,NIFTY SMALLCAP 100,18635.1,18728.2,18567.55,18695.65,161.55,0.87,31.74,3.65,0.64,https://nsearchives.nseindia.com/content/indices/ind_close_all_07052026.csv
+2026-05-08,INDIA VIX,16.62,17.425,16.1625,16.84,0.22,1.32,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_08052026.csv
+2026-05-08,NIFTY 50,24233.65,24253.8,24126.65,24176.15,-150.5,-0.62,21,3.31,1.29,https://nsearchives.nseindia.com/content/indices/ind_close_all_08052026.csv
+2026-05-08,NIFTY BANK,55783.95,55797.7,55062.5,55310.55,-736.85,-1.31,13.96,1.89,1.06,https://nsearchives.nseindia.com/content/indices/ind_close_all_08052026.csv
+2026-05-08,NIFTY MIDCAP 100,62039.15,62113.85,61766.35,61910.9,-92.25,-0.15,35.83,4.88,0.65,https://nsearchives.nseindia.com/content/indices/ind_close_all_08052026.csv
+2026-05-08,NIFTY SMALLCAP 100,18714.4,18795.8,18669.1,18737,41.35,0.22,31.73,3.66,0.64,https://nsearchives.nseindia.com/content/indices/ind_close_all_08052026.csv
+2026-05-11,INDIA VIX,16.84,18.9675,16.84,18.55,1.71,10.17,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_11052026.csv
+2026-05-11,NIFTY 50,23970.1,23997.45,23799.1,23815.85,-360.3,-1.49,20.68,3.26,1.3,https://nsearchives.nseindia.com/content/indices/ind_close_all_11052026.csv
+2026-05-11,NIFTY BANK,54832.45,55002.45,54360.7,54439.9,-870.65,-1.57,13.71,1.86,1.08,https://nsearchives.nseindia.com/content/indices/ind_close_all_11052026.csv
+2026-05-11,NIFTY MIDCAP 100,61630.3,61686.5,61035.05,61258.4,-652.5,-1.05,35.11,4.83,0.65,https://nsearchives.nseindia.com/content/indices/ind_close_all_11052026.csv
+2026-05-11,NIFTY SMALLCAP 100,18648.6,18663.4,18450.75,18525.8,-211.2,-1.13,31,3.62,0.64,https://nsearchives.nseindia.com/content/indices/ind_close_all_11052026.csv
+2026-05-12,INDIA VIX,18.5525,19.46,17.63,19.28,0.73,3.92,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_12052026.csv
+2026-05-12,NIFTY 50,23722.6,23757.55,23348.4,23379.55,-436.3,-1.83,20.3,3.2,1.33,https://nsearchives.nseindia.com/content/indices/ind_close_all_12052026.csv
+2026-05-12,NIFTY BANK,54178.4,54365.45,53457.5,53555.2,-884.7,-1.63,13.52,1.83,1.1,https://nsearchives.nseindia.com/content/indices/ind_close_all_12052026.csv
+2026-05-12,NIFTY MIDCAP 100,61171.45,61325.35,59625.65,59704.65,-1553.75,-2.54,34.15,4.71,0.67,https://nsearchives.nseindia.com/content/indices/ind_close_all_12052026.csv
+2026-05-12,NIFTY SMALLCAP 100,18512.5,18550.15,17913.45,17939,-586.8,-3.17,30.01,3.51,0.67,https://nsearchives.nseindia.com/content/indices/ind_close_all_12052026.csv
+2026-05-13,INDIA VIX,19.28,20.125,18.3575,19.43,0.15,0.75,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_13052026.csv
+2026-05-13,NIFTY 50,23362.45,23582.95,23262.55,23412.6,33.05,0.14,20.33,3.21,1.33,https://nsearchives.nseindia.com/content/indices/ind_close_all_13052026.csv
+2026-05-13,NIFTY BANK,53600.4,54103.9,53194.25,53456.15,-99.05,-0.18,13.49,1.82,1.1,https://nsearchives.nseindia.com/content/indices/ind_close_all_13052026.csv
+2026-05-13,NIFTY MIDCAP 100,59761.4,60607.65,59560.65,60164.65,460,0.77,34.42,4.74,0.67,https://nsearchives.nseindia.com/content/indices/ind_close_all_13052026.csv
+2026-05-13,NIFTY SMALLCAP 100,17977.95,18129.95,17908.35,17994.05,55.05,0.31,30.1,3.52,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_13052026.csv
+2026-05-14,INDIA VIX,19.425,19.425,18.3875,18.61,-0.81,-4.18,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_14052026.csv
+2026-05-14,NIFTY 50,23530.25,23777.2,23426.55,23689.6,277,1.18,20.61,3.24,1.31,https://nsearchives.nseindia.com/content/indices/ind_close_all_14052026.csv
+2026-05-14,NIFTY BANK,53639.5,54393.75,53191.6,54128.95,672.8,1.26,13.66,1.85,1.09,https://nsearchives.nseindia.com/content/indices/ind_close_all_14052026.csv
+2026-05-14,NIFTY MIDCAP 100,60501.05,60940,59903,60839.7,675.05,1.12,34.85,4.79,0.65,https://nsearchives.nseindia.com/content/indices/ind_close_all_14052026.csv
+2026-05-14,NIFTY SMALLCAP 100,18104.45,18145.9,17782.75,17991.55,-2.5,-0.01,30,3.52,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_14052026.csv
+2026-05-15,INDIA VIX,18.6125,19.0125,17.4225,18.79,0.18,0.95,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_15052026.csv
+2026-05-15,NIFTY 50,23731.4,23839.3,23610.3,23643.5,-46.1,-0.19,20.59,3.24,1.38,https://nsearchives.nseindia.com/content/indices/ind_close_all_15052026.csv
+2026-05-15,NIFTY BANK,54207.75,54325.45,53628.3,53710.35,-418.6,-0.77,13.56,1.83,1.26,https://nsearchives.nseindia.com/content/indices/ind_close_all_15052026.csv
+2026-05-15,NIFTY MIDCAP 100,61033.85,61047.15,60473.05,60567.15,-272.55,-0.45,34.17,4.78,0.65,https://nsearchives.nseindia.com/content/indices/ind_close_all_15052026.csv
+2026-05-15,NIFTY SMALLCAP 100,18035.25,18045.6,17837.5,17882.6,-108.95,-0.61,30.38,3.5,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_15052026.csv
+2026-05-18,INDIA VIX,18.79,20.0575,17.72,19.63,0.84,4.47,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_18052026.csv
+2026-05-18,NIFTY 50,23482.2,23695.65,23317.1,23649.95,6.45,0.03,20.45,3.24,1.32,https://nsearchives.nseindia.com/content/indices/ind_close_all_18052026.csv
+2026-05-18,NIFTY BANK,53282.15,53667.55,52783.45,53537,-173.35,-0.32,13.52,1.83,1.12,https://nsearchives.nseindia.com/content/indices/ind_close_all_18052026.csv
+2026-05-18,NIFTY MIDCAP 100,60183.9,60545.15,59457.65,60473.8,-93.35,-0.15,33.97,4.77,0.65,https://nsearchives.nseindia.com/content/indices/ind_close_all_18052026.csv
+2026-05-18,NIFTY SMALLCAP 100,17777.7,17777.9,17420.8,17656.75,-225.85,-1.26,30.14,3.44,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_18052026.csv
+2026-05-19,INDIA VIX,19.63,19.63,18.2675,18.68,-0.96,-4.87,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_19052026.csv
+2026-05-19,NIFTY 50,23675.3,23782.3,23587.2,23618,-31.95,-0.14,20.37,3.23,1.32,https://nsearchives.nseindia.com/content/indices/ind_close_all_19052026.csv
+2026-05-19,NIFTY BANK,53553.75,53770.65,53337.05,53409.15,-127.85,-0.24,13.48,1.82,1.12,https://nsearchives.nseindia.com/content/indices/ind_close_all_19052026.csv
+2026-05-19,NIFTY MIDCAP 100,60643.5,61409.35,60640.95,61022,548.2,0.91,29.52,4.81,0.65,https://nsearchives.nseindia.com/content/indices/ind_close_all_19052026.csv
+2026-05-19,NIFTY SMALLCAP 100,17703.6,17921,17699,17863.55,206.8,1.17,29.89,3.48,0.67,https://nsearchives.nseindia.com/content/indices/ind_close_all_19052026.csv
+2026-05-20,INDIA VIX,18.675,19.455,18.0575,18.44,-0.24,-1.26,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_20052026.csv
+2026-05-20,NIFTY 50,23457.25,23690.9,23397.3,23659,41,0.17,20.41,3.24,1.32,https://nsearchives.nseindia.com/content/indices/ind_close_all_20052026.csv
+2026-05-20,NIFTY BANK,53015.7,53640.9,52836.1,53562.2,153.05,0.29,13.52,1.83,1.12,https://nsearchives.nseindia.com/content/indices/ind_close_all_20052026.csv
+2026-05-20,NIFTY MIDCAP 100,60643.1,61401.6,60478.4,61323.3,301.3,0.49,29.64,4.84,0.65,https://nsearchives.nseindia.com/content/indices/ind_close_all_20052026.csv
+2026-05-20,NIFTY SMALLCAP 100,17771.8,17890.9,17654.15,17870.9,7.35,0.04,29.99,3.48,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_20052026.csv
+2026-05-21,INDIA VIX,18.44,18.44,17.425,17.82,-0.62,-3.35,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_21052026.csv
+2026-05-21,NIFTY 50,23830.05,23859.9,23596.6,23654.7,-4.3,-0.02,20.4,3.24,1.32,https://nsearchives.nseindia.com/content/indices/ind_close_all_21052026.csv
+2026-05-21,NIFTY BANK,53963.1,54109.15,53156.15,53439.4,-122.8,-0.23,13.49,1.82,1.12,https://nsearchives.nseindia.com/content/indices/ind_close_all_21052026.csv
+2026-05-21,NIFTY MIDCAP 100,61772.6,61894.55,61180.4,61300.6,-22.7,-0.04,29.63,4.83,0.64,https://nsearchives.nseindia.com/content/indices/ind_close_all_21052026.csv
+2026-05-21,NIFTY SMALLCAP 100,17998.05,18056.25,17926.55,17983.05,112.15,0.63,30.17,3.5,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_21052026.csv
+2026-05-22,INDIA VIX,17.8225,19.025,16.465,17.91,0.09,0.49,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_22052026.csv
+2026-05-22,NIFTY 50,23671.2,23835.65,23671,23719.3,64.6,0.27,20.44,3.25,1.36,https://nsearchives.nseindia.com/content/indices/ind_close_all_22052026.csv
+2026-05-22,NIFTY BANK,53483.85,54213.05,53483.55,54055.35,615.95,1.15,13.65,1.84,1.11,https://nsearchives.nseindia.com/content/indices/ind_close_all_22052026.csv
+2026-05-22,NIFTY MIDCAP 100,61490.25,61501.8,61094.6,61389.3,88.7,0.14,29.67,4.84,0.63,https://nsearchives.nseindia.com/content/indices/ind_close_all_22052026.csv
+2026-05-22,NIFTY SMALLCAP 100,18020.55,18037.45,17933,17956.2,-26.85,-0.15,29.98,3.49,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_22052026.csv
+2026-05-25,INDIA VIX,17.91,17.91,16.3925,16.7,-1.21,-6.74,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_25052026.csv
+2026-05-25,NIFTY 50,23940.25,24054.45,23922.85,24031.7,312.4,1.32,20.71,3.28,1.38,https://nsearchives.nseindia.com/content/indices/ind_close_all_25052026.csv
+2026-05-25,NIFTY BANK,54610.55,55405.2,54590.7,55293.65,1238.3,2.29,13.96,1.89,1.08,https://nsearchives.nseindia.com/content/indices/ind_close_all_25052026.csv
+2026-05-25,NIFTY MIDCAP 100,61952.45,62034.7,61777,61966.6,577.3,0.94,29.94,4.88,0.62,https://nsearchives.nseindia.com/content/indices/ind_close_all_25052026.csv
+2026-05-25,NIFTY SMALLCAP 100,18130.2,18216.85,18118.55,18202.7,246.5,1.37,30.33,3.54,0.67,https://nsearchives.nseindia.com/content/indices/ind_close_all_25052026.csv
+2026-05-26,INDIA VIX,16.7025,16.96,15.3625,16.13,-0.57,-3.41,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_26052026.csv
+2026-05-26,NIFTY 50,24004.1,24089.8,23885.45,23913.7,-118,-0.49,20.6,3.26,1.38,https://nsearchives.nseindia.com/content/indices/ind_close_all_26052026.csv
+2026-05-26,NIFTY BANK,55311.8,55536.8,54979.75,55092.9,-200.75,-0.36,13.91,1.88,1.09,https://nsearchives.nseindia.com/content/indices/ind_close_all_26052026.csv
+2026-05-26,NIFTY MIDCAP 100,62037.25,62365.25,61875.85,62298.9,332.3,0.54,30.03,4.91,0.62,https://nsearchives.nseindia.com/content/indices/ind_close_all_26052026.csv
+2026-05-26,NIFTY SMALLCAP 100,18227.2,18393.1,18217.15,18267.2,64.5,0.35,30.89,3.55,0.67,https://nsearchives.nseindia.com/content/indices/ind_close_all_26052026.csv
+2026-05-27,INDIA VIX,16.1325,16.3275,14.6975,14.98,-1.15,-7.13,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_27052026.csv
+2026-05-27,NIFTY 50,23880.35,23983.2,23858.25,23907.15,-6.55,-0.03,20.58,3.26,1.38,https://nsearchives.nseindia.com/content/indices/ind_close_all_27052026.csv
+2026-05-27,NIFTY BANK,54992.95,55221.7,54738.6,54853.85,-239.05,-0.43,13.85,1.87,1.09,https://nsearchives.nseindia.com/content/indices/ind_close_all_27052026.csv
+2026-05-27,NIFTY MIDCAP 100,62392.95,62704.1,62357.8,62558.85,259.95,0.42,30.16,4.89,0.61,https://nsearchives.nseindia.com/content/indices/ind_close_all_27052026.csv
+2026-05-27,NIFTY SMALLCAP 100,18305,18390.05,18249.7,18294.3,27.1,0.15,30.8,3.55,0.67,https://nsearchives.nseindia.com/content/indices/ind_close_all_27052026.csv
+2026-05-29,INDIA VIX,14.9825,16.5525,14.5925,16.19,1.2,8.03,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_29052026.csv
+2026-05-29,NIFTY 50,23902.15,24002.8,23484.75,23547.75,-359.4,-1.5,20.27,3.21,1.35,https://nsearchives.nseindia.com/content/indices/ind_close_all_29052026.csv
+2026-05-29,NIFTY BANK,54748.3,55184.45,54116.15,54239.2,-614.65,-1.12,13.69,1.85,1.1,https://nsearchives.nseindia.com/content/indices/ind_close_all_29052026.csv
+2026-05-29,NIFTY MIDCAP 100,62861.2,62907.5,61581.8,61723.8,-835.05,-1.33,29.76,4.83,0.62,https://nsearchives.nseindia.com/content/indices/ind_close_all_29052026.csv
+2026-05-29,NIFTY SMALLCAP 100,18366.85,18415.5,18093.8,18138.8,-155.5,-0.85,30.54,3.52,0.67,https://nsearchives.nseindia.com/content/indices/ind_close_all_29052026.csv
+2026-06-01,INDIA VIX,16.185,16.9175,13.9125,16.54,0.36,2.21,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_01062026.csv
+2026-06-01,NIFTY 50,23654.5,23733.7,23357.95,23382.6,-165.15,-0.7,20.07,3.14,1.27,https://nsearchives.nseindia.com/content/indices/ind_close_all_01062026.csv
+2026-06-01,NIFTY BANK,54403.85,54582.75,53470,53643.1,-596.1,-1.1,13.54,1.8,1.12,https://nsearchives.nseindia.com/content/indices/ind_close_all_01062026.csv
+2026-06-01,NIFTY MIDCAP 100,61978.2,62062,60735.85,60827.95,-895.85,-1.45,29.29,4.76,0.64,https://nsearchives.nseindia.com/content/indices/ind_close_all_01062026.csv
+2026-06-01,NIFTY SMALLCAP 100,18238.95,18295.65,17949.7,17979.8,-159,-0.88,30.3,3.49,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_01062026.csv
+2026-06-02,INDIA VIX,16.5425,16.5425,15.115,15.36,-1.19,-7.18,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_02062026.csv
+2026-06-02,NIFTY 50,23229.15,23556.95,23229.15,23483.55,100.95,0.43,20.27,3.16,1.26,https://nsearchives.nseindia.com/content/indices/ind_close_all_02062026.csv
+2026-06-02,NIFTY BANK,53265.1,53933.55,53121.85,53714.65,71.55,0.13,13.56,1.77,1.12,https://nsearchives.nseindia.com/content/indices/ind_close_all_02062026.csv
+2026-06-02,NIFTY MIDCAP 100,60479.35,61018.55,60170.35,60942,114.05,0.19,29.24,4.77,0.63,https://nsearchives.nseindia.com/content/indices/ind_close_all_02062026.csv
+2026-06-02,NIFTY SMALLCAP 100,17897.6,18073.8,17787.9,18052.3,72.5,0.4,30.54,3.51,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_02062026.csv
+2026-06-03,INDIA VIX,15.355,16.98,14.85,16.28,0.92,6.01,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_03062026.csv
+2026-06-03,NIFTY 50,23415.95,23459.65,23151.5,23405.6,-77.95,-0.33,20.2,3.14,1.23,https://nsearchives.nseindia.com/content/indices/ind_close_all_03062026.csv
+2026-06-03,NIFTY BANK,53541.1,54299.35,53027.15,54185.95,471.3,0.88,13.68,1.79,1.11,https://nsearchives.nseindia.com/content/indices/ind_close_all_03062026.csv
+2026-06-03,NIFTY MIDCAP 100,60929.1,60964.8,59938.8,60687.2,-254.8,-0.42,29.12,4.75,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_03062026.csv
+2026-06-03,NIFTY SMALLCAP 100,18078.65,18094.5,17781.35,18032.05,-20.25,-0.11,30.51,3.5,0.65,https://nsearchives.nseindia.com/content/indices/ind_close_all_03062026.csv
+2026-06-04,INDIA VIX,16.2775,16.405,15.53,15.89,-0.39,-2.41,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_04062026.csv
+2026-06-04,NIFTY 50,23282.45,23465.3,23247.3,23416.55,10.95,0.05,20.21,3.11,1.19,https://nsearchives.nseindia.com/content/indices/ind_close_all_04062026.csv
+2026-06-04,NIFTY BANK,53918.85,54461,53829.4,54307.85,121.9,0.22,13.71,1.79,1.1,https://nsearchives.nseindia.com/content/indices/ind_close_all_04062026.csv
+2026-06-04,NIFTY MIDCAP 100,60568.7,61273.95,60379.6,60966.65,279.45,0.46,29.25,4.77,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_04062026.csv
+2026-06-04,NIFTY SMALLCAP 100,17984.3,18176.55,17960.9,18121.05,89,0.49,30.66,3.52,0.65,https://nsearchives.nseindia.com/content/indices/ind_close_all_04062026.csv
+2026-06-05,INDIA VIX,15.885,16.37,13.46,15.79,-0.1,-0.61,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_05062026.csv
+2026-06-05,NIFTY 50,23478.95,23516.35,23282.65,23366.7,-49.85,-0.21,20.17,3.09,1.24,https://nsearchives.nseindia.com/content/indices/ind_close_all_05062026.csv
+2026-06-05,NIFTY BANK,54405.2,54865.5,54140.6,54496.25,188.4,0.35,13.74,1.77,1.1,https://nsearchives.nseindia.com/content/indices/ind_close_all_05062026.csv
+2026-06-05,NIFTY MIDCAP 100,61179,61359.15,60508.15,60754.9,-211.75,-0.35,29.15,4.75,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_05062026.csv
+2026-06-05,NIFTY SMALLCAP 100,18176.1,18229,18024.25,18110.3,-10.75,-0.06,30.64,3.52,0.65,https://nsearchives.nseindia.com/content/indices/ind_close_all_05062026.csv
+2026-06-08,INDIA VIX,15.7875,18.44,15.7875,17.03,1.24,7.85,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_08062026.csv
+2026-06-08,NIFTY 50,23080.7,23267.3,23070.15,23123,-243.7,-1.04,19.96,3.05,1.22,https://nsearchives.nseindia.com/content/indices/ind_close_all_08062026.csv
+2026-06-08,NIFTY BANK,53853.45,54455.2,53843.3,54063.75,-432.5,-0.79,13.63,1.76,0.97,https://nsearchives.nseindia.com/content/indices/ind_close_all_08062026.csv
+2026-06-08,NIFTY MIDCAP 100,59976.2,60569.85,59648.85,59905.65,-849.25,-1.4,28.75,4.68,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_08062026.csv
+2026-06-08,NIFTY SMALLCAP 100,17899,18020.65,17700.95,17763.45,-346.85,-1.92,30.06,3.45,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_08062026.csv
+2026-06-09,INDIA VIX,17.0275,17.0275,15.5225,15.58,-1.45,-8.53,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_09062026.csv
+2026-06-09,NIFTY 50,23259.05,23279.4,23104.45,23242.1,119.1,0.52,20.06,3.07,1.22,https://nsearchives.nseindia.com/content/indices/ind_close_all_09062026.csv
+2026-06-09,NIFTY BANK,54265,55318.35,54242.3,55194.5,1130.75,2.09,13.91,1.8,0.95,https://nsearchives.nseindia.com/content/indices/ind_close_all_09062026.csv
+2026-06-09,NIFTY MIDCAP 100,60265.1,60796.6,60221.6,60715.45,809.8,1.35,29.13,4.74,0.65,https://nsearchives.nseindia.com/content/indices/ind_close_all_09062026.csv
+2026-06-09,NIFTY SMALLCAP 100,17847.6,18088,17847.3,18063.6,300.15,1.69,30.56,3.51,0.65,https://nsearchives.nseindia.com/content/indices/ind_close_all_09062026.csv
+2026-06-10,INDIA VIX,15.575,15.845,14.9025,15.63,0.06,0.37,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_10062026.csv
+2026-06-10,NIFTY 50,23233.95,23425.35,23184.6,23214.95,-27.15,-0.12,20.02,3.07,1.21,https://nsearchives.nseindia.com/content/indices/ind_close_all_10062026.csv
+2026-06-10,NIFTY BANK,55110.5,55555.85,55026.15,55100.3,-94.2,-0.17,13.89,1.79,0.95,https://nsearchives.nseindia.com/content/indices/ind_close_all_10062026.csv
+2026-06-10,NIFTY MIDCAP 100,60783.85,60813.45,59680.35,59810.2,-905.25,-1.49,28.69,4.67,0.65,https://nsearchives.nseindia.com/content/indices/ind_close_all_10062026.csv
+2026-06-10,NIFTY SMALLCAP 100,18107.15,18136.05,17790.4,17822.5,-241.1,-1.33,30.16,3.46,0.67,https://nsearchives.nseindia.com/content/indices/ind_close_all_10062026.csv
+2026-06-11,INDIA VIX,15.6325,15.945,15.1225,15.61,-0.02,-0.13,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_11062026.csv
+2026-06-11,NIFTY 50,23104.4,23327.45,23072.05,23161.6,-53.35,-0.23,19.98,3.05,1.21,https://nsearchives.nseindia.com/content/indices/ind_close_all_11062026.csv
+2026-06-11,NIFTY BANK,54779.65,55600.15,54753.15,55176.75,76.45,0.14,13.91,1.8,0.95,https://nsearchives.nseindia.com/content/indices/ind_close_all_11062026.csv
+2026-06-11,NIFTY MIDCAP 100,59546.25,59763.65,59217.15,59325.4,-484.8,-0.81,28.46,4.63,0.65,https://nsearchives.nseindia.com/content/indices/ind_close_all_11062026.csv
+2026-06-11,NIFTY SMALLCAP 100,17735.1,17864.25,17631.55,17702.6,-119.9,-0.67,29.95,3.44,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_11062026.csv
+2026-06-12,INDIA VIX,15.6125,15.6125,14.395,14.72,-0.9,-5.73,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_12062026.csv
+2026-06-12,NIFTY 50,23412.55,23645.35,23313.9,23622.9,461.3,1.99,20.37,3.11,1.23,https://nsearchives.nseindia.com/content/indices/ind_close_all_12062026.csv
+2026-06-12,NIFTY BANK,55934.1,56867.1,55726.55,56814.8,1638.05,2.97,14.29,1.85,0.92,https://nsearchives.nseindia.com/content/indices/ind_close_all_12062026.csv
+2026-06-12,NIFTY MIDCAP 100,60115.85,60829.15,59833.8,60768.1,1442.7,2.43,29.15,4.74,0.64,https://nsearchives.nseindia.com/content/indices/ind_close_all_12062026.csv
+2026-06-12,NIFTY SMALLCAP 100,17946.9,18212.55,17900.8,18197.45,494.85,2.8,30.79,3.54,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_12062026.csv
+2026-06-15,INDIA VIX,14.7175,14.7175,13.5575,14.35,-0.37,-2.48,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_15062026.csv
+2026-06-15,NIFTY 50,23984.85,24011.4,23817.8,23853.9,231,0.98,20.57,3.14,1.21,https://nsearchives.nseindia.com/content/indices/ind_close_all_15062026.csv
+2026-06-15,NIFTY BANK,57679.65,57804.5,57119.2,57198.8,384,0.68,14.39,1.86,0.8,https://nsearchives.nseindia.com/content/indices/ind_close_all_15062026.csv
+2026-06-15,NIFTY MIDCAP 100,61734.05,61886.45,61446.75,61549.65,781.55,1.29,29.53,4.8,0.63,https://nsearchives.nseindia.com/content/indices/ind_close_all_15062026.csv
+2026-06-15,NIFTY SMALLCAP 100,18485.7,18532.7,18368.45,18400,202.55,1.11,31.13,3.58,0.65,https://nsearchives.nseindia.com/content/indices/ind_close_all_15062026.csv
+2026-06-16,INDIA VIX,14.3525,14.3525,13.01,13.36,-0.99,-6.9,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_16062026.csv
+2026-06-16,NIFTY 50,23923.9,24002.6,23888.2,23989.15,135.25,0.57,20.69,3.16,1.2,https://nsearchives.nseindia.com/content/indices/ind_close_all_16062026.csv
+2026-06-16,NIFTY BANK,57320.1,57399.7,57076.25,57297.15,98.35,0.17,14.41,1.86,0.8,https://nsearchives.nseindia.com/content/indices/ind_close_all_16062026.csv
+2026-06-16,NIFTY MIDCAP 100,61783,61838,61408.15,61802.05,252.4,0.41,29.65,4.82,0.63,https://nsearchives.nseindia.com/content/indices/ind_close_all_16062026.csv
+2026-06-16,NIFTY SMALLCAP 100,18468.7,18520.2,18384.85,18477.75,77.75,0.42,31.27,3.6,0.63,https://nsearchives.nseindia.com/content/indices/ind_close_all_16062026.csv
+2026-06-17,INDIA VIX,13.3625,13.5325,12.35,13.19,-0.18,-1.31,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_17062026.csv
+2026-06-17,NIFTY 50,24044.5,24108.2,23969.7,24085.7,96.55,0.4,20.77,3.17,1.2,https://nsearchives.nseindia.com/content/indices/ind_close_all_17062026.csv
+2026-06-17,NIFTY BANK,57434.05,57646.15,57222.4,57585.05,287.9,0.5,14.48,1.87,0.8,https://nsearchives.nseindia.com/content/indices/ind_close_all_17062026.csv
+2026-06-17,NIFTY MIDCAP 100,61960.75,62152.15,61811.7,62123.35,321.3,0.52,29.8,4.84,0.62,https://nsearchives.nseindia.com/content/indices/ind_close_all_17062026.csv
+2026-06-17,NIFTY SMALLCAP 100,18543.95,18644.3,18525.2,18623.2,145.45,0.79,31.51,3.62,0.62,https://nsearchives.nseindia.com/content/indices/ind_close_all_17062026.csv
+2026-06-18,INDIA VIX,13.1875,13.225,11.9925,12.67,-0.52,-3.91,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_18062026.csv
+2026-06-18,NIFTY 50,24073.8,24189.25,24036.95,24168,82.3,0.34,20.85,3.18,1.19,https://nsearchives.nseindia.com/content/indices/ind_close_all_18062026.csv
+2026-06-18,NIFTY BANK,57596.45,58021.25,57583.2,57963.8,378.75,0.66,14.58,1.88,0.79,https://nsearchives.nseindia.com/content/indices/ind_close_all_18062026.csv
+2026-06-18,NIFTY MIDCAP 100,62266.4,62421.95,62100,62379.25,255.9,0.41,29.93,4.86,0.62,https://nsearchives.nseindia.com/content/indices/ind_close_all_18062026.csv
+2026-06-18,NIFTY SMALLCAP 100,18676.3,18764.35,18633.25,18705.6,82.4,0.44,31.65,3.63,0.64,https://nsearchives.nseindia.com/content/indices/ind_close_all_18062026.csv
+2026-06-19,INDIA VIX,12.6725,13.6425,12.07,12.97,0.3,2.35,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_19062026.csv
+2026-06-19,NIFTY 50,23991.2,24047.2,23901.9,24013.1,-154.9,-0.64,20.71,3.16,1.39,https://nsearchives.nseindia.com/content/indices/ind_close_all_19062026.csv
+2026-06-19,NIFTY BANK,57754.95,57804.9,57464.55,57685.75,-278.05,-0.48,14.51,1.87,1.09,https://nsearchives.nseindia.com/content/indices/ind_close_all_19062026.csv
+2026-06-19,NIFTY MIDCAP 100,62092.2,62583.45,61947.25,62517.3,138.05,0.22,29.99,4.87,0.62,https://nsearchives.nseindia.com/content/indices/ind_close_all_19062026.csv
+2026-06-19,NIFTY SMALLCAP 100,18676.6,18826.65,18638.3,18784.45,78.85,0.42,31.78,3.65,0.63,https://nsearchives.nseindia.com/content/indices/ind_close_all_19062026.csv
+2026-06-22,INDIA VIX,12.97,13.51,12.6475,12.84,-0.13,-0.98,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_22062026.csv
+2026-06-22,NIFTY 50,24106.6,24168.05,24073.15,24102.9,89.8,0.37,20.79,3.18,1.36,https://nsearchives.nseindia.com/content/indices/ind_close_all_22062026.csv
+2026-06-22,NIFTY BANK,57906.9,58009.1,57720.1,57935.6,249.85,0.43,14.57,1.88,1,https://nsearchives.nseindia.com/content/indices/ind_close_all_22062026.csv
+2026-06-22,NIFTY MIDCAP 100,62784.7,62875.6,62569.1,62729.1,211.8,0.34,30.09,4.88,0.6,https://nsearchives.nseindia.com/content/indices/ind_close_all_22062026.csv
+2026-06-22,NIFTY SMALLCAP 100,18878.85,18924.5,18824.1,18897,112.55,0.6,31.97,3.67,0.63,https://nsearchives.nseindia.com/content/indices/ind_close_all_22062026.csv
+2026-06-23,INDIA VIX,12.8425,14.24,12.43,13.94,1.1,8.57,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_23062026.csv
+2026-06-23,NIFTY 50,24071.3,24135.5,23784.95,23824.1,-278.8,-1.16,20.55,3.14,1.39,https://nsearchives.nseindia.com/content/indices/ind_close_all_23062026.csv
+2026-06-23,NIFTY BANK,57886.75,57970.9,57078.45,57183.75,-751.85,-1.3,14.38,1.86,1.02,https://nsearchives.nseindia.com/content/indices/ind_close_all_23062026.csv
+2026-06-23,NIFTY MIDCAP 100,62817.45,62909.55,61986.85,62070.35,-658.75,-1.05,29.78,4.82,0.6,https://nsearchives.nseindia.com/content/indices/ind_close_all_23062026.csv
+2026-06-23,NIFTY SMALLCAP 100,18942.35,19001.9,18742.8,18805.9,-91.1,-0.48,31.82,3.65,0.63,https://nsearchives.nseindia.com/content/indices/ind_close_all_23062026.csv
+2026-06-24,INDIA VIX,13.9425,14.3025,13.295,13.39,-0.56,-4,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_24062026.csv
+2026-06-24,NIFTY 50,23795.8,24090.05,23789.25,24021.65,197.55,0.83,20.72,3.17,1.37,https://nsearchives.nseindia.com/content/indices/ind_close_all_24062026.csv
+2026-06-24,NIFTY BANK,57074.9,58256.35,57074.9,58150.35,966.6,1.69,14.63,1.89,1,https://nsearchives.nseindia.com/content/indices/ind_close_all_24062026.csv
+2026-06-24,NIFTY MIDCAP 100,62049.95,62336.4,61646.8,62135.25,64.9,0.1,29.81,4.83,0.6,https://nsearchives.nseindia.com/content/indices/ind_close_all_24062026.csv
+2026-06-24,NIFTY SMALLCAP 100,18792.6,18894.8,18665.1,18879.3,73.4,0.39,31.94,3.59,0.63,https://nsearchives.nseindia.com/content/indices/ind_close_all_24062026.csv
+2026-06-25,INDIA VIX,13.385,13.385,12.4325,13.05,-0.34,-2.5,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_25062026.csv
+2026-06-25,NIFTY 50,24125.85,24261.6,24039,24056,34.35,0.14,20.75,3.17,1.37,https://nsearchives.nseindia.com/content/indices/ind_close_all_25062026.csv
+2026-06-25,NIFTY BANK,58493.85,58706.05,58109.85,58177.05,26.7,0.05,14.63,1.89,1.01,https://nsearchives.nseindia.com/content/indices/ind_close_all_25062026.csv
+2026-06-25,NIFTY MIDCAP 100,62404.5,62536.35,61714.8,61795.5,-339.75,-0.55,29.65,4.8,0.61,https://nsearchives.nseindia.com/content/indices/ind_close_all_25062026.csv
+2026-06-25,NIFTY SMALLCAP 100,18954.9,18962.1,18766.95,18790.35,-88.95,-0.47,31.79,3.57,0.64,https://nsearchives.nseindia.com/content/indices/ind_close_all_25062026.csv
+2026-06-29,INDIA VIX,13.05,14.07,12.9175,13.61,0.56,4.29,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_29062026.csv
+2026-06-29,NIFTY 50,24061.75,24120,23924.55,23946.25,-109.75,-0.46,20.65,3.13,1.22,https://nsearchives.nseindia.com/content/indices/ind_close_all_29062026.csv
+2026-06-29,NIFTY BANK,58191.45,58318.05,57637.25,57727.35,-449.7,-0.77,14.52,1.85,0.77,https://nsearchives.nseindia.com/content/indices/ind_close_all_29062026.csv
+2026-06-29,NIFTY MIDCAP 100,61758.4,61890.55,61198.7,61567.3,-228.2,-0.37,29.54,4.78,0.61,https://nsearchives.nseindia.com/content/indices/ind_close_all_29062026.csv
+2026-06-29,NIFTY SMALLCAP 100,18778.75,18797.3,18596.35,18673.1,-117.25,-0.62,31.6,3.55,0.65,https://nsearchives.nseindia.com/content/indices/ind_close_all_29062026.csv
+2026-06-30,INDIA VIX,13.61,13.9675,13.1525,13.6,-0.01,-0.07,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_30062026.csv
+2026-06-30,NIFTY 50,24032.05,24035.55,23829.2,23865.75,-80.5,-0.34,20.58,3.12,1.24,https://nsearchives.nseindia.com/content/indices/ind_close_all_30062026.csv
+2026-06-30,NIFTY BANK,58011.95,58011.95,57456.65,57542.9,-184.45,-0.32,14.46,1.85,0.8,https://nsearchives.nseindia.com/content/indices/ind_close_all_30062026.csv
+2026-06-30,NIFTY MIDCAP 100,61709.95,62052.6,61398.35,61797.7,230.4,0.37,29.78,4.81,0.61,https://nsearchives.nseindia.com/content/indices/ind_close_all_30062026.csv
+2026-06-30,NIFTY SMALLCAP 100,18732.25,18909.6,18697.05,18863.1,190,1.02,32.52,3.68,0.64,https://nsearchives.nseindia.com/content/indices/ind_close_all_30062026.csv
+2026-07-01,INDIA VIX,13.6,14.0725,13.15,13.24,-0.36,-2.63,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_01072026.csv
+2026-07-01,NIFTY 50,23897.65,24049.9,23895.1,24005.85,140.1,0.59,20.7,3.13,1.23,https://nsearchives.nseindia.com/content/indices/ind_close_all_01072026.csv
+2026-07-01,NIFTY BANK,57573.35,58134.15,57487.85,58033.05,490.15,0.85,14.59,1.87,0.8,https://nsearchives.nseindia.com/content/indices/ind_close_all_01072026.csv
+2026-07-01,NIFTY MIDCAP 100,61935.35,62138.5,61838.4,62008.8,211.1,0.34,29.88,4.82,0.61,https://nsearchives.nseindia.com/content/indices/ind_close_all_01072026.csv
+2026-07-01,NIFTY SMALLCAP 100,18901.25,19023.7,18891.85,18931.05,67.95,0.36,32.64,3.7,0.64,https://nsearchives.nseindia.com/content/indices/ind_close_all_01072026.csv
+2026-07-02,INDIA VIX,13.2425,13.2925,12.1925,12.29,-0.96,-7.21,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_02072026.csv
+2026-07-02,NIFTY 50,24062.2,24194.55,24058.8,24175.7,169.85,0.71,20.85,3.16,1.22,https://nsearchives.nseindia.com/content/indices/ind_close_all_02072026.csv
+2026-07-02,NIFTY BANK,58134.5,58396.1,57884.6,58031.65,-1.4,0,14.59,1.87,0.8,https://nsearchives.nseindia.com/content/indices/ind_close_all_02072026.csv
+2026-07-02,NIFTY MIDCAP 100,62238.15,62421,62127.5,62307.9,299.1,0.48,30.03,4.85,0.6,https://nsearchives.nseindia.com/content/indices/ind_close_all_02072026.csv
+2026-07-02,NIFTY SMALLCAP 100,19008.85,19179.2,18984.1,19167.8,236.75,1.25,33.05,3.73,0.63,https://nsearchives.nseindia.com/content/indices/ind_close_all_02072026.csv
+2026-07-03,INDIA VIX,12.2875,12.2875,11.65,11.8,-0.49,-3.99,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_03072026.csv
+2026-07-03,NIFTY 50,24375.65,24378.15,24252.35,24270.85,95.15,0.39,20.92,3.17,1.25,https://nsearchives.nseindia.com/content/indices/ind_close_all_03072026.csv
+2026-07-03,NIFTY BANK,58343.25,58343.25,57799.05,57938.5,-93.15,-0.16,14.55,1.87,0.8,https://nsearchives.nseindia.com/content/indices/ind_close_all_03072026.csv
+2026-07-03,NIFTY MIDCAP 100,62556.25,62556.55,62136.5,62190.3,-117.6,-0.19,29.97,4.84,0.61,https://nsearchives.nseindia.com/content/indices/ind_close_all_03072026.csv
+2026-07-03,NIFTY SMALLCAP 100,19259.05,19277.35,19153.7,19175.1,7.3,0.04,33.05,3.73,0.63,https://nsearchives.nseindia.com/content/indices/ind_close_all_03072026.csv
+2026-07-06,INDIA VIX,11.7975,12.3575,11.7025,11.82,0.02,0.17,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_06072026.csv
+2026-07-06,NIFTY 50,24306.85,24458.65,24287.1,24430.35,159.5,0.66,21.06,3.19,1.2,https://nsearchives.nseindia.com/content/indices/ind_close_all_06072026.csv
+2026-07-06,NIFTY BANK,57983.9,58477.3,57938.65,58291.5,353,0.61,14.64,1.88,0.78,https://nsearchives.nseindia.com/content/indices/ind_close_all_06072026.csv
+2026-07-06,NIFTY MIDCAP 100,62341.15,62500.9,62180.5,62471.5,281.2,0.45,30.11,4.86,0.6,https://nsearchives.nseindia.com/content/indices/ind_close_all_06072026.csv
+2026-07-06,NIFTY SMALLCAP 100,19186.25,19335.9,19136.4,19319.1,144,0.75,33.3,3.75,0.58,https://nsearchives.nseindia.com/content/indices/ind_close_all_06072026.csv
+2026-07-07,INDIA VIX,11.8175,11.935,11.055,11.65,-0.17,-1.44,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_07072026.csv
+2026-07-07,NIFTY 50,24464.45,24530.9,24348.95,24398.7,-31.65,-0.13,21.03,3.18,1.21,https://nsearchives.nseindia.com/content/indices/ind_close_all_07072026.csv
+2026-07-07,NIFTY BANK,58567.85,58581.1,58110.1,58200.7,-90.8,-0.16,14.62,1.87,0.78,https://nsearchives.nseindia.com/content/indices/ind_close_all_07072026.csv
+2026-07-07,NIFTY MIDCAP 100,62579.8,62611.4,62047.6,62285.3,-186.2,-0.3,30.02,4.85,0.61,https://nsearchives.nseindia.com/content/indices/ind_close_all_07072026.csv
+2026-07-07,NIFTY SMALLCAP 100,19352.25,19360.05,19161.95,19213.4,-105.7,-0.55,33.12,3.73,0.59,https://nsearchives.nseindia.com/content/indices/ind_close_all_07072026.csv
+2026-07-08,INDIA VIX,11.6475,15.16,11.335,14.68,3.03,26.04,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_08072026.csv
+2026-07-08,NIFTY 50,24259.55,24300,23805.2,23882.05,-516.65,-2.12,20.59,3.11,1.23,https://nsearchives.nseindia.com/content/indices/ind_close_all_08072026.csv
+2026-07-08,NIFTY BANK,57918.25,58075.6,56549.4,56742.6,-1458.1,-2.51,14.25,1.83,0.8,https://nsearchives.nseindia.com/content/indices/ind_close_all_08072026.csv
+2026-07-08,NIFTY MIDCAP 100,61978.1,62279.5,61004.9,61322.75,-962.55,-1.55,29.55,4.77,0.62,https://nsearchives.nseindia.com/content/indices/ind_close_all_08072026.csv
+2026-07-08,NIFTY SMALLCAP 100,19120.4,19201.55,18706.75,18783.3,-430.1,-2.24,32.37,3.65,0.6,https://nsearchives.nseindia.com/content/indices/ind_close_all_08072026.csv
+2026-07-09,INDIA VIX,14.68,14.68,13.0675,13.36,-1.32,-8.97,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_09072026.csv
+2026-07-09,NIFTY 50,23928.95,24134.7,23925.7,23962.8,80.75,0.34,20.66,3.13,1.23,https://nsearchives.nseindia.com/content/indices/ind_close_all_09072026.csv
+2026-07-09,NIFTY BANK,56871,57464.2,56867.3,57252.45,509.85,0.9,14.38,1.84,0.8,https://nsearchives.nseindia.com/content/indices/ind_close_all_09072026.csv
+2026-07-09,NIFTY MIDCAP 100,61512.45,62313.7,61503.6,62166.85,844.1,1.38,29.95,4.83,0.58,https://nsearchives.nseindia.com/content/indices/ind_close_all_09072026.csv
+2026-07-09,NIFTY SMALLCAP 100,18846.4,19162.6,18831.35,19120.85,337.55,1.8,32.96,3.71,0.59,https://nsearchives.nseindia.com/content/indices/ind_close_all_09072026.csv
+2026-07-10,INDIA VIX,13.3625,13.3625,12.1275,12.25,-1.11,-8.31,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_10072026.csv
+2026-07-10,NIFTY 50,24124.7,24228.45,24120.35,24206.9,244.1,1.02,20.87,3.15,1.23,https://nsearchives.nseindia.com/content/indices/ind_close_all_10072026.csv
+2026-07-10,NIFTY BANK,57592.5,58251.95,57576.7,58045.9,793.45,1.39,14.58,1.87,0.79,https://nsearchives.nseindia.com/content/indices/ind_close_all_10072026.csv
+2026-07-10,NIFTY MIDCAP 100,62636.05,63076.5,62576.6,63036.8,869.95,1.4,30.37,4.9,0.59,https://nsearchives.nseindia.com/content/indices/ind_close_all_10072026.csv
+2026-07-10,NIFTY SMALLCAP 100,19257.85,19444.35,19228.95,19416.5,295.65,1.55,33.47,3.77,0.6,https://nsearchives.nseindia.com/content/indices/ind_close_all_10072026.csv
+2026-07-13,INDIA VIX,12.2525,13.5225,9.475,13.28,1.03,8.39,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_13072026.csv
+2026-07-13,NIFTY 50,24039.4,24259.8,24000.2,24211,4.1,0.02,20.87,3.13,1.23,https://nsearchives.nseindia.com/content/indices/ind_close_all_13072026.csv
+2026-07-13,NIFTY BANK,57616.7,58219.9,57492.05,58131.45,85.55,0.15,14.6,1.87,0.78,https://nsearchives.nseindia.com/content/indices/ind_close_all_13072026.csv
+2026-07-13,NIFTY MIDCAP 100,62688.65,63101.5,62476.7,63040.95,4.15,0.01,30.27,4.89,0.58,https://nsearchives.nseindia.com/content/indices/ind_close_all_13072026.csv
+2026-07-13,NIFTY SMALLCAP 100,19295.25,19449.1,19213,19422.95,6.45,0.03,33.44,3.74,0.59,https://nsearchives.nseindia.com/content/indices/ind_close_all_13072026.csv
+2026-07-14,INDIA VIX,13.28,13.865,11.6575,13.75,0.47,3.54,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_14072026.csv
+2026-07-14,NIFTY 50,24068,24157.1,24023.7,24052.05,-158.95,-0.66,20.73,3.1,1.24,https://nsearchives.nseindia.com/content/indices/ind_close_all_14072026.csv
+2026-07-14,NIFTY BANK,57832.55,57840.05,57286.9,57462.3,-669.15,-1.15,14.43,1.85,0.79,https://nsearchives.nseindia.com/content/indices/ind_close_all_14072026.csv
+2026-07-14,NIFTY MIDCAP 100,62854.2,62993.8,62602.3,62766.4,-274.55,-0.44,30.14,4.86,0.57,https://nsearchives.nseindia.com/content/indices/ind_close_all_14072026.csv
+2026-07-14,NIFTY SMALLCAP 100,19367.95,19371.4,19205.9,19227.35,-195.6,-1.01,33.11,3.69,0.59,https://nsearchives.nseindia.com/content/indices/ind_close_all_14072026.csv
+2026-07-15,INDIA VIX,13.75,13.8725,13.04,13.27,-0.48,-3.49,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_15072026.csv
+2026-07-15,NIFTY 50,24085.85,24220.35,24010.55,24078.5,26.45,0.11,20.75,3.1,1.25,https://nsearchives.nseindia.com/content/indices/ind_close_all_15072026.csv
+2026-07-15,NIFTY BANK,57643.75,58148.8,57545.2,57757.85,295.55,0.51,14.51,1.86,0.79,https://nsearchives.nseindia.com/content/indices/ind_close_all_15072026.csv
+2026-07-15,NIFTY MIDCAP 100,62943.15,63183.35,62780.4,62943.2,176.8,0.28,30.23,4.87,0.56,https://nsearchives.nseindia.com/content/indices/ind_close_all_15072026.csv
+2026-07-15,NIFTY SMALLCAP 100,19302.8,19470.5,19291.8,19355.35,128,0.67,33.33,3.71,0.58,https://nsearchives.nseindia.com/content/indices/ind_close_all_15072026.csv
+2026-07-16,INDIA VIX,13.27,13.27,12.775,12.88,-0.39,-2.92,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_16072026.csv
+2026-07-16,NIFTY 50,24142.1,24186.5,24050,24072.75,-5.75,-0.02,20.73,3.1,1.24,https://nsearchives.nseindia.com/content/indices/ind_close_all_16072026.csv
+2026-07-16,NIFTY BANK,57831.1,57931.3,57420.15,57582.25,-175.6,-0.3,14.46,1.85,0.79,https://nsearchives.nseindia.com/content/indices/ind_close_all_16072026.csv
+2026-07-16,NIFTY MIDCAP 100,63130.85,63176.25,62555.35,62686.75,-256.45,-0.41,30.1,4.85,0.56,https://nsearchives.nseindia.com/content/indices/ind_close_all_16072026.csv
+2026-07-16,NIFTY SMALLCAP 100,19446.3,19455.8,19277.1,19336.25,-19.1,-0.1,33.29,3.69,0.58,https://nsearchives.nseindia.com/content/indices/ind_close_all_16072026.csv
+2026-07-17,INDIA VIX,12.8825,13.35,12.81,13.15,0.27,2.08,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_17072026.csv
+2026-07-17,NIFTY 50,24127.6,24367.3,24099.05,24334.3,261.55,1.09,20.96,3.13,1.24,https://nsearchives.nseindia.com/content/indices/ind_close_all_17072026.csv
+2026-07-17,NIFTY BANK,57662,58596.85,57542.15,58521.4,939.15,1.63,14.7,1.88,0.79,https://nsearchives.nseindia.com/content/indices/ind_close_all_17072026.csv
+2026-07-17,NIFTY MIDCAP 100,62785.55,62786.25,62198.9,62428.05,-258.7,-0.41,29.97,4.8,0.61,https://nsearchives.nseindia.com/content/indices/ind_close_all_17072026.csv
+2026-07-17,NIFTY SMALLCAP 100,19372.8,19381.55,19115.45,19296.3,-39.95,-0.21,33.22,3.67,0.61,https://nsearchives.nseindia.com/content/indices/ind_close_all_17072026.csv
+2026-07-20,INDIA VIX,13.15,13.8425,12.8925,12.98,-0.17,-1.29,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_20072026.csv
+2026-07-20,NIFTY 50,24190.05,24266.1,24135.85,24238.5,-95.8,-0.39,20.86,3.04,1.19,https://nsearchives.nseindia.com/content/indices/ind_close_all_20072026.csv
+2026-07-20,NIFTY BANK,57738.25,58111,57533.1,57945,-576.4,-0.98,14.5,1.8,0.79,https://nsearchives.nseindia.com/content/indices/ind_close_all_20072026.csv
+2026-07-20,NIFTY MIDCAP 100,62335.75,62894.75,62249.75,62801.75,373.7,0.6,30.07,4.79,0.58,https://nsearchives.nseindia.com/content/indices/ind_close_all_20072026.csv
+2026-07-20,NIFTY SMALLCAP 100,19274.8,19396.1,19231.05,19326.45,30.15,0.16,33.03,3.64,0.59,https://nsearchives.nseindia.com/content/indices/ind_close_all_20072026.csv
+2026-07-21,INDIA VIX,12.98,13.08,12.0975,12.6,-0.38,-2.93,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_21072026.csv
+2026-07-21,NIFTY 50,24216.05,24262.2,24135.65,24187.7,-50.8,-0.21,20.65,3.04,1.19,https://nsearchives.nseindia.com/content/indices/ind_close_all_21072026.csv
+2026-07-21,NIFTY BANK,57853.75,58228.65,57803.85,57835.35,-109.65,-0.19,13.95,1.79,0.79,https://nsearchives.nseindia.com/content/indices/ind_close_all_21072026.csv
+2026-07-21,NIFTY MIDCAP 100,62849.1,63026.1,62749.8,62987.6,185.85,0.3,30.06,4.78,0.58,https://nsearchives.nseindia.com/content/indices/ind_close_all_21072026.csv
+2026-07-21,NIFTY SMALLCAP 100,19372.9,19441.95,19335.65,19428.05,101.6,0.53,33.09,3.65,0.59,https://nsearchives.nseindia.com/content/indices/ind_close_all_21072026.csv
+2026-07-22,INDIA VIX,12.6,13.425,11.725,13.29,0.69,5.5,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_22072026.csv
+2026-07-22,NIFTY 50,24150.45,24166.3,23961.4,23996.25,-191.45,-0.79,20.48,2.99,1.2,https://nsearchives.nseindia.com/content/indices/ind_close_all_22072026.csv
+2026-07-22,NIFTY BANK,57768.4,57824,56970.6,57126.8,-708.55,-1.23,13.76,1.77,0.8,https://nsearchives.nseindia.com/content/indices/ind_close_all_22072026.csv
+2026-07-22,NIFTY MIDCAP 100,62966.3,62968.1,62196.05,62300.6,-687,-1.09,29.69,4.69,0.59,https://nsearchives.nseindia.com/content/indices/ind_close_all_22072026.csv
+2026-07-22,NIFTY SMALLCAP 100,19418.5,19422.15,19112.1,19129.25,-298.8,-1.54,32.37,3.57,0.6,https://nsearchives.nseindia.com/content/indices/ind_close_all_22072026.csv
+2026-07-23,INDIA VIX,13.2925,13.74,12.915,13.48,0.18,1.37,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_23072026.csv
+2026-07-23,NIFTY 50,23904.8,23990.75,23807.2,23869.6,-126.65,-0.53,20.35,2.98,1.21,https://nsearchives.nseindia.com/content/indices/ind_close_all_23072026.csv
+2026-07-23,NIFTY BANK,56796.95,56930.15,56374.75,56592,-534.8,-0.94,13.63,1.76,0.81,https://nsearchives.nseindia.com/content/indices/ind_close_all_23072026.csv
+2026-07-23,NIFTY MIDCAP 100,62134.3,62285.4,61549.95,61685,-615.6,-0.99,29.33,4.64,0.6,https://nsearchives.nseindia.com/content/indices/ind_close_all_23072026.csv
+2026-07-23,NIFTY SMALLCAP 100,19100.5,19138,18919.05,18936.35,-192.9,-1.01,32.02,3.54,0.61,https://nsearchives.nseindia.com/content/indices/ind_close_all_23072026.csv
+2026-07-24,INDIA VIX,13.475,14.7675,13.18,14.03,0.56,4.12,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_24072026.csv
+2026-07-24,NIFTY 50,23666.35,23823.6,23606.3,23767.45,-102.15,-0.43,20.29,2.97,1.28,https://nsearchives.nseindia.com/content/indices/ind_close_all_24072026.csv
+2026-07-24,NIFTY BANK,56169.4,56831.45,56023.6,56693.5,101.5,0.18,13.6,1.76,0.8,https://nsearchives.nseindia.com/content/indices/ind_close_all_24072026.csv
+2026-07-24,NIFTY MIDCAP 100,61295.45,61689.85,60898.6,61622.35,-62.65,-0.1,31.16,4.64,0.61,https://nsearchives.nseindia.com/content/indices/ind_close_all_24072026.csv
+2026-07-24,NIFTY SMALLCAP 100,18824.8,18896.1,18648.5,18874.95,-61.4,-0.32,31.7,3.52,0.64,https://nsearchives.nseindia.com/content/indices/ind_close_all_24072026.csv
+2026-07-27,INDIA VIX,14.03,14.3325,12.6025,12.66,-1.37,-9.76,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_27072026.csv
+2026-07-27,NIFTY 50,23928.4,24011.6,23891.55,23995.95,228.5,0.96,20.52,2.95,1.23,https://nsearchives.nseindia.com/content/indices/ind_close_all_27072026.csv
+2026-07-27,NIFTY BANK,57116.8,57330.05,56928.65,57087.2,393.7,0.69,13.69,1.75,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_27072026.csv
+2026-07-27,NIFTY MIDCAP 100,62109.95,62356.8,62109,62303.65,681.3,1.11,31.5,4.67,0.59,https://nsearchives.nseindia.com/content/indices/ind_close_all_27072026.csv
+2026-07-27,NIFTY SMALLCAP 100,19024.35,19142.05,19006.9,19122.6,247.65,1.31,32.05,3.53,0.63,https://nsearchives.nseindia.com/content/indices/ind_close_all_27072026.csv
+2026-07-28,INDIA VIX,12.66,12.82,11.7225,12.56,-0.1,-0.77,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_28072026.csv
+2026-07-28,NIFTY 50,23971.25,24041.15,23954.6,23985.35,-10.6,-0.04,20.46,2.95,1.22,https://nsearchives.nseindia.com/content/indices/ind_close_all_28072026.csv
+2026-07-28,NIFTY BANK,56883.55,57054.2,56672.4,56755.6,-331.6,-0.58,13.59,1.74,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_28072026.csv
+2026-07-28,NIFTY MIDCAP 100,62352.9,62495.5,62202.6,62351.5,47.85,0.08,31.06,4.67,0.59,https://nsearchives.nseindia.com/content/indices/ind_close_all_28072026.csv
+2026-07-28,NIFTY SMALLCAP 100,19118,19145.3,19019.25,19080.7,-41.9,-0.22,31.53,3.49,0.63,https://nsearchives.nseindia.com/content/indices/ind_close_all_28072026.csv
+2026-07-29,INDIA VIX,12.5625,12.5625,11.5625,12.01,-0.56,-4.42,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_29072026.csv
+2026-07-29,NIFTY 50,24176.65,24283.55,24136.75,24250.2,264.85,1.1,20.69,2.98,1.2,https://nsearchives.nseindia.com/content/indices/ind_close_all_29072026.csv
+2026-07-29,NIFTY BANK,57126.6,57315.95,56939.35,57205.9,450.3,0.79,13.59,1.75,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_29072026.csv
+2026-07-29,NIFTY MIDCAP 100,62651.95,62933.55,62567.55,62862.25,510.75,0.82,31.31,4.71,0.59,https://nsearchives.nseindia.com/content/indices/ind_close_all_29072026.csv
+2026-07-29,NIFTY SMALLCAP 100,19160.9,19378.25,19113.75,19362.35,281.65,1.48,32.07,3.54,0.62,https://nsearchives.nseindia.com/content/indices/ind_close_all_29072026.csv
+2026-07-30,INDIA VIX,12.0075,12.3175,11.3025,12.16,0.15,1.23,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_30072026.csv
+2026-07-30,NIFTY 50,24249.55,24342.95,24187.1,24317.15,66.95,0.28,20.72,2.99,1.2,https://nsearchives.nseindia.com/content/indices/ind_close_all_30072026.csv
+2026-07-30,NIFTY BANK,57127.05,57236.65,56768.6,57147.5,-58.4,-0.1,13.58,1.75,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_30072026.csv
+2026-07-30,NIFTY MIDCAP 100,62782.05,62829.4,62412.45,62641.75,-220.5,-0.35,31.11,4.7,0.6,https://nsearchives.nseindia.com/content/indices/ind_close_all_30072026.csv
+2026-07-30,NIFTY SMALLCAP 100,19364.95,19366.5,19232.9,19254.45,-107.9,-0.56,31.81,3.52,0.63,https://nsearchives.nseindia.com/content/indices/ind_close_all_30072026.csv
+2026-07-31,INDIA VIX,12.155,12.21,11.645,11.76,-0.4,-3.29,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_31072026.csv
+2026-07-31,NIFTY 50,24361.45,24429.4,24299.7,24383.6,66.45,0.27,20.78,2.99,1.22,https://nsearchives.nseindia.com/content/indices/ind_close_all_31072026.csv
+2026-07-31,NIFTY BANK,57225.9,57411.25,57139.6,57264.85,117.35,0.21,13.61,1.75,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_31072026.csv
+2026-07-31,NIFTY MIDCAP 100,62817,63072.4,62569.2,62915.3,273.55,0.44,31.35,4.7,0.59,https://nsearchives.nseindia.com/content/indices/ind_close_all_31072026.csv
+2026-07-31,NIFTY SMALLCAP 100,19310.8,19416.3,19274.25,19339.65,85.2,0.44,32.19,3.52,0.65,https://nsearchives.nseindia.com/content/indices/ind_close_all_31072026.csv
+2026-08-03,INDIA VIX,11.755,12.06,11.695,11.93,0.17,1.45,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_03082026.csv
+2026-08-03,NIFTY 50,24572.7,24774.3,24515.15,24774.3,390.7,1.6,21.03,3.04,1.25,https://nsearchives.nseindia.com/content/indices/ind_close_all_03082026.csv
+2026-08-03,NIFTY BANK,57569.6,58247.95,57465.95,58247.95,983.1,1.72,13.84,1.77,0.77,https://nsearchives.nseindia.com/content/indices/ind_close_all_03082026.csv
+2026-08-03,NIFTY MIDCAP 100,63235.6,63681.8,63107.55,63679.3,764,1.21,31.63,4.7,0.58,https://nsearchives.nseindia.com/content/indices/ind_close_all_03082026.csv
+2026-08-03,NIFTY SMALLCAP 100,19446.3,19610.85,19407.7,19589.35,249.7,1.29,32.43,3.56,0.61,https://nsearchives.nseindia.com/content/indices/ind_close_all_03082026.csv
+2026-08-04,INDIA VIX,11.925,12.545,11.4275,12.19,0.27,2.22,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_04082026.csv
+2026-08-04,NIFTY 50,24703.9,24703.9,24427.95,24614.9,-159.4,-0.64,20.9,3.02,1.26,https://nsearchives.nseindia.com/content/indices/ind_close_all_04082026.csv
+2026-08-04,NIFTY BANK,58068.95,58068.95,57352.65,57907.2,-340.75,-0.58,13.76,1.75,0.77,https://nsearchives.nseindia.com/content/indices/ind_close_all_04082026.csv
+2026-08-04,NIFTY MIDCAP 100,63739.9,63740.85,63278.95,63491.6,-187.7,-0.29,31.22,4.65,0.58,https://nsearchives.nseindia.com/content/indices/ind_close_all_04082026.csv
+2026-08-04,NIFTY SMALLCAP 100,19668.25,19757.75,19603.25,19635.25,45.9,0.23,32.48,3.57,0.61,https://nsearchives.nseindia.com/content/indices/ind_close_all_04082026.csv
+2026-08-05,INDIA VIX,12.19,12.6725,10.805,12.06,-0.13,-1.07,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_05082026.csv
+2026-08-05,NIFTY 50,24669.2,24677.6,24497.95,24624.65,9.75,0.04,20.91,3.02,1.26,https://nsearchives.nseindia.com/content/indices/ind_close_all_05082026.csv
+2026-08-05,NIFTY BANK,57810.05,57931.85,57456.35,57739.95,-167.25,-0.29,13.72,1.75,0.78,https://nsearchives.nseindia.com/content/indices/ind_close_all_05082026.csv
+2026-08-05,NIFTY MIDCAP 100,63852.15,63852.15,63442.65,63605.25,113.65,0.18,31.24,4.65,0.58,https://nsearchives.nseindia.com/content/indices/ind_close_all_05082026.csv
+2026-08-05,NIFTY SMALLCAP 100,19729.8,19823.65,19710.4,19783.7,148.45,0.76,32.19,3.59,0.6,https://nsearchives.nseindia.com/content/indices/ind_close_all_05082026.csv
+2026-08-06,INDIA VIX,12.06,12.4325,10.095,12.16,0.1,0.81,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_06082026.csv
+2026-08-06,NIFTY 50,24641,24677.05,24604.15,24636,11.35,0.05,20.93,3.02,1.25,https://nsearchives.nseindia.com/content/indices/ind_close_all_06082026.csv
+2026-08-06,NIFTY BANK,57815,58076.85,57714.7,58063.65,323.7,0.56,13.8,1.76,0.77,https://nsearchives.nseindia.com/content/indices/ind_close_all_06082026.csv
+2026-08-06,NIFTY MIDCAP 100,63656.25,63677.7,63306.85,63326.8,-278.45,-0.44,31,4.62,0.58,https://nsearchives.nseindia.com/content/indices/ind_close_all_06082026.csv
+2026-08-06,NIFTY SMALLCAP 100,19869.3,19936.55,19806.25,19878.25,94.55,0.48,32.33,3.61,0.59,https://nsearchives.nseindia.com/content/indices/ind_close_all_06082026.csv
+2026-08-07,INDIA VIX,12.1575,12.5475,11.3,12.16,0,-0.02,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_07082026.csv
+2026-08-07,NIFTY 50,24538.9,24630.4,24522.75,24570.65,-65.35,-0.27,20.87,3.01,1.27,https://nsearchives.nseindia.com/content/indices/ind_close_all_07082026.csv
+2026-08-07,NIFTY BANK,57882,57994.45,57686.55,57746.45,-317.2,-0.55,13.72,1.75,0.79,https://nsearchives.nseindia.com/content/indices/ind_close_all_07082026.csv
+2026-08-07,NIFTY MIDCAP 100,63254.9,63596.65,63181.5,63463.55,136.75,0.22,31.02,4.63,0.59,https://nsearchives.nseindia.com/content/indices/ind_close_all_07082026.csv
+2026-08-07,NIFTY SMALLCAP 100,19848.55,19927.9,19804.3,19867.8,-10.45,-0.05,32.24,3.6,0.58,https://nsearchives.nseindia.com/content/indices/ind_close_all_07082026.csv
+2026-08-10,INDIA VIX,12.155,12.915,10.815,12.25,0.09,0.74,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_10082026.csv
+2026-08-10,NIFTY 50,24581.25,24620.95,24511.1,24583.8,13.15,0.05,20.88,3.01,1.26,https://nsearchives.nseindia.com/content/indices/ind_close_all_10082026.csv
+2026-08-10,NIFTY BANK,57812.3,58015.85,57527.75,57686.95,-59.5,-0.1,13.71,1.75,0.79,https://nsearchives.nseindia.com/content/indices/ind_close_all_10082026.csv
+2026-08-10,NIFTY MIDCAP 100,63628.5,63986.7,63397.05,63855.7,392.15,0.62,31.18,4.54,0.57,https://nsearchives.nseindia.com/content/indices/ind_close_all_10082026.csv
+2026-08-10,NIFTY SMALLCAP 100,19840.7,19931.1,19793.25,19813.95,-53.85,-0.27,32.02,3.59,0.57,https://nsearchives.nseindia.com/content/indices/ind_close_all_10082026.csv
+2026-08-11,INDIA VIX,12.245,12.455,11.1925,11.86,-0.39,-3.18,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_11082026.csv
+2026-08-11,NIFTY 50,24575.1,24576.85,24429.25,24471.7,-112.1,-0.46,20.65,2.99,1.27,https://nsearchives.nseindia.com/content/indices/ind_close_all_11082026.csv
+2026-08-11,NIFTY BANK,57604.35,57607.25,57158.1,57446.25,-240.7,-0.42,13.59,1.74,0.79,https://nsearchives.nseindia.com/content/indices/ind_close_all_11082026.csv
+2026-08-11,NIFTY MIDCAP 100,63934.05,63953.95,63586.75,63843.85,-11.85,-0.02,31,4.54,0.58,https://nsearchives.nseindia.com/content/indices/ind_close_all_11082026.csv
+2026-08-11,NIFTY SMALLCAP 100,19860,19909.6,19834.4,19857.15,43.2,0.22,32.13,3.58,0.58,https://nsearchives.nseindia.com/content/indices/ind_close_all_11082026.csv
+2026-08-12,INDIA VIX,11.855,12.09,11.2575,11.69,-0.17,-1.39,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_12082026.csv
+2026-08-12,NIFTY 50,24472.45,24473.3,24265.95,24435.95,-35.75,-0.15,20.62,2.99,1.2,https://nsearchives.nseindia.com/content/indices/ind_close_all_12082026.csv
+2026-08-12,NIFTY BANK,57391.8,57885.85,57254,57885.85,439.6,0.77,13.7,1.75,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_12082026.csv
+2026-08-12,NIFTY MIDCAP 100,63919.45,64026.2,63529.1,64024.4,180.55,0.28,30.92,4.55,0.58,https://nsearchives.nseindia.com/content/indices/ind_close_all_12082026.csv
+2026-08-12,NIFTY SMALLCAP 100,19898.4,19898.75,19786,19821.65,-35.5,-0.18,31.89,3.58,0.59,https://nsearchives.nseindia.com/content/indices/ind_close_all_12082026.csv
+2026-08-13,INDIA VIX,11.69,12.1975,10.6525,11.42,-0.27,-2.33,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_13082026.csv
+2026-08-13,NIFTY 50,24431.6,24431.6,24311.4,24395.85,-40.1,-0.16,20.59,2.98,1.2,https://nsearchives.nseindia.com/content/indices/ind_close_all_13082026.csv
+2026-08-13,NIFTY BANK,57799.15,57799.15,57548.6,57635.25,-250.6,-0.43,13.64,1.74,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_13082026.csv
+2026-08-13,NIFTY MIDCAP 100,64013.25,64125.35,63812.55,64121.55,97.15,0.15,30.99,4.54,0.58,https://nsearchives.nseindia.com/content/indices/ind_close_all_13082026.csv
+2026-08-13,NIFTY SMALLCAP 100,19855.75,19898.5,19841.5,19875.1,53.45,0.27,31.96,3.59,0.58,https://nsearchives.nseindia.com/content/indices/ind_close_all_13082026.csv
+2026-08-14,INDIA VIX,11.4175,11.56,10.825,11.31,-0.11,-0.99,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_14082026.csv
+2026-08-14,NIFTY 50,24361.9,24405.2,24296.8,24366,-29.85,-0.12,20.56,2.97,1.17,https://nsearchives.nseindia.com/content/indices/ind_close_all_14082026.csv
+2026-08-14,NIFTY BANK,57589.75,57681.45,57380.45,57491.1,-144.15,-0.25,13.6,1.72,0.71,https://nsearchives.nseindia.com/content/indices/ind_close_all_14082026.csv
+2026-08-14,NIFTY MIDCAP 100,64114.55,64139.05,63746.1,63782.15,-339.4,-0.53,30.81,4.45,0.54,https://nsearchives.nseindia.com/content/indices/ind_close_all_14082026.csv
+2026-08-14,NIFTY SMALLCAP 100,19874.25,19913.4,19728.6,19738.55,-136.55,-0.69,31.74,3.57,0.56,https://nsearchives.nseindia.com/content/indices/ind_close_all_14082026.csv
+2026-08-17,INDIA VIX,11.305,11.775,11.0925,11.33,0.02,0.18,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_17082026.csv
+2026-08-17,NIFTY 50,24343.45,24360.1,24226.95,24287.65,-78.35,-0.32,20.53,2.95,1.17,https://nsearchives.nseindia.com/content/indices/ind_close_all_17082026.csv
+2026-08-17,NIFTY BANK,57418.3,57757.25,57119.6,57497.8,6.7,0.01,13.6,1.72,0.71,https://nsearchives.nseindia.com/content/indices/ind_close_all_17082026.csv
+2026-08-17,NIFTY MIDCAP 100,63723.1,63930.25,63505.9,63817,34.85,0.05,30.78,4.46,0.54,https://nsearchives.nseindia.com/content/indices/ind_close_all_17082026.csv
+2026-08-17,NIFTY SMALLCAP 100,19757.3,19815.95,19674.3,19809.25,70.7,0.36,31.62,3.59,0.58,https://nsearchives.nseindia.com/content/indices/ind_close_all_17082026.csv
+2026-08-18,INDIA VIX,11.325,11.785,10.14,11.39,0.06,0.55,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_18082026.csv
+2026-08-18,NIFTY 50,24223.85,24269.65,24154.9,24154.9,-132.75,-0.55,20.42,2.93,1.18,https://nsearchives.nseindia.com/content/indices/ind_close_all_18082026.csv
+2026-08-18,NIFTY BANK,57325.55,57584.7,57217.6,57262.4,-235.4,-0.41,13.55,1.71,0.71,https://nsearchives.nseindia.com/content/indices/ind_close_all_18082026.csv
+2026-08-18,NIFTY MIDCAP 100,63753.7,63802.3,63491.1,63539.4,-277.6,-0.43,30.65,4.44,0.55,https://nsearchives.nseindia.com/content/indices/ind_close_all_18082026.csv
+2026-08-18,NIFTY SMALLCAP 100,19789.95,19868.3,19764.35,19808.85,-0.4,0,31.41,3.59,0.58,https://nsearchives.nseindia.com/content/indices/ind_close_all_18082026.csv
+2026-08-19,INDIA VIX,11.3875,11.725,10.06,11.32,-0.07,-0.57,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_19082026.csv
+2026-08-19,NIFTY 50,24152.05,24172.85,24025.65,24078.3,-76.6,-0.32,20.36,2.92,1.18,https://nsearchives.nseindia.com/content/indices/ind_close_all_19082026.csv
+2026-08-19,NIFTY BANK,57260.65,57356.85,57001.75,57239.75,-22.65,-0.04,13.54,1.71,0.71,https://nsearchives.nseindia.com/content/indices/ind_close_all_19082026.csv
+2026-08-19,NIFTY MIDCAP 100,63582.1,63593,63198.4,63408.75,-130.65,-0.21,30.56,4.43,0.55,https://nsearchives.nseindia.com/content/indices/ind_close_all_19082026.csv
+2026-08-19,NIFTY SMALLCAP 100,19809.4,19820.2,19678.65,19707.15,-101.7,-0.51,31.23,3.57,0.58,https://nsearchives.nseindia.com/content/indices/ind_close_all_19082026.csv
+2026-08-20,INDIA VIX,11.3225,11.3225,9.3325,10.76,-0.57,-5.01,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_20082026.csv
+2026-08-20,NIFTY 50,24225.45,24265.15,24184.55,24231.85,153.55,0.64,20.48,2.94,1.17,https://nsearchives.nseindia.com/content/indices/ind_close_all_20082026.csv
+2026-08-20,NIFTY BANK,57507.65,57702.95,57431.8,57495.9,256.15,0.45,13.6,1.72,0.71,https://nsearchives.nseindia.com/content/indices/ind_close_all_20082026.csv
+2026-08-20,NIFTY MIDCAP 100,63771.95,63938.85,63631.7,63671.55,262.8,0.41,30.69,4.44,0.55,https://nsearchives.nseindia.com/content/indices/ind_close_all_20082026.csv
+2026-08-20,NIFTY SMALLCAP 100,19814.35,19919.4,19810.75,19841.45,134.3,0.68,31.45,3.58,0.58,https://nsearchives.nseindia.com/content/indices/ind_close_all_20082026.csv
+2026-08-21,INDIA VIX,10.755,11.35,9.57,11.2,0.44,4.09,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_21082026.csv
+2026-08-21,NIFTY 50,24284.05,24284.05,24206.8,24252,20.15,0.08,20.5,2.94,1.16,https://nsearchives.nseindia.com/content/indices/ind_close_all_21082026.csv
+2026-08-21,NIFTY BANK,57613.2,57772.45,57481.55,57761.95,266.05,0.46,13.67,1.73,0.7,https://nsearchives.nseindia.com/content/indices/ind_close_all_21082026.csv
+2026-08-21,NIFTY MIDCAP 100,63726.85,63752.2,63457.95,63735.75,64.2,0.1,30.72,4.44,0.56,https://nsearchives.nseindia.com/content/indices/ind_close_all_21082026.csv
+2026-08-21,NIFTY SMALLCAP 100,19933.9,20031.05,19920.65,19977.75,136.3,0.69,31.66,3.61,0.57,https://nsearchives.nseindia.com/content/indices/ind_close_all_21082026.csv
+2026-08-24,INDIA VIX,11.195,11.76,10.3225,11.53,0.33,2.95,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_24082026.csv
+2026-08-24,NIFTY 50,24285.05,24313,24144.3,24219.05,-32.95,-0.14,20.47,2.94,1.16,https://nsearchives.nseindia.com/content/indices/ind_close_all_24082026.csv
+2026-08-24,NIFTY BANK,57828.15,57873.75,57245.95,57525.95,-236,-0.41,13.61,1.72,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_24082026.csv
+2026-08-24,NIFTY MIDCAP 100,63828.75,63990.35,63683.35,63817.25,81.5,0.13,30.76,4.42,0.54,https://nsearchives.nseindia.com/content/indices/ind_close_all_24082026.csv
+2026-08-24,NIFTY SMALLCAP 100,20021.95,20080.3,19911,19926.75,-51,-0.26,31.58,3.6,0.56,https://nsearchives.nseindia.com/content/indices/ind_close_all_24082026.csv
+2026-08-25,INDIA VIX,11.525,11.615,9.45,11.08,-0.45,-3.9,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_25082026.csv
+2026-08-25,NIFTY 50,24175.75,24334.55,24115.45,24334.55,115.5,0.48,20.57,2.95,1.15,https://nsearchives.nseindia.com/content/indices/ind_close_all_25082026.csv
+2026-08-25,NIFTY BANK,57360.65,57653.85,57231.25,57514.2,-11.75,-0.02,13.61,1.72,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_25082026.csv
+2026-08-25,NIFTY MIDCAP 100,63799.5,64169.8,63602.2,64162.9,345.65,0.54,30.91,4.44,0.53,https://nsearchives.nseindia.com/content/indices/ind_close_all_25082026.csv
+2026-08-25,NIFTY SMALLCAP 100,19911.4,19926.1,19832.7,19906.6,-20.15,-0.1,31.49,3.59,0.57,https://nsearchives.nseindia.com/content/indices/ind_close_all_25082026.csv
+2026-08-26,INDIA VIX,11.075,11.075,10.13,10.57,-0.51,-4.6,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_26082026.csv
+2026-08-26,NIFTY 50,24341.95,24378.6,24207.75,24207.75,-126.8,-0.52,20.46,2.93,1.16,https://nsearchives.nseindia.com/content/indices/ind_close_all_26082026.csv
+2026-08-26,NIFTY BANK,57628.65,57996.05,57611.85,57783.75,269.55,0.47,13.67,1.73,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_26082026.csv
+2026-08-26,NIFTY MIDCAP 100,64289.4,64450.9,64095.9,64101.2,-61.7,-0.1,30.89,4.43,0.54,https://nsearchives.nseindia.com/content/indices/ind_close_all_26082026.csv
+2026-08-26,NIFTY SMALLCAP 100,19953.55,20091.3,19951.1,20067.3,160.7,0.81,31.74,3.61,0.57,https://nsearchives.nseindia.com/content/indices/ind_close_all_26082026.csv
+2026-08-27,INDIA VIX,10.565,11.28,10.355,11.07,0.5,4.76,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_27082026.csv
+2026-08-27,NIFTY 50,24277.6,24297.45,24090.85,24090.85,-116.9,-0.48,20.37,2.92,1.17,https://nsearchives.nseindia.com/content/indices/ind_close_all_27082026.csv
+2026-08-27,NIFTY BANK,57985,58012.4,57509.95,57509.95,-273.8,-0.47,13.61,1.72,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_27082026.csv
+2026-08-27,NIFTY MIDCAP 100,64215.7,64378,63975.1,64035.45,-65.75,-0.1,30.86,4.42,0.54,https://nsearchives.nseindia.com/content/indices/ind_close_all_27082026.csv
+2026-08-27,NIFTY SMALLCAP 100,20086.9,20143.55,20012.35,20040.65,-26.65,-0.13,31.66,3.6,0.57,https://nsearchives.nseindia.com/content/indices/ind_close_all_27082026.csv
+2026-08-28,INDIA VIX,11.0675,11.1425,10.5325,10.68,-0.39,-3.5,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_28082026.csv
+2026-08-28,NIFTY 50,24122.6,24188.3,24076.85,24175.65,84.8,0.35,20.44,2.93,1.16,https://nsearchives.nseindia.com/content/indices/ind_close_all_28082026.csv
+2026-08-28,NIFTY BANK,57429.75,57596.4,57264,57496.3,-13.65,-0.02,13.6,1.72,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_28082026.csv
+2026-08-28,NIFTY MIDCAP 100,64093.2,64234,63945.55,64069.5,34.05,0.05,30.88,4.43,0.54,https://nsearchives.nseindia.com/content/indices/ind_close_all_28082026.csv
+2026-08-28,NIFTY SMALLCAP 100,20079.6,20129.1,20045.25,20080,39.35,0.2,31.72,3.61,0.57,https://nsearchives.nseindia.com/content/indices/ind_close_all_28082026.csv
+2026-08-31,INDIA VIX,10.68,11.44,10.68,11.19,0.51,4.78,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_31082026.csv
+2026-08-31,NIFTY 50,24117.55,24128.7,23993.6,24080.4,-95.25,-0.39,20.36,2.92,1.17,https://nsearchives.nseindia.com/content/indices/ind_close_all_31082026.csv
+2026-08-31,NIFTY BANK,57353.75,58024.95,57187.35,58024.95,528.65,0.92,13.73,1.74,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_31082026.csv
+2026-08-31,NIFTY MIDCAP 100,63980.4,64230.75,63347.5,64224.75,155.25,0.24,30.95,4.43,0.54,https://nsearchives.nseindia.com/content/indices/ind_close_all_31082026.csv
+2026-08-31,NIFTY SMALLCAP 100,20061.15,20068.6,19830.55,19931.65,-148.35,-0.74,31.57,3.59,0.57,https://nsearchives.nseindia.com/content/indices/ind_close_all_31082026.csv
+2026-09-01,INDIA VIX,11.19,12.1225,9.2475,11.49,0.3,2.7,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_01092026.csv
+2026-09-01,NIFTY 50,24077.55,24143.15,23952.55,24055.8,-24.6,-0.1,20.34,2.92,1.17,https://nsearchives.nseindia.com/content/indices/ind_close_all_01092026.csv
+2026-09-01,NIFTY BANK,57560.3,57766.25,57150.7,57409.6,-615.35,-1.06,13.58,1.72,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_01092026.csv
+2026-09-01,NIFTY MIDCAP 100,64017.95,64020.15,63101.35,63334.5,-890.25,-1.39,30.53,4.36,0.55,https://nsearchives.nseindia.com/content/indices/ind_close_all_01092026.csv
+2026-09-01,NIFTY SMALLCAP 100,19952.45,19965.55,19759.2,19886.25,-45.4,-0.23,31.5,3.58,0.57,https://nsearchives.nseindia.com/content/indices/ind_close_all_01092026.csv
+2026-09-02,INDIA VIX,11.4925,12.1125,10.5475,11.59,0.1,0.87,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_02092026.csv
+2026-09-02,NIFTY 50,23858,23914.45,23786.8,23914.45,-141.35,-0.59,20.22,2.89,1.19,https://nsearchives.nseindia.com/content/indices/ind_close_all_02092026.csv
+2026-09-02,NIFTY BANK,57006.45,57221.1,56823.2,57172,-237.6,-0.41,13.53,1.71,0.69,https://nsearchives.nseindia.com/content/indices/ind_close_all_02092026.csv
+2026-09-02,NIFTY MIDCAP 100,62988.85,63007.25,62445.15,63001.6,-332.9,-0.53,30.36,4.33,0.55,https://nsearchives.nseindia.com/content/indices/ind_close_all_02092026.csv
+2026-09-02,NIFTY SMALLCAP 100,19803.4,19833.2,19662.15,19812.25,-74,-0.37,31.38,3.56,0.57,https://nsearchives.nseindia.com/content/indices/ind_close_all_02092026.csv
+2026-09-03,INDIA VIX,11.5925,11.5925,10.75,11.34,-0.26,-2.2,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_03092026.csv
+2026-09-03,NIFTY 50,23997.95,24025.4,23873.45,23873.45,-41,-0.17,20.18,2.89,1.19,https://nsearchives.nseindia.com/content/indices/ind_close_all_03092026.csv
+2026-09-03,NIFTY BANK,57497.85,57753.6,57380.6,57380.6,208.6,0.36,13.58,1.72,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_03092026.csv
+2026-09-03,NIFTY MIDCAP 100,63186.15,63253.2,62902.35,63235.2,233.6,0.37,30.48,4.35,0.55,https://nsearchives.nseindia.com/content/indices/ind_close_all_03092026.csv
+2026-09-03,NIFTY SMALLCAP 100,19904.3,20072.5,19903.75,20050.75,238.5,1.2,31.76,3.6,0.56,https://nsearchives.nseindia.com/content/indices/ind_close_all_03092026.csv
+2026-09-04,INDIA VIX,11.3375,11.3375,10.565,10.68,-0.66,-5.8,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_04092026.csv
+2026-09-04,NIFTY 50,23910.9,24005.75,23895.85,23897.7,24.25,0.1,20.2,2.89,1.19,https://nsearchives.nseindia.com/content/indices/ind_close_all_04092026.csv
+2026-09-04,NIFTY BANK,57492.65,57677.15,57324.55,57369.65,-10.95,-0.02,13.57,1.72,0.68,https://nsearchives.nseindia.com/content/indices/ind_close_all_04092026.csv
+2026-09-04,NIFTY MIDCAP 100,63243.75,63407.8,63063.1,63079.05,-156.15,-0.25,30.4,4.34,0.55,https://nsearchives.nseindia.com/content/indices/ind_close_all_04092026.csv
+2026-09-04,NIFTY SMALLCAP 100,20121.65,20187.8,20077.4,20095.45,44.7,0.22,31.83,3.58,0.56,https://nsearchives.nseindia.com/content/indices/ind_close_all_04092026.csv
+2026-09-07,INDIA VIX,10.68,11.3475,10.275,11.16,0.48,4.49,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_07092026.csv
+2026-09-07,NIFTY 50,23883.15,23890,23737.9,23779.15,-118.55,-0.5,20.1,2.88,1.19,https://nsearchives.nseindia.com/content/indices/ind_close_all_07092026.csv
+2026-09-07,NIFTY BANK,57343.3,57426.85,57002.95,57088.3,-281.35,-0.49,13.51,1.71,0.69,https://nsearchives.nseindia.com/content/indices/ind_close_all_07092026.csv
+2026-09-07,NIFTY MIDCAP 100,63084.5,63166.6,62667.15,62786.15,-292.9,-0.46,30.26,4.32,0.55,https://nsearchives.nseindia.com/content/indices/ind_close_all_07092026.csv
+2026-09-07,NIFTY SMALLCAP 100,20086.45,20160.25,20047.25,20100.2,4.75,0.02,31.84,3.58,0.56,https://nsearchives.nseindia.com/content/indices/ind_close_all_07092026.csv
+2026-09-08,INDIA VIX,11.16,11.395,10.45,11.23,0.07,0.65,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_08092026.csv
+2026-09-08,NIFTY 50,23743.1,23758.95,23623.1,23635.1,-144.05,-0.61,19.98,2.86,1.2,https://nsearchives.nseindia.com/content/indices/ind_close_all_08092026.csv
+2026-09-08,NIFTY BANK,56990.4,57044,56720.45,56777.55,-310.75,-0.54,13.43,1.7,0.69,https://nsearchives.nseindia.com/content/indices/ind_close_all_08092026.csv
+2026-09-08,NIFTY MIDCAP 100,62801.2,62976.6,62580,62915.8,129.65,0.21,30.32,4.33,0.54,https://nsearchives.nseindia.com/content/indices/ind_close_all_08092026.csv
+2026-09-08,NIFTY SMALLCAP 100,20121.55,20142.3,20027.25,20133.75,33.55,0.17,31.89,3.56,0.55,https://nsearchives.nseindia.com/content/indices/ind_close_all_08092026.csv
+2026-09-09,INDIA VIX,11.2325,12.05,10.545,11.92,0.69,6.12,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_09092026.csv
+2026-09-09,NIFTY 50,23522.05,23571.55,23431.5,23431.5,-203.6,-0.86,19.81,2.83,1.21,https://nsearchives.nseindia.com/content/indices/ind_close_all_09092026.csv
+2026-09-09,NIFTY BANK,56498.85,56743.05,56295.55,56295.55,-482,-0.85,13.32,1.69,0.7,https://nsearchives.nseindia.com/content/indices/ind_close_all_09092026.csv
+2026-09-09,NIFTY MIDCAP 100,62635.3,62783.2,62459.55,62592.8,-323,-0.51,30.17,4.31,0.55,https://nsearchives.nseindia.com/content/indices/ind_close_all_09092026.csv
+2026-09-09,NIFTY SMALLCAP 100,20117.15,20143.2,20021.35,20036.9,-96.85,-0.48,31.74,3.54,0.56,https://nsearchives.nseindia.com/content/indices/ind_close_all_09092026.csv
+2026-09-10,INDIA VIX,11.92,11.96,11.5275,11.8,-0.13,-1.05,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_10092026.csv
+2026-09-10,NIFTY 50,23446.6,23494.95,23380.1,23477.8,46.3,0.2,19.85,2.84,1.21,https://nsearchives.nseindia.com/content/indices/ind_close_all_10092026.csv
+2026-09-10,NIFTY BANK,56262.75,56575.15,56231.85,56471.95,176.4,0.31,13.36,1.69,0.69,https://nsearchives.nseindia.com/content/indices/ind_close_all_10092026.csv
+2026-09-10,NIFTY MIDCAP 100,62548.5,62594.2,62193.1,62357.35,-235.45,-0.38,30.05,4.29,0.55,https://nsearchives.nseindia.com/content/indices/ind_close_all_10092026.csv
+2026-09-10,NIFTY SMALLCAP 100,20049.35,20100.45,19992.35,20021.95,-14.95,-0.07,31.71,3.54,0.56,https://nsearchives.nseindia.com/content/indices/ind_close_all_10092026.csv
+2026-09-11,INDIA VIX,11.795,12.565,11.0225,12.29,0.49,4.15,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_11092026.csv
+2026-09-11,NIFTY 50,23270.3,23448.1,23231.4,23398.1,-79.7,-0.34,19.78,2.83,1.21,https://nsearchives.nseindia.com/content/indices/ind_close_all_11092026.csv
+2026-09-11,NIFTY BANK,55970.15,56645.85,55699.45,56606.55,134.6,0.24,13.39,1.7,0.69,https://nsearchives.nseindia.com/content/indices/ind_close_all_11092026.csv
+2026-09-11,NIFTY MIDCAP 100,61988.2,62264,61374.45,62197.2,-160.15,-0.26,29.98,4.28,0.56,https://nsearchives.nseindia.com/content/indices/ind_close_all_11092026.csv
+2026-09-11,NIFTY SMALLCAP 100,19893.55,19924.45,19728.1,19906.3,-115.65,-0.58,31.53,3.52,0.56,https://nsearchives.nseindia.com/content/indices/ind_close_all_11092026.csv
+2026-09-15,INDIA VIX,12.285,13.585,11.9275,13.43,1.15,9.34,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_15092026.csv
+2026-09-15,NIFTY 50,23576.15,23592.85,23118.6,23118.6,-279.5,-1.19,19.54,2.8,1.23,https://nsearchives.nseindia.com/content/indices/ind_close_all_15092026.csv
+2026-09-15,NIFTY BANK,56884.25,56996.35,55794.75,55794.75,-811.8,-1.43,13.2,1.67,0.7,https://nsearchives.nseindia.com/content/indices/ind_close_all_15092026.csv
+2026-09-15,NIFTY MIDCAP 100,62443.8,62516.95,60875,60878.25,-1318.95,-2.12,29.34,4.18,0.57,https://nsearchives.nseindia.com/content/indices/ind_close_all_15092026.csv
+2026-09-15,NIFTY SMALLCAP 100,19996.5,20025.2,19380.9,19422.45,-483.85,-2.43,30.76,3.41,0.56,https://nsearchives.nseindia.com/content/indices/ind_close_all_15092026.csv
+2026-09-16,INDIA VIX,13.4325,13.5825,12.865,13.17,-0.27,-1.97,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_16092026.csv
+2026-09-16,NIFTY 50,23201.6,23284.75,23116.1,23217.6,99,0.43,19.63,2.81,1.22,https://nsearchives.nseindia.com/content/indices/ind_close_all_16092026.csv
+2026-09-16,NIFTY BANK,56007.65,56368.7,55812.2,56292.45,497.7,0.89,13.32,1.69,0.7,https://nsearchives.nseindia.com/content/indices/ind_close_all_16092026.csv
+2026-09-16,NIFTY MIDCAP 100,60986,61150.4,60189.05,60874.2,-4.05,-0.01,29.34,4.18,0.57,https://nsearchives.nseindia.com/content/indices/ind_close_all_16092026.csv
+2026-09-16,NIFTY SMALLCAP 100,19398.5,19471.75,19036.3,19388.3,-34.15,-0.18,30.71,3.41,0.57,https://nsearchives.nseindia.com/content/indices/ind_close_all_16092026.csv
+2026-09-17,INDIA VIX,13.1675,13.1675,12.1375,12.29,-0.88,-6.66,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_17092026.csv
+2026-09-17,NIFTY 50,23195.25,23363.55,23193.65,23270.6,53,0.23,19.67,2.81,1.22,https://nsearchives.nseindia.com/content/indices/ind_close_all_17092026.csv
+2026-09-17,NIFTY BANK,56126.6,56570.45,56038.5,56055.75,-236.7,-0.42,13.26,1.68,0.7,https://nsearchives.nseindia.com/content/indices/ind_close_all_17092026.csv
+2026-09-17,NIFTY MIDCAP 100,60890.7,61593.2,60850.8,61432.1,557.9,0.92,29.61,4.21,0.56,https://nsearchives.nseindia.com/content/indices/ind_close_all_17092026.csv
+2026-09-17,NIFTY SMALLCAP 100,19363.6,19585.15,19361.95,19535.7,147.4,0.76,30.94,3.41,0.57,https://nsearchives.nseindia.com/content/indices/ind_close_all_17092026.csv
+2026-09-18,INDIA VIX,12.29,12.29,11.3075,11.39,-0.91,-7.36,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_18092026.csv
+2026-09-18,NIFTY 50,23334.7,23389.15,23286.6,23346.4,75.8,0.33,19.74,2.82,1.21,https://nsearchives.nseindia.com/content/indices/ind_close_all_18092026.csv
+2026-09-18,NIFTY BANK,56172.85,56497.45,56073.55,56358.7,302.95,0.54,13.33,1.69,0.7,https://nsearchives.nseindia.com/content/indices/ind_close_all_18092026.csv
+2026-09-18,NIFTY MIDCAP 100,61560.7,62203.25,61553.3,62191.25,759.15,1.24,29.97,4.26,0.55,https://nsearchives.nseindia.com/content/indices/ind_close_all_18092026.csv
+2026-09-18,NIFTY SMALLCAP 100,19566.05,19894.45,19565.5,19875.7,340,1.74,31.48,3.45,0.55,https://nsearchives.nseindia.com/content/indices/ind_close_all_18092026.csv
+2026-09-21,INDIA VIX,11.385,11.825,11.18,11.25,-0.14,-1.21,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_21092026.csv
+2026-09-21,NIFTY 50,23330.2,23466.8,23314.8,23414.3,67.9,0.29,19.79,2.83,1.21,https://nsearchives.nseindia.com/content/indices/ind_close_all_21092026.csv
+2026-09-21,NIFTY BANK,56361.9,56668.2,56269.55,56470.65,111.95,0.2,13.36,1.69,0.69,https://nsearchives.nseindia.com/content/indices/ind_close_all_21092026.csv
+2026-09-21,NIFTY MIDCAP 100,62009,62163.7,61902.4,62013.1,-178.15,-0.29,29.89,4.21,0.55,https://nsearchives.nseindia.com/content/indices/ind_close_all_21092026.csv
+2026-09-21,NIFTY SMALLCAP 100,19896.15,19955.45,19824.1,19861.5,-14.2,-0.07,31.46,3.45,0.55,https://nsearchives.nseindia.com/content/indices/ind_close_all_21092026.csv
+2026-09-22,INDIA VIX,11.2475,11.4125,10.6175,11,-0.25,-2.22,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_22092026.csv
+2026-09-22,NIFTY 50,23454.05,23489,23285.75,23329,-85.3,-0.36,19.72,2.82,1.21,https://nsearchives.nseindia.com/content/indices/ind_close_all_22092026.csv
+2026-09-22,NIFTY BANK,56489.9,56671.1,56106.95,56215.55,-255.1,-0.45,13.3,1.68,0.7,https://nsearchives.nseindia.com/content/indices/ind_close_all_22092026.csv
+2026-09-22,NIFTY MIDCAP 100,62144.4,62260.85,61767,61963.15,-49.95,-0.08,29.86,4.2,0.55,https://nsearchives.nseindia.com/content/indices/ind_close_all_22092026.csv
+2026-09-22,NIFTY SMALLCAP 100,19904.4,19954.05,19778.55,19815.45,-46.05,-0.23,31.39,3.44,0.55,https://nsearchives.nseindia.com/content/indices/ind_close_all_22092026.csv
+2026-09-23,INDIA VIX,10.9975,11.0425,10.22,10.35,-0.65,-5.93,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_23092026.csv
+2026-09-23,NIFTY 50,23352.15,23466.9,23349.55,23446.8,117.8,0.5,19.82,2.84,1.21,https://nsearchives.nseindia.com/content/indices/ind_close_all_23092026.csv
+2026-09-23,NIFTY BANK,56209.65,56623.8,56209.65,56548.9,333.35,0.59,13.38,1.69,0.69,https://nsearchives.nseindia.com/content/indices/ind_close_all_23092026.csv
+2026-09-23,NIFTY MIDCAP 100,62073.3,62418.25,62063.05,62396.45,433.3,0.7,30.07,4.23,0.55,https://nsearchives.nseindia.com/content/indices/ind_close_all_23092026.csv
+2026-09-23,NIFTY SMALLCAP 100,19848.05,19998.2,19847.7,19991.5,176.05,0.89,31.67,3.47,0.56,https://nsearchives.nseindia.com/content/indices/ind_close_all_23092026.csv
+2026-09-24,INDIA VIX,10.345,13.2175,10.345,12.69,2.34,22.64,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_24092026.csv
+2026-09-24,NIFTY 50,23221.8,23281.95,23046.15,23063.1,-383.7,-1.64,19.5,2.79,1.23,https://nsearchives.nseindia.com/content/indices/ind_close_all_24092026.csv
+2026-09-24,NIFTY BANK,55710.6,55918.4,55341.2,55438.5,-1110.4,-1.96,13.12,1.66,0.71,https://nsearchives.nseindia.com/content/indices/ind_close_all_24092026.csv
+2026-09-24,NIFTY MIDCAP 100,61575,61840.25,60922.95,60990.15,-1406.3,-2.25,29.4,4.14,0.56,https://nsearchives.nseindia.com/content/indices/ind_close_all_24092026.csv
+2026-09-24,NIFTY SMALLCAP 100,19743.45,19879.45,19657.7,19684.75,-306.75,-1.53,31.18,3.42,0.56,https://nsearchives.nseindia.com/content/indices/ind_close_all_24092026.csv
+2026-09-25,INDIA VIX,12.6875,12.835,11.77,12.16,-0.53,-4.16,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_25092026.csv
+2026-09-25,NIFTY 50,23035,23162.7,23020.95,23140.5,77.4,0.34,19.56,2.8,1.22,https://nsearchives.nseindia.com/content/indices/ind_close_all_25092026.csv
+2026-09-25,NIFTY BANK,55373.75,55762.6,55373.75,55580.4,141.9,0.26,13.15,1.66,0.7,https://nsearchives.nseindia.com/content/indices/ind_close_all_25092026.csv
+2026-09-25,NIFTY MIDCAP 100,60970.05,61117.45,60595.45,60906,-84.15,-0.14,29.35,4.13,0.56,https://nsearchives.nseindia.com/content/indices/ind_close_all_25092026.csv
+2026-09-25,NIFTY SMALLCAP 100,19706.7,19754,19594.9,19715.25,30.5,0.15,31.23,3.43,0.56,https://nsearchives.nseindia.com/content/indices/ind_close_all_25092026.csv
+2026-09-28,INDIA VIX,12.16,14.145,12.16,13.64,1.48,12.15,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_28092026.csv
+2026-09-28,NIFTY 50,23064.9,23080.25,22762.2,22780.25,-360.25,-1.56,19.26,2.75,1.24,https://nsearchives.nseindia.com/content/indices/ind_close_all_28092026.csv
+2026-09-28,NIFTY BANK,55347.8,55390.1,54437.7,54471.65,-1108.75,-1.99,12.89,1.63,0.72,https://nsearchives.nseindia.com/content/indices/ind_close_all_28092026.csv
+2026-09-28,NIFTY MIDCAP 100,60783.75,60783.75,59814.05,59914.2,-991.8,-1.63,28.88,4.06,0.57,https://nsearchives.nseindia.com/content/indices/ind_close_all_28092026.csv
+2026-09-28,NIFTY SMALLCAP 100,19684.65,19692.35,19324,19351.1,-364.15,-1.85,30.65,3.36,0.57,https://nsearchives.nseindia.com/content/indices/ind_close_all_28092026.csv
+2026-09-29,INDIA VIX,13.6375,14.77,13.2125,13.41,-0.23,-1.65,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_29092026.csv
+2026-09-29,NIFTY 50,22732.45,22753.25,22569.65,22716.2,-64.05,-0.28,19.2,2.75,1.25,https://nsearchives.nseindia.com/content/indices/ind_close_all_29092026.csv
+2026-09-29,NIFTY BANK,54283.6,54405.3,53785.7,54259.95,-211.7,-0.39,12.84,1.62,0.72,https://nsearchives.nseindia.com/content/indices/ind_close_all_29092026.csv
+2026-09-29,NIFTY MIDCAP 100,59839.6,59884.5,59234.75,59319.4,-594.8,-0.99,28.59,4.02,0.58,https://nsearchives.nseindia.com/content/indices/ind_close_all_29092026.csv
+2026-09-29,NIFTY SMALLCAP 100,19322.4,19344.1,19116.5,19193.55,-157.55,-0.81,30.4,3.33,0.58,https://nsearchives.nseindia.com/content/indices/ind_close_all_29092026.csv
+2026-09-30,INDIA VIX,13.4125,13.8625,12.77,13.49,0.08,0.58,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_30092026.csv
+2026-09-30,NIFTY 50,22665,22809.35,22595.2,22620.45,-95.75,-0.42,19.36,2.78,1.22,https://nsearchives.nseindia.com/content/indices/ind_close_all_30092026.csv
+2026-09-30,NIFTY BANK,54175.9,55135.5,54174.3,54633.05,373.1,0.69,12.95,1.65,0.72,https://nsearchives.nseindia.com/content/indices/ind_close_all_30092026.csv
+2026-09-30,NIFTY MIDCAP 100,59539.2,59915.9,59301,59332.05,12.65,0.02,27.98,3.77,0.65,https://nsearchives.nseindia.com/content/indices/ind_close_all_30092026.csv
+2026-09-30,NIFTY SMALLCAP 100,19275.85,19404.5,19223.95,19245.7,52.15,0.27,37.71,3.73,0.53,https://nsearchives.nseindia.com/content/indices/ind_close_all_30092026.csv
+2026-10-01,INDIA VIX,13.49,15.6875,13.49,14.46,0.97,7.15,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_01102026.csv
+2026-10-01,NIFTY 50,22543.7,22610.6,22217.3,22421.95,-198.5,-0.88,19.19,2.75,1.23,https://nsearchives.nseindia.com/content/indices/ind_close_all_01102026.csv
+2026-10-01,NIFTY BANK,54583.05,55091.45,54066.6,54450.75,-182.3,-0.33,12.91,1.64,0.73,https://nsearchives.nseindia.com/content/indices/ind_close_all_01102026.csv
+2026-10-01,NIFTY MIDCAP 100,59175.65,59384.55,58006.85,58732,-600.05,-1.01,27.7,3.73,0.65,https://nsearchives.nseindia.com/content/indices/ind_close_all_01102026.csv
+2026-10-01,NIFTY SMALLCAP 100,19249.2,19256.45,18797.65,19058.65,-187.05,-0.97,37.37,3.69,0.55,https://nsearchives.nseindia.com/content/indices/ind_close_all_01102026.csv
+2026-10-05,INDIA VIX,14.455,15.3525,13.4975,14.78,0.32,2.21,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_05102026.csv
+2026-10-05,NIFTY 50,22532.4,22621.8,22397.1,22555.75,133.8,0.6,19.3,2.77,1.23,https://nsearchives.nseindia.com/content/indices/ind_close_all_05102026.csv
+2026-10-05,NIFTY BANK,54840.65,55192.65,54370.6,54714.1,263.35,0.48,12.97,1.65,0.72,https://nsearchives.nseindia.com/content/indices/ind_close_all_05102026.csv
+2026-10-05,NIFTY MIDCAP 100,59001.65,59353.05,58816.95,59123.65,391.65,0.67,27.88,3.76,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_05102026.csv
+2026-10-05,NIFTY SMALLCAP 100,19154.85,19237.8,18994.2,19149.1,90.45,0.47,37.54,3.71,0.54,https://nsearchives.nseindia.com/content/indices/ind_close_all_05102026.csv
+2026-10-06,INDIA VIX,14.775,14.775,13.52,13.61,-1.17,-7.9,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_06102026.csv
+2026-10-06,NIFTY 50,22603.25,22776.1,22561.6,22776.1,220.35,0.98,19.49,2.8,1.21,https://nsearchives.nseindia.com/content/indices/ind_close_all_06102026.csv
+2026-10-06,NIFTY BANK,54901.3,55201,54834.75,55128.4,414.3,0.76,13.07,1.66,0.72,https://nsearchives.nseindia.com/content/indices/ind_close_all_06102026.csv
+2026-10-06,NIFTY MIDCAP 100,59229.05,59765.9,59084.8,59761.2,637.55,1.08,28.19,3.8,0.65,https://nsearchives.nseindia.com/content/indices/ind_close_all_06102026.csv
+2026-10-06,NIFTY SMALLCAP 100,19248,19469.25,19175.3,19448.7,299.6,1.56,38.13,3.77,0.54,https://nsearchives.nseindia.com/content/indices/ind_close_all_06102026.csv
+2026-10-07,INDIA VIX,13.6075,14.315,13.6075,13.89,0.28,2.04,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_07102026.csv
+2026-10-07,NIFTY 50,22690.45,22717.65,22546.3,22603.05,-173.05,-0.76,19.34,2.78,1.22,https://nsearchives.nseindia.com/content/indices/ind_close_all_07102026.csv
+2026-10-07,NIFTY BANK,54968.7,55340.7,54636.2,55055.55,-72.85,-0.13,13.05,1.66,0.72,https://nsearchives.nseindia.com/content/indices/ind_close_all_07102026.csv
+2026-10-07,NIFTY MIDCAP 100,59674.3,59718.55,59200.05,59382.6,-378.6,-0.63,28.01,3.78,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_07102026.csv
+2026-10-07,NIFTY SMALLCAP 100,19456,19578.1,19358.8,19506.95,58.25,0.3,38.25,3.78,0.53,https://nsearchives.nseindia.com/content/indices/ind_close_all_07102026.csv
+2026-10-08,INDIA VIX,13.885,15.48,11.9675,15.28,1.39,10.01,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_08102026.csv
+2026-10-08,NIFTY 50,22599.05,22599.05,22179.9,22231.8,-371.25,-1.64,19.02,2.73,1.24,https://nsearchives.nseindia.com/content/indices/ind_close_all_08102026.csv
+2026-10-08,NIFTY BANK,55042.9,55043,54383.15,54515.05,-540.5,-0.98,12.92,1.64,0.73,https://nsearchives.nseindia.com/content/indices/ind_close_all_08102026.csv
+2026-10-08,NIFTY MIDCAP 100,59350.05,59350.05,57877,57882.5,-1500.1,-2.53,27.3,3.68,0.67,https://nsearchives.nseindia.com/content/indices/ind_close_all_08102026.csv
+2026-10-08,NIFTY SMALLCAP 100,19516.85,19520.25,19031.5,19050.1,-456.85,-2.34,37.35,3.69,0.55,https://nsearchives.nseindia.com/content/indices/ind_close_all_08102026.csv
+2026-10-09,INDIA VIX,15.275,15.275,13.6625,14.38,-0.9,-5.89,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_09102026.csv
+2026-10-09,NIFTY 50,22314.95,22580.75,22294.75,22520.45,288.65,1.3,19.27,2.77,1.52,https://nsearchives.nseindia.com/content/indices/ind_close_all_09102026.csv
+2026-10-09,NIFTY BANK,54746.25,55419.3,54617.2,55256.65,741.6,1.36,13.1,1.66,1.13,https://nsearchives.nseindia.com/content/indices/ind_close_all_09102026.csv
+2026-10-09,NIFTY MIDCAP 100,58116.05,58939.75,57944.3,58787.3,904.8,1.56,27.73,3.74,0.94,https://nsearchives.nseindia.com/content/indices/ind_close_all_09102026.csv
+2026-10-09,NIFTY SMALLCAP 100,19087.65,19239.35,18875.4,19153.7,103.6,0.54,37.55,3.71,0.63,https://nsearchives.nseindia.com/content/indices/ind_close_all_09102026.csv
+2026-10-12,INDIA VIX,14.375,15.5425,13.14,15.25,0.88,6.1,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_12102026.csv
+2026-10-12,NIFTY 50,22593.2,22651.1,22304.45,22363.35,-157.1,-0.7,19.12,2.75,1.53,https://nsearchives.nseindia.com/content/indices/ind_close_all_12102026.csv
+2026-10-12,NIFTY BANK,55350.15,55416.45,54708.8,54918,-338.65,-0.61,13.02,1.65,1.14,https://nsearchives.nseindia.com/content/indices/ind_close_all_12102026.csv
+2026-10-12,NIFTY MIDCAP 100,58913.65,59149.5,58642.25,58834.55,47.25,0.08,27.75,3.74,0.94,https://nsearchives.nseindia.com/content/indices/ind_close_all_12102026.csv
+2026-10-12,NIFTY SMALLCAP 100,19261.7,19462.45,19260.8,19425.8,272.1,1.42,38.09,3.76,0.62,https://nsearchives.nseindia.com/content/indices/ind_close_all_12102026.csv
+2026-10-13,INDIA VIX,15.2525,15.3525,13.945,14.12,-1.13,-7.43,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_13102026.csv
+2026-10-13,NIFTY 50,22364.15,22721.95,22288.45,22721.95,358.6,1.6,19.41,2.79,1.51,https://nsearchives.nseindia.com/content/indices/ind_close_all_13102026.csv
+2026-10-13,NIFTY BANK,54907.55,55551.75,54735.95,55481.05,563.05,1.03,13.15,1.67,1.13,https://nsearchives.nseindia.com/content/indices/ind_close_all_13102026.csv
+2026-10-13,NIFTY MIDCAP 100,58845.3,59460.45,58590.25,59459.2,624.65,1.06,28.04,3.78,0.93,https://nsearchives.nseindia.com/content/indices/ind_close_all_13102026.csv
+2026-10-13,NIFTY SMALLCAP 100,19429.5,19455.2,19183.65,19447.4,21.6,0.11,37.86,3.77,0.63,https://nsearchives.nseindia.com/content/indices/ind_close_all_13102026.csv
+2026-10-14,INDIA VIX,14.12,15.015,13.795,14.63,0.51,3.58,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_14102026.csv
+2026-10-14,NIFTY 50,22715.75,22757.95,22558.95,22622.7,-99.25,-0.44,19.33,2.78,1.52,https://nsearchives.nseindia.com/content/indices/ind_close_all_14102026.csv
+2026-10-14,NIFTY BANK,55406.7,55644.7,55168.2,55316,-165.05,-0.3,13.11,1.67,1.13,https://nsearchives.nseindia.com/content/indices/ind_close_all_14102026.csv
+2026-10-14,NIFTY MIDCAP 100,59414.45,59582.8,59101.85,59409.1,-50.1,-0.08,28.02,3.78,0.93,https://nsearchives.nseindia.com/content/indices/ind_close_all_14102026.csv
+2026-10-14,NIFTY SMALLCAP 100,19426.15,19507.9,19335.95,19384.8,-62.6,-0.32,37.72,3.76,0.63,https://nsearchives.nseindia.com/content/indices/ind_close_all_14102026.csv
+2026-10-15,INDIA VIX,14.625,14.9475,13.9075,14.03,-0.6,-4.1,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_15102026.csv
+2026-10-15,NIFTY 50,22671.3,23056.4,22637.4,22997.35,374.65,1.66,19.65,2.82,1.49,https://nsearchives.nseindia.com/content/indices/ind_close_all_15102026.csv
+2026-10-15,NIFTY BANK,55445.75,56065.5,55279,55810.5,494.5,0.89,13.2,1.68,1.12,https://nsearchives.nseindia.com/content/indices/ind_close_all_15102026.csv
+2026-10-15,NIFTY MIDCAP 100,59396.9,59603.4,59068.85,59197.25,-211.85,-0.36,27.84,3.76,0.93,https://nsearchives.nseindia.com/content/indices/ind_close_all_15102026.csv
+2026-10-15,NIFTY SMALLCAP 100,19356.2,19373.25,19102.2,19131.7,-253.1,-1.31,37.05,3.71,0.65,https://nsearchives.nseindia.com/content/indices/ind_close_all_15102026.csv
+2026-10-16,INDIA VIX,14.025,14.5175,12.79,14.06,0.04,0.27,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_16102026.csv
+2026-10-16,NIFTY 50,23065.1,23149.85,22913.8,23146.15,148.8,0.65,19.77,2.84,1.49,https://nsearchives.nseindia.com/content/indices/ind_close_all_16102026.csv
+2026-10-16,NIFTY BANK,55927.15,55989.55,55526.3,55844,33.5,0.06,13.21,1.68,1.12,https://nsearchives.nseindia.com/content/indices/ind_close_all_16102026.csv
+2026-10-16,NIFTY MIDCAP 100,59262.05,59302.15,58775.9,59129.75,-67.5,-0.11,27.77,3.76,0.93,https://nsearchives.nseindia.com/content/indices/ind_close_all_16102026.csv
+2026-10-16,NIFTY SMALLCAP 100,19172.85,19194.95,19069.85,19129.8,-1.9,-0.01,36.49,3.71,0.65,https://nsearchives.nseindia.com/content/indices/ind_close_all_16102026.csv
+2026-10-19,INDIA VIX,14.0625,14.9725,13.3175,14.77,0.71,5.05,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_19102026.csv
+2026-10-19,NIFTY 50,23150.85,23175.25,22845,22888.95,-257.2,-1.11,19.33,2.81,1.5,https://nsearchives.nseindia.com/content/indices/ind_close_all_19102026.csv
+2026-10-19,NIFTY BANK,55827.45,55883.7,55331.1,55488.1,-355.9,-0.64,12.82,1.67,1.13,https://nsearchives.nseindia.com/content/indices/ind_close_all_19102026.csv
+2026-10-19,NIFTY MIDCAP 100,59101.6,59197.55,58377.4,58487.95,-641.8,-1.09,27.35,3.72,0.94,https://nsearchives.nseindia.com/content/indices/ind_close_all_19102026.csv
+2026-10-19,NIFTY SMALLCAP 100,19133.3,19148.65,18913.6,18935.75,-194.05,-1.01,36.18,3.67,0.65,https://nsearchives.nseindia.com/content/indices/ind_close_all_19102026.csv
+2026-10-21,INDIA VIX,14.7725,16.1725,14.1825,15.68,0.9,6.11,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_21102026.csv
+2026-10-21,NIFTY 50,23016,23120.9,22649.9,22811.35,-77.6,-0.34,19.26,2.8,1.49,https://nsearchives.nseindia.com/content/indices/ind_close_all_21102026.csv
+2026-10-21,NIFTY BANK,55707.85,55867.45,54696.45,54976.9,-511.2,-0.92,12.7,1.66,1.14,https://nsearchives.nseindia.com/content/indices/ind_close_all_21102026.csv
+2026-10-21,NIFTY MIDCAP 100,58574.5,58713.25,57133.7,57565.85,-922.1,-1.58,26.91,3.66,0.96,https://nsearchives.nseindia.com/content/indices/ind_close_all_21102026.csv
+2026-10-21,NIFTY SMALLCAP 100,18980.7,19009.75,18373.05,18487.3,-448.45,-2.37,35.33,3.58,0.67,https://nsearchives.nseindia.com/content/indices/ind_close_all_21102026.csv
+2026-10-22,INDIA VIX,15.675,16.665,14.3175,15.76,0.09,0.56,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_22102026.csv
+2026-10-22,NIFTY 50,22687.75,22785,22554.85,22687.65,-123.7,-0.54,19.13,2.79,1.5,https://nsearchives.nseindia.com/content/indices/ind_close_all_22102026.csv
+2026-10-22,NIFTY BANK,54734.45,55134.45,54459.35,54925.7,-51.2,-0.09,12.61,1.65,1.14,https://nsearchives.nseindia.com/content/indices/ind_close_all_22102026.csv
+2026-10-22,NIFTY MIDCAP 100,57232.55,57421.4,56568.9,57063.95,-501.9,-0.87,26.63,3.63,0.97,https://nsearchives.nseindia.com/content/indices/ind_close_all_22102026.csv
+2026-10-22,NIFTY SMALLCAP 100,18372.15,18458.4,18155.75,18275.9,-211.4,-1.14,34.65,3.54,0.69,https://nsearchives.nseindia.com/content/indices/ind_close_all_22102026.csv
+2026-10-23,INDIA VIX,15.7625,17.095,15.265,16.86,1.1,6.96,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_23102026.csv
+2026-10-23,NIFTY 50,22742.2,22787.25,22372,22600,-87.65,-0.39,19.05,2.78,1.52,https://nsearchives.nseindia.com/content/indices/ind_close_all_23102026.csv
+2026-10-23,NIFTY BANK,54965.75,54990.5,53942.35,54287.35,-638.35,-1.16,12.46,1.63,1.15,https://nsearchives.nseindia.com/content/indices/ind_close_all_23102026.csv
+2026-10-23,NIFTY MIDCAP 100,57019.2,57053.8,55208.95,55800.65,-1263.3,-2.21,25.98,3.55,1,https://nsearchives.nseindia.com/content/indices/ind_close_all_23102026.csv
+2026-10-23,NIFTY SMALLCAP 100,18221.65,18258.2,17571.6,17739.45,-536.45,-2.94,33.64,3.44,0.71,https://nsearchives.nseindia.com/content/indices/ind_close_all_23102026.csv
+2026-10-26,INDIA VIX,16.86,18.0025,16.86,17.16,0.3,1.78,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_26102026.csv
+2026-10-26,NIFTY 50,22524.4,22753.2,22387.35,22753.2,153.2,0.68,19.18,2.79,1.51,https://nsearchives.nseindia.com/content/indices/ind_close_all_26102026.csv
+2026-10-26,NIFTY BANK,54250.3,54392.5,53777.5,54366.7,79.35,0.15,12.48,1.64,1.15,https://nsearchives.nseindia.com/content/indices/ind_close_all_26102026.csv
+2026-10-26,NIFTY MIDCAP 100,55416.8,56472.75,55101.1,56465.4,664.75,1.19,26.28,3.59,0.99,https://nsearchives.nseindia.com/content/indices/ind_close_all_26102026.csv
+2026-10-26,NIFTY SMALLCAP 100,17635.6,18013.2,17433,17985,245.55,1.38,33.48,3.49,0.7,https://nsearchives.nseindia.com/content/indices/ind_close_all_26102026.csv
+2026-10-27,INDIA VIX,17.16,17.485,16.25,16.4,-0.76,-4.41,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_27102026.csv
+2026-10-27,NIFTY 50,22708.8,22829.75,22636.85,22749.75,-3.45,-0.02,19.07,2.79,1.43,https://nsearchives.nseindia.com/content/indices/ind_close_all_27102026.csv
+2026-10-27,NIFTY BANK,54420.7,54654.05,53951.2,53974.9,-391.8,-0.72,12.07,1.63,1.16,https://nsearchives.nseindia.com/content/indices/ind_close_all_27102026.csv
+2026-10-27,NIFTY MIDCAP 100,56509.25,57126.2,56366.2,57029.9,564.5,1,25.98,3.63,0.96,https://nsearchives.nseindia.com/content/indices/ind_close_all_27102026.csv
+2026-10-27,NIFTY SMALLCAP 100,18067.9,18487.35,18039.6,18468.7,483.7,2.69,34.05,3.58,0.65,https://nsearchives.nseindia.com/content/indices/ind_close_all_27102026.csv
+2026-10-28,INDIA VIX,16.4025,17.3625,15.5425,16.25,-0.16,-0.96,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_28102026.csv
+2026-10-28,NIFTY 50,22678,22778.05,22497.7,22698.85,-50.9,-0.22,18.99,2.79,1.43,https://nsearchives.nseindia.com/content/indices/ind_close_all_28102026.csv
+2026-10-28,NIFTY BANK,53793.25,54440.25,53626.15,54267.4,292.5,0.54,12.14,1.63,1.15,https://nsearchives.nseindia.com/content/indices/ind_close_all_28102026.csv
+2026-10-28,NIFTY MIDCAP 100,56828.6,57492.8,56545.75,57274.7,244.8,0.43,26.07,3.64,0.95,https://nsearchives.nseindia.com/content/indices/ind_close_all_28102026.csv
+2026-10-28,NIFTY SMALLCAP 100,18483.1,18696.3,18424.3,18634.9,166.2,0.9,34.13,3.61,0.64,https://nsearchives.nseindia.com/content/indices/ind_close_all_28102026.csv
+2026-10-29,INDIA VIX,16.245,16.57,15.09,15.12,-1.13,-6.94,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_29102026.csv
+2026-10-29,NIFTY 50,22690.65,22961.95,22656.75,22936.75,237.9,1.05,19.19,2.82,1.42,https://nsearchives.nseindia.com/content/indices/ind_close_all_29102026.csv
+2026-10-29,NIFTY BANK,54175.6,54980.15,54047.9,54909.65,642.25,1.18,12.28,1.65,1.14,https://nsearchives.nseindia.com/content/indices/ind_close_all_29102026.csv
+2026-10-29,NIFTY MIDCAP 100,57340.25,57841.65,57242.35,57841.65,566.95,0.99,26.34,3.68,0.94,https://nsearchives.nseindia.com/content/indices/ind_close_all_29102026.csv
+2026-10-29,NIFTY SMALLCAP 100,18663.15,18842.25,18575.15,18811.35,176.45,0.95,34.47,3.65,0.64,https://nsearchives.nseindia.com/content/indices/ind_close_all_29102026.csv
+2026-10-30,INDIA VIX,15.1175,15.695,14.47,15.3,0.19,1.22,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_30102026.csv
+2026-10-30,NIFTY 50,22964.5,23118.1,22905.1,23053.1,116.35,0.51,19.3,2.83,1.42,https://nsearchives.nseindia.com/content/indices/ind_close_all_30102026.csv
+2026-10-30,NIFTY BANK,54907.1,55068.5,54580.75,54686.95,-222.7,-0.41,12.23,1.65,1.14,https://nsearchives.nseindia.com/content/indices/ind_close_all_30102026.csv
+2026-10-30,NIFTY MIDCAP 100,57806.05,57808.5,57193.95,57301.25,-540.4,-0.93,25.79,3.64,0.97,https://nsearchives.nseindia.com/content/indices/ind_close_all_30102026.csv
+2026-10-30,NIFTY SMALLCAP 100,18775.5,18782.65,18441.35,18463.6,-347.75,-1.85,33.68,3.58,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_30102026.csv
+2026-11-02,INDIA VIX,15.3025,15.9225,14.5475,15.5,0.2,1.29,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_02112026.csv
+2026-11-02,NIFTY 50,23222.3,23440.8,23207.05,23440.8,387.7,1.68,19.43,2.88,1.39,https://nsearchives.nseindia.com/content/indices/ind_close_all_02112026.csv
+2026-11-02,NIFTY BANK,54837.2,55046.35,54582,55002.2,315.25,0.58,12.23,1.66,1.14,https://nsearchives.nseindia.com/content/indices/ind_close_all_02112026.csv
+2026-11-02,NIFTY MIDCAP 100,57472.1,58097.9,57469.75,57983.4,682.15,1.19,26.18,3.69,0.96,https://nsearchives.nseindia.com/content/indices/ind_close_all_02112026.csv
+2026-11-02,NIFTY SMALLCAP 100,18442.5,18643.25,18381.65,18595.3,131.7,0.71,33.37,3.61,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_02112026.csv
+2026-11-03,INDIA VIX,15.5,16.2225,14.2525,15.72,0.22,1.44,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_03112026.csv
+2026-11-03,NIFTY 50,23582.25,23810.85,23482.8,23810.85,370.05,1.58,19.71,2.92,1.46,https://nsearchives.nseindia.com/content/indices/ind_close_all_03112026.csv
+2026-11-03,NIFTY BANK,55435.8,55739,55174.1,55540.05,537.85,0.98,12.35,1.67,1.13,https://nsearchives.nseindia.com/content/indices/ind_close_all_03112026.csv
+2026-11-03,NIFTY MIDCAP 100,58346,58600.45,58069.25,58596.25,612.85,1.06,26.47,3.73,0.93,https://nsearchives.nseindia.com/content/indices/ind_close_all_03112026.csv
+2026-11-03,NIFTY SMALLCAP 100,18692.4,18756.1,18580.3,18652.85,57.55,0.31,33.42,3.62,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_03112026.csv

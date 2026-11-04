@@ -9,11 +9,6 @@
     "euin": "E708284"
   },
   "standard_warning": "Mutual Fund investments are subject to market risks, read all scheme related documents carefully.",
-  "disclaimer": [
-    "Dhariwal Securities Private Limited provides distribution services only. It is not a SEBI-registered Investment Adviser, Research Analyst or Portfolio Management Services provider.",
-    "This brief is for information and investor education. It is not investment advice, research, or a recommendation to buy, sell or hold any security or scheme. Figures come from the sources named in each section; provisional data is marked as provisional. Times are IST unless stated.",
-    "Dhariwal Securities receives commission from asset management companies for distributing mutual funds. See the commission disclosures for details."
-  ],
   "unsubscribe": "To stop receiving this brief, reply with “Unsubscribe” or write to",
   "contacts": {
     "phone": "+91 73042 11122",
@@ -25,16 +20,24 @@
   },
   "links": [
     {
+      "label": "Disclaimer",
+      "url": "https://www.kubeerra.com/disclaimer"
+    },
+    {
       "label": "Commission disclosures",
       "url": "https://www.kubeerra.com/commission-disclosures"
     },
     {
-      "label": "Grievance redressal",
-      "url": "https://www.kubeerra.com/grievance-redressal"
-    },
-    {
       "label": "Risk factors",
       "url": "https://www.kubeerra.com/risk-factors"
+    },
+    {
+      "label": "Investor charter",
+      "url": "https://www.kubeerra.com/investor-charter"
+    },
+    {
+      "label": "Grievance redressal",
+      "url": "https://www.kubeerra.com/grievance-redressal"
     }
   ],
   "kubeerra_links": {
@@ -84,12 +87,105 @@
         "name": "Kubeerra guide: SIP or lump sum",
         "url": "https://www.kubeerra.com/blogs/sip-vs-lump-sum-which-suits-a-beginner"
       }
-    ]
+    ],
+    "disclaimer": {
+      "name": "Kubeerra disclaimer",
+      "url": "https://www.kubeerra.com/disclaimer"
+    },
+    "contact": {
+      "name": "Kubeerra contact page",
+      "url": "https://www.kubeerra.com/contact-us"
+    }
   },
   "assets": {
     "logo_email_url": "https://dhariwal-daily-capital-markets-repo.vercel.app/logo/kubeerra-logo-144.png",
     "logo_email_local": "assets/logo/kubeerra-tile-144.png",
     "logo_pdf_local": "assets/logo/kubeerra-tile-512.png"
   },
-  "pilot_note": "Internal pilot for the RM and MF team. Please do not forward to clients."
+  "pilot_note": "Internal pilot for the RM and MF team. Please do not forward to clients.",
+  "disclosures_status": "Draft prepared on 4 Nov 2026 for review by Dhariwal Securities' legal counsel (the Director asked for a disclaimer vetted by legal). Items marked for legal: the holdings statement, the jurisdiction clause (left out, as on the website) and the grievance routes.",
+  "disclosures": [
+    {
+      "title": "About this publication",
+      "paras": [
+        "The Kubeerra Market Brief is published by Dhariwal Securities Private Limited (Dhariwal Securities), which offers mutual fund distribution services under the brand Kubeerra. It is provided free of charge, for general information and investor education only.",
+        "The Brief is not investment advice, a research report or a research recommendation, and it is not an offer or a solicitation to buy, sell or hold any security, mutual fund unit or other financial product. Nothing in it is a forecast, a recommendation or a guarantee, and it does not take into account the objectives, financial situation or needs of any reader."
+      ]
+    },
+    {
+      "title": "Registration and capacity",
+      "paras": [
+        "Dhariwal Securities is an AMFI-registered Mutual Fund Distributor (ARN-369716; EUIN E708284). It is not a SEBI-registered Investment Adviser, Research Analyst or Portfolio Manager: it holds no registration under the SEBI (Investment Advisers) Regulations, 2013, the SEBI (Research Analysts) Regulations, 2014 or the SEBI (Portfolio Managers) Regulations, 2020. Its services are distribution only; it does not provide investment advisory, research or portfolio management services, and nothing in the Brief should be read as such.",
+        "Receiving the Brief does not create an advisory, fiduciary or client relationship with Dhariwal Securities."
+      ]
+    },
+    {
+      "title": "Sources and accuracy",
+      "paras": [
+        "Figures and news are compiled from public sources believed to be reliable, such as the stock exchanges, NSE Indices, AMFI, SEBI, the RBI, IBJA, company filings and the news organisations named in each section. Dhariwal Securities has not independently verified all of this information and makes no representation or warranty, express or implied, as to its accuracy, completeness or timeliness.",
+        "Figures are as of the dates stated and can change. Provisional data, such as foreign and domestic institutional flows, is marked as provisional and may be revised. Dhariwal Securities has no obligation to update the Brief. Times are IST unless stated."
+      ]
+    },
+    {
+      "title": "How to read the data",
+      "paras": [
+        "Moving averages and other technical figures are calculated from published closing values. They describe where prices have been and are not signals, forecasts or recommendations.",
+        "Statements about scheduled events and expectations are attributed to the institutions, polls or analysts that published them. They are not the views or forecasts of Dhariwal Securities.",
+        "Gold and silver rates are IBJA reference rates, without GST and making charges, shown for information only; they are not dealing prices."
+      ]
+    },
+    {
+      "title": "Companies and schemes mentioned",
+      "paras": [
+        "Companies, securities, indices and mutual fund schemes appear only as reported facts, for example the day's largest gainers and losers, quarterly results or open new fund offers. A mention is not a recommendation, an endorsement or a rating, and no opinion is given on their prospects.",
+        "Dhariwal Securities, its directors and its employees may hold investments in the securities or mutual fund schemes mentioned.",
+        "Riskometer levels are taken from each fund house's own documents as of the date stated and may change. Read the scheme information document, key information memorandum and statement of additional information before investing."
+      ]
+    },
+    {
+      "title": "Risks",
+      "paras": [
+        "Investments in the securities markets and in mutual funds are subject to market risks, including the possible loss of the amount invested. Past performance may or may not be sustained in future and is not a guarantee of future results. There is no assurance or guarantee of returns. Any return shown as an illustration is hypothetical and is not a promise or a forecast."
+      ]
+    },
+    {
+      "title": "Commissions and direct plans",
+      "paras": [
+        "Dhariwal Securities receives commission from asset management companies on mutual fund investments made through it, as set out in the commission disclosures on kubeerra.com. Investors can also invest directly with fund houses through direct plans, which carry lower expense ratios because no distribution commission is paid."
+      ]
+    },
+    {
+      "title": "Your decisions",
+      "paras": [
+        "Make investment decisions on the basis of your own objectives, financial situation and tolerance for risk, after reading the offer documents. Where appropriate, consult a SEBI-registered Investment Adviser and a tax or legal professional before investing."
+      ]
+    },
+    {
+      "title": "Limitation of liability",
+      "paras": [
+        "To the fullest extent permitted by law, Dhariwal Securities, its directors, employees and associates accept no liability for any loss or damage of any kind, whether direct, indirect or consequential, arising from the use of, or reliance on, the Brief or any information in it."
+      ]
+    },
+    {
+      "title": "Names, marks and sharing",
+      "paras": [
+        "Index names and trademarks belong to their owners, including NSE Indices Limited for the NIFTY indices and BSE Limited for the Sensex; their use does not imply endorsement. The Brief is intended for residents of India and is not an offer in any jurisdiction where one would be unlawful. It may be shared only in full, with these disclosures."
+      ]
+    },
+    {
+      "title": "Questions and complaints",
+      "paras": [
+        "Write to dhariwal.securities@kubeerra.com or follow the grievance redressal process on kubeerra.com. Complaints may also be lodged on SEBI's SCORES platform or through the SMART ODR portal."
+      ]
+    }
+  ],
+  "disclosures_short": "For information and investor education only. Not investment advice, research or a recommendation to buy, sell or hold any security or scheme. Dhariwal Securities is an AMFI-registered Mutual Fund Distributor, not a SEBI-registered Investment Adviser or Research Analyst. Figures are from the sources named and may be provisional; there is no guarantee of returns.",
+  "talk": {
+    "title": "Questions about your mutual funds?",
+    "text": "Speak to the Kubeerra team to understand how a scheme or category works, what it costs and the risks it carries, before you invest. You can also take the risk profile questionnaire on our website to see how much risk you are comfortable with.",
+    "links": [
+      "risk_profile",
+      "mutual_funds"
+    ]
+  }
 }

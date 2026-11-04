@@ -1,20 +1,32 @@
 {#- Kubeerra Market Brief: A4 PDF edition, rendered with WeasyPrint.
-    Same content and tokens as the email; print layout with running footer and page folio.
-    Links go only to kubeerra.com pages and the firm's email address; sources are named. -#}
+    Same content and tokens as the email, grouped into numbered clusters with a contents list
+    that carries page numbers and PDF bookmarks (D-046); the last page is the full disclosures
+    (D-053). Links go only to kubeerra.com pages and the firm's email address; sources are named. -#}
 {%- set C = tokens.color -%}
 {%- set SANS = tokens.font.pdf.sans|safe -%}
 {%- set MONO = tokens.font.pdf.mono|safe -%}
 {%- set meta = issue.meta -%}
-{%- macro sechead(num, name, headline, note=None) -%}
-<div class="sechead">
+{%- macro sechead(sid, headline, note=None) -%}
+{%- set s = S[sid] -%}
+<div class="sechead" id="s-{{ sid }}">
 <div class="rule"></div>
-<p class="mono accent">{{ num }} · {{ name }}{% if note %}<span class="secnote"> · {{ note }}</span>{% endif %}</p>
-<h2>{{ headline|t }}</h2>
+<p class="mono accent">{{ s.num }} · {{ s.title }}{% if note %}<span class="secnote"> · {{ note }}</span>{% endif %}</p>
+{% if headline %}<h3>{{ headline|t }}</h3>{% endif %}
+</div>
+{%- endmacro -%}
+{%- macro band(cid) -%}
+{%- set cl = (clusters|selectattr("id", "equalto", cid)|list)[0] -%}
+<div class="band{% if cl.num == 1 %} first{% endif %}" id="c-{{ cid }}">
+<p class="mono accent">Part {{ cl.num }} of {{ clusters|length }}</p>
+<h2>{{ cl.title }}</h2>
+<p class="banddesc">{{ cl.desc }}</p>
 </div>
 {%- endmacro -%}
 {%- macro names(items) -%}{{ items|map(attribute="name")|unique|join(", ") }}{%- endmacro -%}
 {%- macro src(items, prefix=None) -%}<p class="src">{{ prefix or ("Sources" if items|length > 1 else "Source") }}: {{ names(items) }}</p>{%- endmacro -%}
 {%- macro klink(link) -%}<a href="{{ link.url }}">{{ link.name }}</a>{%- endmacro -%}
+{%- macro dcls(v) -%}{{ 'up' if (v or 0) > 0 else ('down' if (v or 0) < 0 else 'flat') }}{%- endmacro -%}
+{%- macro item(title, text, srcs) -%}<p class="item">{% if title %}<strong>{{ title|t }}.</strong> {% endif %}{{ text|t }} <span class="srcin">{{ names(srcs) }}</span></p>{%- endmacro -%}
 <!DOCTYPE html>
 <html lang="en-IN">
 <head>
@@ -22,7 +34,7 @@
 <title>{{ pub.name }} · {{ meta.weekday }} {{ date_long }}</title>
 <meta name="author" content="{{ pub.publisher }}">
 <meta name="description" content="{{ meta.preheader }}">
-<meta name="keywords" content="Indian markets, NIFTY 50, BSE Sensex, mutual funds, Kubeerra">
+<meta name="keywords" content="Indian markets, NIFTY 50, BSE Sensex, gold, silver, mutual funds, Kubeerra">
 <meta name="generator" content="Kubeerra Market Brief renderer">
 <style>
 {% for f in font_faces %}
@@ -35,9 +47,15 @@
   @bottom-right { content: "PAGE " counter(page) " OF " counter(pages); font-family: {{ MONO }}; font-size: 6.8pt; letter-spacing: 0.1em; color: {{ C.text.secondary }}; }
 }
 @page :first { margin-top: 0; }
+@page disc {
+  background: {{ C.brand.navy }};
+  margin: 13mm 14mm 15mm 14mm;
+  @bottom-left { content: "{{ pub.name|upper }} · IMPORTANT DISCLOSURES"; font-family: {{ MONO }}; font-size: 6.8pt; letter-spacing: 0.1em; color: {{ C.text.inverseSoft }}; }
+  @bottom-right { content: "PAGE " counter(page) " OF " counter(pages); font-family: {{ MONO }}; font-size: 6.8pt; letter-spacing: 0.1em; color: {{ C.text.inverseSoft }}; }
+}
 html { font-family: {{ SANS }}; font-size: 9.4pt; line-height: 1.5; color: {{ C.text.primary }}; }
 body { margin: 0; }
-h1, h2, h3, p { margin: 0; }
+h1, h2, h3, h4, p { margin: 0; }
 a { color: {{ C.brand.cobalt }}; text-decoration: underline; }
 .mono { font-family: {{ MONO }}; text-transform: uppercase; letter-spacing: 0.1em; font-size: 6.8pt; line-height: 1.5; }
 .accent { color: {{ C.brand.cobalt }}; }
@@ -49,29 +67,49 @@ a { color: {{ C.brand.cobalt }}; text-decoration: underline; }
 .mast-logo img { width: 13mm; height: 13mm; display: block; }
 .mast-title { display: table-cell; vertical-align: middle; }
 .mast-title .mono { color: {{ C.text.inverseSoft }}; }
-.mast-title h1 { font-size: 22pt; line-height: 1.15; font-weight: 700; letter-spacing: -0.01em; color: {{ C.text.inverse }}; }
+.mast-title h1 { font-size: 22pt; line-height: 1.15; font-weight: 700; letter-spacing: -0.01em; color: {{ C.text.inverse }}; bookmark-level: none; }
 .mast-rule { width: 14mm; height: 2px; background: {{ C.brand.cobalt }}; margin: 4mm 0 2mm 0; }
 .mast-meta { color: {{ C.text.inverseSoft }}; }
 .regstrip { background: {{ C.surface.soft }}; margin: 0 -15mm; padding: 2.6mm 15mm 2.8mm 15mm; }
-.regline { font-size: 12pt; line-height: 1.35; font-weight: 500; }
-.asof { color: {{ C.text.secondary }}; margin-top: 0; }
+.asof { color: {{ C.text.secondary }}; }
 .internal { color: {{ C.status.down }}; font-weight: 600; margin-top: 0.8mm; }
-.brief { margin-top: 5mm; }
-.brief h2 { font-size: 12.5pt; font-weight: 700; }
-.brief ul { margin: 2mm 0 0 0; padding: 0; list-style: none; }
-.brief li { position: relative; padding-left: 5mm; margin-top: 1.2mm; font-size: 10pt; line-height: 1.48; }
-.brief li::before { content: ""; position: absolute; left: 0; top: 1.9mm; width: 1.6mm; height: 1.6mm; background: {{ C.brand.cobalt }}; }
-.sec { margin-top: 7.5mm; }
+.glance { margin-top: 5mm; }
+.glance h2 { font-size: 14pt; font-weight: 700; bookmark-level: 1; bookmark-label: "At a glance"; }
+.glance ul { margin: 2.5mm 0 0 0; padding: 0; list-style: none; }
+.glance li { position: relative; padding-left: 5mm; margin-top: 1.4mm; font-size: 10pt; line-height: 1.48; }
+.glance li::before { content: ""; position: absolute; left: 0; top: 1.9mm; width: 1.6mm; height: 1.6mm; background: {{ C.brand.cobalt }}; }
+table.keys { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: 3mm; }
+table.keys td { width: 33.33%; vertical-align: top; border-top: 0.75pt solid {{ C.border.default }}; padding: 2.4mm 4mm 2.4mm 0; }
+.k-label { color: {{ C.text.secondary }}; }
+.k-value { font-size: 15pt; line-height: 1.2; font-weight: 700; margin-top: 1mm; white-space: nowrap; }
+.k-chg { font-size: 9pt; font-weight: 700; margin-top: 0.4mm; white-space: nowrap; }
+.contents { margin-top: 6mm; }
+.contents h2 { font-size: 11pt; font-weight: 700; bookmark-level: none; }
+.toc { columns: 2; column-gap: 9mm; margin-top: 2mm; }
+.toc .row { display: table; width: 100%; border-bottom: 0.75pt solid {{ C.border.default }}; break-inside: avoid; padding: 1.6mm 0; }
+.toc .row > span { display: table-cell; vertical-align: top; }
+.toc .n { width: 7mm; font-family: {{ MONO }}; font-weight: 700; color: {{ C.brand.cobalt }}; }
+.toc .t a { color: {{ C.text.primary }}; text-decoration: none; font-weight: 700; }
+.toc .t .subs { display: block; font-size: 8.2pt; color: {{ C.text.secondary }}; font-weight: 400; margin-top: 0.4mm; }
+.toc .p { width: 13mm; text-align: right; font-family: {{ MONO }}; font-size: 8pt; color: {{ C.text.secondary }}; }
+.toc .p a { color: {{ C.text.secondary }}; text-decoration: none; }
+.toc .p a::after { content: target-counter(attr(href), page); }
+.band { margin-top: 9mm; background: {{ C.surface.soft }}; border-left: 1.4mm solid {{ C.brand.cobalt }}; padding: 3.2mm 5mm 3.4mm 5mm; break-after: avoid; break-inside: avoid; }
+.band.first { break-before: page; margin-top: 0; }
+.band h2 { font-size: 17pt; line-height: 1.2; font-weight: 700; color: {{ C.brand.navy }}; margin-top: 0.6mm; bookmark-level: 1; }
+.banddesc { font-size: 8.8pt; color: {{ C.text.secondary }}; margin-top: 0.8mm; }
+.sec { margin-top: 6.5mm; }
 .sec.keep { break-inside: avoid; }
 .sechead { break-inside: avoid; break-after: avoid; }
 .sechead .rule { width: 8mm; height: 2px; background: {{ C.brand.cobalt }}; margin-bottom: 2mm; }
-.sechead h2 { font-size: 13.5pt; line-height: 1.3; font-weight: 700; margin-top: 0.8mm; break-after: avoid; }
+.sechead h3 { font-size: 13pt; line-height: 1.3; font-weight: 700; margin-top: 0.8mm; break-after: avoid; bookmark-level: 2; }
 .secnote { color: {{ C.text.secondary }}; }
 table.data { width: 100%; border-collapse: collapse; margin-top: 3mm; }
 table.data th { font-family: {{ MONO }}; font-size: 6.8pt; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 400; color: {{ C.text.secondary }}; text-align: left; padding: 0 0 1.6mm 0; border-bottom: 0.75pt solid {{ C.border.default }}; }
 table.data td { padding: 1.35mm 0; border-bottom: 0.75pt solid {{ C.border.default }}; vertical-align: top; }
 table.data .r { text-align: right; padding-left: 3mm; white-space: nowrap; }
 table.data .name { font-weight: 600; }
+table.data .sub { display: block; font-size: 7.8pt; color: {{ C.text.secondary }}; font-weight: 400; }
 table.data tr { break-inside: avoid; }
 table.schemes { margin-top: 1.6mm; break-inside: avoid; }
 table.schemes td { font-size: 9pt; padding-right: 3mm; }
@@ -79,60 +117,78 @@ table.schemes td.c { color: {{ C.text.secondary }}; }
 .region { font-family: {{ MONO }}; font-size: 6.8pt; letter-spacing: 0.1em; text-transform: uppercase; color: {{ C.text.secondary }}; margin-right: 1.5mm; }
 .up { color: {{ C.status.up }}; } .down { color: {{ C.status.down }}; } .flat, .neutral { color: {{ C.text.secondary }}; }
 .strong { font-weight: 700; }
-.note { font-size: 8.8pt; color: {{ C.text.secondary }}; margin-top: 2.2mm; }
+.note { font-size: 8.6pt; color: {{ C.text.secondary }}; margin-top: 2mm; }
 .src { font-size: 7.8pt; color: {{ C.text.secondary }}; margin-top: 1.4mm; }
 .srcin { font-size: 7.8pt; color: {{ C.text.secondary }}; }
-.note .src { margin-left: 1mm; }
+.item { margin-top: 2mm; break-inside: avoid; }
+.cols2 { column-count: 2; column-gap: 8mm; }
+.cols2 > * { break-inside: avoid; }
 table.tiles { width: 100%; border-collapse: collapse; margin-top: 2.5mm; table-layout: fixed; break-inside: avoid; }
-table.tiles td { width: 33.33%; vertical-align: top; border-top: 0.75pt solid {{ C.border.default }}; padding: 2.5mm 4mm 2.6mm 0; }
+table.tiles td { vertical-align: top; border-top: 0.75pt solid {{ C.border.default }}; padding: 2.5mm 4mm 2.6mm 0; }
 .tile-label { color: {{ C.text.secondary }}; }
-.tile-value { font-size: 16pt; line-height: 1.2; font-weight: 700; color: {{ C.text.primary }}; margin-top: 1.2mm; white-space: nowrap; }
+.tile-value { font-size: 15pt; line-height: 1.2; font-weight: 700; color: {{ C.text.primary }}; margin-top: 1.2mm; white-space: nowrap; }
 .tile-chg { font-size: 9pt; line-height: 1.3; font-weight: 700; margin-top: 0.5mm; white-space: nowrap; }
-.tile-detail { font-size: 8.4pt; line-height: 1.4; color: {{ C.text.secondary }}; margin-top: 1mm; }
+.tile-detail { font-size: 8.2pt; line-height: 1.4; color: {{ C.text.secondary }}; margin-top: 1mm; }
 table.barrows { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: 1.2mm; }
 table.barrows td { padding: 1.3mm 0; vertical-align: middle; font-size: 9pt; }
 table.barrows td.bn { width: 30%; padding-right: 3mm; }
 table.barrows td.bb { width: 56%; }
 table.barrows td.bv { width: 14%; text-align: right; font-weight: 700; white-space: nowrap; }
 .barhead { margin-top: 3.5mm; }
-.barhead:first-of-type { margin-top: 2.5mm; }
 .track { height: 2.6mm; background: {{ C.chart.track }}; }
 .fill { height: 2.6mm; }
+table.two { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: 2.5mm; }
+table.two > tbody > tr > td { vertical-align: top; width: 50%; }
+table.two > tbody > tr > td:first-child { padding-right: 5mm; }
+table.two > tbody > tr > td:last-child { padding-left: 5mm; }
+.chart { margin-top: 2.5mm; break-inside: avoid; }
+.chart svg { display: block; }
 .stories { column-count: 2; column-gap: 8mm; margin-top: 2mm; }
 .story { break-inside: avoid; padding-top: 3.2mm; margin-top: 3.2mm; border-top: 0.75pt solid {{ C.border.default }}; }
 .story:first-child { border-top: none; margin-top: 0; padding-top: 1mm; }
 .story .tags { color: {{ C.brand.tealDark }}; }
-.story h3 { font-size: 10.8pt; line-height: 1.32; font-weight: 700; margin-top: 1mm; }
+.story h4 { font-size: 10.6pt; line-height: 1.32; font-weight: 700; margin-top: 1mm; }
 .story p.what { margin-top: 1.4mm; }
 .story p.why { margin-top: 1.6mm; }
 .story p.why .mono { color: {{ C.brand.tealDark }}; margin-right: 1mm; }
 .ipos { column-count: 2; column-gap: 8mm; margin-top: 1mm; }
-.ipo { break-inside: avoid; margin-top: 3mm; }
-.ipo h3 { font-size: 10.2pt; font-weight: 700; }
-.ipo h3 .mono { color: {{ C.brand.tealDark }}; margin-left: 1.5mm; }
+.ipo, .result { break-inside: avoid; margin-top: 3mm; }
+.ipo h4, .result h4 { font-size: 10.2pt; font-weight: 700; }
+.ipo h4 .mono, .result h4 .mono { color: {{ C.brand.tealDark }}; margin-left: 1.5mm; }
 .ipo p.fact { font-size: 8.8pt; color: {{ C.text.secondary }}; margin-top: 0.6mm; }
+.result p.fact { font-size: 9.2pt; margin-top: 0.6mm; }
 table.mfstats { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: 3mm; break-inside: avoid; }
 table.mfstats td { vertical-align: top; border-top: 0.75pt solid {{ C.border.default }}; padding: 3mm 4mm 2.6mm 0; }
-.cols2 { column-count: 2; column-gap: 8mm; }
-.cols2 p { break-inside: avoid; margin-top: 2mm; }
 .sublabel { color: {{ C.text.secondary }}; margin-top: 5mm; break-after: avoid; }
 .mfitem { margin-top: 2mm; break-inside: avoid; }
 .block { break-inside: avoid; }
 .readmore { margin-top: 3mm; font-weight: 600; }
-.learn { margin-top: 2mm; }
-.learn p { max-width: 160mm; font-size: 10pt; margin-top: 2mm; }
+.talk { margin-top: 3mm; background: {{ C.brand.paleBlue }}; border-left: 1.4mm solid {{ C.brand.cobalt }}; padding: 4mm 5mm; break-inside: avoid; }
+.talk h4 { font-size: 11.5pt; font-weight: 700; color: {{ C.brand.navy }}; }
+.talk p { margin-top: 1.5mm; }
+.learn .body { columns: 2; column-gap: 8mm; margin-top: 1mm; }
+.learn .body p { font-size: 9.6pt; margin-top: 0; margin-bottom: 2mm; break-inside: avoid; }
+.learn p { font-size: 9.6pt; margin-top: 2mm; }
 .learn .illus { font-size: 8.6pt; color: {{ C.text.secondary }}; }
 table.agenda { width: 100%; border-collapse: collapse; margin-top: 3mm; }
+.days { columns: 2; column-gap: 8mm; margin-top: 2.5mm; }
+.day { break-inside: avoid; border-top: 0.75pt solid {{ C.border.default }}; padding: 1.8mm 0 2mm; }
+.day .when { font-size: 7.6pt; letter-spacing: 0.06em; color: {{ C.brand.cobalt }}; margin-bottom: 0.8mm; }
 table.agenda tr { break-inside: avoid; }
 table.agenda td { padding: 1.8mm 0; border-bottom: 0.75pt solid {{ C.border.default }}; vertical-align: top; }
-table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; letter-spacing: 0.06em; color: {{ C.text.secondary }}; padding-top: 2.2mm; }
-.disclosure { background: {{ C.brand.navy }}; color: {{ C.text.inverseSoft }}; padding: 7mm 8mm 7mm 8mm; margin-top: 10mm; break-inside: avoid; }
-.disclosure h2 { color: {{ C.text.inverse }}; font-size: 12pt; font-weight: 700; }
-.disclosure .regline { color: {{ C.text.inverse }}; margin-top: 2mm; }
-.disclosure p { font-size: 8.6pt; line-height: 1.5; margin-top: 2mm; }
-.disclosure .warning { color: {{ C.text.inverse }}; font-weight: 700; font-size: 9.4pt; }
+table.agenda td.t { width: 26mm; font-family: {{ MONO }}; font-size: 7.6pt; letter-spacing: 0.06em; color: {{ C.text.secondary }}; padding-top: 2.2mm; }
+table.agenda td.t.accent { color: {{ C.brand.cobalt }}; }
+.disclosure { page: disc; break-before: page; color: {{ C.text.inverseSoft }}; }
+.disclosure h2 { color: {{ C.text.inverse }}; font-size: 17pt; font-weight: 700; bookmark-level: 1; }
+.disclosure .regline { color: {{ C.text.inverse }}; font-size: 12pt; line-height: 1.32; font-weight: 600; margin-top: 2mm; }
+.disclosure .dcols { column-count: 2; column-gap: 7mm; margin-top: 3.5mm; column-fill: balance; }
+.disclosure .dsec { break-inside: avoid; margin-bottom: 2.4mm; }
+.disclosure .dsec .mono { color: {{ C.text.inverse }}; font-size: 6.4pt; }
+.disclosure .dsec p { font-size: 7.7pt; line-height: 1.42; margin-top: 0.8mm; }
+.disclosure .warning { color: {{ C.text.inverse }}; font-weight: 700; font-size: 12pt; line-height: 1.35; margin-top: 2.5mm; padding: 2.6mm 0; border-top: 0.75pt solid {{ C.border.inverse }}; border-bottom: 0.75pt solid {{ C.border.inverse }}; }
+.disclosure .contact { font-size: 7.8pt; margin-top: 2.2mm; }
 .disclosure a { color: {{ C.text.inverseLink }}; }
-.disclosure .rule { width: 14mm; height: 2px; background: {{ C.brand.cobalt }}; margin: 4mm 0 1mm 0; }
+.disclosure .rule { width: 14mm; height: 2px; background: {{ C.brand.cobalt }}; margin: 0 0 3mm 0; }
 </style>
 </head>
 <body>
@@ -151,30 +207,116 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 
 <div class="regstrip">
 <p class="mono asof">India: {{ meta.india_as_of }} · Global: {{ meta.global_as_of }}</p>
-{% if meta.audience == "internal" %}<p class="mono internal">Internal pilot · RM and MF team only · Not for clients</p>{% endif %}
+{% if meta.audience == "internal" %}<p class="mono internal">Internal · not for clients</p>{% endif %}
 </div>
 
-<section class="brief">
-<h2>The morning in brief</h2>
-<ul>{% for item in issue.brief %}<li>{{ item|t }}</li>{% endfor %}</ul>
+<section class="glance">
+<h2>At a glance</h2>
+{% if glance %}
+<table class="keys">
+{% for row in glance|batch(3) %}<tr>{% for t in row %}<td><p class="mono k-label">{{ t.label }}</p><p class="k-value num">{{ t.value }}</p>{% if t.change_pct is not none %}<p class="k-chg num {{ dcls(t.change_pct) }}">{{ t.change_pct|arrow }} {{ t.change_pct|pct }}</p>{% endif %}</td>{% endfor %}{% for _ in range(3 - row|length) %}<td></td>{% endfor %}</tr>{% endfor %}
+</table>
+{% endif %}
+<ul>{% for b in issue.brief %}<li>{{ b|t }}</li>{% endfor %}</ul>
+{% if glance %}<p class="note">Index closes for {{ issue.snapshot.as_of|replace("close, ", "") }}{% if metals %}; gold and silver are IBJA {{ metals.session }} rates for {{ metals.date }}{% endif %}. Sources are named in each section.</p>{% endif %}
 </section>
 
+<section class="contents">
+<h2>In this issue</h2>
+<div class="toc">
+{% for cl in clusters %}<div class="row"><span class="n">{{ cl.num }}</span><span class="t"><a href="#c-{{ cl.id }}">{{ cl.title }}</a><span class="subs">{{ cl.sections|map(attribute="title")|join(" · ") }}</span></span><span class="p"><a href="#c-{{ cl.id }}">Page </a></span></div>
+{% endfor %}<div class="row"><span class="n">i</span><span class="t"><a href="#disclosures">Important disclosures</a><span class="subs">Registration, sources, risks and how to raise a complaint</span></span><span class="p"><a href="#disclosures">Page </a></span></div>
+</div>
+</section>
+
+{#- 1 Markets -#}
+{{ band("markets") }}
 <section class="sec">
-{{ sechead("01", "Market snapshot", issue.snapshot.headline, "as of " ~ issue.snapshot.as_of) }}
+{{ sechead("snapshot", issue.snapshot.headline, "as of " ~ issue.snapshot.as_of) }}
 <table class="data">
 <thead><tr><th>Index</th><th class="r">Close</th><th class="r">Change</th><th class="r">%</th></tr></thead>
 <tbody>
 {% for r in issue.snapshot.indices %}
-{% set cls = "neutral" if r.neutral|default(false) else (("up" if r.change > 0 else ("down" if r.change < 0 else "flat"))) %}
+{% set cls = "neutral" if r.neutral|default(false) else dcls(r.change) %}
 <tr><td class="name">{{ r.name }}</td><td class="r num">{{ r.close|level }}</td><td class="r num {{ cls }}">{{ r.change|points }}</td><td class="r num strong {{ cls }}">{{ r.change_pct|arrow }} {{ r.change_pct|pct }}</td></tr>
 {% endfor %}
 </tbody>
 </table>
-<p class="note">{% if issue.snapshot.breadth %}{% set b = issue.snapshot.breadth %}Breadth on the NSE: {{ b.advances|group }} securities advanced and {{ b.declines|group }} declined{% if b.get('unchanged') is not none %}, {{ b.unchanged|group }} unchanged{% endif %}. {% endif %}<span class="src">{{ "Sources" if snapshot_sources|length > 1 else "Source" }}: {{ names(snapshot_sources) }}</span></p>
+<p class="note">{% if issue.snapshot.breadth %}{% set b = issue.snapshot.breadth %}Breadth on the NSE: {{ b.advances|group }} securities advanced and {{ b.declines|group }} declined{% if b.get('unchanged') is not none %}, {{ b.unchanged|group }} unchanged{% endif %}. {% endif %}<span class="srcin">{{ "Sources" if snapshot_sources|length > 1 else "Source" }}: {{ names(snapshot_sources) }}</span></p>
+</section>
+
+{% if "movers" in S %}{% set mv = issue.movers %}
+<section class="sec keep">
+{{ sechead("movers", "The " ~ mv.universe ~ "'s largest gains and falls on the day", mv.as_of) }}
+<table class="two"><tr>
+{% for title, rows in (("Gainers", mv.gainers), ("Losers", mv.losers)) %}
+<td><p class="mono quiet">{{ title }}</p>
+<table class="data"><tbody>{% for x in rows %}<tr><td class="name">{{ x.name|t }}{% if x.get('close') or x.get('note') %}<span class="sub">{% if x.get('close') %}₹{{ x.close|level }}{% endif %}{% if x.get('close') and x.get('note') %} · {% endif %}{% if x.get('note') %}{{ x.note|t }}{% endif %}</span>{% endif %}</td><td class="r num strong {{ dcls(x.change_pct) }}">{{ x.change_pct|arrow }} {{ x.change_pct|pct }}</td></tr>{% endfor %}</tbody></table></td>
+{% endfor %}
+</tr></table>
+<p class="note">Ranked by change on the day among {{ mv.universe }} members; not a recommendation. <span class="srcin">{{ "Sources" if (mv|srcs)|length > 1 else "Source" }}: {{ names(mv|srcs) }}</span></p>
+</section>
+{% endif %}
+
+{% if "technicals" in S %}{% set tc = issue.technicals %}
+<section class="sec keep">
+{{ sechead("technicals", tc.get("headline"), tc.as_of) }}
+{% if charts.range and nifty_tech %}{% set rb = charts.range %}
+<div class="chart">
+<p class="mono quiet">NIFTY 50 · the day's range</p>
+<svg width="180mm" height="15mm" viewBox="0 0 1000 84" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NIFTY 50 range from {{ nifty_tech.low|level }} to {{ nifty_tech.high|level }}, open {{ nifty_tech.open|level }}, close {{ nifty_tech.close|level }}">
+<rect x="0" y="22" width="1000" height="22" fill="{{ C.chart.track }}"/>
+<rect x="{{ (rb.a * 10)|round|int }}" y="22" width="{{ (rb.b * 10)|round|int }}" height="22" fill="{{ C.chart.gain if rb.up else C.chart.loss }}"/>
+<line x1="{{ (rb.open_pct * 10)|round|int }}" y1="12" x2="{{ (rb.open_pct * 10)|round|int }}" y2="54" stroke="{{ C.text.primary }}" stroke-width="3"/>
+<line x1="{{ (rb.close_pct * 10)|round|int }}" y1="12" x2="{{ (rb.close_pct * 10)|round|int }}" y2="54" stroke="{{ C.brand.navy }}" stroke-width="6"/>
+<text x="0" y="78" font-family="{{ SANS }}" font-size="22" fill="{{ C.text.secondary }}">Low {{ nifty_tech.low|level }}</text>
+<text x="1000" y="78" text-anchor="end" font-family="{{ SANS }}" font-size="22" fill="{{ C.text.secondary }}">High {{ nifty_tech.high|level }}</text>
+</svg>
+<p class="note">Opened at {{ nifty_tech.open|level }} (thin mark) and closed at {{ nifty_tech.close|level }} (thick mark); the shaded part is the move from the open to the close.</p>
+</div>
+{% endif %}
+<table class="data">
+<thead><tr><th>Index</th><th class="r">Close</th><th class="r">20-day average</th><th class="r">50-day average</th><th class="r">200-day average</th></tr></thead>
+<tbody>{% for t in tc["items"] %}<tr><td class="name">{{ t.index }}</td><td class="r num strong">{{ t.close|level }}</td>{% for k in ("sma20", "sma50", "sma200") %}<td class="r num">{% if t[k] %}{{ t[k]|level }}<span class="sub">close {{ (((t.close - t[k]) / t[k]) * 100)|pct }}</span>{% else %}<span class="quiet">n/a</span>{% endif %}</td>{% endfor %}</tr>{% endfor %}</tbody>
+</table>
+{% if tc.vix %}<p class="note">India VIX, a measure of expected volatility derived from NIFTY options, closed at {{ tc.vix.close|level }}{% if tc.vix.change_pct is not none %} ({{ tc.vix.change_pct|pct }} on the day){% endif %}.</p>{% endif %}
+{% if charts.trend %}{% set tr = charts.trend %}
+<div class="chart">
+<p class="mono quiet">NIFTY 50 · last {{ tr.n }} closes, {{ tr.first }} to {{ tr.last }}</p>
+<svg width="180mm" height="34mm" viewBox="0 0 600 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NIFTY 50 closes from {{ tr.first }} to {{ tr.last }}, between {{ tr.lo|level }} and {{ tr.hi|level }}">
+<g transform="translate(20,14)">
+<line x1="0" y1="0" x2="560" y2="0" stroke="{{ C.border.default }}" stroke-width="1"/>
+<line x1="0" y1="100" x2="560" y2="100" stroke="{{ C.border.default }}" stroke-width="1"/>
+<polygon points="0,100 {{ tr.points }} 560,100" fill="{{ C.brand.paleBlue }}"/>
+<polyline points="{{ tr.points }}" fill="none" stroke="{{ C.brand.cobalt }}" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="{{ tr.xs[-1] }}" cy="{{ tr.ys[-1] }}" r="4.5" fill="{{ C.brand.navy }}"/>
+<text x="0" y="-4" font-family="{{ SANS }}" font-size="11" fill="{{ C.text.secondary }}">High {{ tr.hi|level }}</text>
+<text x="0" y="114" font-family="{{ SANS }}" font-size="11" fill="{{ C.text.secondary }}">Low {{ tr.lo|level }}</text>
+<text x="0" y="132" font-family="{{ SANS }}" font-size="11" fill="{{ C.text.secondary }}">{{ tr.first }}</text>
+<text x="560" y="132" text-anchor="end" font-family="{{ SANS }}" font-size="11" fill="{{ C.text.secondary }}">{{ tr.last }}: {{ tr.end|level }}</text>
+</g>
+</svg>
+</div>
+{% endif %}
+<p class="note">{{ tc.note|t }} <span class="srcin">Source: NSE daily index files</span></p>
+</section>
+{% endif %}
+
+<section class="sec keep">
+{{ sechead("sectors", issue.sectors.headline, issue.sectors.as_of) }}
+<table class="two"><tr>
+{% for group_name, rows in (("Strongest", sectors.top), ("Weakest", sectors.bottom)) %}
+<td><p class="mono quiet barhead">{{ group_name }}</p>
+<table class="barrows">
+{% for s in rows %}<tr><td class="bn">{{ s.name }}</td><td class="bb"><div class="track"><div class="fill" style="width: {{ s.bar }}%; background: {{ C.chart.gain if s.change_pct >= 0 else C.chart.loss }};"></div></div></td><td class="bv num {{ dcls(s.change_pct) }}">{{ s.change_pct|pct }}</td></tr>{% endfor %}
+</table></td>
+{% endfor %}
+</tr></table>
+{{ src([issue.sectors.source]) }}
 </section>
 
 <section class="sec keep">
-{{ sechead("02", "Flows, currency and commodities", issue.flows.headline) }}
+{{ sechead("flows", issue.flows.headline) }}
 <table class="tiles">
 {% for row in issue.flows.tiles|batch(3) %}
 <tr>{% for t in row %}<td><p class="mono tile-label">{{ t.label }}{% if t.provisional|default(false) %} · provisional{% endif %}</p><p class="tile-value num" style="color: {{ t|figcolor }};">{{ t|figure }}</p>{% if t|chip %}<p class="tile-chg num" style="color: {{ (t|movement)|mvcolor }};">{{ t|chip }}</p>{% endif %}<p class="tile-detail">{{ t.detail|t }} · {{ names(t|srcs) }}</p></td>{% endfor %}{% for _ in range(3 - row|length) %}<td></td>{% endfor %}</tr>
@@ -182,68 +324,117 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 </table>
 </section>
 
-<section class="sec keep">
-{{ sechead("03", "Sector scoreboard", issue.sectors.headline, issue.sectors.as_of) }}
-{% for group_name, rows in (("Strongest", sectors.top), ("Weakest", sectors.bottom)) %}
-<p class="mono quiet barhead">{{ group_name }}</p>
-<table class="barrows">
-{% for s in rows %}
-<tr><td class="bn">{{ s.name }}</td><td class="bb"><div class="track"><div class="fill" style="width: {{ s.bar }}%; background: {{ C.chart.gain if s.change_pct >= 0 else C.chart.loss }};"></div></div></td><td class="bv num {{ 'up' if s.change_pct > 0 else ('down' if s.change_pct < 0 else 'flat') }}">{{ s.change_pct|pct }}</td></tr>
-{% endfor %}
-</table>
-{% endfor %}
-{{ src([issue.sectors.source]) }}
-</section>
+{#- 2 Fundamental outlook -#}
+{% if (clusters|selectattr("id", "equalto", "outlook")|list) %}{% set ol = issue.outlook %}
+{{ band("outlook") }}
+{% if "drivers" in S %}<section class="sec">
+{{ sechead("drivers", ol.headline) }}
+<div class="cols2">{% for d in ol.drivers %}{{ item(d.get('title'), d.text, d|srcs) }}{% endfor %}</div>
+</section>{% endif %}
+{% if "cues" in S %}<section class="sec">
+{{ sechead("cues", None) }}
+<div class="cols2">{% for d in ol.global_cues %}{{ item(d.get('title'), d.text, d|srcs) }}{% endfor %}</div>
+</section>{% endif %}
+{% if "events" in S %}<section class="sec">
+{{ sechead("events", None) }}
+<table class="agenda">{% for e in ol.events %}<tr><td class="t accent">{{ e.when|upper }}</td><td><strong>{{ e.title|t }}.</strong> {{ e.text|t }} <span class="srcin">{{ names(e|srcs) }}</span></td></tr>{% endfor %}</table>
+<p class="note">Expectations are those of the named sources, not of Kubeerra. They are not a forecast.</p>
+</section>{% endif %}
+{% endif %}
 
-<section class="sec">
-{{ sechead("04", "Top stories", "What moved, and why it matters for Indian investors") }}
-<div class="stories">
-{% for s in issue.stories %}
-<article class="story">
-<p class="mono tags">{{ s.topic }} · {{ s.relevance }}</p>
-<h3>{{ s.headline|t }}</h3>
-<p class="what">{{ s.what|t }}</p>
-<p class="why"><span class="mono">Why it matters</span> {{ s.why|t }}</p>
-{{ src(s|srcs) }}
-</article>
-{% endfor %}
-</div>
-</section>
-
+{#- 3 Global markets -#}
+{{ band("global") }}
+{% if "us" in S %}<section class="sec">
+{{ sechead("us", issue.global.headline) }}
+<div class="cols2">{% for u in issue.global.us %}{{ item(u.get('title'), u.text, u|srcs) }}{% endfor %}</div>
+</section>{% endif %}
 <section class="sec keep">
-{{ sechead("05", "Global markets", issue.global.headline) }}
+{{ sechead("world", None if "us" in S else issue.global.headline) }}
 <table class="data">
 <thead><tr><th>Market</th><th>As of</th><th class="r">Level</th><th class="r">Change</th></tr></thead>
 <tbody>
-{% for g in issue.global["items"] %}
-<tr><td><span class="region">{{ g.region }}</span>{{ g.name }}</td><td class="quiet">{{ g.as_of }}</td><td class="r num">{{ g.close|level }}</td><td class="r num strong {{ 'up' if (g.change_pct or 0) > 0 else ('down' if (g.change_pct or 0) < 0 else 'flat') }}">{% if g.change_pct is not none %}{{ g.change_pct|arrow }} {{ g.change_pct|pct }}{% else %}Not available{% endif %}</td></tr>
-{% endfor %}
+{% for g in issue.global["items"] %}<tr><td><span class="region">{{ g.region }}</span>{{ g.name }}</td><td class="quiet">{{ g.as_of }}</td><td class="r num">{{ g.close|level }}</td><td class="r num strong {{ dcls(g.change_pct) }}">{% if g.change_pct is not none %}{{ g.change_pct|arrow }} {{ g.change_pct|pct }}{% else %}Not available{% endif %}</td></tr>{% endfor %}
+{% for x in issue.global.get("extras", []) %}<tr><td><span class="region">Rates</span>{{ x.label }}</td><td class="quiet">{{ x.get('as_of') or '' }}</td><td class="r num">{{ x|figure }}</td><td class="r num strong" style="color: {{ (x|movement)|mvcolor }};">{{ x|chip }}</td></tr>{% endfor %}
 </tbody>
 </table>
 <p class="note">{{ issue.global.note|t }}</p>
-{{ src(global_sources) }}
+{{ src(global_sources + (issue.global.get("extras", [])|unique_sources)) }}
 </section>
+{% if "gevents" in S %}<section class="sec">
+{{ sechead("gevents", None) }}
+<div class="cols2">{% for e in issue.global.events %}{{ item(e.get('title'), e.text, e|srcs) }}{% endfor %}</div>
+</section>{% endif %}
 
+{#- 4 Gold and silver -#}
+{% if "metals" in S %}{% set mt = issue.metals %}
+{{ band("metals") }}
 <section class="sec">
-{{ sechead("06", "IPO desk", issue.ipos.headline) }}
+{{ sechead("metals", mt.headline) }}
+<table class="tiles">
+<tr>
+<td><p class="mono tile-label">Gold 999 · ₹ per 10 g</p><p class="tile-value num">₹{{ metals.gold|group }}</p>{% if metals.gold_pct is not none %}<p class="tile-chg num {{ dcls(metals.gold_pct) }}">{{ metals.gold_pct|arrow }} {{ metals.gold_pct|pct }}</p>{% endif %}<p class="tile-detail">IBJA {{ metals.session }} rate, {{ metals.date }}{% if metals.gold_prev %} · ₹{{ metals.gold_prev|group }} on {{ metals.prev_date }}{% endif %}</p></td>
+<td><p class="mono tile-label">Silver 999 · ₹ per kg</p><p class="tile-value num">₹{{ metals.silver|group }}</p>{% if metals.silver_pct is not none %}<p class="tile-chg num {{ dcls(metals.silver_pct) }}">{{ metals.silver_pct|arrow }} {{ metals.silver_pct|pct }}</p>{% endif %}<p class="tile-detail">IBJA {{ metals.session }} rate, {{ metals.date }}{% if metals.silver_prev %} · ₹{{ metals.silver_prev|group }} on {{ metals.prev_date }}{% endif %}</p></td>
+{% for f in mt.get("international", [])[:2] %}<td><p class="mono tile-label">{{ f.label }}</p><p class="tile-value num">{{ f|figure }}</p>{% if f|chip %}<p class="tile-chg num" style="color: {{ (f|movement)|mvcolor }};">{{ f|chip }}</p>{% endif %}<p class="tile-detail">{{ f.get('as_of') or f.detail }} · {{ names(f|srcs) }}</p></td>{% endfor %}{% for _ in range(2 - mt.get("international", [])[:2]|length) %}<td></td>{% endfor %}
+</tr>
+{% if mt.get("international", [])|length > 2 %}<tr>{% for f in mt.international[2:] %}<td><p class="mono tile-label">{{ f.label }}</p><p class="tile-value num">{{ f|figure }}</p>{% if f|chip %}<p class="tile-chg num" style="color: {{ (f|movement)|mvcolor }};">{{ f|chip }}</p>{% endif %}<p class="tile-detail">{{ f.get('as_of') or f.detail }} · {{ names(f|srcs) }}</p></td>{% endfor %}{% for _ in range(4 - mt.international[2:]|length) %}<td></td>{% endfor %}</tr>{% endif %}
+</table>
+<p class="mono quiet sublabel">What moved gold and silver</p>
+<div class="cols2">{% for c in mt.commentary %}{{ item(c.get('title'), c.text, c|srcs) }}{% endfor %}</div>
+<p class="note">IBJA rates are reference rates without GST and making charges; changes are against the previous day's rate for the same session. Expectations, where given, are those of the named sources. <span class="srcin">Source: {{ names(mt.ibja|srcs) }}</span></p>
+</section>
+{% endif %}
+
+{#- 5 Companies -#}
+{{ band("companies") }}
+{% if "results" in S %}<section class="sec">
+{{ sechead("results", "Quarterly results from " ~ (issue.results|map(attribute="company")|list|andjoin)) }}
+<div class="cols2">
+{% for r in issue.results %}<div class="result"><h4>{{ r.company }}<span class="mono">{{ r.period }}</span></h4>{% for f in r.facts %}<p class="fact">{{ f|t }}</p>{% endfor %}{% if r.get('reaction') %}<p class="fact quiet">{{ r.reaction|t }}</p>{% endif %}{{ src(r|srcs) }}</div>
+{% endfor %}
+</div>
+<p class="note">Reported figures only; no view on the companies' prospects.</p>
+</section>{% endif %}
+{% if "bigmovers" in S %}<section class="sec keep">
+{{ sechead("bigmovers", "Large one-day moves in shares, and the reasons reported") }}
+<table class="data"><tbody>{% for x in issue.big_movers %}<tr><td class="name">{{ x.company }}<span class="sub">{{ x.reason|t }}{% if x.get('close') %} · ₹{{ x.close|level }}{% endif %} · {{ names(x|srcs) }}</span></td><td class="r num strong {{ dcls(x.change_pct) }}">{{ x.change_pct|arrow }} {{ x.change_pct|pct }}</td></tr>{% endfor %}</tbody></table>
+<p class="note">Reported moves and reasons; not a recommendation.</p>
+</section>{% endif %}
+{% if "actions" in S %}{% set ca = issue.corporate_actions %}<section class="sec keep">
+{{ sechead("actions", ca.get("headline") or ("Dividends, bonus issues and splits with record dates, " ~ ca.window)) }}
+<table class="agenda">{% for a in ca["items"] %}<tr><td class="t">{{ a.date|upper }}</td><td><strong>{{ a.company|t }}:</strong> {{ a.action|t }}{% if a.get('details') %}; {{ a.details|t }}{% endif %} <span class="srcin">{{ names(a|srcs) }}</span></td></tr>{% endfor %}</table>
+{% if ca.get('note') %}<p class="note">{{ ca.note|t }}</p>{% endif %}
+</section>{% endif %}
+<section class="sec">
+{{ sechead("ipos", issue.ipos.headline) }}
 <div class="ipos">
-{% for ipo in issue.ipos["items"] %}
-<div class="ipo"><h3>{{ ipo.company }}<span class="mono">{{ ipo.status }}</span></h3>{% for f in ipo.facts %}<p class="fact">{{ f|t }}</p>{% endfor %}{{ src(ipo|srcs) }}</div>
+{% for ipo in issue.ipos["items"] %}<div class="ipo"><h4>{{ ipo.company }}<span class="mono">{{ ipo.status }}</span></h4>{% for f in ipo.facts %}<p class="fact">{{ f|t }}</p>{% endfor %}{{ src(ipo|srcs) }}</div>
 {% endfor %}
 </div>
 <p class="note">{{ issue.ipos.note|t }}</p>
 </section>
+{% if "stories" in S %}<section class="sec">
+{{ sechead("stories", "Other news that matters for Indian investors") }}
+<div class="stories">
+{% for s in issue.stories %}<article class="story"><p class="mono tags">{{ s.topic }} · {{ s.relevance }}</p><h4>{{ s.headline|t }}</h4><p class="what">{{ s.what|t }}</p><p class="why"><span class="mono">Why it matters</span> {{ s.why|t }}</p>{{ src(s|srcs) }}</article>
+{% endfor %}
+</div>
+</section>{% endif %}
 
+{#- 6 Mutual funds -#}
 {% set mf = issue.mf %}
+{{ band("funds") }}
 <section class="sec">
-{{ sechead("07", "Mutual fund corner", mf.headline, "industry data, " ~ mf.period) }}
+{{ sechead("mf", mf.headline, "industry data, " ~ mf.period) }}
 <table class="mfstats"><tr>
 {% for st in mf.stats %}<td><p class="mono tile-label">{{ st.label }}</p><p class="tile-value num" style="color: {{ st|figcolor }};">{{ st|figure }}</p>{% if st|chip %}<p class="tile-chg num" style="color: {{ (st|movement)|mvcolor }};">{{ st|chip }}</p>{% endif %}<p class="tile-detail">{{ st.detail|t }}</p></td>{% endfor %}
 </tr></table>
 {% set mfsrc = mf.stats|unique_sources %}{% if mfsrc %}{{ src(mfsrc) }}{% endif %}
 {% if mf.highlights %}
 <p class="mono sublabel">Category trends</p>
-<div class="cols2">{% for h in mf.highlights %}<p>{{ h.text|t }} <span class="srcin">{{ h.source.name }}</span></p>{% endfor %}</div>
+<div class="cols2">{% for h in mf.highlights %}{{ item(None, h.text, [h.source]) }}{% endfor %}</div>
+{% endif %}
+{% if mf.get('category_explainer') %}{% set ce = mf.category_explainer %}
+<div class="block"><p class="mono sublabel">Know your categories · {{ ce.category }}</p>{{ item(None, ce.text, ce|srcs) }}</div>
 {% endif %}
 {% if mf.get('inflow_leaders') %}{% set il = mf.inflow_leaders %}
 <div class="block">
@@ -260,7 +451,7 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 <p class="mono sublabel">Most traded ETFs on NSE · {{ ef.as_of }}</p>
 <table class="data schemes">
 <thead><tr><th>ETF</th><th>Category</th><th>Riskometer</th><th class="r">Turnover</th><th class="r">Change</th></tr></thead>
-<tbody>{% for x in ef["items"] %}<tr><td class="name">{{ x.name|t }}</td><td class="c">{{ x.category|t }}</td><td class="c">{{ x.riskometer }}</td><td class="r num">{{ x.turnover_cr|crore }}</td><td class="r num strong {{ 'up' if (x.change_pct or 0) > 0 else ('down' if (x.change_pct or 0) < 0 else 'flat') }}">{% if x.get('change_pct') is not none %}{{ x.change_pct|arrow }} {{ x.change_pct|pct }}{% endif %}</td></tr>{% endfor %}</tbody>
+<tbody>{% for x in ef["items"] %}<tr><td class="name">{{ x.name|t }}</td><td class="c">{{ x.category|t }}</td><td class="c">{{ x.riskometer }}</td><td class="r num">{{ x.turnover_cr|crore }}</td><td class="r num strong {{ dcls(x.get('change_pct')) }}">{% if x.get('change_pct') is not none %}{{ x.change_pct|arrow }} {{ x.change_pct|pct }}{% endif %}</td></tr>{% endfor %}</tbody>
 </table>
 <p class="note">{% if ef.get('note') %}{{ ef.note|t }} {% endif %}Ranked by turnover on the exchange, not a recommendation. <span class="srcin">{{ "Sources" if (ef|srcs)|length > 1 else "Source" }}: {{ names(ef|srcs) }}</span></p>
 </div>
@@ -285,35 +476,42 @@ table.agenda td.t { width: 30mm; font-family: {{ MONO }}; font-size: 7.6pt; lett
 {% endif %}
 {% if mf.get('link') %}<p class="readmore">Read more: {{ klink(mf.link) }}</p>{% endif %}
 </section>
-
 <section class="sec keep">
-{{ sechead("08", "Learn · " ~ issue.learn.id, issue.learn.title) }}
+{{ sechead("talk", None) }}
+<div class="talk"><h4>{{ pub.talk.title }}</h4><p>{{ pub.talk.text|t }}</p><p><strong>{% for k in pub.talk.links %}{{ klink(kb[k]) }}{% if not loop.last %} · {% endif %}{% endfor %}</strong> · Phone {{ pub.contacts.phone|t }} · <a href="mailto:{{ pub.contacts.email }}">{{ pub.contacts.email }}</a></p></div>
+</section>
+<section class="sec keep">
+{{ sechead("learn", issue.learn.id ~ ": " ~ issue.learn.title) }}
 <div class="learn">
-{% for p in issue.learn.paragraphs %}<p>{{ p|t }}</p>{% endfor %}
+<div class="body">{% for p in issue.learn.paragraphs %}<p>{{ p|t }}</p>{% endfor %}</div>
 {% if issue.learn.get('illustration') %}<p class="illus">{{ issue.learn.illustration|t }}</p>{% endif %}
 {% if issue.learn.get('link') %}<p class="readmore">Read more: {{ klink(issue.learn.link) }}</p>{% endif %}
 {% if issue.learn.get('sources') %}{{ src(issue.learn.sources) }}{% endif %}
 </div>
 </section>
 
+{#- 7 Calendar -#}
+{{ band("calendar") }}
 <section class="sec">
-{{ sechead("09", "Day ahead", issue.get("day_ahead_title") or ("On the calendar for " ~ meta.weekday ~ " " ~ date_short)) }}
-<table class="agenda">
-{% for d in issue.day_ahead %}<tr><td class="t">{{ d.time|upper }}</td><td>{{ d.event|t }}{% if d|srcs %} <span class="srcin">{{ names(d|srcs) }}</span>{% endif %}</td></tr>{% endfor %}
-</table>
+{{ sechead("dayahead", issue.get("day_ahead_title") or ("On the calendar for " ~ meta.weekday ~ " " ~ date_short)) }}
+<div class="days">
+{% for d in issue.day_ahead %}<div class="day"><p class="mono when">{{ d.time|upper }}</p><p>{{ d.event|t }}{% if d|srcs %} <span class="srcin">{{ names(d|srcs) }}</span>{% endif %}</p></div>{% endfor %}
+</div>
 </section>
 
-<section class="disclosure">
-<h2>{{ pub.name }}</h2>
-<p class="regline">{{ pub.publisher }} · {{ pub.registration.tagline }} · {{ pub.registration.arn }} · EUIN {{ pub.registration.euin }}</p>
-{% for d in pub.disclaimer %}<p>{{ d }}</p>{% endfor %}
-<p class="warning">{{ pub.standard_warning }}</p>
+<section class="disclosure" id="disclosures">
 <div class="rule"></div>
-<p>Phone {{ pub.contacts.phone|t }} · WhatsApp {{ pub.contacts.whatsapp|t }} · <a href="mailto:{{ pub.contacts.email }}">{{ pub.contacts.email }}</a> · {{ pub.contacts.hours }}</p>
-<p>{{ pub.contacts.address }}</p>
-<p>{% for l in pub.links %}<a href="{{ l.url }}">{{ l.label|nb }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
-{% if meta.audience == "client" and pub.get('unsubscribe') %}<p>{{ pub.unsubscribe }} <a href="mailto:{{ pub.contacts.email }}?subject=Unsubscribe">{{ pub.contacts.email }}</a>.</p>{% endif %}
-{% if meta.audience == "internal" %}<p class="mono">{{ pub.pilot_note }}</p>{% endif %}
+<h2>Important disclosures</h2>
+<p class="regline">{{ pub.publisher }}<br>{{ pub.registration.tagline }} · {{ pub.registration.arn }} · EUIN {{ pub.registration.euin }}</p>
+<div class="dcols">
+{% for d in pub.disclosures %}<div class="dsec"><p class="mono">{{ d.title }}</p>{% for ptxt in d.paras %}<p>{{ ptxt }}</p>{% endfor %}</div>
+{% endfor %}
+</div>
+<p class="warning">{{ pub.standard_warning }}</p>
+<p class="contact">Phone {{ pub.contacts.phone|t }} · WhatsApp {{ pub.contacts.whatsapp|t }} · <a href="mailto:{{ pub.contacts.email }}">{{ pub.contacts.email }}</a> · {{ pub.contacts.hours }}<br>{{ pub.contacts.address }}</p>
+<p class="contact">{% for l in pub.links %}<a href="{{ l.url }}">{{ l.label|nb }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+{% if meta.audience == "client" and pub.get('unsubscribe') %}<p class="contact">{{ pub.unsubscribe }} <a href="mailto:{{ pub.contacts.email }}?subject=Unsubscribe">{{ pub.contacts.email }}</a>.</p>{% endif %}
+{% if meta.audience == "internal" %}<p class="mono contact">{{ pub.pilot_note }}</p>{% endif %}
 </section>
 
 </body>

@@ -1,0 +1,85 @@
+{
+  "_about": "Rotation for the mutual fund corner's category explainer (D-052). The funds gatherer takes the first entry with no used_on date, writes it from SEBI's or AMFI's pages fetched that day, and the run records the edition date here.",
+  "categories": [
+    {
+      "category": "Large Cap Fund",
+      "used_on": null
+    },
+    {
+      "category": "Mid Cap Fund",
+      "used_on": null
+    },
+    {
+      "category": "Small Cap Fund",
+      "used_on": null
+    },
+    {
+      "category": "Flexi Cap Fund",
+      "used_on": null
+    },
+    {
+      "category": "Multi Cap Fund",
+      "used_on": null
+    },
+    {
+      "category": "Large & Mid Cap Fund",
+      "used_on": null
+    },
+    {
+      "category": "ELSS",
+      "used_on": null
+    },
+    {
+      "category": "Index Funds and ETFs",
+      "used_on": null
+    },
+    {
+      "category": "Liquid Fund",
+      "used_on": null
+    },
+    {
+      "category": "Overnight Fund",
+      "used_on": null
+    },
+    {
+      "category": "Money Market Fund",
+      "used_on": null
+    },
+    {
+      "category": "Short Duration Fund",
+      "used_on": null
+    },
+    {
+      "category": "Corporate Bond Fund",
+      "used_on": null
+    },
+    {
+      "category": "Gilt Fund",
+      "used_on": null
+    },
+    {
+      "category": "Dynamic Asset Allocation or Balanced Advantage",
+      "used_on": null
+    },
+    {
+      "category": "Multi Asset Allocation",
+      "used_on": null
+    },
+    {
+      "category": "Arbitrage Fund",
+      "used_on": null
+    },
+    {
+      "category": "Equity Savings",
+      "used_on": null
+    },
+    {
+      "category": "Sectoral and Thematic Funds",
+      "used_on": null
+    },
+    {
+      "category": "Fund of Funds",
+      "used_on": null
+    }
+  ]
+}

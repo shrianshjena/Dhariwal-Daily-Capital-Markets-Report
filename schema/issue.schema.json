@@ -43,15 +43,17 @@
     },
     "format": {
       "enum": [
-        "crore_signed",
+        "count",
         "crore",
-        "inr_level",
+        "crore_signed",
         "fx",
+        "inr_level",
+        "lakh_crore",
+        "level",
+        "pct_level",
         "usd_bbl",
         "usd_oz",
-        "pct_level",
-        "lakh_crore",
-        "count"
+        "usd_oz2"
       ]
     },
     "figure": {
@@ -156,6 +158,54 @@
         "Very High"
       ],
       "description": "SEBI riskometer level from the fund house's own factsheet, KIM, SID or disclosure"
+    },
+    "sourced_text": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "text",
+        "source"
+      ],
+      "properties": {
+        "title": {
+          "$ref": "#/$defs/text"
+        },
+        "text": {
+          "$ref": "#/$defs/text"
+        },
+        "source": {
+          "$ref": "#/$defs/source"
+        },
+        "also": {
+          "$ref": "#/$defs/also"
+        }
+      }
+    },
+    "mover": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "change_pct"
+      ],
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/text"
+        },
+        "change_pct": {
+          "type": "number"
+        },
+        "close": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "note": {
+          "$ref": "#/$defs/text",
+          "description": "Optional reported reason, a few words"
+        }
+      }
     }
   },
   "properties": {
@@ -216,10 +266,11 @@
     "brief": {
       "type": "array",
       "minItems": 2,
-      "maxItems": 4,
+      "maxItems": 5,
       "items": {
         "$ref": "#/$defs/text"
-      }
+      },
+      "description": "At a glance: three to five bullets (D-046)"
     },
     "snapshot": {
       "type": "object",
@@ -368,7 +419,7 @@
     },
     "stories": {
       "type": "array",
-      "minItems": 3,
+      "minItems": 0,
       "maxItems": 6,
       "items": {
         "type": "object",
@@ -417,7 +468,8 @@
             "$ref": "#/$defs/also"
           }
         }
-      }
+      },
+      "description": "Other news (shown as 'More news'): only stories not already covered by results, outlook or global sections"
     },
     "global": {
       "type": "object",
@@ -484,6 +536,30 @@
             "$ref": "#/$defs/source"
           },
           "description": "Sources for facts in the note"
+        },
+        "us": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "$ref": "#/$defs/sourced_text"
+          },
+          "description": "The US session in a few sourced sentences: what moved stocks, notable companies, rates"
+        },
+        "extras": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "$ref": "#/$defs/figure"
+          },
+          "description": "US 10-year yield, dollar index and similar, as figures with as_of"
+        },
+        "events": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "$ref": "#/$defs/sourced_text"
+          },
+          "description": "Global events (central banks, elections, geopolitics) in sourced sentences, each with a title"
         }
       }
     },
@@ -836,6 +912,30 @@
         "link": {
           "$ref": "#/$defs/kubeerra_link",
           "description": "Optional 'Read more' link for the section"
+        },
+        "category_explainer": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "category",
+            "text",
+            "source"
+          ],
+          "description": "Category education (D-052): what SEBI's definition of one category requires and what it means for risk; no suitability wording.",
+          "properties": {
+            "category": {
+              "$ref": "#/$defs/text"
+            },
+            "text": {
+              "$ref": "#/$defs/text"
+            },
+            "source": {
+              "$ref": "#/$defs/source"
+            },
+            "also": {
+              "$ref": "#/$defs/also"
+            }
+          }
         }
       }
     },
@@ -924,6 +1024,505 @@
     "day_ahead_title": {
       "$ref": "#/$defs/text",
       "description": "Headline for the calendar section when it covers more than the edition day"
+    },
+    "movers": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "universe",
+        "as_of",
+        "gainers",
+        "losers",
+        "source"
+      ],
+      "description": "Top three gainers and losers of an index in the session, as reported (D-047). Facts only.",
+      "properties": {
+        "universe": {
+          "enum": [
+            "NIFTY 50",
+            "NIFTY 100"
+          ]
+        },
+        "as_of": {
+          "$ref": "#/$defs/text"
+        },
+        "gainers": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 3,
+          "items": {
+            "$ref": "#/$defs/mover"
+          }
+        },
+        "losers": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 3,
+          "items": {
+            "$ref": "#/$defs/mover"
+          }
+        },
+        "source": {
+          "$ref": "#/$defs/source"
+        },
+        "also": {
+          "$ref": "#/$defs/also"
+        }
+      }
+    },
+    "technicals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "as_of",
+        "items",
+        "note"
+      ],
+      "description": "Factual technical snapshot (D-048), written by render/technicals.py from NSE's daily index files: levels and averages only, never a direction call.",
+      "properties": {
+        "headline": {
+          "$ref": "#/$defs/text"
+        },
+        "as_of": {
+          "$ref": "#/$defs/text"
+        },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "index",
+              "close",
+              "source"
+            ],
+            "properties": {
+              "index": {
+                "$ref": "#/$defs/text"
+              },
+              "open": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "high": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "low": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "close": {
+                "type": "number"
+              },
+              "prev_close": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "change_pct": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "sma20": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "sma50": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "sma200": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "sessions": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "pe": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "source": {
+                "$ref": "#/$defs/source"
+              },
+              "also": {
+                "$ref": "#/$defs/also"
+              }
+            }
+          }
+        },
+        "vix": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "required": [
+            "close",
+            "source"
+          ],
+          "properties": {
+            "close": {
+              "type": "number"
+            },
+            "change_pct": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "source": {
+              "$ref": "#/$defs/source"
+            }
+          }
+        },
+        "trend": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "required": [
+            "index",
+            "points",
+            "source"
+          ],
+          "properties": {
+            "index": {
+              "$ref": "#/$defs/text"
+            },
+            "points": {
+              "type": "array",
+              "minItems": 5,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "date",
+                  "close"
+                ],
+                "properties": {
+                  "date": {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                  },
+                  "close": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "source": {
+              "$ref": "#/$defs/source"
+            }
+          }
+        },
+        "note": {
+          "$ref": "#/$defs/text"
+        }
+      }
+    },
+    "outlook": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "headline",
+        "drivers",
+        "events"
+      ],
+      "description": "Fundamental outlook (D-049): what is driving markets and what is scheduled, with any expectation attributed to its source. Never a Kubeerra forecast.",
+      "properties": {
+        "headline": {
+          "$ref": "#/$defs/text"
+        },
+        "drivers": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 5,
+          "items": {
+            "$ref": "#/$defs/sourced_text"
+          },
+          "description": "Crude and other local factors: each with a title"
+        },
+        "global_cues": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "$ref": "#/$defs/sourced_text"
+          },
+          "description": "How global moves reach Indian markets: each with a title"
+        },
+        "events": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "when",
+              "title",
+              "text",
+              "source"
+            ],
+            "properties": {
+              "when": {
+                "$ref": "#/$defs/text"
+              },
+              "title": {
+                "$ref": "#/$defs/text"
+              },
+              "text": {
+                "$ref": "#/$defs/text"
+              },
+              "source": {
+                "$ref": "#/$defs/source"
+              },
+              "also": {
+                "$ref": "#/$defs/also"
+              }
+            }
+          }
+        }
+      }
+    },
+    "metals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "headline",
+        "ibja",
+        "commentary"
+      ],
+      "description": "Gold and silver (D-050): IBJA reference rates in rupees, international prices, and sourced commentary.",
+      "properties": {
+        "headline": {
+          "$ref": "#/$defs/text"
+        },
+        "ibja": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "date",
+            "session",
+            "gold_999_10g",
+            "silver_999_kg",
+            "source"
+          ],
+          "properties": {
+            "date": {
+              "$ref": "#/$defs/text"
+            },
+            "session": {
+              "enum": [
+                "AM",
+                "PM"
+              ]
+            },
+            "gold_999_10g": {
+              "type": "number"
+            },
+            "gold_prev": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "silver_999_kg": {
+              "type": "number"
+            },
+            "silver_prev": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "prev_date": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source": {
+              "$ref": "#/$defs/source"
+            },
+            "also": {
+              "$ref": "#/$defs/also"
+            }
+          }
+        },
+        "international": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "$ref": "#/$defs/figure"
+          }
+        },
+        "commentary": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 4,
+          "items": {
+            "$ref": "#/$defs/sourced_text"
+          }
+        }
+      }
+    },
+    "results": {
+      "type": "array",
+      "maxItems": 3,
+      "description": "Results of up to three major companies in the season (D-051): reported figures only.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "company",
+          "period",
+          "facts",
+          "source"
+        ],
+        "properties": {
+          "company": {
+            "$ref": "#/$defs/text"
+          },
+          "period": {
+            "$ref": "#/$defs/text"
+          },
+          "facts": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 4,
+            "items": {
+              "$ref": "#/$defs/text"
+            }
+          },
+          "reaction": {
+            "$ref": "#/$defs/text"
+          },
+          "source": {
+            "$ref": "#/$defs/source"
+          },
+          "also": {
+            "$ref": "#/$defs/also"
+          }
+        }
+      }
+    },
+    "big_movers": {
+      "type": "array",
+      "maxItems": 5,
+      "description": "Large single-day moves (about 10% or more) in widely held stocks, with the reported reason (D-051).",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "company",
+          "change_pct",
+          "reason",
+          "source"
+        ],
+        "properties": {
+          "company": {
+            "$ref": "#/$defs/text"
+          },
+          "change_pct": {
+            "type": "number"
+          },
+          "close": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "reason": {
+            "$ref": "#/$defs/text"
+          },
+          "source": {
+            "$ref": "#/$defs/source"
+          },
+          "also": {
+            "$ref": "#/$defs/also"
+          }
+        }
+      }
+    },
+    "corporate_actions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "window",
+        "items"
+      ],
+      "description": "Bonus issues, stock splits, rights issues, buybacks and notable dividends with dates in the coming days (D-051).",
+      "properties": {
+        "window": {
+          "$ref": "#/$defs/text"
+        },
+        "items": {
+          "type": "array",
+          "maxItems": 10,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "company",
+              "action",
+              "date",
+              "source"
+            ],
+            "properties": {
+              "company": {
+                "$ref": "#/$defs/text"
+              },
+              "action": {
+                "$ref": "#/$defs/text"
+              },
+              "date": {
+                "$ref": "#/$defs/text"
+              },
+              "details": {
+                "$ref": "#/$defs/text"
+              },
+              "source": {
+                "$ref": "#/$defs/source"
+              },
+              "also": {
+                "$ref": "#/$defs/also"
+              }
+            }
+          }
+        },
+        "headline": {
+          "$ref": "#/$defs/text",
+          "description": "Optional finding-style headline, e.g. a bonus issue and the number of dividends with record dates in the window"
+        },
+        "note": {
+          "$ref": "#/$defs/text",
+          "description": "Optional note under the list, e.g. how record dates and ex-dates relate under T+1"
+        }
+      }
     }
   }
 }

@@ -1,11 +1,91 @@
+{#- WhatsApp message that goes with the card (D-054). It opens with the registration line, as
+    SEBI's social media disclosure rule requires, carries the detail the card leaves out
+    (FII/DII flows, the rupee, bonds, crude, global cues, the outlook and the calendar) and ends
+    with the short disclaimer, the standard warning and the full disclaimer's address. WhatsApp
+    formatting: *bold*, _italic_. -#}
 {%- set meta = issue.meta -%}
+{%- macro idx(r) -%}{{ r.close|level }} {{ r.change_pct|arrow }} {{ r.change_pct|pct }}{%- endmacro -%}
 *{{ pub.publisher }} · {{ pub.registration.tagline }} · {{ pub.registration.arn }}*
 *{{ pub.name }}* · {{ meta.weekday }} {{ date_short }}
+
+*At a glance*
 {% for item in issue.brief %}
 • {{ item }}
 {% endfor %}
-For information and investor education only; not investment advice.
+
+*Indian markets* ({{ issue.snapshot.as_of }})
+{% for r in issue.snapshot.indices %}
+• {{ r.name }}: {{ idx(r) }}
+{% endfor %}
+{% if issue.snapshot.breadth %}
+• NSE breadth: {{ issue.snapshot.breadth.advances|group }} advanced, {{ issue.snapshot.breadth.declines|group }} declined
+{% endif %}
+{% if issue.get('movers') %}{% set mv = issue.movers %}
+
+*Top gainers ({{ mv.universe }})*
+{% for x in mv.gainers %}
+{{ loop.index }}. {{ x.name }} {{ x.change_pct|arrow }} {{ x.change_pct|pct }}
+{% endfor %}
+*Top losers ({{ mv.universe }})*
+{% for x in mv.losers %}
+{{ loop.index }}. {{ x.name }} {{ x.change_pct|arrow }} {{ x.change_pct|pct }}
+{% endfor %}
+_Ranked by change on the day; not a recommendation._
+{% endif %}
+
+*Flows, rupee, bonds and crude*
+{% for t in issue.flows.tiles %}
+• {{ t.label }}{{ " (provisional)" if t.provisional|default(false) else "" }}: {{ t|figure }}{% if t|chip %} ({{ t|chip }}){% endif +%}
+{% endfor %}
+{% if metals %}
+
+*Gold and silver* (IBJA {{ metals.session }} rates, {{ metals.date }})
+• Gold 999: ₹{{ metals.gold|group }} per 10 g{% if metals.gold_pct is not none %} ({{ metals.gold_pct|arrow }} {{ metals.gold_pct|pct }}){% endif +%}
+• Silver 999: ₹{{ metals.silver|group }} per kg{% if metals.silver_pct is not none %} ({{ metals.silver_pct|arrow }} {{ metals.silver_pct|pct }}){% endif +%}
+{% for f in issue.metals.get("international", []) %}
+• {{ f.label }}: {{ f|figure }}{% if f|chip %} ({{ f|chip }}){% endif +%}
+{% endfor %}
+{% endif %}
+
+*Global markets*
+{% for g in issue.global["items"] %}
+• {{ g.name }}: {{ g.close|level }}{% if g.change_pct is not none %} {{ g.change_pct|arrow }} {{ g.change_pct|pct }}{% endif +%}
+{% endfor %}
+{% for x in issue.global.get("extras", []) %}
+• {{ x.label }}: {{ x|figure }}{% if x|chip %} ({{ x|chip }}){% endif +%}
+{% endfor %}
+{% if issue.get('outlook') %}{% set ol = issue.outlook %}
+
+*Fundamental outlook*
+{% for d in ol.drivers %}
+• {% if d.get('title') %}{{ d.title }}: {% endif %}{{ d.text }}
+{% endfor %}
+{% if ol.get('events') %}
+
+*Events and data ahead*
+{% for e in ol.events %}
+• {{ e.when }}: {{ e.title }}
+{% endfor %}
+_Expectations are those of the named sources, not of Kubeerra._
+{% endif %}
+{% endif %}
+{% if issue.get('results') %}
+
+*Results*
+{% for r in issue.results %}
+• {{ r.company }} ({{ r.period }}): {{ r.facts[0] }}
+{% endfor %}
+{% endif %}
+
+*Mutual funds*
+• {{ issue.mf.headline }}
+{% if issue.mf.get('link') %}
+Read more: {{ issue.mf.link.url }}
+{% endif %}
+
+Sources are named in the full brief. Full disclaimer: {{ kb.disclaimer.url }}
+_{{ pub.disclosures_short }}_
 {{ pub.standard_warning }}
 {% if meta.audience == "internal" %}
-Internal pilot · not for clients
+Internal · not for clients
 {% endif %}

@@ -1,53 +1,93 @@
-{#- WhatsApp snapshot card: 1080 x 1350 px, rendered to PNG. Numbers only; the caption carries the
-    registration line first, as SEBI's social media disclosure rule requires. -#}
+{#- WhatsApp snapshot card (D-054): 1080 x 1920 px, rendered to PNG. NIFTY 50, Sensex, NIFTY
+    Midcap 100 and Smallcap 100, IBJA gold and silver, the NIFTY 50's day range and recent
+    closes, and the NIFTY 50's top three gainers and losers. FII/DII flows are in the caption,
+    not on the card. The card carries the registration line and the standard warning, because an
+    image is often forwarded without its caption. -#}
 {%- set C = tokens.color -%}
 {%- set SANS = tokens.font.pdf.sans|safe -%}
 {%- set MONO = tokens.font.pdf.mono|safe -%}
 {%- set meta = issue.meta -%}
-{%- set idx = issue.snapshot.indices -%}
+{%- macro dcls(v) -%}{{ 'up' if (v or 0) > 0 else ('down' if (v or 0) < 0 else 'flat') }}{%- endmacro -%}
 <!DOCTYPE html>
 <html lang="en-IN"><head><meta charset="utf-8"><title>{{ pub.name }} card · {{ date_short }}</title>
 <style>
 {% for f in font_faces %}@font-face { font-family: '{{ f.family }}'; src: url('{{ f.path }}'); font-weight: {{ f.weight }}; }
 {% endfor %}
-@page { size: 1080px 1350px; margin: 0; }
+@page { size: 1080px 1920px; margin: 0; }
 html, body { margin: 0; padding: 0; }
-body { width: 1080px; height: 1350px; background: {{ C.brand.navy }}; color: {{ C.text.inverse }}; font-family: {{ SANS }}; position: relative; }
-.wrap { position: absolute; left: 84px; right: 84px; top: 84px; bottom: 84px; }
-.mono { font-family: {{ MONO }}; text-transform: uppercase; letter-spacing: 0.12em; font-size: 22px; color: {{ C.text.inverseSoft }}; }
+body { width: 1080px; height: 1920px; background: {{ C.brand.navy }}; color: {{ C.text.inverse }}; font-family: {{ SANS }}; position: relative; }
+.wrap { position: absolute; left: 72px; right: 72px; top: 68px; bottom: 60px; }
+p { margin: 0; }
+.mono { font-family: {{ MONO }}; text-transform: uppercase; letter-spacing: 0.12em; font-size: 21px; color: {{ C.text.inverseSoft }}; }
 .top { display: table; width: 100%; }
-.top img { width: 104px; height: 104px; display: table-cell; vertical-align: middle; }
-.top .t { display: table-cell; vertical-align: middle; padding-left: 32px; }
-.top h1 { margin: 6px 0 0 0; font-size: 50px; font-weight: 700; line-height: 1.1; }
-.rule { width: 72px; height: 4px; background: {{ C.brand.cobalt }}; margin: 56px 0 26px 0; }
-.headline { font-size: 46px; line-height: 1.22; font-weight: 600; margin: 18px 0 0 0; }
-.grid { width: 100%; border-collapse: collapse; margin-top: 56px; table-layout: fixed; }
-.grid td { width: 50%; vertical-align: top; border-top: 2px solid {{ C.border.inverse }}; padding: 26px 24px 26px 0; }
-.grid p { margin: 0; }
-.grid .v { font-size: 52px; font-weight: 700; line-height: 1.15; margin-top: 10px; white-space: nowrap; }
-.grid .c { font-size: 28px; font-weight: 600; margin-top: 6px; }
+.top img { width: 96px; height: 96px; display: table-cell; vertical-align: middle; }
+.top .t { display: table-cell; vertical-align: middle; padding-left: 28px; }
+.top h1 { margin: 4px 0 0 0; font-size: 46px; font-weight: 700; line-height: 1.1; }
+.rule { width: 72px; height: 4px; background: {{ C.brand.cobalt }}; margin: 38px 0 20px 0; }
+.headline { font-size: 40px; line-height: 1.22; font-weight: 600; margin-top: 12px; }
+.grid { width: 100%; border-collapse: collapse; margin-top: 34px; table-layout: fixed; }
+.grid td { width: 50%; vertical-align: top; border-top: 2px solid {{ C.border.inverse }}; padding: 20px 20px 20px 0; }
+.grid .v { font-size: 46px; font-weight: 700; line-height: 1.12; margin-top: 8px; white-space: nowrap; }
+.grid .c { font-size: 26px; font-weight: 600; margin-top: 4px; white-space: nowrap; }
 .up { color: #6FD89B; } .down { color: #FF9C94; } .flat { color: {{ C.text.inverseSoft }}; }
-.grid .v.up { color: #6FD89B; } .grid .v.down { color: #FF9C94; }
+.panel { margin-top: 26px; border-top: 2px solid {{ C.border.inverse }}; padding-top: 22px; }
+.panel .lab { font-family: {{ MONO }}; text-transform: uppercase; letter-spacing: 0.12em; font-size: 20px; color: {{ C.text.inverseSoft }}; }
+.panel svg { display: block; margin-top: 12px; }
+.movers { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: 10px; }
+.movers td.col { width: 50%; vertical-align: top; }
+.movers td.col:first-child { padding-right: 22px; }
+.movers td.col:last-child { padding-left: 22px; }
+.mv { width: 100%; border-collapse: collapse; }
+.mv td { font-size: 27px; line-height: 1.25; padding: 9px 0; border-bottom: 1px solid {{ C.border.inverse }}; }
+.mv td.p { text-align: right; font-weight: 700; white-space: nowrap; padding-left: 10px; }
 .foot { position: absolute; left: 0; right: 0; bottom: 0; }
-.foot p { margin: 0; font-size: 24px; line-height: 1.4; color: {{ C.text.inverseSoft }}; }
-.foot .reg { color: {{ C.text.inverse }}; font-weight: 600; font-size: 31px; line-height: 1.35; margin-bottom: 10px; }
-.foot .mono { margin-top: 14px; font-size: 19px; }
+.foot .reg { color: {{ C.text.inverse }}; font-weight: 600; font-size: 28px; line-height: 1.32; }
+.foot .disc { font-size: 19px; line-height: 1.4; color: {{ C.text.inverseSoft }}; margin-top: 10px; }
+.foot .mono { margin-top: 10px; font-size: 18px; }
 </style></head>
 <body><div class="wrap">
-<div class="top"><img src="{{ pub.assets.logo_pdf_local }}" alt="Kubeerra logo"><div class="t"><p class="mono" style="margin:0">Morning snapshot · {{ meta.weekday }} {{ date_short }}</p><h1>{{ pub.name }}</h1></div></div>
+<div class="top"><img src="{{ pub.assets.logo_pdf_local }}" alt="Kubeerra logo"><div class="t"><p class="mono">Morning snapshot · {{ meta.weekday }} {{ date_short }}</p><h1>{{ pub.name }}</h1></div></div>
 <div class="rule"></div>
-<p class="mono" style="margin:0">India: {{ meta.india_as_of }}</p>
+<p class="mono">India: {{ meta.india_as_of }}</p>
 <p class="headline">{{ issue.snapshot.headline }}</p>
 <table class="grid">
-<tr>
-{% for r in idx[:2] %}<td><p class="mono" style="margin:0">{{ r.name }}</p><p class="v">{{ r.close|level }}</p><p class="c {{ 'up' if r.change > 0 else ('down' if r.change < 0 else 'flat') }}">{{ r.change_pct|arrow }} {{ r.change_pct|pct }}</p></td>{% endfor %}
-</tr>
-{% for pair in issue.flows.tiles[:4]|batch(2) %}
-<tr>{% for t in pair %}{% set mv = t|movement %}<td><p class="mono" style="margin:0">{{ t.label }}{% if t.get('provisional') %} · prov.{% endif %}{% if t.get('as_of') %} · {{ t.as_of }}{% endif %}</p><p class="v {{ mv if t|is_flow else '' }}">{{ t|figure }}</p>{% if t|chip %}<p class="c {{ mv }}">{{ t|chip }}</p>{% endif %}</td>{% endfor %}</tr>
+{% for pair in glance|batch(2) %}
+<tr>{% for t in pair %}<td><p class="mono">{{ t.label }}</p><p class="v">{{ t.value }}</p>{% if t.change_pct is not none %}<p class="c {{ dcls(t.change_pct) }}">{{ t.change_pct|arrow }} {{ t.change_pct|pct }}</p>{% endif %}</td>{% endfor %}</tr>
 {% endfor %}
 </table>
+{% if charts.range and nifty_tech %}{% set rb = charts.range %}
+<div class="panel">
+<p class="lab">NIFTY 50 · day's range{% if charts.trend %} and last {{ charts.trend.n }} closes{% endif %}</p>
+<svg width="936" height="70" viewBox="0 0 936 70" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="8" width="936" height="22" fill="{{ C.border.inverse }}"/>
+<rect x="{{ (rb.a * 9.36)|round|int }}" y="8" width="{{ (rb.b * 9.36)|round|int }}" height="22" fill="{{ '#6FD89B' if rb.up else '#FF9C94' }}"/>
+<text x="0" y="62" font-family="{{ SANS }}" font-size="22" fill="{{ C.text.inverseSoft }}">Low {{ nifty_tech.low|level }}</text>
+<text x="468" y="62" text-anchor="middle" font-family="{{ SANS }}" font-size="22" fill="{{ C.text.inverse }}">Open {{ nifty_tech.open|level }} · Close {{ nifty_tech.close|level }}</text>
+<text x="936" y="62" text-anchor="end" font-family="{{ SANS }}" font-size="22" fill="{{ C.text.inverseSoft }}">High {{ nifty_tech.high|level }}</text>
+</svg>
+{% if charts.trend %}{% set tr = charts.trend %}
+<svg width="936" height="170" viewBox="0 0 600 109" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="margin-top:18px;">
+<g transform="translate(20,4)">
+<polygon points="0,100 {{ tr.points }} 560,100" fill="{{ C.brand.deepBlue }}"/>
+<polyline points="{{ tr.points }}" fill="none" stroke="#8FB4FF" stroke-width="2.4" stroke-linejoin="round"/>
+<circle cx="{{ tr.xs[-1] }}" cy="{{ tr.ys[-1] }}" r="4" fill="#FFFFFF"/>
+</g>
+</svg>
+<p class="lab" style="margin-top:6px;">{{ tr.first }} to {{ tr.last }} · low {{ tr.lo|level }} · high {{ tr.hi|level }}</p>
+{% endif %}
+</div>
+{% endif %}
+{% if issue.get('movers') %}{% set mv = issue.movers %}
+<div class="panel">
+<p class="lab">{{ mv.universe }} · top gainers and losers</p>
+<table class="movers"><tr>
+{% for rows in (mv.gainers, mv.losers) %}<td class="col"><table class="mv">{% for x in rows %}<tr><td>{{ x.name }}</td><td class="p {{ dcls(x.change_pct) }}">{{ x.change_pct|arrow }} {{ x.change_pct|pct }}</td></tr>{% endfor %}</table></td>{% endfor %}
+</tr></table>
+</div>
+{% endif %}
 <div class="foot">
 <p class="reg">{{ pub.publisher }}<br>{{ pub.registration.tagline }} · {{ pub.registration.arn }}</p>
-{% if meta.audience == "internal" %}<p class="mono">Internal pilot · not for clients</p>{% endif %}
+<p class="disc">For information and investor education only; not investment advice or a recommendation. {{ pub.standard_warning }}</p>
+{% if meta.audience == "internal" %}<p class="mono">Internal · not for clients</p>{% endif %}
 </div>
 </div></body></html>

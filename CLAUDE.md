@@ -27,7 +27,11 @@ It is NOT a SEBI-registered Investment Adviser, Research Analyst or PMS provider
   advisory, wealth manager or portfolio management about Kubeerra.
 - Named schemes appear only as reported facts (largest net inflows, ETF turnover, open NFOs,
   fund house news), each with its category and riskometer level from the fund house's own
-  document and a not-a-recommendation line; never returns or performance (D-042).
+  document and a not-a-recommendation line; never returns or performance (D-042). No scheme
+  recommendations: a "Talk to us" box and a category explainer take their place (D-052).
+- Technical data states levels only (D-048); outlook and commentary attribute every expectation
+  to a named source (D-049, D-050). Full disclosures close every email and fill the PDF's last
+  page; the wording is a draft awaiting legal review (D-053).
 - Return illustrations: at most the firm's 12% assumed CAGR, marked illustrative, with the
   standard warning and AMFI's past-performance disclaimer.
 - Every issue carries, at the bottom of the email and PDF: "AMFI-registered Mutual Fund
@@ -56,10 +60,13 @@ It is NOT a SEBI-registered Investment Adviser, Research Analyst or PMS provider
 
 ## Commands
 
+    python3 render/technicals.py add <rows.csv> --url <NSE file URL>   # the session's NSE index rows
+    python3 render/technicals.py compute issues/<date>.json # technical snapshot from data/index-history.csv
     python3 render/build.py issues/<date>.json            # Gmail and Outlook HTML, text, PDF, card
     python3 checks/check_issue.py issues/<date>.json       # automated checks
     python3 render/publish.py issues/<date>.json           # copy deliverables into deliverables/
     python3 render/gmail_draft.py prepare issues/<date>.json   # files for the unsent Gmail draft
+    python3 render/gmail_draft.py verify-raw issues/<date>.json <saved RAW draft>  # logo and numbers
     python3 render/build.py tests/fixture-issue.json      # template smoke test
 
 ## Repository hygiene

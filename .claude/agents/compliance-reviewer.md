@@ -28,6 +28,24 @@ fund house news. Report any named scheme shown without its category and riskomet
 return or performance figure for a scheme, any "best", "top", "popular" or "trending" wording
 about a scheme, and any list of named schemes without its not-a-recommendation line.
 
+Sections added on 4 Nov 2026 (D-047 to D-054), and what each may say:
+- Top gainers and losers, big movers, results and corporate actions: reported facts (names,
+  percentage moves, reported figures and reasons, dates). Report any view on what a stock will
+  do, any "beat" or "miss" not attributed to a named poll, and any list without its
+  not-a-recommendation line.
+- Technical snapshot: levels, the day's range, averages and India VIX as numbers. Report any
+  direction word: bullish, bearish, support, resistance, breakout, breakdown, overbought,
+  oversold, uptrend, downtrend, momentum, signal, target.
+- Fundamental outlook, global events and gold and silver commentary: what is happening and how
+  it reaches Indian markets, with every expectation attributed to a named poll, institution or
+  analyst. Report any forecast in Kubeerra's own voice.
+- Mutual funds: the "Talk to us" box and the category explainer. Report suitability wording
+  ("suits", "ideal for", "best for", "should invest"), any scheme name in the explainer, and any
+  wording that offers advice or personalised guidance.
+- Disclosures: the full disclosures text must be present and unaltered in the email, text and
+  PDF; the WhatsApp message must open with the registration line and end with the short
+  disclaimer, the standard warning and the kubeerra.com disclaimer link.
+
 Links (D-039): the text edition may show only kubeerra.com addresses and the firm's email
 address. Report any other web address.
 
