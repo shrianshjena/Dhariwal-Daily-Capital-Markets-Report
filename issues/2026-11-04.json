@@ -1,0 +1,752 @@
+{
+  "meta": {
+    "date": "2026-11-04",
+    "weekday": "Wednesday",
+    "edition": "Morning edition",
+    "issue_number": 4,
+    "label": "Client edition 004",
+    "audience": "client",
+    "india_as_of": "Close, Tue 3 Nov 2026",
+    "global_as_of": "Closes, Tue 3 Nov",
+    "preheader": "NIFTY 50 rose 1.58% for a fourth straight gain; foreign investors bought ₹6,837 crore (provisional); Brent settled at $103.60.",
+    "subject": "Kubeerra Market Brief · Wed 4 Nov: NIFTY 50 up 1.58% as foreign investors put in ₹6,837 crore"
+  },
+  "brief": [
+    "The NIFTY 50 rose 1.58% to 23,810.85 and the Sensex 1.62% to 76,917.85 on Tuesday, a fourth straight gain, led by FMCG (up 3.65%) and private banks (up 1.98%), while PSU banks slipped 1.27%.",
+    "Foreign institutions bought a net ₹6,837 crore and domestic institutions sold ₹3,679 crore (provisional). The rupee rose 9 paise to 94.75 per dollar, and the 10-year government bond yield eased to about 7.30%.",
+    "Brent crude settled 1.12% lower at $103.60 a barrel as US-Iran talks continued. On Wall Street, on US midterm election day, the Nasdaq rose 0.83% and the Dow fell 0.38%."
+  ],
+  "snapshot": {
+    "headline": "Benchmarks rose about 1.6% for a fourth straight session as FMCG and private bank shares led",
+    "as_of": "close, 3 Nov 2026",
+    "indices": [
+      {
+        "name": "NIFTY 50",
+        "close": 23810.85,
+        "change": 370.05,
+        "change_pct": 1.58,
+        "source": {
+          "name": "Upstox News",
+          "url": "https://upstox.com/news/market-news/stocks/market-wrap-nov-3-sensex-jumps-1-225-pts-nifty-50-ends-at-23-810-nse-listed-firms-add-5-lakh-crore-mcap/article-202904/"
+        }
+      },
+      {
+        "name": "BSE Sensex",
+        "close": 76917.85,
+        "change": 1225.07,
+        "change_pct": 1.62,
+        "source": {
+          "name": "HDFC Sky",
+          "url": "https://hdfcsky.com/news/market-close-report-today-november-3-2026-diwali-party-continues-as-benchmarks-extend-mega-rally"
+        }
+      },
+      {
+        "name": "Nifty Bank",
+        "close": 55540.05,
+        "change": 537.85,
+        "change_pct": 0.98,
+        "source": {
+          "name": "Liquide",
+          "url": "https://blog.liquide.life/share-market-today-nifty-reclaims-23-800-sensex-surges-1-225-points-as-fmcg-and-financial-stocks-lead-rally/"
+        }
+      }
+    ],
+    "breadth": {
+      "advances": 2127,
+      "declines": 1477,
+      "unchanged": 109,
+      "source": {
+        "name": "Upstox News (NSE count)",
+        "url": "https://upstox.com/news/market-news/stocks/market-wrap-nov-3-sensex-jumps-1-225-pts-nifty-50-ends-at-23-810-nse-listed-firms-add-5-lakh-crore-mcap/article-202904/"
+      }
+    }
+  },
+  "flows": {
+    "headline": "Foreign investors bought a net ₹6,837 crore (provisional), and the rupee firmed",
+    "tiles": [
+      {
+        "label": "FII net",
+        "value": 6836.81,
+        "format": "crore_signed",
+        "provisional": true,
+        "detail": "Net buyers in the cash market on 3 Nov; the largest day since Oct 2025, per Business Standard",
+        "source": {
+          "name": "Trendlyne (exchange data)",
+          "url": "https://trendlyne.com/macro-data/fii-dii/latest/cash-pastmonth/"
+        },
+        "also": [
+          {
+            "name": "Business Standard",
+            "url": "https://www.business-standard.com/markets/news/markets-extend-gains-for-fourth-day-fpi-buying-highest-in-a-year-126110301699_1.html"
+          },
+          {
+            "name": "PTI via ThePrint",
+            "url": "https://theprint.in/economy/rupee-rises-9-paise-to-settle-at-94-75-against-us-dollar/3089655/"
+          }
+        ]
+      },
+      {
+        "label": "DII net",
+        "value": -3678.85,
+        "format": "crore_signed",
+        "provisional": true,
+        "detail": "Net sellers in the cash market on 3 Nov",
+        "source": {
+          "name": "Trendlyne (exchange data)",
+          "url": "https://trendlyne.com/macro-data/fii-dii/latest/cash-pastmonth/"
+        },
+        "also": {
+          "name": "Business Standard",
+          "url": "https://www.business-standard.com/markets/news/markets-extend-gains-for-fourth-day-fpi-buying-highest-in-a-year-126110301699_1.html"
+        }
+      },
+      {
+        "label": "USD/INR",
+        "value": 94.75,
+        "format": "fx",
+        "direction": "down",
+        "detail": "Close on 3 Nov; the rupee rose 9 paise from 94.84 (PTI)",
+        "source": {
+          "name": "PTI via ThePrint",
+          "url": "https://theprint.in/economy/rupee-rises-9-paise-to-settle-at-94-75-against-us-dollar/3089655/"
+        },
+        "also": {
+          "name": "Business Standard",
+          "url": "https://www.business-standard.com/markets/news/markets-extend-gains-for-fourth-day-fpi-buying-highest-in-a-year-126110301699_1.html"
+        }
+      },
+      {
+        "label": "10-year G-Sec yield",
+        "value": 7.3,
+        "format": "pct_level",
+        "direction": "down",
+        "detail": "6.94% GS 2036 benchmark, 3 Nov; down about 1 basis point (Reuters)",
+        "source": {
+          "name": "Reuters via Business Recorder",
+          "url": "https://www.brecorder.com/news/40447218/india-bonds-end-tad-higher-on-softer-oil"
+        },
+        "also": {
+          "name": "Trading Economics",
+          "url": "https://tradingeconomics.com/india/government-bond-yield"
+        }
+      },
+      {
+        "label": "Brent crude",
+        "value": 103.6,
+        "format": "usd_bbl",
+        "change_pct": -1.12,
+        "detail": "Brent futures settlement, 3 Nov; lowest settlement since 7 Oct",
+        "source": {
+          "name": "The Nation (Thailand)",
+          "url": "https://www.nationthailand.com/news/world/40073076"
+        },
+        "also": {
+          "name": "Trading Economics",
+          "url": "https://tradingeconomics.com/commodity/brent-crude-oil"
+        }
+      }
+    ]
+  },
+  "sectors": {
+    "headline": "FMCG rose 3.65% and realty 2.33%, while PSU banks fell 1.27%",
+    "as_of": "close, 3 Nov 2026",
+    "source": {
+      "name": "Upstox News",
+      "url": "https://upstox.com/news/market-news/stocks/market-wrap-nov-3-sensex-jumps-1-225-pts-nifty-50-ends-at-23-810-nse-listed-firms-add-5-lakh-crore-mcap/article-202904/"
+    },
+    "items": [
+      {
+        "name": "Nifty FMCG",
+        "change_pct": 3.65
+      },
+      {
+        "name": "Nifty Realty",
+        "change_pct": 2.33
+      },
+      {
+        "name": "Nifty Private Bank",
+        "change_pct": 1.98
+      },
+      {
+        "name": "Nifty Auto",
+        "change_pct": 1.71
+      },
+      {
+        "name": "Nifty Midcap 100",
+        "change_pct": 1.06
+      },
+      {
+        "name": "Nifty Consumer Durables",
+        "change_pct": 0.95
+      },
+      {
+        "name": "Nifty Smallcap 100",
+        "change_pct": 0.31
+      },
+      {
+        "name": "Nifty Metal",
+        "change_pct": -0.14
+      },
+      {
+        "name": "Nifty PSU Bank",
+        "change_pct": -1.27
+      }
+    ]
+  },
+  "stories": [
+    {
+      "topic": "Flows",
+      "relevance": "Market-wide",
+      "headline": "Foreign investors bought a net ₹6,837 crore of Indian shares on Tuesday, their largest single day in about a year",
+      "what": "Provisional exchange data showed foreign institutional investors as net buyers of ₹6,836.81 crore in the cash market on 3 November, a third straight day of net buying, while domestic institutions were net sellers of ₹3,678.85 crore. Business Standard said it was the largest single-day foreign purchase since October 2025.",
+      "why": "Foreign portfolio flows move the broad indices and the rupee: PTI linked the rupee's 9-paise gain on Tuesday partly to these inflows. Provisional figures can be revised when NSDL publishes final data.",
+      "source": {
+        "name": "Business Standard",
+        "url": "https://www.business-standard.com/markets/news/markets-extend-gains-for-fourth-day-fpi-buying-highest-in-a-year-126110301699_1.html"
+      },
+      "also": [
+        {
+          "name": "Trendlyne (exchange data)",
+          "url": "https://trendlyne.com/macro-data/fii-dii/latest/cash-pastmonth/"
+        },
+        {
+          "name": "PTI via ThePrint",
+          "url": "https://theprint.in/economy/rupee-rises-9-paise-to-settle-at-94-75-against-us-dollar/3089655/"
+        }
+      ]
+    },
+    {
+      "topic": "Corporate",
+      "relevance": "Market-wide",
+      "headline": "State Bank of India's September-quarter net profit rose 14.3% to ₹23,038 crore as bad loans eased",
+      "what": "SBI reported on 3 November a standalone net profit of ₹23,038 crore for July to September, 14.3% more than a year earlier. Gross non-performing assets (loans in default) eased to 1.39% of loans, and net NPAs to 0.36%. Advances grew nearly 18%. The shares closed 1.77% lower at ₹969.55 on BSE that day.",
+      "why": "SBI is India's largest lender and carries large weights in the Nifty Bank and PSU bank indices, so its loan growth and asset quality are read as a gauge of credit demand and bank balance sheets.",
+      "source": {
+        "name": "Business Standard",
+        "url": "https://www.business-standard.com/companies/quarterly-results/sbi-q2-fy27-net-profit-nii-provisions-asset-quality-126110300887_1.html"
+      },
+      "also": {
+        "name": "HDFC Sky",
+        "url": "https://hdfcsky.com/news/market-close-report-today-november-3-2026-diwali-party-continues-as-benchmarks-extend-mega-rally"
+      }
+    },
+    {
+      "topic": "Global",
+      "relevance": "Market-wide",
+      "headline": "Brent settled 1.12% lower at $103.60 as the US and Iran remained apart on a deal, with Qatar mediating",
+      "what": "Reuters reported on 3 November that an Iranian official called the US response to Iran's conditions unconvincing, while Qatar said both sides were reviewing its proposals. Brent rose about 1% after reports of overnight US strikes on Iran's Qeshm Island, then settled at $103.60 a barrel, its lowest settlement since 7 October.",
+      "why": "India imports most of its crude oil, so oil prices pass through to the import bill, the rupee, fuel costs and inflation.",
+      "source": {
+        "name": "Reuters via The Korea Times",
+        "url": "https://www.koreatimes.co.kr/world/20261104/iran-us-still-far-apart-on-deal-to-end-war-as-qatar-pushes-mediation"
+      },
+      "also": [
+        {
+          "name": "The Nation (Thailand)",
+          "url": "https://www.nationthailand.com/news/world/40073076"
+        },
+        {
+          "name": "HDFC Sky",
+          "url": "https://hdfcsky.com/news/market-close-report-today-november-3-2026-diwali-party-continues-as-benchmarks-extend-mega-rally"
+        }
+      ]
+    },
+    {
+      "topic": "Global",
+      "relevance": "Market-wide",
+      "headline": "Wall Street ended mixed on US midterm election day as chip shares recovered",
+      "what": "On 3 November the S&P 500 rose 0.36% and the Nasdaq Composite 0.83% as semiconductor shares rebounded, while the Dow fell 0.38%. Reuters reported early in Asian hours on 4 November that US stock futures were lower while election results were still coming in; control of Congress had not been confirmed.",
+      "why": "The make-up of the US Congress shapes US fiscal, trade and technology policy, which reaches India through foreign portfolio flows, the dollar and US bond yields, and through demand for Indian IT services.",
+      "source": {
+        "name": "Reuters via Investing.com",
+        "url": "https://www.investing.com/news/economy-news/us-stock-futures-dip-as-investors-await-midterm-election-results-4997063"
+      },
+      "also": [
+        {
+          "name": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-3-dow-sp-500-nasdaq-midterms-amd-earnings-141143244.html"
+        },
+        {
+          "name": "MT Newswires via MarketScreener",
+          "url": "https://www.marketscreener.com/news/wall-street-closes-mixed-ahead-of-midterm-election-results-ce785fdedc8bf021"
+        }
+      ]
+    },
+    {
+      "topic": "Corporate",
+      "relevance": "Sector",
+      "headline": "NSE's September-quarter net profit rose 23% from a year earlier to ₹2,578 crore, in its first results as a listed company",
+      "what": "National Stock Exchange reported on 3 November a consolidated net profit of ₹2,578 crore for July to September, against ₹2,098.5 crore a year earlier but 17% below the June quarter. Revenue from operations rose 10.6% to ₹4,066.8 crore, while transaction charges fell 16% from the previous quarter to ₹3,035 crore.",
+      "why": "Transaction charges, earned on trading in cash shares and derivatives, made up about three quarters of NSE's revenue from operations this quarter, so its results move with how actively investors trade.",
+      "source": {
+        "name": "Business Standard",
+        "url": "https://www.business-standard.com/markets/news/nse-q2fy27-net-profit-rises-23-to-2-578-crore-revenue-grows-10-6-126110301688_1.html"
+      },
+      "also": {
+        "name": "Business Today",
+        "url": "https://www.businesstoday.in/markets/story/nse-q2-results-net-profit-jumps-23-to-rs2578-crore-trading-volumes-lift-revenue-565493-2026-11-03"
+      }
+    }
+  ],
+  "global": {
+    "headline": "The Nasdaq rose as chip shares recovered, while European shares fell",
+    "items": [
+      {
+        "region": "US",
+        "name": "S&P 500",
+        "close": 7568.92,
+        "change_pct": 0.36,
+        "as_of": "Close, 3 Nov",
+        "source": {
+          "name": "MT Newswires via MarketScreener",
+          "url": "https://www.marketscreener.com/news/wall-street-closes-mixed-ahead-of-midterm-election-results-ce785fdedc8bf021"
+        }
+      },
+      {
+        "region": "US",
+        "name": "Nasdaq Composite",
+        "close": 25372.01,
+        "change_pct": 0.83,
+        "as_of": "Close, 3 Nov",
+        "source": {
+          "name": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/p-500-nasdaq-recover-ai-232955884.html"
+        }
+      },
+      {
+        "region": "US",
+        "name": "Dow Jones",
+        "close": 51786.72,
+        "change_pct": -0.38,
+        "as_of": "Close, 3 Nov",
+        "source": {
+          "name": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/p-500-nasdaq-recover-ai-232955884.html"
+        }
+      },
+      {
+        "region": "Europe",
+        "name": "FTSE 100",
+        "close": 10638.43,
+        "change_pct": -1.14,
+        "as_of": "Close, 3 Nov",
+        "source": {
+          "name": "investingLive",
+          "url": "https://investinglive.com/stocks/european-stocks-close-lower-as-yields-climb-uk-ftse-leads-the-declines/"
+        }
+      },
+      {
+        "region": "Europe",
+        "name": "DAX",
+        "close": 25864.63,
+        "change_pct": -0.45,
+        "as_of": "Close, 3 Nov",
+        "source": {
+          "name": "investingLive",
+          "url": "https://investinglive.com/stocks/european-stocks-close-lower-as-yields-climb-uk-ftse-leads-the-declines/"
+        }
+      }
+    ],
+    "note": "Tokyo was closed on Tuesday for a public holiday; Hong Kong's Hang Seng rose 0.57% to 23,525.97. Spot gold was about 0.5% lower in Asian trading on Tuesday as investors awaited the US election. US rates and the dollar shape foreign flows into India.",
+    "note_sources": [
+      {
+        "name": "HDFC Sky",
+        "url": "https://hdfcsky.com/news/gift-nifty-points-to-flat-open-for-sensex-nifty-on-wednesday-2"
+      },
+      {
+        "name": "Trading Economics",
+        "url": "https://tradingeconomics.com/hong-kong/stock-market"
+      },
+      {
+        "name": "Reuters via Business Recorder",
+        "url": "https://www.brecorder.com/news/40447185/gold-eases-ahead-of-us-midterm-elections"
+      }
+    ]
+  },
+  "ipos": {
+    "headline": "M.K. Sons Fine Jewels is due to list today; no mainboard IPO opens for bidding this week",
+    "items": [
+      {
+        "company": "M.K. Sons Fine Jewels",
+        "status": "Closed",
+        "facts": [
+          "Bidding closed 30 Oct · price band ₹153 to ₹162 · ₹275.40 crore, a ₹220.32 crore fresh issue and an offer for sale",
+          "Subscribed 5.09 times overall on the final day of bidding; listing expected today, 4 Nov, on BSE and NSE"
+        ],
+        "source": {
+          "name": "HDFC Sky",
+          "url": "https://hdfcsky.com/news/m-k-sons-fine-jewels-ipo-subscribed-5-09-times-on-day-3"
+        },
+        "also": {
+          "name": "Kotak Neo",
+          "url": "https://www.kotakneo.com/ipo/mk-sons-fine-jewels-ipo/"
+        }
+      },
+      {
+        "company": "Bombay Coated & Special Steels",
+        "status": "Closed",
+        "facts": [
+          "Bidding closed 2 Nov · issue price ₹82 · ₹183.06 crore, all a fresh issue",
+          "Subscribed 63.89 times overall at the end of bidding, per HDFC Sky; listing expected 5 Nov"
+        ],
+        "source": {
+          "name": "HDFC Sky",
+          "url": "https://hdfcsky.com/news/bombay-coated-special-steels-ipo-share-allotment-today"
+        }
+      },
+      {
+        "company": "BLS Polymers",
+        "status": "Listed",
+        "facts": [
+          "Listed 3 Nov at ₹248 on NSE, 65.33% above the issue price of ₹150 (₹244.10 on BSE)",
+          "₹255 crore, all a fresh issue; subscribed 241.22 times overall at the close of bidding"
+        ],
+        "source": {
+          "name": "Business Standard",
+          "url": "https://www.business-standard.com/amp/markets/news/bls-polymers-ipo-investors-gain-65-as-shares-make-strong-debut-on-bourses-126110300366_1.html"
+        },
+        "also": {
+          "name": "Upstox News",
+          "url": "https://upstox.com/news/market-news/ipo/bls-polymers-shares-list-at-65-premium-on-nse-here-s-how-much-investors-made-per-lot/article-202862/"
+        }
+      },
+      {
+        "company": "SFC Environmental Technologies",
+        "status": "Listed",
+        "facts": [
+          "Listed 3 Nov at ₹355.10 on NSE, 7.61% above the issue price of ₹330 (₹354.05 on BSE)",
+          "₹667.53 crore, a ₹150 crore fresh issue and an offer for sale; subscribed 9.47 times overall at the close of bidding"
+        ],
+        "source": {
+          "name": "Kotak Neo",
+          "url": "https://www.kotakneo.com/news/ipos/sfc-environmental-technologies-shares-list-at-over-7-percent-premium/"
+        },
+        "also": {
+          "name": "Kotak Neo IPO week ahead",
+          "url": "https://www.kotakneo.com/news/ipos/primary-market-to-slow-down-in-first-week-of-november/"
+        }
+      }
+    ],
+    "note": "Facts only. Kubeerra does not give views on applying for IPOs or on listing prospects. Subscription figures are as reported at the end of bidding; reports can differ slightly before exchange reconciliation."
+  },
+  "mf": {
+    "headline": "October data is not out yet; in September, SIPs reached a record ₹32,490 crore while debt funds saw large outflows",
+    "period": "September 2026, released 12 Oct",
+    "stats": [
+      {
+        "label": "SIP contributions",
+        "value": 32490,
+        "format": "crore",
+        "change_pct": 0.6,
+        "detail": "A record; ₹32,297 crore in August",
+        "source": {
+          "name": "Outlook Money",
+          "url": "https://www.outlookmoney.com/invest/amfi-data-september-2026-equity-mf-inflows-38307-crore-rupees"
+        },
+        "also": {
+          "name": "Angel One",
+          "url": "https://www.angelone.in/news/mutual-funds/sip-investments-set-new-record-at-32-490-crore-in-september-2026"
+        }
+      },
+      {
+        "label": "Equity fund net inflows",
+        "value": 38307,
+        "format": "crore",
+        "flow": true,
+        "change_pct": 30.61,
+        "detail": "Open-ended equity schemes; ₹29,329 crore in August",
+        "source": {
+          "name": "Outlook Money",
+          "url": "https://www.outlookmoney.com/invest/amfi-data-september-2026-equity-mf-inflows-38307-crore-rupees"
+        },
+        "also": {
+          "name": "Upstox News",
+          "url": "https://upstox.com/news/personal-finance/mutual-funds/amfi-september-2026-data-equity-inflows-jump-31-small-mid-caps-lead-gold-and-silver-et-fs-gain/article-201686/"
+        }
+      },
+      {
+        "label": "Debt fund net outflows",
+        "value": 1.83,
+        "format": "lakh_crore",
+        "detail": "Money withdrawn, net, in September, mainly from liquid and money market funds",
+        "source": {
+          "name": "Angel One",
+          "url": "https://www.angelone.in/news/mutual-funds/amfi-data-mutual-fund-mobilisation-climbs-to-15-25-lakh-crore-in-september-2026-debt-funds-see-1-83-lakh-crore-net-outflow"
+        },
+        "also": {
+          "name": "Outlook Money",
+          "url": "https://www.outlookmoney.com/invest/amfi-data-september-2026-equity-mf-inflows-38307-crore-rupees"
+        }
+      },
+      {
+        "label": "Industry assets",
+        "value": 82.64,
+        "format": "lakh_crore",
+        "change_pct": -5.1,
+        "detail": "Change in the month; AMFI's chief executive cited mark-to-market losses and debt fund outflows",
+        "source": {
+          "name": "Fintechbiznews",
+          "url": "https://fintechbiznews.com/finserv-mf-amcs/mf-industrys-aum-down-5"
+        },
+        "also": {
+          "name": "Angel One",
+          "url": "https://www.angelone.in/news/mutual-funds/sip-investments-set-new-record-at-32-490-crore-in-september-2026"
+        }
+      }
+    ],
+    "highlights": [
+      {
+        "text": "Among equity categories, small cap funds drew the largest net inflow in September, ₹9,038.57 crore, followed by mid cap (₹7,834.84 crore) and flexi cap (₹6,701.80 crore) funds. ELSS (tax-saving) funds saw a net outflow of ₹662 crore.",
+        "source": {
+          "name": "Outlook Money",
+          "url": "https://www.outlookmoney.com/invest/amfi-data-september-2026-equity-mf-inflows-38307-crore-rupees"
+        }
+      },
+      {
+        "text": "Liquid funds saw a net outflow of ₹95,743 crore and money market funds ₹50,846 crore, while gold ETFs took in ₹4,451 crore and silver ETFs ₹1,974 crore.",
+        "source": {
+          "name": "Angel One",
+          "url": "https://www.angelone.in/news/mutual-funds/amfi-data-mutual-fund-mobilisation-climbs-to-15-25-lakh-crore-in-september-2026-debt-funds-see-1-83-lakh-crore-net-outflow"
+        }
+      },
+      {
+        "text": "Hybrid funds as a group saw a small net outflow of ₹457 crore: arbitrage funds lost ₹3,956 crore while multi asset allocation funds took in ₹3,667 crore.",
+        "source": {
+          "name": "Outlook Money",
+          "url": "https://www.outlookmoney.com/invest/amfi-data-september-2026-equity-mf-inflows-38307-crore-rupees"
+        }
+      }
+    ],
+    "nfos": [],
+    "nfo_summary": {
+      "text": "Six new fund offers on Cafemutual's list dated 2 November are open on 4 November, by the dates two sources give: five passive funds (an energy ETF, a silver ETF, a silver fund of funds, a realty index fund and a consumption index fund) and a multi-asset fund of funds whose offer period closes on 4 November. Reports differ on whether a second multi-asset fund of funds closed on 2 or 4 November. Each scheme's category, risk level and terms are in its scheme information document. This list is reported for information only and is not a recommendation.",
+      "source": {
+        "name": "Cafemutual NFO list",
+        "url": "https://cafemutual.com/news/nfo/38428-nfos-open-on-october-28"
+      }
+    },
+    "regulatory": [],
+    "link": {
+      "name": "Kubeerra mutual fund services",
+      "url": "https://www.kubeerra.com/services/mutual-funds"
+    }
+  },
+  "learn": {
+    "id": "L-005",
+    "title": "What a fund of funds is, and why it has two layers of costs",
+    "paragraphs": [
+      "A fund of funds does not invest in shares or bonds directly. It invests in other mutual fund schemes or ETFs, so one investment can spread across several underlying funds at once.",
+      "A multi-asset fund of funds spreads money across different kinds of underlying schemes, for example equity schemes, debt schemes, and gold and silver ETFs.",
+      "Because the underlying schemes carry their own expenses, the investor bears costs at two levels. The scheme information document sets out the expense limits, the underlying funds and the risk level, so it is worth reading before investing."
+    ],
+    "illustration": null,
+    "link": {
+      "name": "scheme information document",
+      "url": "https://www.kubeerra.com/kim-sid-sai"
+    },
+    "sources": []
+  },
+  "day_ahead_title": "Coming up: Wednesday 4 Nov to Tuesday 10 Nov",
+  "day_ahead": [
+    {
+      "time": "Wed 4 Nov",
+      "event": "HSBC India services PMI, final October reading (the flash estimate was 56.2). M.K. Sons Fine Jewels expected to list. Results due from Apollo Hospitals, Dabur India, BSE, Cummins India, Lenskart Solutions, Torrent Pharma, NHPC and others (board dates may change). US midterm results continue to come in.",
+      "source": {
+        "name": "Business Standard",
+        "url": "https://www.business-standard.com/amp/economy/news/india-flash-pmi-october-private-sector-growth-hsbc-services-manufacturing-126102300397_1.html"
+      },
+      "also": [
+        {
+          "name": "Upstox News",
+          "url": "https://upstox.com/news/market-news/earnings/q2-results-this-week-lic-itc-ongc-airtel-nykaa-nse-lenskart-sbi-and-more-to-declare-earnings/article-202766/"
+        },
+        {
+          "name": "Kotak Neo",
+          "url": "https://www.kotakneo.com/ipo/mk-sons-fine-jewels-ipo/"
+        }
+      ]
+    },
+    {
+      "time": "Thu 5 Nov",
+      "event": "Bombay Coated & Special Steels expected to list. Results due from Bharti Airtel, Mahindra & Mahindra, LIC, ONGC, Britannia and others.",
+      "source": {
+        "name": "HDFC Sky",
+        "url": "https://hdfcsky.com/news/bombay-coated-special-steels-ipo-share-allotment-today"
+      },
+      "also": {
+        "name": "Upstox News",
+        "url": "https://upstox.com/news/market-news/earnings/q2-results-this-week-lic-itc-ongc-airtel-nykaa-nse-lenskart-sbi-and-more-to-declare-earnings/article-202766/"
+      }
+    },
+    {
+      "time": "Fri 6 Nov",
+      "event": "Results due from Hindalco, Bosch, Voltas, Jubilant FoodWorks and others.",
+      "source": {
+        "name": "Upstox News",
+        "url": "https://upstox.com/news/market-news/earnings/q2-results-this-week-lic-itc-ongc-airtel-nykaa-nse-lenskart-sbi-and-more-to-declare-earnings/article-202766/"
+      }
+    },
+    {
+      "time": "Sun 8 Nov",
+      "event": "Special Muhurat trading session for Diwali Laxmi Pujan. NSE and BSE are then closed on Tuesday 10 Nov for Diwali Balipratipada.",
+      "source": {
+        "name": "Angel One",
+        "url": "https://www.angelone.in/news/market-updates/stock-market-nse-bse-holidays-this-month-november-2026"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "Upstox News",
+      "url": "https://upstox.com/news/market-news/stocks/market-wrap-nov-3-sensex-jumps-1-225-pts-nifty-50-ends-at-23-810-nse-listed-firms-add-5-lakh-crore-mcap/article-202904/"
+    },
+    {
+      "name": "HDFC Sky",
+      "url": "https://hdfcsky.com/news/market-close-report-today-november-3-2026-diwali-party-continues-as-benchmarks-extend-mega-rally"
+    },
+    {
+      "name": "Liquide",
+      "url": "https://blog.liquide.life/share-market-today-nifty-reclaims-23-800-sensex-surges-1-225-points-as-fmcg-and-financial-stocks-lead-rally/"
+    },
+    {
+      "name": "Trendlyne (exchange data)",
+      "url": "https://trendlyne.com/macro-data/fii-dii/latest/cash-pastmonth/"
+    },
+    {
+      "name": "Business Standard",
+      "url": "https://www.business-standard.com/markets/news/markets-extend-gains-for-fourth-day-fpi-buying-highest-in-a-year-126110301699_1.html"
+    },
+    {
+      "name": "PTI via ThePrint",
+      "url": "https://theprint.in/economy/rupee-rises-9-paise-to-settle-at-94-75-against-us-dollar/3089655/"
+    },
+    {
+      "name": "Reuters via Business Recorder",
+      "url": "https://www.brecorder.com/news/40447218/india-bonds-end-tad-higher-on-softer-oil"
+    },
+    {
+      "name": "Trading Economics",
+      "url": "https://tradingeconomics.com/india/government-bond-yield"
+    },
+    {
+      "name": "The Nation (Thailand)",
+      "url": "https://www.nationthailand.com/news/world/40073076"
+    },
+    {
+      "name": "Trading Economics",
+      "url": "https://tradingeconomics.com/commodity/brent-crude-oil"
+    },
+    {
+      "name": "Business Standard",
+      "url": "https://www.business-standard.com/companies/quarterly-results/sbi-q2-fy27-net-profit-nii-provisions-asset-quality-126110300887_1.html"
+    },
+    {
+      "name": "Reuters via The Korea Times",
+      "url": "https://www.koreatimes.co.kr/world/20261104/iran-us-still-far-apart-on-deal-to-end-war-as-qatar-pushes-mediation"
+    },
+    {
+      "name": "Reuters via Investing.com",
+      "url": "https://www.investing.com/news/economy-news/us-stock-futures-dip-as-investors-await-midterm-election-results-4997063"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-3-dow-sp-500-nasdaq-midterms-amd-earnings-141143244.html"
+    },
+    {
+      "name": "MT Newswires via MarketScreener",
+      "url": "https://www.marketscreener.com/news/wall-street-closes-mixed-ahead-of-midterm-election-results-ce785fdedc8bf021"
+    },
+    {
+      "name": "Business Standard",
+      "url": "https://www.business-standard.com/markets/news/nse-q2fy27-net-profit-rises-23-to-2-578-crore-revenue-grows-10-6-126110301688_1.html"
+    },
+    {
+      "name": "Business Today",
+      "url": "https://www.businesstoday.in/markets/story/nse-q2-results-net-profit-jumps-23-to-rs2578-crore-trading-volumes-lift-revenue-565493-2026-11-03"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/p-500-nasdaq-recover-ai-232955884.html"
+    },
+    {
+      "name": "investingLive",
+      "url": "https://investinglive.com/stocks/european-stocks-close-lower-as-yields-climb-uk-ftse-leads-the-declines/"
+    },
+    {
+      "name": "HDFC Sky",
+      "url": "https://hdfcsky.com/news/gift-nifty-points-to-flat-open-for-sensex-nifty-on-wednesday-2"
+    },
+    {
+      "name": "Trading Economics",
+      "url": "https://tradingeconomics.com/hong-kong/stock-market"
+    },
+    {
+      "name": "Reuters via Business Recorder",
+      "url": "https://www.brecorder.com/news/40447185/gold-eases-ahead-of-us-midterm-elections"
+    },
+    {
+      "name": "HDFC Sky",
+      "url": "https://hdfcsky.com/news/m-k-sons-fine-jewels-ipo-subscribed-5-09-times-on-day-3"
+    },
+    {
+      "name": "Kotak Neo",
+      "url": "https://www.kotakneo.com/ipo/mk-sons-fine-jewels-ipo/"
+    },
+    {
+      "name": "HDFC Sky",
+      "url": "https://hdfcsky.com/news/bombay-coated-special-steels-ipo-share-allotment-today"
+    },
+    {
+      "name": "Business Standard",
+      "url": "https://www.business-standard.com/amp/markets/news/bls-polymers-ipo-investors-gain-65-as-shares-make-strong-debut-on-bourses-126110300366_1.html"
+    },
+    {
+      "name": "Upstox News",
+      "url": "https://upstox.com/news/market-news/ipo/bls-polymers-shares-list-at-65-premium-on-nse-here-s-how-much-investors-made-per-lot/article-202862/"
+    },
+    {
+      "name": "Kotak Neo",
+      "url": "https://www.kotakneo.com/news/ipos/sfc-environmental-technologies-shares-list-at-over-7-percent-premium/"
+    },
+    {
+      "name": "Kotak Neo IPO week ahead",
+      "url": "https://www.kotakneo.com/news/ipos/primary-market-to-slow-down-in-first-week-of-november/"
+    },
+    {
+      "name": "Outlook Money",
+      "url": "https://www.outlookmoney.com/invest/amfi-data-september-2026-equity-mf-inflows-38307-crore-rupees"
+    },
+    {
+      "name": "Angel One",
+      "url": "https://www.angelone.in/news/mutual-funds/sip-investments-set-new-record-at-32-490-crore-in-september-2026"
+    },
+    {
+      "name": "Upstox News",
+      "url": "https://upstox.com/news/personal-finance/mutual-funds/amfi-september-2026-data-equity-inflows-jump-31-small-mid-caps-lead-gold-and-silver-et-fs-gain/article-201686/"
+    },
+    {
+      "name": "Angel One",
+      "url": "https://www.angelone.in/news/mutual-funds/amfi-data-mutual-fund-mobilisation-climbs-to-15-25-lakh-crore-in-september-2026-debt-funds-see-1-83-lakh-crore-net-outflow"
+    },
+    {
+      "name": "Fintechbiznews",
+      "url": "https://fintechbiznews.com/finserv-mf-amcs/mf-industrys-aum-down-5"
+    },
+    {
+      "name": "Cafemutual NFO list",
+      "url": "https://cafemutual.com/news/nfo/38428-nfos-open-on-october-28"
+    },
+    {
+      "name": "Business Standard",
+      "url": "https://www.business-standard.com/amp/economy/news/india-flash-pmi-october-private-sector-growth-hsbc-services-manufacturing-126102300397_1.html"
+    },
+    {
+      "name": "Upstox News",
+      "url": "https://upstox.com/news/market-news/earnings/q2-results-this-week-lic-itc-ongc-airtel-nykaa-nse-lenskart-sbi-and-more-to-declare-earnings/article-202766/"
+    },
+    {
+      "name": "Angel One",
+      "url": "https://www.angelone.in/news/market-updates/stock-market-nse-bse-holidays-this-month-november-2026"
+    }
+  ]
+}

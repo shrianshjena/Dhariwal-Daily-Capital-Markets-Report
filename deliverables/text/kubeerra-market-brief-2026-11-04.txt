@@ -1,0 +1,137 @@
+KUBEERRA MARKET BRIEF · MORNING EDITION
+Wednesday 4 November 2026
+India: Close, Tue 3 Nov 2026 · Global: Closes, Tue 3 Nov
+
+THE MORNING IN BRIEF
+- The NIFTY 50 rose 1.58% to 23,810.85 and the Sensex 1.62% to 76,917.85 on Tuesday, a fourth straight gain, led by FMCG (up 3.65%) and private banks (up 1.98%), while PSU banks slipped 1.27%.
+- Foreign institutions bought a net ₹6,837 crore and domestic institutions sold ₹3,679 crore (provisional). The rupee rose 9 paise to 94.75 per dollar, and the 10-year government bond yield eased to about 7.30%.
+- Brent crude settled 1.12% lower at $103.60 a barrel as US-Iran talks continued. On Wall Street, on US midterm election day, the Nasdaq rose 0.83% and the Dow fell 0.38%.
+
+01 · MARKET SNAPSHOT
+Benchmarks rose about 1.6% for a fourth straight session as FMCG and private bank shares led
+NIFTY 50               23,810.85    +370.05   +1.58%
+BSE Sensex             76,917.85  +1,225.07   +1.62%
+Nifty Bank             55,540.05    +537.85   +0.98%
+Breadth on the NSE: 2,127 advanced, 1,477 declined.
+Data as of close, 3 Nov 2026. Sources: Upstox News, HDFC Sky, Liquide
+
+02 · FLOWS, CURRENCY AND COMMODITIES
+Foreign investors bought a net ₹6,837 crore (provisional), and the rupee firmed
+FII net (provisional): +₹6,837 cr. Net buyers in the cash market on 3 Nov; the largest day since Oct 2025, per Business Standard. Source: Trendlyne (exchange data), Business Standard, PTI via ThePrint
+DII net (provisional): −₹3,679 cr. Net sellers in the cash market on 3 Nov. Source: Trendlyne (exchange data), Business Standard
+USD/INR: ₹94.75. Close on 3 Nov; the rupee rose 9 paise from 94.84 (PTI). Source: PTI via ThePrint, Business Standard
+10-year G-Sec yield: 7.30%. 6.94% GS 2036 benchmark, 3 Nov; down about 1 basis point (Reuters). Source: Reuters via Business Recorder, Trading Economics
+Brent crude: $103.60 (▼ −1.12%). Brent futures settlement, 3 Nov; lowest settlement since 7 Oct. Source: The Nation (Thailand), Trading Economics
+
+03 · SECTOR SCOREBOARD
+FMCG rose 3.65% and realty 2.33%, while PSU banks fell 1.27%
+Strongest: Nifty FMCG +3.65%; Nifty Realty +2.33%; Nifty Private Bank +1.98%; Nifty Auto +1.71%
+Weakest: Nifty PSU Bank −1.27%; Nifty Metal −0.14%; Nifty Smallcap 100 +0.31%; Nifty Consumer Durables +0.95%
+Change on the day, close, 3 Nov 2026. Source: Upstox News
+
+04 · TOP STORIES
+
+[Flows · Market-wide] Foreign investors bought a net ₹6,837 crore of Indian shares on Tuesday, their largest single day in about a year
+Provisional exchange data showed foreign institutional investors as net buyers of ₹6,836.81 crore in the cash market on 3 November, a third straight day of net buying, while domestic institutions were net sellers of ₹3,678.85 crore. Business Standard said it was the largest single-day foreign purchase since October 2025.
+Why it matters: Foreign portfolio flows move the broad indices and the rupee: PTI linked the rupee's 9-paise gain on Tuesday partly to these inflows. Provisional figures can be revised when NSDL publishes final data.
+Source: Business Standard, Trendlyne (exchange data), PTI via ThePrint
+
+[Corporate · Market-wide] State Bank of India's September-quarter net profit rose 14.3% to ₹23,038 crore as bad loans eased
+SBI reported on 3 November a standalone net profit of ₹23,038 crore for July to September, 14.3% more than a year earlier. Gross non-performing assets (loans in default) eased to 1.39% of loans, and net NPAs to 0.36%. Advances grew nearly 18%. The shares closed 1.77% lower at ₹969.55 on BSE that day.
+Why it matters: SBI is India's largest lender and carries large weights in the Nifty Bank and PSU bank indices, so its loan growth and asset quality are read as a gauge of credit demand and bank balance sheets.
+Source: Business Standard, HDFC Sky
+
+[Global · Market-wide] Brent settled 1.12% lower at $103.60 as the US and Iran remained apart on a deal, with Qatar mediating
+Reuters reported on 3 November that an Iranian official called the US response to Iran's conditions unconvincing, while Qatar said both sides were reviewing its proposals. Brent rose about 1% after reports of overnight US strikes on Iran's Qeshm Island, then settled at $103.60 a barrel, its lowest settlement since 7 October.
+Why it matters: India imports most of its crude oil, so oil prices pass through to the import bill, the rupee, fuel costs and inflation.
+Source: Reuters via The Korea Times, The Nation (Thailand), HDFC Sky
+
+[Global · Market-wide] Wall Street ended mixed on US midterm election day as chip shares recovered
+On 3 November the S&P 500 rose 0.36% and the Nasdaq Composite 0.83% as semiconductor shares rebounded, while the Dow fell 0.38%. Reuters reported early in Asian hours on 4 November that US stock futures were lower while election results were still coming in; control of Congress had not been confirmed.
+Why it matters: The make-up of the US Congress shapes US fiscal, trade and technology policy, which reaches India through foreign portfolio flows, the dollar and US bond yields, and through demand for Indian IT services.
+Source: Reuters via Investing.com, Yahoo Finance, MT Newswires via MarketScreener
+
+[Corporate · Sector] NSE's September-quarter net profit rose 23% from a year earlier to ₹2,578 crore, in its first results as a listed company
+National Stock Exchange reported on 3 November a consolidated net profit of ₹2,578 crore for July to September, against ₹2,098.5 crore a year earlier but 17% below the June quarter. Revenue from operations rose 10.6% to ₹4,066.8 crore, while transaction charges fell 16% from the previous quarter to ₹3,035 crore.
+Why it matters: Transaction charges, earned on trading in cash shares and derivatives, made up about three quarters of NSE's revenue from operations this quarter, so its results move with how actively investors trade.
+Source: Business Standard, Business Today
+
+05 · GLOBAL MARKETS
+The Nasdaq rose as chip shares recovered, while European shares fell
+US · S&P 500                    7,568.92   +0.36%  (Close, 3 Nov)
+US · Nasdaq Composite          25,372.01   +0.83%  (Close, 3 Nov)
+US · Dow Jones                 51,786.72   −0.38%  (Close, 3 Nov)
+Europe · FTSE 100              10,638.43   −1.14%  (Close, 3 Nov)
+Europe · DAX                   25,864.63   −0.45%  (Close, 3 Nov)
+Tokyo was closed on Tuesday for a public holiday; Hong Kong's Hang Seng rose 0.57% to 23,525.97. Spot gold was about 0.5% lower in Asian trading on Tuesday as investors awaited the US election. US rates and the dollar shape foreign flows into India.
+Sources: MT Newswires via MarketScreener, Yahoo Finance, investingLive, HDFC Sky, Trading Economics, Reuters via Business Recorder
+
+06 · IPO DESK
+M.K. Sons Fine Jewels is due to list today; no mainboard IPO opens for bidding this week
+
+M.K. Sons Fine Jewels (Closed)
+Bidding closed 30 Oct · price band ₹153 to ₹162 · ₹275.40 crore, a ₹220.32 crore fresh issue and an offer for sale
+Subscribed 5.09 times overall on the final day of bidding; listing expected today, 4 Nov, on BSE and NSE
+Source: HDFC Sky, Kotak Neo
+
+Bombay Coated & Special Steels (Closed)
+Bidding closed 2 Nov · issue price ₹82 · ₹183.06 crore, all a fresh issue
+Subscribed 63.89 times overall at the end of bidding, per HDFC Sky; listing expected 5 Nov
+Source: HDFC Sky
+
+BLS Polymers (Listed)
+Listed 3 Nov at ₹248 on NSE, 65.33% above the issue price of ₹150 (₹244.10 on BSE)
+₹255 crore, all a fresh issue; subscribed 241.22 times overall at the close of bidding
+Source: Business Standard, Upstox News
+
+SFC Environmental Technologies (Listed)
+Listed 3 Nov at ₹355.10 on NSE, 7.61% above the issue price of ₹330 (₹354.05 on BSE)
+₹667.53 crore, a ₹150 crore fresh issue and an offer for sale; subscribed 9.47 times overall at the close of bidding
+Source: Kotak Neo, Kotak Neo IPO week ahead
+Facts only. Kubeerra does not give views on applying for IPOs or on listing prospects. Subscription figures are as reported at the end of bidding; reports can differ slightly before exchange reconciliation.
+
+07 · MUTUAL FUND CORNER
+October data is not out yet; in September, SIPs reached a record ₹32,490 crore while debt funds saw large outflows
+Industry data, September 2026, released 12 Oct:
+- SIP contributions: ₹32,490 cr (▲ +0.60%). A record; ₹32,297 crore in August
+- Equity fund net inflows: ₹38,307 cr (▲ +30.61%). Open-ended equity schemes; ₹29,329 crore in August
+- Debt fund net outflows: ₹1.83 lakh cr. Money withdrawn, net, in September, mainly from liquid and money market funds
+- Industry assets: ₹82.64 lakh cr (▼ −5.10%). Change in the month; AMFI's chief executive cited mark-to-market losses and debt fund outflows
+Source: Outlook Money, Angel One, Upstox News, Fintechbiznews
+
+Category trends:
+- Among equity categories, small cap funds drew the largest net inflow in September, ₹9,038.57 crore, followed by mid cap (₹7,834.84 crore) and flexi cap (₹6,701.80 crore) funds. ELSS (tax-saving) funds saw a net outflow of ₹662 crore. (Outlook Money)
+- Liquid funds saw a net outflow of ₹95,743 crore and money market funds ₹50,846 crore, while gold ETFs took in ₹4,451 crore and silver ETFs ₹1,974 crore. (Angel One)
+- Hybrid funds as a group saw a small net outflow of ₹457 crore: arbitrage funds lost ₹3,956 crore while multi asset allocation funds took in ₹3,667 crore. (Outlook Money)
+
+New fund offers:
+Six new fund offers on Cafemutual's list dated 2 November are open on 4 November, by the dates two sources give: five passive funds (an energy ETF, a silver ETF, a silver fund of funds, a realty index fund and a consumption index fund) and a multi-asset fund of funds whose offer period closes on 4 November. Reports differ on whether a second multi-asset fund of funds closed on 2 or 4 November. Each scheme's category, risk level and terms are in its scheme information document. This list is reported for information only and is not a recommendation. (Cafemutual NFO list)
+Read more: Kubeerra mutual fund services (https://www.kubeerra.com/services/mutual-funds)
+
+08 · LEARN · L-005
+What a fund of funds is, and why it has two layers of costs
+A fund of funds does not invest in shares or bonds directly. It invests in other mutual fund schemes or ETFs, so one investment can spread across several underlying funds at once.
+A multi-asset fund of funds spreads money across different kinds of underlying schemes, for example equity schemes, debt schemes, and gold and silver ETFs.
+Because the underlying schemes carry their own expenses, the investor bears costs at two levels. The scheme information document sets out the expense limits, the underlying funds and the risk level, so it is worth reading before investing.
+Read more: scheme information document (https://www.kubeerra.com/kim-sid-sai)
+
+09 · DAY AHEAD
+Coming up: Wednesday 4 Nov to Tuesday 10 Nov
+Wed 4 Nov       HSBC India services PMI, final October reading (the flash estimate was 56.2). M.K. Sons Fine Jewels expected to list. Results due from Apollo Hospitals, Dabur India, BSE, Cummins India, Lenskart Solutions, Torrent Pharma, NHPC and others (board dates may change). US midterm results continue to come in. (Business Standard, Upstox News, Kotak Neo)
+Thu 5 Nov       Bombay Coated & Special Steels expected to list. Results due from Bharti Airtel, Mahindra & Mahindra, LIC, ONGC, Britannia and others. (HDFC Sky, Upstox News)
+Fri 6 Nov       Results due from Hindalco, Bosch, Voltas, Jubilant FoodWorks and others. (Upstox News)
+Sun 8 Nov       Special Muhurat trading session for Diwali Laxmi Pujan. NSE and BSE are then closed on Tuesday 10 Nov for Diwali Balipratipada. (Angel One)
+
+------------------------------------------------------------
+Kubeerra Market Brief. Published by Dhariwal Securities Private Limited, AMFI-registered Mutual Fund Distributor, ARN-369716 (EUIN E708284).
+Dhariwal Securities Private Limited provides distribution services only. It is not a SEBI-registered Investment Adviser, Research Analyst or Portfolio Management Services provider.
+This brief is for information and investor education. It is not investment advice, research, or a recommendation to buy, sell or hold any security or scheme. Figures come from the sources named in each section; provisional data is marked as provisional. Times are IST unless stated.
+Dhariwal Securities receives commission from asset management companies for distributing mutual funds. See the commission disclosures for details.
+Mutual Fund investments are subject to market risks, read all scheme related documents carefully.
+Phone +91 73042 11122 · WhatsApp +91 77383 02763 · dhariwal.securities@kubeerra.com
+Monday to Saturday, 10:30 AM to 6:00 PM
+21st Floor 2105, B Wing, Rudraksh Enclave, Tata Power GIC Staff Quarters, Press Enclave 63, Magathane, Borivali East, Mumbai 400066
+Commission disclosures: https://www.kubeerra.com/commission-disclosures
+Grievance redressal: https://www.kubeerra.com/grievance-redressal
+Risk factors: https://www.kubeerra.com/risk-factors
+To stop receiving this brief, reply with “Unsubscribe” or write to dhariwal.securities@kubeerra.com.
