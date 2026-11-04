@@ -128,8 +128,9 @@ Issues go to trusted clients, so every issue is written for a general reader:
    files older than the 14 most recent issues (D-041). Check reports, review logs and issue
    files are never deleted.
 9. **Hand off.** Send Shriansh the PDF and the WhatsApp card for viewing
-   (`display: "render"`), the Gmail preview image `out/<date>/preview/gmail-desktop.png` (the
-   app's preview cannot load the hosted logo, so view the email as an image), and as attachments
+   (`display: "render"`), the Gmail preview images `out/<date>/preview/gmail-desktop-part-*.png`
+   (the app's preview cannot load the hosted logo, so view the email as images; one tall image
+   would be shrunk to fit the chat), and as attachments
    (`display: "attach"`) the Gmail and Outlook HTML files, the WhatsApp message, the check report
    (suggested subject and the figures to confirm) and the review log, with a three-line summary.
    Shriansh approves and sends; see `docs/SENDING_GUIDE.md`.

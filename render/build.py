@@ -7,7 +7,8 @@ Outputs go to out/<date>/:
     kubeerra-market-brief-<date>.html   email HTML (inline styles; Outlook and Gmail safe)
     kubeerra-market-brief-<date>.txt    plain-text alternative
     kubeerra-market-brief-<date>.pdf    A4 PDF
-    preview/                            PNG previews of the email (640 and 390 px) and PDF pages
+    preview/                            PNG previews of the email (704 and 390 px, the Gmail one also in
+                                        parts for the hand-off) and PDF pages
     manifest.json                       file sizes and checksums
 """
 import argparse
@@ -365,6 +366,19 @@ def trim_png(path, background=(243, 246, 250)):
         image.crop((0, 0, image.width, min(image.height, box[3] + 24))).save(path, optimize=True)
 
 
+def split_png(path, max_height=3800):
+    """Cut a tall preview into parts the chat shows at full size (it shrinks images over 8,000 px)."""
+    from PIL import Image
+    for stale in path.parent.glob(f"{path.stem}-part-*.png"):
+        stale.unlink()
+    image = Image.open(path)
+    n = -(-image.height // max_height)
+    step = -(-image.height // n)
+    for i in range(n):
+        part = image.crop((0, i * step, image.width, min(image.height, (i + 1) * step)))
+        part.save(path.parent / f"{path.stem}-part-{i + 1}-of-{n}.png", optimize=True)
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("issue")
@@ -462,10 +476,11 @@ def main():
             # presentational_hints: honour width, bgcolor and align attributes as email clients do
             HTML(string=previews[key], base_url=str(ROOT)).write_pdf(
                 pdf_path, presentational_hints=True,
-                stylesheets=[CSS(string=f"@page {{ size: {width}px 20000px; margin: 0 }}")])
+                stylesheets=[CSS(string=f"@page {{ size: {width}px 40000px; margin: 0 }}")])
             run(["pdftoppm", "-png", "-r", "96", "-singlefile", str(pdf_path), str(out / "preview" / name)])
             pdf_path.unlink()
             trim_png(out / "preview" / f"{name}.png", background=(255, 255, 255))
+        split_png(out / "preview" / "gmail-desktop.png")   # for the hand-off: one tall image is shrunk
         for stale in (out / "preview").glob("pdf-page-*.png"):  # page count can shrink between builds
             stale.unlink()
         run(["pdftoppm", "-png", "-r", "60", str(out / f"{stem}.pdf"), str(out / "preview" / "pdf-page")])
