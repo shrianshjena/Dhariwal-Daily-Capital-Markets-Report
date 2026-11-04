@@ -1252,7 +1252,7 @@
         "drivers",
         "events"
       ],
-      "description": "Fundamental outlook (D-049): what is driving markets and what is scheduled, with any expectation attributed to its source. Never a Kubeerra forecast.",
+      "description": "Market drivers, the Director's fundamental outlook (D-049; named in D-058): what is driving markets and what is scheduled, with any expectation attributed to its source. Never a Kubeerra forecast.",
       "properties": {
         "headline": {
           "$ref": "#/$defs/text"

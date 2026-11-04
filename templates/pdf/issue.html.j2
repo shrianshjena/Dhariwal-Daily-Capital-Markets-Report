@@ -171,7 +171,7 @@ table.mfstats td { vertical-align: top; border-top: 0.75pt solid {{ C.border.def
 .learn p { font-size: 9.6pt; margin-top: 2mm; }
 .learn .illus { font-size: 8.6pt; color: {{ C.text.secondary }}; }
 table.agenda { width: 100%; border-collapse: collapse; margin-top: 3mm; }
-.days { columns: 2; column-gap: 8mm; margin-top: 2.5mm; }
+.days { columns: 2; column-gap: 8mm; margin-top: 2.5mm; break-inside: avoid; }
 .day { break-inside: avoid; border-top: 0.75pt solid {{ C.border.default }}; padding: 1.8mm 0 2mm; }
 .day .when { font-size: 7.6pt; letter-spacing: 0.06em; color: {{ C.brand.cobalt }}; margin-bottom: 0.8mm; }
 table.agenda tr { break-inside: avoid; }
@@ -181,12 +181,12 @@ table.agenda td.t.accent { color: {{ C.brand.cobalt }}; }
 .disclosure { page: disc; break-before: page; color: {{ C.text.inverseSoft }}; }
 .disclosure h2 { color: {{ C.text.inverse }}; font-size: 17pt; font-weight: 700; bookmark-level: 1; }
 .disclosure .regline { color: {{ C.text.inverse }}; font-size: 12pt; line-height: 1.32; font-weight: 600; margin-top: 2mm; }
-.disclosure .dcols { column-count: 2; column-gap: 7mm; margin-top: 3.5mm; column-fill: balance; }
-.disclosure .dsec { break-inside: avoid; margin-bottom: 2.4mm; }
+.disclosure .dcols { column-count: 2; column-gap: 7mm; margin-top: 3mm; column-fill: balance; }
+.disclosure .dsec { break-inside: avoid; margin-bottom: 1.9mm; }
 .disclosure .dsec .mono { color: {{ C.text.inverse }}; font-size: 6.4pt; }
-.disclosure .dsec p { font-size: 7.7pt; line-height: 1.42; margin-top: 0.8mm; }
+.disclosure .dsec p { font-size: 7.25pt; line-height: 1.38; margin-top: 0.7mm; }
 .disclosure .warning { color: {{ C.text.inverse }}; font-weight: 700; font-size: 12pt; line-height: 1.35; margin-top: 2.5mm; padding: 2.6mm 0; border-top: 0.75pt solid {{ C.border.inverse }}; border-bottom: 0.75pt solid {{ C.border.inverse }}; }
-.disclosure .contact { font-size: 7.8pt; margin-top: 2.2mm; }
+.disclosure .contact { font-size: 7.4pt; margin-top: 2mm; }
 .disclosure a { color: {{ C.text.inverseLink }}; }
 .disclosure .rule { width: 14mm; height: 2px; background: {{ C.brand.cobalt }}; margin: 0 0 3mm 0; }
 </style>
@@ -324,7 +324,7 @@ table.agenda td.t.accent { color: {{ C.brand.cobalt }}; }
 </table>
 </section>
 
-{#- 2 Fundamental outlook -#}
+{#- 2 Market drivers (the Director's fundamental outlook, D-049) -#}
 {% if (clusters|selectattr("id", "equalto", "outlook")|list) %}{% set ol = issue.outlook %}
 {{ band("outlook") }}
 {% if "drivers" in S %}<section class="sec">
@@ -338,7 +338,7 @@ table.agenda td.t.accent { color: {{ C.brand.cobalt }}; }
 {% if "events" in S %}<section class="sec">
 {{ sechead("events", None) }}
 <table class="agenda">{% for e in ol.events %}<tr><td class="t accent">{{ e.when|upper }}</td><td><strong>{{ e.title|t }}.</strong> {{ e.text|t }} <span class="srcin">{{ names(e|srcs) }}</span></td></tr>{% endfor %}</table>
-<p class="note">Expectations are those of the named sources, not of Kubeerra. They are not a forecast.</p>
+<p class="note">Expectations are those of the named sources, not of Kubeerra, which makes no forecast.</p>
 </section>{% endif %}
 {% endif %}
 
@@ -492,7 +492,7 @@ table.agenda td.t.accent { color: {{ C.brand.cobalt }}; }
 
 {#- 7 Calendar -#}
 {{ band("calendar") }}
-<section class="sec">
+<section class="sec keep">
 {{ sechead("dayahead", issue.get("day_ahead_title") or ("On the calendar for " ~ meta.weekday ~ " " ~ date_short)) }}
 <div class="days">
 {% for d in issue.day_ahead %}<div class="day"><p class="mono when">{{ d.time|upper }}</p><p>{{ d.event|t }}{% if d|srcs %} <span class="srcin">{{ names(d|srcs) }}</span>{% endif %}</p></div>{% endfor %}

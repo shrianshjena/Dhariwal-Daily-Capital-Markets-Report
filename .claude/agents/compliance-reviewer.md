@@ -36,7 +36,7 @@ Sections added on 4 Nov 2026 (D-047 to D-054), and what each may say:
 - Technical snapshot: levels, the day's range, averages and India VIX as numbers. Report any
   direction word: bullish, bearish, support, resistance, breakout, breakdown, overbought,
   oversold, uptrend, downtrend, momentum, signal, target.
-- Fundamental outlook, global events and gold and silver commentary: what is happening and how
+- Market drivers (the outlook), global events and gold and silver commentary: what is happening and how
   it reaches Indian markets, with every expectation attributed to a named poll, institution or
   analyst. Report any forecast in Kubeerra's own voice.
 - Mutual funds: the "Talk to us" box and the category explainer. Report suitability wording

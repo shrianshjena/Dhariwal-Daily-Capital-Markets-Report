@@ -36,7 +36,7 @@ opened in the review log.
 The issue opens with **At a glance** (six key numbers and three to five bullets) and an **In this
 issue** contents list, then seven labelled parts, each with numbered sections that drop out when
 there is no data: 1 Markets (snapshot with the NIFTY Midcap 100 and Smallcap 100, top gainers and
-losers, technical snapshot, sectors, flows), 2 Fundamental outlook (drivers, global cues, events
+losers, technical snapshot, sectors, flows), 2 Market drivers (drivers, how global markets reach India, events
 ahead), 3 Global markets (the US session, world markets with US yields and the dollar, global
 events), 4 Gold and silver, 5 Companies (results, big movers, corporate actions, IPO desk, more
 news), 6 Mutual funds (corner, talk to us, learn), 7 Calendar. The PDF ends with a full page of
@@ -61,7 +61,8 @@ Issues go to trusted clients, so every issue is written for a general reader:
   replace it (D-052).
 - Links (D-039): readers' links go only to kubeerra.com blog posts and service or disclosure
   pages (`config/publication.json`, `kubeerra_links`), which may be reused, for example the
-  Learn "Read more" and the mutual fund section's `link`. Outside sources are named, never
+  Learn "Read more" and the mutual fund section's `link` (a blog post or the scheme documents
+  page, never the services page next to a list of schemes or new fund offers, D-058). Outside sources are named, never
   linked; the templates do this, so keep every `source` object with its URL in the issue file.
 - Mutual fund corner (D-042): AMFI industry data; category trends (`highlights`); the schemes
   with the largest net inflows in the latest month (`inflow_leaders`, as published by a

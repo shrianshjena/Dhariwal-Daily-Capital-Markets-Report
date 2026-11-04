@@ -108,15 +108,15 @@
     {
       "title": "About this publication",
       "paras": [
-        "The Kubeerra Market Brief is published by Dhariwal Securities Private Limited (Dhariwal Securities), which offers mutual fund distribution services under the brand Kubeerra. It is provided free of charge, for general information and investor education only.",
-        "The Brief is not investment advice, a research report or a research recommendation, and it is not an offer or a solicitation to buy, sell or hold any security, mutual fund unit or other financial product. Nothing in it is a forecast, a recommendation or a guarantee, and it does not take into account the objectives, financial situation or needs of any reader."
+        "The Kubeerra Market Brief is published by Dhariwal Securities Private Limited (Dhariwal Securities), which offers mutual fund distribution services under the brand Kubeerra. It is provided free of charge, for general market information and investor education only.",
+        "The Brief is not investment advice, a research report or a research recommendation, and it is not an offer or a solicitation to buy, sell or hold any particular security, mutual fund scheme or other financial product. Dhariwal Securities makes no forecast, recommendation or guarantee in it; any forecast or expectation it reports belongs to the source named. It does not take into account the objectives, financial situation or needs of any reader."
       ]
     },
     {
       "title": "Registration and capacity",
       "paras": [
-        "Dhariwal Securities is an AMFI-registered Mutual Fund Distributor (ARN-369716; EUIN E708284). It is not a SEBI-registered Investment Adviser, Research Analyst or Portfolio Manager: it holds no registration under the SEBI (Investment Advisers) Regulations, 2013, the SEBI (Research Analysts) Regulations, 2014 or the SEBI (Portfolio Managers) Regulations, 2020. Its services are distribution only; it does not provide investment advisory, research or portfolio management services, and nothing in the Brief should be read as such.",
-        "Receiving the Brief does not create an advisory, fiduciary or client relationship with Dhariwal Securities."
+        "Dhariwal Securities is an AMFI-registered Mutual Fund Distributor (ARN-369716; EUIN E708284). It is not a SEBI-registered Investment Adviser, Research Analyst or Portfolio Manager: it holds no registration under the SEBI (Investment Advisers) Regulations, 2013, the SEBI (Research Analysts) Regulations, 2014 or the SEBI (Portfolio Managers) Regulations, 2020. Its services are distribution only; it does not provide investment advisory, research or portfolio management services, and nothing in the Brief should be read as such. AMFI registration and the ARN do not mean that AMFI or SEBI endorses Dhariwal Securities or the Brief, and they do not assure any return.",
+        "Receiving the Brief does not by itself create an advisory, fiduciary or client relationship with Dhariwal Securities, and it does not change the terms of any existing one."
       ]
     },
     {
@@ -138,7 +138,7 @@
       "title": "Companies and schemes mentioned",
       "paras": [
         "Companies, securities, indices and mutual fund schemes appear only as reported facts, for example the day's largest gainers and losers, quarterly results or open new fund offers. A mention is not a recommendation, an endorsement or a rating, and no opinion is given on their prospects.",
-        "Dhariwal Securities, its directors and its employees may hold investments in the securities or mutual fund schemes mentioned.",
+        "Dhariwal Securities, its directors and its employees may hold, buy or sell investments in the securities or mutual fund schemes mentioned. Dhariwal Securities distributes schemes of many fund houses and may receive commission on investments in schemes or categories mentioned in the Brief; commission rates differ across schemes and fund houses, as set out in the commission disclosures on kubeerra.com.",
         "Riskometer levels are taken from each fund house's own documents as of the date stated and may change. Read the scheme information document, key information memorandum and statement of additional information before investing."
       ]
     },
@@ -169,20 +169,20 @@
     {
       "title": "Names, marks and sharing",
       "paras": [
-        "Index names and trademarks belong to their owners, including NSE Indices Limited for the NIFTY indices and BSE Limited for the Sensex; their use does not imply endorsement. The Brief is intended for residents of India and is not an offer in any jurisdiction where one would be unlawful. It may be shared only in full, with these disclosures."
+        "Index names and trademarks belong to their owners, including NSE Indices Limited for the NIFTY indices and BSE Limited for the Sensex; their use does not imply endorsement. The Brief is intended for residents of India. It is not directed to, or intended for use by, any person in a jurisdiction where its distribution or use would be unlawful. It may be forwarded only in full, with these disclosures; the WhatsApp message and card are separate short versions, each with its own disclaimer."
       ]
     },
     {
       "title": "Questions and complaints",
       "paras": [
-        "Write to dhariwal.securities@kubeerra.com or follow the grievance redressal process on kubeerra.com. Complaints may also be lodged on SEBI's SCORES platform or through the SMART ODR portal."
+        "Write to dhariwal.securities@kubeerra.com or to our Grievance Redressal Officer, Sumeet Kahar (+91 77383 02763), or follow the grievance redressal process on kubeerra.com. Complaints about a scheme may also be raised with the fund house concerned and, where those platforms allow, on SEBI's SCORES platform or the SMART ODR portal."
       ]
     }
   ],
-  "disclosures_short": "For information and investor education only. Not investment advice, research or a recommendation to buy, sell or hold any security or scheme. Dhariwal Securities is an AMFI-registered Mutual Fund Distributor, not a SEBI-registered Investment Adviser or Research Analyst. Figures are from the sources named and may be provisional; there is no guarantee of returns.",
+  "disclosures_short": "For market information and investor education only. Not investment advice, research or a recommendation to buy, sell or hold any security or scheme. Dhariwal Securities is an AMFI-registered Mutual Fund Distributor, not a SEBI-registered Investment Adviser or Research Analyst. Figures are from the sources named in the full brief and may be provisional; there is no guarantee of returns.",
   "talk": {
-    "title": "Questions about your mutual funds?",
-    "text": "Speak to the Kubeerra team to understand how a scheme or category works, what it costs and the risks it carries, before you invest. You can also take the risk profile questionnaire on our website to see how much risk you are comfortable with.",
+    "title": "Questions about how mutual funds work?",
+    "text": "The Kubeerra team can explain how a scheme or category works, what it costs and the risks it carries, from the fund house's own documents. Dhariwal Securities is an AMFI-registered Mutual Fund Distributor, not a SEBI-registered Investment Adviser. You can also take the risk profile questionnaire on our website to see how much risk you are comfortable with.",
     "links": [
       "risk_profile",
       "mutual_funds"

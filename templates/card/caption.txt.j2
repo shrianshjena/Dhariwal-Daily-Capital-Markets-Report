@@ -1,6 +1,6 @@
 {#- WhatsApp message that goes with the card (D-054). It opens with the registration line, as
     SEBI's social media disclosure rule requires, carries the detail the card leaves out
-    (FII/DII flows, the rupee, bonds, crude, global cues, the outlook and the calendar) and ends
+    (FII/DII flows, the rupee, bonds, crude, global markets, market drivers and the calendar) and ends
     with the short disclaimer, the standard warning and the full disclaimer's address. WhatsApp
     formatting: *bold*, _italic_. -#}
 {%- set meta = issue.meta -%}
@@ -22,32 +22,28 @@
 {% endif %}
 {% if issue.get('movers') %}{% set mv = issue.movers %}
 
-*Top gainers ({{ mv.universe }})*
-{% for x in mv.gainers %}
-{{ loop.index }}. {{ x.name }} {{ x.change_pct|arrow }} {{ x.change_pct|pct }}
-{% endfor %}
-*Top losers ({{ mv.universe }})*
-{% for x in mv.losers %}
-{{ loop.index }}. {{ x.name }} {{ x.change_pct|arrow }} {{ x.change_pct|pct }}
-{% endfor %}
-_Ranked by change on the day; not a recommendation._
+*{{ mv.universe }} top gainers and losers* ({{ mv.as_of }}; ranked by change on the day, not a recommendation)
+Gainers: {% for x in mv.gainers %}{{ x.name }} {{ x.change_pct|pct }}{{ ", " if not loop.last }}{% endfor %}
+
+Losers: {% for x in mv.losers %}{{ x.name }} {{ x.change_pct|pct }}{{ ", " if not loop.last }}{% endfor %}
+
 {% endif %}
 
-*Flows, rupee, bonds and crude*
+*Flows, rupee, bonds and crude* ({{ issue.snapshot.as_of }})
 {% for t in issue.flows.tiles %}
 • {{ t.label }}{{ " (provisional)" if t.provisional|default(false) else "" }}: {{ t|figure }}{% if t|chip %} ({{ t|chip }}){% endif +%}
 {% endfor %}
 {% if metals %}
 
-*Gold and silver* (IBJA {{ metals.session }} rates, {{ metals.date }})
-• Gold 999: ₹{{ metals.gold|group }} per 10 g{% if metals.gold_pct is not none %} ({{ metals.gold_pct|arrow }} {{ metals.gold_pct|pct }}){% endif +%}
-• Silver 999: ₹{{ metals.silver|group }} per kg{% if metals.silver_pct is not none %} ({{ metals.silver_pct|arrow }} {{ metals.silver_pct|pct }}){% endif +%}
+*Gold and silver* ({{ metals.date }})
+• Gold 999, IBJA {{ metals.session }} rate: ₹{{ metals.gold|group }} per 10 g{% if metals.gold_pct is not none %} ({{ metals.gold_pct|arrow }} {{ metals.gold_pct|pct }}){% endif +%}
+• Silver 999, IBJA {{ metals.session }} rate: ₹{{ metals.silver|group }} per kg{% if metals.silver_pct is not none %} ({{ metals.silver_pct|arrow }} {{ metals.silver_pct|pct }}){% endif +%}
 {% for f in issue.metals.get("international", []) %}
 • {{ f.label }}: {{ f|figure }}{% if f|chip %} ({{ f|chip }}){% endif +%}
 {% endfor %}
 {% endif %}
 
-*Global markets*
+*Global markets* ({{ issue.meta.global_as_of[:1]|lower }}{{ issue.meta.global_as_of[1:] }})
 {% for g in issue.global["items"] %}
 • {{ g.name }}: {{ g.close|level }}{% if g.change_pct is not none %} {{ g.change_pct|arrow }} {{ g.change_pct|pct }}{% endif +%}
 {% endfor %}
@@ -56,7 +52,7 @@ _Ranked by change on the day; not a recommendation._
 {% endfor %}
 {% if issue.get('outlook') %}{% set ol = issue.outlook %}
 
-*Fundamental outlook*
+*Market drivers*
 {% for d in ol.drivers %}
 • {% if d.get('title') %}{{ d.title }}: {% endif %}{{ d.text }}
 {% endfor %}
@@ -66,7 +62,6 @@ _Ranked by change on the day; not a recommendation._
 {% for e in ol.events %}
 • {{ e.when }}: {{ e.title }}
 {% endfor %}
-_Expectations are those of the named sources, not of Kubeerra._
 {% endif %}
 {% endif %}
 {% if issue.get('results') %}
@@ -75,15 +70,13 @@ _Expectations are those of the named sources, not of Kubeerra._
 {% for r in issue.results %}
 • {{ r.company }} ({{ r.period }}): {{ r.facts[0] }}
 {% endfor %}
+_Reported figures only; no view on the companies' prospects._
 {% endif %}
 
 *Mutual funds*
 • {{ issue.mf.headline }}
-{% if issue.mf.get('link') %}
-Read more: {{ issue.mf.link.url }}
-{% endif %}
 
-Sources are named in the full brief. Full disclaimer: {{ kb.disclaimer.url }}
+Sources are named in the full brief. Kubeerra disclaimer: {{ kb.disclaimer.url }}
 _{{ pub.disclosures_short }}_
 {{ pub.standard_warning }}
 {% if meta.audience == "internal" %}

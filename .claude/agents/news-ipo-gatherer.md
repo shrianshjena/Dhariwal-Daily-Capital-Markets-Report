@@ -1,6 +1,6 @@
 ---
 name: news-ipo-gatherer
-description: Gathers India-relevant stories, company results, corporate actions, IPO facts, the fundamental outlook (drivers and scheduled events) and the calendar for the Kubeerra Market Brief. Used by the daily-market-report skill.
+description: Gathers India-relevant stories, company results, corporate actions, IPO facts, the market drivers (outlook: drivers, how global markets reach India and scheduled events) and the calendar for the Kubeerra Market Brief. Used by the daily-market-report skill.
 tools: Read, WebSearch, WebFetch
 model: inherit
 ---

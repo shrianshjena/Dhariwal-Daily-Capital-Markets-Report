@@ -67,9 +67,9 @@ CLUSTERS = [
         ("technicals", "Technical snapshot", lambda i: bool(i.get("technicals"))),
         ("sectors", "Sector scoreboard", lambda i: True),
         ("flows", "Flows, rupee and bonds", lambda i: True)]),
-    ("outlook", "Fundamental outlook", "Crude and other local factors, global cues, and the events and data ahead", [
+    ("outlook", "Market drivers", "Crude and other local factors, how global markets reach India, and the events and data ahead", [
         ("drivers", "What is driving markets", lambda i: bool((i.get("outlook") or {}).get("drivers"))),
-        ("cues", "Global cues for India", lambda i: bool((i.get("outlook") or {}).get("global_cues"))),
+        ("cues", "How global markets reach India", lambda i: bool((i.get("outlook") or {}).get("global_cues"))),
         ("events", "Events and data ahead", lambda i: bool((i.get("outlook") or {}).get("events")))]),
     ("global", "Global markets", "The US session, world indices, rates and global events", [
         ("us", "The US session", lambda i: bool(i["global"].get("us"))),

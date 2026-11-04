@@ -72,7 +72,7 @@
 {%- endmacro -%}
 {%- macro sec(sid, headline) -%}
 {%- set s = S[sid] -%}
-<tr><td class="gut"{% if OL %} align="left"{% endif %} style="{{ TL }}padding:36px {{ G }}px 0{{ GP }};"><a name="s-{{ sid }}" id="s-{{ sid }}"></a>
+<tr><td class="gut"{% if OL %} align="left"{% endif %} style="{{ TL }}padding:36px {{ G }}px 0{{ GP }};">{% if OL %}<a name="s-{{ sid }}" id="s-{{ sid }}"></a>{% endif %}
 {{ rule(24, C.brand.cobalt) }}
 {{ label(s.num ~ " · " ~ s.title, C.brand.cobalt, 10) }}
 {% if headline %}<h3 style="margin:6px 0 0;{{ SANS }}font-size:20px;line-height:27px;font-weight:700;{{ PC }}{{ LH }}">{{ headline|t }}</h3>{% endif %}
@@ -275,7 +275,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 {{ tiles(ft, 2) }}
 </td></tr>
 
-{#- 2 Fundamental outlook -#}
+{#- 2 Market drivers (the Director's fundamental outlook, D-049) -#}
 {% if has("outlook") %}{% set ol = issue.outlook %}
 {{ band("outlook") }}
 {% if "drivers" in S %}{{ sec("drivers", ol.headline) }}
@@ -289,7 +289,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 {% if "events" in S %}{{ sec("events", None) }}
 <tr><td class="gut"{% if OL %} align="left"{% endif %} style="{{ TL }}padding:4px {{ G }}px 0{{ GP }};">
 {% for e in ol.events %}{{ label(e.when, C.brand.cobalt, 14) }}{{ item(e.title, e.text, e|srcs, 4) }}{% endfor %}
-{{ para("Expectations are those of the named sources, not of Kubeerra. They are not a forecast.", 12, 13, C.text.secondary) }}
+{{ para("Expectations are those of the named sources, not of Kubeerra, which makes no forecast.", 12, 13, C.text.secondary) }}
 </td></tr>{% endif %}
 {% endif %}
 
@@ -475,10 +475,10 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 {#- Important disclosures and footer -#}
 <tr><td style="padding:44px 0 0 0;font-size:0;line-height:0;">&nbsp;</td></tr>
 {% if OL %}{{ bandrow(C.brand.navy) }}{% endif %}
-<tr><td class="gut" align="left" bgcolor="{{ T.foot_bg }}" style="text-align:left;padding:32px {{ G }}px 32px {{ G }}px;background-color:{{ T.foot_bg }};"><a name="disclosures" id="disclosures"></a>
+<tr><td class="gut" align="left" bgcolor="{{ T.foot_bg }}" style="{{ TL }}padding:32px {{ G }}px{% if OL %} 32px {{ G }}px{% endif %};background-color:{{ T.foot_bg }};{% if not OL %}color:{{ T.foot_soft }};font-size:13px;line-height:19px;{% endif %}"><a name="disclosures" id="disclosures"></a>
 <p style="margin:0;{{ SANS }}font-size:18px;line-height:24px;font-weight:700;color:{{ T.foot_title }};{{ LH }}">Important disclosures</p>
 <p style="margin:8px 0 0;{{ SANS }}font-size:14px;line-height:21px;font-weight:700;color:{{ T.foot_text }};{{ LH }}">{{ pub.publisher }} · {{ pub.registration.tagline }} · {{ pub.registration.arn }} · EUIN {{ pub.registration.euin }}</p>
-{% for d in pub.disclosures %}<p style="margin:12px 0 0;{{ SANS }}font-size:13px;line-height:19px;color:{{ T.foot_soft }};{{ LH }}"><b style="color:{{ T.foot_title }};">{{ d.title }}.</b> {{ d.paras|join(" ") }}</p>
+{% for d in pub.disclosures %}<p style="margin:12px 0 0;{% if OL %}{{ SANS }}font-size:13px;line-height:19px;color:{{ T.foot_soft }};{{ LH }}{% endif %}"><b style="color:{{ T.foot_title }};">{{ d.title }}.</b> {{ d.paras|join(" ") }}</p>
 {% endfor %}
 <p style="margin:16px 0 0;{{ SANS }}font-size:14px;line-height:21px;font-weight:700;color:{{ T.foot_text }};{{ LH }}">{{ pub.standard_warning }}</p>
 <table{{ RP }} width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-top:20px;">{{ rule(40, C.brand.cobalt) }}</td></tr></table>
