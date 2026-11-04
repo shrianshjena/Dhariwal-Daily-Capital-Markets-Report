@@ -34,12 +34,11 @@ p { margin: 0; }
 .panel .lab { font-family: {{ MONO }}; text-transform: uppercase; letter-spacing: 0.12em; font-size: 20px; color: {{ C.text.inverseSoft }}; }
 .panel svg { display: block; margin-top: 12px; }
 .movers { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: 10px; }
-.movers td.col { width: 50%; vertical-align: top; }
-.movers td.col:first-child { padding-right: 22px; }
-.movers td.col:last-child { padding-left: 22px; }
-.mv { width: 100%; border-collapse: collapse; }
-.mv td { font-size: 27px; line-height: 1.25; padding: 9px 0; border-bottom: 1px solid {{ C.border.inverse }}; }
-.mv td.p { text-align: right; font-weight: 700; white-space: nowrap; padding-left: 10px; }
+.movers td.col { width: 446px; vertical-align: top; padding: 0; }
+.movers td.gap { width: 44px; padding: 0; }
+.mv { width: 100%; border-collapse: collapse; table-layout: fixed; }
+.mv td { font-size: 26px; line-height: 1.25; padding: 9px 0; border-bottom: 1px solid {{ C.border.inverse }}; vertical-align: top; }
+.mv td.p { width: 138px; text-align: right; font-weight: 700; white-space: nowrap; padding-left: 8px; }
 .foot { position: absolute; left: 0; right: 0; bottom: 0; }
 .foot .reg { color: {{ C.text.inverse }}; font-weight: 600; font-size: 28px; line-height: 1.32; }
 .foot .disc { font-size: 19px; line-height: 1.4; color: {{ C.text.inverseSoft }}; margin-top: 10px; }
@@ -81,7 +80,7 @@ p { margin: 0; }
 <div class="panel">
 <p class="lab">{{ mv.universe }} · top gainers and losers</p>
 <table class="movers"><tr>
-{% for rows in (mv.gainers, mv.losers) %}<td class="col"><table class="mv">{% for x in rows %}<tr><td>{{ x.name }}</td><td class="p {{ dcls(x.change_pct) }}">{{ x.change_pct|arrow }} {{ x.change_pct|pct }}</td></tr>{% endfor %}</table></td>{% endfor %}
+{% for rows in (mv.gainers, mv.losers) %}{% if not loop.first %}<td class="gap"></td>{% endif %}<td class="col"><table class="mv">{% for x in rows %}<tr><td>{{ x.name }}</td><td class="p {{ dcls(x.change_pct) }}">{{ x.change_pct|arrow }} {{ x.change_pct|pct }}</td></tr>{% endfor %}</table></td>{% endfor %}
 </tr></table>
 </div>
 {% endif %}

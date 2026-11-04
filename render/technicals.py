@@ -11,7 +11,7 @@ closes, which catches a mistyped digit.
     python3 render/technicals.py check                         # validate the whole history
     python3 render/technicals.py compute issues/<date>.json    # write issue["technicals"]
 
-The snapshot states levels only: the day's range, the close against its 20, 50 and 200-session
+The snapshot states levels only: the day's range, the close against its 20, 50 and 200-day
 simple averages, and India VIX. It never labels a trend (no bullish or bearish wording).
 """
 import argparse
@@ -223,22 +223,25 @@ def cmd_compute(issue_path):
 
 
 def headline(items):
-    """A factual default headline: where the NIFTY 50 closed against its averages."""
+    """A factual default headline: where the NIFTY 50 closed against its averages (the same "N-day"
+    wording as the table)."""
     n = next((i for i in items if i["index"] == "NIFTY 50"), None)
     if not n:
         return "Index levels and averages from NSE's daily files"
-    above = [k for k, label in (("sma20", "20"), ("sma50", "50"), ("sma200", "200")) if n[k] is not None and n["close"] > n[k]]
-    below = [k for k, label in (("sma20", "20"), ("sma50", "50"), ("sma200", "200")) if n[k] is not None and n["close"] < n[k]]
-    label = {"sma20": "20", "sma50": "50", "sma200": "200"}
-    def join(keys):
-        parts = [label[k] for k in keys]
-        return parts[0] if len(parts) == 1 else ", ".join(parts[:-1]) + " and " + parts[-1]
-    if above and not below:
-        return f"The NIFTY 50 closed above its {join(above)}-session averages"
-    if below and not above:
-        return f"The NIFTY 50 closed below its {join(below)}-session averages"
+    keys = (("sma20", 20), ("sma50", 50), ("sma200", 200))
+    above = [d for k, d in keys if n[k] is not None and n["close"] > n[k]]
+    below = [d for k, d in keys if n[k] is not None and n["close"] < n[k]]
+
+    def name(days):
+        parts = [f"{d}-day" for d in days]
+        joined = parts[0] if len(parts) == 1 else ", ".join(parts[:-1]) + " and " + parts[-1]
+        return f"{joined} average" + ("s" if len(parts) > 1 else "")
     if above and below:
-        return f"The NIFTY 50 closed above its {join(above)}-session and below its {join(below)}-session averages"
+        return f"The NIFTY 50 closed above its {name(above)} and below its {name(below)}"
+    if above:
+        return f"The NIFTY 50 closed above its {name(above)}"
+    if below:
+        return f"The NIFTY 50 closed below its {name(below)}"
     return "The NIFTY 50's close against its recent averages"
 
 
