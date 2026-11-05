@@ -3,5 +3,6 @@
   {"id": "L-002", "date": "2026-10-30", "title": "Why fund assets can fall in a month when investors add money", "issue": "issues/2026-10-30.json", "topics": ["AUM", "net flows", "mark-to-market", "NAV"]},
   {"id": "L-003", "date": "2026-11-02", "title": "Direct and regular plans: the same fund, different costs", "issue": "issues/2026-11-02.json", "topics": ["direct plan", "regular plan", "expense ratio", "NAV"]},
   {"id": "L-004", "date": "2026-11-03", "title": "Why debt fund values move when bond yields change", "issue": "issues/2026-11-03.json", "topics": ["bond yields", "debt funds", "NAV", "mark-to-market"]},
-  {"id": "L-005", "date": "2026-11-04", "title": "What a fund of funds is, and why it has two layers of costs", "issue": "issues/2026-11-04.json", "topics": ["fund of funds", "multi-asset", "expense ratio", "scheme information document"]}
+  {"id": "L-005", "date": "2026-11-04", "title": "What a fund of funds is, and why it has two layers of costs", "issue": "issues/2026-11-04.json", "topics": ["fund of funds", "multi-asset", "expense ratio", "scheme information document"]},
+  {"id": "L-006", "date": "2026-11-05", "title": "Why liquid funds see large withdrawals around tax dates", "issue": "issues/2026-11-05.json", "topics": ["liquid funds", "advance tax", "debt funds", "outflows"]}
 ]

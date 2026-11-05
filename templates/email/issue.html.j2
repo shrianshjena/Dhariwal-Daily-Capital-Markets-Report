@@ -348,7 +348,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 {% if r.get('reaction') %}<p style="margin:3px 0 0;{{ SANS }}font-size:14px;line-height:21px;color:{{ C.text.secondary }};{{ LH }}">{{ r.reaction|t }}</p>{% endif %}
 {{ srcline(r|srcs, 3) }}
 {% endfor %}
-{{ para("Reported figures only; no view on the companies' prospects.", 10, 13, C.text.secondary) }}
+{{ para("Reported figures only; not a recommendation, and no view on the companies' prospects.", 10, 13, C.text.secondary) }}
 </td></tr>{% endif %}
 {% if "bigmovers" in S %}{{ sec("bigmovers", "Large one-day moves in shares, and the reasons reported") }}
 <tr><td class="gut"{% if OL %} align="left"{% endif %} style="{{ TL }}padding:10px {{ G }}px 0{{ GP }};">

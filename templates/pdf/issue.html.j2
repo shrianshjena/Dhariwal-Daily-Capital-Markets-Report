@@ -392,7 +392,7 @@ table.agenda td.t.accent { color: {{ C.brand.cobalt }}; }
 {% for r in issue.results %}<div class="result"><h4>{{ r.company }}<span class="mono">{{ r.period }}</span></h4>{% for f in r.facts %}<p class="fact">{{ f|t }}</p>{% endfor %}{% if r.get('reaction') %}<p class="fact quiet">{{ r.reaction|t }}</p>{% endif %}{{ src(r|srcs) }}</div>
 {% endfor %}
 </div>
-<p class="note">Reported figures only; no view on the companies' prospects.</p>
+<p class="note">Reported figures only; not a recommendation, and no view on the companies' prospects.</p>
 </section>{% endif %}
 {% if "bigmovers" in S %}<section class="sec keep">
 {{ sechead("bigmovers", "Large one-day moves in shares, and the reasons reported") }}

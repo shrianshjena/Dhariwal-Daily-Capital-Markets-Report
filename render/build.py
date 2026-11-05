@@ -127,8 +127,12 @@ def glance(issue):
             tiles.append({"label": label, "value": fmt.level(r["close"]), "change_pct": r["change_pct"]})
     m = metals_view(issue)
     if m:
-        tiles.append({"label": "Gold 24K · ₹/10 g", "value": "₹" + fmt.group_indian(m["gold"], 0), "change_pct": m["gold_pct"]})
-        tiles.append({"label": "Silver · ₹/kg", "value": "₹" + fmt.group_indian(m["silver"], 0), "change_pct": m["silver_pct"]})
+        # IBJA rates older than the India session carry their own date (compliance review, 5 Nov).
+        tag = ""
+        if m["date"] and m["date"] not in (issue["meta"].get("india_as_of") or ""):
+            tag = " · IBJA " + " ".join(m["date"].split()[:2])
+        tiles.append({"label": "Gold 24K · ₹/10 g" + tag, "value": "₹" + fmt.group_indian(m["gold"], 0), "change_pct": m["gold_pct"]})
+        tiles.append({"label": "Silver · ₹/kg" + tag, "value": "₹" + fmt.group_indian(m["silver"], 0), "change_pct": m["silver_pct"]})
     return tiles
 
 
