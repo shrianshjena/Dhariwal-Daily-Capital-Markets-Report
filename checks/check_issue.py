@@ -384,8 +384,19 @@ def main():
                     f"silver 999 ₹{fmt.group_indian(ib['silver_999_kg'])} per kg, {ib['source']['url']}"]
     tc = issue.get("technicals")
     if tc:
-        confirm += [f"- [ ] Technical snapshot from NSE's daily files (checked against each previous close by "
-                    f"render/technicals.py): {', '.join(t['index'] + ' ' + fmt.level(t['close']) for t in tc['items'])}"]
+        confirm += [f"- [ ] Technical snapshot from {tc.get('sources_label') or 'NSE daily index files'} (checked "
+                    f"against each previous close by render/technicals.py): "
+                    f"{', '.join(t['index'] + ' ' + fmt.level(t['close']) for t in tc['items'])}"]
+    # Charts must not go missing (D-060): the card's and the PDF's charts come from the technical
+    # snapshot, and gold and silver from IBJA's rates. Fixture issues are exempt.
+    if issue_path.resolve().parent == (ROOT / "issues").resolve():
+        if not ((tc or {}).get("trend") or {}).get("points"):
+            fails.append("no technical snapshot, so the card and PDF have no charts (D-060): fill any gap in "
+                         "data/index-history.csv, add the session's rows (NSE's file; a report with --outlet; "
+                         "or render/technicals.py from-snapshot), then run render/technicals.py compute")
+        if not mt:
+            warns.append("no gold and silver section: use IBJA's rates from ibjarates.com, a reputable outlet "
+                          "quoting IBJA, or data/ibja-rates.csv labelled with their date")
 
     lines = [f"Suggested subject: {subject}", "", f"# Checks for {stem}", ""]
     lines += [f"- FAIL: {f}" for f in fails] + [f"- WARN: {w}" for w in warns]

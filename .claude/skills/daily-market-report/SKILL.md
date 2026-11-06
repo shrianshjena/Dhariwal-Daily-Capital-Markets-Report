@@ -109,7 +109,11 @@ first, as "The week", in every format and as a strip on the card.
    checked against the previous close, and a row that does not match is refused. The charts then
    show the 22-session trend, and the day's range when the report gives open, high and low. Say in
    the hand-off which rows came from reports; a later run replaces them by adding NSE's file for
-   that date. Only if neither source can be had, leave the technical snapshot out and say so.
+   that date. If no separate report row could be added either, run
+   `python3 render/technicals.py from-snapshot issues/<date>.json` once the issue's snapshot is
+   written: it adds the session's rows from the snapshot table (closes the gatherer already
+   cross-checked), only for indices the history lacks, with the same check. `checks/check_issue.py`
+   fails an issue without a technical snapshot, because the card and PDF would have no charts.
    IBJA rates are kept in `data/ibja-rates.csv` (date, session, gold, silver, URL): append the
    day's rates when you read them, and use stored rates only for the dates they carry.
 3. **Write the issue.** Create `issues/<edition-date>.json` against `schema/issue.schema.json`,

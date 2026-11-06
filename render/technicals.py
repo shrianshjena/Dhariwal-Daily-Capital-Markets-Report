@@ -13,6 +13,10 @@ closes, which catches a mistyped digit.
                                  # reputable market-close report, same columns, blanks allowed
                                  # for open, high, low and ratios; close, points change and
                                  # percent change are required and checked like NSE's rows
+    python3 render/technicals.py from-snapshot issues/<date>.json
+                                 # last resort (D-060): the session's rows from the issue's own
+                                 # snapshot table (closes already cross-checked by the gatherer),
+                                 # only for indices the history lacks, checked the same way
     python3 render/technicals.py check                         # validate the whole history
     python3 render/technicals.py compute issues/<date>.json    # write issue["technicals"]
     python3 render/technicals.py week issues/<date>.json --since YYYY-MM-DD
@@ -198,6 +202,56 @@ def cmd_add(path, url, outlet=False):
         sys.exit(1)
 
 
+def session_of(issue):
+    """The session the issue covers, from the snapshot's as-of text ("close, Thu 5 Nov 2026")."""
+    m = re.search(r"(\d{1,2}) ([A-Z][a-z]{2})[a-z]* (\d{4})", issue["snapshot"]["as_of"])
+    if not m:
+        sys.exit(f"cannot read the session date from snapshot.as_of: {issue['snapshot']['as_of']!r}")
+    return dt.datetime.strptime(" ".join(m.groups()), "%d %b %Y").date().isoformat()
+
+
+def cmd_from_snapshot(issue_path):
+    """Last resort (D-060), so the charts never go missing: when neither NSE's file nor a separate
+    report's rows could be added, take the session's rows from the issue's own snapshot table, whose
+    closes the markets gatherer already cross-checked with a second outlet. Only indices the history
+    lacks for that session are added, each checked against its previous close like any other row."""
+    issue = json.loads(Path(issue_path).read_text(encoding="utf-8"))
+    session = session_of(issue)
+    rows = load()
+    have = {r["index"] for r in rows if r["date"] == session}
+    kept, refused = [], 0
+    for x in issue["snapshot"]["indices"]:
+        name = CANON.get(x["name"].upper())
+        if not name or name in have:
+            continue
+        if None in (x.get("close"), x.get("change"), x.get("change_pct")):
+            print(f"REFUSED {session} {DISPLAY[name]}: the snapshot row needs close, change and percent change")
+            refused += 1
+            continue
+        rec = {"date": session, "index": name, "open": None, "high": None, "low": None,
+               "close": float(x["close"]), "points_change": float(x["change"]),
+               "change_pct": float(x["change_pct"]), "pe": None, "pb": None, "div_yield": None,
+               "source_url": x["source"]["url"]}
+        trial = [r for r in rows if (r["date"], r["index"]) != (session, name)] + [rec]
+        found = [p for p in problems(trial) if p.startswith(f"{session} {name}:")]
+        if found:
+            for p_ in found:
+                print("REFUSED", p_)
+            refused += 1
+            continue
+        rows = trial
+        kept.append(rec)
+    if kept:
+        save(rows)
+        print(f"added {len(kept)} rows for {session} from the issue's snapshot: "
+              + ", ".join(f"{DISPLAY[r['index']]} {fmt_num(r['close'])}" for r in kept))
+    else:
+        print(f"nothing added for {session}: the history already holds "
+              + (", ".join(DISPLAY[n] for n in sorted(have)) or "no rows, and every snapshot row was refused"))
+    if refused:
+        sys.exit(1)
+
+
 def sma(values, n):
     return round(sum(values[-n:]) / n, 2) if len(values) >= n else None
 
@@ -210,11 +264,7 @@ def cmd_compute(issue_path):
         for p in found:
             print("PROBLEM", p)
         sys.exit("history has inconsistencies; run `check` and fix them first")
-    # the session the issue covers, from the snapshot's as-of text ("close, 3 Nov 2026")
-    m = re.search(r"(\d{1,2}) ([A-Z][a-z]{2})[a-z]* (\d{4})", issue["snapshot"]["as_of"])
-    if not m:
-        sys.exit(f"cannot read the session date from snapshot.as_of: {issue['snapshot']['as_of']!r}")
-    session = dt.datetime.strptime(" ".join(m.groups()), "%d %b %Y").date().isoformat()
+    session = session_of(issue)
     if not any(r["date"] == session for r in rows):
         sys.exit(f"the history has no rows for the {session} session: add NSE's file for that day "
                  "(render/technicals.py add), or leave the technical snapshot out")
@@ -325,6 +375,7 @@ def main():
     b = sub.add_parser("add"); b.add_argument("rows"); b.add_argument("--url", required=True)
     b.add_argument("--outlet", action="store_true", help="rows from a market-close report, not NSE's file")
     w = sub.add_parser("week"); w.add_argument("issue"); w.add_argument("--since", required=True)
+    f = sub.add_parser("from-snapshot"); f.add_argument("issue")
     sub.add_parser("check")
     c = sub.add_parser("compute"); c.add_argument("issue")
     args = ap.parse_args()
@@ -332,6 +383,8 @@ def main():
         cmd_import_backfill(args.folder)
     elif args.cmd == "add":
         cmd_add(args.rows, args.url, args.outlet)
+    elif args.cmd == "from-snapshot":
+        cmd_from_snapshot(args.issue)
     elif args.cmd == "week":
         cmd_week(args.issue, args.since)
     elif args.cmd == "check":

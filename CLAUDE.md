@@ -61,6 +61,8 @@ It is NOT a SEBI-registered Investment Adviser, Research Analyst or PMS provider
 ## Commands
 
     python3 render/technicals.py add <rows.csv> --url <NSE file URL>   # the session's NSE index rows
+    python3 render/technicals.py add <rows.csv> --url <report URL> --outlet   # fallback: a market-close report
+    python3 render/technicals.py from-snapshot issues/<date>.json # last resort: the issue's own snapshot rows
     python3 render/technicals.py compute issues/<date>.json # technical snapshot from data/index-history.csv
     python3 render/build.py issues/<date>.json            # Gmail and Outlook HTML, text, PDF, card
     python3 checks/check_issue.py issues/<date>.json       # automated checks
