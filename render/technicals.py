@@ -8,8 +8,15 @@ closes, which catches a mistyped digit.
 
     python3 render/technicals.py import-backfill <folder>      # one-time merge of part-*.csv files
     python3 render/technicals.py add <rows.csv> --url <file URL> # the session's rows, as fetched
+    python3 render/technicals.py add <rows.csv> --url <report URL> --outlet
+                                 # fallback when NSE's file cannot be had (D-059): rows from a
+                                 # reputable market-close report, same columns, blanks allowed
+                                 # for open, high, low and ratios; close, points change and
+                                 # percent change are required and checked like NSE's rows
     python3 render/technicals.py check                         # validate the whole history
     python3 render/technicals.py compute issues/<date>.json    # write issue["technicals"]
+    python3 render/technicals.py week issues/<date>.json --since YYYY-MM-DD
+                                 # the week table's NSE index rows (closes against --since)
 
 The snapshot states levels only: the day's range, the close against its 20, 50 and 200-day
 simple averages, and India VIX. It never labels a trend (no bullish or bearish wording).
@@ -96,9 +103,12 @@ def problems(rows):
         prev = None
         for r in series(rows, name):
             o, h, l, c = r["open"], r["high"], r["low"], r["close"]
-            if None in (h, l, c):
-                out.append(f"{r['date']} {name}: missing high, low or close")
-            elif o is not None and not (l - 0.011 <= min(o, c) and max(o, c) <= h + 0.011):
+            if c is None:
+                out.append(f"{r['date']} {name}: missing close")
+            elif (h is None) != (l is None):
+                out.append(f"{r['date']} {name}: high and low must both be given or both left blank")
+            elif h is not None and not (l - 0.011 <= min(x for x in (o, c) if x is not None)
+                                        and max(x for x in (o, c) if x is not None) <= h + 0.011):
                 out.append(f"{r['date']} {name}: open {o} or close {c} outside low {l} to high {h}")
             if prev and r["points_change"] is not None and c is not None:
                 diff = round(c - prev["close"], 2)
@@ -140,7 +150,17 @@ def cmd_import_backfill(folder):
     print(f"saved {HISTORY.relative_to(ROOT)}")
 
 
-def cmd_add(path, url):
+def is_nse(url):
+    return any(h in (url or "") for h in ("nseindia.com", "niftyindices.com"))
+
+
+def cmd_add(path, url, outlet=False):
+    """Add one session's rows. NSE's file is the source of record; with --outlet the rows come from
+    a reputable market-close report (D-059). Each row is checked against the index's previous close;
+    a row that does not check out is refused and the others are kept."""
+    if outlet == is_nse(url):
+        sys.exit("--outlet is for a market-close report's URL; NSE's own file needs no flag"
+                 if outlet else "this URL is not NSE's file: add --outlet for a market-close report")
     rows = load()
     new = []
     for line in csv.reader(Path(path).open(encoding="utf-8")):
@@ -148,21 +168,33 @@ def cmd_add(path, url):
             continue
         rec = parse_row(line, url=url)
         if rec:
+            if outlet and None in (rec["close"], rec["points_change"], rec["change_pct"]) and rec["index"] != "INDIA VIX":
+                print(f"REFUSED {rec['date']} {DISPLAY[rec['index']]}: a report row needs close, points change and percent change")
+                continue
             new.append(rec)
     if not new:
-        sys.exit("no NIFTY 50, NIFTY BANK, NIFTY MIDCAP 100, NIFTY SMALLCAP 100 or INDIA VIX rows found")
+        sys.exit("no usable NIFTY 50, NIFTY BANK, NIFTY MIDCAP 100, NIFTY SMALLCAP 100 or INDIA VIX rows found")
     dates = {r["date"] for r in new}
     if len(dates) != 1:
         sys.exit(f"rows carry more than one date: {sorted(dates)}")
     day = dates.pop()
-    rows = [r for r in rows if r["date"] != day] + new
-    found = [p for p in problems(rows) if p.startswith(day)]
-    for p in found:
-        print("PROBLEM", p)
-    if found:
-        sys.exit("Not saved: re-read the file; a figure does not match the previous close.")
+    kept = []
+    for rec in new:
+        trial = [r for r in rows if (r["date"], r["index"]) != (day, rec["index"])] + [rec]
+        found = [p for p in problems(trial) if p.startswith(f"{day} {rec['index']}:")]
+        if found:
+            for p_ in found:
+                print("REFUSED", p_)
+            continue
+        rows = trial
+        kept.append(rec)
+    if not kept:
+        sys.exit("Not saved: no row matched its previous close; re-read the source.")
     save(rows)
-    print(f"added {len(new)} rows for {day}: " + ", ".join(f"{DISPLAY[r['index']]} {fmt_num(r['close'])}" for r in new))
+    print(f"added {len(kept)} rows for {day}" + (" (market-close report)" if outlet else "") + ": "
+          + ", ".join(f"{DISPLAY[r['index']]} {fmt_num(r['close'])}" for r in kept))
+    if len(kept) < len(new):
+        sys.exit(1)
 
 
 def sma(values, n):
@@ -199,7 +231,10 @@ def cmd_compute(issue_path):
             "close": last["close"], "prev_close": prev, "change_pct": last["change_pct"],
             "sma20": sma(closes, 20), "sma50": sma(closes, 50), "sma200": sma(closes, 200),
             "sessions": len(closes), "pe": last["pe"],
-            "source": {"name": "NSE daily index file", "url": last["source_url"]}})
+            "source": {"name": "NSE daily index file" if is_nse(last["source_url"]) else "Market-close report",
+                       "url": last["source_url"]}})
+    latest = [r for r in rows if r["date"] == session and r["index"] in SNAPSHOT_INDICES]
+    from_outlet = sorted({r["source_url"] for r in latest if not is_nse(r["source_url"])})
     vix = [r for r in series(rows, "INDIA VIX") if r["date"] == session]
     nifty = [r for r in series(rows, "NIFTY 50") if r["date"] <= session][-22:]
     issue["technicals"] = {
@@ -211,15 +246,50 @@ def cmd_compute(issue_path):
         "trend": ({"index": "NIFTY 50", "points": [{"date": r["date"], "close": r["close"]} for r in nifty],
                    "source": {"name": "NSE daily index files", "url": nifty[-1]["source_url"]}}
                   if len(nifty) >= 5 else None),
-        "note": ("Levels from NSE's daily index files. Averages are simple averages of the last 20, 50 and "
-                 "200 closes, calculated by Kubeerra. These describe where prices have been; they are not "
-                 "a forecast, a signal or a recommendation."),
+        "note": (("Levels from NSE's daily index files" if not from_outlet else
+                  f"Levels from NSE's daily index files; the {day.day} {day:%b} levels are from market-close "
+                  "reports until NSE publishes its file") +
+                 ". Averages are simple averages of the last 20, 50 and 200 closes, calculated by Kubeerra. "
+                 "These describe where prices have been; they are not a forecast, a signal or a recommendation."),
     }
     Path(issue_path).write_text(json.dumps(issue, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     for it in items:
         print(f"{it['index']}: close {fmt_num(it['close'])}, range {fmt_num(it['low'])} to {fmt_num(it['high'])}, "
               f"20/50/200-session averages {it['sma20']}, {it['sma50']}, {it['sma200']} ({it['sessions']} sessions)")
     print(f"technicals written for the {session} session")
+
+
+def cmd_week(issue_path, since):
+    """Week table rows for the NSE indices: the session's close against the close on --since."""
+    issue = json.loads(Path(issue_path).read_text(encoding="utf-8"))
+    rows = load()
+    m = re.search(r"(\d{1,2}) ([A-Z][a-z]{2})[a-z]* (\d{4})", issue["snapshot"]["as_of"])
+    if not m:
+        sys.exit(f"cannot read the session date from snapshot.as_of: {issue['snapshot']['as_of']!r}")
+    session = dt.datetime.strptime(" ".join(m.groups()), "%d %b %Y").date().isoformat()
+    week = issue.setdefault("week", {})
+    items = [it for it in week.get("items", []) if it.get("name") not in DISPLAY.values()]
+    made = []
+    for name in ("NIFTY 50", "NIFTY BANK", "NIFTY MIDCAP 100", "NIFTY SMALLCAP 100"):
+        start = next((r for r in rows if r["index"] == name and r["date"] == since), None)
+        end = next((r for r in rows if r["index"] == name and r["date"] == session), None)
+        if not (start and end):
+            print(f"skipped {DISPLAY[name]}: no close for {since if not start else session} in the history")
+            continue
+        made.append({"name": DISPLAY[name], "start": start["close"], "end": end["close"],
+                     "change_pct": round((end["close"] - start["close"]) / start["close"] * 100, 2),
+                     "format": "level",
+                     "source": {"name": "NSE daily index file" if is_nse(end["source_url"]) else "Market-close report",
+                                "url": end["source_url"]},
+                     "also": {"name": "NSE daily index file" if is_nse(start["source_url"]) else "Market-close report",
+                              "url": start["source_url"]}})
+    week["items"] = made + items
+    d0, d1 = dt.date.fromisoformat(since), dt.date.fromisoformat(session)
+    week.setdefault("from", f"{d0:%a} {d0.day} {d0:%b}")
+    week.setdefault("to", f"{d1:%a} {d1.day} {d1:%b}")
+    Path(issue_path).write_text(json.dumps(issue, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    for it in made:
+        print(f"{it['name']}: {fmt_num(it['start'])} to {fmt_num(it['end'])}, {it['change_pct']:+.2f}%")
 
 
 def headline(items):
@@ -250,13 +320,17 @@ def main():
     sub = ap.add_subparsers(dest="cmd", required=True)
     a = sub.add_parser("import-backfill"); a.add_argument("folder")
     b = sub.add_parser("add"); b.add_argument("rows"); b.add_argument("--url", required=True)
+    b.add_argument("--outlet", action="store_true", help="rows from a market-close report, not NSE's file")
+    w = sub.add_parser("week"); w.add_argument("issue"); w.add_argument("--since", required=True)
     sub.add_parser("check")
     c = sub.add_parser("compute"); c.add_argument("issue")
     args = ap.parse_args()
     if args.cmd == "import-backfill":
         cmd_import_backfill(args.folder)
     elif args.cmd == "add":
-        cmd_add(args.rows, args.url)
+        cmd_add(args.rows, args.url, args.outlet)
+    elif args.cmd == "week":
+        cmd_week(args.issue, args.since)
     elif args.cmd == "check":
         found = problems(load())
         for p in found:

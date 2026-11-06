@@ -1034,3 +1034,11 @@ date,index,open,high,low,close,points_change,change_pct,pe,pb,div_yield,source_u
 2026-11-03,NIFTY BANK,55435.8,55739,55174.1,55540.05,537.85,0.98,12.35,1.67,1.13,https://nsearchives.nseindia.com/content/indices/ind_close_all_03112026.csv
 2026-11-03,NIFTY MIDCAP 100,58346,58600.45,58069.25,58596.25,612.85,1.06,26.47,3.73,0.93,https://nsearchives.nseindia.com/content/indices/ind_close_all_03112026.csv
 2026-11-03,NIFTY SMALLCAP 100,18692.4,18756.1,18580.3,18652.85,57.55,0.31,33.42,3.62,0.66,https://nsearchives.nseindia.com/content/indices/ind_close_all_03112026.csv
+2026-11-04,INDIA VIX,15.7225,16.145,15.125,15.19,-0.54,-3.4,,,,https://nsearchives.nseindia.com/content/indices/ind_close_all_04112026.csv
+2026-11-04,NIFTY 50,23742.25,23960.6,23696.15,23960.6,149.75,0.63,19.77,2.94,1.45,https://nsearchives.nseindia.com/content/indices/ind_close_all_04112026.csv
+2026-11-04,NIFTY BANK,55485.1,55946.85,55294.5,55913.6,373.55,0.67,12.36,1.68,1.12,https://nsearchives.nseindia.com/content/indices/ind_close_all_04112026.csv
+2026-11-04,NIFTY MIDCAP 100,58497.35,59515.65,58317.6,59505.5,909.25,1.55,26.84,3.78,0.92,https://nsearchives.nseindia.com/content/indices/ind_close_all_04112026.csv
+2026-11-04,NIFTY SMALLCAP 100,18630.3,19042.65,18535.55,19026.4,373.55,2,34.24,3.69,0.64,https://nsearchives.nseindia.com/content/indices/ind_close_all_04112026.csv
+2026-11-05,NIFTY 50,,,,24536.6,576,2.4,,,,https://upstox.com/news/market-news/stocks/market-wrap-nov-5-indices-post-biggest-rally-in-7-months-nifty-50-ends-at-24-536-m-cap-surges-8-lakh-crore-to-497-l-crore/article-203065/
+2026-11-05,NIFTY MIDCAP 100,,,,60620.9,1115.4,1.87,,,,https://upstox.com/news/market-news/stocks/top-gainers-and-losers-nov-5-bajaj-finance-rallies-8-shriram-finance-soars-6-apollo-hospitals-falls-3/article-203071/
+2026-11-05,NIFTY SMALLCAP 100,,,,19132.45,106.05,0.56,,,,https://www.kotakneo.com/indices/indian-indices/nifty-smallcap-100/
