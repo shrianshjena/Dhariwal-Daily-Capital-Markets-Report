@@ -9,7 +9,7 @@ closes, which catches a mistyped digit.
     python3 render/technicals.py import-backfill <folder>      # one-time merge of part-*.csv files
     python3 render/technicals.py add <rows.csv> --url <file URL> # the session's rows, as fetched
     python3 render/technicals.py add <rows.csv> --url <report URL> --outlet
-                                 # fallback when NSE's file cannot be had (D-059): rows from a
+                                 # fallback when NSE's file cannot be had (D-060): rows from a
                                  # reputable market-close report, same columns, blanks allowed
                                  # for open, high, low and ratios; close, points change and
                                  # percent change are required and checked like NSE's rows
@@ -88,7 +88,8 @@ def save(rows):
 
 
 def fmt_num(v):
-    """Up to four decimals, no trailing zeros: 26140.75, 13.6325, 1.3 (never rounds a 2-decimal level)."""
+    if v is None:
+        return "n/a"
     return ("%.4f" % v).rstrip("0").rstrip(".")
 
 
@@ -156,7 +157,7 @@ def is_nse(url):
 
 def cmd_add(path, url, outlet=False):
     """Add one session's rows. NSE's file is the source of record; with --outlet the rows come from
-    a reputable market-close report (D-059). Each row is checked against the index's previous close;
+    a reputable market-close report (D-060). Each row is checked against the index's previous close;
     a row that does not check out is refused and the others are kept."""
     if outlet == is_nse(url):
         sys.exit("--outlet is for a market-close report's URL; NSE's own file needs no flag"
@@ -246,6 +247,8 @@ def cmd_compute(issue_path):
         "trend": ({"index": "NIFTY 50", "points": [{"date": r["date"], "close": r["close"]} for r in nifty],
                    "source": {"name": "NSE daily index files", "url": nifty[-1]["source_url"]}}
                   if len(nifty) >= 5 else None),
+        "sources_label": ("NSE daily index files" if not from_outlet
+                          else f"NSE daily index files; market-close reports for {day.day} {day:%b}"),
         "note": (("Levels from NSE's daily index files" if not from_outlet else
                   f"Levels from NSE's daily index files; the {day.day} {day:%b} levels are from market-close "
                   "reports until NSE publishes its file") +

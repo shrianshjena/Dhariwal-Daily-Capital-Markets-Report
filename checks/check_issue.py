@@ -138,7 +138,7 @@ def context(text, match, width=48):
 def main():
     issue_path = Path(sys.argv[1])
     issue = json.loads(issue_path.read_text(encoding="utf-8"))
-    date = issue["meta"]["date"]
+    date = issue["meta"].get("edition_id") or issue["meta"]["date"]
     out = ROOT / "out" / date
     stem = f"kubeerra-market-brief-{date}"
     fails, warns, reviews, passes = [], [], [], []

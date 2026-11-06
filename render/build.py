@@ -62,6 +62,8 @@ def sector_view(issue):
 # The issue's clusters and sections (D-046). Sections without data drop out, and the numbering
 # closes up, so "1.2" always means the second section that is actually in the issue.
 CLUSTERS = [
+    ("week", "The week", "Each market's change from the previous week's last close", [
+        ("week", "Week in review", lambda i: bool((i.get("week") or {}).get("items")))]),
     ("markets", "Markets", "Indian indices, the day's biggest movers, levels, sectors, flows and the rupee", [
         ("snapshot", "Market snapshot", lambda i: True),
         ("movers", "Top gainers and losers", lambda i: bool(i.get("movers"))),
@@ -147,6 +149,26 @@ def metals_view(issue):
             "silver": ib["silver_999_kg"], "silver_prev": ib.get("silver_prev"),
             "silver_pct": pct(ib["silver_999_kg"], ib.get("silver_prev")),
             "date": ib["date"], "session": ib["session"], "prev_date": ib.get("prev_date"), "source": ib["source"]}
+
+
+def week_rows(issue, tokens):
+    """The week table's display strings: start and end values and the change (percent, or basis
+    points for yields), coloured by direction (yields in grey: a rise is not good or bad)."""
+    colors = tokens["color"]
+    rows = []
+    for it in (issue.get("week") or {}).get("items", []):
+        if it.get("change_bp") is not None:
+            chg, v, neutral = fmt.bp(it["change_bp"]), it["change_bp"], True
+        elif it.get("change_pct") is not None:
+            chg, v, neutral = fmt.arrow(it["change_pct"]) + " " + fmt.pct(it["change_pct"]), it["change_pct"], False
+        else:
+            chg, v, neutral = "", 0, True
+        d = fmt.direction(v)
+        color = colors["text"]["secondary"] if (neutral or d == "flat") else colors["status"]["up" if d == "up" else "down"]
+        rows.append({"name": it["name"], "start_s": fmt.figure(it["start"], it["format"]),
+                     "end_s": fmt.figure(it["end"], it["format"]), "chg_s": chg, "color": color,
+                     "pct": it.get("change_pct"), "note": it.get("note")})
+    return rows
 
 
 def world_groups(issue):
@@ -396,9 +418,10 @@ def main():
     validate(issue)
 
     date = issue["meta"]["date"]
-    out = ROOT / "out" / date
+    eid = issue["meta"].get("edition_id") or date   # a second edition on one date, e.g. 2026-11-06-close
+    out = ROOT / "out" / eid
     (out / "preview").mkdir(parents=True, exist_ok=True)
-    stem = f"kubeerra-market-brief-{date}"
+    stem = f"kubeerra-market-brief-{eid}"
     env = build_env(tokens)
 
     logo_url = args.logo_url or pub["assets"]["logo_email_url"]
@@ -427,7 +450,8 @@ def main():
               "trend": trend((tech.get("trend") or {}).get("points") or [])}
     ctx = dict(issue=issue, pub=pub, tokens=tokens, sectors=sector_view(issue), snapshot_sources=snapshot_sources,
                clusters=clusters, S=S, glance=glance(issue), metals=metals_view(issue), charts=charts,
-               nifty_tech=nifty_tech, world_groups=world_groups(issue),
+               nifty_tech=nifty_tech, world_groups=world_groups(issue), week_rows=week_rows(issue, tokens),
+               edition_name=issue["meta"].get("edition_name") or issue["meta"].get("edition") or pub["edition_name"],
                global_sources=global_sources, show_nfo_names=show_nfo_names, named_nfos=named_nfos,
                nfo_unnamed_note=nfo_unnamed_note, kb=pub["kubeerra_links"],
                date_long=f"{day.day} {day:%B %Y}", date_short=f"{day.day} {day:%b %Y}")

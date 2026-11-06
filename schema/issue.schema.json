@@ -260,6 +260,15 @@
         "subject": {
           "$ref": "#/$defs/text",
           "description": "Suggested email subject line"
+        },
+        "edition_id": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}(-[a-z]+)?$",
+          "description": "Names the output files when a date has more than one edition, e.g. 2026-11-06-close (D-060)"
+        },
+        "edition_name": {
+          "$ref": "#/$defs/text",
+          "description": "Shown in the masthead in place of meta.edition, e.g. 'Closing edition · Week in review'"
         }
       }
     },
@@ -1241,6 +1250,9 @@
         },
         "note": {
           "$ref": "#/$defs/text"
+        },
+        "sources_label": {
+          "$ref": "#/$defs/text"
         }
       }
     },
@@ -1521,6 +1533,83 @@
         "note": {
           "$ref": "#/$defs/text",
           "description": "Optional note under the list, e.g. how record dates and ex-dates relate under T+1"
+        }
+      }
+    },
+    "week": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "items"
+      ],
+      "description": "Week in review (closing and weekly editions, D-060): each figure's change from the previous week's last close. Facts only; notes attribute any expectation.",
+      "properties": {
+        "headline": {
+          "$ref": "#/$defs/text"
+        },
+        "from": {
+          "$ref": "#/$defs/text"
+        },
+        "to": {
+          "$ref": "#/$defs/text"
+        },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "start",
+              "end",
+              "format",
+              "source"
+            ],
+            "properties": {
+              "name": {
+                "$ref": "#/$defs/text"
+              },
+              "start": {
+                "type": "number"
+              },
+              "end": {
+                "type": "number"
+              },
+              "format": {
+                "$ref": "#/$defs/format"
+              },
+              "change_pct": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "change_bp": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "note": {
+                "$ref": "#/$defs/text"
+              },
+              "source": {
+                "$ref": "#/$defs/source"
+              },
+              "also": {
+                "$ref": "#/$defs/also"
+              }
+            }
+          }
+        },
+        "notes": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "$ref": "#/$defs/sourced_text"
+          }
         }
       }
     }

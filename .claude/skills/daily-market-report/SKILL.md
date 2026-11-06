@@ -78,6 +78,17 @@ Issues go to trusted clients, so every issue is written for a general reader:
   could not source.
 - Use `day_ahead_title` when the calendar runs past the edition day.
 
+## Closing and weekly editions (D-060)
+
+An extra edition on a date that already has a morning issue sets `meta.edition_id` (for example
+`2026-11-06-close`, which names its files and folders) and `meta.edition_name` (for example
+"Closing edition · Week in review", shown in the masthead and on the card); its file is
+`issues/<edition_id>.json`. A weekly edition adds `week`: run
+`python3 render/technicals.py week issues/<file>.json --since <previous week's last session>` for
+the NSE index rows, then add the Sensex, the rupee, Brent, IBJA gold and silver and the 10-year
+yield (with `change_bp`) from sourced pages, a headline and two to four sourced notes. It appears
+first, as "The week", in every format and as a strip on the card.
+
 ## Steps
 
 1. **Gather in parallel.** Launch `markets-gatherer`, `flows-global-gatherer`,
@@ -87,7 +98,20 @@ Issues go to trusted clients, so every issue is written for a general reader:
    (`nse_index_file.rows`, header included) to `out/<date>/nse-rows.csv` (create the folder) and run
    `python3 render/technicals.py add out/<date>/nse-rows.csv --url <the file's URL>`. It refuses
    rows whose points change does not match the previous close (a miscopied digit): fetch the
-   file again and retry. If the file cannot be had, leave the technical snapshot out and say so.
+   file again and retry. First check that the history holds the previous session for each index
+   (`python3 render/technicals.py check` and the last dates in `data/index-history.csv`); a run
+   that could not add its session leaves a gap, so add the missing day first, from NSE's file or
+   the fallback below. **Fallback (D-060):** if NSE's file is not published or cannot be opened
+   (unattended runs often cannot answer the permission prompt), take each index's close, points
+   change and percent change (open, high and low only if stated) from a reputable market-close
+   report, confirm the close with a second outlet, write them in the same columns and run
+   `python3 render/technicals.py add <rows.csv> --url <report URL> --outlet`. Each row is still
+   checked against the previous close, and a row that does not match is refused. The charts then
+   show the 22-session trend, and the day's range when the report gives open, high and low. Say in
+   the hand-off which rows came from reports; a later run replaces them by adding NSE's file for
+   that date. Only if neither source can be had, leave the technical snapshot out and say so.
+   IBJA rates are kept in `data/ibja-rates.csv` (date, session, gold, silver, URL): append the
+   day's rates when you read them, and use stored rates only for the dates they carry.
 3. **Write the issue.** Create `issues/<edition-date>.json` against `schema/issue.schema.json`,
    using the latest issue file as the pattern. Use only figures an agent returned with a URL.
    Where two sources disagree, prefer the primary source and say which in the detail line.

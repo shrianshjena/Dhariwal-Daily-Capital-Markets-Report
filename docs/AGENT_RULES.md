@@ -7,7 +7,11 @@
   you have already opened, never by typing its address. If a fetch still asks for permission,
   move on to the next source rather than waiting. Search routes that work:
   - NSE daily index file: search "NSE Indices daily reports", open
-    niftyindices.com/reports/daily-reports, then its "Daily Snapshot (csv)" link for the date.
+    niftyindices.com/reports/daily-reports, then its "Daily Snapshot (csv)" link for the date, or
+    nsearchives.nseindia.com/content/indices/ind_close_all_DDMMYYYY.csv. If neither opens (on 5
+    and 6 Nov both waited on permission prompts), return each index's close, points change and
+    percent change from a reputable market-close report, with a second outlet's close, as
+    `outlet_index_rows` (D-060); the run adds them with `technicals.py add --outlet`.
   - IBJA gold and silver: search "ibjarates.com IBJA gold silver rates" ("IBJA rates today"
     returned no ibjarates.com link on 4 Nov) and open ibjarates.com from the results. The page's
     two history tables are AM then PM; IBJA's linked 30-day PDF labels them. Units: gold per

@@ -44,7 +44,7 @@ def prune(folder):
 
 def main():
     issue = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
-    date = issue["meta"]["date"]
+    date = issue["meta"].get("edition_id") or issue["meta"]["date"]
     stem = f"kubeerra-market-brief-{date}"
     out = ROOT / "out" / date
     problems, copied, removed = [], [], []

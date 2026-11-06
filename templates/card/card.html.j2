@@ -36,6 +36,10 @@ p { margin: 0; }
 .movers { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: 10px; }
 .movers td.col { width: 446px; vertical-align: top; padding: 0; }
 .movers td.gap { width: 44px; padding: 0; }
+.wk { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: 8px; }
+.wk td { width: 25%; vertical-align: top; padding-right: 10px; }
+.wk .n { font-size: 21px; line-height: 1.25; color: {{ C.text.inverseSoft }}; }
+.wk .c { font-size: 30px; font-weight: 700; margin-top: 4px; white-space: nowrap; }
 .mv { width: 100%; border-collapse: collapse; table-layout: fixed; }
 .mv td { font-size: 26px; line-height: 1.25; padding: 9px 0; border-bottom: 1px solid {{ C.border.inverse }}; vertical-align: top; }
 .mv td.p { width: 138px; text-align: right; font-weight: 700; white-space: nowrap; padding-left: 8px; }
@@ -45,7 +49,7 @@ p { margin: 0; }
 .foot .mono { margin-top: 10px; font-size: 18px; }
 </style></head>
 <body><div class="wrap">
-<div class="top"><img src="{{ pub.assets.logo_pdf_local }}" alt="Kubeerra logo"><div class="t"><p class="mono">Morning snapshot · {{ meta.weekday }} {{ date_short }}</p><h1>{{ pub.name }}</h1></div></div>
+<div class="top"><img src="{{ pub.assets.logo_pdf_local }}" alt="Kubeerra logo"><div class="t"><p class="mono">{{ "Morning snapshot" if edition_name == pub.edition_name or edition_name == "Morning edition" else edition_name.split(" · ")[0] }} · {{ meta.weekday }} {{ date_short }}</p><h1>{{ pub.name }}</h1></div></div>
 <div class="rule"></div>
 <p class="mono">India: {{ meta.india_as_of }}</p>
 <p class="headline">{{ issue.snapshot.headline }}</p>
@@ -54,18 +58,24 @@ p { margin: 0; }
 <tr>{% for t in pair %}<td><p class="mono">{{ t.label }}</p><p class="v">{{ t.value }}</p>{% if t.change_pct is not none %}<p class="c {{ dcls(t.change_pct) }}">{{ t.change_pct|arrow }} {{ t.change_pct|pct }}</p>{% endif %}</td>{% endfor %}</tr>
 {% endfor %}
 </table>
-{% if charts.range and nifty_tech %}{% set rb = charts.range %}
+{% if issue.get('week') and week_rows %}{% set wk = issue.week %}
 <div class="panel">
-<p class="lab">NIFTY 50 · day's range{% if charts.trend %} and last {{ charts.trend.n }} closes{% endif %}</p>
-<svg width="936" height="70" viewBox="0 0 936 70" xmlns="http://www.w3.org/2000/svg">
+<p class="lab">This week · {{ wk.get("from", "") }} to {{ wk.get("to", "") }}</p>
+<table class="wk"><tr>{% for w in week_rows[:4] %}<td><p class="n">{{ w.name }}</p><p class="c {{ dcls(w.pct) if w.pct is not none else '' }}">{{ w.chg_s }}</p></td>{% endfor %}</tr></table>
+</div>
+{% endif %}
+{% if (charts.range and nifty_tech) or charts.trend %}{% set rb = charts.range %}
+<div class="panel">
+<p class="lab">NIFTY 50 · {% if rb and nifty_tech %}day's range{% if charts.trend %} and {% endif %}{% endif %}{% if charts.trend %}last {{ charts.trend.n }} closes{% endif %}</p>
+{% if rb and nifty_tech %}<svg width="936" height="70" viewBox="0 0 936 70" xmlns="http://www.w3.org/2000/svg">
 <rect x="0" y="8" width="936" height="22" fill="{{ C.border.inverse }}"/>
 <rect x="{{ (rb.a * 9.36)|round|int }}" y="8" width="{{ (rb.b * 9.36)|round|int }}" height="22" fill="{{ '#6FD89B' if rb.up else '#FF9C94' }}"/>
 <text x="0" y="62" font-family="{{ SANS }}" font-size="22" fill="{{ C.text.inverseSoft }}">Low {{ nifty_tech.low|level }}</text>
 <text x="468" y="62" text-anchor="middle" font-family="{{ SANS }}" font-size="22" fill="{{ C.text.inverse }}">Open {{ nifty_tech.open|level }} · Close {{ nifty_tech.close|level }}</text>
 <text x="936" y="62" text-anchor="end" font-family="{{ SANS }}" font-size="22" fill="{{ C.text.inverseSoft }}">High {{ nifty_tech.high|level }}</text>
-</svg>
+</svg>{% endif %}
 {% if charts.trend %}{% set tr = charts.trend %}
-<svg width="936" height="170" viewBox="0 0 600 109" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="margin-top:18px;">
+<svg width="936" height="{{ 130 if issue.get('week') else 170 }}" viewBox="0 0 600 109" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="margin-top:18px;">
 <g transform="translate(20,4)">
 <polygon points="0,100 {{ tr.points }} 560,100" fill="{{ C.brand.deepBlue }}"/>
 <polyline points="{{ tr.points }}" fill="none" stroke="#8FB4FF" stroke-width="2.4" stroke-linejoin="round"/>

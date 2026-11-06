@@ -135,7 +135,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 <table{{ RP }} width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
 {% if logo_src %}<td width="48" valign="middle" style="width:48px;"><img src="{{ logo_src }}" width="48" height="48" alt="Kubeerra" style="display:block;width:48px;height:48px;border:0;outline:none;text-decoration:none;{{ SANS }}font-size:13px;font-weight:700;color:{{ T.mast_title }};"></td>{% elif logo_tile %}<td width="48" height="48" valign="middle" align="center" bgcolor="#0A0A0A" style="width:48px;height:48px;background-color:#0A0A0A;border:2px solid #C9A227;text-align:center;font-family:Georgia,'Times New Roman',serif;font-size:30px;line-height:44px;font-weight:700;color:#D4AF37;">K</td>{% endif %}
 <td valign="middle" style="padding-left:{{ 16 if (logo_src or logo_tile) else 0 }}px;">
-{{ label(pub.edition_name, T.mast_soft) }}
+{{ label(edition_name, T.mast_soft) }}
 <h1 class="h1" style="margin:2px 0 0;{{ SANS }}font-size:27px;line-height:32px;font-weight:700;color:{{ T.mast_title }};{{ LH }}">{{ pub.name }}</h1>
 </td></tr></table>
 <table{{ RP }} width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-top:20px;">{{ rule(40, C.brand.cobalt) }}</td></tr></table>
@@ -173,6 +173,20 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 <td valign="top" style="padding:9px 0;{{ SANS }}font-size:15px;line-height:21px;{{ LH }}"><a href="#disclosures" style="color:{{ C.text.primary }};font-weight:700;text-decoration:none;">Important disclosures</a></td></tr>
 </table>
 </td></tr>
+
+{#- The week (closing and weekly editions, D-060) -#}
+{% if has("week") %}{% set wk = issue.week %}
+{{ band("week") }}
+{{ sec("week", wk.get("headline")) }}
+<tr><td class="gut"{% if OL %} align="left"{% endif %} style="{{ TL }}padding:14px {{ G }}px 0{{ GP }};">
+<table{{ RP }} width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+{{ thr() }}{{ th("Market") }}{{ th(wk.get("from", "Start"), "right") }}{{ th(wk.get("to", "End"), "right") }}{{ th("Week", "right") }}</tr>
+{% for w in week_rows %}<tr><td valign="top" style="padding:9px 8px 9px 0;{{ B }}{{ SANS }}font-size:15px;line-height:20px;font-weight:600;{{ PC }}{{ LH }}">{{ w.name }}{% if w.note %}<br><span style="font-size:12px;{% if OL %}line-height:16px;{% endif %}font-weight:400;color:{{ C.text.secondary }};">{{ w.note|t }}</span>{% endif %}</td><td align="right" valign="top" style="padding:9px 0 9px 8px;{{ B }}{{ SANS }}font-size:14px;line-height:20px;color:{{ C.text.secondary }};white-space:nowrap;{{ LH }}">{{ w.start_s }}</td><td align="right" valign="top" style="padding:9px 0 9px 8px;{{ B }}{{ SANS }}font-size:14px;line-height:20px;{{ PC }}white-space:nowrap;{{ LH }}">{{ w.end_s }}</td><td align="right" valign="top" style="padding:9px 0 9px 8px;{{ B }}{{ SANS }}font-size:14px;line-height:20px;font-weight:700;color:{{ w.color }};white-space:nowrap;{{ LH }}">{{ w.chg_s|nb }}</td></tr>{% endfor %}
+</table>
+{% for n in wk.get("notes", []) %}{{ item(n.get("title"), n.text, n|srcs) }}{% endfor %}
+{{ srcline(wk["items"]|unique_sources, 10) }}
+</td></tr>
+{% endif %}
 
 {#- 1 Markets -#}
 {{ band("markets") }}
@@ -248,7 +262,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 {{ para("Lowest close " ~ (tr.lo|level) ~ ", highest " ~ (tr.hi|level) ~ "; the latest bar is " ~ (tr.end|level) ~ ", " ~ (tr.change_pct|pct) ~ " from the first.", 6, 13, C.text.secondary) }}
 {% endif %}
 {{ para(tc.note, 10, 13, C.text.secondary) }}
-{{ srcline([{"name": "NSE daily index files"}], 4) }}
+{{ srcline([{"name": tc.get("sources_label") or "NSE daily index files"}], 4) }}
 </td></tr>
 {% endif %}
 

@@ -65,7 +65,7 @@ def visible_text(html):
 
 def prepare(issue_path):
     issue = json.loads(Path(issue_path).read_text(encoding="utf-8"))
-    date = issue["meta"]["date"]
+    date = issue["meta"].get("edition_id") or issue["meta"]["date"]
     out = ROOT / "out" / date
     folder = out / "gmail-draft"
     folder.mkdir(parents=True, exist_ok=True)
@@ -114,7 +114,7 @@ def prepare(issue_path):
 
 def verify(issue_path, returned_path):
     issue = json.loads(Path(issue_path).read_text(encoding="utf-8"))
-    folder = ROOT / "out" / issue["meta"]["date"] / "gmail-draft"
+    folder = ROOT / "out" / (issue["meta"].get("edition_id") or issue["meta"]["date"]) / "gmail-draft"
     expected = numbers(visible_text((folder / "body.html").read_text(encoding="utf-8")))
     returned = Path(returned_path).read_text(encoding="utf-8")
     # get_draft returns Gmail's own HTML when the draft has no plain-text part: read its text
@@ -145,7 +145,7 @@ def raw_message(path):
 
 def verify_raw(issue_path, raw_path):
     issue = json.loads(Path(issue_path).read_text(encoding="utf-8"))
-    folder = ROOT / "out" / issue["meta"]["date"] / "gmail-draft"
+    folder = ROOT / "out" / (issue["meta"].get("edition_id") or issue["meta"]["date"]) / "gmail-draft"
     msg = raw_message(raw_path)
     html, pngs = None, []
     for part in msg.walk():

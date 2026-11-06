@@ -131,16 +131,15 @@ table.tiles td { vertical-align: top; border-top: 0.75pt solid {{ C.border.defau
 .tile-detail { font-size: 8.2pt; line-height: 1.4; color: {{ C.text.secondary }}; margin-top: 1mm; }
 table.barrows { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: 1.2mm; }
 table.barrows td { padding: 1.3mm 0; vertical-align: middle; font-size: 9pt; }
-table.barrows td.bn { width: 30%; padding-right: 3mm; }
-table.barrows td.bb { width: 56%; }
-table.barrows td.bv { width: 14%; text-align: right; font-weight: 700; white-space: nowrap; }
+table.barrows td.bn { width: 34%; padding-right: 3mm; }
+table.barrows td.bb { width: 54%; }
+table.barrows td.bv { width: 12%; text-align: right; font-weight: 700; white-space: nowrap; }
 .barhead { margin-top: 3.5mm; }
 .track { height: 2.6mm; background: {{ C.chart.track }}; }
 .fill { height: 2.6mm; }
 table.two { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: 2.5mm; }
-table.two > tbody > tr > td { vertical-align: top; width: 50%; }
-table.two > tbody > tr > td:first-child { padding-right: 5mm; }
-table.two > tbody > tr > td:last-child { padding-left: 5mm; }
+table.two > tbody > tr > td { vertical-align: top; width: 47%; padding: 0; }
+table.two > tbody > tr > td.gap { width: 6%; }
 .chart { margin-top: 2.5mm; break-inside: avoid; }
 .chart svg { display: block; }
 .stories { column-count: 2; column-gap: 8mm; margin-top: 2mm; }
@@ -197,7 +196,7 @@ table.agenda td.t.accent { color: {{ C.brand.cobalt }}; }
 <div class="mast-row">
 <div class="mast-logo"><img src="{{ pub.assets.logo_pdf_local }}" alt="Kubeerra logo"></div>
 <div class="mast-title">
-<p class="mono">{{ pub.edition_name }}</p>
+<p class="mono">{{ edition_name }}</p>
 <h1>{{ pub.name }}</h1>
 </div>
 </div>
@@ -229,6 +228,22 @@ table.agenda td.t.accent { color: {{ C.brand.cobalt }}; }
 </div>
 </section>
 
+{#- The week (closing and weekly editions, D-060) -#}
+{% if "week" in S %}{% set wk = issue.week %}
+{{ band("week") }}
+<section class="sec keep">
+{{ sechead("week", wk.get("headline")) }}
+<table class="data">
+<thead><tr><th>Market</th><th class="r">{{ wk.get("from", "Start") }}</th><th class="r">{{ wk.get("to", "End") }}</th><th class="r">Week</th></tr></thead>
+<tbody>
+{% for w in week_rows %}<tr><td class="name">{{ w.name }}{% if w.note %}<span class="sub">{{ w.note|t }}</span>{% endif %}</td><td class="r num quiet">{{ w.start_s }}</td><td class="r num">{{ w.end_s }}</td><td class="r num strong" style="color: {{ w.color }};">{{ w.chg_s }}</td></tr>{% endfor %}
+</tbody>
+</table>
+{% if wk.get("notes") %}<div class="cols2">{% for n in wk.notes %}{{ item(n.get("title"), n.text, n|srcs) }}{% endfor %}</div>{% endif %}
+{{ src(wk["items"]|unique_sources) }}
+</section>
+{% endif %}
+
 {#- 1 Markets -#}
 {{ band("markets") }}
 <section class="sec">
@@ -249,7 +264,7 @@ table.agenda td.t.accent { color: {{ C.brand.cobalt }}; }
 <section class="sec keep">
 {{ sechead("movers", "The " ~ mv.universe ~ "'s largest gains and falls on the day", mv.as_of) }}
 <table class="two"><tr>
-{% for title, rows in (("Gainers", mv.gainers), ("Losers", mv.losers)) %}
+{% for title, rows in (("Gainers", mv.gainers), ("Losers", mv.losers)) %}{% if not loop.first %}<td class="gap"></td>{% endif %}
 <td><p class="mono quiet">{{ title }}</p>
 <table class="data"><tbody>{% for x in rows %}<tr><td class="name">{{ x.name|t }}{% if x.get('close') or x.get('note') %}<span class="sub">{% if x.get('close') %}₹{{ x.close|level }}{% endif %}{% if x.get('close') and x.get('note') %} · {% endif %}{% if x.get('note') %}{{ x.note|t }}{% endif %}</span>{% endif %}</td><td class="r num strong {{ dcls(x.change_pct) }}">{{ x.change_pct|arrow }} {{ x.change_pct|pct }}</td></tr>{% endfor %}</tbody></table></td>
 {% endfor %}
@@ -298,20 +313,19 @@ table.agenda td.t.accent { color: {{ C.brand.cobalt }}; }
 </svg>
 </div>
 {% endif %}
-<p class="note">{{ tc.note|t }} <span class="srcin">Source: NSE daily index files</span></p>
+<p class="note">{{ tc.note|t }} <span class="srcin">Source: {{ tc.get("sources_label") or "NSE daily index files" }}</span></p>
 </section>
 {% endif %}
 
 <section class="sec keep">
 {{ sechead("sectors", issue.sectors.headline, issue.sectors.as_of) }}
-<table class="two"><tr>
 {% for group_name, rows in (("Strongest", sectors.top), ("Weakest", sectors.bottom)) %}
-<td><p class="mono quiet barhead">{{ group_name }}</p>
+<p class="mono quiet barhead">{{ group_name }}</p>
 <table class="barrows">
-{% for s in rows %}<tr><td class="bn">{{ s.name }}</td><td class="bb"><div class="track"><div class="fill" style="width: {{ s.bar }}%; background: {{ C.chart.gain if s.change_pct >= 0 else C.chart.loss }};"></div></div></td><td class="bv num {{ dcls(s.change_pct) }}">{{ s.change_pct|pct }}</td></tr>{% endfor %}
-</table></td>
+{% for s in rows %}<tr><td class="bn">{{ s.name }}</td><td class="bb"><div class="track"><div class="fill" style="width: {{ s.bar }}%; background: {{ C.chart.gain if s.change_pct >= 0 else C.chart.loss }};"></div></div></td><td class="bv num {{ dcls(s.change_pct) }}">{{ s.change_pct|pct }}</td></tr>
 {% endfor %}
-</tr></table>
+</table>
+{% endfor %}
 {{ src([issue.sectors.source]) }}
 </section>
 

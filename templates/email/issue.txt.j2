@@ -7,7 +7,7 @@ PART {{ cl.num }} OF {{ clusters|length }} · {{ cl.title|upper }}
 {{ cl.desc }}
 ============================================================
 {%- endmacro -%}
-{{ pub.name|upper }} · {{ pub.edition_name|upper }}
+{{ pub.name|upper }} · {{ edition_name|upper }}
 {{ meta.weekday }} {{ date_long }}{% if meta.audience == "internal" %} · {{ meta.label }}{% endif +%}
 India: {{ meta.india_as_of }} · Global: {{ meta.global_as_of }}
 {% if meta.audience == "internal" %}
@@ -28,6 +28,21 @@ IN THIS ISSUE
 {% endfor %}
 Important disclosures (at the end)
 
+{% if "week" in S %}{% set wk = issue.week %}
+{{ band("week") }}
+
+{{ head("week") }}
+{% if wk.get("headline") %}{{ wk.headline }}
+{% endif %}
+{% for w in week_rows %}
+- {{ w.name }}: {{ w.start_s }} ({{ wk.get("from", "start") }}) to {{ w.end_s }} ({{ wk.get("to", "end") }}), {{ w.chg_s }}
+{% endfor %}
+{% for n in wk.get("notes", []) %}
+{% if n.get("title") %}{{ n.title }}: {% endif %}{{ n.text }} ({{ names(n|srcs) }})
+{% endfor %}
+Sources: {{ names(wk["items"]|unique_sources) }}
+
+{% endif %}
 {{ band("markets") }}
 
 {{ head("snapshot") }}
@@ -58,7 +73,7 @@ Sources: {{ names(mv|srcs) }}
 {{ head("technicals") }}
 {% if tc.get('headline') %}{{ tc.headline }}
 {% endif %}
-{% if nifty_tech %}NIFTY 50 on {{ tc.as_of|replace("close, ", "") }}: opened {{ nifty_tech.open|level }}, low {{ nifty_tech.low|level }}, high {{ nifty_tech.high|level }}, closed {{ nifty_tech.close|level }}.
+{% if nifty_tech and charts.range %}NIFTY 50 on {{ tc.as_of|replace("close, ", "") }}: opened {{ nifty_tech.open|level }}, low {{ nifty_tech.low|level }}, high {{ nifty_tech.high|level }}, closed {{ nifty_tech.close|level }}.
 {% endif %}
 {% for t in tc["items"] %}
 {{ t.index }}: close {{ t.close|level }}{% for k, n in (("sma20", "20"), ("sma50", "50"), ("sma200", "200")) %}{% if t[k] %}; {{ n }}-day average {{ t[k]|level }} (close {{ (((t.close - t[k]) / t[k]) * 100)|pct }}){% endif %}{% endfor %}.

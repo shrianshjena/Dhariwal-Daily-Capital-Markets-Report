@@ -6,13 +6,20 @@
 {%- set meta = issue.meta -%}
 {%- macro idx(r) -%}{{ r.close|level }} {{ r.change_pct|arrow }} {{ r.change_pct|pct }}{%- endmacro -%}
 *{{ pub.publisher }} · {{ pub.registration.tagline }} · {{ pub.registration.arn }}*
-*{{ pub.name }}* · {{ meta.weekday }} {{ date_short }}
+*{{ pub.name }}*{% if edition_name != pub.edition_name and edition_name != 'Morning edition' %} · {{ edition_name }}{% endif %} · {{ meta.weekday }} {{ date_short }}
 
 *At a glance*
 {% for item in issue.brief %}
 • {{ item }}
 {% endfor %}
 
+{% if issue.get('week') %}{% set wk = issue.week %}
+*This week* ({{ wk.get("from", "") }} to {{ wk.get("to", "") }})
+{% for w in week_rows %}
+• {{ w.name }}: {{ w.end_s }} ({{ w.chg_s }})
+{% endfor %}
+
+{% endif %}
 *Indian markets* ({{ issue.snapshot.as_of }})
 {% for r in issue.snapshot.indices %}
 • {{ r.name }}: {{ idx(r) }}
