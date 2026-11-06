@@ -446,8 +446,10 @@ def main():
     clusters, S = structure(issue)
     tech = issue.get("technicals") or {}
     nifty_tech = next((t for t in tech.get("items", []) if t["index"] == "NIFTY 50"), None)
+    tpoints = (tech.get("trend") or {}).get("points") or []
     charts = {"range": range_bar(nifty_tech) if nifty_tech else None,
-              "trend": trend((tech.get("trend") or {}).get("points") or [])}
+              "trend": trend(tpoints),
+              "trend_pdf": trend(tpoints, width=784)}   # the PDF chart spans the full 180 mm text width
     ctx = dict(issue=issue, pub=pub, tokens=tokens, sectors=sector_view(issue), snapshot_sources=snapshot_sources,
                clusters=clusters, S=S, glance=glance(issue), metals=metals_view(issue), charts=charts,
                nifty_tech=nifty_tech, world_groups=world_groups(issue), week_rows=week_rows(issue, tokens),

@@ -132,7 +132,8 @@ table.tiles td { vertical-align: top; border-top: 0.75pt solid {{ C.border.defau
 table.barrows { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: 1.2mm; }
 table.barrows td { padding: 1.3mm 0; vertical-align: middle; font-size: 9pt; }
 table.barrows td.bn { width: 34%; padding-right: 3mm; }
-table.barrows td.bb { width: 54%; }
+/* the bar column takes what is left: a fixed 54% plus the name's 3 mm padding ran 3 mm past the margin */
+table.barrows td.bb { width: auto; }
 table.barrows td.bv { width: 12%; text-align: right; font-weight: 700; white-space: nowrap; }
 .barhead { margin-top: 3.5mm; }
 .track { height: 2.6mm; background: {{ C.chart.track }}; }
@@ -295,20 +296,20 @@ table.agenda td.t.accent { color: {{ C.brand.cobalt }}; }
 <tbody>{% for t in tc["items"] %}<tr><td class="name">{{ t.index }}</td><td class="r num strong">{{ t.close|level }}</td>{% for k in ("sma20", "sma50", "sma200") %}<td class="r num">{% if t[k] %}{{ t[k]|level }}<span class="sub">close {{ (((t.close - t[k]) / t[k]) * 100)|pct }}</span>{% else %}<span class="quiet">n/a</span>{% endif %}</td>{% endfor %}</tr>{% endfor %}</tbody>
 </table>
 {% if tc.vix %}<p class="note">India VIX, a measure of expected volatility derived from NIFTY options, closed at {{ tc.vix.close|level }}{% if tc.vix.change_pct is not none %} ({{ tc.vix.change_pct|pct }} on the day){% endif %}.</p>{% endif %}
-{% if charts.trend %}{% set tr = charts.trend %}
+{% if charts.trend_pdf %}{% set tr = charts.trend_pdf %}
 <div class="chart">
 <p class="mono quiet">NIFTY 50 · last {{ tr.n }} closes, {{ tr.first }} to {{ tr.last }}</p>
-<svg width="180mm" height="34mm" viewBox="0 0 600 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NIFTY 50 closes from {{ tr.first }} to {{ tr.last }}, between {{ tr.lo|level }} and {{ tr.hi|level }}">
-<g transform="translate(20,14)">
-<line x1="0" y1="0" x2="560" y2="0" stroke="{{ C.border.default }}" stroke-width="1"/>
-<line x1="0" y1="100" x2="560" y2="100" stroke="{{ C.border.default }}" stroke-width="1"/>
-<polygon points="0,100 {{ tr.points }} 560,100" fill="{{ C.brand.paleBlue }}"/>
+<svg width="180mm" height="34mm" viewBox="0 0 794 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NIFTY 50 closes from {{ tr.first }} to {{ tr.last }}, between {{ tr.lo|level }} and {{ tr.hi|level }}">
+<g transform="translate(5,14)">
+<line x1="0" y1="0" x2="784" y2="0" stroke="{{ C.border.default }}" stroke-width="1"/>
+<line x1="0" y1="100" x2="784" y2="100" stroke="{{ C.border.default }}" stroke-width="1"/>
+<polygon points="0,100 {{ tr.points }} 784,100" fill="{{ C.brand.paleBlue }}"/>
 <polyline points="{{ tr.points }}" fill="none" stroke="{{ C.brand.cobalt }}" stroke-width="2.5" stroke-linejoin="round"/>
 <circle cx="{{ tr.xs[-1] }}" cy="{{ tr.ys[-1] }}" r="4.5" fill="{{ C.brand.navy }}"/>
 <text x="0" y="-4" font-family="{{ SANS }}" font-size="11" fill="{{ C.text.secondary }}">High {{ tr.hi|level }}</text>
 <text x="0" y="114" font-family="{{ SANS }}" font-size="11" fill="{{ C.text.secondary }}">Low {{ tr.lo|level }}</text>
 <text x="0" y="132" font-family="{{ SANS }}" font-size="11" fill="{{ C.text.secondary }}">{{ tr.first }}</text>
-<text x="560" y="132" text-anchor="end" font-family="{{ SANS }}" font-size="11" fill="{{ C.text.secondary }}">{{ tr.last }}: {{ tr.end|level }}</text>
+<text x="784" y="132" text-anchor="end" font-family="{{ SANS }}" font-size="11" fill="{{ C.text.secondary }}">{{ tr.last }}: {{ tr.end|level }}</text>
 </g>
 </svg>
 </div>
