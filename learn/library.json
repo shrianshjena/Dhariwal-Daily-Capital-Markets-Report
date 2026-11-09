@@ -6,5 +6,6 @@
   {"id": "L-005", "date": "2026-11-04", "title": "What a fund of funds is, and why it has two layers of costs", "issue": "issues/2026-11-04.json", "topics": ["fund of funds", "multi-asset", "expense ratio", "scheme information document"]},
   {"id": "L-006", "date": "2026-11-05", "title": "Why liquid funds see large withdrawals around tax dates", "issue": "issues/2026-11-05.json", "topics": ["liquid funds", "advance tax", "debt funds", "outflows"]},
   {"id": "L-007", "date": "2026-11-06", "title": "Where a scheme's riskometer is published", "issue": "issues/2026-11-06.json", "topics": ["riskometer", "new fund offers", "key information memorandum", "scheme information document"]},
-  {"id": "L-008", "date": "2026-11-06", "title": "What a weekly change measures", "issue": "issues/2026-11-06-close.json", "topics": ["weekly change", "index levels", "factsheet", "past performance"]}
+  {"id": "L-008", "date": "2026-11-06", "title": "What a weekly change measures", "issue": "issues/2026-11-06-close.json", "topics": ["weekly change", "index levels", "factsheet", "past performance"]},
+  {"id": "L-009", "date": "2026-11-09", "title": "What Muhurat trading is", "issue": "issues/2026-11-09.json", "topics": ["Muhurat trading", "Samvat", "special sessions", "settlement"]}
 ]

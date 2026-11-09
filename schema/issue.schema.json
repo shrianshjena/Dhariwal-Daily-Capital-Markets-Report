@@ -382,6 +382,10 @@
           "items": {
             "$ref": "#/$defs/figure"
           }
+        },
+        "as_of": {
+          "$ref": "#/$defs/text",
+          "description": "Date the flow tiles refer to when it differs from the snapshot's session, e.g. Fri 6 Nov 2026 (shown in the WhatsApp message)"
         }
       }
     },

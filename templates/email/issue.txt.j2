@@ -83,7 +83,7 @@ Sources: {{ names(mv|srcs) }}
 {% if charts.trend %}NIFTY 50 over the last {{ charts.trend.n }} closes ({{ charts.trend.first }} to {{ charts.trend.last }}): lowest {{ charts.trend.lo|level }}, highest {{ charts.trend.hi|level }}, latest {{ charts.trend.end|level }}.
 {% endif %}
 {{ tc.note }}
-Source: NSE daily index files
+Source: {{ tc.get("sources_label") or "NSE daily index files" }}
 {% endif %}
 
 {{ head("sectors") }}

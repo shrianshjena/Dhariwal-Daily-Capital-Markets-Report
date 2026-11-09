@@ -36,7 +36,7 @@ Losers: {% for x in mv.losers %}{{ x.name }} {{ x.change_pct|pct }}{{ ", " if no
 
 {% endif %}
 
-*Flows, rupee, bonds and crude* ({{ issue.snapshot.as_of }})
+*Flows, rupee, bonds and crude* ({{ issue.flows.get("as_of") or issue.snapshot.as_of }})
 {% for t in issue.flows.tiles %}
 • {{ t.label }}{{ " (provisional)" if t.provisional|default(false) else "" }}: {{ t|figure }}{% if t|chip %} ({{ t|chip }}){% endif +%}
 {% endfor %}
