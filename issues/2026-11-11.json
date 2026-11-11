@@ -1,0 +1,1350 @@
+{
+  "meta": {
+    "date": "2026-11-11",
+    "weekday": "Wednesday",
+    "edition": "Morning edition",
+    "issue_number": 8,
+    "label": "Client edition 008",
+    "audience": "client",
+    "india_as_of": "Close, Mon 9 Nov 2026",
+    "global_as_of": "Closes, Tue 10 Nov",
+    "preheader": "NIFTY 50 rose 0.23% to 25,044.65 on Monday as PSU banks gained; foreign investors bought ₹7,212 crore (provisional); US prices rose 0.4% in October.",
+    "subject": "Kubeerra Market Brief · Wed 11 Nov: NIFTY 50 ends at 25,044.65 as PSU banks rise; US inflation data lifts yields"
+  },
+  "brief": [
+    "On Monday, the last session before Tuesday's Diwali Balipratipada holiday, the NIFTY 50 rose 0.23% to 25,044.65 and the Sensex 0.13% to 81,106.65 after a volatile day (HDFC Sky, IANS).",
+    "Nifty Bank gained 1.51% as the Nifty PSU Bank index rose 3.73%, while IT and metal shares fell; the NIFTY Midcap 100 added 0.55% and the Smallcap 100 0.10%, and declining shares outnumbered advancing ones (Kotak Neo, Liquide).",
+    "Foreign investors bought a net ₹7,212 crore on Monday and domestic institutions sold ₹7,173 crore (provisional, Kotak Neo). The rupee closed 5 paise firmer at 93.93 per dollar (PTI, provisional).",
+    "During the holiday, US consumer prices rose 0.4% in October (BLS), US shares and gold fell, the 10-year Treasury yield moved near 5% and Brent settled at $91.49, its lowest since 31 Aug (AP, Reuters)."
+  ],
+  "snapshot": {
+    "headline": "The NIFTY 50 closed above 25,000 as PSU banks rose and IT shares fell",
+    "as_of": "Close, Mon 9 Nov 2026",
+    "indices": [
+      {
+        "name": "NIFTY 50",
+        "close": 25044.65,
+        "change": 58.25,
+        "change_pct": 0.23,
+        "source": {
+          "name": "HDFC Sky",
+          "url": "https://hdfcsky.com/news/market-close-report-today-november-9-2026-nifty-sensex-post-modest-gains-as-diwali-party-pauses-for-breath"
+        }
+      },
+      {
+        "name": "BSE Sensex",
+        "close": 81106.65,
+        "change": 107.25,
+        "change_pct": 0.13,
+        "source": {
+          "name": "Business Standard",
+          "url": "https://www.business-standard.com/markets/news/stock-market-live-november-9-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-update-126110900058_1.html"
+        }
+      },
+      {
+        "name": "Nifty Bank",
+        "close": 59741.25,
+        "change": 890.6,
+        "change_pct": 1.51,
+        "source": {
+          "name": "Liquide",
+          "url": "https://blog.liquide.life/share-market-today-nifty-reclaims-25-000-to-hit-9-month-high-psu-banks-financials-power-rally-it-drags/"
+        }
+      }
+    ],
+    "breadth": null
+  },
+  "movers": {
+    "universe": "NIFTY 50",
+    "as_of": "Close, Mon 9 Nov 2026",
+    "gainers": [
+      {
+        "name": "State Bank of India",
+        "change_pct": 2.56,
+        "close": 1042.0
+      },
+      {
+        "name": "Trent",
+        "change_pct": 2.02,
+        "close": 3119.2
+      },
+      {
+        "name": "Nestle India",
+        "change_pct": 1.91,
+        "close": 1297.8
+      }
+    ],
+    "losers": [
+      {
+        "name": "Tata Steel",
+        "change_pct": -2.81,
+        "close": 184.85
+      },
+      {
+        "name": "HCLTech",
+        "change_pct": -2.43,
+        "close": 1407.0
+      },
+      {
+        "name": "UltraTech Cement",
+        "change_pct": -1.79,
+        "close": 12275.0
+      }
+    ],
+    "source": {
+      "name": "Liquide",
+      "url": "https://blog.liquide.life/share-market-today-nifty-reclaims-25-000-to-hit-9-month-high-psu-banks-financials-power-rally-it-drags/"
+    },
+    "also": [
+      {
+        "name": "Kotak Neo",
+        "url": "https://www.kotakneo.com/news/market-news/sensex-and-nifty-make-maginal-gains/"
+      },
+      {
+        "name": "The Indian Awaaz",
+        "url": "https://theindianawaaz.com/market-nov-9-sensex-nifty-end-higher-as-psu-banks-rally-nifty-reclaims-25000/"
+      }
+    ]
+  },
+  "flows": {
+    "headline": "Foreign investors bought a net ₹7,212 crore on Monday, taking November's total to ₹53,172 crore (provisional)",
+    "tiles": [
+      {
+        "label": "FII net",
+        "value": 7212.22,
+        "format": "crore_signed",
+        "provisional": true,
+        "detail": "Net buyers in the cash market on Mon 9 Nov; ₹53,172 crore from 1 to 9 Nov",
+        "source": {
+          "name": "Kotak Neo FII/DII data",
+          "url": "https://www.kotakneo.com/share-market-today/fii-dii-data/"
+        },
+        "also": [
+          {
+            "name": "Trendlyne",
+            "url": "https://trendlyne.com/macro-data/fii-dii/latest/cash-pastmonth/"
+          }
+        ]
+      },
+      {
+        "label": "DII net",
+        "value": -7172.53,
+        "format": "crore_signed",
+        "provisional": true,
+        "detail": "Net sellers on Mon 9 Nov; ₹32,069 crore of net sales from 1 to 9 Nov",
+        "source": {
+          "name": "Kotak Neo FII/DII data",
+          "url": "https://www.kotakneo.com/share-market-today/fii-dii-data/"
+        },
+        "also": [
+          {
+            "name": "Trendlyne",
+            "url": "https://trendlyne.com/macro-data/fii-dii/latest/cash-pastmonth/"
+          }
+        ]
+      },
+      {
+        "label": "USD/INR",
+        "value": 93.93,
+        "format": "fx",
+        "direction": "down",
+        "detail": "Close on Mon 9 Nov, 5 paise firmer (PTI, provisional), on softer crude and foreign inflows",
+        "source": {
+          "name": "PTI via Telangana Today",
+          "url": "https://telanganatoday.com/rupee-settles-at-93-93-against-us-dollar-amid-softer-crude-prices"
+        },
+        "also": [
+          {
+            "name": "PTI via HDFC Sky",
+            "url": "https://hdfcsky.com/news/rupee-rises-5-paise-to-close-at-93-93-against-us-dollar"
+          }
+        ]
+      },
+      {
+        "label": "10-year G-Sec yield",
+        "value": 7.17,
+        "format": "pct_level",
+        "direction": "up",
+        "detail": "On Mon 9 Nov, up about 1 basis point from a more than one-month low (Trading Economics)",
+        "source": {
+          "name": "Trading Economics",
+          "url": "https://tradingeconomics.com/india/government-bond-yield"
+        }
+      },
+      {
+        "label": "Brent crude",
+        "value": 91.49,
+        "format": "usd_bbl",
+        "change_pct": -1.17,
+        "detail": "January contract settlement on Tue 10 Nov, the lowest since 31 Aug (Reuters)",
+        "source": {
+          "name": "Reuters via Investing.com",
+          "url": "https://www.investing.com/news/commodities-news/oil-falls-as-trump-downplays-prospect-of-escalation-with-iran-5013892"
+        },
+        "also": [
+          {
+            "name": "Rigzone",
+            "url": "https://www.rigzone.com/news/oil_prices_retreat_as_peace_hopes_grow-10-nov-2026-185054-article"
+          },
+          {
+            "name": "Eurasia Business News (citing Kitco)",
+            "url": "https://eurasiabusinessnews.com/2026/11/11/stock-market-today-dow-jones-nasdaq-sp-500-fall-on-november-10-2026-oil-and-gold-retreat/"
+          }
+        ]
+      }
+    ],
+    "as_of": "Mon 9 Nov 2026; FII/DII provisional; Brent 10 Nov"
+  },
+  "sectors": {
+    "headline": "PSU banks and pharma led; IT and metals fell",
+    "as_of": "Close, Mon 9 Nov 2026",
+    "items": [
+      {
+        "name": "Nifty PSU Bank",
+        "change_pct": 3.73
+      },
+      {
+        "name": "Nifty Pharma",
+        "change_pct": 1.65
+      },
+      {
+        "name": "Nifty Realty",
+        "change_pct": 0.77
+      },
+      {
+        "name": "Nifty Financial Services",
+        "change_pct": 0.75
+      },
+      {
+        "name": "Nifty FMCG",
+        "change_pct": -0.15
+      },
+      {
+        "name": "Nifty Metal",
+        "change_pct": -0.46
+      },
+      {
+        "name": "Nifty IT",
+        "change_pct": -1.22
+      }
+    ],
+    "source": {
+      "name": "Liquide",
+      "url": "https://blog.liquide.life/share-market-today-nifty-reclaims-25-000-to-hit-9-month-high-psu-banks-financials-power-rally-it-drags/"
+    }
+  },
+  "outlook": {
+    "headline": "US inflation, crude and India's own price data frame the first session after the holiday",
+    "drivers": [
+      {
+        "title": "Crude oil",
+        "text": "Brent settled at $91.49 on Tuesday, its lowest since 31 Aug, after President Trump said he would put off new strikes on Iran and Middle East shipments neared prewar levels (Reuters, Rigzone). India imports most of its crude, so oil prices reach the import bill, the rupee and fuel inflation.",
+        "source": {
+          "name": "Reuters via Investing.com",
+          "url": "https://www.investing.com/news/commodities-news/oil-falls-as-trump-downplays-prospect-of-escalation-with-iran-5013892"
+        },
+        "also": [
+          {
+            "name": "Rigzone",
+            "url": "https://www.rigzone.com/news/oil_prices_retreat_as_peace_hopes_grow-10-nov-2026-185054-article"
+          }
+        ]
+      },
+      {
+        "title": "Foreign flows",
+        "text": "Foreign investors bought a net ₹53,172 crore in the cash market from 1 to 9 Nov while domestic institutions sold ₹32,069 crore (provisional, Kotak Neo). Foreign flows feed into large-cap share prices and the rupee; provisional figures can be revised.",
+        "source": {
+          "name": "Kotak Neo FII/DII data",
+          "url": "https://www.kotakneo.com/share-market-today/fii-dii-data/"
+        },
+        "also": [
+          {
+            "name": "Trendlyne",
+            "url": "https://trendlyne.com/macro-data/fii-dii/latest/cash-pastmonth/"
+          }
+        ]
+      },
+      {
+        "title": "Inflation in India",
+        "text": "Retail inflation was 5.54% in September (provisional), with food prices up 7.74% (Business Standard). ICRA's Aditi Nayar expects October's reading at 6.1% (NewsBytes). Inflation readings shape rate expectations, which reach bond yields and loan rates.",
+        "source": {
+          "name": "Business Standard",
+          "url": "https://www.business-standard.com/economy/news/weekly-policy-watch-india-retail-inflation-forex-reserves-deposit-growth-126110900126_1.html"
+        },
+        "also": [
+          {
+            "name": "NewsBytes",
+            "url": "https://www.newsbytesapp.com/news/business/indias-retail-inflation-expected-to-top-6-in-october-2026/tldr"
+          }
+        ]
+      },
+      {
+        "title": "The rupee and bonds",
+        "text": "The rupee firmed 5 paise on Monday on easing crude and foreign inflows, PTI reported, while the 10-year yield rose to 7.17% as investors took profits after a rally (Trading Economics). Bond prices rise when yields fall.",
+        "source": {
+          "name": "PTI via Telangana Today",
+          "url": "https://telanganatoday.com/rupee-settles-at-93-93-against-us-dollar-amid-softer-crude-prices"
+        },
+        "also": [
+          {
+            "name": "Trading Economics",
+            "url": "https://tradingeconomics.com/india/government-bond-yield"
+          }
+        ]
+      }
+    ],
+    "global_cues": [
+      {
+        "title": "US inflation and the Fed",
+        "text": "US consumer prices rose 0.4% in October and core prices 0.3% (BLS). After the data, CME FedWatch showed a December Fed rate rise fully priced (Seoul Economic Daily), and Fed Governor Waller said he would back at least a quarter-point rise (Reuters). Higher US rates can weigh on foreign flows into Indian shares and bonds.",
+        "source": {
+          "name": "US Bureau of Labor Statistics",
+          "url": "https://www.bls.gov/news.release/cpi.htm"
+        },
+        "also": [
+          {
+            "name": "Seoul Economic Daily",
+            "url": "https://en.sedaily.com/world/2026/11/11/us-stocks-fall-on-rate-hike-fears-nvidia-slips-to-no-3-by"
+          },
+          {
+            "name": "Reuters via Investing.com",
+            "url": "https://investing.com/news/economy-news/feds-waller-plans-to-support-at-least-a-quarterpoint-rate-hike-in-december-5014429"
+          }
+        ]
+      },
+      {
+        "title": "US yields and the dollar",
+        "text": "The 10-year Treasury yield rose about 10 basis points to near 5% on Tuesday and the dollar index edged higher (Trading Economics). A firmer dollar tends to weigh on the rupee and other emerging-market currencies.",
+        "source": {
+          "name": "Trading Economics",
+          "url": "https://tradingeconomics.com/united-states/government-bond-yield"
+        },
+        "also": [
+          {
+            "name": "CappNotes",
+            "url": "https://cappnotes.substack.com/p/closing-look-tuesday-november-10"
+          }
+        ]
+      },
+      {
+        "title": "Asian markets",
+        "text": "On Tuesday, while India was shut, Japan's Nikkei rose 2.9% and Korea's Kospi 4.4% (AP). On Wednesday morning the Kospi opened lower, then turned higher, Aju Press reported.",
+        "source": {
+          "name": "AP via KSAT",
+          "url": "https://www.ksat.com/business/2026/11/10/asian-stocks-rise-after-technology-shares-advance-on-wall-street-ahead-of-us-inflation-data/"
+        },
+        "also": [
+          {
+            "name": "Aju Press",
+            "url": "https://www.ajupress.com/view/20261111095738425"
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "when": "Thu 12 Nov",
+        "title": "India inflation",
+        "text": "October retail inflation is due; September's provisional reading was 5.54% (Business Standard).",
+        "source": {
+          "name": "Business Standard",
+          "url": "https://www.business-standard.com/economy/news/weekly-policy-watch-india-retail-inflation-forex-reserves-deposit-growth-126110900126_1.html"
+        }
+      },
+      {
+        "when": "Thu 12 and Fri 13 Nov",
+        "title": "US data",
+        "text": "Weekly jobless claims on Thursday and October producer prices on Friday (Kiplinger).",
+        "source": {
+          "name": "Kiplinger",
+          "url": "https://www.kiplinger.com/investing/economy/this-weeks-economic-calendar"
+        }
+      },
+      {
+        "when": "2 to 4 Dec",
+        "title": "RBI policy meeting",
+        "text": "The RBI's Monetary Policy Committee meets (Angel One, citing the RBI calendar).",
+        "source": {
+          "name": "Angel One",
+          "url": "https://www.angelone.in/news/economy/rbi-releases-mpc-meeting-calendar-for-fy27-what-you-need-to-know"
+        }
+      },
+      {
+        "when": "9 Dec",
+        "title": "US Federal Reserve",
+        "text": "The Fed's December decision is due; after the US inflation data, CME FedWatch showed a rate rise fully priced (Seoul Economic Daily).",
+        "source": {
+          "name": "Seoul Economic Daily",
+          "url": "https://en.sedaily.com/world/2026/11/11/us-stocks-fall-on-rate-hike-fears-nvidia-slips-to-no-3-by"
+        },
+        "also": [
+          {
+            "name": "Fed Rate Calc",
+            "url": "https://fedratecalc.com/fomc-meeting-schedule/december-2026/"
+          }
+        ]
+      }
+    ]
+  },
+  "global": {
+    "headline": "US shares fell on Tuesday after hotter inflation data; Japanese and Korean shares rose",
+    "items": [
+      {
+        "region": "US",
+        "name": "Dow Jones",
+        "close": 52231.89,
+        "change_pct": -0.3,
+        "as_of": "Close, 10 Nov",
+        "source": {
+          "name": "AP via KRMG",
+          "url": "https://krmg.com/2026/11/10/how-major-us-stock-indexes-fared-tuesday-11-10-2026/"
+        }
+      },
+      {
+        "region": "US",
+        "name": "S&P 500",
+        "close": 7520.93,
+        "change_pct": -0.38,
+        "as_of": "Close, 10 Nov",
+        "source": {
+          "name": "AP via KRMG",
+          "url": "https://krmg.com/2026/11/10/how-major-us-stock-indexes-fared-tuesday-11-10-2026/"
+        }
+      },
+      {
+        "region": "US",
+        "name": "Nasdaq Composite",
+        "close": 25065.87,
+        "change_pct": -0.74,
+        "as_of": "Close, 10 Nov",
+        "source": {
+          "name": "AP via KRMG",
+          "url": "https://krmg.com/2026/11/10/how-major-us-stock-indexes-fared-tuesday-11-10-2026/"
+        }
+      },
+      {
+        "region": "Europe",
+        "name": "FTSE 100",
+        "close": 10751.59,
+        "change_pct": -0.29,
+        "as_of": "Close, 10 Nov",
+        "source": {
+          "name": "Share Talk",
+          "url": "https://www.share-talk.com/ftse-100-closes-31-points-lower-as-gold-miners-slide/"
+        }
+      },
+      {
+        "region": "Europe",
+        "name": "DAX",
+        "close": 26347.45,
+        "change_pct": 0.31,
+        "as_of": "Close, 10 Nov",
+        "source": {
+          "name": "dpa-AFX via ARIVA.DE",
+          "url": "https://www.ariva.de/news/aktien-frankfurt-schluss-dax-daemmt-gewinne-ein-12202108"
+        }
+      },
+      {
+        "region": "Asia",
+        "name": "Nikkei 225",
+        "close": 60459.58,
+        "change_pct": 2.9,
+        "as_of": "Close, 10 Nov",
+        "source": {
+          "name": "AP via KSAT",
+          "url": "https://www.ksat.com/business/2026/11/10/asian-stocks-rise-after-technology-shares-advance-on-wall-street-ahead-of-us-inflation-data/"
+        }
+      },
+      {
+        "region": "Asia",
+        "name": "Kospi",
+        "close": 5239.13,
+        "change_pct": 4.4,
+        "as_of": "10 Nov, late trade",
+        "source": {
+          "name": "AP via KSAT",
+          "url": "https://www.ksat.com/business/2026/11/10/asian-stocks-rise-after-technology-shares-advance-on-wall-street-ahead-of-us-inflation-data/"
+        }
+      }
+    ],
+    "note": "Hong Kong's Hang Seng rose about 0.4% on Tuesday (Reuters). Korea's Kospi opened about 0.6% lower on Wednesday, then turned higher by mid-morning (Aju Press).",
+    "note_sources": [
+      {
+        "name": "Reuters via Business Recorder",
+        "url": "https://www.brecorder.com/news/40448302/china-hk-shares-close-higher-as-tech-stocks-advance"
+      },
+      {
+        "name": "Aju Press",
+        "url": "https://www.ajupress.com/view/20261111095738425"
+      }
+    ],
+    "us": [
+      {
+        "title": "The session",
+        "text": "US shares fell on Tuesday after October consumer prices rose more than expected (TheStreet). Regan Capital's Skyler Weinand, quoted by TheStreet, described a move out of AI-linked shares into defensive sectors such as healthcare.",
+        "source": {
+          "name": "TheStreet",
+          "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-10-2026"
+        },
+        "also": [
+          {
+            "name": "AP via KRMG",
+            "url": "https://krmg.com/2026/11/10/how-major-us-stock-indexes-fared-tuesday-11-10-2026/"
+          }
+        ]
+      },
+      {
+        "title": "Inflation",
+        "text": "Consumer prices rose 0.4% in October and core prices 0.3%; the BLS published no 12-month rate for the headline index because October 2025 survey data were not collected.",
+        "source": {
+          "name": "US Bureau of Labor Statistics",
+          "url": "https://www.bls.gov/news.release/cpi.htm"
+        }
+      },
+      {
+        "title": "Shares and rates",
+        "text": "Nvidia fell 5.47% and at one point slipped to third by market value (Seoul Economic Daily). The 10-year Treasury yield rose about 10 basis points to 4.99% (Trading Economics).",
+        "source": {
+          "name": "Seoul Economic Daily",
+          "url": "https://en.sedaily.com/world/2026/11/11/us-stocks-fall-on-rate-hike-fears-nvidia-slips-to-no-3-by"
+        },
+        "also": [
+          {
+            "name": "Trading Economics",
+            "url": "https://tradingeconomics.com/united-states/government-bond-yield"
+          }
+        ]
+      }
+    ],
+    "extras": [
+      {
+        "label": "US 10-year yield",
+        "value": 4.99,
+        "format": "pct_level",
+        "direction": "up",
+        "detail": "Treasury yield, up about 10 basis points on 10 Nov",
+        "as_of": "10 Nov",
+        "source": {
+          "name": "Trading Economics",
+          "url": "https://tradingeconomics.com/united-states/government-bond-yield"
+        },
+        "also": [
+          {
+            "name": "CappNotes",
+            "url": "https://cappnotes.substack.com/p/closing-look-tuesday-november-10"
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "title": "December Fed rate rise priced in",
+        "text": "After the inflation data, CME FedWatch showed a quarter-point rise at the 8 to 9 Dec meeting fully priced, and Dallas Fed President Lorie Logan backed at least two quarter-point rises (Seoul Economic Daily). The channel to India: the dollar, the rupee and foreign flows.",
+        "source": {
+          "name": "Seoul Economic Daily",
+          "url": "https://en.sedaily.com/world/2026/11/11/us-stocks-fall-on-rate-hike-fears-nvidia-slips-to-no-3-by"
+        }
+      },
+      {
+        "title": "US puts off new strikes on Iran",
+        "text": "President Trump said he would put off new strikes after appeals from regional countries, including Qatar's prime minister (Reuters). The channel to India: crude prices and the import bill.",
+        "source": {
+          "name": "Reuters via Investing.com",
+          "url": "https://www.investing.com/news/commodities-news/oil-falls-as-trump-downplays-prospect-of-escalation-with-iran-5013892"
+        }
+      },
+      {
+        "title": "Gulf oil supply",
+        "text": "Persian Gulf exports have grown and Middle East shipments are near prewar levels; Capital Economics' Hamad Hussain linked the price fall mainly to hopes of a diplomatic end to the war (Rigzone). The channel to India: oil supply and inflation.",
+        "source": {
+          "name": "Rigzone",
+          "url": "https://www.rigzone.com/news/oil_prices_retreat_as_peace_hopes_grow-10-nov-2026-185054-article"
+        }
+      }
+    ]
+  },
+  "metals": {
+    "headline": "IBJA has published no rates since Friday; overseas gold and silver fell after the US inflation data",
+    "ibja": {
+      "date": "6 Nov 2026",
+      "session": "PM",
+      "gold_999_10g": 141452.0,
+      "gold_prev": 141023.0,
+      "silver_999_kg": 182868.0,
+      "silver_prev": 181863.0,
+      "prev_date": "6 Nov 2026 AM",
+      "source": {
+        "name": "IBJA",
+        "url": "https://ibjarates.com/"
+      }
+    },
+    "international": [
+      {
+        "label": "Spot gold, 10 Nov",
+        "value": 4021.36,
+        "format": "usd_oz",
+        "change_pct": -2.8,
+        "detail": "Per ounce, during trade on 10 Nov (The Nation); Trading Economics said gold fell below $4,060",
+        "as_of": "10 Nov",
+        "source": {
+          "name": "The Nation (Thailand)",
+          "url": "https://www.nationthailand.com/news/general/40073349"
+        },
+        "also": [
+          {
+            "name": "Trading Economics",
+            "url": "https://tradingeconomics.com/commodity/gold"
+          }
+        ]
+      },
+      {
+        "label": "Spot silver, 10 Nov",
+        "value": 51.32,
+        "format": "usd_oz2",
+        "change_pct": -3.9,
+        "detail": "Per ounce, during trade on 10 Nov",
+        "as_of": "10 Nov",
+        "source": {
+          "name": "The Nation (Thailand)",
+          "url": "https://www.nationthailand.com/news/general/40073349"
+        }
+      }
+    ],
+    "commentary": [
+      {
+        "text": "Gold and silver fell on Tuesday after the hotter US inflation reading lifted bets on a December Fed rate rise and strengthened the dollar, The Nation reported.",
+        "source": {
+          "name": "The Nation (Thailand)",
+          "url": "https://www.nationthailand.com/news/general/40073349"
+        }
+      },
+      {
+        "text": "Marex analyst Edward Meir called the slightly hotter inflation figures a short-term negative for gold (The Nation).",
+        "source": {
+          "name": "The Nation (Thailand)",
+          "url": "https://www.nationthailand.com/news/general/40073349"
+        }
+      },
+      {
+        "text": "World Gold Council data showed China's central bank bought 25.8 tonnes of gold in October, its largest monthly addition in three years (Trading Economics).",
+        "source": {
+          "name": "Trading Economics",
+          "url": "https://tradingeconomics.com/commodity/gold"
+        }
+      }
+    ]
+  },
+  "results": [
+    {
+      "company": "Kalyan Jewellers India",
+      "period": "July to September 2026 (Q2 FY27), consolidated",
+      "facts": [
+        "Revenue from operations ₹10,322.62 crore; net profit ₹427.10 crore"
+      ],
+      "reaction": "Reported on Tue 10 Nov, a market holiday; Wednesday is the first session after the results.",
+      "source": {
+        "name": "Investywise (summarising the BSE filing)",
+        "url": "https://www.investywise.com/kalyan-jewellers-india-limited-financial-results-and-review-report"
+      }
+    },
+    {
+      "company": "MRF",
+      "period": "July to September 2026 (Q2 FY27), consolidated",
+      "facts": [
+        "Revenue from operations ₹8,660.19 crore, up 17.4% from ₹7,378.72 crore; net profit ₹386.99 crore, down 26.6% from ₹527.43 crore",
+        "Cost of materials ₹6,552.57 crore, against ₹4,577.49 crore a year earlier; interim dividend ₹3 a share"
+      ],
+      "reaction": "Reported on Tue 10 Nov, a market holiday.",
+      "source": {
+        "name": "Indian Television Dot Com",
+        "url": "https://indiantelevision.com/mam/mrf-q2-revenue-rises-17-4-per-cent-as-net-profit-falls-26-6-per-cent/"
+      },
+      "also": [
+        {
+          "name": "Investywise (summarising the BSE filing)",
+          "url": "https://www.investywise.com/mrf-limited-interim-dividend-declared-financial-results"
+        }
+      ]
+    }
+  ],
+  "big_movers": [],
+  "corporate_actions": {
+    "window": "11 to 17 Nov",
+    "items": [
+      {
+        "company": "Aurobindo Pharma",
+        "action": "Dividend ₹7 a share",
+        "date": "Wed 11 Nov",
+        "details": "As listed by Goodreturns",
+        "source": {
+          "name": "Goodreturns",
+          "url": "https://www.goodreturns.in/personal-finance/stock-split-dividend-bonus-buyback-76-stocks-in-focus-this-week-hul-ongc-dabur-among-key-n-1546199.html"
+        }
+      },
+      {
+        "company": "Balkrishna Industries",
+        "action": "Dividend ₹4 a share",
+        "date": "Wed 11 Nov",
+        "details": "As listed by Goodreturns",
+        "source": {
+          "name": "Goodreturns",
+          "url": "https://www.goodreturns.in/personal-finance/stock-split-dividend-bonus-buyback-76-stocks-in-focus-this-week-hul-ongc-dabur-among-key-n-1546199.html"
+        }
+      },
+      {
+        "company": "Jyothy Labs",
+        "action": "Buyback of up to 68,37,210 shares at ₹215",
+        "date": "Wed 11 Nov",
+        "details": "Record date; promoters are not taking part",
+        "source": {
+          "name": "Goodreturns",
+          "url": "https://www.goodreturns.in/personal-finance/stock-split-dividend-bonus-buyback-76-stocks-in-focus-this-week-hul-ongc-dabur-among-key-n-1546199.html"
+        }
+      },
+      {
+        "company": "Hindustan Unilever",
+        "action": "Interim dividend ₹19 a share",
+        "date": "Thu 12 Nov",
+        "details": "Record date",
+        "source": {
+          "name": "Moody's via TradingView",
+          "url": "https://www.tradingview.com/news/moodys:5633f32247d73:0-dividend-stocks-record-date-alert-12-nov-thursday-bayer-cropscience-hul-ongc-more-full-list-amount-key-dates/"
+        },
+        "also": [
+          {
+            "name": "Goodreturns",
+            "url": "https://www.goodreturns.in/personal-finance/stock-split-dividend-bonus-buyback-76-stocks-in-focus-this-week-hul-ongc-dabur-among-key-n-1546199.html"
+          }
+        ]
+      },
+      {
+        "company": "ONGC",
+        "action": "Dividend ₹8 a share",
+        "date": "Thu 12 Nov",
+        "details": "Record date",
+        "source": {
+          "name": "Moody's via TradingView",
+          "url": "https://www.tradingview.com/news/moodys:5633f32247d73:0-dividend-stocks-record-date-alert-12-nov-thursday-bayer-cropscience-hul-ongc-more-full-list-amount-key-dates/"
+        },
+        "also": [
+          {
+            "name": "Goodreturns",
+            "url": "https://www.goodreturns.in/personal-finance/stock-split-dividend-bonus-buyback-76-stocks-in-focus-this-week-hul-ongc-dabur-among-key-n-1546199.html"
+          }
+        ]
+      },
+      {
+        "company": "Bayer CropScience",
+        "action": "Interim dividend ₹90 a share",
+        "date": "Thu 12 Nov",
+        "details": "Record date",
+        "source": {
+          "name": "Moody's via TradingView",
+          "url": "https://www.tradingview.com/news/moodys:5633f32247d73:0-dividend-stocks-record-date-alert-12-nov-thursday-bayer-cropscience-hul-ongc-more-full-list-amount-key-dates/"
+        },
+        "also": [
+          {
+            "name": "Goodreturns",
+            "url": "https://www.goodreturns.in/personal-finance/stock-split-dividend-bonus-buyback-76-stocks-in-focus-this-week-hul-ongc-dabur-among-key-n-1546199.html"
+          }
+        ]
+      },
+      {
+        "company": "Computer Age Management Services",
+        "action": "Dividend ₹3.25 a share",
+        "date": "Fri 13 Nov",
+        "details": "As listed by Goodreturns",
+        "source": {
+          "name": "Goodreturns",
+          "url": "https://www.goodreturns.in/personal-finance/stock-split-dividend-bonus-buyback-76-stocks-in-focus-this-week-hul-ongc-dabur-among-key-n-1546199.html"
+        }
+      },
+      {
+        "company": "MRF",
+        "action": "Interim dividend ₹3 a share",
+        "date": "Tue 17 Nov",
+        "details": "Record date; payment on or after 1 Dec",
+        "source": {
+          "name": "Investywise (summarising the BSE filing)",
+          "url": "https://www.investywise.com/mrf-limited-interim-dividend-declared-financial-results"
+        },
+        "also": [
+          {
+            "name": "Indian Television Dot Com",
+            "url": "https://indiantelevision.com/mam/mrf-q2-revenue-rises-17-4-per-cent-as-net-profit-falls-26-6-per-cent/"
+          }
+        ]
+      }
+    ],
+    "note": "Dates as announced by the companies; listed for information only and not a recommendation."
+  },
+  "stories": [],
+  "ipos": {
+    "headline": "No mainboard IPO opens or lists this week",
+    "items": [],
+    "note": "No mainboard issue opening, closing or listing from 11 to 16 Nov was found in the sources checked. Facts only. Kubeerra does not give views on IPO applications."
+  },
+  "mf": {
+    "headline": "In September, equity funds took in a net ₹38,307 crore, including ₹3,860 crore into multi cap funds, while industry assets fell 5.1%",
+    "period": "September 2026, released 12 Oct; October data is not out yet",
+    "stats": [
+      {
+        "label": "Equity fund net inflows",
+        "value": 38307,
+        "format": "crore",
+        "flow": true,
+        "detail": "The 67th month in a row of net inflows",
+        "source": {
+          "name": "AMFI Monthly Note, September 2026",
+          "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf"
+        },
+        "also": [
+          {
+            "name": "Upstox News",
+            "url": "https://upstox.com/news/personal-finance/mutual-funds/amfi-september-2026-data-equity-inflows-jump-31-small-mid-caps-lead-gold-and-silver-et-fs-gain/article-201686/"
+          }
+        ]
+      },
+      {
+        "label": "SIP contributions",
+        "value": 32490,
+        "format": "crore",
+        "change_pct": 0.6,
+        "detail": "From 10.06 crore contributing SIP accounts",
+        "source": {
+          "name": "AMFI Monthly Note, September 2026",
+          "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf"
+        },
+        "also": [
+          {
+            "name": "Upstox News",
+            "url": "https://upstox.com/news/personal-finance/mutual-funds/amfi-september-2026-data-equity-inflows-jump-31-small-mid-caps-lead-gold-and-silver-et-fs-gain/article-201686/"
+          }
+        ]
+      },
+      {
+        "label": "Industry assets",
+        "value": 82.64,
+        "format": "lakh_crore",
+        "change_pct": -5.1,
+        "detail": "End-September; AMFI cited mark-to-market losses and debt fund outflows",
+        "source": {
+          "name": "AMFI Monthly Note, September 2026",
+          "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf"
+        }
+      }
+    ],
+    "highlights": [
+      {
+        "text": "Among equity categories, small cap funds took ₹9,039 crore net, mid cap ₹7,835 crore, flexi cap ₹6,702 crore and multi cap ₹3,860 crore; ELSS funds saw a net outflow of ₹662 crore.",
+        "source": {
+          "name": "AMFI Monthly Note, September 2026",
+          "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf"
+        }
+      },
+      {
+        "text": "Debt funds saw net outflows of ₹1,83,156 crore, which AMFI linked to companies' cash needs ahead of advance tax payments; liquid funds accounted for ₹95,743 crore.",
+        "source": {
+          "name": "AMFI Monthly Note, September 2026",
+          "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf"
+        }
+      },
+      {
+        "text": "Multi asset allocation funds took ₹3,667 crore, their 61st month in a row of inflows; gold ETFs took ₹4,451 crore and silver ETFs ₹1,974 crore.",
+        "source": {
+          "name": "AMFI Monthly Note, September 2026",
+          "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf"
+        }
+      },
+      {
+        "text": "Investors added about 27.13 lakh folios in September, taking the total to 28.62 crore.",
+        "source": {
+          "name": "AMFI Monthly Note, September 2026",
+          "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf"
+        }
+      }
+    ],
+    "fund_news": [
+      {
+        "who": "Several fund houses",
+        "date": "6 to 7 Nov",
+        "text": "HDFC, ICICI Prudential, Aditya Birla Sun Life and Franklin Templeton mutual funds revised the riskometer levels of some schemes, most based on their end-October portfolios, Upstox News reported; some levels went up and some down.",
+        "source": {
+          "name": "Upstox News",
+          "url": "https://upstox.com/news/personal-finance/mutual-funds/mutual-fund-changes-in-november-2026-hdfc-mf-icici-pru-quant-aditya-birla-sun-life-and-franklin-templeton-announce-scheme-revisions/article-203155/"
+        }
+      }
+    ],
+    "nfos": [],
+    "nfo_summary": {
+      "text": "Two new fund offers on Cafemutual's 5 November list remain open on 11 November by their closing dates: a debt fixed maturity plan closing on 17 November and a sectoral index ETF closing on 13 November. Each scheme's category, riskometer level and terms are in its scheme information document. This list is reported for information only and is not a recommendation.",
+      "source": {
+        "name": "Cafemutual NFO list",
+        "url": "https://cafemutual.com/news/nfo/38428-nfos-open-on-november-2"
+      }
+    },
+    "regulatory": [
+      {
+        "body": "SEBI",
+        "date": "5 Nov",
+        "text": "From 1 April 2027, a mutual fund scheme may net the cash it pays and receives for outright cash-market trades within the scheme; securities still settle trade by trade and netting across schemes is not allowed.",
+        "source": {
+          "name": "SEBI",
+          "url": "https://www.sebi.gov.in/sebi_data/attachdocs/nov-2026/1793874209372.pdf"
+        }
+      },
+      {
+        "body": "SEBI",
+        "date": "8 Oct",
+        "text": "SEBI's Mutual Funds (Second Amendment) Regulations, 2026 replace the separate mutual fund advertisement code with the common code for intermediaries, from the 180th day after publication.",
+        "source": {
+          "name": "SEBI",
+          "url": "https://www.sebi.gov.in/sebi_data/attachdocs/oct-2026/1791796434954.pdf"
+        }
+      }
+    ],
+    "link": {
+      "name": "scheme information document",
+      "url": "https://www.kubeerra.com/kim-sid-sai"
+    },
+    "category_explainer": {
+      "category": "Multi Cap Fund",
+      "text": "Under SEBI's categorisation rules, a multi cap fund must keep at least 75% of its assets in equity and equity-related instruments, with at least 25% each in large cap, mid cap and small cap companies. With at least a quarter in each size band, a fixed part of the portfolio always sits in mid and small companies, whose share prices tend to swing more than those of large companies. Each scheme's riskometer level is set out in the fund house's own documents.",
+      "source": {
+        "name": "SEBI",
+        "url": "https://www.sebi.gov.in/legal/circulars/feb-2026/categorization-and-rationalization-of-mutual-fund-schemes_99983.html"
+      },
+      "also": [
+        {
+          "name": "SEBI circular text (mirror)",
+          "url": "https://ftp.caalley.com/sebi26/1772079826878.pdf"
+        }
+      ]
+    }
+  },
+  "learn": {
+    "id": "L-010",
+    "title": "Why a scheme's riskometer can change",
+    "paragraphs": [
+      "Every mutual fund scheme shows a riskometer, a dial that places its risk on a scale; the levels named in last week's revisions ran from Low to Very High.",
+      "The level follows what the scheme holds. On 6 and 7 November several fund houses revised levels, most based on their end-October portfolios, moving some schemes up and some down (Upstox News).",
+      "A change in level does not mean a scheme has changed its category or objective. The latest level, and the reasons for it, are in the fund house's own documents."
+    ],
+    "illustration": null,
+    "link": {
+      "name": "Kubeerra guide: Understanding risk",
+      "url": "https://www.kubeerra.com/blogs/understanding-risk-know-your-risk-profile"
+    },
+    "sources": [
+      {
+        "name": "Upstox News",
+        "url": "https://upstox.com/news/personal-finance/mutual-funds/mutual-fund-changes-in-november-2026-hdfc-mf-icici-pru-quant-aditya-birla-sun-life-and-franklin-templeton-announce-scheme-revisions/article-203155/"
+      }
+    ]
+  },
+  "day_ahead_title": "Coming up: Wednesday 11 Nov to Tuesday 17 Nov",
+  "day_ahead": [
+    {
+      "time": "Wed 11 Nov",
+      "event": "NSE and BSE reopen at 9:15 AM after the holiday. Results from Tata Power, Hindustan Copper and Garden Reach Shipbuilders, among others. US bond market closed for Veterans Day.",
+      "source": {
+        "name": "Business Standard",
+        "url": "https://www.business-standard.com/markets/news/stock-market-holiday-today-nse-bse-to-remain-closed-for-diwali-balipratipada-126111000071_1.html"
+      },
+      "also": [
+        {
+          "name": "Upstox News",
+          "url": "https://upstox.com/news/market-news/earnings/upcoming-q2-fy-27-results-this-week-tata-motors-pv-vi-hal-eicher-motors-ashok-leyland-and-more-check-full-list/article-203166/"
+        },
+        {
+          "name": "Kiplinger",
+          "url": "https://www.kiplinger.com/investing/economy/this-weeks-economic-calendar"
+        }
+      ]
+    },
+    {
+      "time": "Thu 12 Nov",
+      "event": "India's October retail inflation. Results from HAL, Vodafone Idea, Oil India, NMDC and IRCTC, among others. Record date for HUL's ₹19 and ONGC's ₹8 dividends. US jobless claims at 7:00 PM IST.",
+      "source": {
+        "name": "Business Standard",
+        "url": "https://www.business-standard.com/economy/news/weekly-policy-watch-india-retail-inflation-forex-reserves-deposit-growth-126110900126_1.html"
+      },
+      "also": [
+        {
+          "name": "Upstox News",
+          "url": "https://upstox.com/news/market-news/earnings/upcoming-q2-fy-27-results-this-week-tata-motors-pv-vi-hal-eicher-motors-ashok-leyland-and-more-check-full-list/article-203166/"
+        },
+        {
+          "name": "Moody's via TradingView",
+          "url": "https://www.tradingview.com/news/moodys:5633f32247d73:0-dividend-stocks-record-date-alert-12-nov-thursday-bayer-cropscience-hul-ongc-more-full-list-amount-key-dates/"
+        },
+        {
+          "name": "Kiplinger",
+          "url": "https://www.kiplinger.com/investing/economy/this-weeks-economic-calendar"
+        }
+      ]
+    },
+    {
+      "time": "Fri 13 Nov",
+      "event": "India's forex reserves and bank deposit data. Results from Grasim, Eicher Motors and ABB India, among others. US October producer prices at 7:00 PM IST.",
+      "source": {
+        "name": "Business Standard",
+        "url": "https://www.business-standard.com/economy/news/weekly-policy-watch-india-retail-inflation-forex-reserves-deposit-growth-126110900126_1.html"
+      },
+      "also": [
+        {
+          "name": "Upstox News",
+          "url": "https://upstox.com/news/market-news/earnings/upcoming-q2-fy-27-results-this-week-tata-motors-pv-vi-hal-eicher-motors-ashok-leyland-and-more-check-full-list/article-203166/"
+        },
+        {
+          "name": "Kiplinger",
+          "url": "https://www.kiplinger.com/investing/economy/this-weeks-economic-calendar"
+        }
+      ]
+    },
+    {
+      "time": "Tue 17 Nov",
+      "event": "Record date for MRF's ₹3 interim dividend.",
+      "source": {
+        "name": "Investywise (summarising the BSE filing)",
+        "url": "https://www.investywise.com/mrf-limited-interim-dividend-declared-financial-results"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "HDFC Sky",
+      "url": "https://hdfcsky.com/news/market-close-report-today-november-9-2026-nifty-sensex-post-modest-gains-as-diwali-party-pauses-for-breath"
+    },
+    {
+      "name": "Business Standard",
+      "url": "https://www.business-standard.com/markets/news/stock-market-live-november-9-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-update-126110900058_1.html"
+    },
+    {
+      "name": "Liquide",
+      "url": "https://blog.liquide.life/share-market-today-nifty-reclaims-25-000-to-hit-9-month-high-psu-banks-financials-power-rally-it-drags/"
+    },
+    {
+      "name": "Kotak Neo",
+      "url": "https://www.kotakneo.com/news/market-news/sensex-and-nifty-make-maginal-gains/"
+    },
+    {
+      "name": "The Indian Awaaz",
+      "url": "https://theindianawaaz.com/market-nov-9-sensex-nifty-end-higher-as-psu-banks-rally-nifty-reclaims-25000/"
+    },
+    {
+      "name": "Kotak Neo FII/DII data",
+      "url": "https://www.kotakneo.com/share-market-today/fii-dii-data/"
+    },
+    {
+      "name": "Trendlyne",
+      "url": "https://trendlyne.com/macro-data/fii-dii/latest/cash-pastmonth/"
+    },
+    {
+      "name": "PTI via Telangana Today",
+      "url": "https://telanganatoday.com/rupee-settles-at-93-93-against-us-dollar-amid-softer-crude-prices"
+    },
+    {
+      "name": "PTI via HDFC Sky",
+      "url": "https://hdfcsky.com/news/rupee-rises-5-paise-to-close-at-93-93-against-us-dollar"
+    },
+    {
+      "name": "Trading Economics",
+      "url": "https://tradingeconomics.com/india/government-bond-yield"
+    },
+    {
+      "name": "Reuters via Investing.com",
+      "url": "https://www.investing.com/news/commodities-news/oil-falls-as-trump-downplays-prospect-of-escalation-with-iran-5013892"
+    },
+    {
+      "name": "Rigzone",
+      "url": "https://www.rigzone.com/news/oil_prices_retreat_as_peace_hopes_grow-10-nov-2026-185054-article"
+    },
+    {
+      "name": "Eurasia Business News (citing Kitco)",
+      "url": "https://eurasiabusinessnews.com/2026/11/11/stock-market-today-dow-jones-nasdaq-sp-500-fall-on-november-10-2026-oil-and-gold-retreat/"
+    },
+    {
+      "name": "Business Standard",
+      "url": "https://www.business-standard.com/economy/news/weekly-policy-watch-india-retail-inflation-forex-reserves-deposit-growth-126110900126_1.html"
+    },
+    {
+      "name": "NewsBytes",
+      "url": "https://www.newsbytesapp.com/news/business/indias-retail-inflation-expected-to-top-6-in-october-2026/tldr"
+    },
+    {
+      "name": "US Bureau of Labor Statistics",
+      "url": "https://www.bls.gov/news.release/cpi.htm"
+    },
+    {
+      "name": "Seoul Economic Daily",
+      "url": "https://en.sedaily.com/world/2026/11/11/us-stocks-fall-on-rate-hike-fears-nvidia-slips-to-no-3-by"
+    },
+    {
+      "name": "Reuters via Investing.com",
+      "url": "https://investing.com/news/economy-news/feds-waller-plans-to-support-at-least-a-quarterpoint-rate-hike-in-december-5014429"
+    },
+    {
+      "name": "Trading Economics",
+      "url": "https://tradingeconomics.com/united-states/government-bond-yield"
+    },
+    {
+      "name": "CappNotes",
+      "url": "https://cappnotes.substack.com/p/closing-look-tuesday-november-10"
+    },
+    {
+      "name": "AP via KSAT",
+      "url": "https://www.ksat.com/business/2026/11/10/asian-stocks-rise-after-technology-shares-advance-on-wall-street-ahead-of-us-inflation-data/"
+    },
+    {
+      "name": "Aju Press",
+      "url": "https://www.ajupress.com/view/20261111095738425"
+    },
+    {
+      "name": "Kiplinger",
+      "url": "https://www.kiplinger.com/investing/economy/this-weeks-economic-calendar"
+    },
+    {
+      "name": "Angel One",
+      "url": "https://www.angelone.in/news/economy/rbi-releases-mpc-meeting-calendar-for-fy27-what-you-need-to-know"
+    },
+    {
+      "name": "Fed Rate Calc",
+      "url": "https://fedratecalc.com/fomc-meeting-schedule/december-2026/"
+    },
+    {
+      "name": "AP via KRMG",
+      "url": "https://krmg.com/2026/11/10/how-major-us-stock-indexes-fared-tuesday-11-10-2026/"
+    },
+    {
+      "name": "Share Talk",
+      "url": "https://www.share-talk.com/ftse-100-closes-31-points-lower-as-gold-miners-slide/"
+    },
+    {
+      "name": "dpa-AFX via ARIVA.DE",
+      "url": "https://www.ariva.de/news/aktien-frankfurt-schluss-dax-daemmt-gewinne-ein-12202108"
+    },
+    {
+      "name": "Reuters via Business Recorder",
+      "url": "https://www.brecorder.com/news/40448302/china-hk-shares-close-higher-as-tech-stocks-advance"
+    },
+    {
+      "name": "TheStreet",
+      "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-10-2026"
+    },
+    {
+      "name": "IBJA",
+      "url": "https://ibjarates.com/"
+    },
+    {
+      "name": "The Nation (Thailand)",
+      "url": "https://www.nationthailand.com/news/general/40073349"
+    },
+    {
+      "name": "Trading Economics",
+      "url": "https://tradingeconomics.com/commodity/gold"
+    },
+    {
+      "name": "Investywise (summarising the BSE filing)",
+      "url": "https://www.investywise.com/kalyan-jewellers-india-limited-financial-results-and-review-report"
+    },
+    {
+      "name": "Indian Television Dot Com",
+      "url": "https://indiantelevision.com/mam/mrf-q2-revenue-rises-17-4-per-cent-as-net-profit-falls-26-6-per-cent/"
+    },
+    {
+      "name": "Investywise (summarising the BSE filing)",
+      "url": "https://www.investywise.com/mrf-limited-interim-dividend-declared-financial-results"
+    },
+    {
+      "name": "Goodreturns",
+      "url": "https://www.goodreturns.in/personal-finance/stock-split-dividend-bonus-buyback-76-stocks-in-focus-this-week-hul-ongc-dabur-among-key-n-1546199.html"
+    },
+    {
+      "name": "Moody's via TradingView",
+      "url": "https://www.tradingview.com/news/moodys:5633f32247d73:0-dividend-stocks-record-date-alert-12-nov-thursday-bayer-cropscience-hul-ongc-more-full-list-amount-key-dates/"
+    },
+    {
+      "name": "AMFI Monthly Note, September 2026",
+      "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf"
+    },
+    {
+      "name": "Upstox News",
+      "url": "https://upstox.com/news/personal-finance/mutual-funds/amfi-september-2026-data-equity-inflows-jump-31-small-mid-caps-lead-gold-and-silver-et-fs-gain/article-201686/"
+    },
+    {
+      "name": "Upstox News",
+      "url": "https://upstox.com/news/personal-finance/mutual-funds/mutual-fund-changes-in-november-2026-hdfc-mf-icici-pru-quant-aditya-birla-sun-life-and-franklin-templeton-announce-scheme-revisions/article-203155/"
+    },
+    {
+      "name": "Cafemutual NFO list",
+      "url": "https://cafemutual.com/news/nfo/38428-nfos-open-on-november-2"
+    },
+    {
+      "name": "SEBI",
+      "url": "https://www.sebi.gov.in/sebi_data/attachdocs/nov-2026/1793874209372.pdf"
+    },
+    {
+      "name": "SEBI",
+      "url": "https://www.sebi.gov.in/sebi_data/attachdocs/oct-2026/1791796434954.pdf"
+    },
+    {
+      "name": "SEBI",
+      "url": "https://www.sebi.gov.in/legal/circulars/feb-2026/categorization-and-rationalization-of-mutual-fund-schemes_99983.html"
+    },
+    {
+      "name": "SEBI circular text (mirror)",
+      "url": "https://ftp.caalley.com/sebi26/1772079826878.pdf"
+    },
+    {
+      "name": "Business Standard",
+      "url": "https://www.business-standard.com/markets/news/stock-market-holiday-today-nse-bse-to-remain-closed-for-diwali-balipratipada-126111000071_1.html"
+    },
+    {
+      "name": "Upstox News",
+      "url": "https://upstox.com/news/market-news/earnings/upcoming-q2-fy-27-results-this-week-tata-motors-pv-vi-hal-eicher-motors-ashok-leyland-and-more-check-full-list/article-203166/"
+    }
+  ],
+  "technicals": {
+    "headline": "The NIFTY 50 closed above its 20-day, 50-day and 200-day averages",
+    "as_of": "close, 9 Nov 2026",
+    "items": [
+      {
+        "index": "NIFTY 50",
+        "open": null,
+        "high": null,
+        "low": null,
+        "close": 25044.65,
+        "prev_close": 24986.4,
+        "change_pct": 0.23,
+        "sma20": 23373.9,
+        "sma50": 23282.67,
+        "sma200": 23988.49,
+        "sessions": 212,
+        "pe": null,
+        "source": {
+          "name": "Market-close report",
+          "url": "https://hdfcsky.com/news/market-close-report-today-november-9-2026-nifty-sensex-post-modest-gains-as-diwali-party-pauses-for-breath"
+        }
+      },
+      {
+        "index": "Nifty Bank",
+        "open": null,
+        "high": null,
+        "low": null,
+        "close": 59741.25,
+        "prev_close": 58850.65,
+        "change_pct": 1.51,
+        "sma20": 55812.13,
+        "sma50": 55929.89,
+        "sma200": 56625.79,
+        "sessions": 212,
+        "pe": null,
+        "source": {
+          "name": "Market-close report",
+          "url": "https://blog.liquide.life/share-market-today-nifty-reclaims-25-000-to-hit-9-month-high-psu-banks-financials-power-rally-it-drags/"
+        }
+      }
+    ],
+    "vix": null,
+    "trend": {
+      "index": "NIFTY 50",
+      "points": [
+        {
+          "date": "2026-10-09",
+          "close": 22520.45
+        },
+        {
+          "date": "2026-10-12",
+          "close": 22363.35
+        },
+        {
+          "date": "2026-10-13",
+          "close": 22721.95
+        },
+        {
+          "date": "2026-10-14",
+          "close": 22622.7
+        },
+        {
+          "date": "2026-10-15",
+          "close": 22997.35
+        },
+        {
+          "date": "2026-10-16",
+          "close": 23146.15
+        },
+        {
+          "date": "2026-10-19",
+          "close": 22888.95
+        },
+        {
+          "date": "2026-10-21",
+          "close": 22811.35
+        },
+        {
+          "date": "2026-10-22",
+          "close": 22687.65
+        },
+        {
+          "date": "2026-10-23",
+          "close": 22600.0
+        },
+        {
+          "date": "2026-10-26",
+          "close": 22753.2
+        },
+        {
+          "date": "2026-10-27",
+          "close": 22749.75
+        },
+        {
+          "date": "2026-10-28",
+          "close": 22698.85
+        },
+        {
+          "date": "2026-10-29",
+          "close": 22936.75
+        },
+        {
+          "date": "2026-10-30",
+          "close": 23053.1
+        },
+        {
+          "date": "2026-11-02",
+          "close": 23440.8
+        },
+        {
+          "date": "2026-11-03",
+          "close": 23810.85
+        },
+        {
+          "date": "2026-11-04",
+          "close": 23960.6
+        },
+        {
+          "date": "2026-11-05",
+          "close": 24536.6
+        },
+        {
+          "date": "2026-11-06",
+          "close": 25030.35
+        },
+        {
+          "date": "2026-11-08",
+          "close": 24986.4
+        },
+        {
+          "date": "2026-11-09",
+          "close": 25044.65
+        }
+      ],
+      "source": {
+        "name": "NSE daily index files",
+        "url": "https://hdfcsky.com/news/market-close-report-today-november-9-2026-nifty-sensex-post-modest-gains-as-diwali-party-pauses-for-breath"
+      }
+    },
+    "sources_label": "NSE daily index files; market-close reports for 9 Nov",
+    "note": "Levels from NSE's daily index files; the 9 Nov levels are from market-close reports until NSE publishes its file. Averages are simple averages of the last 20, 50 and 200 closes, calculated by Kubeerra. These describe where prices have been; they are not a forecast, a signal or a recommendation."
+  }
+}

@@ -10,3 +10,4 @@ date,session,gold_999_10g,silver_999_kg,source_url,note
 2026-11-05,AM,143950,187882,https://ibjarates.com/Index.aspx,"previous-dates table (first of two), fetched 6 Nov 2026"
 2026-11-05,PM,144129,187300,https://ibjarates.com/Index.aspx,"previous-dates table (second of two), fetched 6 Nov 2026"
 2026-11-06,AM,141023,181863,https://ibjarates.com/Index.aspx,current rates at 3:50 PM IST on 6 Nov 2026: shown in the AM column without a printed date; the previous-dates tables end at 5 Nov
+2026-11-06,PM,141452,182868,https://ibjarates.com/,"latest rates on the page when fetched 11 Nov 2026 (no rows for 9 or 10 Nov); second history table, read as PM by tab order"
