@@ -13,3 +13,4 @@ date,session,gold_999_10g,silver_999_kg,source_url,note
 2026-11-06,PM,141452,182868,https://ibjarates.com/,"latest rates on the page when fetched 11 Nov 2026 (no rows for 9 or 10 Nov); second history table, read as PM by tab order"
 2026-11-10,AM,142420,186000,https://ibjarates.com/index.aspx,"AM history table, fetched 12 Nov 2026; no PM rate published for 10 Nov"
 2026-11-11,AM,140805,186495,https://ibjarates.com/index.aspx,"current rates AM panel (undated) fetched 12 Nov 2026; history tables end at 10 Nov; PM column blank"
+2026-11-11,PM,140603,185900,https://ibjarates.com/index.aspx,"PM history table, fetched 13 Nov 2026; no 12 Nov rows on the page yet"
