@@ -1,0 +1,318 @@
+KUBEERRA MARKET BRIEF · MORNING EDITION
+Monday 16 November 2026
+India: Close, Fri 13 Nov 2026 · Global: Closes, Fri 13 Nov
+
+AT A GLANCE
+NIFTY 50                   25,144.30  ▼ −0.61%
+Sensex                     81,592.45  ▼ −0.39%
+NIFTY Midcap 100           61,889.50  ▼ −0.24%
+NIFTY Smallcap 100         19,656.45  ▼ −0.26%
+Gold 24K · ₹/10 g          ₹1,35,809  ▼ −1.37%
+Silver · ₹/kg              ₹1,78,000  ▼ −1.68%
+- The NIFTY 50 fell 0.61% to 25,144.30 and the Sensex 0.39% to 81,592.45 on Friday, ending a three-day run of gains; Nifty Bank lost 0.79% to 61,034.10, with realty, auto and metal indices down the most (Upstox News, Business Standard, Liquide).
+- Foreign investors bought a net ₹5,737 crore and domestic institutions sold ₹2,254 crore (provisional, Kotak Neo). The rupee closed 7 paise weaker at 94.19 per dollar (PTI).
+- The 10-year G-Sec yield rose to 7.31% from 7.25% after October retail inflation of 6.09% (Trading Economics). Brent settled 2 cents higher at $95.84 a barrel, its second weekly fall (Rigzone).
+- Overseas, the Nasdaq fell 0.91% and the S&P 500 0.40% as chipmakers declined, while the Dow rose 0.10%; the US 10-year yield was about 5.15% and the dollar index 103.38 (AP, Investopedia, Investrade).
+- India's October wholesale price and trade data are due today (Free Press Journal).
+
+IN THIS ISSUE
+1. Markets: Market snapshot, Top gainers and losers, Technical snapshot, Sector scoreboard, Flows, rupee and bonds
+2. Market drivers: What is driving markets, How global markets reach India, Events and data ahead
+3. Global markets: The US session, World markets, Global events
+4. Gold and silver: Gold and silver prices
+5. Companies: Results, Corporate actions, IPO desk, More news
+6. Mutual funds: Mutual fund corner, Talk to us, Learn
+7. Calendar: Day ahead
+Important disclosures (at the end)
+
+============================================================
+PART 1 OF 7 · MARKETS
+Indian indices, the day's biggest movers, levels, sectors, flows and the rupee
+============================================================
+
+1.1 · MARKET SNAPSHOT
+The NIFTY 50 fell 0.61% as realty, auto and metal shares led a broad decline
+NIFTY 50               25,144.30    −155.05   −0.61%
+BSE Sensex             81,592.45    −318.56   −0.39%
+Nifty Bank             61,034.10    −484.40   −0.79%
+NIFTY Midcap 100       61,889.50    −149.50   −0.24%
+NIFTY Smallcap 100     19,656.45     −50.30   −0.26%
+Breadth on the NSE: 1,446 advanced, 2,179 declined.
+Data as of Close, Fri 13 Nov 2026. Sources: Upstox News, Business Standard, Liquide
+
+1.2 · TOP GAINERS AND LOSERS
+NIFTY 50, Close, Fri 13 Nov 2026. Ranked by change on the day; not a recommendation.
+Gainers:
+- Eicher Motors: +1.34% (₹7,650.00), ahead of its results after the close
+- Hindustan Unilever: +0.96% (₹1,992.90)
+- BSE: +0.73% (₹3,937.70)
+Losers:
+- Shriram Finance: −3.37% (₹970.00)
+- Tata Motors Passenger Vehicles: −3.31% (₹287.40), it reported results on Fri 13 Nov
+- Grasim Industries: −2.60% (₹3,034.00)
+Sources: Angel One, Liquide, Business Standard
+
+1.3 · TECHNICAL SNAPSHOT
+The NIFTY 50 closed above its 20-day, 50-day and 200-day averages
+NIFTY 50 on 13 Nov 2026: opened 25,209.00, low 25,054.40, high 25,246.00, closed 25,144.30.
+NIFTY 50: close 25,144.30; 20-day average 23,741.74 (close +5.91%); 50-day average 23,350.40 (close +7.68%); 200-day average 23,988.58 (close +4.82%).
+Nifty Bank: close 61,034.10; 20-day average 56,649.00 (close +7.74%); 50-day average 56,138.17 (close +8.72%); 200-day average 56,655.50 (close +7.73%).
+NIFTY 50 over the last 22 closes (14 Oct to 13 Nov): lowest 22,600.00, highest 25,299.35, latest 25,144.30.
+Levels from NSE's daily index files; the 13 Nov levels are from market-close reports until NSE publishes its file. Averages are simple averages of the last 20, 50 and 200 closes, calculated by Kubeerra. These describe where prices have been; they are not a forecast, a signal or a recommendation.
+Source: NSE daily index files; market-close reports for 13 Nov
+
+1.4 · SECTOR SCOREBOARD
+Realty, autos and metals led the declines among sectoral indices
+Strongest: Nifty Pharma −0.49%; Nifty Consumer Durables −0.60%; Nifty Financial Services −0.72%; Nifty IT −0.72%
+Weakest: Nifty Realty −1.39%; Nifty Auto −1.07%; Nifty Metal −0.98%
+Change on the day, Close, Fri 13 Nov 2026. Source: Liquide
+
+1.5 · FLOWS, RUPEE AND BONDS
+Foreign investors bought a net ₹5,737 crore on Friday, taking November's total to ₹79,302 crore (provisional)
+FII net (provisional): +₹5,737 cr. Net buyers in the cash market on Fri 13 Nov; ₹79,302 crore from 1 to 13 Nov (Kotak Neo). Source: Kotak Neo FII/DII data, PTI via ThePrint
+DII net (provisional): −₹2,254 cr. Net sellers on Fri 13 Nov; ₹49,089 crore of net sales from 1 to 13 Nov (Kotak Neo). Source: Kotak Neo FII/DII data
+USD/INR: ₹94.19. Close on Fri 13 Nov, 7 paise weaker as the dollar firmed on US inflation data and higher Treasury yields (PTI). Source: PTI via ThePrint, PTI via HDFC Sky
+10-year G-Sec yield: 7.31%. On Fri 13 Nov, up 6 basis points after October retail inflation of 6.09% (Trading Economics quote page). Source: Trading Economics, NewsBytes
+Brent crude: $95.84 (▲ +0.02%). January contract settlement on Fri 13 Nov, up 2 cents; a second weekly fall (Rigzone, Reuters data). Source: Bloomberg via Rigzone, Gate (citing Reuters data)
+
+============================================================
+PART 2 OF 7 · MARKET DRIVERS
+Crude and other local factors, how global markets reach India, and the events and data ahead
+============================================================
+
+2.1 · WHAT IS DRIVING MARKETS
+Wholesale prices and trade data today; inflation above 6%, crude near $96 and US yields near 5.15% frame the week
+- Inflation and the RBI: October retail inflation rose to 6.09% from 5.54%, above the RBI's 6% upper tolerance limit, with food inflation at 8.94% (PTI, Outlook Business). Radhika Rao of DBS Bank expects another rate rise in December, and ICRA's Aditi Nayar said a 25 basis point rise at the 2 to 4 December meeting appears almost certain (Outlook Business). Rate expectations reach bond yields, deposit rates and loan rates. (Outlook Business, PTI via DT Next)
+- Wholesale prices: Wholesale price inflation was 11.39% in September, up from 9.92% in August, with fuel and power at 25.85% (DD India); the October figure is due today. Wholesale prices feed into companies' input costs and, with a lag, into consumer prices. (DD India, Free Press Journal)
+- Crude oil: Brent settled at $95.84 on Friday after a second weekly fall. Bloomberg pointed to more Middle East supply and an International Energy Agency forecast of a surplus this quarter, against continued attacks on shipping in the Gulf region (Rigzone). India imports most of its crude, so oil prices reach the import bill, the rupee and fuel inflation. (Bloomberg via Rigzone, Gate (citing Reuters data))
+- Foreign flows: Exchange data show foreign investors bought a net ₹79,302 crore of Indian shares from 1 to 13 November (provisional, Kotak Neo). Geojit's VK Vijayakumar linked the buying to money moving away from AI-linked markets (IANS). Foreign buying adds demand for large-cap shares and for rupees. (Kotak Neo FII/DII data, IANS via The Hans India)
+
+2.2 · HOW GLOBAL MARKETS REACH INDIA
+- US yields and the Fed: The US 10-year Treasury yield rose to about 5.15% on Friday (AP). CR Forex Advisors' Amit Pabari said markets were pricing an 85% chance of a Fed rate rise in December (PTI). Higher US yields and a firmer dollar reach India through the rupee and through foreign flows into emerging markets. (AP via BNN Bloomberg, PTI via Telangana Today)
+- US technology shares: The Nasdaq fell 0.91% as chipmakers declined after Nvidia's chief executive resigned; Nvidia reports results on Tuesday (AP, Forbes, TradingKey). Global technology sentiment reaches Indian IT shares and foreign investors' allocation decisions. (Forbes, AP via KRMG, TradingKey)
+- Asian markets: On Friday Japan's Nikkei rose 0.53%, while Hong Kong's Hang Seng fell 1.55% and Korea's Kospi 0.98% (Edge Consultancy, AP). Moves in Asian markets shape the regional mood at India's open. (Edge Consultancy, AP via STL.News)
+
+2.3 · EVENTS AND DATA AHEAD
+- Mon 16 Nov: India wholesale prices and trade. October wholesale price inflation and merchandise trade data are due (Free Press Journal). (Free Press Journal)
+- Tue 17 Nov, 7:00 PM IST: US retail sales and Nvidia results. October retail sales are due; Nvidia reports after the US close, with its call at about 3:30 AM IST on Wednesday (TradingKey). (TradingKey)
+- Thu 19 Nov, 12:30 AM IST: Fed minutes. Minutes of the Fed's 27 to 28 October meeting are released (TradingKey). (TradingKey)
+- Tue 24 Nov: Market holiday. NSE and BSE are closed for Guru Nanak Jayanti (Angel One). (Angel One)
+- 2 to 4 Dec: RBI policy meeting. DBS Bank expects a rise, and economists at ICRA and 360 ONE Asset expect 25 basis points (Outlook Business). (Outlook Business)
+- 8 to 9 Dec: US Federal Reserve. The Fed's December meeting; Kitco reported futures pricing an 89% chance of a 25 basis point rise. (Federal Reserve, Kitco)
+Expectations are those of the named sources, not of Kubeerra, which makes no forecast.
+
+============================================================
+PART 3 OF 7 · GLOBAL MARKETS
+The US session, world indices, rates and global events
+============================================================
+
+3.1 · THE US SESSION
+US shares closed mixed as chipmakers fell, and Hong Kong shares dropped 1.55%
+- The session: Wall Street closed mixed: the Nasdaq fell 0.91% and the S&P 500 0.40%, while the Dow rose 0.10%. All three gained more than 2% over the week, their best week since early August (Investopedia, AP). (Investopedia via Yahoo Finance, AP via KRMG)
+- Chipmakers: Chip stocks led the declines after Nvidia's chief executive Jensen Huang resigned on Thursday. Nvidia closed about 2% lower ahead of Tuesday's results and AMD fell 8.8% (AP, Investopedia). (AP via BNN Bloomberg, Investopedia via Yahoo Finance, Forbes)
+- Rates and prices: October producer prices rose 0.3% on the month and 6.5% from a year earlier (Kitco). The 10-year Treasury yield rose to about 5.15% and the dollar index to 103.38, near its highest since April 2025 (Investrade, Investopedia). (Investrade, Kitco, Investopedia via Yahoo Finance)
+
+3.2 · WORLD MARKETS
+US · Dow Jones                 52,347.55   +0.10%  (Close, 13 Nov)
+US · S&P 500                    7,561.67   −0.40%  (Close, 13 Nov)
+US · Nasdaq Composite          25,136.27   −0.91%  (Close, 13 Nov)
+Europe · FTSE 100              10,902.56   +0.36%  (Close, 13 Nov)
+Europe · DAX                   26,756.70   −0.06%  (Close, 13 Nov)
+Asia · Nikkei 225              61,142.35   +0.53%  (Close, 13 Nov)
+Asia · Hang Seng               23,637.60   −1.55%  (Close, 13 Nov)
+Asia · Kospi                    5,290.53   −0.98%  (Close, 13 Nov)
+Asia · Shanghai Composite       3,634.35   −0.59%  (Close, 13 Nov)
+Rates · US 10-year yield           5.15%  
+Rates · Dollar index              103.38  ▲ +0.20%
+Closes are for Friday 13 Nov; Asian figures are cross-checked against AP's round-up.
+Sources: AP via KRMG, QNA, Edge Consultancy, AP via STL.News, Investrade, Investopedia via Yahoo Finance, Trading Economics
+
+3.3 · GLOBAL EVENTS
+- Markets price a December Fed rise: After October producer inflation reached 6.5% a year, Kitco reported futures pricing an 89% chance of a 25 basis point Fed rise at the 8 to 9 December meeting. The channel to India: the dollar, the rupee and foreign flows. (Kitco)
+- Gulf shipping and the oil supply outlook: Brent ended almost flat as attacks on commercial shipping in the Gulf region continued, while an expected supply surplus this quarter and rising US stocks capped prices (Rigzone). The channel to India: crude prices and the import bill. (Bloomberg via Rigzone, Gate (citing Reuters data))
+
+============================================================
+PART 4 OF 7 · GOLD AND SILVER
+IBJA rates in rupees, international prices and what moved them
+============================================================
+
+4.1 · GOLD AND SILVER PRICES
+IBJA gold fell ₹1,883 to ₹1,35,809 per 10 g on Friday, after a weekly fall of about 5% in overseas gold
+Gold 999 (₹ per 10 g): ₹1,35,809 (−1.37% from ₹1,37,692 on 12 Nov 2026 PM). IBJA PM rate, 13 Nov 2026.
+Silver 999 (₹ per kg): ₹1,78,000 (−1.68% from ₹1,81,040 on 12 Nov 2026 PM). IBJA PM rate, 13 Nov 2026.
+Spot gold, 13 Nov: $3,883 (▲ +0.18%). Per ounce in late US trading (Kitco). Source: Kitco, Eurasia Business News
+Spot silver, 13 Nov: $48.63 (▼ −2.63%). Per ounce in late US trading (Kitco). Source: Kitco
+- Gold rose 0.18% on Friday but fell over the week as the US 10-year yield rose towards 5.15% and the dollar stayed firm, which raises the cost of holding a metal that pays no interest (Kitco). (Kitco)
+- USAGOLD put gold's weekly fall at about 5% and cited World Gold Council data showing central banks added a net 321 tonnes in the third quarter. (USAGOLD)
+- Kitco linked silver's 2.63% fall to concerns about industrial demand and tight financial conditions. (Kitco)
+IBJA rates are reference rates without GST and making charges. Expectations, where given, are those of the named sources. Source: IBJA
+
+============================================================
+PART 5 OF 7 · COMPANIES
+Results, big single-day moves, corporate actions, IPOs and other news
+============================================================
+
+5.1 · RESULTS
+Tata Motors Passenger Vehicles (July to September 2026 (Q2 FY27), consolidated)
+- Revenue from operations ₹96,920 crore, up 34% from ₹72,349 crore; net loss attributable to shareholders ₹5,531 crore
+- Jaguar Land Rover revenue £5.89 billion, up 20.3%; JLR booked £530 million of exceptional charges and revised its FY27 adjusted EBIT margin guidance to 2% to 3%
+Reported after the close on Fri 13 Nov; Monday is the first session after the results.
+Sources: Business Standard, Free Press Journal
+Eicher Motors (July to September 2026 (Q2 FY27), consolidated)
+- Revenue from operations ₹7,422 crore, up 20% from ₹6,172 crore; net profit ₹1,573 crore, up 15%
+- Royal Enfield sold 3,76,722 motorcycles, up 15% (domestic 3,40,847; exports 35,875)
+Reported after the close on Fri 13 Nov; Monday is the first session after the results.
+Sources: Business Standard, Free Press Journal
+Reported figures only; not a recommendation, and no view on the companies' prospects.
+
+5.2 · CORPORATE ACTIONS
+Dividends, bonus issues and splits with record dates, 16 to 20 Nov
+- Mon 16 Nov: Shipping Corporation of India, Interim dividend ₹4 a share; Record date. Source: Goodreturns, Upstox News
+- Mon 16 Nov: Cochin Shipyard, Interim dividend ₹3 a share; Record date. Source: Goodreturns, Upstox News
+- Tue 17 Nov: Power Finance Corporation, Interim dividend ₹4.10 a share; Record date. Source: Goodreturns, Upstox News
+- Tue 17 Nov: MRF, Interim dividend ₹3 a share; Record date. Source: Goodreturns, Upstox News
+- Wed 18 Nov: Page Industries, Interim dividend ₹150 a share; Record date. Source: Goodreturns, Upstox News
+- Wed 18 Nov: Manappuram Finance, Interim dividend ₹1 a share; Record date. Source: Goodreturns, Upstox News
+- Fri 20 Nov: Oil India, Interim dividend ₹7 a share; Record date. Source: Goodreturns, Upstox News
+- Fri 20 Nov: Ashok Leyland, Interim dividend; Record date; amount not yet confirmed. Source: Upstox News, Goodreturns
+- Fri 20 Nov: Medi Assist Healthcare Services, Share buyback; Record date. Source: Upstox News, Goodreturns
+Dates as announced by the companies; listed for information only and not a recommendation.
+
+5.3 · IPO DESK
+Two mainboard IPOs open this week: Crystal Crop Protection on 18 Nov and Mahanadi Coalfields on 19 Nov
+
+Crystal Crop Protection (Upcoming)
+Opens 18 Nov, closes 20 Nov; listing on NSE and BSE expected 26 Nov
+Price band ₹259 to ₹272 a share; lot of 55 shares
+Issue size ₹455.49 crore: a fresh issue of ₹354.77 crore and an offer for sale of ₹100.71 crore
+Source: Kotak Neo
+
+Mahanadi Coalfields (a Coal India subsidiary) (Upcoming)
+Opens 19 Nov, closes 23 Nov; listing expected 27 Nov
+An offer for sale of up to 66.18 crore shares by Coal India; the price band had not been announced
+Source: Business Standard, Kotak Neo
+Facts only. Kubeerra does not give views on IPO applications.
+
+5.4 · MORE NEWS
+
+[Policy · On the radar] RBI gave Paytm's payments subsidiary in-principle approval to issue prepaid wallets
+On 13 Nov the RBI gave Paytm Payments Services, a wholly owned subsidiary of One 97 Communications, in-principle authorisation to run a prepaid payment instrument system, including wallets. It needs a final certificate, after a system audit, before it can start; the approval does not cover Paytm Payments Bank (Business Standard, Free Press Journal).
+Why it matters: It is a regulatory step for a listed fintech company and for competition in digital payments.
+Source: Business Standard, Free Press Journal
+
+============================================================
+PART 6 OF 7 · MUTUAL FUNDS
+Industry data, new fund offers, rule changes, a lesson and how to reach us
+============================================================
+
+6.1 · MUTUAL FUND CORNER
+In October, investors put a net ₹1.74 lakh crore into mutual funds, about ₹1.25 lakh crore of it into liquid and overnight funds, while equity funds took in ₹32,994 crore
+Industry data, October 2026, released 11 Nov:
+- Equity fund net inflows: ₹32,994 cr (▼ −13.90%). Down from ₹38,307 crore in September; the 68th month in a row of net inflows
+- SIP contributions: ₹32,160 cr. From 10.00 crore contributing SIP accounts; SIP assets ₹17.68 lakh crore
+- Industry assets: ₹83.39 lakh cr (▲ +0.90%). End-October, from ₹82.64 lakh crore at end-September; AMFI cited a market uptick and positive net inflows
+Source: AMFI Monthly Note, October 2026, Upstox News, Kotak Neo
+
+Category trends:
+- Debt funds took a net ₹1,13,438 crore, mostly into liquid funds (₹70,534 crore) and overnight funds (₹54,893 crore); corporate bond funds had a net outflow of ₹3,143 crore. (AMFI Monthly Note, October 2026)
+- Among equity categories, large and mid cap funds took the most, ₹8,484 crore net, followed by small cap ₹6,407 crore, flexi cap ₹4,980 crore and mid cap ₹4,893 crore; ELSS funds had a net outflow of ₹578 crore. (AMFI Monthly Note, October 2026)
+- Passive funds took a net ₹23,384 crore, including ₹12,974 crore into equity ETFs, ₹3,474 crore into gold ETFs and ₹3,091 crore into index funds; passive assets rose 0.6% to ₹14.79 lakh crore. (AMFI Monthly Note, October 2026)
+
+Know your categories, Index Funds and ETFs: Under SEBI's categorisation circular of 26 February 2026, an index fund or exchange traded fund (ETF) is an open-ended scheme that replicates or tracks a named index, and it must keep at least 95% of its total assets in the securities of that index. Because the portfolio follows the index, its value rises and falls with that index, so its risk depends largely on what the index holds: a broad market index spreads money across many companies, while a sector or thematic index concentrates it in a few. Each scheme's riskometer level is set out in the fund house's own documents. (SEBI circular, 26 Feb 2026, SEBI)
+
+Fund house news:
+- Bajaj Finserv Mutual Fund, 20 Nov to 4 Dec: Bajaj Finserv Business Cycle Fund, an open-ended thematic equity scheme following a business-cycle theme, has a new fund offer from 20 Nov to 4 Dec (Bajaj Finserv Mutual Fund). Reported for information only; not a recommendation. Riskometer: Very High. (Bajaj Finserv Mutual Fund)
+
+New fund offers:
+- HDFC Charity Fund for Cancer Cure (Feb 2030): Close-ended debt scheme, 1,169 days, 16 to 30 Nov. Riskometer: Moderate. (HDFC Mutual Fund)
+Facts only, not a recommendation; each scheme's risks and terms are in its scheme information document (https://www.kubeerra.com/kim-sid-sai). Six other open offers are not named because their risk levels could not be confirmed from fund house documents.
+
+Rule changes for investors:
+- SEBI, 5 Nov: From 1 April 2027, a scheme may net its payments for shares bought against receipts for shares sold in the same settlement cycle, for outright trades within each scheme only (SEBI circular). (SEBI circular)
+- SEBI, 1 Nov: Direct plans became the default option on fund houses' own digital platforms; investors who choose a regular plan are told about its higher expense ratio, and regular plans continue (Cafemutual, reporting SEBI's chairman). (Cafemutual)
+Read more: Kubeerra guide: What is a mutual fund? (https://www.kubeerra.com/blogs/what-is-a-mutual-fund-simple-guide)
+
+6.2 · TALK TO US
+Questions about how mutual funds work?
+The Kubeerra team can explain how a scheme or category works, what it costs and the risks it carries, from the fund house's own documents. Dhariwal Securities is an AMFI-registered Mutual Fund Distributor, not a SEBI-registered Investment Adviser. You can also take the risk profile questionnaire on our website to see how much risk you are comfortable with.
+Kubeerra risk profile: https://www.kubeerra.com/tools/risk-profile
+Kubeerra mutual fund services: https://www.kubeerra.com/services/mutual-funds
+Phone +91 73042 11122 · dhariwal.securities@kubeerra.com
+
+6.3 · LEARN
+L-013: What the wholesale price index measures
+India's wholesale price index (WPI) tracks the prices of goods traded in bulk, grouped as primary articles, fuel and power, and manufactured products (DD India). WPI inflation is the change in that index from a year earlier.
+WPI inflation was 11.39% in September, up from 9.92% in August, and the fuel and power group was 25.85% higher than a year earlier (DD India). The October reading is due today (Free Press Journal).
+Because wholesale prices feed into companies' input costs, a high WPI reading can pass into consumer prices with a lag, which is one reason it is watched alongside retail inflation, which was 6.09% in October (Outlook Business).
+Read more: Kubeerra guide: Understanding risk (https://www.kubeerra.com/blogs/understanding-risk-know-your-risk-profile)
+Sources: DD India, Free Press Journal, Outlook Business
+
+============================================================
+PART 7 OF 7 · CALENDAR
+Results, data releases, listings and holidays in the days ahead
+============================================================
+
+7.1 · DAY AHEAD
+Coming up: Monday 16 Nov to Friday 20 Nov
+Mon 16 Nov      India's October wholesale price inflation and trade data. China's October industrial production and retail sales. Record date for the Shipping Corporation of India and Cochin Shipyard dividends. Seven new fund offers are open. (Free Press Journal, Newsquawk, Goodreturns, Morningstar India NFO list)
+Tue 17 Nov      NIFTY weekly derivatives expiry. Record date for the PFC and MRF dividends. US October retail sales at 7:00 PM IST; Nvidia reports after the US close. (TradingKey, Angel One, Goodreturns)
+Wed 18 Nov      Crystal Crop Protection IPO opens. Record date for the Page Industries and Manappuram Finance dividends. UK October inflation. (Kotak Neo, Goodreturns, Newsquawk)
+Thu 19 Nov      Fed minutes at 12:30 AM IST. Mahanadi Coalfields IPO opens. Walmart reports before the US open. (TradingKey, Business Standard)
+Fri 20 Nov      Record date for the Oil India and Ashok Leyland dividends and the Medi Assist buyback. China's loan prime rates. Crystal Crop Protection IPO closes. (Upstox News, Newsquawk, Kotak Neo)
+
+============================================================
+IMPORTANT DISCLOSURES
+Dhariwal Securities Private Limited · AMFI-registered Mutual Fund Distributor · ARN-369716 · EUIN E708284
+============================================================
+
+ABOUT THIS PUBLICATION
+The Kubeerra Market Brief is published by Dhariwal Securities Private Limited (Dhariwal Securities), which offers mutual fund distribution services under the brand Kubeerra. It is provided free of charge, for general market information and investor education only.
+The Brief is not investment advice, a research report or a research recommendation, and it is not an offer or a solicitation to buy, sell or hold any particular security, mutual fund scheme or other financial product. Dhariwal Securities makes no forecast, recommendation or guarantee in it; any forecast or expectation it reports belongs to the source named. It does not take into account the objectives, financial situation or needs of any reader.
+
+REGISTRATION AND CAPACITY
+Dhariwal Securities is an AMFI-registered Mutual Fund Distributor (ARN-369716; EUIN E708284). It is not a SEBI-registered Investment Adviser, Research Analyst or Portfolio Manager: it holds no registration under the SEBI (Investment Advisers) Regulations, 2013, the SEBI (Research Analysts) Regulations, 2014 or the SEBI (Portfolio Managers) Regulations, 2020. Its services are distribution only; it does not provide investment advisory, research or portfolio management services, and nothing in the Brief should be read as such. AMFI registration and the ARN do not mean that AMFI or SEBI endorses Dhariwal Securities or the Brief, and they do not assure any return.
+Receiving the Brief does not by itself create an advisory, fiduciary or client relationship with Dhariwal Securities, and it does not change the terms of any existing one.
+
+SOURCES AND ACCURACY
+Figures and news are compiled from public sources believed to be reliable, such as the stock exchanges, NSE Indices, AMFI, SEBI, the RBI, IBJA, company filings and the news organisations named in each section. Dhariwal Securities has not independently verified all of this information and makes no representation or warranty, express or implied, as to its accuracy, completeness or timeliness.
+Figures are as of the dates stated and can change. Provisional data, such as foreign and domestic institutional flows, is marked as provisional and may be revised. Dhariwal Securities has no obligation to update the Brief. Times are IST unless stated.
+
+HOW TO READ THE DATA
+Moving averages and other technical figures are calculated from published closing values. They describe where prices have been and are not signals, forecasts or recommendations.
+Statements about scheduled events and expectations are attributed to the institutions, polls or analysts that published them. They are not the views or forecasts of Dhariwal Securities.
+Gold and silver rates are IBJA reference rates, without GST and making charges, shown for information only; they are not dealing prices.
+
+COMPANIES AND SCHEMES MENTIONED
+Companies, securities, indices and mutual fund schemes appear only as reported facts, for example the day's largest gainers and losers, quarterly results or open new fund offers. A mention is not a recommendation, an endorsement or a rating, and no opinion is given on their prospects.
+Dhariwal Securities, its directors and its employees may hold, buy or sell investments in the securities or mutual fund schemes mentioned. Dhariwal Securities distributes schemes of many fund houses and may receive commission on investments in schemes or categories mentioned in the Brief; commission rates differ across schemes and fund houses, as set out in the commission disclosures on kubeerra.com.
+Riskometer levels are taken from each fund house's own documents as of the date stated and may change. Read the scheme information document, key information memorandum and statement of additional information before investing.
+
+RISKS
+Investments in the securities markets and in mutual funds are subject to market risks, including the possible loss of the amount invested. Past performance may or may not be sustained in future and is not a guarantee of future results. There is no assurance or guarantee of returns. Any return shown as an illustration is hypothetical and is not a promise or a forecast.
+
+COMMISSIONS AND DIRECT PLANS
+Dhariwal Securities receives commission from asset management companies on mutual fund investments made through it, as set out in the commission disclosures on kubeerra.com. Investors can also invest directly with fund houses through direct plans, which carry lower expense ratios because no distribution commission is paid.
+
+YOUR DECISIONS
+Make investment decisions on the basis of your own objectives, financial situation and tolerance for risk, after reading the offer documents. Where appropriate, consult a SEBI-registered Investment Adviser and a tax or legal professional before investing.
+
+LIMITATION OF LIABILITY
+To the fullest extent permitted by law, Dhariwal Securities, its directors, employees and associates accept no liability for any loss or damage of any kind, whether direct, indirect or consequential, arising from the use of, or reliance on, the Brief or any information in it.
+
+NAMES, MARKS AND SHARING
+Index names and trademarks belong to their owners, including NSE Indices Limited for the NIFTY indices and BSE Limited for the Sensex; their use does not imply endorsement. The Brief is intended for residents of India. It is not directed to, or intended for use by, any person in a jurisdiction where its distribution or use would be unlawful. It may be forwarded only in full, with these disclosures; the WhatsApp message and card are separate short versions, each with its own disclaimer.
+
+QUESTIONS AND COMPLAINTS
+Write to dhariwal.securities@kubeerra.com or to our Grievance Redressal Officer, Sumeet Kahar (+91 77383 02763), or follow the grievance redressal process on kubeerra.com. Complaints about a scheme may also be raised with the fund house concerned and, where those platforms allow, on SEBI's SCORES platform or the SMART ODR portal.
+
+Mutual Fund investments are subject to market risks, read all scheme related documents carefully.
+
+Phone +91 73042 11122 · WhatsApp +91 77383 02763 · dhariwal.securities@kubeerra.com
+Monday to Saturday, 10:30 AM to 6:00 PM
+21st Floor 2105, B Wing, Rudraksh Enclave, Tata Power GIC Staff Quarters, Press Enclave 63, Magathane, Borivali East, Mumbai 400066
+Disclaimer: https://www.kubeerra.com/disclaimer
+Commission disclosures: https://www.kubeerra.com/commission-disclosures
+Risk factors: https://www.kubeerra.com/risk-factors
+Investor charter: https://www.kubeerra.com/investor-charter
+Grievance redressal: https://www.kubeerra.com/grievance-redressal
+To stop receiving this brief, reply with “Unsubscribe” or write to dhariwal.securities@kubeerra.com.
