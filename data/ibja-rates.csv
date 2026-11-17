@@ -18,3 +18,5 @@ date,session,gold_999_10g,silver_999_kg,source_url,note
 2026-11-12,PM,137692,181040,https://ibjarates.com/index.aspx,"PM history table, fetched 16 Nov 2026"
 2026-11-13,AM,135884,177500,https://ibjarates.com/index.aspx,"AM history table, fetched 16 Nov 2026"
 2026-11-13,PM,135809,178000,https://ibjarates.com/index.aspx,"PM history table, fetched 16 Nov 2026; matches the current-rate panel (₹13,581 per g)"
+2026-11-16,AM,134380,169280,https://ibjarates.com/index.aspx,"AM history table, fetched 17 Nov 2026"
+2026-11-16,PM,134971,170251,https://ibjarates.com/index.aspx,"PM history table, fetched 17 Nov 2026; matches the headline rate (₹13,497 per g)"
