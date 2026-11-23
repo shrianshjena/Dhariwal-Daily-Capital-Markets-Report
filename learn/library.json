@@ -15,5 +15,6 @@
   {"id": "L-014", "date": "2026-11-17", "title": "How a fund's assets can fall while money keeps coming in", "issue": "issues/2026-11-17.json", "topics": ["assets under management", "net flows", "mark-to-market", "AMFI data"]},
   {"id": "L-015", "date": "2026-11-18", "title": "What a fixed maturity plan is", "issue": "issues/2026-11-18.json", "topics": ["fixed maturity plan", "close-ended scheme", "new fund offer", "debt funds"]},
   {"id": "L-016", "date": "2026-11-19", "title": "What a contributing SIP account is", "issue": "issues/2026-11-19.json", "topics": ["SIP", "contributing SIP accounts", "folios", "AMFI data"]},
-  {"id": "L-017", "date": "2026-11-20", "title": "What Macaulay duration measures", "issue": "issues/2026-11-20.json", "topics": ["Macaulay duration", "short duration fund", "interest rate sensitivity", "debt funds"]}
+  {"id": "L-017", "date": "2026-11-20", "title": "What Macaulay duration measures", "issue": "issues/2026-11-20.json", "topics": ["Macaulay duration", "short duration fund", "interest rate sensitivity", "debt funds"]},
+  {"id": "L-018", "date": "2026-11-23", "title": "What a credit rating such as AA+ tells you", "issue": "issues/2026-11-23.json", "topics": ["credit rating", "corporate bond fund", "credit risk", "debt funds"]}
 ]
