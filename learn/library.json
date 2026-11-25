@@ -16,5 +16,6 @@
   {"id": "L-015", "date": "2026-11-18", "title": "What a fixed maturity plan is", "issue": "issues/2026-11-18.json", "topics": ["fixed maturity plan", "close-ended scheme", "new fund offer", "debt funds"]},
   {"id": "L-016", "date": "2026-11-19", "title": "What a contributing SIP account is", "issue": "issues/2026-11-19.json", "topics": ["SIP", "contributing SIP accounts", "folios", "AMFI data"]},
   {"id": "L-017", "date": "2026-11-20", "title": "What Macaulay duration measures", "issue": "issues/2026-11-20.json", "topics": ["Macaulay duration", "short duration fund", "interest rate sensitivity", "debt funds"]},
-  {"id": "L-018", "date": "2026-11-23", "title": "What a credit rating such as AA+ tells you", "issue": "issues/2026-11-23.json", "topics": ["credit rating", "corporate bond fund", "credit risk", "debt funds"]}
+  {"id": "L-018", "date": "2026-11-23", "title": "What a credit rating such as AA+ tells you", "issue": "issues/2026-11-23.json", "topics": ["credit rating", "corporate bond fund", "credit risk", "debt funds"]},
+  {"id": "L-019", "date": "2026-11-25", "title": "What a 1:1 bonus issue changes, and what it does not", "issue": "issues/2026-11-25.json", "topics": ["bonus issue", "record date", "ex-date", "share capital"]}
 ]
