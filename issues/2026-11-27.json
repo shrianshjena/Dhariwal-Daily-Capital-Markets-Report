@@ -1,0 +1,1647 @@
+{
+  "meta": {
+    "date": "2026-11-27",
+    "weekday": "Friday",
+    "edition": "Morning edition",
+    "issue_number": 19,
+    "label": "Client edition 019",
+    "audience": "client",
+    "india_as_of": "Close, Thu 26 Nov 2026",
+    "global_as_of": "Closes, Thu 26 Nov; US markets closed",
+    "preheader": "NIFTY 50 rose 0.25% to 25,884.50 on Thursday as Nifty IT gained 3.66%; foreign investors bought ₹5,843 crore (provisional); Brent settled at $96.57.",
+    "subject": "Kubeerra Market Brief · Fri 27 Nov: NIFTY 50 rises 0.25% to 25,884.50; Nifty IT up 3.66%"
+  },
+  "brief": [
+    "The NIFTY 50 rose 0.25% to 25,884.50 and the Sensex 0.46% to 84,328.59 on Thursday 26 Nov, after giving back part of an early rise; Nifty Bank fell 0.26% to 63,535.30 (Angel One, India TV, Liquide).",
+    "Nifty IT rose 3.66% and Nifty Realty 3.27%, with HCL Technologies up 6.42% and TCS up 4.89%; Nifty Consumer Durables fell 1.33% and Nifty FMCG 0.94% (Liquide, Upstox).",
+    "Foreign investors bought a net ₹5,843 crore and domestic institutions ₹5,631 crore (Kotak Neo; provisional). The rupee closed at a provisional 92.44 per dollar, 24 paise weaker (PTI).",
+    "Brent settled at $96.57 a barrel, up 2.07%, after tankers reportedly hit mines near Hormuz and Yemen's Houthis claimed an attack on a Saudi refinery; the 10-year G-Sec yield rose 7 basis points to 7.24%. IBJA's afternoon gold rate rose 1.32% to ₹1,22,641 per 10 g (The Nation, Business Standard, IBJA).",
+    "US stock markets were closed for Thanksgiving and trade a shortened session today; the DAX rose 2.08% and the Hang Seng 1.2% (Upstox, Dow Jones Newswires, AP)."
+  ],
+  "snapshot": {
+    "headline": "The NIFTY 50 rose 0.25% as IT shares gained and banks slipped",
+    "as_of": "Close, Thu 26 Nov 2026",
+    "indices": [
+      {
+        "name": "NIFTY 50",
+        "close": 25884.5,
+        "change": 65.25,
+        "change_pct": 0.25,
+        "source": {
+          "name": "Angel One News",
+          "url": "https://www.angelone.in/news/market-updates/top-gainers-and-losers-on-november-26-2026-hcltech-and-bse-gain-while-asian-paints-drops-over-2"
+        }
+      },
+      {
+        "name": "BSE Sensex",
+        "close": 84328.59,
+        "change": 390.31,
+        "change_pct": 0.46,
+        "source": {
+          "name": "India TV News",
+          "url": "https://www.indiatvnews.com/business/markets/markets-end-volatile-session-in-green-sensex-ends-390-points-higher-nifty-rises-65-25-points-2026-11-26-1060437"
+        }
+      },
+      {
+        "name": "Nifty Bank",
+        "close": 63535.3,
+        "change": -167.95,
+        "change_pct": -0.26,
+        "source": {
+          "name": "Liquide",
+          "url": "https://blog.liquide.life/share-market-today-nifty-gains-65-points-to-25-884-sensex-rises-390-points-as-it-and-realty-lead-market-gains/"
+        }
+      },
+      {
+        "name": "NIFTY Midcap 100",
+        "close": 61781.85,
+        "change": 197.1,
+        "change_pct": 0.32,
+        "source": {
+          "name": "Upstox News",
+          "url": "https://upstox.com/news/market-news/stocks/top-gainers-and-losers-nov-26-hcl-tech-bse-surge-6-tcs-rises-5-asian-paints-falls-3-check-list/article-204034/"
+        }
+      },
+      {
+        "name": "NIFTY Smallcap 100",
+        "close": 19372.15,
+        "change": 142.8,
+        "change_pct": 0.74,
+        "source": {
+          "name": "Upstox News",
+          "url": "https://upstox.com/news/market-news/stocks/top-gainers-and-losers-nov-26-hcl-tech-bse-surge-6-tcs-rises-5-asian-paints-falls-3-check-list/article-204034/"
+        }
+      }
+    ],
+    "breadth": null
+  },
+  "movers": {
+    "universe": "NIFTY 50",
+    "as_of": "Close, Thu 26 Nov 2026",
+    "gainers": [
+      {
+        "name": "HCL Technologies",
+        "change_pct": 6.42,
+        "close": 1468.6,
+        "note": "as IT shares rose"
+      },
+      {
+        "name": "BSE",
+        "change_pct": 5.7,
+        "close": 3990.4
+      },
+      {
+        "name": "Tata Consultancy Services",
+        "change_pct": 4.89,
+        "close": 2640.3,
+        "note": "as IT shares rose"
+      }
+    ],
+    "losers": [
+      {
+        "name": "Asian Paints",
+        "change_pct": -2.98,
+        "close": 2543.0
+      },
+      {
+        "name": "Bajaj Finance",
+        "change_pct": -2.96,
+        "close": 1097.85
+      },
+      {
+        "name": "Shriram Finance",
+        "change_pct": -2.84,
+        "close": 961.85
+      }
+    ],
+    "source": {
+      "name": "Angel One News",
+      "url": "https://www.angelone.in/news/market-updates/top-gainers-and-losers-on-november-26-2026-hcltech-and-bse-gain-while-asian-paints-drops-over-2"
+    },
+    "also": [
+      {
+        "name": "HDFC Sky News",
+        "url": "https://hdfcsky.com/news/sensex-nifty-recover-afternoon-losses-to-end-higher-as-asia-oil-support-tariff-inflation-worries-keep-investors-cautious"
+      },
+      {
+        "name": "Upstox News",
+        "url": "https://upstox.com/news/market-news/stocks/top-gainers-and-losers-nov-26-hcl-tech-bse-surge-6-tcs-rises-5-asian-paints-falls-3-check-list/article-204034/"
+      },
+      {
+        "name": "Liquide",
+        "url": "https://blog.liquide.life/share-market-today-nifty-gains-65-points-to-25-884-sensex-rises-390-points-as-it-and-realty-lead-market-gains/"
+      }
+    ]
+  },
+  "flows": {
+    "headline": "Foreign investors bought a net ₹5,843 crore on Thursday, taking November's total to ₹1,27,945 crore (provisional)",
+    "tiles": [
+      {
+        "label": "FII net",
+        "value": 5843.33,
+        "format": "crore_signed",
+        "provisional": true,
+        "detail": "Net buyers in the cash market on Thu 26 Nov; ₹1,27,945 crore from 1 to 26 Nov (Kotak Neo)",
+        "source": {
+          "name": "Kotak Neo FII/DII data",
+          "url": "https://www.kotakneo.com/share-market-today/fii-dii-data/"
+        },
+        "also": [
+          {
+            "name": "Business Upturn",
+            "url": "https://businessupturn.com/nation/fiis-extend-india-buying-streak-to-18-sessions-with-rs5-843-crore-investment/"
+          }
+        ]
+      },
+      {
+        "label": "DII net",
+        "value": 5630.72,
+        "format": "crore_signed",
+        "provisional": true,
+        "detail": "Net buyers on Thu 26 Nov; ₹54,898 crore of net sales from 1 to 26 Nov (Kotak Neo)",
+        "source": {
+          "name": "Kotak Neo FII/DII data",
+          "url": "https://www.kotakneo.com/share-market-today/fii-dii-data/"
+        }
+      },
+      {
+        "label": "USD/INR",
+        "value": 92.44,
+        "format": "fx",
+        "direction": "up",
+        "detail": "Provisional close on Thu 26 Nov, 24 paise weaker than 92.20 on Wednesday; PTI cited higher crude and the proposed US tariffs",
+        "source": {
+          "name": "PTI via HDFC Sky",
+          "url": "https://hdfcsky.com/news/rupee-weakens-24-paise-to-settle-at-92-44-against-us-dollar"
+        },
+        "also": [
+          {
+            "name": "PTI via Daily Excelsior",
+            "url": "https://www.dailyexcelsior.com/rupee-weakens-24-paise-to-settle-at-92-44-against-us-dollar/"
+          },
+          {
+            "name": "Business Standard",
+            "url": "https://www.business-standard.com/economy/news/rupee-falls-as-oil-climbs-above-96-barrel-10-year-bond-yield-rises-7-bps-126112601278_1.html"
+          }
+        ]
+      },
+      {
+        "label": "10-year G-Sec yield",
+        "value": 7.24,
+        "format": "pct_level",
+        "direction": "up",
+        "detail": "Close on Thu 26 Nov, up 7 basis points as crude rose (Business Standard); SquawkNews gives 7.2365%",
+        "source": {
+          "name": "Business Standard",
+          "url": "https://www.business-standard.com/economy/news/rupee-falls-as-oil-climbs-above-96-barrel-10-year-bond-yield-rises-7-bps-126112601278_1.html"
+        },
+        "also": [
+          {
+            "name": "SquawkNews",
+            "url": "https://squawknews.com/news/986467-india-10-year-government-bond-yield-ends-at-7-2365"
+          }
+        ]
+      },
+      {
+        "label": "Brent crude",
+        "value": 96.57,
+        "format": "usd_bbl",
+        "change_pct": 2.07,
+        "detail": "Settlement on Thu 26 Nov, up $1.96, after tankers reportedly hit mines near Hormuz and Yemen's Houthis claimed an attack on a Saudi refinery",
+        "source": {
+          "name": "The Nation (Thailand)",
+          "url": "https://www.nationthailand.com/news/world/40073981"
+        },
+        "also": [
+          {
+            "name": "Reuters via Euronext",
+            "url": "https://live.euronext.com/en/financial-news/brent-settles-higher-mine-strikes-refinery-attack-stoke-middle-east-supply-concerns"
+          }
+        ]
+      }
+    ],
+    "as_of": "Thu 26 Nov 2026; FII/DII provisional"
+  },
+  "sectors": {
+    "headline": "IT rose 3.66% and realty 3.27%, while consumer durables fell 1.33% and FMCG 0.94%",
+    "as_of": "Close, Thu 26 Nov 2026",
+    "items": [
+      {
+        "name": "Nifty IT",
+        "change_pct": 3.66
+      },
+      {
+        "name": "Nifty Realty",
+        "change_pct": 3.27
+      },
+      {
+        "name": "Nifty Metal",
+        "change_pct": 1.17
+      },
+      {
+        "name": "Nifty Pharma",
+        "change_pct": 0.45
+      },
+      {
+        "name": "Nifty Bank",
+        "change_pct": -0.26
+      },
+      {
+        "name": "Nifty Auto",
+        "change_pct": -0.69
+      },
+      {
+        "name": "Nifty FMCG",
+        "change_pct": -0.94
+      },
+      {
+        "name": "Nifty Consumer Durables",
+        "change_pct": -1.33
+      }
+    ],
+    "source": {
+      "name": "Liquide",
+      "url": "https://blog.liquide.life/share-market-today-nifty-gains-65-points-to-25-884-sensex-rises-390-points-as-it-and-realty-lead-market-gains/"
+    }
+  },
+  "outlook": {
+    "headline": "Crude, foreign buying, US tariffs and next week's growth and RBI decisions frame the days ahead",
+    "drivers": [
+      {
+        "title": "Crude, the rupee and bonds",
+        "text": "Brent settled at $96.57 on Thursday, up $1.96 or 2.07% (The Nation), after Iran's Revolutionary Guards said two tankers hit sea mines north of Oman's Khasab port and Yemen's Houthis claimed an attack on Saudi Arabia's Ras Tanura refinery (Reuters via Euronext). The rupee closed at a provisional 92.44 per dollar (PTI), and the 10-year yield rose 7 basis points as dealers sold bonds on crude (Business Standard). Oil reaches India through the import bill, the rupee and fuel inflation.",
+        "source": {
+          "name": "Reuters via Euronext",
+          "url": "https://live.euronext.com/en/financial-news/brent-settles-higher-mine-strikes-refinery-attack-stoke-middle-east-supply-concerns"
+        },
+        "also": [
+          {
+            "name": "PTI via HDFC Sky",
+            "url": "https://hdfcsky.com/news/rupee-weakens-24-paise-to-settle-at-92-44-against-us-dollar"
+          },
+          {
+            "name": "Business Standard",
+            "url": "https://www.business-standard.com/economy/news/rupee-falls-as-oil-climbs-above-96-barrel-10-year-bond-yield-rises-7-bps-126112601278_1.html"
+          },
+          {
+            "name": "The Nation (Thailand)",
+            "url": "https://www.nationthailand.com/news/world/40073981"
+          }
+        ]
+      },
+      {
+        "title": "Foreign buying",
+        "text": "Foreign investors bought a net ₹1,27,945 crore of Indian shares from 1 to 26 November (Kotak Neo; provisional), and Business Upturn counted 18 sessions of net buying in a row. Foreign flows reach index heavyweights and the rupee.",
+        "source": {
+          "name": "Kotak Neo FII/DII data",
+          "url": "https://www.kotakneo.com/share-market-today/fii-dii-data/"
+        },
+        "also": [
+          {
+            "name": "Business Upturn",
+            "url": "https://businessupturn.com/nation/fiis-extend-india-buying-streak-to-18-sessions-with-rs5-843-crore-investment/"
+          }
+        ]
+      },
+      {
+        "title": "US tariff proposal",
+        "text": "The US Trade Representative's proposed tariffs of up to 25% on Indian goods, or 17% with a trade deal (Business Standard), are open for public comment until 5 Jan 2027, with a hearing on 25 Jan 2027; India has rejected the excess-capacity finding (Business Today). Tariffs reach India through export-oriented sectors and the trade balance.",
+        "source": {
+          "name": "Business Standard",
+          "url": "https://www.business-standard.com/economy/news/us-proposes-up-to-25-tariff-on-india-offers-17-upon-trade-deal-126112501255_1.html"
+        },
+        "also": [
+          {
+            "name": "Business Today",
+            "url": "https://www.businesstoday.in/latest/economy/story/why-does-india-face-one-of-the-highest-us-tariffs-without-a-trade-deal-569759-2026-11-26"
+          }
+        ]
+      },
+      {
+        "title": "Rate expectations",
+        "text": "The repo rate is 5.50% after a 25 basis point rise in October, and the next policy meeting runs from 2 to 4 Dec (RBI). Trading Economics reports growing expectations of a further 25 basis point rise on 4 Dec. Policy rates reach bank lending rates, deposit rates and bond yields.",
+        "source": {
+          "name": "RBI",
+          "url": "https://rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63839"
+        },
+        "also": [
+          {
+            "name": "Trading Economics",
+            "url": "https://tradingeconomics.com/india/government-bond-yield"
+          }
+        ]
+      },
+      {
+        "title": "Growth data",
+        "text": "July to September GDP is due on Mon 30 Nov (MoSPI). A Business Standard compilation of 11 agencies' estimates has a median of 7.7%, in a range of 7.2% to 8.1%. Growth figures shape earnings estimates and feed into the RBI's decision.",
+        "source": {
+          "name": "Business Standard",
+          "url": "https://www.business-standard.com/amp/economy/news/robust-demand-likely-kept-q2-gdp-growth-resilient-amid-global-uncertainty-126112200828_1.html"
+        },
+        "also": [
+          {
+            "name": "MoSPI release calendar",
+            "url": "https://www.mospi.gov.in/uploads/documents/releaseCalender/1779709510470-ADVANCE%20RELEASE%20CALENDAR%202026-27%20Updated%2025.05.2026.pdf"
+          }
+        ]
+      }
+    ],
+    "global_cues": [
+      {
+        "title": "No US session overnight",
+        "text": "US stock markets were closed on Thursday for Thanksgiving and reopen today for a session that ends early (Upstox News, citing the NYSE calendar). In Wednesday's session the S&P 500 fell 0.25% (Upstox News) after being down as much as 3.2% during the day (AP). US moves reach India through foreign flows and US-exposed sectors such as IT.",
+        "source": {
+          "name": "Upstox News",
+          "url": "https://upstox.com/news/market-news/us-stocks/are-us-markets-open-or-closed-on-thanksgiving-here-s-what-investors-should-know-about-global-markets-today/article-204036/"
+        },
+        "also": [
+          {
+            "name": "AP via BNN Bloomberg",
+            "url": "https://www.bnnbloomberg.ca/markets/2026/11/26/global-stocks-rise-and-tech-shares-rebound-as-us-closes-for-thanksgiving/"
+          }
+        ]
+      },
+      {
+        "title": "Asian markets",
+        "text": "On Thursday the Hang Seng rose 1.2%, the Nikkei 0.9% and the Kospi 0.3%, after the Kospi's 6.2% fall on Wednesday (AP). Early on Friday the Kospi was higher and the Nikkei little changed (JBizNews). Asia sets the regional tone for Indian trading.",
+        "source": {
+          "name": "AP via BNN Bloomberg",
+          "url": "https://www.bnnbloomberg.ca/markets/2026/11/26/world-shares-push-higher-while-markets-in-us-will-be-closed-for-thanksgiving/"
+        },
+        "also": [
+          {
+            "name": "JBizNews",
+            "url": "https://jbiznews.com/kosdaq-jumps-more-than-4-nikkei-little-changed-in-early-friday-trading-with-wall-street-shut-for-thanksgiving/"
+          }
+        ]
+      },
+      {
+        "title": "The dollar and US rates",
+        "text": "The dollar index held near 103.7 on Thursday (PTI, Newsquawk), and CME Group data showed a 98% chance of a quarter-point Fed rise in December as of 24 Nov (Idéal Investisseur). US rates reach India through the dollar, the rupee and emerging-market flows.",
+        "source": {
+          "name": "Newsquawk",
+          "url": "https://www.newsquawk.com/headlines/market-analysis-dxy-steady-in-holiday-thinned-trade-chf-lags-as-haven-demand-fades"
+        },
+        "also": [
+          {
+            "name": "PTI via HDFC Sky",
+            "url": "https://hdfcsky.com/news/rupee-weakens-24-paise-to-settle-at-92-44-against-us-dollar"
+          },
+          {
+            "name": "Idéal Investisseur",
+            "url": "https://www.ideal-investisseur.fr/en/economy/us-bond-yields-fall-despite-persistent-inflation-and-strong-growth-34086.html"
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "when": "Sat 28 Nov",
+        "title": "India's industrial production for October",
+        "text": "MoSPI's release calendar lists the index of industrial production for 28 Nov.",
+        "source": {
+          "name": "MoSPI release calendar",
+          "url": "https://www.mospi.gov.in/uploads/documents/releaseCalender/1779709510470-ADVANCE%20RELEASE%20CALENDAR%202026-27%20Updated%2025.05.2026.pdf"
+        }
+      },
+      {
+        "when": "Sun 29 Nov",
+        "title": "OPEC+ meeting",
+        "text": "Ministers meet on 2027 output; The Nation reports two people familiar with the talks expect targets to stay unchanged at least through the first quarter of 2027.",
+        "source": {
+          "name": "The Nation (Thailand)",
+          "url": "https://www.nationthailand.com/news/world/40073981"
+        }
+      },
+      {
+        "when": "Mon 30 Nov",
+        "title": "India's GDP for July to September",
+        "text": "MoSPI releases the data; the median of 11 agencies' estimates compiled by Business Standard is 7.7%.",
+        "source": {
+          "name": "Business Standard",
+          "url": "https://www.business-standard.com/amp/economy/news/robust-demand-likely-kept-q2-gdp-growth-resilient-amid-global-uncertainty-126112200828_1.html"
+        },
+        "also": [
+          {
+            "name": "MoSPI release calendar",
+            "url": "https://www.mospi.gov.in/uploads/documents/releaseCalender/1779709510470-ADVANCE%20RELEASE%20CALENDAR%202026-27%20Updated%2025.05.2026.pdf"
+          }
+        ]
+      },
+      {
+        "when": "Wed 2 to Fri 4 Dec",
+        "title": "RBI policy meeting",
+        "text": "The decision is due on 4 Dec (RBI); Trading Economics reports expectations of a 25 basis point rise.",
+        "source": {
+          "name": "RBI",
+          "url": "https://rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63839"
+        },
+        "also": [
+          {
+            "name": "Trading Economics",
+            "url": "https://tradingeconomics.com/india/government-bond-yield"
+          }
+        ]
+      },
+      {
+        "when": "Fri 4 Dec",
+        "title": "US jobs report",
+        "text": "November employment data from the US Bureau of Labor Statistics, released on Friday evening, India time.",
+        "source": {
+          "name": "US Bureau of Labor Statistics",
+          "url": "https://www.bls.gov/schedule/2026/12_sched_list.htm"
+        }
+      }
+    ]
+  },
+  "global": {
+    "headline": "US stock markets were closed for Thanksgiving; Europe and Asia rose, with the DAX up 2.08% and the Hang Seng 1.2%",
+    "items": [
+      {
+        "region": "Europe",
+        "name": "FTSE 100",
+        "close": 10609.3,
+        "change_pct": 1.75,
+        "as_of": "Close, 26 Nov",
+        "source": {
+          "name": "PA (Alliance News) via LBC",
+          "url": "https://www.lbc.co.uk/article/538d412b5e40421f829886fed938b8cf-5HjdncJ_2/"
+        }
+      },
+      {
+        "region": "Europe",
+        "name": "DAX",
+        "close": 25216,
+        "change_pct": 2.08,
+        "as_of": "Close, 26 Nov",
+        "source": {
+          "name": "Dow Jones Newswires via finanzen.ch",
+          "url": "https://www.finanzen.ch/nachrichten/aktien/xetra-schluss-deutliche-erholung-schiebt-dax-wieder-klar-ueber-25-000-punkte-1036803592"
+        }
+      },
+      {
+        "region": "Europe",
+        "name": "CAC 40",
+        "close": 8108.74,
+        "change_pct": 1.61,
+        "as_of": "Close, 26 Nov",
+        "source": {
+          "name": "AFP via Boursorama",
+          "url": "https://www.boursorama.com/bourse/actualites/la-bourse-de-paris-en-forte-hausse-jeudi-e1366d02b13f0f036f6b5c76caff4b94"
+        }
+      },
+      {
+        "region": "Asia",
+        "name": "Nikkei 225",
+        "close": 57499.16,
+        "change_pct": 0.9,
+        "as_of": "Close, 26 Nov",
+        "source": {
+          "name": "AP via BNN Bloomberg",
+          "url": "https://www.bnnbloomberg.ca/markets/2026/11/26/world-shares-push-higher-while-markets-in-us-will-be-closed-for-thanksgiving/"
+        }
+      },
+      {
+        "region": "Asia",
+        "name": "Hang Seng",
+        "close": 22226.88,
+        "change_pct": 1.2,
+        "as_of": "Close, 26 Nov",
+        "source": {
+          "name": "AP via BNN Bloomberg",
+          "url": "https://www.bnnbloomberg.ca/markets/2026/11/26/world-shares-push-higher-while-markets-in-us-will-be-closed-for-thanksgiving/"
+        }
+      },
+      {
+        "region": "Asia",
+        "name": "Kospi",
+        "close": 4711.21,
+        "change_pct": 0.3,
+        "as_of": "Close, 26 Nov",
+        "source": {
+          "name": "AP via BNN Bloomberg",
+          "url": "https://www.bnnbloomberg.ca/markets/2026/11/26/world-shares-push-higher-while-markets-in-us-will-be-closed-for-thanksgiving/"
+        }
+      },
+      {
+        "region": "Asia",
+        "name": "Shanghai Composite",
+        "close": 3476.88,
+        "change_pct": 0.0,
+        "as_of": "Close, 26 Nov",
+        "source": {
+          "name": "AP via BNN Bloomberg",
+          "url": "https://www.bnnbloomberg.ca/markets/2026/11/26/world-shares-push-higher-while-markets-in-us-will-be-closed-for-thanksgiving/"
+        }
+      }
+    ],
+    "note": "Closes are for Thursday 26 Nov. US stock markets were closed for Thanksgiving and close early today. AP gives Asian changes to one decimal, and the Shanghai Composite rose less than 0.1%. The FTSE 100's change is from its points change (PA rounds it to 1.8%); the DAX level is as reported, rounded to the point.",
+    "note_sources": [
+      {
+        "name": "Upstox News",
+        "url": "https://upstox.com/news/market-news/us-stocks/are-us-markets-open-or-closed-on-thanksgiving-here-s-what-investors-should-know-about-global-markets-today/article-204036/"
+      },
+      {
+        "name": "PA (Alliance News) via LBC",
+        "url": "https://www.lbc.co.uk/article/538d412b5e40421f829886fed938b8cf-5HjdncJ_2/"
+      },
+      {
+        "name": "Dow Jones Newswires via finanzen.ch",
+        "url": "https://www.finanzen.ch/nachrichten/aktien/xetra-schluss-deutliche-erholung-schiebt-dax-wieder-klar-ueber-25-000-punkte-1036803592"
+      }
+    ],
+    "us": [
+      {
+        "title": "The holiday",
+        "text": "US stock markets were closed on Thursday for Thanksgiving and reopen on Friday for a shortened session that ends at 1 PM ET (Upstox News, citing the NYSE calendar; AP).",
+        "source": {
+          "name": "Upstox News",
+          "url": "https://upstox.com/news/market-news/us-stocks/are-us-markets-open-or-closed-on-thanksgiving-here-s-what-investors-should-know-about-global-markets-today/article-204036/"
+        },
+        "also": [
+          {
+            "name": "AP via BNN Bloomberg",
+            "url": "https://www.bnnbloomberg.ca/markets/2026/11/26/global-stocks-rise-and-tech-shares-rebound-as-us-closes-for-thanksgiving/"
+          }
+        ]
+      },
+      {
+        "title": "Wednesday's session",
+        "text": "In the last full session the Dow rose 0.33% while the S&P 500 fell 0.25% and the Nasdaq Composite 0.6%; Nvidia fell 3.9% as AI shares weakened, and separately S&P Global Ratings warned it could cut the company's credit rating (AP, Upstox News).",
+        "source": {
+          "name": "AP via BNN Bloomberg",
+          "url": "https://www.bnnbloomberg.ca/markets/2026/11/26/global-stocks-rise-and-tech-shares-rebound-as-us-closes-for-thanksgiving/"
+        },
+        "also": [
+          {
+            "name": "Upstox News",
+            "url": "https://upstox.com/news/market-news/us-stocks/are-us-markets-open-or-closed-on-thanksgiving-here-s-what-investors-should-know-about-global-markets-today/article-204036/"
+          }
+        ]
+      },
+      {
+        "title": "Bonds and the dollar",
+        "text": "The 10-year Treasury yield ended Wednesday at about 4.85%, according to Idéal Investisseur, citing US Treasury data, and the dollar index traded between 103.69 and 103.84 in thin holiday trading on Thursday (Newsquawk).",
+        "source": {
+          "name": "Idéal Investisseur",
+          "url": "https://www.ideal-investisseur.fr/en/economy/us-bond-yields-fall-despite-persistent-inflation-and-strong-growth-34086.html"
+        },
+        "also": [
+          {
+            "name": "Newsquawk",
+            "url": "https://www.newsquawk.com/headlines/market-analysis-dxy-steady-in-holiday-thinned-trade-chf-lags-as-haven-demand-fades"
+          }
+        ]
+      }
+    ],
+    "extras": [
+      {
+        "label": "US 10-year yield",
+        "value": 4.85,
+        "format": "pct_level",
+        "direction": "down",
+        "detail": "About 4.85% at Wednesday's close, the latest session (Idéal Investisseur, citing Treasury data); Wallstreetcn gives 4.8461%",
+        "as_of": "25 Nov",
+        "source": {
+          "name": "Idéal Investisseur",
+          "url": "https://www.ideal-investisseur.fr/en/economy/us-bond-yields-fall-despite-persistent-inflation-and-strong-growth-34086.html"
+        },
+        "also": [
+          {
+            "name": "Wallstreetcn via Longbridge",
+            "url": "https://longbridge.com/en/news/306824440"
+          }
+        ]
+      },
+      {
+        "label": "Dollar index",
+        "value": 103.7,
+        "format": "level",
+        "change_pct": 0.09,
+        "detail": "During the Indian session on 26 Nov (PTI); Newsquawk gives a range of 103.69 to 103.84",
+        "as_of": "26 Nov",
+        "source": {
+          "name": "PTI via HDFC Sky",
+          "url": "https://hdfcsky.com/news/rupee-weakens-24-paise-to-settle-at-92-44-against-us-dollar"
+        },
+        "also": [
+          {
+            "name": "Newsquawk",
+            "url": "https://www.newsquawk.com/headlines/market-analysis-dxy-steady-in-holiday-thinned-trade-chf-lags-as-haven-demand-fades"
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "title": "A December Fed rise priced in",
+        "text": "US core PCE inflation was 3.3% and third-quarter growth was revised to 4.3% on Wednesday, and CME Group data on 24 Nov showed a 98% chance of a quarter-point Fed rise in December (Idéal Investisseur). The channel to India: the dollar, the rupee and foreign flows.",
+        "source": {
+          "name": "Idéal Investisseur",
+          "url": "https://www.ideal-investisseur.fr/en/economy/us-bond-yields-fall-despite-persistent-inflation-and-strong-growth-34086.html"
+        }
+      },
+      {
+        "title": "ECB minutes",
+        "text": "Minutes of the European Central Bank's October meeting showed many policymakers ready to raise rates, and futures price a 90% chance of a December rise (Investing.com). The channel to India: global rates and the dollar.",
+        "source": {
+          "name": "Investing.com",
+          "url": "https://www.investing.com/news/stock-market-news/european-shares-as-benign-us-tariffs-and-thanksgiving-lull-offer-relief-5052089"
+        }
+      }
+    ]
+  },
+  "metals": {
+    "headline": "IBJA's Thursday afternoon rate put gold at ₹1,22,641 per 10 g, up 1.32% from Wednesday; silver rose 3.08%",
+    "ibja": {
+      "date": "26 Nov 2026",
+      "session": "PM",
+      "gold_999_10g": 122641.0,
+      "gold_prev": 121038.0,
+      "silver_999_kg": 147347.0,
+      "silver_prev": 142945.0,
+      "prev_date": "25 Nov 2026 PM",
+      "source": {
+        "name": "IBJA",
+        "url": "https://ibjarates.com/index.aspx"
+      },
+      "also": [
+        {
+          "name": "IBJA 30-day rate sheet",
+          "url": "https://ibjarates.com/UploadedFiles/30DaysPdf/Pdf_4937_20261126125923386_Daily%20Opening%20and%20Closing%20Market%20Rate.pdf"
+        }
+      ]
+    },
+    "international": [
+      {
+        "label": "Spot gold, 26 Nov",
+        "value": 3578.73,
+        "format": "usd_oz",
+        "detail": "USAGOLD's US-morning quote on 26 Nov; PA gives $3,570.16 on Thursday",
+        "as_of": "26 Nov",
+        "source": {
+          "name": "USAGOLD",
+          "url": "https://www.usagold.com/daily-precious-metals-market-report-november-26-2026/"
+        },
+        "also": [
+          {
+            "name": "PA (Alliance News) via LBC",
+            "url": "https://www.lbc.co.uk/article/538d412b5e40421f829886fed938b8cf-5HjdncJ_2/"
+          }
+        ]
+      },
+      {
+        "label": "Spot silver, 26 Nov",
+        "value": 42.27,
+        "format": "usd_oz2",
+        "detail": "USAGOLD's US-morning quote; Reuters gave $41.88 in Asian trade, up 1.6%",
+        "as_of": "26 Nov",
+        "source": {
+          "name": "USAGOLD",
+          "url": "https://www.usagold.com/daily-precious-metals-market-report-november-26-2026/"
+        },
+        "also": [
+          {
+            "name": "Reuters via Business Recorder",
+            "url": "https://www.brecorder.com/news/40450827/gold-ticks-up-after-hitting-15-month-low-fed-outlook-in-focus"
+          }
+        ]
+      }
+    ],
+    "commentary": [
+      {
+        "text": "IBJA's Thursday morning rates were ₹1,22,982 per 10 g for gold and ₹1,46,933 per kg for silver, before GST and making charges.",
+        "source": {
+          "name": "IBJA",
+          "url": "https://ibjarates.com/index.aspx"
+        }
+      },
+      {
+        "text": "Reuters reported spot gold up 0.3% in Asian trade on Thursday after it fell the day before to a 15-month low, briefly below $3,500 an ounce.",
+        "source": {
+          "name": "Reuters via Business Recorder",
+          "url": "https://www.brecorder.com/news/40450827/gold-ticks-up-after-hitting-15-month-low-fed-outlook-in-focus"
+        }
+      },
+      {
+        "text": "Reuters said the upward revision to US third-quarter growth and higher October inflation have traders expecting Fed rate rises next month and in early 2027; higher rates raise the cost of holding gold, which pays no interest.",
+        "source": {
+          "name": "Reuters via Business Recorder",
+          "url": "https://www.brecorder.com/news/40450827/gold-ticks-up-after-hitting-15-month-low-fed-outlook-in-focus"
+        }
+      },
+      {
+        "text": "Ilya Spivak of Tastylive said investors were covering short positions ahead of the US holiday (Reuters); USAGOLD noted that thin holiday trading can exaggerate price moves.",
+        "source": {
+          "name": "Reuters via Business Recorder",
+          "url": "https://www.brecorder.com/news/40450827/gold-ticks-up-after-hitting-15-month-low-fed-outlook-in-focus"
+        },
+        "also": [
+          {
+            "name": "USAGOLD",
+            "url": "https://www.usagold.com/daily-precious-metals-market-report-november-26-2026/"
+          }
+        ]
+      }
+    ]
+  },
+  "results": [],
+  "big_movers": [],
+  "corporate_actions": {
+    "window": "Fri 27 Nov to Mon 30 Nov",
+    "note": "Reported record dates only; not a recommendation.",
+    "items": [
+      {
+        "company": "Tech Mahindra",
+        "action": "Bonus issue 1:1 (one ₹5 share for each share held)",
+        "date": "Mon 30 Nov",
+        "details": "Record date; bonus shares allotted 1 Dec and tradable from 2 Dec",
+        "source": {
+          "name": "Kotak Neo",
+          "url": "https://www.kotakneo.com/news/stocks/tech-mahindra-fixes-30-november-as-1-1-bonus-share-record-date-and-sets-2-december-trading-date/"
+        },
+        "also": [
+          {
+            "name": "Kotak Neo bonus list",
+            "url": "https://www.kotakneo.com/share-market-today/bonus-shares/"
+          }
+        ]
+      },
+      {
+        "company": "Interarch Building Solutions",
+        "action": "Stock split, one share into five (face value ₹10 to ₹2)",
+        "date": "Mon 30 Nov",
+        "details": "Record date",
+        "source": {
+          "name": "Goodreturns",
+          "url": "https://www.goodreturns.in/personal-finance/1-5-stock-split-alert-this-engineering-stock-to-turn-1-share-into-5-check-record-date-and-other-de-1543055.html"
+        },
+        "also": [
+          {
+            "name": "Goodreturns",
+            "url": "https://www.goodreturns.in/news/5-1-5-2-stock-splits-dividends-buyback-rights-issues-next-week-zeel-11-stocks-ex-date-november-23-30-1548739.html"
+          }
+        ]
+      },
+      {
+        "company": "Altius Telecom Infrastructure Trust (an InvIT)",
+        "action": "Distribution of ₹4.0362 a unit",
+        "date": "Mon 30 Nov",
+        "details": "Ex-date and record date",
+        "source": {
+          "name": "Anand Rathi",
+          "url": "https://anandrathi.com/share-market-today/upcoming-dividend"
+        },
+        "also": [
+          {
+            "name": "Goodreturns",
+            "url": "https://www.goodreturns.in/news/5-1-5-2-stock-splits-dividends-buyback-rights-issues-next-week-zeel-11-stocks-ex-date-november-23-30-1548739.html"
+          }
+        ]
+      }
+    ]
+  },
+  "stories": [
+    {
+      "topic": "Corporate",
+      "relevance": "On the radar",
+      "headline": "Wipro signs a partnership to run bp's finance operations",
+      "what": "Wipro signed a strategic partnership to transform bp's core finance operations using AI and automation, expected to take effect in 2027; about 3,000 bp finance employees in India, Hungary and Malaysia are to move to Wipro (Business Today, Kotak Neo). The shares touched ₹196.95 on Thursday, against ₹188.70 on Wednesday.",
+      "why": "Large outsourcing contracts add to an IT services company's order book; Nifty IT rose 3.66% on the day.",
+      "source": {
+        "name": "Business Today",
+        "url": "https://www.businesstoday.in/markets/stocks/story/wipro-shares-surge-4-after-bp-deal-lead-nifty-it-gainers-569586-2026-11-26"
+      },
+      "also": [
+        {
+          "name": "Kotak Neo",
+          "url": "https://www.kotakneo.com/news/stocks/wipro-wins-bp-finance-operations-deal-as-3000-employees-prepare-to-transfer-in-2027/"
+        }
+      ]
+    }
+  ],
+  "ipos": {
+    "headline": "Mahanadi Coalfields lists today and Integris Medtech's issue opens; Foodlink F&B was subscribed 1.09 times on day one",
+    "items": [
+      {
+        "company": "Mahanadi Coalfields (a Coal India subsidiary)",
+        "status": "Closed",
+        "facts": [
+          "Listing on NSE and BSE on 27 Nov",
+          "Subscribed 1.52 times overall when bidding closed on 23 Nov, with the qualified institutional portion at 4.95 times (Angel One)",
+          "Price band ₹129 to ₹136 a share; ₹8,981.12 crore, entirely an offer for sale by Coal India"
+        ],
+        "source": {
+          "name": "Angel One News",
+          "url": "https://www.angelone.in/news/ipos/mahanadi-coalfields-8-981-crore-ipo-issue-sees-robust-institutional-demand"
+        },
+        "also": [
+          {
+            "name": "HDFC Sky News",
+            "url": "https://hdfcsky.com/news/mahanadi-coalfields-ipo-subscription-status-day-1"
+          },
+          {
+            "name": "JM Financial",
+            "url": "https://www.jmfinancialservices.in/market-news-and-insights/1751351"
+          }
+        ]
+      },
+      {
+        "company": "Crystal Crop Protection",
+        "status": "Listed",
+        "facts": [
+          "Listed on 26 Nov at ₹278 on NSE and ₹280 on BSE, against the issue price of ₹272",
+          "Issue size ₹455.49 crore (fresh issue ₹354.77 crore and an offer for sale)"
+        ],
+        "source": {
+          "name": "Business Upturn",
+          "url": "https://businessupturn.com/finance/ipo/crystal-crop-protection-lists-at-rs278-a-2-2-premium-to-the-rs272-ipo-price-after-the-issue-was-subscribed-17-68-times/"
+        },
+        "also": [
+          {
+            "name": "Kotak Neo",
+            "url": "https://www.kotakneo.com/ipo/crystal-crop-protection-ltd-ipo/"
+          }
+        ]
+      },
+      {
+        "company": "Foodlink F&B Holdings (India)",
+        "status": "Open",
+        "facts": [
+          "Open 26 to 30 Nov; allotment 1 Dec, listing on NSE and BSE expected 3 Dec",
+          "Subscribed 1.09 times at the end of day one, with the retail portion at 2.39 times (HDFC Sky); Upstox, citing NSE, gives 1.08 times",
+          "Price band ₹181 to ₹191 a share, lot of 78 shares; issue size ₹360.76 crore"
+        ],
+        "source": {
+          "name": "HDFC Sky News",
+          "url": "https://hdfcsky.com/news/foodlink-fb-holdings-india-ipo-subscription-status-day-1"
+        },
+        "also": [
+          {
+            "name": "Upstox News",
+            "url": "https://upstox.com/news/market-news/ipo/foodlink-f-and-b-holdings-ipo-day-1-check-subscription-status-price-band-and-key-dates/article-203985/"
+          },
+          {
+            "name": "Kotak Neo",
+            "url": "https://www.kotakneo.com/ipo/foodlink-fb-holdings-india-ltd-ipo/"
+          }
+        ]
+      },
+      {
+        "company": "Integris Medtech",
+        "status": "Upcoming",
+        "facts": [
+          "Opens 27 Nov, closes 1 Dec; listing on NSE and BSE expected 4 Dec",
+          "Fresh issue of ₹600 crore and an offer for sale of 1.08 crore shares; price band not given in the sources read"
+        ],
+        "source": {
+          "name": "Angel One",
+          "url": "https://www.angelone.in/ipo/integris-medtech-ipo"
+        },
+        "also": [
+          {
+            "name": "Angel One News",
+            "url": "https://www.angelone.in/news/ipos/upcoming-ipos-this-week-november-23-november-27-2026-foodlink-f-b-holdings-integris-medtech-and-others"
+          }
+        ]
+      }
+    ],
+    "note": "Facts only. Kubeerra does not give views on IPO applications."
+  },
+  "mf": {
+    "headline": "In October, equity funds took in a net ₹32,994 crore, a 68th month in a row of net inflows, and industry assets reached ₹83.39 lakh crore",
+    "period": "October 2026 data",
+    "stats": [
+      {
+        "label": "Total net inflows",
+        "value": 1.74,
+        "format": "lakh_crore",
+        "flow": true,
+        "detail": "After a ₹1,33,376 crore net outflow in September; debt funds took ₹1,13,438 crore",
+        "source": {
+          "name": "AMFI Monthly Note, October 2026",
+          "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_October2026_cd03bc1103.pdf"
+        },
+        "also": [
+          {
+            "name": "Upstox News",
+            "url": "https://upstox.com/news/personal-finance/mutual-funds/amfi-october-2026-data-8-key-takeaways-on-equity-mf-inflows-debt-funds-gold-and-silver-et-fs/article-203285/"
+          }
+        ]
+      },
+      {
+        "label": "Equity fund net inflows",
+        "value": 32994,
+        "format": "crore",
+        "flow": true,
+        "change_pct": -13.87,
+        "detail": "Down from ₹38,307 crore in September; a 68th straight month of net inflows (AMFI)",
+        "source": {
+          "name": "AMFI Monthly Note, October 2026",
+          "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_October2026_cd03bc1103.pdf"
+        },
+        "also": [
+          {
+            "name": "Kotak Neo",
+            "url": "https://www.kotakneo.com/news/mutual-funds/equity-mutual-fund-inflows-fall-14-percent-october-2026-sip-contributions/"
+          }
+        ]
+      },
+      {
+        "label": "SIP contributions",
+        "value": 32160,
+        "format": "crore",
+        "detail": "Against ₹32,490 crore in September; 10 crore SIP accounts contributed (AMFI)",
+        "source": {
+          "name": "AMFI Monthly Note, October 2026",
+          "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_October2026_cd03bc1103.pdf"
+        },
+        "also": [
+          {
+            "name": "Kotak Neo",
+            "url": "https://www.kotakneo.com/news/mutual-funds/equity-mutual-fund-inflows-fall-14-percent-october-2026-sip-contributions/"
+          }
+        ]
+      },
+      {
+        "label": "Industry assets",
+        "value": 83.39,
+        "format": "lakh_crore",
+        "change_pct": 0.9,
+        "detail": "End-October, up 0.9% from September (AMFI)",
+        "source": {
+          "name": "AMFI Monthly Note, October 2026",
+          "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_October2026_cd03bc1103.pdf"
+        },
+        "also": [
+          {
+            "name": "Upstox News",
+            "url": "https://upstox.com/news/personal-finance/mutual-funds/amfi-october-2026-data-8-key-takeaways-on-equity-mf-inflows-debt-funds-gold-and-silver-et-fs/article-203285/"
+          }
+        ]
+      }
+    ],
+    "highlights": [
+      {
+        "text": "Large and mid cap funds took a net ₹8,484 crore in October, the most of any equity category and up from ₹4,271 crore in September; ELSS funds had a net outflow of ₹578 crore.",
+        "source": {
+          "name": "AMFI Monthly Note, October 2026",
+          "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_October2026_cd03bc1103.pdf"
+        }
+      },
+      {
+        "text": "Passive funds took a net ₹23,384 crore, including ₹12,974 crore into equity ETFs; gold ETFs took ₹3,474 crore and silver ETFs ₹3,092 crore.",
+        "source": {
+          "name": "AMFI Monthly Note, October 2026",
+          "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_October2026_cd03bc1103.pdf"
+        }
+      },
+      {
+        "text": "Equity fund assets fell 1.1% to ₹37.15 lakh crore in October, which AMFI attributed to mark-to-market losses, while net inflows continued.",
+        "source": {
+          "name": "AMFI Monthly Note, October 2026",
+          "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_October2026_cd03bc1103.pdf"
+        }
+      }
+    ],
+    "fund_news": [
+      {
+        "who": "Nippon India Mutual Fund",
+        "date": "20 Nov",
+        "text": "Added Saif Rahiman Mukadam as a fund manager on four of its schemes, covering the commodities portion in its multi-asset schemes; no existing manager left.",
+        "source": {
+          "name": "Value Research Online",
+          "url": "https://www.valueresearchonline.com/stories/230268/fund-manager-changes-in-few-scheme-of-nippon-india-mutual-fund/"
+        }
+      }
+    ],
+    "nfos": [
+      {
+        "scheme": "SBI BSE India Defence ETF FOF",
+        "fund_house": "SBI Mutual Fund",
+        "category": "Open-ended fund of funds investing in an ETF",
+        "dates": "16 to 30 Nov",
+        "min_investment": "₹5,000",
+        "riskometer": "Very High",
+        "source": {
+          "name": "SBI Mutual Fund NFO page",
+          "url": "https://www.sbimf.com/india-defence"
+        }
+      },
+      {
+        "scheme": "HDFC Charity Fund for Cancer Cure (Feb 2030)",
+        "fund_house": "HDFC Mutual Fund",
+        "category": "Close-ended debt scheme",
+        "dates": "16 to 30 Nov",
+        "min_investment": "₹50,000",
+        "riskometer": "Moderate",
+        "source": {
+          "name": "HDFC Mutual Fund NFO page",
+          "url": "https://www.hdfcfund.com/explore/nfo/hdfc-charity-fund-cancer-cure-feb-2030/direct"
+        }
+      },
+      {
+        "scheme": "Bajaj Finserv Business Cycle Fund",
+        "fund_house": "Bajaj Finserv Mutual Fund",
+        "category": "Open-ended equity scheme following a business cycles theme",
+        "dates": "20 Nov to 4 Dec",
+        "min_investment": "₹500",
+        "riskometer": "Very High",
+        "source": {
+          "name": "Bajaj Finserv Mutual Fund",
+          "url": "https://www.bajajamc.com/knowledge-centre/bajaj-finserv-business-cycle-fund-investing-in-megatrends-as-cycles-change"
+        }
+      }
+    ],
+    "nfo_summary": {
+      "text": "At least four other new fund offers that opened this week are open today and are not named here, because no fund house document giving their riskometer levels could be read today. Each scheme's category, riskometer level and terms are in its scheme information document. This list is reported for information only and is not a recommendation.",
+      "source": {
+        "name": "Angel One News",
+        "url": "https://www.angelone.in/news/mutual-funds/upcoming-nfos-4-mutual-fund-offers-scheduled-to-open-this-week-november-23-27-2026"
+      }
+    },
+    "regulatory": [
+      {
+        "body": "SEBI",
+        "date": "1 Nov",
+        "text": "Direct plans are now the default choice on fund houses' own websites and apps, and an investor who picks a regular plan is shown its higher expense ratio; regular plans remain available, including through distributors.",
+        "source": {
+          "name": "Moneylife",
+          "url": "https://www.moneylife.in/article/sebi-to-make-direct-plans-the-default-on-amc-digital-platforms-from-november-1/82076.html"
+        }
+      },
+      {
+        "body": "SEBI",
+        "date": "5 Nov",
+        "text": "From 1 April 2027, a scheme may settle the cash for its outright cash-market purchases and sales on a net basis within the scheme; securities still settle trade by trade.",
+        "source": {
+          "name": "SEBI circular",
+          "url": "https://www.sebi.gov.in/sebi_data/attachdocs/nov-2026/1793874209372.pdf"
+        }
+      }
+    ],
+    "link": {
+      "name": "scheme information document",
+      "url": "https://www.kubeerra.com/kim-sid-sai"
+    },
+    "category_explainer": {
+      "category": "Multi Asset Allocation",
+      "text": "Under SEBI's scheme categories, as revised in February 2026 and summarised by Upstox, a multi asset allocation fund is a hybrid scheme that invests in at least three asset classes, such as equity, debt and gold or other commodities, with at least 10% in each. Because it holds assets that can move differently, its risk depends on how much it holds in each, and its value can still fall when share or commodity prices fall. Each scheme's riskometer level and risk factors are in the fund house's own documents.",
+      "source": {
+        "name": "Upstox News",
+        "url": "https://upstox.com/news/personal-finance/mutual-funds/new-hybrid-mutual-fund-classification-rules-2026-key-things-investors-must-know/article-190058"
+      },
+      "also": [
+        {
+          "name": "SEBI circular page",
+          "url": "https://www.sebi.gov.in/legal/circulars/feb-2026/categorization-and-rationalization-of-mutual-fund-schemes_99983.html"
+        },
+        {
+          "name": "SEBI circular, 2017 (hosted by AMFI)",
+          "url": "https://www.amfiindia.com/Themes/Theme1/downloads/1507291273374.pdf"
+        }
+      ]
+    }
+  },
+  "learn": {
+    "id": "L-021",
+    "title": "Why fund assets can fall in a month when money flows in",
+    "paragraphs": [
+      "A fund category's assets under management (AUM) change for two reasons: the money investors put in or take out (net flows), and the change in the market value of what the funds already hold, known as mark-to-market.",
+      "In October 2026, equity funds took in a net ₹32,994 crore, yet their assets fell 1.1% to ₹37.15 lakh crore; AMFI attributed the fall to mark-to-market losses (AMFI Monthly Note, October 2026). The fall in the value of holdings was larger than the new money that came in.",
+      "The reverse can also happen: assets can rise in a month of net outflows if prices rise enough. So a change in AUM does not on its own show whether investors added money, and AMFI's monthly note reports net flows and assets as separate figures."
+    ],
+    "illustration": null,
+    "link": {
+      "name": "Kubeerra guide: How to read a mutual fund factsheet",
+      "url": "https://www.kubeerra.com/blogs/how-to-read-a-mutual-fund-factsheet"
+    },
+    "sources": [
+      {
+        "name": "AMFI Monthly Note, October 2026",
+        "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_October2026_cd03bc1103.pdf"
+      },
+      {
+        "name": "Upstox News",
+        "url": "https://upstox.com/news/personal-finance/mutual-funds/amfi-october-2026-data-8-key-takeaways-on-equity-mf-inflows-debt-funds-gold-and-silver-et-fs/article-203285/"
+      }
+    ]
+  },
+  "day_ahead_title": "Coming up: Friday 27 Nov to Friday 4 Dec",
+  "day_ahead": [
+    {
+      "time": "Fri 27 Nov",
+      "event": "Mahanadi Coalfields lists on NSE and BSE; Integris Medtech IPO opens. 11:30 PM IST: US markets close early after a shortened session.",
+      "source": {
+        "name": "HDFC Sky News",
+        "url": "https://hdfcsky.com/news/mahanadi-coalfields-ipo-subscription-status-day-1"
+      },
+      "also": [
+        {
+          "name": "Angel One",
+          "url": "https://www.angelone.in/ipo/integris-medtech-ipo"
+        },
+        {
+          "name": "Upstox News",
+          "url": "https://upstox.com/news/market-news/us-stocks/are-us-markets-open-or-closed-on-thanksgiving-here-s-what-investors-should-know-about-global-markets-today/article-204036/"
+        }
+      ]
+    },
+    {
+      "time": "Sat 28 Nov",
+      "event": "India's index of industrial production for October (MoSPI release calendar).",
+      "source": {
+        "name": "MoSPI release calendar",
+        "url": "https://www.mospi.gov.in/uploads/documents/releaseCalender/1779709510470-ADVANCE%20RELEASE%20CALENDAR%202026-27%20Updated%2025.05.2026.pdf"
+      }
+    },
+    {
+      "time": "Sun 29 Nov",
+      "event": "6:30 PM IST: OPEC+ ministers meet on 2027 output.",
+      "source": {
+        "name": "The Nation (Thailand)",
+        "url": "https://www.nationthailand.com/news/world/40073981"
+      }
+    },
+    {
+      "time": "Mon 30 Nov",
+      "event": "India's GDP data for July to September. Record dates for the Tech Mahindra bonus, the Interarch Building Solutions split and the Altius Telecom InvIT distribution. Foodlink F&B IPO closes.",
+      "source": {
+        "name": "MoSPI release calendar",
+        "url": "https://www.mospi.gov.in/uploads/documents/releaseCalender/1779709510470-ADVANCE%20RELEASE%20CALENDAR%202026-27%20Updated%2025.05.2026.pdf"
+      },
+      "also": [
+        {
+          "name": "Kotak Neo",
+          "url": "https://www.kotakneo.com/news/stocks/tech-mahindra-fixes-30-november-as-1-1-bonus-share-record-date-and-sets-2-december-trading-date/"
+        },
+        {
+          "name": "Goodreturns",
+          "url": "https://www.goodreturns.in/personal-finance/1-5-stock-split-alert-this-engineering-stock-to-turn-1-share-into-5-check-record-date-and-other-de-1543055.html"
+        },
+        {
+          "name": "Anand Rathi",
+          "url": "https://anandrathi.com/share-market-today/upcoming-dividend"
+        }
+      ]
+    },
+    {
+      "time": "Tue 1 Dec",
+      "event": "Integris Medtech IPO closes. 8:30 PM IST: US job openings (JOLTS) for October.",
+      "source": {
+        "name": "Angel One",
+        "url": "https://www.angelone.in/ipo/integris-medtech-ipo"
+      },
+      "also": [
+        {
+          "name": "US Bureau of Labor Statistics",
+          "url": "https://www.bls.gov/schedule/2026/12_sched_list.htm"
+        }
+      ]
+    },
+    {
+      "time": "Wed 2 Dec",
+      "event": "RBI Monetary Policy Committee meeting begins; Tech Mahindra bonus shares start trading.",
+      "source": {
+        "name": "RBI",
+        "url": "https://rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63839"
+      },
+      "also": [
+        {
+          "name": "Kotak Neo",
+          "url": "https://www.kotakneo.com/news/stocks/tech-mahindra-fixes-30-november-as-1-1-bonus-share-record-date-and-sets-2-december-trading-date/"
+        }
+      ]
+    },
+    {
+      "time": "Thu 3 Dec",
+      "event": "Foodlink F&B expected to list on NSE and BSE.",
+      "source": {
+        "name": "Upstox News",
+        "url": "https://upstox.com/news/market-news/ipo/foodlink-f-and-b-holdings-ipo-day-1-check-subscription-status-price-band-and-key-dates/article-203985/"
+      }
+    },
+    {
+      "time": "Fri 4 Dec",
+      "event": "RBI policy decision; Integris Medtech expected to list. 7:00 PM IST: US jobs report for November.",
+      "source": {
+        "name": "RBI",
+        "url": "https://rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63839"
+      },
+      "also": [
+        {
+          "name": "Angel One",
+          "url": "https://www.angelone.in/ipo/integris-medtech-ipo"
+        },
+        {
+          "name": "US Bureau of Labor Statistics",
+          "url": "https://www.bls.gov/schedule/2026/12_sched_list.htm"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "name": "Angel One News",
+      "url": "https://www.angelone.in/news/market-updates/top-gainers-and-losers-on-november-26-2026-hcltech-and-bse-gain-while-asian-paints-drops-over-2"
+    },
+    {
+      "name": "India TV News",
+      "url": "https://www.indiatvnews.com/business/markets/markets-end-volatile-session-in-green-sensex-ends-390-points-higher-nifty-rises-65-25-points-2026-11-26-1060437"
+    },
+    {
+      "name": "Liquide",
+      "url": "https://blog.liquide.life/share-market-today-nifty-gains-65-points-to-25-884-sensex-rises-390-points-as-it-and-realty-lead-market-gains/"
+    },
+    {
+      "name": "Upstox News",
+      "url": "https://upstox.com/news/market-news/stocks/top-gainers-and-losers-nov-26-hcl-tech-bse-surge-6-tcs-rises-5-asian-paints-falls-3-check-list/article-204034/"
+    },
+    {
+      "name": "HDFC Sky News",
+      "url": "https://hdfcsky.com/news/sensex-nifty-recover-afternoon-losses-to-end-higher-as-asia-oil-support-tariff-inflation-worries-keep-investors-cautious"
+    },
+    {
+      "name": "Kotak Neo FII/DII data",
+      "url": "https://www.kotakneo.com/share-market-today/fii-dii-data/"
+    },
+    {
+      "name": "Business Upturn",
+      "url": "https://businessupturn.com/nation/fiis-extend-india-buying-streak-to-18-sessions-with-rs5-843-crore-investment/"
+    },
+    {
+      "name": "PTI via HDFC Sky",
+      "url": "https://hdfcsky.com/news/rupee-weakens-24-paise-to-settle-at-92-44-against-us-dollar"
+    },
+    {
+      "name": "PTI via Daily Excelsior",
+      "url": "https://www.dailyexcelsior.com/rupee-weakens-24-paise-to-settle-at-92-44-against-us-dollar/"
+    },
+    {
+      "name": "Business Standard",
+      "url": "https://www.business-standard.com/economy/news/rupee-falls-as-oil-climbs-above-96-barrel-10-year-bond-yield-rises-7-bps-126112601278_1.html"
+    },
+    {
+      "name": "SquawkNews",
+      "url": "https://squawknews.com/news/986467-india-10-year-government-bond-yield-ends-at-7-2365"
+    },
+    {
+      "name": "The Nation (Thailand)",
+      "url": "https://www.nationthailand.com/news/world/40073981"
+    },
+    {
+      "name": "Reuters via Euronext",
+      "url": "https://live.euronext.com/en/financial-news/brent-settles-higher-mine-strikes-refinery-attack-stoke-middle-east-supply-concerns"
+    },
+    {
+      "name": "Business Standard",
+      "url": "https://www.business-standard.com/economy/news/us-proposes-up-to-25-tariff-on-india-offers-17-upon-trade-deal-126112501255_1.html"
+    },
+    {
+      "name": "Business Today",
+      "url": "https://www.businesstoday.in/latest/economy/story/why-does-india-face-one-of-the-highest-us-tariffs-without-a-trade-deal-569759-2026-11-26"
+    },
+    {
+      "name": "RBI",
+      "url": "https://rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63839"
+    },
+    {
+      "name": "Trading Economics",
+      "url": "https://tradingeconomics.com/india/government-bond-yield"
+    },
+    {
+      "name": "Business Standard",
+      "url": "https://www.business-standard.com/amp/economy/news/robust-demand-likely-kept-q2-gdp-growth-resilient-amid-global-uncertainty-126112200828_1.html"
+    },
+    {
+      "name": "MoSPI release calendar",
+      "url": "https://www.mospi.gov.in/uploads/documents/releaseCalender/1779709510470-ADVANCE%20RELEASE%20CALENDAR%202026-27%20Updated%2025.05.2026.pdf"
+    },
+    {
+      "name": "Upstox News",
+      "url": "https://upstox.com/news/market-news/us-stocks/are-us-markets-open-or-closed-on-thanksgiving-here-s-what-investors-should-know-about-global-markets-today/article-204036/"
+    },
+    {
+      "name": "AP via BNN Bloomberg",
+      "url": "https://www.bnnbloomberg.ca/markets/2026/11/26/global-stocks-rise-and-tech-shares-rebound-as-us-closes-for-thanksgiving/"
+    },
+    {
+      "name": "AP via BNN Bloomberg",
+      "url": "https://www.bnnbloomberg.ca/markets/2026/11/26/world-shares-push-higher-while-markets-in-us-will-be-closed-for-thanksgiving/"
+    },
+    {
+      "name": "JBizNews",
+      "url": "https://jbiznews.com/kosdaq-jumps-more-than-4-nikkei-little-changed-in-early-friday-trading-with-wall-street-shut-for-thanksgiving/"
+    },
+    {
+      "name": "Newsquawk",
+      "url": "https://www.newsquawk.com/headlines/market-analysis-dxy-steady-in-holiday-thinned-trade-chf-lags-as-haven-demand-fades"
+    },
+    {
+      "name": "Idéal Investisseur",
+      "url": "https://www.ideal-investisseur.fr/en/economy/us-bond-yields-fall-despite-persistent-inflation-and-strong-growth-34086.html"
+    },
+    {
+      "name": "US Bureau of Labor Statistics",
+      "url": "https://www.bls.gov/schedule/2026/12_sched_list.htm"
+    },
+    {
+      "name": "PA (Alliance News) via LBC",
+      "url": "https://www.lbc.co.uk/article/538d412b5e40421f829886fed938b8cf-5HjdncJ_2/"
+    },
+    {
+      "name": "Dow Jones Newswires via finanzen.ch",
+      "url": "https://www.finanzen.ch/nachrichten/aktien/xetra-schluss-deutliche-erholung-schiebt-dax-wieder-klar-ueber-25-000-punkte-1036803592"
+    },
+    {
+      "name": "AFP via Boursorama",
+      "url": "https://www.boursorama.com/bourse/actualites/la-bourse-de-paris-en-forte-hausse-jeudi-e1366d02b13f0f036f6b5c76caff4b94"
+    },
+    {
+      "name": "Wallstreetcn via Longbridge",
+      "url": "https://longbridge.com/en/news/306824440"
+    },
+    {
+      "name": "Investing.com",
+      "url": "https://www.investing.com/news/stock-market-news/european-shares-as-benign-us-tariffs-and-thanksgiving-lull-offer-relief-5052089"
+    },
+    {
+      "name": "IBJA",
+      "url": "https://ibjarates.com/index.aspx"
+    },
+    {
+      "name": "IBJA 30-day rate sheet",
+      "url": "https://ibjarates.com/UploadedFiles/30DaysPdf/Pdf_4937_20261126125923386_Daily%20Opening%20and%20Closing%20Market%20Rate.pdf"
+    },
+    {
+      "name": "USAGOLD",
+      "url": "https://www.usagold.com/daily-precious-metals-market-report-november-26-2026/"
+    },
+    {
+      "name": "Reuters via Business Recorder",
+      "url": "https://www.brecorder.com/news/40450827/gold-ticks-up-after-hitting-15-month-low-fed-outlook-in-focus"
+    },
+    {
+      "name": "Kotak Neo",
+      "url": "https://www.kotakneo.com/news/stocks/tech-mahindra-fixes-30-november-as-1-1-bonus-share-record-date-and-sets-2-december-trading-date/"
+    },
+    {
+      "name": "Kotak Neo bonus list",
+      "url": "https://www.kotakneo.com/share-market-today/bonus-shares/"
+    },
+    {
+      "name": "Goodreturns",
+      "url": "https://www.goodreturns.in/personal-finance/1-5-stock-split-alert-this-engineering-stock-to-turn-1-share-into-5-check-record-date-and-other-de-1543055.html"
+    },
+    {
+      "name": "Goodreturns",
+      "url": "https://www.goodreturns.in/news/5-1-5-2-stock-splits-dividends-buyback-rights-issues-next-week-zeel-11-stocks-ex-date-november-23-30-1548739.html"
+    },
+    {
+      "name": "Anand Rathi",
+      "url": "https://anandrathi.com/share-market-today/upcoming-dividend"
+    },
+    {
+      "name": "Business Today",
+      "url": "https://www.businesstoday.in/markets/stocks/story/wipro-shares-surge-4-after-bp-deal-lead-nifty-it-gainers-569586-2026-11-26"
+    },
+    {
+      "name": "Kotak Neo",
+      "url": "https://www.kotakneo.com/news/stocks/wipro-wins-bp-finance-operations-deal-as-3000-employees-prepare-to-transfer-in-2027/"
+    },
+    {
+      "name": "Angel One News",
+      "url": "https://www.angelone.in/news/ipos/mahanadi-coalfields-8-981-crore-ipo-issue-sees-robust-institutional-demand"
+    },
+    {
+      "name": "HDFC Sky News",
+      "url": "https://hdfcsky.com/news/mahanadi-coalfields-ipo-subscription-status-day-1"
+    },
+    {
+      "name": "JM Financial",
+      "url": "https://www.jmfinancialservices.in/market-news-and-insights/1751351"
+    },
+    {
+      "name": "Business Upturn",
+      "url": "https://businessupturn.com/finance/ipo/crystal-crop-protection-lists-at-rs278-a-2-2-premium-to-the-rs272-ipo-price-after-the-issue-was-subscribed-17-68-times/"
+    },
+    {
+      "name": "Kotak Neo",
+      "url": "https://www.kotakneo.com/ipo/crystal-crop-protection-ltd-ipo/"
+    },
+    {
+      "name": "HDFC Sky News",
+      "url": "https://hdfcsky.com/news/foodlink-fb-holdings-india-ipo-subscription-status-day-1"
+    },
+    {
+      "name": "Upstox News",
+      "url": "https://upstox.com/news/market-news/ipo/foodlink-f-and-b-holdings-ipo-day-1-check-subscription-status-price-band-and-key-dates/article-203985/"
+    },
+    {
+      "name": "Kotak Neo",
+      "url": "https://www.kotakneo.com/ipo/foodlink-fb-holdings-india-ltd-ipo/"
+    },
+    {
+      "name": "Angel One",
+      "url": "https://www.angelone.in/ipo/integris-medtech-ipo"
+    },
+    {
+      "name": "Angel One News",
+      "url": "https://www.angelone.in/news/ipos/upcoming-ipos-this-week-november-23-november-27-2026-foodlink-f-b-holdings-integris-medtech-and-others"
+    },
+    {
+      "name": "AMFI Monthly Note, October 2026",
+      "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_October2026_cd03bc1103.pdf"
+    },
+    {
+      "name": "Upstox News",
+      "url": "https://upstox.com/news/personal-finance/mutual-funds/amfi-october-2026-data-8-key-takeaways-on-equity-mf-inflows-debt-funds-gold-and-silver-et-fs/article-203285/"
+    },
+    {
+      "name": "Kotak Neo",
+      "url": "https://www.kotakneo.com/news/mutual-funds/equity-mutual-fund-inflows-fall-14-percent-october-2026-sip-contributions/"
+    },
+    {
+      "name": "Value Research Online",
+      "url": "https://www.valueresearchonline.com/stories/230268/fund-manager-changes-in-few-scheme-of-nippon-india-mutual-fund/"
+    },
+    {
+      "name": "SBI Mutual Fund NFO page",
+      "url": "https://www.sbimf.com/india-defence"
+    },
+    {
+      "name": "HDFC Mutual Fund NFO page",
+      "url": "https://www.hdfcfund.com/explore/nfo/hdfc-charity-fund-cancer-cure-feb-2030/direct"
+    },
+    {
+      "name": "Bajaj Finserv Mutual Fund",
+      "url": "https://www.bajajamc.com/knowledge-centre/bajaj-finserv-business-cycle-fund-investing-in-megatrends-as-cycles-change"
+    },
+    {
+      "name": "Angel One News",
+      "url": "https://www.angelone.in/news/mutual-funds/upcoming-nfos-4-mutual-fund-offers-scheduled-to-open-this-week-november-23-27-2026"
+    },
+    {
+      "name": "Moneylife",
+      "url": "https://www.moneylife.in/article/sebi-to-make-direct-plans-the-default-on-amc-digital-platforms-from-november-1/82076.html"
+    },
+    {
+      "name": "SEBI circular",
+      "url": "https://www.sebi.gov.in/sebi_data/attachdocs/nov-2026/1793874209372.pdf"
+    },
+    {
+      "name": "Upstox News",
+      "url": "https://upstox.com/news/personal-finance/mutual-funds/new-hybrid-mutual-fund-classification-rules-2026-key-things-investors-must-know/article-190058"
+    },
+    {
+      "name": "SEBI circular page",
+      "url": "https://www.sebi.gov.in/legal/circulars/feb-2026/categorization-and-rationalization-of-mutual-fund-schemes_99983.html"
+    },
+    {
+      "name": "SEBI circular, 2017 (hosted by AMFI)",
+      "url": "https://www.amfiindia.com/Themes/Theme1/downloads/1507291273374.pdf"
+    }
+  ],
+  "technicals": {
+    "headline": "The NIFTY 50 closed above its 20-day, 50-day and 200-day averages",
+    "as_of": "close, 26 Nov 2026",
+    "items": [
+      {
+        "index": "NIFTY 50",
+        "open": 25873.2,
+        "high": 25974.95,
+        "low": 25733.5,
+        "close": 25884.5,
+        "prev_close": 25819.25,
+        "change_pct": 0.25,
+        "sma20": 24838.68,
+        "sma50": 23647.75,
+        "sma200": 24000.21,
+        "sessions": 223,
+        "pe": null,
+        "source": {
+          "name": "Market-close report",
+          "url": "https://www.angelone.in/news/market-updates/top-gainers-and-losers-on-november-26-2026-hcltech-and-bse-gain-while-asian-paints-drops-over-2"
+        }
+      },
+      {
+        "index": "Nifty Bank",
+        "open": null,
+        "high": null,
+        "low": null,
+        "close": 63535.3,
+        "prev_close": 63703.25,
+        "change_pct": -0.26,
+        "sma20": 59912.94,
+        "sma50": 57103.13,
+        "sma200": 56802.93,
+        "sessions": 223,
+        "pe": null,
+        "source": {
+          "name": "Market-close report",
+          "url": "https://blog.liquide.life/share-market-today-nifty-gains-65-points-to-25-884-sensex-rises-390-points-as-it-and-realty-lead-market-gains/"
+        }
+      }
+    ],
+    "vix": null,
+    "trend": {
+      "index": "NIFTY 50",
+      "points": [
+        {
+          "date": "2026-10-27",
+          "close": 22749.75
+        },
+        {
+          "date": "2026-10-28",
+          "close": 22698.85
+        },
+        {
+          "date": "2026-10-29",
+          "close": 22936.75
+        },
+        {
+          "date": "2026-10-30",
+          "close": 23053.1
+        },
+        {
+          "date": "2026-11-02",
+          "close": 23440.8
+        },
+        {
+          "date": "2026-11-03",
+          "close": 23810.85
+        },
+        {
+          "date": "2026-11-04",
+          "close": 23960.6
+        },
+        {
+          "date": "2026-11-05",
+          "close": 24536.6
+        },
+        {
+          "date": "2026-11-06",
+          "close": 25030.35
+        },
+        {
+          "date": "2026-11-08",
+          "close": 24986.4
+        },
+        {
+          "date": "2026-11-09",
+          "close": 25044.65
+        },
+        {
+          "date": "2026-11-11",
+          "close": 25255.05
+        },
+        {
+          "date": "2026-11-12",
+          "close": 25299.35
+        },
+        {
+          "date": "2026-11-13",
+          "close": 25144.3
+        },
+        {
+          "date": "2026-11-16",
+          "close": 25291.1
+        },
+        {
+          "date": "2026-11-17",
+          "close": 25387.4
+        },
+        {
+          "date": "2026-11-18",
+          "close": 25227.95
+        },
+        {
+          "date": "2026-11-19",
+          "close": 25514.3
+        },
+        {
+          "date": "2026-11-20",
+          "close": 25800.6
+        },
+        {
+          "date": "2026-11-23",
+          "close": 25349.65
+        },
+        {
+          "date": "2026-11-25",
+          "close": 25819.25
+        },
+        {
+          "date": "2026-11-26",
+          "close": 25884.5
+        }
+      ],
+      "source": {
+        "name": "NSE daily index files",
+        "url": "https://www.angelone.in/news/market-updates/top-gainers-and-losers-on-november-26-2026-hcltech-and-bse-gain-while-asian-paints-drops-over-2"
+      }
+    },
+    "sources_label": "NSE daily index files; market-close reports for 26 Nov",
+    "note": "Levels from NSE's daily index files; the 26 Nov levels are from market-close reports until NSE publishes its file. Averages are simple averages of the last 20, 50 and 200 closes, calculated by Kubeerra. These describe where prices have been; they are not a forecast, a signal or a recommendation."
+  }
+}

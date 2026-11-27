@@ -18,5 +18,6 @@
   {"id": "L-017", "date": "2026-11-20", "title": "What Macaulay duration measures", "issue": "issues/2026-11-20.json", "topics": ["Macaulay duration", "short duration fund", "interest rate sensitivity", "debt funds"]},
   {"id": "L-018", "date": "2026-11-23", "title": "What a credit rating such as AA+ tells you", "issue": "issues/2026-11-23.json", "topics": ["credit rating", "corporate bond fund", "credit risk", "debt funds"]},
   {"id": "L-019", "date": "2026-11-25", "title": "What a 1:1 bonus issue changes, and what it does not", "issue": "issues/2026-11-25.json", "topics": ["bonus issue", "record date", "ex-date", "share capital"]},
-  {"id": "L-020", "date": "2026-11-26", "title": "What a riskometer level tells you", "issue": "issues/2026-11-26.json", "topics": ["riskometer", "risk levels", "scheme information document", "SEBI"]}
+  {"id": "L-020", "date": "2026-11-26", "title": "What a riskometer level tells you", "issue": "issues/2026-11-26.json", "topics": ["riskometer", "risk levels", "scheme information document", "SEBI"]},
+  {"id": "L-021", "date": "2026-11-27", "title": "Why fund assets can fall in a month when money flows in", "issue": "issues/2026-11-27.json", "topics": ["AUM", "net flows", "mark-to-market", "AMFI data"]}
 ]
